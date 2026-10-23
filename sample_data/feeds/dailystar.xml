@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"><channel><title>SAMPLE feed (fictional)</title><link>https://example.com/</link><description>Offline fixture</description>
+<item><title>[SAMPLE] Cabinet approves draft amendment to Bangladesh Labour Act</title>
+<link>https://example.com/news/sample-labour-act-amendment?utm_source=rss</link>
+<description>[SAMPLE] The cabinet approved the draft of the Bangladesh Labour (Amendment) Act, which raises the minimum maternity leave and sets new rules for trade union registration in export processing zones.</description>
+<pubDate>Thu, 22 Oct 2026 10:00:00 +0600</pubDate></item>
+<item><title>[SAMPLE] Local club wins friendly football match</title>
+<link>https://example.com/sports/sample-friendly-match</link>
+<description>A friendly match.</description>
+<pubDate>Thu, 22 Oct 2026 12:00:00 +0600</pubDate></item>
+<item><title>[SAMPLE] Old story outside the freshness window</title>
+<link>https://example.com/news/sample-old-story</link>
+<description>[SAMPLE] This item is weeks old and should be ignored by the freshness filter, regardless of its content and length of excerpt.</description>
+<pubDate>Tue, 01 Sep 2026 09:00:00 +0600</pubDate></item>
+<item><title>Item without a link is skipped</title>
+<description>No link here.</description></item>
+</channel></rss>

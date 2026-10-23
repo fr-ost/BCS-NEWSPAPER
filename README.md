@@ -1,0 +1,483 @@
+# BCS Newspaper Engine v1.0
+
+A personal, cloud-run current-affairs briefing for **Bangladesh Civil Service (BCS)** preparation.
+
+Every morning (target **08:00 Asia/Dhaka**) a GitHub Actions job:
+
+1. collects recent news from verified RSS/Atom feeds,
+2. merges duplicate reports of the same event,
+3. screens stories for BCS relevance with Gemini (one lightweight call),
+4. reads the accessible article text and writes **grounded Bengali study notes**,
+5. ranks stories with a configurable rubric (5–8 on a normal day, fewer on a thin day, never padded),
+6. writes **three validated MCQs** from verified facts,
+7. sends **one organised edition** to your Telegram (split into several messages only when needed).
+
+Target recurring cost: **৳0**, using current free allowances (see [Cost and free-tier limits](#cost-and-free-tier-limits)). Nothing in this project enables billing or falls back to a paid service.
+
+---
+
+## Contents
+
+- [What a briefing looks like](#what-a-briefing-looks-like)
+- [Architecture and data flow](#architecture-and-data-flow)
+- [Full setup guide](#full-setup-guide)
+- [Running locally](#running-locally)
+- [Manual runs and modes](#manual-runs-and-modes)
+- [News sources](#news-sources)
+- [Factual grounding: how hallucinations are kept out](#factual-grounding-how-hallucinations-are-kept-out)
+- [Partial editions and quota exhaustion](#partial-editions-and-quota-exhaustion)
+- [State persistence and recovery](#state-persistence-and-recovery)
+- [Logs and troubleshooting](#logs-and-troubleshooting)
+- [Cost and free-tier limits](#cost-and-free-tier-limits)
+- [Disabling the schedule](#disabling-the-schedule)
+- [Switching to a local model](#switching-to-a-local-model)
+- [Testing](#testing)
+- [Security and privacy](#security-and-privacy)
+- [Configuration reference](#configuration-reference)
+
+---
+
+## What a briefing looks like
+
+```
+📰 বিসিএস দৈনিক ব্রিফিং — ২৩ অক্টোবর ২০২৬
+📚 ৬টি খবর · ⏱ পড়তে প্রায় ১০ মিনিট
+
+১. <headline in Bengali>
+🏷 অর্থনীতি | প্রিলি + লিখিত | স্কোর ৭৪/১০০
+📰 Dhaka Tribune, The Daily Star · ২২ অক্টোবর ২০২৬
+কী ঘটেছে: …                       ← summary grounded in the article
+বিসিএস-এ কেন গুরুত্বপূর্ণ: …
+গুরুত্বপূর্ণ তথ্য (প্রতিবেদন থেকে): • …     ← each fact matched to a quote in the article
+📌 প্রিলির জন্য মনে রাখুন: • …
+উদ্ধৃত দাবি (যাচাইকৃত তথ্য নয়): • X: …
+✍️ লিখিত পরীক্ষার দৃষ্টিকোণ (AI বিশ্লেষণ): …  ← clearly labelled analysis
+পটভূমি (প্রতিবেদনের বাইরের সাধারণ প্রেক্ষাপট): …
+🔗 Dhaka Tribune | The Daily Star
+🏛 দাপ্তরিক সূত্রে যাচাই: Bangladesh Bank
+
+… more stories …
+
+🧠 আজকের অনুশীলনী (৩টি MCQ)       ← questions first
+━━━━━━━━━━━━
+✅ উত্তর ও ব্যাখ্যা (ট্যাপ করে দেখুন)  ← answers hidden behind Telegram spoilers
+```
+
+Run `python -m app run --offline` to render a full sample edition from bundled fictional data (no API keys needed).
+
+---
+
+## Architecture and data flow
+
+```
+        ┌──────────── GitHub Actions (cron 02:00 UTC = 08:00 Dhaka) ────────────┐
+        │                                                                       │
+ RSS ──▶│ A. collector.py   fetch feeds (robots.txt, timeouts, size caps)       │
+ feeds  │        │          normalise URLs, parse dates safely                  │
+        │ B. deduplicator.py  same URL / title / excerpt → one "event"          │
+        │        │                                                              │
+        │ C. screening.py   1 Gemini call: relevance + categories + grouping    │──▶ Gemini API
+        │        │          (model may only reference ids we gave it)           │    (free tier)
+        │ D. extractor.py   fetch article page, strip nav/ads/related blocks    │
+        │        │          → full text, or labelled excerpt-only, or skip      │
+        │ F. analysis.py    1 Gemini call per story → JSON note                 │──▶ Gemini API
+        │      grounding.py drop facts whose quote isn't in the article and     │
+        │        │          sentences with numbers not in the article           │
+        │ E. scoring.py     weighted rubric → top 5–8 above threshold           │
+        │ G. questions.py   1 Gemini call → MCQs, strictly validated            │──▶ Gemini API
+        │        │                                                              │
+        │    render.py      Bengali, HTML-escaped, phone-friendly sections      │
+        │    telegram_delivery.py  chunk ≤3800 chars, send, record message ids  │──▶ Telegram
+        │        │                                                              │
+        │    state.py       state/state.json (atomic, versioned), checkpointed  │
+        │                   after every stage and every story                   │
+        └────────┬──────────────────────────────────────────────────────────────┘
+                 ▼
+        git commit state/state.json → your repository (memory between runs)
+```
+
+Typical Gemini usage per day: 1 screening + up to 9 analyses + 1 MCQ call ≈ **11 requests**, hard-capped at **16 per run** including retries (`llm.max_calls_per_run`).
+
+### Project layout
+
+| Path | Purpose |
+|---|---|
+| `app/config.py` | Loads `config/settings.toml` + environment secrets |
+| `app/sources.py` | Source registry (`config/sources.toml`) |
+| `app/http.py` | Polite fetcher: robots.txt, timeouts, size caps, bounded retries |
+| `app/collector.py` | Stage A — feeds → items |
+| `app/deduplicator.py` | Stage B — duplicate detection, event grouping |
+| `app/screening.py` | Stage C — relevance screening |
+| `app/extractor.py` | Stage D — article text extraction, excerpt-only decision |
+| `app/scoring.py` | Stage E — rubric scoring and ranking |
+| `app/analysis.py`, `app/grounding.py` | Stage F — study notes and evidence checks |
+| `app/questions.py` | Stage G — MCQ generation and validation |
+| `app/render.py` | Telegram HTML rendering (Bengali) |
+| `app/telegram_delivery.py` | Chunking, sending, retries |
+| `app/state.py` | Versioned JSON state store |
+| `app/pipeline.py` | Orchestration, checkpoints, idempotency |
+| `app/llm/` | Provider interface: `gemini.py`, `ollama.py` (local), `mock.py` (offline/tests) |
+| `app/prompts.py` | Prompts with untrusted-content guards |
+| `config/` | `settings.toml`, `sources.toml` |
+| `state/state.json` | Created by the first live run, committed by the workflow |
+| `sample_data/` | Fictional feeds/articles for offline runs and tests |
+| `tests/` | Pytest suite (all external calls mocked) |
+
+Dependencies: Python 3.12 (3.11+ works), `requests`, `feedparser`, `beautifulsoup4`; `pytest` for tests. Gemini is called over plain REST (no SDK), which keeps the provider layer swappable.
+
+---
+
+## Full setup guide
+
+Allow about 20–30 minutes. Do the steps in order.
+
+### Step 0: Make the repository private
+
+The workflow commits `state/state.json`, which records what you read each day. It contains no credentials, but it should not be public.
+
+GitHub → your repository → **Settings → General** → scroll to **Danger Zone** → **Change repository visibility** → **Make private**.
+
+> Private repositories get 2,000 free Actions minutes per month on GitHub Free. This project uses about 100–200 (see [costs](#cost-and-free-tier-limits)).
+
+### Step 1: Put the code on your default branch
+
+GitHub only runs **scheduled** workflows from the repository's **default branch** (`main` here).
+
+- If this code is on another branch (e.g. `claude/…`), open a Pull Request into `main` and merge it. If `main` doesn't exist yet, create it from that branch: **Code → branch dropdown → View all branches → New branch** (name `main`, source = the code branch). Then set it as default under **Settings → General → Default branch**.
+- If you protect `main` with branch rules that block direct pushes, the workflow can't commit state. Either allow `github-actions[bot]` to bypass, or don't protect `main` (it's a personal repo).
+
+### Step 2: Create a Gemini API key (free tier)
+
+1. Go to **Google AI Studio → API keys**: <https://aistudio.google.com/apikey> and sign in.
+2. Click **Create API key**. Prefer **a new Google Cloud project that has no billing account linked**.
+   - Projects **without** billing stay on the **Free** tier. When the free quota runs out, requests fail with HTTP 429 and this app produces a partial edition. It never pays.
+   - If you link billing to the project, it moves to a paid tier and usage could be charged. Don't, unless you intend to pay.
+3. Copy the key; you'll paste it into GitHub in Step 4.
+4. **Check the model.** The default is `gemini-3.8-flash` (set in `config/settings.toml`). Third-party pricing summaries from October 2026 list it as free-tier eligible, but **I could not confirm this against Google's own pages from the build environment**. Open <https://ai.google.dev/gemini-api/docs/pricing> and <https://ai.google.dev/gemini-api/docs/rate-limits> and confirm:
+   - the model shows "Free of charge" in the Free Tier column, and
+   - its free requests-per-day (RPD) limit is comfortably above ~16.
+
+   If it isn't, choose a free Flash or Flash-Lite model and set it (Step 4, optional variable `GEMINI_MODEL`).
+5. Privacy note: on the free tier, Google states prompts and responses may be used to improve its products. The app only sends public news text, never personal data.
+
+### Step 3: Create a Telegram bot and find your chat id
+
+1. In Telegram, open **@BotFather** → send `/newbot` → choose a name and a username ending in `bot`.
+2. BotFather replies with a **token** like `123456789:AAH…`. That's `TELE_BOT_TOKEN`. Treat it like a password.
+3. Open a chat with your new bot and press **Start** (or send it "hi"). Bots can't message you until you do.
+4. Find your **chat id** (`TELE_CHAT_ID`). Either:
+   - in a browser, open `https://api.telegram.org/bot<YOUR_TOKEN>/getUpdates` and find `"chat":{"id":123456789,…}` (don't share this URL, it contains your token), or
+   - message **@userinfobot**, which replies with your numeric id.
+
+### Step 4: Add GitHub Secrets (and optional variable)
+
+Repository → **Settings → Secrets and variables → Actions**.
+
+**Secrets** tab → **New repository secret**, three times:
+
+| Name | Value |
+|---|---|
+| `GEMINI_API_KEY` | key from Step 2 |
+| `TELE_BOT_TOKEN` | token from Step 3 |
+| `TELE_CHAT_ID` | your numeric chat id |
+
+Optional, on the **Variables** tab → **New repository variable**: `GEMINI_MODEL` = a model id. This overrides the config file without a code change.
+
+Secrets are masked in logs, and this app also redacts them from its own messages.
+
+### Step 5: Enable GitHub Actions
+
+1. **Settings → Actions → General → Actions permissions**: "Allow all actions and reusable workflows" (or at least allow GitHub-authored actions: `actions/checkout`, `actions/setup-python`, `actions/upload-artifact`).
+2. Same page, **Workflow permissions**: the default ("Read repository contents") is fine. The workflow requests `contents: write` itself, and nothing else.
+3. Open the **Actions** tab. If GitHub shows "Workflows aren't being run on this repository", click **I understand… enable them**.
+
+### Step 6: Verify everything with manual runs (in this order)
+
+**Actions → Daily BCS briefing → Run workflow** → pick a **mode** → **Run workflow**.
+
+| # | Mode | What it proves | Uses quota / sends? |
+|---|---|---|---|
+| 1 | `offline` | Code, tests and rendering work | No API calls, nothing sent |
+| 2 | `verify-sources` | Each feed is reachable, allowed by robots.txt and parses | Fetches feeds only |
+| 3 | `check-model` | Your key works and the model id exists | 1 metadata call (no generation) |
+| 4 | `test-telegram` | Bot token and chat id are right | Sends 1 test message |
+| 5 | `dry-run` | Full real pipeline. Download the artifact to read the edition | ~11 Gemini calls, **nothing sent**, saved state untouched |
+| 6 | `live` | The real thing | Sends the edition, commits state |
+
+After `verify-sources`, edit `config/sources.toml`: set `enabled = false` for any source that doesn't show `OK`, and update its `verification` note. See [News sources](#news-sources).
+
+### Step 7: Let the schedule run
+
+The cron line `0 2 * * *` runs daily at **02:00 UTC = 08:00 Asia/Dhaka** (Bangladesh is UTC+6 with no daylight saving). GitHub cron is always UTC.
+
+GitHub doesn't guarantee the minute: scheduled runs often start several minutes late, sometimes much later at busy times, and occasionally get skipped. If one is skipped, run `live` manually. Re-running the same day never sends a duplicate.
+
+### Setup checklist
+
+- [ ] Repository made **private**
+- [ ] Code merged into the **default branch** (`main`)
+- [ ] Gemini key created in a project **without billing**; model's free-tier status confirmed on Google's pricing page
+- [ ] Telegram bot created, **Start** pressed, chat id found
+- [ ] Secrets `GEMINI_API_KEY`, `TELE_BOT_TOKEN`, `TELE_CHAT_ID` added
+- [ ] Actions enabled
+- [ ] Manual runs: `offline` → `verify-sources` (and adjust `sources.toml`) → `check-model` → `test-telegram` → `dry-run` → `live`
+- [ ] Next morning: briefing arrives and a `state: run for …` commit appears
+
+---
+
+## Running locally
+
+Only needed for development or testing; the cloud workflow doesn't need your computer.
+
+```bash
+git clone <your repo> && cd bcs-newspaper
+python3.12 -m venv .venv && source .venv/bin/activate      # Windows: .venv\Scripts\activate
+pip install -r requirements.txt -r requirements-dev.txt
+
+python -m pytest                       # unit tests, all mocked
+python -m app run --offline            # full sample edition, no keys needed → output/edition-*.txt
+
+cp .env.example .env                   # then fill in real values
+set -a; source .env; set +a            # load into the shell (bash/zsh)
+python -m app verify-sources
+python -m app check-model
+python -m app test-telegram
+python -m app run --dry-run            # real feeds + Gemini, never sends; scratch state
+python -m app status                   # summary of state/state.json
+```
+
+Avoid running `python -m app run` (live) locally *and* in Actions: each has its own copy of the state file, so they don't know about each other's deliveries.
+
+---
+
+## Manual runs and modes
+
+| Command | Effect |
+|---|---|
+| `python -m app run` | Build today's edition and deliver it. No-op if today's edition was already delivered. |
+| `python -m app run --dry-run` | Real feeds + real model, **never sends**. Uses `output/dry-run-state.json` (fresh each time), so production state is untouched. |
+| `python -m app run --offline` | Bundled fictional sample data + mock model. No network, no keys. Implies `--dry-run`. |
+| `python -m app run --date 2026-10-24` | Override the edition date (testing). |
+| `python -m app run --provider mock\|gemini\|ollama` | Override the provider. |
+| `python -m app test-telegram` | One test message. |
+| `python -m app verify-sources` | Live check of every configured feed. Exit code 1 if an enabled feed fails. |
+| `python -m app check-model` | Confirms the model id exists for your key (not proof of free quota). |
+| `python -m app status` | Last edition, events by status, source health, last run. |
+
+Exit codes: `0` success / dry run / already delivered; `1` failed; `2` failed but a failure notice was already sent to Telegram; `3` configuration error.
+
+---
+
+## News sources
+
+Sources live in `config/sources.toml`. Each entry has a name, homepage, `feed_url` (only if verified), type, subject relevance, `enabled`, `fetch_articles`, timeout, retry limit and a `verification` note.
+
+**Feed verification status at build time.** The build environment couldn't reach news sites directly, so none of these has been fetched live yet. Status is based on public evidence:
+
+| Source | Feed | Evidence | Shipped as |
+|---|---|---|---|
+| Prothom Alo | `https://www.prothomalo.com/feed` | Used by your working prototype | enabled |
+| Dhaka Tribune | `https://www.dhakatribune.com/feed/` | Self-link inside search-indexed Dhaka Tribune RSS documents | enabled |
+| Dhaka Tribune Business | `https://www.dhakatribune.com/feed/business` | Search-indexed RSS 2.0 document observed | enabled |
+| The Daily Star | `https://www.thedailystar.net/frontpage/rss.xml` | Listed in public OPML feed directories | enabled |
+| UN News Asia-Pacific | regional feed URL pattern | Pattern only; exact feed unconfirmed | **disabled** |
+| BSS, Bangladesh Bank, BBS, MoFA | none | No official feed found | reference only (never fetched) |
+
+**Run `verify-sources` (Step 6) and disable anything that fails.** A failing source never stops the others. Its health is tracked in state, and after 3 consecutive failures the edition footer shows a maintenance notice.
+
+**Official sources.** Government sites without feeds are kept as reference entries with `aliases`. When an article names an institution (e.g. "Bangladesh Bank" / "বাংলাদেশ ব্যাংক"), the story links that institution's homepage under "দাপ্তরিক সূত্রে যাচাই" so you can check the primary source. The app doesn't scrape government sites.
+
+**Adding a source.** Find the feed link on the publisher's site (often in the page footer or a `<link rel="alternate" type="application/rss+xml">` tag), add a `[[source]]` block with `enabled = false`, run `verify-sources`, then enable it if it reports `OK`. Never guess feed URLs.
+
+**Access rules.** The fetcher uses an honest user agent, obeys `robots.txt`, never retries 401/403/451, and never bypasses paywalls or anti-bot protection. If a page is blocked, the story uses a clearly labelled **excerpt-only** analysis (when the feed excerpt is substantial) or is skipped.
+
+---
+
+## Factual grounding: how hallucinations are kept out
+
+The model writes the notes, but deterministic code decides what you see:
+
+- **Every key fact needs a verbatim quote** from the retrieved text. Facts whose quote isn't found in the article are dropped.
+- **Numbers are checked.** Every number in a fact must appear in its quote. Any sentence in the summary, analysis or background that contains a number not present in the article is removed. (Bengali and English digits are normalised before comparison.)
+- **Claims are separated from facts.** "X said …" goes under *উদ্ধৃত দাবি (যাচাইকৃত তথ্য নয়)*.
+- **Analysis is labelled** *(AI বিশ্লেষণ)*; background is labelled *(প্রতিবেদনের বাইরের সাধারণ প্রেক্ষাপট)* and may not contain figures.
+- **Excerpt-only stories are marked** ⚠️ and analysed only from the excerpt.
+- A story with **no verifiable fact is excluded**, not padded.
+- **MCQs** must cite a verified fact; the correct option's numbers must appear in that fact. Each needs exactly 4 distinct options, a valid answer index, no duplicate question and no reused fact. Fewer than 3 valid MCQs → fewer are sent, with a note.
+- **Screening ids are validated.** The model can only reference candidate ids we supplied; unknown ids are ignored.
+- **Neutrality.** Prompts require political neutrality and forbid inferring motives.
+
+The scoring weights (syllabus 30%, significance 25%, facts 20%, written potential 15%, novelty 10%) are **starting heuristics, not validated predictions of exam questions**. Change them in `config/settings.toml`; they must sum to 1.0.
+
+---
+
+## Partial editions and quota exhaustion
+
+The model can become unavailable mid-run (daily quota used up, per-minute limit, outage, retired model). The app treats each error type differently:
+
+| Situation | Behaviour |
+|---|---|
+| HTTP 429, per-minute limit | Wait the server's suggested delay (max 90 s), retry up to 3 times |
+| HTTP 429, daily quota or `limit: 0` | Stop calling the model for this run, immediately |
+| 5xx / network error | Exponential backoff with jitter, max 3 retries |
+| Malformed JSON / blocked / truncated output | Retry once, then count a failed attempt for that story |
+| 401/403/invalid key, 404 unknown model | Permanent: no retries, run stops using the model |
+| Own budget `max_calls_per_run` reached | Treated like quota exhaustion |
+
+When this happens mid-run:
+
+1. Every completed analysis is **already saved** (state is checkpointed after each story).
+2. Completed, useful stories are sent as an edition labelled **⚠️ আংশিক সংস্করণ**, with the reason and the number of candidate stories still waiting.
+3. Missing stories are never invented.
+4. If nothing usable was produced, you get one short **failure notice** instead (only once per day).
+5. Unfinished stories stay queued. The next run (scheduled tomorrow, or a manual `live` run after a failure) continues where it stopped: no re-screening, no re-analysis of finished work. Quota failures don't count against a story; other failures are retried at most `max_attempts_per_story` (3) times.
+6. Stories older than `freshness_hours` (36 h) expire rather than piling up.
+
+---
+
+## State persistence and recovery
+
+`state/state.json` (schema version 1) records: processed articles (canonical URL, content hash, publication and retrieval times), event groups, per-stage status (`new → selected/maybe/rejected → analysed/analysis_rejected/failed → included`), stored analyses, attempt counts and last error, editions (status, partial flag, MCQs, every Telegram chunk with message id and sent time), last successful edition, source health, and the last 30 runs.
+
+- **Atomic writes:** temp file → fsync → rename. The previous version is kept as `state.json.bak` during a run.
+- **Validation on startup:** malformed records are dropped individually; a corrupt file is preserved as `state.json.corrupt-<time>` and recovered from the backup, or (last resort) a fresh state is started and the run log says so.
+- **Migration:** older schemas are upgraded in steps. A file from a **newer** schema is never overwritten; the run stops instead.
+- **Idempotent delivery:** an edition is rendered once and its chunks saved *before* sending. Each chunk's Telegram message id is saved as soon as Telegram confirms it. An edition is marked `delivered` only after **all** chunks are confirmed. A retry resends only unconfirmed chunks; a delivered date is never sent again.
+  - Residual risk: if the runner dies in the instant between Telegram accepting a message and the state write, that one chunk could be sent twice on retry. Telegram has no idempotency key to prevent this.
+- **Git:** the workflow commits `state/state.json` with the workflow token (`contents: write` only). On a rejected push it rebases and retries; if the state file itself conflicts it **stops without overwriting** newer state and keeps this run's state in the workflow artifact. It never force-pushes. A `concurrency` group ensures only one run touches state at a time.
+- **If a state commit fails,** the edition was still delivered (or saved in the artifact), the job turns red, and you get a Telegram notice. Download the artifact to recover the state if needed.
+- Old records are pruned after `retention_days` (14), editions after 30 days.
+
+To **reset** everything: delete `state/state.json` and commit. The next run starts fresh, so it may re-send stories it had already shown you.
+
+---
+
+## Logs and troubleshooting
+
+- **Actions tab → Daily BCS briefing → a run → `briefing` job:** step-by-step logs. The "Run" step prints a JSON summary (`outcome`, `stories`, `mcqs`, `partial`, `llm_calls`, `errors`).
+- **Artifacts** (bottom of the run page, kept 7 days): `output/edition-<date>.txt` (exactly what was sent), `edition-<date>.json`, `run-result.json`, and the state file.
+- **`status` mode** (or `python -m app status`): last edition, events by status, per-source health, last run errors.
+- **Email:** GitHub emails you when a scheduled run fails; the workflow also sends a short Telegram notice.
+
+| Symptom | Likely cause / fix |
+|---|---|
+| `Telegram rejected request (401)` | Wrong `TELE_BOT_TOKEN` |
+| `Telegram rejected request (400): chat not found` | Wrong `TELE_CHAT_ID`, or you never pressed **Start** with the bot |
+| `Gemini model unavailable` | Model id retired/renamed → set `GEMINI_MODEL` to a current free model |
+| `Gemini quota exhausted … limit: 0` | Model has no free quota for your project → pick another model |
+| `Gemini rejected credentials` | Bad or revoked `GEMINI_API_KEY` |
+| `Source X failed: HTTP 403` / `robots.txt disallows` | Publisher blocks automated access → disable that source |
+| `Source X failed: Malformed feed` | Feed URL wrong/moved → re-verify |
+| Many stories ⚠️ excerpt-only | Site blocks article pages or renders with JavaScript; acceptable, or set `fetch_articles = false` |
+| No briefing at 08:00 | Scheduled run delayed/skipped by GitHub, workflow not on default branch, or Actions disabled → check the Actions tab, run `live` manually |
+| `state/state.json changed on the remote too` | Someone edited state manually while a run was going → resolve by hand, never force-push |
+| Exit code 3 / "Configuration error" | Typo in `config/*.toml`; the message names the key |
+
+---
+
+## Cost and free-tier limits
+
+The design targets **zero recurring cost under the free allowances that apply today**. These allowances are set by the providers and can change at any time; nothing here can guarantee them.
+
+| Service | What's used | Free allowance (as understood at build time; verify yourself) |
+|---|---|---|
+| GitHub Actions (private repo, GitHub Free) | ~3–6 min/day on `ubuntu-latest` → roughly 100–200 min/month | 2,000 min/month; 500 MB artifact storage (artifacts kept 7 days, tiny) |
+| Gemini Developer API (Free tier) | ~11 requests/day, capped at 16/run | Per-model RPM/RPD limits, per project; daily quota resets at midnight Pacific time. Recent developer reports describe free quotas being cut sharply for some models, so check the official rate-limits page |
+| Telegram Bot API | a few messages/day | Free |
+| News feeds | a few HTTP requests/day | Free; subject to each publisher's terms |
+
+How spending is prevented: there's no paid service, no paid fallback provider, and no automatic model switching. Gemini free-tier projects without billing simply reject requests over quota (HTTP 429), which the app handles as a partial edition. The one way to incur cost is linking a billing account to the Gemini project yourself, so keep billing off that project.
+
+---
+
+## Disabling the schedule
+
+- **Pause:** Actions → *Daily BCS briefing* → **⋯** (top right) → **Disable workflow**. Re-enable the same way.
+- **Remove the schedule but keep manual runs:** delete the two `schedule:` / `- cron:` lines in `.github/workflows/daily-briefing.yml`.
+- **Stop completely:** delete the workflow file, and optionally revoke the Gemini key and the bot (BotFather → `/revoke`).
+
+Note: GitHub automatically disables schedules in **public** repositories after 60 days without activity. The daily state commit counts as activity.
+
+---
+
+## Switching to a local model
+
+All AI calls go through `app/llm/base.py`:
+
+- `LLMProvider.generate_raw(request) -> str` is the only thing a provider implements. It maps its failures to `QuotaExhaustedError`, `RateLimitError`, `TransientLLMError`, `PermanentLLMError`, `ModelUnavailableError` or `InvalidResponseError`.
+- `LLMClient` adds the call budget, spacing, retries, backoff and JSON parsing for every provider.
+- Prompts, validation, grounding and rendering don't care which provider produced the JSON.
+
+**Ollama (included, experimental, not tested against a real Ollama server):**
+
+```bash
+ollama pull qwen2.5:7b-instruct          # any instruction model that follows JSON well
+export LLM_PROVIDER=ollama OLLAMA_MODEL=qwen2.5:7b-instruct
+python -m app run --dry-run              # check quality before going live
+```
+
+GitHub-hosted runners **can't reach a model on your computer**. Options:
+1. Run the pipeline on your own machine on a schedule (cron / Task Scheduler) with `python -m app run`. The machine must be on at 08:00, and you should stop the GitHub workflow so the two don't keep separate state.
+2. Register your machine as a **self-hosted runner** (free) and change `runs-on` to `self-hosted`. Same requirement: the machine must be on.
+
+Small local models are weaker at following the strict JSON and Bengali instructions. The grounding checks will discard more of their output, so expect more partial editions. Compare with a `--dry-run` first.
+
+**Another provider:** add `app/llm/<name>.py` with a `generate_raw` implementation and one branch in `build_provider()` in `app/llm/__init__.py`. Nothing else changes.
+
+---
+
+## Testing
+
+```bash
+python -m pytest                 # ~100 unit tests, fully mocked, < 2 s
+```
+
+A test fixture blocks real HTTP, so unit tests can never spend Gemini quota or message Telegram. Coverage includes feed parsing with malformed items, missing/invalid/future dates, invalid URLs, duplicate detection, extraction failure and excerpt-only rules, the scoring rubric, malformed model output, unsupported facts and numbers, MCQ schema/answer-index validation, HTML escaping and chunking, Telegram retries and plain-text fallback, Gemini 429/404/5xx classification, retry limits and call budget, state corruption/backup recovery/migration/newer-schema refusal, quota exhaustion mid-run with resumption, interrupted delivery resuming without duplicates, failure-notice de-duplication, low-relevance days without padding, dry-run behaviour and secret redaction in logs.
+
+**Live integration tests** (opt-in, real network; uses 1 model lookup and sends 1 Telegram message):
+
+```bash
+RUN_INTEGRATION=1 GEMINI_API_KEY=… TELE_BOT_TOKEN=… TELE_CHAT_ID=… python -m pytest -m integration
+```
+
+The scheduled workflow runs the unit tests before each live run; if they fail, no briefing is sent and you're notified.
+
+---
+
+## Security and privacy
+
+- **No secrets in the repository.** Credentials come only from environment variables / GitHub Secrets. `.env` is git-ignored; `.env.example` holds placeholders.
+- **No secrets in logs.** The Gemini key travels in a header, never a URL. A logging filter redacts both credentials from every log line, and urllib3 debug logging (which would print Telegram's token-bearing URL) is suppressed.
+- **Web content is untrusted.** Article text is wrapped in delimiters the article can't forge, the model is told to treat it as data, and the model has no tools. Its output is parsed as JSON and validated. URLs are stripped from model text, all text is HTML-escaped, and links only ever come from our own feed records. A hostile article can at worst get itself rejected.
+- **Network hygiene.** Timeouts on every request, size caps (3 MB) on feeds and pages, robots.txt respected, honest user agent, no paywall or anti-bot bypassing.
+- **Least privilege.** The workflow token has `contents: write` only, used solely to commit `state/state.json`. No force-push.
+- **Data use.** On Gemini's free tier, Google may use prompts/responses to improve its products. Only public news text is sent.
+
+---
+
+## Configuration reference
+
+`config/settings.toml` (non-secret; edit and commit):
+
+| Key | Default | Meaning |
+|---|---|---|
+| `edition.max_stories` / `min_target_stories` | 8 / 5 | Target range. A ceiling, not a quota |
+| `edition.min_story_score` | 55 | Stories below this (0–100) are never included |
+| `edition.freshness_hours` | 36 | Items older than this are ignored or expire |
+| `edition.mcq_count` | 3 | MCQs per complete edition |
+| `extraction.min_article_chars` | 600 | Below this, the body counts as unavailable → excerpt-only |
+| `extraction.max_article_chars` | 12000 | Text sent to the model is truncated here |
+| `extraction.min_excerpt_chars_for_analysis` | 220 | Below this, an excerpt-only story is skipped |
+| `analysis.max_analyses_per_run` | 9 | Model calls for analysis per run |
+| `analysis.max_attempts_per_story` | 3 | Then the story is abandoned |
+| `scoring.weights.*` | 0.30/0.25/0.20/0.15/0.10 | Rubric weights, must sum to 1 |
+| `llm.provider` | `gemini` | `gemini`, `ollama` or `mock` |
+| `llm.gemini_model` | `gemini-3.8-flash` | Override with `GEMINI_MODEL` |
+| `llm.max_calls_per_run` | 16 | Hard cap including retries |
+| `llm.min_seconds_between_calls` | 6 | Request spacing |
+| `telegram.max_message_chars` | 3800 | Chunk size (Telegram's limit is 4096) |
+| `state.retention_days` | 14 | Pruning window |
+
+Environment variables: `GEMINI_API_KEY`, `TELE_BOT_TOKEN`, `TELE_CHAT_ID` (secrets); `GEMINI_MODEL`, `LLM_PROVIDER`, `OLLAMA_MODEL`, `OLLAMA_BASE_URL`, `BCS_STATE_PATH`, `BCS_OUTPUT_DIR`, `BCS_CONFIG_DIR` (optional overrides).
+
+Syllabus reference: subject mapping follows the BPSC BCS syllabus (preliminary subjects: Bangladesh affairs, international affairs, geography/environment/disaster management, general science, computer & ICT, ethics/values/good governance; written papers 005 Bangladesh Affairs, 007 International Affairs, 010 General Science & Technology). Always confirm the latest syllabus at <https://bpsc.gov.bd>.

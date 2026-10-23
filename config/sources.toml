@@ -1,0 +1,150 @@
+# News source registry.
+#
+# Rules:
+# - Only list a feed_url that has evidence of existing. Never guess.
+# - `verification` records what evidence exists. Run
+#   `python -m app verify-sources` (or the "verify-sources" workflow mode) to
+#   check every feed live, including robots.txt, and update these fields.
+# - A failing source never stops collection from the others.
+# - `fetch_articles = false` means only the feed excerpt is used (excerpt-only).
+#
+# Allowed subjects:
+#   bangladesh_affairs, international_affairs, economy, environment_climate,
+#   science_technology, foreign_policy_geopolitics, constitution_governance,
+#   awards_reports_indices
+# Allowed types: newspaper, news_agency, official, international_org
+
+[[source]]
+id = "prothomalo"
+name = "Prothom Alo (প্রথম আলো)"
+homepage = "https://www.prothomalo.com/"
+feed_url = "https://www.prothomalo.com/feed"
+type = "newspaper"
+language = "bn"
+subjects = ["bangladesh_affairs", "economy", "international_affairs", "constitution_governance", "environment_climate"]
+enabled = true
+fetch_articles = true
+timeout_seconds = 20
+max_retries = 2
+verification = "Feed URL taken from the owner's working prototype; not yet re-checked live from CI."
+
+[[source]]
+id = "dhakatribune"
+name = "Dhaka Tribune"
+homepage = "https://www.dhakatribune.com/"
+feed_url = "https://www.dhakatribune.com/feed/"
+type = "newspaper"
+language = "en"
+subjects = ["bangladesh_affairs", "international_affairs", "foreign_policy_geopolitics", "constitution_governance"]
+enabled = true
+fetch_articles = true
+timeout_seconds = 20
+max_retries = 2
+verification = "Main feed is the self-referencing link in search-indexed Dhaka Tribune category RSS documents (2026). Not yet checked live from CI."
+
+[[source]]
+id = "dhakatribune_business"
+name = "Dhaka Tribune — Business"
+homepage = "https://www.dhakatribune.com/business"
+feed_url = "https://www.dhakatribune.com/feed/business"
+type = "newspaper"
+language = "en"
+subjects = ["economy", "awards_reports_indices"]
+enabled = true
+fetch_articles = true
+timeout_seconds = 20
+max_retries = 2
+verification = "Search-indexed RSS 2.0 document observed (channel 'Business', July 2026). Not yet checked live from CI."
+
+[[source]]
+id = "dailystar"
+name = "The Daily Star"
+homepage = "https://www.thedailystar.net/"
+feed_url = "https://www.thedailystar.net/frontpage/rss.xml"
+type = "newspaper"
+language = "en"
+subjects = ["bangladesh_affairs", "economy", "environment_climate", "foreign_policy_geopolitics", "constitution_governance"]
+enabled = true
+fetch_articles = true
+timeout_seconds = 20
+max_retries = 2
+verification = "Listed as the front-page feed in public OPML directories (e.g. plenaryapp/awesome-rss-feeds). Not yet checked live from CI."
+
+[[source]]
+id = "un_news_asia_pacific"
+aliases = ["United Nations", "জাতিসংঘ"]
+name = "UN News — Asia Pacific"
+homepage = "https://news.un.org/en/"
+# Path follows the documented regional-feed pattern, but this exact feed was
+# not confirmed. Enable only after `verify-sources` passes.
+feed_url = "https://news.un.org/feed/subscribe/en/news/region/asia-pacific/feed/rss.xml"
+type = "international_org"
+language = "en"
+subjects = ["international_affairs", "foreign_policy_geopolitics", "environment_climate"]
+enabled = false
+fetch_articles = true
+timeout_seconds = 20
+max_retries = 2
+verification = "UNVERIFIED: inferred from UN News regional feed URL pattern."
+
+# Official sources without a verified feed. Kept as reference homepages so
+# analysis can point to primary sources; they are never scraped.
+[[source]]
+id = "bss"
+aliases = ["BSS", "Bangladesh Sangbad Sangstha", "বাসস"]
+name = "Bangladesh Sangbad Sangstha (BSS, state news agency)"
+homepage = "https://www.bssnews.net/"
+feed_url = ""
+type = "news_agency"
+language = "en"
+subjects = ["bangladesh_affairs", "constitution_governance"]
+enabled = false
+fetch_articles = false
+timeout_seconds = 20
+max_retries = 2
+verification = "No official feed found. Reference only."
+
+[[source]]
+id = "bangladesh_bank"
+aliases = ["Bangladesh Bank", "বাংলাদেশ ব্যাংক", "central bank"]
+name = "Bangladesh Bank"
+homepage = "https://www.bb.org.bd/"
+feed_url = ""
+type = "official"
+language = "en"
+subjects = ["economy"]
+enabled = false
+fetch_articles = false
+timeout_seconds = 20
+max_retries = 2
+verification = "No feed known. Reference only."
+
+[[source]]
+id = "bbs"
+aliases = ["BBS", "Bangladesh Bureau of Statistics", "বাংলাদেশ পরিসংখ্যান ব্যুরো", "পরিসংখ্যান ব্যুরো"]
+name = "Bangladesh Bureau of Statistics"
+homepage = "https://bbs.gov.bd/"
+feed_url = ""
+type = "official"
+language = "en"
+subjects = ["economy", "bangladesh_affairs"]
+enabled = false
+fetch_articles = false
+timeout_seconds = 20
+max_retries = 2
+verification = "No feed known. Reference only."
+
+[[source]]
+id = "mofa"
+aliases = ["Ministry of Foreign Affairs", "Foreign Ministry", "পররাষ্ট্র মন্ত্রণালয়"]
+name = "Ministry of Foreign Affairs, Bangladesh"
+homepage = "https://mofa.gov.bd/"
+feed_url = ""
+type = "official"
+language = "en"
+subjects = ["foreign_policy_geopolitics"]
+enabled = false
+fetch_articles = false
+timeout_seconds = 20
+max_retries = 2
+verification = "No feed known. Reference only."

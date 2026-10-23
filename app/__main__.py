@@ -1,0 +1,342 @@
+"""Command-line entry point: ``python -m app <command>``.
+
+Commands:
+  run              Build today's edition and deliver it to Telegram.
+  run --dry-run    Build with real feeds and the real model, but never send.
+                   Uses a scratch state file, so production state is untouched.
+  run --offline    Fully offline dry run: bundled sample feeds + mock model.
+  test-telegram    Send one short test message.
+  verify-sources   Check every configured feed live (robots.txt, HTTP, parse).
+  check-model      Check the configured Gemini model id is available to the key.
+  status           Print a summary of the persisted state.
+  notify-failure   Send a failure notice unless the run already reported one
+                   (used by the workflow when a run crashes).
+"""
+
+from __future__ import annotations
+
+import argparse
+import json
+import logging
+import sys
+from datetime import date
+from pathlib import Path
+from urllib.parse import urlsplit
+
+from .collector import parse_feed
+from .config import PROJECT_ROOT, ConfigError, Settings, load_settings
+from .extractor import Extraction, clean_article_html, extract_article
+from .http import FetchError, Fetcher, RobotsDisallowed
+from .llm import LLMError, build_client, build_provider
+from .pipeline import Pipeline
+from .sources import load_sources
+from .state import StateStore, StateVersionError
+from .telegram_delivery import TelegramClient, TelegramError
+from .util import utcnow
+
+SAMPLE_DIR = PROJECT_ROOT / "sample_data"
+RESULT_FILE = "run-result.json"
+EXIT_OK, EXIT_FAILED, EXIT_REPORTED_FAILURE, EXIT_CONFIG = 0, 1, 2, 3
+
+log = logging.getLogger("app")
+
+
+class RedactingFilter(logging.Filter):
+    def __init__(self, settings: Settings):
+        super().__init__()
+        self.settings = settings
+
+    def filter(self, record: logging.LogRecord) -> bool:
+        message = record.getMessage()
+        redacted = self.settings.secrets.redact(message)
+        if redacted != message:
+            record.msg, record.args = redacted, None
+        return True
+
+
+def setup_logging(settings: Settings | None, verbose: bool) -> None:
+    handler = logging.StreamHandler()
+    handler.setFormatter(logging.Formatter("%(asctime)s %(levelname)s %(name)s: %(message)s"))
+    if settings is not None:
+        handler.addFilter(RedactingFilter(settings))
+    root = logging.getLogger()
+    root.handlers[:] = [handler]
+    root.setLevel(logging.DEBUG if verbose else logging.INFO)
+    # urllib3 debug logs would include request URLs (Telegram's contains the token).
+    logging.getLogger("urllib3").setLevel(logging.WARNING)
+
+
+def make_fetcher(settings: Settings) -> Fetcher:
+    c = settings.collection
+    return Fetcher(c.user_agent, timeout=c.request_timeout_seconds, retries=c.request_retries, respect_robots=c.respect_robots_txt)
+
+
+def make_telegram(settings: Settings) -> TelegramClient:
+    t = settings.telegram
+    return TelegramClient(
+        settings.secrets.telegram_bot_token,
+        settings.secrets.telegram_chat_id,
+        api_base=t.api_base,
+        timeout=t.request_timeout_seconds,
+        max_retries=t.max_retries,
+        disable_preview=t.disable_web_page_preview,
+    )
+
+
+def offline_article_fetcher(settings: Settings, articles_dir: Path):
+    def fetch(url: str) -> Extraction:
+        slug = urlsplit(url).path.rstrip("/").rsplit("/", 1)[-1] or "index"
+        path = articles_dir / f"{slug}.html"
+        if not path.exists():
+            return Extraction(status="failed", reason="No offline fixture for this article")
+        text = clean_article_html(path.read_bytes(), settings.extraction.max_article_chars)
+        if len(text) < settings.extraction.min_article_chars:
+            return Extraction(status="too_short", text=text, reason="Fixture too short")
+        return Extraction(status="ok", text=text)
+
+    return fetch
+
+
+def write_result(settings: Settings, payload: dict) -> None:
+    try:
+        settings.output_dir.mkdir(parents=True, exist_ok=True)
+        (settings.output_dir / RESULT_FILE).write_text(json.dumps(payload, ensure_ascii=False, indent=1), encoding="utf-8")
+    except OSError:
+        log.warning("Could not write run result file")
+
+
+def cmd_run(settings: Settings, args) -> int:
+    sources = load_sources(settings.config_dir)
+    (settings.output_dir / RESULT_FILE).unlink(missing_ok=True)  # never act on a stale result
+    offline = args.offline
+    dry_run = args.dry_run or offline  # offline output is mock text: never send it
+    provider_name = "mock" if offline else args.provider
+
+    if dry_run:
+        state_path = settings.output_dir / "dry-run-state.json"
+        settings.output_dir.mkdir(parents=True, exist_ok=True)
+        for p in (state_path, state_path.with_name(state_path.name + ".bak")):
+            p.unlink(missing_ok=True)  # every dry run starts from a clean scratch state
+    else:
+        state_path = settings.state_path
+    store = StateStore(state_path, settings.state.retention_days, settings.state.max_run_history)
+
+    try:
+        provider = build_provider(settings, provider_name)
+    except LLMError as exc:
+        log.error("Model provider unavailable: %s", exc)
+        provider = None
+
+    telegram = None
+    if not dry_run:
+        try:
+            telegram = make_telegram(settings)
+        except TelegramError as exc:
+            log.error("%s", exc)
+            write_result(settings, {"outcome": "failed", "reason": str(exc), "failure_notified": False})
+            return EXIT_CONFIG
+
+    if provider is None:
+        if telegram is not None:
+            try:
+                telegram.send_message("⚠️ <b>বিসিএস ব্রিফিং চালানো যায়নি</b>\nAI মডেল কনফিগারেশন ত্রুটি (GEMINI_API_KEY/মডেল যাচাই করুন)।")
+                write_result(settings, {"outcome": "failed", "reason": "provider config", "failure_notified": True})
+                return EXIT_REPORTED_FAILURE
+            except TelegramError:
+                pass
+        write_result(settings, {"outcome": "failed", "reason": "provider config", "failure_notified": False})
+        return EXIT_CONFIG
+
+    if offline:
+        feed_dir = SAMPLE_DIR / "feeds"
+        article_fetcher = offline_article_fetcher(settings, SAMPLE_DIR / "articles")
+        feed_fetcher = None
+    else:
+        feed_dir = None
+        fetcher = make_fetcher(settings)
+        x = settings.extraction
+        feed_fetcher = fetcher
+
+        def article_fetcher(url: str) -> Extraction:
+            return extract_article(fetcher, url, settings.collection.max_article_bytes, x.min_article_chars, x.max_article_chars)
+
+    pipeline = Pipeline(
+        settings,
+        sources,
+        store,
+        build_client(settings, provider),
+        article_fetcher,
+        feed_fetcher=feed_fetcher,
+        telegram=telegram,
+        dry_run=dry_run,
+        offline_feed_dir=feed_dir,
+    )
+    edition_date = date.fromisoformat(args.date) if args.date else None
+    now = utcnow()
+    if offline and edition_date is None:
+        # Sample feeds are dated; pin "now" so the offline run is reproducible.
+        from datetime import datetime, timezone
+
+        now = datetime(2026, 10, 23, 2, 0, tzinfo=timezone.utc)
+    result = pipeline.run(now=now, edition_date=edition_date)
+    payload = {
+        "outcome": result.outcome,
+        "edition_date": result.edition_date,
+        "stories": result.stories,
+        "mcqs": result.mcqs,
+        "partial": result.partial,
+        "llm_calls": result.llm_calls,
+        "errors": result.errors[-10:],
+        "output": str(result.output_path) if result.output_path else None,
+        "dry_run": dry_run,
+        "failure_notified": result.outcome == "failure_notified",
+    }
+    write_result(settings, payload)
+    print(json.dumps(payload, ensure_ascii=False, indent=1))
+    if result.outcome == "failure_notified":
+        return EXIT_REPORTED_FAILURE
+    return EXIT_OK if result.ok else EXIT_FAILED
+
+
+def cmd_test_telegram(settings: Settings, args) -> int:
+    try:
+        sent = make_telegram(settings).send_message(
+            "✅ <b>BCS Newspaper Engine</b>\nটেস্ট মেসেজ: টেলিগ্রাম সংযোগ কাজ করছে। (এটি ব্রিফিং নয়)"
+        )
+    except TelegramError as exc:
+        print(f"Telegram test FAILED: {exc}")
+        return EXIT_FAILED
+    print(f"Telegram test message delivered (message_id={sent.message_id}).")
+    return EXIT_OK
+
+
+def cmd_verify_sources(settings: Settings, args) -> int:
+    sources = load_sources(settings.config_dir)
+    fetcher = make_fetcher(settings)
+    now = utcnow()
+    rows = []
+    for src in sources:
+        if not src.feed_url:
+            rows.append((src.id, "enabled" if src.enabled else "disabled", "SKIP", "no feed_url (reference only)"))
+            continue
+        try:
+            res = fetcher.get(src.feed_url, max_bytes=settings.collection.max_feed_bytes, timeout=src.timeout_seconds, retries=1)
+            items, report = parse_feed(res.content, src, now, 100)
+            dated = sorted((i.published_at for i in items if i.published_at), reverse=True)
+            ok = report.ok and items
+            detail = f"HTTP {res.status}, {len(items)} items, newest {dated[0] if dated else 'undated'}"
+            if report.warnings:
+                detail += f", warnings: {'; '.join(report.warnings[:2])}"
+            rows.append((src.id, "enabled" if src.enabled else "disabled", "OK" if ok else "FAIL", detail if ok else (report.error or detail)))
+        except RobotsDisallowed as exc:
+            rows.append((src.id, "enabled" if src.enabled else "disabled", "BLOCKED", str(exc)))
+        except FetchError as exc:
+            rows.append((src.id, "enabled" if src.enabled else "disabled", "FAIL", str(exc)))
+    print(f"{'source':<24}{'config':<10}{'result':<9}detail")
+    for row in rows:
+        print(f"{row[0]:<24}{row[1]:<10}{row[2]:<9}{row[3]}")
+    print("\nOnly keep sources enabled that report OK. Update config/sources.toml accordingly.")
+    failed_enabled = [r for r in rows if r[1] == "enabled" and r[2] not in ("OK", "SKIP")]
+    return EXIT_FAILED if failed_enabled else EXIT_OK
+
+
+def cmd_check_model(settings: Settings, args) -> int:
+    try:
+        provider = build_provider(settings, args.provider)
+        provider.check_model()
+    except LLMError as exc:
+        print(f"Model check FAILED: {settings.secrets.redact(str(exc))}")
+        return EXIT_FAILED
+    print(f"Model '{settings.llm.gemini_model}' is available via provider '{provider.name}'.")
+    print("Availability is not proof of free-tier quota: confirm on https://ai.google.dev/gemini-api/docs/pricing")
+    return EXIT_OK
+
+
+def cmd_status(settings: Settings, args) -> int:
+    store = StateStore(settings.state_path, settings.state.retention_days, settings.state.max_run_history)
+    state = store.load()
+    by_status: dict[str, int] = {}
+    for ev in state["events"].values():
+        by_status[ev["status"]] = by_status.get(ev["status"], 0) + 1
+    summary = {
+        "schema_version": state["schema_version"],
+        "last_successful_edition": state.get("last_successful_edition"),
+        "articles": len(state["articles"]),
+        "events_by_status": by_status,
+        "recent_editions": {
+            d: {k: e.get(k) for k in ("status", "partial", "attempts", "failure_reason", "delivered_at")}
+            for d, e in sorted(state["editions"].items())[-5:]
+        },
+        "source_health": state["source_health"],
+        "last_run": state["runs"][-1] if state["runs"] else None,
+    }
+    print(json.dumps(summary, ensure_ascii=False, indent=1))
+    return EXIT_OK
+
+
+def cmd_notify_failure(settings: Settings, args) -> int:
+    path = settings.output_dir / RESULT_FILE
+    try:
+        result = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        result = {}
+    if result.get("failure_notified") or result.get("dry_run"):
+        print("Failure already reported (or dry run); not sending another notice.")
+        return EXIT_OK
+    try:
+        make_telegram(settings).send_message(
+            "⚠️ <b>বিসিএস ব্রিফিং ওয়ার্কফ্লো ব্যর্থ হয়েছে</b>\n"
+            "GitHub Actions লগ দেখুন (Actions → Daily BCS briefing)। কোনো খবর বানিয়ে পাঠানো হয়নি।"
+        )
+    except TelegramError as exc:
+        print(f"Could not send failure notice: {exc}")
+        return EXIT_FAILED
+    print("Failure notice sent.")
+    return EXIT_OK
+
+
+def main(argv: list[str] | None = None) -> int:
+    parser = argparse.ArgumentParser(prog="python -m app", description="BCS Newspaper Engine")
+    parser.add_argument("-v", "--verbose", action="store_true")
+    sub = parser.add_subparsers(dest="command", required=True)
+    run = sub.add_parser("run", help="build (and deliver) today's edition")
+    run.add_argument("--dry-run", action="store_true", help="never send to Telegram; use scratch state")
+    run.add_argument("--offline", action="store_true", help="sample feeds + mock model; implies --dry-run")
+    run.add_argument("--provider", choices=["gemini", "ollama", "mock"], help="override llm.provider")
+    run.add_argument("--date", help="edition date YYYY-MM-DD (testing)")
+    sub.add_parser("test-telegram", help="send a test message")
+    sub.add_parser("verify-sources", help="check configured feeds live")
+    cm = sub.add_parser("check-model", help="check the configured model is available")
+    cm.add_argument("--provider", choices=["gemini", "ollama"])
+    sub.add_parser("status", help="summarise persisted state")
+    sub.add_parser("notify-failure", help="send a crash notice if none was sent")
+    args = parser.parse_args(argv)
+
+    try:
+        settings = load_settings()
+    except ConfigError as exc:
+        setup_logging(None, args.verbose)
+        log.error("Configuration error: %s", exc)
+        return EXIT_CONFIG
+    setup_logging(settings, args.verbose)
+
+    handlers = {
+        "run": cmd_run,
+        "test-telegram": cmd_test_telegram,
+        "verify-sources": cmd_verify_sources,
+        "check-model": cmd_check_model,
+        "status": cmd_status,
+        "notify-failure": cmd_notify_failure,
+    }
+    try:
+        return handlers[args.command](settings, args)
+    except StateVersionError as exc:
+        log.error("%s", exc)
+        return EXIT_CONFIG
+    except ConfigError as exc:
+        log.error("Configuration error: %s", exc)
+        return EXIT_CONFIG
+
+
+if __name__ == "__main__":
+    sys.exit(main())

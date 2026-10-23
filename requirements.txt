@@ -1,0 +1,4 @@
+# Runtime dependencies (direct deps pinned exactly; verified with Python 3.12/3.13).
+requests==2.32.5
+feedparser==6.0.12
+beautifulsoup4==4.13.5

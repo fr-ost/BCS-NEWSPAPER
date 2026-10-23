@@ -1,0 +1,96 @@
+# BCS Newspaper Engine settings.
+# Every value here can be changed without touching application code.
+# Secrets never go in this file: they come from environment variables / GitHub Secrets.
+
+[edition]
+timezone = "Asia/Dhaka"
+# Target story count. These are limits, not quotas: low-relevance days send fewer.
+min_target_stories = 5
+max_stories = 8
+# Stories scoring below this (0-100) are never included, even on a thin day.
+min_story_score = 55
+# Only consider items published within this window (hours) of the run.
+freshness_hours = 36
+# Number of MCQs in a complete edition.
+mcq_count = 3
+
+[collection]
+max_items_per_source = 40
+# Hard caps to protect against huge/malicious responses.
+max_feed_bytes = 3_000_000
+max_article_bytes = 3_000_000
+request_timeout_seconds = 20
+request_retries = 2
+# An honest user agent. We do not impersonate browsers or bypass blocks.
+user_agent = "BCSNewspaperBot/1.0 (personal, non-commercial study briefing; respects robots.txt)"
+respect_robots_txt = true
+
+[extraction]
+# Below this many characters the full text is treated as unavailable.
+min_article_chars = 600
+# Article text sent to the model is truncated to this length.
+max_article_chars = 12_000
+# Minimum excerpt length that permits a clearly labelled excerpt-only analysis.
+min_excerpt_chars_for_analysis = 220
+
+[screening]
+# Max candidate events sent to the screening call per run.
+max_candidates = 60
+# Candidates per screening request (one request handles this many).
+batch_size = 60
+
+[analysis]
+# Maximum full-article analyses per run (each is one model call).
+max_analyses_per_run = 9
+# A story that fails analysis this many times is abandoned.
+max_attempts_per_story = 3
+
+# Stage E rubric. Initial heuristics, NOT validated predictions of exam questions.
+# Weights must sum to 1.0. Each criterion is scored 0-10 by the model; the
+# weighted total is scaled to 0-100.
+[scoring.weights]
+syllabus_relevance = 0.30
+significance = 0.25
+factual_density = 0.20
+written_potential = 0.15
+novelty = 0.10
+
+[llm]
+# "gemini" (default), "mock" (offline/testing) or "ollama" (local, experimental).
+provider = "gemini"
+# Verify free-tier eligibility at https://ai.google.dev/gemini-api/docs/pricing
+# before relying on this. Override with the GEMINI_MODEL environment variable.
+gemini_model = "gemini-3.8-flash"
+gemini_api_base = "https://generativelanguage.googleapis.com/v1beta"
+ollama_model = "qwen2.5:7b-instruct"
+ollama_base_url = "http://localhost:11434"
+temperature = 0.2
+max_output_tokens = 8192
+request_timeout_seconds = 120
+# Budget across the whole run, including retries. Keeps us well inside
+# free-tier daily request quotas.
+max_calls_per_run = 16
+min_seconds_between_calls = 6.0
+max_retries = 3
+backoff_base_seconds = 4.0
+backoff_max_seconds = 60.0
+# Longest server-requested wait we will honour for a per-minute rate limit.
+max_retry_after_seconds = 90.0
+
+[telegram]
+api_base = "https://api.telegram.org"
+# Telegram's hard limit is 4096 characters; stay below it.
+max_message_chars = 3800
+request_timeout_seconds = 30
+max_retries = 3
+disable_web_page_preview = true
+
+[state]
+path = "state/state.json"
+# Articles older than this are pruned from state (keeps the file small).
+retention_days = 14
+max_run_history = 30
+
+[output]
+# Rendered editions are written here (git-ignored; uploaded as a workflow artifact).
+dir = "output"

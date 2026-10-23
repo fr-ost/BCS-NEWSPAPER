@@ -1,0 +1,31 @@
+# Secrets — never commit
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Generated output (uploaded as workflow artifacts instead)
+output/
+
+# State side files (state/state.json itself IS committed by the workflow)
+state/*.bak
+state/*.tmp
+state/.state-*
+state/*.corrupt-*
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+*.egg-info/
+.coverage
+htmlcov/
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

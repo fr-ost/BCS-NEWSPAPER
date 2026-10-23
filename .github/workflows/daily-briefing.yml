@@ -1,0 +1,130 @@
+name: Daily BCS briefing
+
+on:
+  schedule:
+    # GitHub cron is always UTC. 02:00 UTC = 08:00 Asia/Dhaka (UTC+6, no DST).
+    # Scheduled runs are best-effort: they often start several minutes late
+    # (sometimes much later) and can be dropped when GitHub is under load.
+    - cron: "0 2 * * *"
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "What to run (dry-run never sends to Telegram)"
+        type: choice
+        default: offline
+        options:
+          - offline         # sample data + mock model: no API calls at all
+          - dry-run         # real feeds + real Gemini, no Telegram, state untouched
+          - live            # the real daily edition (same as the schedule)
+          - test-telegram   # one short test message
+          - verify-sources  # check every configured feed live
+          - check-model     # check the Gemini model id is available to your key
+          - status          # print a summary of the saved state
+
+# Least privilege: the only write is committing state/state.json.
+permissions:
+  contents: write
+
+# Never let two runs touch state at the same time. Queued runs wait.
+concurrency:
+  group: bcs-briefing-state
+  cancel-in-progress: false
+
+jobs:
+  briefing:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      MODE: ${{ github.event_name == 'schedule' && 'live' || inputs.mode }}
+      PYTHONUNBUFFERED: "1"
+    steps:
+      - name: Warn if repository is public
+        if: ${{ !github.event.repository.private }}
+        run: echo "::warning::This repository is public. state/state.json (your reading history) is committed here. Make the repository private (Settings → General → Danger Zone)."
+
+      - name: Check out repository (includes saved state)
+        uses: actions/checkout@v5
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: requirements*.txt
+
+      - name: Install pinned dependencies
+        run: pip install -r requirements.txt -r requirements-dev.txt
+
+      - name: Unit tests (fully mocked, no API calls)
+        if: env.MODE == 'live' || env.MODE == 'dry-run' || env.MODE == 'offline'
+        run: python -m pytest
+
+      - name: Run (${{ env.MODE }})
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          TELE_BOT_TOKEN: ${{ secrets.TELE_BOT_TOKEN }}
+          TELE_CHAT_ID: ${{ secrets.TELE_CHAT_ID }}
+          # Optional repository variable (Settings → Variables) to change model without a code change.
+          GEMINI_MODEL: ${{ vars.GEMINI_MODEL }}
+        run: |
+          case "$MODE" in
+            live)           python -m app run ;;
+            dry-run)        python -m app run --dry-run ;;
+            offline)        python -m app run --offline ;;
+            test-telegram)  python -m app test-telegram ;;
+            verify-sources) python -m app verify-sources ;;
+            check-model)    python -m app check-model ;;
+            status)         python -m app status ;;
+            *) echo "::error::Unknown mode '$MODE'"; exit 3 ;;
+          esac
+
+      - name: Commit and push state
+        if: always() && env.MODE == 'live'
+        run: |
+          if [ ! -f state/state.json ]; then
+            echo "No state file was produced; nothing to commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add state/state.json
+          if git diff --cached --quiet; then
+            echo "State unchanged."
+            exit 0
+          fi
+          git commit -m "state: run for $(TZ=Asia/Dhaka date +%F)"
+          for attempt in 1 2 3; do
+            if git push origin "HEAD:${GITHUB_REF_NAME}"; then
+              echo "State saved."
+              exit 0
+            fi
+            echo "Push rejected (attempt $attempt); rebasing onto the latest remote commit."
+            git fetch origin "${GITHUB_REF_NAME}"
+            if ! git rebase "origin/${GITHUB_REF_NAME}"; then
+              git rebase --abort
+              echo "::error::state/state.json changed on the remote too. Not overwriting newer state. The state from this run is in the workflow artifact."
+              exit 1
+            fi
+            sleep $((attempt * 5))
+          done
+          echo "::error::Could not push state after 3 attempts. The state from this run is in the workflow artifact."
+          exit 1
+
+      - name: Notify Telegram about a failed run
+        if: failure() && env.MODE == 'live'
+        env:
+          TELE_BOT_TOKEN: ${{ secrets.TELE_BOT_TOKEN }}
+          TELE_CHAT_ID: ${{ secrets.TELE_CHAT_ID }}
+        run: python -m app notify-failure
+
+      - name: Upload edition and diagnostics
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: briefing-${{ env.MODE }}-${{ github.run_id }}
+          path: |
+            output/
+            state/state.json
+            state/*.corrupt-*
+          if-no-files-found: ignore
+          retention-days: 7

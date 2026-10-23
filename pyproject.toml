@@ -1,0 +1,11 @@
+[project]
+name = "bcs-newspaper"
+version = "1.0.0"
+description = "Daily grounded BCS current-affairs briefing delivered to Telegram"
+requires-python = ">=3.11"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q -m 'not integration'"
+filterwarnings = ["ignore:To avoid breaking existing software:DeprecationWarning:feedparser"]
+markers = ["integration: live tests that hit real APIs (opt-in via RUN_INTEGRATION=1)"]

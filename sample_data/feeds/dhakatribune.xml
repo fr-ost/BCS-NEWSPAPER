@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"><channel><title>SAMPLE feed (fictional)</title><link>https://example.com/</link><description>Offline fixture</description>
+<item><title>[SAMPLE] Cabinet approves draft amendment to the Bangladesh Labour Act</title>
+<link>https://example.com/bangladesh/sample-labour-act-cabinet</link>
+<description>[SAMPLE] Cabinet gives final approval to the draft Bangladesh Labour (Amendment) Act; the bill will now be placed before parliament.</description>
+<pubDate>Thu, 22 Oct 2026 11:30:00 +0600</pubDate></item>
+<item><title>[SAMPLE] Bangladesh and Nepal sign MoU on hydropower trade</title>
+<link>https://example.com/bangladesh/sample-nepal-hydropower-mou</link>
+<description>[SAMPLE] Dhaka and Kathmandu signed a memorandum of understanding allowing Bangladesh to import electricity from Nepal through the Indian grid under a tripartite arrangement.</description>
+</item>
+</channel></rss>
