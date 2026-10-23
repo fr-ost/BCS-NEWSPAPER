@@ -14,12 +14,12 @@ on:
         default: offline
         options:
           - offline         # sample data + mock model: no API calls at all
-          - dry-run         # real feeds + real Gemini, no Telegram, state untouched
+          - dry-run         # real feeds + real model (OpenAI, Gemini fallback), no Telegram, state untouched
           - live            # the real daily edition (same as the schedule)
           - subscribers     # register new /start and /stop now, list subscribers
           - test-telegram   # register new subscribers, send each a test message
           - verify-sources  # check every configured feed live
-          - check-model     # check the Gemini model id is available to your key
+          - check-model     # check the OpenAI and Gemini model ids work with your keys
           - status          # print a summary of the saved state
 
 # Least privilege: the only write is committing state/state.json
@@ -63,11 +63,13 @@ jobs:
 
       - name: Run (${{ env.MODE }})
         env:
-          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}   # primary model (paid, prepaid credit)
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}   # fallback model (free tier)
           TELE_BOT_TOKEN: ${{ secrets.TELE_BOT_TOKEN }}
           # Optional: when set, people can only join via t.me/<bot>?start=<code>.
           BOT_INVITE_CODE: ${{ secrets.BOT_INVITE_CODE }}
           # Optional repository variable (Settings → Variables) to change model without a code change.
+          OPENAI_MODEL: ${{ vars.OPENAI_MODEL }}
           GEMINI_MODEL: ${{ vars.GEMINI_MODEL }}
         run: |
           case "$MODE" in

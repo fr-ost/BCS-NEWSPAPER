@@ -81,7 +81,16 @@ class AnalysisConfig:
 
 @dataclass(frozen=True)
 class LLMConfig:
-    provider: str = "gemini"
+    provider: str = "openai"
+    # Tried in order when the primary provider is out of credit/quota or failing.
+    fallback_providers: tuple[str, ...] = ("gemini",)
+    openai_model: str = "gpt-5.4-mini"
+    openai_api_base: str = "https://api.openai.com/v1"
+    openai_reasoning_effort: str = ""
+    openai_min_seconds_between_calls: float = 1.0
+    # Used only to estimate spend in run logs. Check https://openai.com/api/pricing
+    openai_usd_per_million_input: float = 0.75
+    openai_usd_per_million_output: float = 4.50
     gemini_model: str = "gemini-3.8-flash"
     gemini_api_base: str = "https://generativelanguage.googleapis.com/v1beta"
     ollama_model: str = "qwen2.5:7b-instruct"
@@ -121,13 +130,14 @@ class Secrets:
     """Credentials from the environment. ``repr`` never reveals values."""
 
     gemini_api_key: str = field(default="", repr=False)
+    openai_api_key: str = field(default="", repr=False)
     telegram_bot_token: str = field(default="", repr=False)
     # Optional. When set, people can only subscribe via t.me/<bot>?start=<code>.
     bot_invite_code: str = field(default="", repr=False)
 
     def redact(self, text: str) -> str:
         """Remove any secret value that leaked into ``text`` (e.g. an exception)."""
-        for value in (self.gemini_api_key, self.telegram_bot_token, self.bot_invite_code):
+        for value in (self.gemini_api_key, self.openai_api_key, self.telegram_bot_token, self.bot_invite_code):
             if value and len(value) >= 6:
                 text = text.replace(value, "***")
         return text
@@ -194,6 +204,11 @@ def load_settings(config_dir: Path | None = None, env: dict[str, str] | None = N
         llm_raw["gemini_model"] = env["GEMINI_MODEL"]
     if env.get("LLM_PROVIDER"):
         llm_raw["provider"] = env["LLM_PROVIDER"]
+    if env.get("OPENAI_MODEL"):
+        llm_raw["openai_model"] = env["OPENAI_MODEL"]
+    if "LLM_FALLBACK" in env:
+        value = env["LLM_FALLBACK"].strip().lower()
+        llm_raw["fallback_providers"] = [] if value in ("", "none") else [x.strip() for x in value.split(",") if x.strip()]
     if env.get("OLLAMA_MODEL"):
         llm_raw["ollama_model"] = env["OLLAMA_MODEL"]
     if env.get("OLLAMA_BASE_URL"):
@@ -205,6 +220,12 @@ def load_settings(config_dir: Path | None = None, env: dict[str, str] | None = N
         state_raw["path"] = env["BCS_STATE_PATH"]
     data["state"] = state_raw
 
+    if isinstance(data["llm"].get("fallback_providers"), list):
+        data["llm"]["fallback_providers"] = tuple(data["llm"]["fallback_providers"])
+    known = {"openai", "gemini", "ollama", "mock"}
+    for name in (data["llm"].get("provider", "openai"), *data["llm"].get("fallback_providers", ())):
+        if name not in known:
+            raise ConfigError(f"Unknown LLM provider {name!r} (expected one of {sorted(known)})")
     edition = _section(EditionConfig, data, "edition")
     if not (1 <= edition.max_stories <= 15):
         raise ConfigError("edition.max_stories must be between 1 and 15")
@@ -232,6 +253,7 @@ def load_settings(config_dir: Path | None = None, env: dict[str, str] | None = N
         config_dir=config_dir,
         secrets=Secrets(
             gemini_api_key=env.get("GEMINI_API_KEY", "").strip(),
+            openai_api_key=env.get("OPENAI_API_KEY", "").strip(),
             telegram_bot_token=env.get("TELE_BOT_TOKEN", "").strip(),
             bot_invite_code=env.get("BOT_INVITE_CODE", "").strip(),
         ),

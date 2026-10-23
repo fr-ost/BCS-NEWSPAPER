@@ -56,10 +56,28 @@ written_potential = 0.15
 novelty = 0.10
 
 [llm]
-# "gemini" (default), "mock" (offline/testing) or "ollama" (local, experimental).
-provider = "gemini"
-# Verify free-tier eligibility at https://ai.google.dev/gemini-api/docs/pricing
-# before relying on this. Override with the GEMINI_MODEL environment variable.
+# Primary provider: "openai" (paid, prepaid credit), "gemini" (free tier),
+# "ollama" (local, experimental) or "mock" (offline/testing).
+provider = "openai"
+# Used in order when the primary is out of credit/quota, rejects the key or
+# model, or keeps failing. Gemini's free tier keeps the briefing coming.
+# Set to [] to disable fallback (or env LLM_FALLBACK=none).
+fallback_providers = ["gemini"]
+
+# OpenAI. Verify the model id and price at https://openai.com/api/pricing
+# Override with the OPENAI_MODEL environment variable / repository variable.
+openai_model = "gpt-5.4-mini"
+openai_api_base = "https://api.openai.com/v1"
+# Optional: "low"/"minimal" cuts hidden reasoning tokens (cost) on reasoning
+# models. Leave empty if your model rejects the parameter.
+openai_reasoning_effort = ""
+openai_min_seconds_between_calls = 1.0
+# Only used to print an estimated cost per run (USD per 1M tokens).
+openai_usd_per_million_input = 0.75
+openai_usd_per_million_output = 4.50
+
+# Gemini (fallback). Verify free-tier eligibility at
+# https://ai.google.dev/gemini-api/docs/pricing. Override with GEMINI_MODEL.
 gemini_model = "gemini-3.8-flash"
 gemini_api_base = "https://generativelanguage.googleapis.com/v1beta"
 ollama_model = "qwen2.5:7b-instruct"
@@ -67,9 +85,10 @@ ollama_base_url = "http://localhost:11434"
 temperature = 0.2
 max_output_tokens = 8192
 request_timeout_seconds = 120
-# Budget across the whole run, including retries. Keeps us well inside
-# free-tier daily request quotas.
+# Budget per provider across the whole run, including retries. Caps OpenAI
+# spend and keeps Gemini well inside free-tier daily request quotas.
 max_calls_per_run = 16
+# Spacing between Gemini/Ollama calls (free-tier per-minute limits).
 min_seconds_between_calls = 6.0
 max_retries = 3
 backoff_base_seconds = 4.0

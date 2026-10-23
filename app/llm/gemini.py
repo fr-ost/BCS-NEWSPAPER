@@ -132,7 +132,13 @@ class GeminiProvider(LLMProvider):
         data = _safe_json(resp)
         if resp.status_code != 200:
             raise classify_error(resp.status_code, data)
-        return extract_text(data)
+        text = extract_text(data)
+        meta = data.get("usageMetadata") or {}
+        self.record_usage(
+            meta.get("promptTokenCount", 0),
+            int(meta.get("candidatesTokenCount", 0) or 0) + int(meta.get("thoughtsTokenCount", 0) or 0),
+        )
+        return text
 
 
 def _safe_json(resp: requests.Response) -> object:

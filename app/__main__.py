@@ -28,7 +28,7 @@ from .collector import parse_feed
 from .config import PROJECT_ROOT, ConfigError, Settings, load_settings
 from .extractor import Extraction, clean_article_html, extract_article
 from .http import FetchError, Fetcher, RobotsDisallowed
-from .llm import LLMError, build_client, build_provider
+from .llm import LLMError, build_llm, build_provider
 from .pipeline import Pipeline
 from .sources import load_sources
 from .state import StateError, StateStore, StateVersionError
@@ -120,7 +120,7 @@ def cmd_run(settings: Settings, args) -> int:
     (settings.output_dir / RESULT_FILE).unlink(missing_ok=True)  # never act on a stale result
     offline = args.offline
     dry_run = args.dry_run or offline  # offline output is mock text: never send it
-    provider_name = "mock" if offline else args.provider
+    provider_name = "mock" if offline else args.provider  # None -> configured chain with fallback
 
     if dry_run:
         state_path = settings.output_dir / "dry-run-state.json"
@@ -132,10 +132,10 @@ def cmd_run(settings: Settings, args) -> int:
     store = StateStore(state_path, settings.state.retention_days, settings.state.max_run_history)
 
     try:
-        provider = build_provider(settings, provider_name)
+        llm = build_llm(settings, provider_name)
     except LLMError as exc:
         log.error("Model provider unavailable: %s", exc)
-        provider = None
+        llm = None
 
     telegram = None
     if not dry_run:
@@ -146,7 +146,7 @@ def cmd_run(settings: Settings, args) -> int:
             write_result(settings, {"outcome": "failed", "reason": str(exc), "failure_notified": False})
             return EXIT_CONFIG
 
-    if provider is None:
+    if llm is None:
         # The workflow's notify-failure step tells subscribers; nothing is sent from here.
         write_result(settings, {"outcome": "failed", "reason": "provider config", "failure_notified": False})
         return EXIT_CONFIG
@@ -168,7 +168,7 @@ def cmd_run(settings: Settings, args) -> int:
         settings,
         sources,
         store,
-        build_client(settings, provider),
+        llm,
         article_fetcher,
         feed_fetcher=feed_fetcher,
         telegram=telegram,
@@ -190,6 +190,8 @@ def cmd_run(settings: Settings, args) -> int:
         "mcqs": result.mcqs,
         "partial": result.partial,
         "llm_calls": result.llm_calls,
+        "llm_usage": result.llm_usage,
+        "estimated_openai_cost_usd": result.estimated_cost_usd,
         "errors": result.errors[-10:],
         "output": str(result.output_path) if result.output_path else None,
         "dry_run": dry_run,
@@ -296,15 +298,18 @@ def cmd_verify_sources(settings: Settings, args) -> int:
 
 
 def cmd_check_model(settings: Settings, args) -> int:
-    try:
-        provider = build_provider(settings, args.provider)
-        provider.check_model()
-    except LLMError as exc:
-        print(f"Model check FAILED: {settings.secrets.redact(str(exc))}")
-        return EXIT_FAILED
-    print(f"Model '{settings.llm.gemini_model}' is available via provider '{provider.name}'.")
-    print("Availability is not proof of free-tier quota: confirm on https://ai.google.dev/gemini-api/docs/pricing")
-    return EXIT_OK
+    names = [args.provider] if args.provider else list(dict.fromkeys([settings.llm.provider, *settings.llm.fallback_providers]))
+    failed = 0
+    for name in names:
+        model = {"openai": settings.llm.openai_model, "gemini": settings.llm.gemini_model, "ollama": settings.llm.ollama_model}.get(name, name)
+        try:
+            build_provider(settings, name).check_model()
+            print(f"OK    {name}: model '{model}' is available")
+        except LLMError as exc:
+            failed += 1
+            print(f"FAIL  {name}: {settings.secrets.redact(str(exc))}")
+    print("Availability is not proof of credit/free quota. Prices: https://openai.com/api/pricing · https://ai.google.dev/gemini-api/docs/pricing")
+    return EXIT_FAILED if failed == len(names) else EXIT_OK
 
 
 def cmd_status(settings: Settings, args) -> int:
@@ -366,13 +371,13 @@ def main(argv: list[str] | None = None) -> int:
     run = sub.add_parser("run", help="build (and deliver) today's edition")
     run.add_argument("--dry-run", action="store_true", help="never send to Telegram; use scratch state")
     run.add_argument("--offline", action="store_true", help="sample feeds + mock model; implies --dry-run")
-    run.add_argument("--provider", choices=["gemini", "ollama", "mock"], help="override llm.provider")
+    run.add_argument("--provider", choices=["openai", "gemini", "ollama", "mock"], help="use only this provider (no fallback)")
     run.add_argument("--date", help="edition date YYYY-MM-DD (testing)")
     sub.add_parser("test-telegram", help="register new subscribers and send each a test message")
     sub.add_parser("subscribers", help="read /start and /stop now and list subscribers")
     sub.add_parser("verify-sources", help="check configured feeds live")
     cm = sub.add_parser("check-model", help="check the configured model is available")
-    cm.add_argument("--provider", choices=["gemini", "ollama"])
+    cm.add_argument("--provider", choices=["openai", "gemini", "ollama"])
     sub.add_parser("status", help="summarise persisted state")
     sub.add_parser("notify-failure", help="send a crash notice if none was sent")
     args = parser.parse_args(argv)

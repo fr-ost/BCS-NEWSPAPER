@@ -263,3 +263,38 @@ def test_failure_notice_goes_to_all_subscribers_once(make_pipeline):
     assert sorted(c for c, _ in tg.sent_to) == ["101", "102", "103"]
     make_pipeline(provider=Programmable(quota_after=0), telegram=tg).run(now=NOW)
     assert len(tg.sent_to) == 3
+
+
+# --------------------------------------------------------------- OpenAI -> Gemini fallback
+
+
+def test_openai_running_out_mid_run_completes_edition_with_gemini(settings, sources):
+    from app.__main__ import SAMPLE_DIR, offline_article_fetcher
+    from app.llm import FallbackClient, build_client
+
+    class OpenAIStub(Programmable):
+        name = "openai"
+
+        def generate_raw(self, request):
+            out = super().generate_raw(request)
+            self.record_usage(1000, 500)
+            return out
+
+    class GeminiStub(Programmable):
+        name = "gemini"
+
+    openai = OpenAIStub(quota_after=2)  # screening + 1 analysis, then credit runs out
+    gemini = GeminiStub()
+    llm = FallbackClient([build_client(settings, openai, sleep=no_sleep), build_client(settings, gemini, sleep=no_sleep)])
+    tg = FakeTelegram()
+    pipe = Pipeline(settings, sources, StateStore(settings.state_path), llm, offline_article_fetcher(settings, SAMPLE_DIR / "articles"),
+                    telegram=tg, offline_feed_dir=SAMPLE_DIR / "feeds")
+    result = pipe.run(now=NOW)
+    assert result.outcome == "delivered" and not result.partial
+    assert result.stories == 3 and result.mcqs == 3
+    assert openai.tasks.count("analysis") == 2 and "mcq" in gemini.tasks  # 2nd analysis call hit the limit
+    assert "বিকল্প মডেল" in "\n".join(tg.sent)  # readers are told a fallback model was used
+    assert result.llm_usage["openai"]["input_tokens"] == 2000
+    assert result.estimated_cost_usd == round(2000 / 1e6 * 0.75 + 1000 / 1e6 * 4.50, 4)
+    run = json.loads(settings.state_path.read_text())["runs"][-1]
+    assert "openai" in run["providers_disabled"] and run["estimated_cost_usd"] == result.estimated_cost_usd
