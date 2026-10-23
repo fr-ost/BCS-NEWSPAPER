@@ -15,7 +15,10 @@ from app.llm.mock import MockProvider
 from app.pipeline import Pipeline
 from app.sources import load_sources
 from app.state import StateStore
+from app.subscribers import MSG_ALREADY, MSG_BAD_CODE, MSG_FULL, MSG_HELP, MSG_STOPPED, MSG_WELCOME
 from app.telegram_delivery import SendResult, TelegramError
+
+REPLY_TEXTS = {MSG_WELCOME, MSG_ALREADY, MSG_BAD_CODE, MSG_FULL, MSG_STOPPED, MSG_HELP}
 
 NOW = datetime(2026, 10, 23, 2, 0, tzinfo=timezone.utc)
 
@@ -38,7 +41,6 @@ def settings(tmp_path):
         "BCS_OUTPUT_DIR": str(tmp_path / "output"),
         "GEMINI_API_KEY": "test-gemini-key-123456",
         "TELE_BOT_TOKEN": "123456:test-telegram-token",
-        "TELE_CHAT_ID": "42",
     }
     return load_settings(env=env)
 
@@ -48,20 +50,47 @@ def sources(settings):
     return load_sources(settings.config_dir)
 
 
-class FakeTelegram:
-    """Records messages; can fail on chosen call numbers (1-based)."""
+def start_update(update_id: int, chat_id: int, text: str = "/start", chat_type: str = "private", name: str | None = None) -> dict:
+    return {"update_id": update_id, "message": {"chat": {"id": chat_id, "type": chat_type, "first_name": name or f"User{chat_id}"}, "text": text}}
 
-    def __init__(self, fail_on: set[int] | None = None, permanent: bool = False):
+
+class FakeTelegram:
+    """Fake Bot API. By default ``subscribers`` people have pressed Start.
+
+    Edition messages are recorded in ``sent`` / ``sent_to``; replies to
+    /start etc. go to ``replies`` and are not counted in ``calls``.
+    ``fail_on`` holds 1-based edition-message call numbers that fail;
+    chats in ``gone`` behave as if they blocked the bot.
+    """
+
+    def __init__(self, fail_on: set[int] | None = None, permanent: bool = False, subscribers: int = 1, gone=(), updates=None):
+        self.updates = list(updates) if updates is not None else [start_update(i + 1, 101 + i) for i in range(subscribers)]
         self.sent: list[str] = []
+        self.sent_to: list[tuple[str, str]] = []
+        self.replies: list[tuple[str, str]] = []
         self.calls = 0
         self.fail_on = fail_on or set()
         self.permanent = permanent
+        self.gone = {str(g) for g in gone}
 
-    def send_message(self, text: str) -> SendResult:
+    def get_updates(self, offset):
+        return [u for u in self.updates if offset is None or u["update_id"] >= offset]
+
+    def get_me(self):
+        return {"username": "test_bcs_bot"}
+
+    def send_message(self, chat_id, text: str) -> SendResult:
+        chat_id = str(chat_id)
+        if text in REPLY_TEXTS:
+            self.replies.append((chat_id, text))
+            return SendResult(message_id=1)
         self.calls += 1
+        if chat_id in self.gone:
+            raise TelegramError("Forbidden: bot was blocked by the user", permanent=True, recipient_gone=True)
         if self.calls in self.fail_on:
             raise TelegramError("simulated failure", permanent=self.permanent)
         self.sent.append(text)
+        self.sent_to.append((chat_id, text))
         return SendResult(message_id=1000 + len(self.sent))
 
 

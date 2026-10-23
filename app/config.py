@@ -7,6 +7,7 @@ from environment variables and are never logged or written to disk.
 from __future__ import annotations
 
 import os
+import re
 import tomllib
 from dataclasses import dataclass, field
 from pathlib import Path
@@ -103,6 +104,9 @@ class TelegramConfig:
     request_timeout_seconds: float = 30
     max_retries: int = 3
     disable_web_page_preview: bool = True
+    # Subscribers (you and your friends). Nobody is added without pressing Start.
+    max_subscribers: int = 10
+    min_seconds_between_messages: float = 1.1
 
 
 @dataclass(frozen=True)
@@ -118,11 +122,12 @@ class Secrets:
 
     gemini_api_key: str = field(default="", repr=False)
     telegram_bot_token: str = field(default="", repr=False)
-    telegram_chat_id: str = field(default="", repr=False)
+    # Optional. When set, people can only subscribe via t.me/<bot>?start=<code>.
+    bot_invite_code: str = field(default="", repr=False)
 
     def redact(self, text: str) -> str:
         """Remove any secret value that leaked into ``text`` (e.g. an exception)."""
-        for value in (self.gemini_api_key, self.telegram_bot_token):
+        for value in (self.gemini_api_key, self.telegram_bot_token, self.bot_invite_code):
             if value and len(value) >= 6:
                 text = text.replace(value, "***")
         return text
@@ -205,6 +210,9 @@ def load_settings(config_dir: Path | None = None, env: dict[str, str] | None = N
         raise ConfigError("edition.max_stories must be between 1 and 15")
     if edition.mcq_count < 0:
         raise ConfigError("edition.mcq_count must be >= 0")
+    invite = env.get("BOT_INVITE_CODE", "").strip()
+    if invite and not re.fullmatch(r"[A-Za-z0-9_-]{8,64}", invite):
+        raise ConfigError("BOT_INVITE_CODE must be 8-64 characters of A-Z, a-z, 0-9, _ or - (Telegram start-link rules)")
 
     output_dir = Path(env.get("BCS_OUTPUT_DIR") or data.get("output", {}).get("dir", "output"))
     if not output_dir.is_absolute():
@@ -225,6 +233,6 @@ def load_settings(config_dir: Path | None = None, env: dict[str, str] | None = N
         secrets=Secrets(
             gemini_api_key=env.get("GEMINI_API_KEY", "").strip(),
             telegram_bot_token=env.get("TELE_BOT_TOKEN", "").strip(),
-            telegram_chat_id=env.get("TELE_CHAT_ID", "").strip(),
+            bot_invite_code=env.get("BOT_INVITE_CODE", "").strip(),
         ),
     )

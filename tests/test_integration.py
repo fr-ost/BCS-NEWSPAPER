@@ -1,10 +1,9 @@
 """Live integration tests. Skipped unless you opt in explicitly:
 
-    RUN_INTEGRATION=1 GEMINI_API_KEY=... TELE_BOT_TOKEN=... TELE_CHAT_ID=... \
-        pytest -m integration -p no:randomly
+    RUN_INTEGRATION=1 GEMINI_API_KEY=... TELE_BOT_TOKEN=... pytest -m integration
 
 They make real network calls: one Gemini model lookup (no generation),
-one Telegram test message, and live fetches of enabled feeds.
+one Telegram getMe (no message is sent), and live fetches of enabled feeds.
 """
 
 import os
@@ -36,10 +35,10 @@ def test_gemini_model_available(live_settings):
     build_provider(live_settings, "gemini").check_model()
 
 
-def test_telegram_test_message(live_settings):
+def test_telegram_bot_token_valid(live_settings):
     from app.__main__ import make_telegram
 
-    assert make_telegram(live_settings).send_message("🧪 Integration test (not a briefing)").message_id > 0
+    assert make_telegram(live_settings).get_me().get("is_bot") is True
 
 
 def test_enabled_feeds_parse(live_settings):

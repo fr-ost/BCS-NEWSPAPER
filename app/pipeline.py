@@ -3,8 +3,9 @@ render → deliver, with a state checkpoint after every stage and story.
 
 Idempotency rules:
 - One edition per Asia/Dhaka date. A delivered edition is never re-sent.
-- An edition is rendered once and its chunks stored before sending; a retry
-  resends only chunks without a recorded Telegram message id.
+- An edition is rendered once and its chunks stored before sending. Delivery
+  is tracked per subscriber and per chunk; a retry sends only the chunks a
+  subscriber has not yet received.
 - Completed analyses are stored and never recomputed.
 - Failed stories are retried at most ``max_attempts_per_story`` times;
   quota exhaustion does not count as an attempt.
@@ -39,6 +40,7 @@ from .scoring import rank_stories
 from .screening import screen_events
 from .sources import Source
 from .state import StateStore
+from .subscribers import active_subscribers, deactivate, ensure_structures, sync_subscribers
 from .telegram_delivery import TelegramClient, TelegramError, chunk_sections
 from .util import get_tz, iso, normalize_text, parse_iso, sha256, utcnow
 
@@ -65,7 +67,7 @@ class RunResult:
 
     @property
     def ok(self) -> bool:
-        return self.outcome in {"delivered", "already_delivered", "dry_run", "failure_notified", "no_change"}
+        return self.outcome in {"delivered", "already_delivered", "dry_run", "failure_notified", "no_subscribers"}
 
 
 class Pipeline:
@@ -162,7 +164,18 @@ class Pipeline:
             self._save()
         return result
 
+    def _sync_subscribers(self, now: datetime) -> None:
+        ensure_structures(self.state)
+        if self.dry_run or self.telegram is None:
+            return
+        try:
+            sync_subscribers(self.telegram, self.state, self.s.secrets.bot_invite_code, self.s.telegram.max_subscribers, now)
+        except TelegramError as exc:
+            self._error(f"Could not read new subscribers this run: {exc}")
+        self._save()
+
     def _run(self, now: datetime, ed_date: date, key: str) -> RunResult:
+        self._sync_subscribers(now)
         edition = self.state["editions"].get(key)
         if edition and edition["status"] == "delivered":
             log.info("Edition %s already delivered; nothing to do", key)
@@ -172,6 +185,10 @@ class Pipeline:
                 return RunResult(outcome="dry_run", edition_date=key, stories=len(edition.get("story_event_ids", [])))
             log.info("Resuming delivery of edition %s", key)
             return self._deliver(edition)
+        if not self.dry_run and not active_subscribers(self.state):
+            # Don't spend model quota on an edition nobody will receive.
+            self._error("No subscribers yet: share the bot's invite link and have people press Start")
+            return RunResult(outcome="no_subscribers", edition_date=key)
 
         previous = edition or {}
         edition = {
@@ -545,6 +562,12 @@ class Pipeline:
             return None
 
     def _deliver(self, edition: dict) -> RunResult:
+        """Send the stored chunks to every active subscriber.
+
+        Each subscriber's progress is saved after every confirmed message, so
+        an interrupted run resumes exactly where it stopped. One subscriber's
+        failure never blocks the others.
+        """
         key = edition["date"]
         result = RunResult(
             outcome="failed",
@@ -556,23 +579,61 @@ class Pipeline:
         if self.telegram is None:
             self._error("Telegram is not configured; edition kept for a later delivery attempt")
             return result
+        recipients = active_subscribers(self.state)
+        if not recipients:
+            self._error("No subscribers yet: share the bot's invite link and have people press Start. Edition kept for later today.")
+            result.outcome = "no_subscribers"
+            return result
+
+        now = utcnow()
         edition["status"] = "delivering"
-        for chunk in sorted(edition["chunks"], key=lambda c: c["index"]):
-            if chunk["status"] == "sent":
+        deliveries = edition.setdefault("deliveries", {})
+        chunks = sorted(edition["chunks"], key=lambda c: c["index"])
+        for sub in recipients:
+            cid = sub["chat_id"]
+            record = deliveries.setdefault(cid, {"sent": {}, "status": "pending", "attempts": 0})
+            if record["status"] == "done":
                 continue
-            chunk["attempts"] = chunk.get("attempts", 0) + 1
-            try:
-                sent = self.telegram.send_message(chunk["text"])
-            except TelegramError as exc:
-                edition["last_delivery_error"] = self.s.secrets.redact(str(exc))[:300]
-                self._error(f"Delivery of chunk {chunk['index'] + 1} failed: {exc}")
+            record["attempts"] += 1
+            for chunk in chunks:
+                idx = str(chunk["index"])
+                if idx in record["sent"]:
+                    continue
+                try:
+                    sent = self.telegram.send_message(cid, chunk["text"])
+                except TelegramError as exc:
+                    record["last_error"] = self.s.secrets.redact(str(exc))[:300]
+                    if exc.recipient_gone:
+                        deactivate(self.state, cid, "unreachable (blocked bot or left)", now)
+                        record["status"] = "recipient_gone"
+                    else:
+                        self._error(f"Delivery to subscriber {sub.get('name', '?')} stopped at message {chunk['index'] + 1}: {exc}")
+                    self._save()
+                    break
+                record["sent"][idx] = sent.message_id
+                self._save()  # checkpoint after each confirmed message
+            else:
+                record["status"] = "done"
+                record["delivered_at"] = iso(utcnow())
                 self._save()
-                return result
-            chunk.update(status="sent", message_id=sent.message_id, sent_at=iso(utcnow()), plain_text_fallback=sent.fallback_plain)
-            self._save()  # checkpoint after each confirmed chunk
+
+        still_active = {s["chat_id"] for s in active_subscribers(self.state)}
+        pending = [cid for cid in still_active if deliveries.get(cid, {}).get("status") != "done"]
+        delivered_to = [cid for cid, r in deliveries.items() if r.get("status") == "done"]
+        if pending:
+            edition["last_delivery_error"] = f"{len(pending)} subscriber(s) not yet delivered"
+            self._save()
+            return result  # stays "delivering"; the next run resends only what is missing
+        if not delivered_to:
+            edition["status"] = "ready"
+            self._error("Every subscriber was unreachable; edition not delivered")
+            self._save()
+            result.outcome = "no_subscribers"
+            return result
+
         edition["status"] = "delivered"
         edition["delivered_at"] = iso(utcnow())
-        edition["message_ids"] = [c["message_id"] for c in edition["chunks"]]
+        edition["recipients"] = len(delivered_to)
         for chunk in edition["chunks"]:
             chunk.pop("text", None)  # rendered copy lives in the output artifact
         for eid in edition.get("story_event_ids", []):
@@ -588,21 +649,30 @@ class Pipeline:
         key = edition["date"]
         edition.update(status="failed", failure_reason=reason, unprocessed_candidates=unprocessed)
         result = RunResult(outcome="failed", edition_date=key, partial=True)
+        notice = render_failure_notice(ed_date, reason, unprocessed)
         if self.dry_run:
-            self._write_output(key, [render_failure_notice(ed_date, reason, unprocessed)], edition)
+            self._write_output(key, [notice], edition)
             result.outcome = "dry_run"
             return result
         if edition.get("failure_notified"):
             log.info("Failure already notified for %s", key)
             result.outcome = "failure_notified"
             return result
-        if self.telegram is None:
-            self._error(f"Edition failed ({reason}) and Telegram is not configured")
+        recipients = active_subscribers(self.state) if self.telegram is not None else []
+        if not recipients:
+            self._error(f"Edition failed ({reason}) and there is nobody to notify")
             return result
-        try:
-            self.telegram.send_message(render_failure_notice(ed_date, reason, unprocessed))
+        delivered = 0
+        for sub in recipients:
+            try:
+                self.telegram.send_message(sub["chat_id"], notice)
+                delivered += 1
+            except TelegramError as exc:
+                if exc.recipient_gone:
+                    deactivate(self.state, sub["chat_id"], "unreachable (blocked bot or left)", utcnow())
+                else:
+                    self._error(f"Could not send failure notice to {sub.get('name', '?')}: {exc}")
+        if delivered:
             edition["failure_notified"] = True
             result.outcome = "failure_notified"
-        except TelegramError as exc:
-            self._error(f"Could not send failure notice: {exc}")
         return result

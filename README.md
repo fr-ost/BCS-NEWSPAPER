@@ -10,7 +10,7 @@ Every morning (target **08:00 Asia/Dhaka**) a GitHub Actions job:
 4. reads the accessible article text and writes **grounded Bengali study notes**,
 5. ranks stories with a configurable rubric (5–8 on a normal day, fewer on a thin day, never padded),
 6. writes **three validated MCQs** from verified facts,
-7. sends **one organised edition** to your Telegram (split into several messages only when needed).
+7. sends **one organised edition** on Telegram to everyone who subscribed to the bot: you and your friends (split into several messages only when needed).
 
 Target recurring cost: **৳0**, using current free allowances (see [Cost and free-tier limits](#cost-and-free-tier-limits)). Nothing in this project enables billing or falls back to a paid service.
 
@@ -21,6 +21,7 @@ Target recurring cost: **৳0**, using current free allowances (see [Cost and fr
 - [What a briefing looks like](#what-a-briefing-looks-like)
 - [Architecture and data flow](#architecture-and-data-flow)
 - [Full setup guide](#full-setup-guide)
+- [Subscribers: you and your friends](#subscribers-you-and-your-friends)
 - [Running locally](#running-locally)
 - [Manual runs and modes](#manual-runs-and-modes)
 - [News sources](#news-sources)
@@ -87,7 +88,9 @@ Run `python -m app run --offline` to render a full sample edition from bundled f
         │ G. questions.py   1 Gemini call → MCQs, strictly validated            │──▶ Gemini API
         │        │                                                              │
         │    render.py      Bengali, HTML-escaped, phone-friendly sections      │
-        │    telegram_delivery.py  chunk ≤3800 chars, send, record message ids  │──▶ Telegram
+        │    subscribers.py read /start & /stop (getUpdates), update the list    │◀─▶ Telegram
+        │    telegram_delivery.py  chunk ≤3800 chars, send to every subscriber,  │──▶ Telegram
+        │                   record message ids per subscriber                   │
         │        │                                                              │
         │    state.py       state/state.json (atomic, versioned), checkpointed  │
         │                   after every stage and every story                   │
@@ -114,6 +117,7 @@ Typical Gemini usage per day: 1 screening + up to 9 analyses + 1 MCQ call ≈ **
 | `app/questions.py` | Stage G — MCQ generation and validation |
 | `app/render.py` | Telegram HTML rendering (Bengali) |
 | `app/telegram_delivery.py` | Chunking, sending, retries |
+| `app/subscribers.py` | `/start`, `/stop`, invite code, subscriber list |
 | `app/state.py` | Versioned JSON state store |
 | `app/pipeline.py` | Orchestration, checkpoints, idempotency |
 | `app/llm/` | Provider interface: `gemini.py`, `ollama.py` (local), `mock.py` (offline/tests) |
@@ -133,7 +137,7 @@ Allow about 20–30 minutes. Do the steps in order.
 
 ### Step 0: Make the repository private
 
-The workflow commits `state/state.json`, which records what you read each day. It contains no credentials, but it should not be public.
+The workflow commits `state/state.json`, which records what you read each day **and your subscribers' Telegram chat ids and first names**. It contains no credentials, but it must not be public.
 
 GitHub → your repository → **Settings → General** → scroll to **Danger Zone** → **Change repository visibility** → **Make private**.
 
@@ -160,26 +164,35 @@ GitHub only runs **scheduled** workflows from the repository's **default branch*
    If it isn't, choose a free Flash or Flash-Lite model and set it (Step 4, optional variable `GEMINI_MODEL`).
 5. Privacy note: on the free tier, Google states prompts and responses may be used to improve its products. The app only sends public news text, never personal data.
 
-### Step 3: Create a Telegram bot and find your chat id
+### Step 3: Create the Telegram bot and choose an invite code
 
-1. In Telegram, open **@BotFather** → send `/newbot` → choose a name and a username ending in `bot`.
+1. In Telegram, open **@BotFather** → send `/newbot` → choose a name and a username ending in `bot` (e.g. `bcs_daily_brief_bot`).
 2. BotFather replies with a **token** like `123456789:AAH…`. That's `TELE_BOT_TOKEN`. Treat it like a password.
-3. Open a chat with your new bot and press **Start** (or send it "hi"). Bots can't message you until you do.
-4. Find your **chat id** (`TELE_CHAT_ID`). Either:
-   - in a browser, open `https://api.telegram.org/bot<YOUR_TOKEN>/getUpdates` and find `"chat":{"id":123456789,…}` (don't share this URL, it contains your token), or
-   - message **@userinfobot**, which replies with your numeric id.
+3. Optional but recommended: in BotFather, `/setcommands` → choose your bot → paste:
+   ```
+   start - ব্রিফিং চালু করুন
+   stop - ব্রিফিং বন্ধ করুন
+   help - সাহায্য
+   ```
+4. **Make up an invite code** (`BOT_INVITE_CODE`): 8–64 characters using only `A-Z a-z 0-9 _ -`, e.g. `bcs-friends-7Kq2xP`. Your **invite link** is then:
+   ```
+   https://t.me/<your_bot_username>?start=<your_invite_code>
+   ```
+   Only people who open the bot through this link can subscribe. Without a code, anyone who finds the bot could join (still capped at `max_subscribers` = 10).
+
+There's no chat id to look up: the bot learns who to send to when people press **Start**. See [Subscribers](#subscribers-you-and-your-friends).
 
 ### Step 4: Add GitHub Secrets (and optional variable)
 
 Repository → **Settings → Secrets and variables → Actions**.
 
-**Secrets** tab → **New repository secret**, three times:
+**Secrets** tab → **New repository secret** for each:
 
 | Name | Value |
 |---|---|
 | `GEMINI_API_KEY` | key from Step 2 |
 | `TELE_BOT_TOKEN` | token from Step 3 |
-| `TELE_CHAT_ID` | your numeric chat id |
+| `BOT_INVITE_CODE` | invite code from Step 3 (optional but recommended) |
 
 Optional, on the **Variables** tab → **New repository variable**: `GEMINI_MODEL` = a model id. This overrides the config file without a code change.
 
@@ -200,9 +213,10 @@ Secrets are masked in logs, and this app also redacts them from its own messages
 | 1 | `offline` | Code, tests and rendering work | No API calls, nothing sent |
 | 2 | `verify-sources` | Each feed is reachable, allowed by robots.txt and parses | Fetches feeds only |
 | 3 | `check-model` | Your key works and the model id exists | 1 metadata call (no generation) |
-| 4 | `test-telegram` | Bot token and chat id are right | Sends 1 test message |
-| 5 | `dry-run` | Full real pipeline. Download the artifact to read the edition | ~11 Gemini calls, **nothing sent**, saved state untouched |
-| 6 | `live` | The real thing | Sends the edition, commits state |
+| 4 | `subscribers` | First, you (and your friends) open the **invite link** and press **Start**. Then this run registers you, sends each person a welcome message, and lists who's subscribed | Welcome replies only |
+| 5 | `test-telegram` | Delivery works for every subscriber | 1 test message per subscriber |
+| 6 | `dry-run` | Full real pipeline. Download the artifact to read the edition | ~11 Gemini calls, **nothing sent**, saved state untouched |
+| 7 | `live` | The real thing | Sends the edition to every subscriber, commits state |
 
 After `verify-sources`, edit `config/sources.toml`: set `enabled = false` for any source that doesn't show `OK`, and update its `verification` note. See [News sources](#news-sources).
 
@@ -217,13 +231,38 @@ GitHub doesn't guarantee the minute: scheduled runs often start several minutes 
 - [ ] Repository made **private**
 - [ ] Code merged into the **default branch** (`main`)
 - [ ] Gemini key created in a project **without billing**; model's free-tier status confirmed on Google's pricing page
-- [ ] Telegram bot created, **Start** pressed, chat id found
-- [ ] Secrets `GEMINI_API_KEY`, `TELE_BOT_TOKEN`, `TELE_CHAT_ID` added
+- [ ] Telegram bot created; invite code chosen
+- [ ] Secrets `GEMINI_API_KEY`, `TELE_BOT_TOKEN`, `BOT_INVITE_CODE` added
+- [ ] You and your friends opened the invite link and pressed **Start**
 - [ ] Actions enabled
-- [ ] Manual runs: `offline` → `verify-sources` (and adjust `sources.toml`) → `check-model` → `test-telegram` → `dry-run` → `live`
+- [ ] Manual runs: `offline` → `verify-sources` (and adjust `sources.toml`) → `check-model` → `subscribers` → `test-telegram` → `dry-run` → `live`
 - [ ] Next morning: briefing arrives and a `state: run for …` commit appears
 
 ---
+
+## Subscribers: you and your friends
+
+The bot sends the same edition to every subscriber. There's no fixed chat id and no always-on server.
+
+**How someone joins**
+1. You share the invite link `https://t.me/<your_bot>?start=<BOT_INVITE_CODE>` privately (e.g. in your friends' group chat).
+2. They open it in Telegram and press **Start**.
+3. The bot reads new messages at its **next run** (the 08:00 run, or right away if you run the `subscribers` mode), adds them, and replies "✅ … যুক্ত করা হয়েছে".
+4. From the next edition on, they receive the daily briefing. Someone who joins after today's edition went out gets tomorrow's.
+
+**Commands:** `/start` join · `/stop` leave · `/help`. A person who **blocks** the bot or deletes the chat is removed automatically, and that never stops delivery to the others.
+
+**Timing caveat:** the bot only reads messages when the workflow runs, and Telegram keeps unread messages for **24 hours**. So a reply can take until the next run, and a Start pressed more than 24 hours before any run is lost. If a friend didn't get a welcome message, have them press Start again and run `subscribers` from the Actions tab.
+
+**Groups:** you can also add the bot to a Telegram group and send `/start <code>` (or `/start@your_bot <code>`) there. The whole group then counts as one subscriber.
+
+**Limits and privacy**
+- At most `telegram.max_subscribers` (default **10**) active subscribers. Change it in `config/settings.toml`.
+- Messages to each chat are spaced about 1 second apart (Telegram's per-chat limit). 5 friends × ~4 messages takes roughly 20 seconds.
+- The state file stores each subscriber's chat id, first name (to show you who joined), join/leave time and per-edition delivery record. Nothing else. This is why the repository must be private.
+- **To see who's subscribed:** run the `subscribers` or `status` mode. **To remove someone:** ask them to send `/stop`, or set their entry's `"status"` to `"inactive"` in `state/state.json` and commit. **To lock the list:** change `BOT_INVITE_CODE` (existing subscribers stay; old links stop working).
+
+**Delivery tracking is per subscriber.** If sending fails for one person (e.g. a Telegram outage mid-run), the others are unaffected. The next run sends that person only the messages they're missing, and the edition is marked delivered once every active subscriber has it.
 
 ## Running locally
 
@@ -241,12 +280,13 @@ cp .env.example .env                   # then fill in real values
 set -a; source .env; set +a            # load into the shell (bash/zsh)
 python -m app verify-sources
 python -m app check-model
+python -m app subscribers              # after pressing Start via the invite link
 python -m app test-telegram
 python -m app run --dry-run            # real feeds + Gemini, never sends; scratch state
 python -m app status                   # summary of state/state.json
 ```
 
-Avoid running `python -m app run` (live) locally *and* in Actions: each has its own copy of the state file, so they don't know about each other's deliveries.
+Avoid running `python -m app run`, `subscribers` or `test-telegram` locally *and* in Actions: each has its own copy of the state file, so they'd disagree about deliveries and subscribers (and compete for the same Telegram updates).
 
 ---
 
@@ -254,12 +294,13 @@ Avoid running `python -m app run` (live) locally *and* in Actions: each has its 
 
 | Command | Effect |
 |---|---|
-| `python -m app run` | Build today's edition and deliver it. No-op if today's edition was already delivered. |
+| `python -m app run` | Register new subscribers, build today's edition and deliver it to all of them. No-op if today's edition was already delivered. Skips building (no Gemini quota spent) when nobody has subscribed. |
 | `python -m app run --dry-run` | Real feeds + real model, **never sends**. Uses `output/dry-run-state.json` (fresh each time), so production state is untouched. |
 | `python -m app run --offline` | Bundled fictional sample data + mock model. No network, no keys. Implies `--dry-run`. |
 | `python -m app run --date 2026-10-24` | Override the edition date (testing). |
 | `python -m app run --provider mock\|gemini\|ollama` | Override the provider. |
-| `python -m app test-telegram` | One test message. |
+| `python -m app subscribers` | Read new `/start` / `/stop` messages now, reply, and list active subscribers. |
+| `python -m app test-telegram` | Same registration step, then one test message to each subscriber. |
 | `python -m app verify-sources` | Live check of every configured feed. Exit code 1 if an enabled feed fails. |
 | `python -m app check-model` | Confirms the model id exists for your key (not proof of free quota). |
 | `python -m app status` | Last edition, events by status, source health, last run. |
@@ -329,7 +370,7 @@ When this happens mid-run:
 1. Every completed analysis is **already saved** (state is checkpointed after each story).
 2. Completed, useful stories are sent as an edition labelled **⚠️ আংশিক সংস্করণ**, with the reason and the number of candidate stories still waiting.
 3. Missing stories are never invented.
-4. If nothing usable was produced, you get one short **failure notice** instead (only once per day).
+4. If nothing usable was produced, every subscriber gets one short **failure notice** instead (only once per day).
 5. Unfinished stories stay queued. The next run (scheduled tomorrow, or a manual `live` run after a failure) continues where it stopped: no re-screening, no re-analysis of finished work. Quota failures don't count against a story; other failures are retried at most `max_attempts_per_story` (3) times.
 6. Stories older than `freshness_hours` (36 h) expire rather than piling up.
 
@@ -337,12 +378,13 @@ When this happens mid-run:
 
 ## State persistence and recovery
 
-`state/state.json` (schema version 1) records: processed articles (canonical URL, content hash, publication and retrieval times), event groups, per-stage status (`new → selected/maybe/rejected → analysed/analysis_rejected/failed → included`), stored analyses, attempt counts and last error, editions (status, partial flag, MCQs, every Telegram chunk with message id and sent time), last successful edition, source health, and the last 30 runs.
+`state/state.json` (schema version 2) records: processed articles (canonical URL, content hash, publication and retrieval times), event groups, per-stage status (`new → selected/maybe/rejected → analysed/analysis_rejected/failed → included`), stored analyses, attempt counts and last error, editions (status, partial flag, MCQs, every Telegram chunk with message id and sent time), last successful edition, source health, and the last 30 runs.
 
 - **Atomic writes:** temp file → fsync → rename. The previous version is kept as `state.json.bak` during a run.
 - **Validation on startup:** malformed records are dropped individually; a corrupt file is preserved as `state.json.corrupt-<time>` and recovered from the backup, or (last resort) a fresh state is started and the run log says so.
-- **Migration:** older schemas are upgraded in steps. A file from a **newer** schema is never overwritten; the run stops instead.
-- **Idempotent delivery:** an edition is rendered once and its chunks saved *before* sending. Each chunk's Telegram message id is saved as soon as Telegram confirms it. An edition is marked `delivered` only after **all** chunks are confirmed. A retry resends only unconfirmed chunks; a delivered date is never sent again.
+- **Migration:** older schemas are upgraded in steps (v1 → v2 added subscribers). A file from a **newer** schema is never overwritten; the run stops instead.
+- **Subscribers:** chat id, first name, type (private/group), active/inactive, join/leave time, plus the last processed Telegram `update_id` so no `/start` is handled twice.
+- **Idempotent delivery:** an edition is rendered once and its chunks saved *before* sending. For each subscriber, each chunk's Telegram message id is saved as soon as Telegram confirms it. An edition is marked `delivered` only when **every active subscriber** has **all** chunks. A retry sends each person only what they're missing; a delivered date is never sent again.
   - Residual risk: if the runner dies in the instant between Telegram accepting a message and the state write, that one chunk could be sent twice on retry. Telegram has no idempotency key to prevent this.
 - **Git:** the workflow commits `state/state.json` with the workflow token (`contents: write` only). On a rejected push it rebases and retries; if the state file itself conflicts it **stops without overwriting** newer state and keeps this run's state in the workflow artifact. It never force-pushes. A `concurrency` group ensures only one run touches state at a time.
 - **If a state commit fails,** the edition was still delivered (or saved in the artifact), the job turns red, and you get a Telegram notice. Download the artifact to recover the state if needed.
@@ -357,12 +399,16 @@ To **reset** everything: delete `state/state.json` and commit. The next run star
 - **Actions tab → Daily BCS briefing → a run → `briefing` job:** step-by-step logs. The "Run" step prints a JSON summary (`outcome`, `stories`, `mcqs`, `partial`, `llm_calls`, `errors`).
 - **Artifacts** (bottom of the run page, kept 7 days): `output/edition-<date>.txt` (exactly what was sent), `edition-<date>.json`, `run-result.json`, and the state file.
 - **`status` mode** (or `python -m app status`): last edition, events by status, per-source health, last run errors.
-- **Email:** GitHub emails you when a scheduled run fails; the workflow also sends a short Telegram notice.
+- **Email:** GitHub emails you (the repository owner) with details when a scheduled run fails. Subscribers get a short, non-technical Telegram notice.
 
 | Symptom | Likely cause / fix |
 |---|---|
 | `Telegram rejected request (401)` | Wrong `TELE_BOT_TOKEN` |
-| `Telegram rejected request (400): chat not found` | Wrong `TELE_CHAT_ID`, or you never pressed **Start** with the bot |
+| Run says `no_subscribers` / "No subscribers yet" | Nobody has pressed Start yet, or their Start is older than 24 h → open the invite link, press Start, run `subscribers` |
+| Friend pressed Start but got no welcome | Replies only happen at the next run → run `subscribers`. Got "❌ আমন্ত্রণ লিংক… সঠিক নয়" → they used the plain bot link, not the invite link |
+| "সদস্যসংখ্যা পূর্ণ" reply | `max_subscribers` reached → raise it in `config/settings.toml` |
+| `A webhook is set for this bot` | Another tool set a webhook → open `https://api.telegram.org/bot<TOKEN>/deleteWebhook` once |
+| A subscriber marked inactive unexpectedly | They blocked the bot or left the group → they can open the invite link and press Start again |
 | `Gemini model unavailable` | Model id retired/renamed → set `GEMINI_MODEL` to a current free model |
 | `Gemini quota exhausted … limit: 0` | Model has no free quota for your project → pick another model |
 | `Gemini rejected credentials` | Bad or revoked `GEMINI_API_KEY` |
@@ -383,7 +429,7 @@ The design targets **zero recurring cost under the free allowances that apply to
 |---|---|---|
 | GitHub Actions (private repo, GitHub Free) | ~3–6 min/day on `ubuntu-latest` → roughly 100–200 min/month | 2,000 min/month; 500 MB artifact storage (artifacts kept 7 days, tiny) |
 | Gemini Developer API (Free tier) | ~11 requests/day, capped at 16/run | Per-model RPM/RPD limits, per project; daily quota resets at midnight Pacific time. Recent developer reports describe free quotas being cut sharply for some models, so check the official rate-limits page |
-| Telegram Bot API | a few messages/day | Free |
+| Telegram Bot API | ~4 messages × subscribers per day, plus replies | Free (rate limits: ~1 msg/s per chat, handled automatically) |
 | News feeds | a few HTTP requests/day | Free; subject to each publisher's terms |
 
 How spending is prevented: there's no paid service, no paid fallback provider, and no automatic model switching. Gemini free-tier projects without billing simply reject requests over quota (HTTP 429), which the app handles as a partial edition. The one way to incur cost is linking a billing account to the Gemini project yourself, so keep billing off that project.
@@ -432,12 +478,12 @@ Small local models are weaker at following the strict JSON and Bengali instructi
 python -m pytest                 # ~100 unit tests, fully mocked, < 2 s
 ```
 
-A test fixture blocks real HTTP, so unit tests can never spend Gemini quota or message Telegram. Coverage includes feed parsing with malformed items, missing/invalid/future dates, invalid URLs, duplicate detection, extraction failure and excerpt-only rules, the scoring rubric, malformed model output, unsupported facts and numbers, MCQ schema/answer-index validation, HTML escaping and chunking, Telegram retries and plain-text fallback, Gemini 429/404/5xx classification, retry limits and call budget, state corruption/backup recovery/migration/newer-schema refusal, quota exhaustion mid-run with resumption, interrupted delivery resuming without duplicates, failure-notice de-duplication, low-relevance days without padding, dry-run behaviour and secret redaction in logs.
+A test fixture blocks real HTTP, so unit tests can never spend Gemini quota or message Telegram. Coverage includes feed parsing with malformed items, missing/invalid/future dates, invalid URLs, duplicate detection, extraction failure and excerpt-only rules, the scoring rubric, malformed model output, unsupported facts and numbers, MCQ schema/answer-index validation, HTML escaping and chunking, Telegram retries and plain-text fallback, Gemini 429/404/5xx classification, retry limits and call budget, state corruption/backup recovery/migration/newer-schema refusal, quota exhaustion mid-run with resumption, interrupted delivery resuming without duplicates, failure-notice de-duplication, low-relevance days without padding, dry-run behaviour, secret redaction in logs, and subscribers: invite-code checks, `/stop`, the cap, blocked users, group commands, malformed updates, per-subscriber delivery and resumption, and "no subscribers spends no quota".
 
-**Live integration tests** (opt-in, real network; uses 1 model lookup and sends 1 Telegram message):
+**Live integration tests** (opt-in, real network; 1 model lookup and 1 Telegram `getMe`; no message is sent):
 
 ```bash
-RUN_INTEGRATION=1 GEMINI_API_KEY=… TELE_BOT_TOKEN=… TELE_CHAT_ID=… python -m pytest -m integration
+RUN_INTEGRATION=1 GEMINI_API_KEY=… TELE_BOT_TOKEN=… python -m pytest -m integration
 ```
 
 The scheduled workflow runs the unit tests before each live run; if they fail, no briefing is sent and you're notified.
@@ -447,7 +493,8 @@ The scheduled workflow runs the unit tests before each live run; if they fail, n
 ## Security and privacy
 
 - **No secrets in the repository.** Credentials come only from environment variables / GitHub Secrets. `.env` is git-ignored; `.env.example` holds placeholders.
-- **No secrets in logs.** The Gemini key travels in a header, never a URL. A logging filter redacts both credentials from every log line, and urllib3 debug logging (which would print Telegram's token-bearing URL) is suppressed.
+- **Subscriber data** (chat ids, first names) lives only in the private repository's state file. The invite code is compared in constant time and redacted from logs like the other secrets.
+- **No secrets in logs.** The Gemini key travels in a header, never a URL. A logging filter redacts the credentials from every log line, and urllib3 debug logging (which would print Telegram's token-bearing URL) is suppressed.
 - **Web content is untrusted.** Article text is wrapped in delimiters the article can't forge, the model is told to treat it as data, and the model has no tools. Its output is parsed as JSON and validated. URLs are stripped from model text, all text is HTML-escaped, and links only ever come from our own feed records. A hostile article can at worst get itself rejected.
 - **Network hygiene.** Timeouts on every request, size caps (3 MB) on feeds and pages, robots.txt respected, honest user agent, no paywall or anti-bot bypassing.
 - **Least privilege.** The workflow token has `contents: write` only, used solely to commit `state/state.json`. No force-push.
@@ -476,8 +523,10 @@ The scheduled workflow runs the unit tests before each live run; if they fail, n
 | `llm.max_calls_per_run` | 16 | Hard cap including retries |
 | `llm.min_seconds_between_calls` | 6 | Request spacing |
 | `telegram.max_message_chars` | 3800 | Chunk size (Telegram's limit is 4096) |
+| `telegram.max_subscribers` | 10 | Cap on active subscribers |
+| `telegram.min_seconds_between_messages` | 1.1 | Pause between messages to the same chat |
 | `state.retention_days` | 14 | Pruning window |
 
-Environment variables: `GEMINI_API_KEY`, `TELE_BOT_TOKEN`, `TELE_CHAT_ID` (secrets); `GEMINI_MODEL`, `LLM_PROVIDER`, `OLLAMA_MODEL`, `OLLAMA_BASE_URL`, `BCS_STATE_PATH`, `BCS_OUTPUT_DIR`, `BCS_CONFIG_DIR` (optional overrides).
+Environment variables: `GEMINI_API_KEY`, `TELE_BOT_TOKEN`, `BOT_INVITE_CODE` (secrets); `GEMINI_MODEL`, `LLM_PROVIDER`, `OLLAMA_MODEL`, `OLLAMA_BASE_URL`, `BCS_STATE_PATH`, `BCS_OUTPUT_DIR`, `BCS_CONFIG_DIR` (optional overrides).
 
 Syllabus reference: subject mapping follows the BPSC BCS syllabus (preliminary subjects: Bangladesh affairs, international affairs, geography/environment/disaster management, general science, computer & ICT, ethics/values/good governance; written papers 005 Bangladesh Affairs, 007 International Affairs, 010 General Science & Technology). Always confirm the latest syllabus at <https://bpsc.gov.bd>.

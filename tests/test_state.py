@@ -108,3 +108,15 @@ def test_prune_removes_old_articles_and_orphan_events(store):
     store.prune(state, now)
     assert list(state["articles"]) == ["a_new"]
     assert list(state["events"]) == ["e_mix"] and state["events"]["e_mix"]["article_ids"] == ["a_new"]
+
+
+def test_migration_from_v1_adds_subscribers_and_keeps_delivery_records(store):
+    v1 = empty_state()
+    v1["schema_version"] = 1
+    del v1["subscribers"], v1["telegram"]
+    v1["editions"] = {"2026-10-22": {"date": "2026-10-22", "status": "delivered", "chunks": [{"index": 0, "message_id": 55}]}}
+    store.path.write_text(json.dumps(v1), encoding="utf-8")
+    state = store.load()
+    assert state["schema_version"] == SCHEMA_VERSION == 2
+    assert state["subscribers"] == {} and state["telegram"] == {"last_update_id": None}
+    assert state["editions"]["2026-10-22"]["deliveries"]["legacy"] == {"sent": {"0": 55}, "status": "done", "attempts": 1}

@@ -8,7 +8,7 @@ from app.config import load_settings
 def env(monkeypatch, tmp_path, **extra):
     monkeypatch.setenv("BCS_STATE_PATH", str(tmp_path / "state" / "state.json"))
     monkeypatch.setenv("BCS_OUTPUT_DIR", str(tmp_path / "out"))
-    for k in ("GEMINI_API_KEY", "TELE_BOT_TOKEN", "TELE_CHAT_ID", "LLM_PROVIDER", "GEMINI_MODEL"):
+    for k in ("GEMINI_API_KEY", "TELE_BOT_TOKEN", "BOT_INVITE_CODE", "LLM_PROVIDER", "GEMINI_MODEL"):
         monkeypatch.delenv(k, raising=False)
     for k, v in extra.items():
         monkeypatch.setenv(k, v)

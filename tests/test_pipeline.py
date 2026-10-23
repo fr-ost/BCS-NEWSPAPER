@@ -10,7 +10,7 @@ from app.llm.mock import MockProvider
 from app.pipeline import Pipeline
 from app.state import StateStore
 
-from .conftest import NOW, FakeTelegram, no_sleep
+from .conftest import NOW, FakeTelegram, no_sleep, start_update
 
 
 class Programmable(MockProvider):
@@ -45,7 +45,9 @@ def test_full_run_delivers_once_and_never_duplicates(make_pipeline, settings):
     sent_count = len(tg.sent)
     assert sent_count >= 1
     edition = load_state(settings)["editions"]["2026-10-23"]
-    assert edition["status"] == "delivered" and all(c["message_id"] for c in edition["chunks"])
+    assert edition["status"] == "delivered" and edition["recipients"] == 1
+    record = edition["deliveries"]["101"]
+    assert record["status"] == "done" and len(record["sent"]) == len(edition["chunks"]) == sent_count
     assert load_state(settings)["last_successful_edition"] == "2026-10-23"
     text = "\n".join(tg.sent)
     assert "Cabinet approves" in text and "উত্তর ও ব্যাখ্যা" in text and "tg-spoiler" in text
@@ -192,3 +194,72 @@ def test_state_is_checkpointed_even_when_run_crashes(make_pipeline, settings):
     state = load_state(settings)
     assert sum(1 for ev in state["events"].values() if ev["status"] == "analysed") == 3
     assert state["runs"][-1]["outcome"] == "failed"
+
+
+# --------------------------------------------------------------- subscribers
+
+
+def test_every_subscriber_gets_the_whole_edition(make_pipeline, settings):
+    tg = FakeTelegram(subscribers=4)
+    result = make_pipeline(telegram=tg).run(now=NOW)
+    assert result.outcome == "delivered"
+    per_chat = {}
+    for chat, text in tg.sent_to:
+        per_chat.setdefault(chat, []).append(text)
+    assert set(per_chat) == {"101", "102", "103", "104"}
+    assert len({tuple(v) for v in per_chat.values()}) == 1  # identical edition for everyone
+    assert len([r for r in tg.replies if "যুক্ত করা হয়েছে" in r[1]]) == 4  # each got a welcome
+    assert load_state(settings)["editions"]["2026-10-23"]["recipients"] == 4
+
+
+def test_blocked_subscriber_is_removed_without_blocking_others(make_pipeline, settings):
+    tg = FakeTelegram(subscribers=3, gone={"102"})
+    result = make_pipeline(telegram=tg).run(now=NOW)
+    assert result.outcome == "delivered"
+    assert {c for c, _ in tg.sent_to} == {"101", "103"}
+    subs = load_state(settings)["subscribers"]
+    assert subs["102"]["status"] == "inactive" and subs["101"]["status"] == "active"
+
+
+def test_one_subscribers_failure_resends_only_their_missing_messages(make_pipeline, settings):
+    # Two subscribers; the 2nd edition message overall fails (subscriber 101, chunk 2).
+    tg1 = FakeTelegram(subscribers=2, fail_on={2})
+    r1 = make_pipeline(telegram=tg1).run(now=NOW)
+    assert r1.outcome == "failed"
+    edition = load_state(settings)["editions"]["2026-10-23"]
+    n = len(edition["chunks"])
+    assert edition["status"] == "delivering"
+    assert edition["deliveries"]["102"]["status"] == "done"  # 102 was not held back
+    assert len(edition["deliveries"]["101"]["sent"]) == 1
+
+    prov = Programmable()
+    tg2 = FakeTelegram(subscribers=2)
+    r2 = make_pipeline(provider=prov, telegram=tg2).run(now=NOW)
+    assert r2.outcome == "delivered" and prov.tasks == []
+    assert [c for c, _ in tg2.sent_to] == ["101"] * (n - 1)  # only what 101 was missing
+    assert make_pipeline(telegram=FakeTelegram(subscribers=2)).run(now=NOW).outcome == "already_delivered"
+
+
+def test_no_subscribers_spends_no_model_quota(make_pipeline):
+    prov = Programmable()
+    result = make_pipeline(provider=prov, telegram=FakeTelegram(subscribers=0)).run(now=NOW)
+    assert result.outcome == "no_subscribers" and result.ok and prov.tasks == []
+
+
+def test_new_subscriber_after_delivery_gets_next_edition(make_pipeline, settings):
+    make_pipeline(telegram=FakeTelegram(subscribers=1)).run(now=NOW)
+    late = FakeTelegram(updates=[start_update(1, 101), start_update(2, 202)])
+    assert make_pipeline(telegram=late).run(now=NOW).outcome == "already_delivered"
+    assert late.sent == [] and ("202", late.replies[0][1]) in late.replies
+    nxt = FakeTelegram(updates=[start_update(1, 101), start_update(2, 202)])
+    make_pipeline(telegram=nxt).run(now=NOW, edition_date=date(2026, 10, 24))
+    assert {c for c, _ in nxt.sent_to} <= {"101", "202"}
+    assert "202" in load_state(settings)["editions"]["2026-10-24"]["deliveries"]
+
+
+def test_failure_notice_goes_to_all_subscribers_once(make_pipeline):
+    tg = FakeTelegram(subscribers=3)
+    make_pipeline(provider=Programmable(quota_after=0), telegram=tg).run(now=NOW)
+    assert sorted(c for c, _ in tg.sent_to) == ["101", "102", "103"]
+    make_pipeline(provider=Programmable(quota_after=0), telegram=tg).run(now=NOW)
+    assert len(tg.sent_to) == 3

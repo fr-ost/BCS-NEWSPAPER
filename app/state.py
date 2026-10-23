@@ -20,7 +20,7 @@ from .util import iso, parse_iso, utcnow
 
 log = logging.getLogger(__name__)
 
-SCHEMA_VERSION = 1
+SCHEMA_VERSION = 2
 
 EVENT_STATUSES = {
     "new",  # awaiting screening
@@ -53,6 +53,8 @@ def empty_state() -> dict:
         "editions": {},
         "last_successful_edition": None,
         "source_health": {},
+        "subscribers": {},
+        "telegram": {"last_update_id": None},
         "runs": [],
         "notes": [],
     }
@@ -67,6 +69,29 @@ def migrate(data: dict) -> dict:
         raise StateVersionError(f"State schema {version} is newer than supported {SCHEMA_VERSION}; refusing to touch it")
     if version == 0:
         data = _migrate_v0_to_v1(data)
+        version = 1
+    if version == 1:
+        data = _migrate_v1_to_v2(data)
+    return data
+
+
+def _migrate_v1_to_v2(data: dict) -> dict:
+    """v2 adds subscribers (multiple recipients) and the Telegram update offset.
+
+    v1 editions were delivered to a single fixed chat; their chunk records
+    are kept as they were, under a "legacy" recipient key.
+    """
+    data.setdefault("subscribers", {})
+    data.setdefault("telegram", {"last_update_id": None})
+    for edition in (data.get("editions") or {}).values():
+        if not isinstance(edition, dict) or "deliveries" in edition:
+            continue
+        sent = {str(c["index"]): c.get("message_id") for c in edition.get("chunks") or [] if isinstance(c, dict) and c.get("message_id")}
+        if sent:
+            done = edition.get("status") == "delivered"
+            edition["deliveries"] = {"legacy": {"sent": sent, "status": "done" if done else "pending", "attempts": 1}}
+    data["schema_version"] = 2
+    data.setdefault("notes", []).append(f"Migrated from schema 1 at {iso(utcnow())}")
     return data
 
 
@@ -98,6 +123,7 @@ def _migrate_v0_to_v1(old: dict) -> dict:
             "legacy": True,
         }
     new["notes"].append(f"Migrated from schema 0 at {now}")
+    new["schema_version"] = 1
     return new
 
 
@@ -105,7 +131,7 @@ def validate(data: object) -> dict:
     """Check structure; drop individual malformed records instead of failing."""
     if not isinstance(data, dict):
         raise StateError("State root is not an object")
-    for key, typ in (("articles", dict), ("events", dict), ("editions", dict), ("source_health", dict), ("runs", list)):
+    for key, typ in (("articles", dict), ("events", dict), ("editions", dict), ("source_health", dict), ("subscribers", dict), ("telegram", dict), ("runs", list)):
         if not isinstance(data.get(key), typ):
             raise StateError(f"State field {key!r} missing or wrong type")
     dropped = 0
@@ -121,6 +147,13 @@ def validate(data: object) -> dict:
         if not isinstance(ed, dict) or ed.get("date") != date or ed.get("status") not in EDITION_STATUSES:
             del data["editions"][date]
             dropped += 1
+    for cid, sub in list(data["subscribers"].items()):
+        if not isinstance(sub, dict) or sub.get("chat_id") != cid or sub.get("status") not in ("active", "inactive"):
+            del data["subscribers"][cid]
+            dropped += 1
+    last = data["telegram"].get("last_update_id")
+    if last is not None and (isinstance(last, bool) or not isinstance(last, int)):
+        data["telegram"]["last_update_id"] = None
     if dropped:
         log.warning("Dropped %d malformed state records", dropped)
         data.setdefault("notes", []).append(f"{iso(utcnow())}: dropped {dropped} malformed records on load")

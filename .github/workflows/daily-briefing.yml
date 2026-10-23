@@ -16,12 +16,14 @@ on:
           - offline         # sample data + mock model: no API calls at all
           - dry-run         # real feeds + real Gemini, no Telegram, state untouched
           - live            # the real daily edition (same as the schedule)
-          - test-telegram   # one short test message
+          - subscribers     # register new /start and /stop now, list subscribers
+          - test-telegram   # register new subscribers, send each a test message
           - verify-sources  # check every configured feed live
           - check-model     # check the Gemini model id is available to your key
           - status          # print a summary of the saved state
 
-# Least privilege: the only write is committing state/state.json.
+# Least privilege: the only write is committing state/state.json
+# (news history and the subscriber list).
 permissions:
   contents: write
 
@@ -40,7 +42,7 @@ jobs:
     steps:
       - name: Warn if repository is public
         if: ${{ !github.event.repository.private }}
-        run: echo "::warning::This repository is public. state/state.json (your reading history) is committed here. Make the repository private (Settings → General → Danger Zone)."
+        run: echo "::warning::This repository is public. state/state.json (reading history and your subscribers' Telegram chat ids and first names) is committed here. Make the repository private (Settings → General → Danger Zone)."
 
       - name: Check out repository (includes saved state)
         uses: actions/checkout@v5
@@ -63,7 +65,8 @@ jobs:
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           TELE_BOT_TOKEN: ${{ secrets.TELE_BOT_TOKEN }}
-          TELE_CHAT_ID: ${{ secrets.TELE_CHAT_ID }}
+          # Optional: when set, people can only join via t.me/<bot>?start=<code>.
+          BOT_INVITE_CODE: ${{ secrets.BOT_INVITE_CODE }}
           # Optional repository variable (Settings → Variables) to change model without a code change.
           GEMINI_MODEL: ${{ vars.GEMINI_MODEL }}
         run: |
@@ -71,6 +74,7 @@ jobs:
             live)           python -m app run ;;
             dry-run)        python -m app run --dry-run ;;
             offline)        python -m app run --offline ;;
+            subscribers)    python -m app subscribers ;;
             test-telegram)  python -m app test-telegram ;;
             verify-sources) python -m app verify-sources ;;
             check-model)    python -m app check-model ;;
@@ -79,7 +83,7 @@ jobs:
           esac
 
       - name: Commit and push state
-        if: always() && env.MODE == 'live'
+        if: always() && (env.MODE == 'live' || env.MODE == 'subscribers' || env.MODE == 'test-telegram')
         run: |
           if [ ! -f state/state.json ]; then
             echo "No state file was produced; nothing to commit."
@@ -114,7 +118,6 @@ jobs:
         if: failure() && env.MODE == 'live'
         env:
           TELE_BOT_TOKEN: ${{ secrets.TELE_BOT_TOKEN }}
-          TELE_CHAT_ID: ${{ secrets.TELE_CHAT_ID }}
         run: python -m app notify-failure
 
       - name: Upload edition and diagnostics

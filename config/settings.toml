@@ -84,6 +84,11 @@ max_message_chars = 3800
 request_timeout_seconds = 30
 max_retries = 3
 disable_web_page_preview = true
+# Recipients are people who pressed Start in the bot (optionally via an
+# invite link). This cap protects against strangers filling the list.
+max_subscribers = 10
+# Telegram allows about one message per second to the same chat.
+min_seconds_between_messages = 1.1
 
 [state]
 path = "state/state.json"

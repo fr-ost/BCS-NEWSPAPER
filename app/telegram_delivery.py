@@ -1,8 +1,9 @@
 """Telegram Bot API delivery: chunking, bounded retries, idempotent resend.
 
-Credentials come from TELE_BOT_TOKEN / TELE_CHAT_ID. The token is part of
-the request URL (Telegram's design), so it is never logged and is redacted
-from any error text.
+The bot token comes from TELE_BOT_TOKEN. Recipients are the subscribers who
+pressed Start (see ``subscribers.py``); there is no hard-coded chat id. The
+token is part of the request URL (Telegram's design), so it is never logged
+and is redacted from any error text.
 """
 
 from __future__ import annotations
@@ -22,9 +23,15 @@ _TAG = re.compile(r"<[^>]+>")
 
 
 class TelegramError(Exception):
-    def __init__(self, message: str, permanent: bool = False):
+    def __init__(self, message: str, permanent: bool = False, recipient_gone: bool = False):
         super().__init__(message)
         self.permanent = permanent
+        # The chat can no longer receive messages (user blocked the bot,
+        # deleted their account, or removed the bot from a group).
+        self.recipient_gone = recipient_gone
+
+
+_GONE_HINTS = ("blocked by the user", "user is deactivated", "chat not found", "bot was kicked", "not a member", "group chat was deleted")
 
 
 def tg_len(text: str) -> int:
@@ -106,27 +113,32 @@ class SendResult:
 
 
 class TelegramClient:
+    """Bot API client. Recipients are passed per call; there is no fixed chat."""
+
     def __init__(
         self,
         token: str,
-        chat_id: str,
         api_base: str = "https://api.telegram.org",
         timeout: float = 30,
         max_retries: int = 3,
         disable_preview: bool = True,
+        min_interval_per_chat: float = 1.1,
         session: requests.Session | None = None,
         sleep=time.sleep,
+        clock=time.monotonic,
     ):
-        if not token or not chat_id:
-            raise TelegramError("TELE_BOT_TOKEN and TELE_CHAT_ID must be set", permanent=True)
+        if not token:
+            raise TelegramError("TELE_BOT_TOKEN must be set", permanent=True)
         self._token = token
-        self.chat_id = chat_id
         self.api_base = api_base.rstrip("/")
         self.timeout = timeout
         self.max_retries = max_retries
         self.disable_preview = disable_preview
+        self.min_interval_per_chat = min_interval_per_chat
         self.session = session or requests.Session()
         self._sleep = sleep
+        self._clock = clock
+        self._last_send: dict[str, float] = {}
 
     def _redact(self, text: str) -> str:
         return text.replace(self._token, "***") if self._token else text
@@ -162,14 +174,28 @@ class TelegramClient:
                 if attempt < self.max_retries:
                     self._sleep(min(2 ** attempt * 2, 30))
                 continue
-            # 400/401/403/404: our request or credentials are wrong. Not retryable.
-            raise TelegramError(f"Telegram rejected request ({resp.status_code}): {description}", permanent=True)
+            # 400/401/403/404/409: our request, credentials or recipient is wrong. Not retryable.
+            gone = resp.status_code == 403 or any(h in description.lower() for h in _GONE_HINTS)
+            if resp.status_code == 401:
+                gone = False  # bad token, not a bad recipient
+            raise TelegramError(f"Telegram rejected request ({resp.status_code}): {description}", permanent=True, recipient_gone=gone)
         assert last is not None
         raise last
 
-    def send_message(self, text: str) -> SendResult:
+    def _space(self, chat_id: str) -> None:
+        """Telegram allows roughly one message per second per chat."""
+        last = self._last_send.get(chat_id)
+        if last is not None:
+            wait = self.min_interval_per_chat - (self._clock() - last)
+            if wait > 0:
+                self._sleep(wait)
+        self._last_send[chat_id] = self._clock()
+
+    def send_message(self, chat_id: str | int, text: str) -> SendResult:
+        chat_id = str(chat_id)
+        self._space(chat_id)
         payload = {
-            "chat_id": self.chat_id,
+            "chat_id": chat_id,
             "text": text,
             "parse_mode": "HTML",
             "link_preview_options": {"is_disabled": self.disable_preview},
@@ -180,7 +206,7 @@ class TelegramClient:
         except TelegramError as exc:
             # A 400 "can't parse entities" means our HTML was rejected. Resend
             # the same content once as plain text rather than lose it.
-            if exc.permanent and "parse" in str(exc).lower():
+            if exc.permanent and not exc.recipient_gone and "parse" in str(exc).lower():
                 log.warning("Telegram rejected HTML; resending chunk as plain text")
                 payload = {k: v for k, v in payload.items() if k != "parse_mode"}
                 payload["text"] = strip_html(text)
@@ -189,3 +215,24 @@ class TelegramClient:
             raise
         except (KeyError, TypeError, ValueError) as exc:
             raise TelegramError("Telegram response missing message_id") from exc
+
+    def get_updates(self, offset: int | None) -> list[dict]:
+        """Fetch pending updates (kept by Telegram for 24 hours).
+
+        Passing ``offset`` = last processed update_id + 1 confirms everything
+        before it, so Telegram stops returning those updates.
+        """
+        payload: dict = {"timeout": 0, "limit": 100, "allowed_updates": ["message", "my_chat_member"]}
+        if offset is not None:
+            payload["offset"] = offset
+        try:
+            data = self._post("getUpdates", payload)
+        except TelegramError as exc:
+            if "409" in str(exc):
+                raise TelegramError("A webhook is set for this bot, so getUpdates is disabled. Remove it with deleteWebhook.", permanent=True) from exc
+            raise
+        result = data.get("result")
+        return result if isinstance(result, list) else []
+
+    def get_me(self) -> dict:
+        return self._post("getMe", {}).get("result") or {}

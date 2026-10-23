@@ -5,7 +5,8 @@ Commands:
   run --dry-run    Build with real feeds and the real model, but never send.
                    Uses a scratch state file, so production state is untouched.
   run --offline    Fully offline dry run: bundled sample feeds + mock model.
-  test-telegram    Send one short test message.
+  subscribers      Read new /start and /stop messages now and list subscribers.
+  test-telegram    Register new subscribers, then send each one a test message.
   verify-sources   Check every configured feed live (robots.txt, HTTP, parse).
   check-model      Check the configured Gemini model id is available to the key.
   status           Print a summary of the persisted state.
@@ -30,7 +31,8 @@ from .http import FetchError, Fetcher, RobotsDisallowed
 from .llm import LLMError, build_client, build_provider
 from .pipeline import Pipeline
 from .sources import load_sources
-from .state import StateStore, StateVersionError
+from .state import StateError, StateStore, StateVersionError
+from .subscribers import active_subscribers, deactivate, sync_subscribers
 from .telegram_delivery import TelegramClient, TelegramError
 from .util import utcnow
 
@@ -75,12 +77,20 @@ def make_telegram(settings: Settings) -> TelegramClient:
     t = settings.telegram
     return TelegramClient(
         settings.secrets.telegram_bot_token,
-        settings.secrets.telegram_chat_id,
         api_base=t.api_base,
         timeout=t.request_timeout_seconds,
         max_retries=t.max_retries,
         disable_preview=t.disable_web_page_preview,
+        min_interval_per_chat=t.min_seconds_between_messages,
     )
+
+
+def production_store(settings: Settings) -> StateStore:
+    return StateStore(settings.state_path, settings.state.retention_days, settings.state.max_run_history)
+
+
+def sync_now(settings: Settings, client: TelegramClient, state: dict):
+    return sync_subscribers(client, state, settings.secrets.bot_invite_code, settings.telegram.max_subscribers, utcnow())
 
 
 def offline_article_fetcher(settings: Settings, articles_dir: Path):
@@ -137,13 +147,7 @@ def cmd_run(settings: Settings, args) -> int:
             return EXIT_CONFIG
 
     if provider is None:
-        if telegram is not None:
-            try:
-                telegram.send_message("⚠️ <b>বিসিএস ব্রিফিং চালানো যায়নি</b>\nAI মডেল কনফিগারেশন ত্রুটি (GEMINI_API_KEY/মডেল যাচাই করুন)।")
-                write_result(settings, {"outcome": "failed", "reason": "provider config", "failure_notified": True})
-                return EXIT_REPORTED_FAILURE
-            except TelegramError:
-                pass
+        # The workflow's notify-failure step tells subscribers; nothing is sent from here.
         write_result(settings, {"outcome": "failed", "reason": "provider config", "failure_notified": False})
         return EXIT_CONFIG
 
@@ -193,21 +197,72 @@ def cmd_run(settings: Settings, args) -> int:
     }
     write_result(settings, payload)
     print(json.dumps(payload, ensure_ascii=False, indent=1))
+    if result.outcome == "no_subscribers":
+        print("WARNING: nobody has subscribed yet. Share t.me/<your_bot>?start=<BOT_INVITE_CODE> and have people press Start.")
     if result.outcome == "failure_notified":
         return EXIT_REPORTED_FAILURE
     return EXIT_OK if result.ok else EXIT_FAILED
 
 
+def _print_subscribers(state: dict) -> None:
+    subs = active_subscribers(state)
+    print(f"Active subscribers: {len(subs)}")
+    for sub in subs:
+        print(f"  - {sub['name']} ({sub['type']}), joined {sub['joined_at']}")
+
+
+def cmd_subscribers(settings: Settings, args) -> int:
+    try:
+        client = make_telegram(settings)
+        me = client.get_me()
+    except TelegramError as exc:
+        print(f"Telegram FAILED: {exc}")
+        return EXIT_FAILED
+    store = production_store(settings)
+    state = store.load()
+    summary = sync_now(settings, client, state)
+    store.save(state)
+    print(f"Bot: @{me.get('username', '?')}")
+    code = "<BOT_INVITE_CODE>" if settings.secrets.bot_invite_code else ""
+    if code:
+        print(f"Invite link: https://t.me/{me.get('username', '<bot>')}?start={code}  (replace with your code; it is secret)")
+    else:
+        print(f"Invite link: https://t.me/{me.get('username', '<bot>')}  (no BOT_INVITE_CODE set: anyone can join, up to {settings.telegram.max_subscribers})")
+    print(f"New: {summary.added or 'none'} · Left: {summary.removed or 'none'} · Rejected: {summary.rejected}")
+    _print_subscribers(state)
+    return EXIT_OK
+
+
 def cmd_test_telegram(settings: Settings, args) -> int:
     try:
-        sent = make_telegram(settings).send_message(
-            "✅ <b>BCS Newspaper Engine</b>\nটেস্ট মেসেজ: টেলিগ্রাম সংযোগ কাজ করছে। (এটি ব্রিফিং নয়)"
-        )
+        client = make_telegram(settings)
     except TelegramError as exc:
         print(f"Telegram test FAILED: {exc}")
         return EXIT_FAILED
-    print(f"Telegram test message delivered (message_id={sent.message_id}).")
-    return EXIT_OK
+    store = production_store(settings)
+    state = store.load()
+    try:
+        sync_now(settings, client, state)
+    except TelegramError as exc:
+        print(f"Could not read new subscribers: {exc}")
+    store.save(state)
+    subs = active_subscribers(state)
+    if not subs:
+        print("No subscribers yet. Open your bot in Telegram (via the invite link) and press Start, then run this again.")
+        return EXIT_FAILED
+    failures = 0
+    for sub in subs:
+        try:
+            client.send_message(sub["chat_id"], "✅ <b>BCS Newspaper Engine</b>\nটেস্ট মেসেজ: টেলিগ্রাম সংযোগ কাজ করছে। (এটি ব্রিফিং নয়)")
+            print(f"  ok   {sub['name']}")
+        except TelegramError as exc:
+            failures += 1
+            if exc.recipient_gone:
+                deactivate(state, sub["chat_id"], "unreachable", utcnow())
+            print(f"  FAIL {sub['name']}: {exc}")
+    store.save(state)
+    print(f"Test message delivered to {len(subs) - failures}/{len(subs)} subscribers.")
+    return EXIT_OK if failures == 0 else EXIT_FAILED
 
 
 def cmd_verify_sources(settings: Settings, args) -> int:
@@ -253,8 +308,7 @@ def cmd_check_model(settings: Settings, args) -> int:
 
 
 def cmd_status(settings: Settings, args) -> int:
-    store = StateStore(settings.state_path, settings.state.retention_days, settings.state.max_run_history)
-    state = store.load()
+    state = production_store(settings).load()
     by_status: dict[str, int] = {}
     for ev in state["events"].values():
         by_status[ev["status"]] = by_status.get(ev["status"], 0) + 1
@@ -268,6 +322,7 @@ def cmd_status(settings: Settings, args) -> int:
             for d, e in sorted(state["editions"].items())[-5:]
         },
         "source_health": state["source_health"],
+        "active_subscribers": [s["name"] for s in active_subscribers(state)],
         "last_run": state["runs"][-1] if state["runs"] else None,
     }
     print(json.dumps(summary, ensure_ascii=False, indent=1))
@@ -284,14 +339,23 @@ def cmd_notify_failure(settings: Settings, args) -> int:
         print("Failure already reported (or dry run); not sending another notice.")
         return EXIT_OK
     try:
-        make_telegram(settings).send_message(
-            "⚠️ <b>বিসিএস ব্রিফিং ওয়ার্কফ্লো ব্যর্থ হয়েছে</b>\n"
-            "GitHub Actions লগ দেখুন (Actions → Daily BCS briefing)। কোনো খবর বানিয়ে পাঠানো হয়নি।"
-        )
-    except TelegramError as exc:
+        client = make_telegram(settings)
+        subs = active_subscribers(production_store(settings).load())
+    except (TelegramError, StateError) as exc:
         print(f"Could not send failure notice: {exc}")
         return EXIT_FAILED
-    print("Failure notice sent.")
+    sent = 0
+    for sub in subs:
+        try:
+            client.send_message(
+                sub["chat_id"],
+                "⚠️ <b>আজকের বিসিএস ব্রিফিং পাঠানো যায়নি</b>\n"
+                "একটি কারিগরি সমস্যা হয়েছে; বটের মালিককে জানানো হয়েছে। কোনো খবর বানিয়ে পাঠানো হয়নি।",
+            )
+            sent += 1
+        except TelegramError as exc:
+            print(f"Could not notify {sub['name']}: {exc}")
+    print(f"Failure notice sent to {sent}/{len(subs)} subscribers. Details are in the GitHub Actions log.")
     return EXIT_OK
 
 
@@ -304,7 +368,8 @@ def main(argv: list[str] | None = None) -> int:
     run.add_argument("--offline", action="store_true", help="sample feeds + mock model; implies --dry-run")
     run.add_argument("--provider", choices=["gemini", "ollama", "mock"], help="override llm.provider")
     run.add_argument("--date", help="edition date YYYY-MM-DD (testing)")
-    sub.add_parser("test-telegram", help="send a test message")
+    sub.add_parser("test-telegram", help="register new subscribers and send each a test message")
+    sub.add_parser("subscribers", help="read /start and /stop now and list subscribers")
     sub.add_parser("verify-sources", help="check configured feeds live")
     cm = sub.add_parser("check-model", help="check the configured model is available")
     cm.add_argument("--provider", choices=["gemini", "ollama"])
@@ -323,6 +388,7 @@ def main(argv: list[str] | None = None) -> int:
     handlers = {
         "run": cmd_run,
         "test-telegram": cmd_test_telegram,
+        "subscribers": cmd_subscribers,
         "verify-sources": cmd_verify_sources,
         "check-model": cmd_check_model,
         "status": cmd_status,
