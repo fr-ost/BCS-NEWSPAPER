@@ -6,13 +6,13 @@ Every morning (target **08:00 Asia/Dhaka**) a GitHub Actions job:
 
 1. collects recent news from verified RSS/Atom feeds,
 2. merges duplicate reports of the same event,
-3. screens stories for BCS relevance with Gemini (one lightweight call),
+3. screens stories for BCS relevance with an AI model (one lightweight call): **OpenAI** by default, with **Gemini** (free tier) as automatic fallback,
 4. reads the accessible article text and writes **grounded Bengali study notes**,
 5. ranks stories with a configurable rubric (5–8 on a normal day, fewer on a thin day, never padded),
 6. writes **three validated MCQs** from verified facts,
 7. sends **one organised edition** on Telegram to everyone who subscribed to the bot: you and your friends (split into several messages only when needed).
 
-Target recurring cost: **৳0**, using current free allowances (see [Cost and free-tier limits](#cost-and-free-tier-limits)). Nothing in this project enables billing or falls back to a paid service.
+Expected cost: roughly **US$2–8 per month (≈ ৳250–1,000)** of prepaid OpenAI credit, depending on the model. If the credit runs out, the free Gemini fallback takes over, so the briefing keeps coming. GitHub Actions and Telegram are free. Details in [Cost](#cost-and-free-tier-limits).
 
 ---
 
@@ -30,6 +30,7 @@ Target recurring cost: **৳0**, using current free allowances (see [Cost and fr
 - [State persistence and recovery](#state-persistence-and-recovery)
 - [Logs and troubleshooting](#logs-and-troubleshooting)
 - [Cost and free-tier limits](#cost-and-free-tier-limits)
+- [AI providers: OpenAI with Gemini fallback](#ai-providers-openai-with-gemini-fallback)
 - [Disabling the schedule](#disabling-the-schedule)
 - [Switching to a local model](#switching-to-a-local-model)
 - [Testing](#testing)
@@ -77,15 +78,15 @@ Run `python -m app run --offline` to render a full sample edition from bundled f
  feeds  │        │          normalise URLs, parse dates safely                  │
         │ B. deduplicator.py  same URL / title / excerpt → one "event"          │
         │        │                                                              │
-        │ C. screening.py   1 Gemini call: relevance + categories + grouping    │──▶ Gemini API
-        │        │          (model may only reference ids we gave it)           │    (free tier)
+        │ C. screening.py   1 AI call: relevance + categories + grouping        │──▶ OpenAI API
+        │        │          (model may only reference ids we gave it)           │    (prepaid)
         │ D. extractor.py   fetch article page, strip nav/ads/related blocks    │
         │        │          → full text, or labelled excerpt-only, or skip      │
-        │ F. analysis.py    1 Gemini call per story → JSON note                 │──▶ Gemini API
+        │ F. analysis.py    1 AI call per story → JSON note                     │──▶  (Gemini API if
         │      grounding.py drop facts whose quote isn't in the article and     │
         │        │          sentences with numbers not in the article           │
         │ E. scoring.py     weighted rubric → top 5–8 above threshold           │
-        │ G. questions.py   1 Gemini call → MCQs, strictly validated            │──▶ Gemini API
+        │ G. questions.py   1 AI call → MCQs, strictly validated                │──▶  OpenAI fails)
         │        │                                                              │
         │    render.py      Bengali, HTML-escaped, phone-friendly sections      │
         │    subscribers.py read /start & /stop (getUpdates), update the list    │◀─▶ Telegram
@@ -99,7 +100,7 @@ Run `python -m app run --offline` to render a full sample edition from bundled f
         git commit state/state.json → your repository (memory between runs)
 ```
 
-Typical Gemini usage per day: 1 screening + up to 9 analyses + 1 MCQ call ≈ **11 requests**, hard-capped at **16 per run** including retries (`llm.max_calls_per_run`).
+Typical model usage per day: 1 screening + up to 9 analyses + 1 MCQ call ≈ **11 requests** (~70k input / ~25–45k output tokens), hard-capped at **16 per provider per run** including retries (`llm.max_calls_per_run`).
 
 ### Project layout
 
@@ -120,14 +121,14 @@ Typical Gemini usage per day: 1 screening + up to 9 analyses + 1 MCQ call ≈ **
 | `app/subscribers.py` | `/start`, `/stop`, invite code, subscriber list |
 | `app/state.py` | Versioned JSON state store |
 | `app/pipeline.py` | Orchestration, checkpoints, idempotency |
-| `app/llm/` | Provider interface: `gemini.py`, `ollama.py` (local), `mock.py` (offline/tests) |
+| `app/llm/` | Provider interface + fallback chain: `openai.py`, `gemini.py`, `ollama.py` (local), `mock.py` (offline/tests) |
 | `app/prompts.py` | Prompts with untrusted-content guards |
 | `config/` | `settings.toml`, `sources.toml` |
 | `state/state.json` | Created by the first live run, committed by the workflow |
 | `sample_data/` | Fictional feeds/articles for offline runs and tests |
 | `tests/` | Pytest suite (all external calls mocked) |
 
-Dependencies: Python 3.12 (3.11+ works), `requests`, `feedparser`, `beautifulsoup4`; `pytest` for tests. Gemini is called over plain REST (no SDK), which keeps the provider layer swappable.
+Dependencies: Python 3.12 (3.11+ works), `requests`, `feedparser`, `beautifulsoup4`; `pytest` for tests. OpenAI and Gemini are called over plain REST (no SDKs), which keeps the provider layer swappable.
 
 ---
 
@@ -150,7 +151,16 @@ GitHub only runs **scheduled** workflows from the repository's **default branch*
 - If this code is on another branch (e.g. `claude/…`), open a Pull Request into `main` and merge it. If `main` doesn't exist yet, create it from that branch: **Code → branch dropdown → View all branches → New branch** (name `main`, source = the code branch). Then set it as default under **Settings → General → Default branch**.
 - If you protect `main` with branch rules that block direct pushes, the workflow can't commit state. Either allow `github-actions[bot]` to bypass, or don't protect `main` (it's a personal repo).
 
-### Step 2: Create a Gemini API key (free tier)
+### Step 2a: Create an OpenAI API key (primary model, prepaid)
+
+1. Go to <https://platform.openai.com/>, sign in, open **Settings → Billing** and **add prepaid credit**. US$5–10 lasts about 1–4 months. A card that works for international online payments is needed.
+2. **Turn auto-recharge OFF.** Then the most you can ever spend is the credit you added. When it runs out, OpenAI refuses requests and the app switches to Gemini automatically.
+3. Optional extra guard: **Settings → Limits** (or the project's settings) → set a monthly budget/usage limit and an email alert.
+4. **API keys → Create new secret key.** Copy it (starts with `sk-`); this is `OPENAI_API_KEY`.
+5. **Check the model and price.** The default is `gpt-5.4-mini` (in `config/settings.toml`); a cheaper option is `gpt-5.4-nano`. I took these ids and prices from third-party trackers and couldn't confirm them on OpenAI's site from the build environment, so check <https://openai.com/api/pricing> and <https://platform.openai.com/docs/models>. To change the model without editing code, set the repository variable `OPENAI_MODEL` (Step 4). If the price differs, update `openai_usd_per_million_input/output` so the logged cost estimate stays right.
+6. Data use: OpenAI states API inputs aren't used for training by default. Only public news text is sent.
+
+### Step 2b: Create a Gemini API key (free fallback)
 
 1. Go to **Google AI Studio → API keys**: <https://aistudio.google.com/apikey> and sign in.
 2. Click **Create API key**. Prefer **a new Google Cloud project that has no billing account linked**.
@@ -190,11 +200,14 @@ Repository → **Settings → Secrets and variables → Actions**.
 
 | Name | Value |
 |---|---|
-| `GEMINI_API_KEY` | key from Step 2 |
+| `OPENAI_API_KEY` | key from Step 2a (primary model) |
+| `GEMINI_API_KEY` | key from Step 2b (free fallback) |
 | `TELE_BOT_TOKEN` | token from Step 3 |
 | `BOT_INVITE_CODE` | invite code from Step 3 (optional but recommended) |
 
-Optional, on the **Variables** tab → **New repository variable**: `GEMINI_MODEL` = a model id. This overrides the config file without a code change.
+Optional, on the **Variables** tab → **New repository variable**: `OPENAI_MODEL` and/or `GEMINI_MODEL` = a model id. These override the config file without a code change.
+
+You can run with just one AI key: without `OPENAI_API_KEY` the app uses Gemini only (free); without `GEMINI_API_KEY` it uses OpenAI only (no fallback).
 
 Secrets are masked in logs, and this app also redacts them from its own messages.
 
@@ -212,10 +225,10 @@ Secrets are masked in logs, and this app also redacts them from its own messages
 |---|---|---|---|
 | 1 | `offline` | Code, tests and rendering work | No API calls, nothing sent |
 | 2 | `verify-sources` | Each feed is reachable, allowed by robots.txt and parses | Fetches feeds only |
-| 3 | `check-model` | Your key works and the model id exists | 1 metadata call (no generation) |
+| 3 | `check-model` | Both keys work and both model ids exist | 1 metadata call each (no generation, no cost) |
 | 4 | `subscribers` | First, you (and your friends) open the **invite link** and press **Start**. Then this run registers you, sends each person a welcome message, and lists who's subscribed | Welcome replies only |
 | 5 | `test-telegram` | Delivery works for every subscriber | 1 test message per subscriber |
-| 6 | `dry-run` | Full real pipeline. Download the artifact to read the edition | ~11 Gemini calls, **nothing sent**, saved state untouched |
+| 6 | `dry-run` | Full real pipeline. Download the artifact to read the edition; the run summary shows tokens used and estimated cost | ~11 OpenAI calls (≈ $0.05–0.25), **nothing sent**, saved state untouched |
 | 7 | `live` | The real thing | Sends the edition to every subscriber, commits state |
 
 After `verify-sources`, edit `config/sources.toml`: set `enabled = false` for any source that doesn't show `OK`, and update its `verification` note. See [News sources](#news-sources).
@@ -230,9 +243,10 @@ GitHub doesn't guarantee the minute: scheduled runs often start several minutes 
 
 - [ ] Repository made **private**
 - [ ] Code merged into the **default branch** (`main`)
+- [ ] OpenAI credit added, **auto-recharge off**, API key created; model id and price checked
 - [ ] Gemini key created in a project **without billing**; model's free-tier status confirmed on Google's pricing page
 - [ ] Telegram bot created; invite code chosen
-- [ ] Secrets `GEMINI_API_KEY`, `TELE_BOT_TOKEN`, `BOT_INVITE_CODE` added
+- [ ] Secrets `OPENAI_API_KEY`, `GEMINI_API_KEY`, `TELE_BOT_TOKEN`, `BOT_INVITE_CODE` added
 - [ ] You and your friends opened the invite link and pressed **Start**
 - [ ] Actions enabled
 - [ ] Manual runs: `offline` → `verify-sources` (and adjust `sources.toml`) → `check-model` → `subscribers` → `test-telegram` → `dry-run` → `live`
@@ -282,7 +296,7 @@ python -m app verify-sources
 python -m app check-model
 python -m app subscribers              # after pressing Start via the invite link
 python -m app test-telegram
-python -m app run --dry-run            # real feeds + Gemini, never sends; scratch state
+python -m app run --dry-run            # real feeds + OpenAI (Gemini fallback), never sends; scratch state
 python -m app status                   # summary of state/state.json
 ```
 
@@ -294,15 +308,15 @@ Avoid running `python -m app run`, `subscribers` or `test-telegram` locally *and
 
 | Command | Effect |
 |---|---|
-| `python -m app run` | Register new subscribers, build today's edition and deliver it to all of them. No-op if today's edition was already delivered. Skips building (no Gemini quota spent) when nobody has subscribed. |
+| `python -m app run` | Register new subscribers, build today's edition and deliver it to all of them. No-op if today's edition was already delivered. Skips building (no model calls, no cost) when nobody has subscribed. |
 | `python -m app run --dry-run` | Real feeds + real model, **never sends**. Uses `output/dry-run-state.json` (fresh each time), so production state is untouched. |
 | `python -m app run --offline` | Bundled fictional sample data + mock model. No network, no keys. Implies `--dry-run`. |
 | `python -m app run --date 2026-10-24` | Override the edition date (testing). |
-| `python -m app run --provider mock\|gemini\|ollama` | Override the provider. |
+| `python -m app run --provider openai\|gemini\|ollama\|mock` | Use only that provider (no fallback). |
 | `python -m app subscribers` | Read new `/start` / `/stop` messages now, reply, and list active subscribers. |
 | `python -m app test-telegram` | Same registration step, then one test message to each subscriber. |
 | `python -m app verify-sources` | Live check of every configured feed. Exit code 1 if an enabled feed fails. |
-| `python -m app check-model` | Confirms the model id exists for your key (not proof of free quota). |
+| `python -m app check-model` | Confirms each configured model id works with its key (not proof of credit/quota). |
 | `python -m app status` | Last edition, events by status, source health, last run. |
 
 Exit codes: `0` success / dry run / already delivered; `1` failed; `2` failed but a failure notice was already sent to Telegram; `3` configuration error.
@@ -409,6 +423,10 @@ To **reset** everything: delete `state/state.json` and commit. The next run star
 | "সদস্যসংখ্যা পূর্ণ" reply | `max_subscribers` reached → raise it in `config/settings.toml` |
 | `A webhook is set for this bot` | Another tool set a webhook → open `https://api.telegram.org/bot<TOKEN>/deleteWebhook` once |
 | A subscriber marked inactive unexpectedly | They blocked the bot or left the group → they can open the invite link and press Start again |
+| `Provider openai disabled for this run: … credit exhausted` | Prepaid OpenAI credit used up → today ran on Gemini; add credit when you want OpenAI back |
+| `OpenAI rejected credentials` / `OpenAI model unavailable` | Bad `OPENAI_API_KEY`, or model id wrong/retired → fix the secret or set `OPENAI_MODEL`. Gemini covered the run meanwhile |
+| `OpenAI request failed (400): … reasoning_effort` | Your model doesn't accept that parameter → set `openai_reasoning_effort = ""` |
+| Edition footer says "বিকল্প মডেল" was used | OpenAI was unavailable for part of the run; check the log line `Provider openai disabled …` |
 | `Gemini model unavailable` | Model id retired/renamed → set `GEMINI_MODEL` to a current free model |
 | `Gemini quota exhausted … limit: 0` | Model has no free quota for your project → pick another model |
 | `Gemini rejected credentials` | Bad or revoked `GEMINI_API_KEY` |
@@ -423,24 +441,59 @@ To **reset** everything: delete `state/state.json` and commit. The next run star
 
 ## Cost and free-tier limits
 
-The design targets **zero recurring cost under the free allowances that apply today**. These allowances are set by the providers and can change at any time; nothing here can guarantee them.
+Daily usage: about 11 model requests ≈ **70k input + 25–45k output tokens** (Bengali output, plus hidden "reasoning" tokens on newer models, which are billed as output). The edition is built once, so the number of subscribers doesn't change the AI cost.
 
-| Service | What's used | Free allowance (as understood at build time; verify yourself) |
+| Model (primary) | Price per 1M tokens (in / out)* | Per day | Per month |
+|---|---|---|---|
+| `gpt-5.4-nano` | $0.20 / $1.25 | ~$0.05–0.07 | **~$1.5–2 (≈ ৳180–260)** |
+| `gpt-5.4-mini` (default) | $0.75 / $4.50 | ~$0.17–0.26 | **~$5–8 (≈ ৳600–1,000)** |
+| Gemini fallback (free tier) | free | 0 | 0 |
+
+\*Third-party snapshots from mid-2026, at ≈ ৳120/US$. Verify on <https://openai.com/api/pricing>. Dry runs cost about one day's usage each.
+
+**See the real numbers:** every run logs `llm_usage` (requests and tokens per provider) and `estimated_openai_cost_usd` in its JSON summary, and saves them in `state/state.json` under `runs`. Compare with OpenAI's **Usage** page.
+
+**How spending is bounded:**
+- OpenAI is prepaid. With auto-recharge off, spend can never exceed the credit you added.
+- Each provider is capped at `llm.max_calls_per_run` (16) requests per run, retries included.
+- When OpenAI credit runs out, the run continues on Gemini's free tier. Gemini free-tier projects without billing just refuse requests over quota (HTTP 429), and the app makes a partial edition. Nothing upgrades to a paid plan automatically.
+- To go back to **৳0**, remove the `OPENAI_API_KEY` secret (or set `provider = "gemini"`); the app then runs on Gemini only.
+
+| Service | What's used | Free allowance (verify yourself) |
 |---|---|---|
-| GitHub Actions (private repo, GitHub Free) | ~3–6 min/day on `ubuntu-latest` → roughly 100–200 min/month | 2,000 min/month; 500 MB artifact storage (artifacts kept 7 days, tiny) |
-| Gemini Developer API (Free tier) | ~11 requests/day, capped at 16/run | Per-model RPM/RPD limits, per project; daily quota resets at midnight Pacific time. Recent developer reports describe free quotas being cut sharply for some models, so check the official rate-limits page |
+| GitHub Actions (private repo, GitHub Free) | ~3–6 min/day → 100–200 min/month | 2,000 min/month; 500 MB artifact storage |
+| Gemini Developer API (Free tier) | only on fallback days | Per-model RPM/RPD limits per project; resets at midnight Pacific time |
 | Telegram Bot API | ~4 messages × subscribers per day, plus replies | Free (rate limits: ~1 msg/s per chat, handled automatically) |
 | News feeds | a few HTTP requests/day | Free; subject to each publisher's terms |
 
-How spending is prevented: there's no paid service, no paid fallback provider, and no automatic model switching. Gemini free-tier projects without billing simply reject requests over quota (HTTP 429), which the app handles as a partial edition. The one way to incur cost is linking a billing account to the Gemini project yourself, so keep billing off that project.
+## AI providers: OpenAI with Gemini fallback
 
----
+`config/settings.toml`:
+```toml
+[llm]
+provider = "openai"              # primary
+fallback_providers = ["gemini"]  # tried in order; [] to disable
+openai_model = "gpt-5.4-mini"
+gemini_model = "gemini-3.8-flash"
+```
+
+**When the run switches to Gemini.** Each provider has its own call budget, spacing and retries. OpenAI is switched off **for the rest of that run** (and Gemini takes over) when:
+- the prepaid credit is exhausted (`429 insufficient_quota`),
+- the key is rejected or the model id is unknown (401/403/404),
+- it keeps failing after its retries (outage, 5xx, timeouts),
+- it hits the per-run call budget.
+
+Short per-minute rate limits are waited out and retried on OpenAI first. If OpenAI returns unusable output for one request, that single request is retried on Gemini, and OpenAI stays in use. The next day's run tries OpenAI again.
+
+**What readers see.** If a fallback was used, the edition footer says so ("…বিকল্প মডেল দিয়ে করা হয়েছে"). The fact checks (verbatim quotes, numbers present in the article, MCQ validation) apply identically to every model's output. If both providers are unavailable, you get the usual partial edition or failure notice; nothing is invented.
+
+**Other combinations:** Gemini only (`provider = "gemini"`, `fallback_providers = []`, or just don't set `OPENAI_API_KEY`). OpenAI only (`LLM_FALLBACK=none`). A local model (see below) can also be primary or fallback.
 
 ## Disabling the schedule
 
 - **Pause:** Actions → *Daily BCS briefing* → **⋯** (top right) → **Disable workflow**. Re-enable the same way.
 - **Remove the schedule but keep manual runs:** delete the two `schedule:` / `- cron:` lines in `.github/workflows/daily-briefing.yml`.
-- **Stop completely:** delete the workflow file, and optionally revoke the Gemini key and the bot (BotFather → `/revoke`).
+- **Stop completely:** delete the workflow file, and optionally revoke the OpenAI and Gemini keys and the bot (BotFather → `/revoke`).
 
 Note: GitHub automatically disables schedules in **public** repositories after 60 days without activity. The daily state commit counts as activity.
 
@@ -478,7 +531,7 @@ Small local models are weaker at following the strict JSON and Bengali instructi
 python -m pytest                 # ~100 unit tests, fully mocked, < 2 s
 ```
 
-A test fixture blocks real HTTP, so unit tests can never spend Gemini quota or message Telegram. Coverage includes feed parsing with malformed items, missing/invalid/future dates, invalid URLs, duplicate detection, extraction failure and excerpt-only rules, the scoring rubric, malformed model output, unsupported facts and numbers, MCQ schema/answer-index validation, HTML escaping and chunking, Telegram retries and plain-text fallback, Gemini 429/404/5xx classification, retry limits and call budget, state corruption/backup recovery/migration/newer-schema refusal, quota exhaustion mid-run with resumption, interrupted delivery resuming without duplicates, failure-notice de-duplication, low-relevance days without padding, dry-run behaviour, secret redaction in logs, and subscribers: invite-code checks, `/stop`, the cap, blocked users, group commands, malformed updates, per-subscriber delivery and resumption, and "no subscribers spends no quota".
+A test fixture blocks real HTTP, so unit tests can never spend OpenAI credit or Gemini quota, or message Telegram. Coverage includes feed parsing with malformed items, missing/invalid/future dates, invalid URLs, duplicate detection, extraction failure and excerpt-only rules, the scoring rubric, malformed model output, unsupported facts and numbers, MCQ schema/answer-index validation, HTML escaping and chunking, Telegram retries and plain-text fallback, Gemini and OpenAI 429/404/5xx classification (including OpenAI `insufficient_quota`), the OpenAI → Gemini fallback chain (credit exhausted, bad key/model, outage, invalid output, both exhausted, mid-run switch completing a full edition, cost estimate), retry limits and call budget, state corruption/backup recovery/migration/newer-schema refusal, quota exhaustion mid-run with resumption, interrupted delivery resuming without duplicates, failure-notice de-duplication, low-relevance days without padding, dry-run behaviour, secret redaction in logs, and subscribers: invite-code checks, `/stop`, the cap, blocked users, group commands, malformed updates, per-subscriber delivery and resumption, and "no subscribers spends no quota".
 
 **Live integration tests** (opt-in, real network; 1 model lookup and 1 Telegram `getMe`; no message is sent):
 
@@ -494,11 +547,11 @@ The scheduled workflow runs the unit tests before each live run; if they fail, n
 
 - **No secrets in the repository.** Credentials come only from environment variables / GitHub Secrets. `.env` is git-ignored; `.env.example` holds placeholders.
 - **Subscriber data** (chat ids, first names) lives only in the private repository's state file. The invite code is compared in constant time and redacted from logs like the other secrets.
-- **No secrets in logs.** The Gemini key travels in a header, never a URL. A logging filter redacts the credentials from every log line, and urllib3 debug logging (which would print Telegram's token-bearing URL) is suppressed.
+- **No secrets in logs.** The OpenAI and Gemini keys travel in headers, never URLs. A logging filter redacts the credentials from every log line, and urllib3 debug logging (which would print Telegram's token-bearing URL) is suppressed.
 - **Web content is untrusted.** Article text is wrapped in delimiters the article can't forge, the model is told to treat it as data, and the model has no tools. Its output is parsed as JSON and validated. URLs are stripped from model text, all text is HTML-escaped, and links only ever come from our own feed records. A hostile article can at worst get itself rejected.
 - **Network hygiene.** Timeouts on every request, size caps (3 MB) on feeds and pages, robots.txt respected, honest user agent, no paywall or anti-bot bypassing.
 - **Least privilege.** The workflow token has `contents: write` only, used solely to commit `state/state.json`. No force-push.
-- **Data use.** On Gemini's free tier, Google may use prompts/responses to improve its products. Only public news text is sent.
+- **Data use.** OpenAI states API data isn't used for training by default. On Gemini's free tier (fallback), Google may use prompts/responses to improve its products. Only public news text is sent to either.
 
 ---
 
@@ -518,15 +571,19 @@ The scheduled workflow runs the unit tests before each live run; if they fail, n
 | `analysis.max_analyses_per_run` | 9 | Model calls for analysis per run |
 | `analysis.max_attempts_per_story` | 3 | Then the story is abandoned |
 | `scoring.weights.*` | 0.30/0.25/0.20/0.15/0.10 | Rubric weights, must sum to 1 |
-| `llm.provider` | `gemini` | `gemini`, `ollama` or `mock` |
+| `llm.provider` | `openai` | Primary: `openai`, `gemini`, `ollama` or `mock` |
+| `llm.fallback_providers` | `["gemini"]` | Tried in order; override with `LLM_FALLBACK` (`none` to disable) |
+| `llm.openai_model` | `gpt-5.4-mini` | Override with `OPENAI_MODEL` |
+| `llm.openai_reasoning_effort` | `""` | Optional `low`/`minimal` to cut reasoning tokens (cost) |
+| `llm.openai_usd_per_million_input/output` | 0.75 / 4.50 | Only for the logged cost estimate |
 | `llm.gemini_model` | `gemini-3.8-flash` | Override with `GEMINI_MODEL` |
-| `llm.max_calls_per_run` | 16 | Hard cap including retries |
+| `llm.max_calls_per_run` | 16 | Hard cap per provider, including retries |
 | `llm.min_seconds_between_calls` | 6 | Request spacing |
 | `telegram.max_message_chars` | 3800 | Chunk size (Telegram's limit is 4096) |
 | `telegram.max_subscribers` | 10 | Cap on active subscribers |
 | `telegram.min_seconds_between_messages` | 1.1 | Pause between messages to the same chat |
 | `state.retention_days` | 14 | Pruning window |
 
-Environment variables: `GEMINI_API_KEY`, `TELE_BOT_TOKEN`, `BOT_INVITE_CODE` (secrets); `GEMINI_MODEL`, `LLM_PROVIDER`, `OLLAMA_MODEL`, `OLLAMA_BASE_URL`, `BCS_STATE_PATH`, `BCS_OUTPUT_DIR`, `BCS_CONFIG_DIR` (optional overrides).
+Environment variables: `OPENAI_API_KEY`, `GEMINI_API_KEY`, `TELE_BOT_TOKEN`, `BOT_INVITE_CODE` (secrets); `OPENAI_MODEL`, `GEMINI_MODEL`, `LLM_PROVIDER`, `LLM_FALLBACK`, `OLLAMA_MODEL`, `OLLAMA_BASE_URL`, `BCS_STATE_PATH`, `BCS_OUTPUT_DIR`, `BCS_CONFIG_DIR` (optional overrides).
 
 Syllabus reference: subject mapping follows the BPSC BCS syllabus (preliminary subjects: Bangladesh affairs, international affairs, geography/environment/disaster management, general science, computer & ICT, ethics/values/good governance; written papers 005 Bangladesh Affairs, 007 International Affairs, 010 General Science & Technology). Always confirm the latest syllabus at <https://bpsc.gov.bd>.

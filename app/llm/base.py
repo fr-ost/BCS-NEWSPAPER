@@ -3,7 +3,8 @@
 Adding a provider (e.g. a local model) means implementing
 :class:`LLMProvider.generate_raw` and mapping its failures onto the error
 classes below. Retries, spacing and the per-run call budget live in
-:class:`LLMClient` and are shared by every provider.
+:class:`LLMClient` and are shared by every provider. :class:`FallbackClient`
+chains several providers (e.g. OpenAI first, Gemini as fallback).
 """
 
 from __future__ import annotations
@@ -75,6 +76,18 @@ class LLMProvider(ABC):
     def check_model(self) -> None:
         """Optional preflight check that does not consume generation quota."""
 
+    @property
+    def usage(self) -> dict:
+        """Token usage reported by the API during this run."""
+        if not hasattr(self, "_usage"):
+            self._usage = {"requests": 0, "input_tokens": 0, "output_tokens": 0}
+        return self._usage
+
+    def record_usage(self, input_tokens: int, output_tokens: int) -> None:
+        self.usage["requests"] += 1
+        self.usage["input_tokens"] += max(0, int(input_tokens or 0))
+        self.usage["output_tokens"] += max(0, int(output_tokens or 0))
+
 
 _FENCE = re.compile(r"^```(?:json)?\s*|\s*```$", re.I)
 
@@ -127,6 +140,14 @@ class LLMClient:
         self._last_call: float | None = None
         self.calls_made = 0
         self.quota_exhausted = False
+        self.fallback_used = False
+
+    @property
+    def provider_names(self) -> list[str]:
+        return [self.provider.name]
+
+    def usage(self) -> dict:
+        return {self.provider.name: {**self.provider.usage, "calls_incl_retries": self.calls_made}}
 
     @property
     def remaining_calls(self) -> int:
@@ -186,3 +207,66 @@ class LLMClient:
                 log.warning("Transient error on %s (%s); retrying in %.1fs", request.task, exc, wait)
                 self._sleep(wait)
             attempt += 1
+
+
+class FallbackClient:
+    """Try providers in order (e.g. OpenAI, then Gemini).
+
+    Each provider has its own :class:`LLMClient` (budget, spacing, retries).
+    A provider that is out of quota/credit, rejects credentials or model, or
+    keeps failing after its retries is disabled for the rest of the run and
+    the next one takes over. Invalid output from one provider is retried on
+    the next one for that request only. Exposes the same interface the
+    pipeline uses on :class:`LLMClient`.
+    """
+
+    def __init__(self, chain: list[LLMClient]):
+        if not chain:
+            raise PermanentLLMError("No usable LLM provider configured")
+        self.chain = chain
+        self.disabled: dict[str, str] = {}  # provider name -> reason
+        self.fallback_used = False
+
+    @property
+    def calls_made(self) -> int:
+        return sum(c.calls_made for c in self.chain)
+
+    @property
+    def quota_exhausted(self) -> bool:
+        return all(c.provider.name in self.disabled for c in self.chain)
+
+    @property
+    def provider_names(self) -> list[str]:
+        return [c.provider.name for c in self.chain]
+
+    def usage(self) -> dict:
+        return {c.provider.name: {**c.provider.usage, "calls_incl_retries": c.calls_made} for c in self.chain}
+
+    def _disable(self, name: str, exc: Exception) -> None:
+        self.disabled[name] = f"{type(exc).__name__}: {exc}"[:300]
+        log.warning("Provider %s disabled for this run: %s", name, exc)
+
+    def generate_json(self, request: LLMRequest) -> object:
+        errors: list[Exception] = []
+        for index, client in enumerate(self.chain):
+            name = client.provider.name
+            if name in self.disabled:
+                continue
+            try:
+                result = client.generate_json(request)
+            except (QuotaExhaustedError, PermanentLLMError, TransientLLMError) as exc:
+                self._disable(name, exc)
+                errors.append(exc)
+                continue
+            except InvalidResponseError as exc:
+                log.warning("Provider %s gave unusable output for %s; trying next provider", name, request.task)
+                errors.append(exc)
+                continue
+            if index > 0:
+                self.fallback_used = True
+            return result
+        if self.quota_exhausted and any(isinstance(e, QuotaExhaustedError) for e in errors):
+            raise QuotaExhaustedError("All providers are out of quota/credit: " + "; ".join(self.disabled.values()))
+        if errors:
+            raise errors[-1]
+        raise QuotaExhaustedError("All providers are disabled for this run: " + "; ".join(self.disabled.values()))

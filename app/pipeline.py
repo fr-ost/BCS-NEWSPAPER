@@ -27,6 +27,7 @@ from .config import Settings
 from .deduplicator import assign_events, merge_groups
 from .extractor import FULL, Extraction, choose_analysis_input
 from .llm import (
+    FallbackClient,
     InvalidResponseError,
     LLMClient,
     LLMError,
@@ -62,6 +63,8 @@ class RunResult:
     mcqs: int = 0
     partial: bool = False
     llm_calls: int = 0
+    llm_usage: dict = field(default_factory=dict)
+    estimated_cost_usd: float = 0.0
     errors: list[str] = field(default_factory=list)
     output_path: Path | None = None
 
@@ -76,7 +79,7 @@ class Pipeline:
         settings: Settings,
         sources: list[Source],
         store: StateStore,
-        llm: LLMClient,
+        llm: LLMClient | FallbackClient,
         article_fetcher: ArticleFetcher,
         feed_fetcher=None,
         telegram: TelegramClient | None = None,
@@ -150,7 +153,12 @@ class Pipeline:
         finally:
             result.errors = self.errors
             result.llm_calls = self.llm.calls_made
+            result.llm_usage = self.llm.usage()
+            result.estimated_cost_usd = self._estimated_cost(result.llm_usage)
             run_record.update(
+                llm_usage=result.llm_usage,
+                estimated_cost_usd=result.estimated_cost_usd,
+                providers_disabled=dict(getattr(self.llm, "disabled", {})),
                 finished_at=iso(utcnow()),
                 outcome=result.outcome,
                 stories=result.stories,
@@ -163,6 +171,21 @@ class Pipeline:
             self.store.prune(self.state, now)
             self._save()
         return result
+
+    def _estimated_cost(self, usage: dict) -> float:
+        """Rough OpenAI spend for this run from reported tokens (Gemini free tier = 0)."""
+        u = usage.get("openai")
+        if not u:
+            return 0.0
+        cfg = self.s.llm
+        cost = u["input_tokens"] / 1e6 * cfg.openai_usd_per_million_input + u["output_tokens"] / 1e6 * cfg.openai_usd_per_million_output
+        return round(cost, 4)
+
+    def _model_notices(self) -> list[str]:
+        if getattr(self.llm, "fallback_used", False):
+            primary = self.llm.provider_names[0]
+            return [f"আজ {primary} সাময়িকভাবে ব্যবহার করা যায়নি, তাই কিছু বা সব বিশ্লেষণ বিকল্প মডেল দিয়ে করা হয়েছে।"]
+        return []
 
     def _sync_subscribers(self, now: datetime) -> None:
         ensure_structures(self.state)
@@ -242,7 +265,7 @@ class Pipeline:
             unprocessed if partial_reasons else 0,
             self.sources,
             self.s.edition.mcq_count,
-            notices=self._source_notices(),
+            notices=self._model_notices() + self._source_notices(),
         )
         chunks = chunk_sections(sections, self.s.telegram.max_message_chars)
         edition.update(
