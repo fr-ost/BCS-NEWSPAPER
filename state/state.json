@@ -1,9 +1,2387 @@
 {
- "articles": {},
+ "articles": {
+  "a_00372f30fed10736": {
+   "canonical_url": "https://prothomalo.com/religion/islam/fntonqvf9d",
+   "content_hash": "d0b95125a41fc5f0",
+   "date_status": "ok",
+   "event_id": "ev_197788ca0ba2",
+   "excerpt": "",
+   "extraction": null,
+   "id": "a_00372f30fed10736",
+   "language": "bn",
+   "published_at": "2026-10-24T09:20:50+00:00",
+   "retrieved_at": "2026-10-24T11:39:11+00:00",
+   "source_id": "prothomalo",
+   "source_name": "Prothom Alo (প্রথম আলো)",
+   "title": "দান–সদকা কোথায় করবেন, কোথায় করবেন না",
+   "url": "https://www.prothomalo.com/religion/islam/fntonqvf9d"
+  },
+  "a_12355be2b7fc7cb9": {
+   "canonical_url": "https://prothomalo.com/bangladesh/crime/smjhotaa-naa-krle-laash-phelaar-humki",
+   "content_hash": "fede0805d6fe84a8",
+   "date_status": "ok",
+   "event_id": "ev_f60182393c60",
+   "excerpt": "",
+   "extraction": null,
+   "id": "a_12355be2b7fc7cb9",
+   "language": "bn",
+   "published_at": "2026-10-24T08:49:30+00:00",
+   "retrieved_at": "2026-10-24T11:39:11+00:00",
+   "source_id": "prothomalo",
+   "source_name": "Prothom Alo (প্রথম আলো)",
+   "title": "সমঝোতা না করলে লাশ ফেলার হুমকি",
+   "url": "https://www.prothomalo.com/bangladesh/crime/smjhotaa-naa-krle-laash-phelaar-humki"
+  },
+  "a_158a88a65033f7d4": {
+   "canonical_url": "https://prothomalo.com/bangladesh/district/3aqr3iijem",
+   "content_hash": "e036ac827e44af07",
+   "date_status": "ok",
+   "event_id": "ev_6e21e4b6bb83",
+   "excerpt": "সিলেটের হজরত শাহজালাল (রহ.)-এর মাজারে জেলা প্রশাসনের সিলগালা করা ডেগ ও নতুন করে স্থাপন করা দানবাক্স খুলে পঞ্চমবারের মতো টাকা গণনা শুরু হয়েছে।",
+   "extraction": {
+    "chars": 1044,
+    "reason": "",
+    "status": "ok"
+   },
+   "id": "a_158a88a65033f7d4",
+   "language": "bn",
+   "published_at": "2026-10-24T10:55:00+00:00",
+   "retrieved_at": "2026-10-24T11:39:11+00:00",
+   "source_id": "prothomalo",
+   "source_name": "Prothom Alo (প্রথম আলো)",
+   "title": "পঞ্চম দফায় খোলা হলো শাহজালাল (রহ.)-এর মাজারের ডেগ ও দানবাক্স, চলছে গণনা",
+   "url": "https://www.prothomalo.com/bangladesh/district/3aqr3iijem"
+  },
+  "a_162d36a4216faff2": {
+   "canonical_url": "https://prothomalo.com/bangladesh/district/wd723ptldq",
+   "content_hash": "3f4ea09b8a761aad",
+   "date_status": "ok",
+   "event_id": "ev_c8ee92f47955",
+   "excerpt": "নরসিংদী শহরের সেবাসংঘ এলাকার একটি ফ্ল্যাটে দুর্ধর্ষ চুরির ঘটনা ঘটেছে। গ্রামের বাড়িতে দুর্গাপূজা শেষে ফিরে এসে দেখা যায়, ফ্ল্যাটে রাখা কারখানা করার ৫০ লাখ টাকা ও স্ত্রীর ৮ ভরি স্বর্ণালংকার চুরি হয়ে গেছে।",
+   "extraction": null,
+   "id": "a_162d36a4216faff2",
+   "language": "bn",
+   "published_at": "2026-10-24T11:07:24+00:00",
+   "retrieved_at": "2026-10-24T11:39:11+00:00",
+   "source_id": "prothomalo",
+   "source_name": "Prothom Alo (প্রথম আলো)",
+   "title": "পূজার ছুটি শেষে ফিরে দেখেন, বাসায় রাখা ৫০ লাখ টাকা ও ৮ ভরি স্বর্ণালংকার নেই",
+   "url": "https://www.prothomalo.com/bangladesh/district/wd723ptldq"
+  },
+  "a_1cdef871ea21015c": {
+   "canonical_url": "https://prothomalo.com/world/india/0ki4cxwm2d",
+   "content_hash": "bbf6e84c112df67b",
+   "date_status": "ok",
+   "event_id": "ev_846c02267ee0",
+   "excerpt": "পাঞ্জাবের ভোটার তালিকা সংশোধন ও সিইসি জ্ঞানেশ কুমারের কাজকর্ম নিয়ে স্বাধীন তদন্তের দাবি জানিয়ে এক প্রস্তাব শুক্রবার পাঞ্জাব বিধানসভায় গৃহীত হয়েছে।",
+   "extraction": null,
+   "id": "a_1cdef871ea21015c",
+   "language": "bn",
+   "published_at": "2026-10-24T08:54:07+00:00",
+   "retrieved_at": "2026-10-24T11:39:11+00:00",
+   "source_id": "prothomalo",
+   "source_name": "Prothom Alo (প্রথম আলো)",
+   "title": "পাঞ্জাবের মুখ্যমন্ত্রীর তিরে বিদ্ধ জ্ঞানেশ কুমারের ভাই",
+   "url": "https://www.prothomalo.com/world/india/0ki4cxwm2d"
+  },
+  "a_27bf4f217f4fb3fc": {
+   "canonical_url": "https://prothomalo.com/bangladesh/district/tmch7oco64",
+   "content_hash": "b53835219d6ea1c0",
+   "date_status": "ok",
+   "event_id": "ev_2fa94c4bcf8f",
+   "excerpt": "ভিডিওতে দেখা যায়, সামনে একটি ব্যানার হাতে নিয়ে মিছিল করছেন নিষিদ্ধ ছাত্রলীগের নেতা-কর্মীরা। হাতে রঙিন লগি-বইঠা নিয়ে মিছিলে অংশগ্রহণ করেন বেশ কয়েকজন।",
+   "extraction": null,
+   "id": "a_27bf4f217f4fb3fc",
+   "language": "bn",
+   "published_at": "2026-10-24T10:50:15+00:00",
+   "retrieved_at": "2026-10-24T11:39:11+00:00",
+   "source_id": "prothomalo",
+   "source_name": "Prothom Alo (প্রথম আলো)",
+   "title": "লগি-বইঠা নিয়ে নিষিদ্ধ ছাত্রলীগের মিছিল, ভিডিও ভাইরাল",
+   "url": "https://www.prothomalo.com/bangladesh/district/tmch7oco64"
+  },
+  "a_28fd049eba3e0b1f": {
+   "canonical_url": "https://prothomalo.com/sports/cricket/iiqccgpnmz",
+   "content_hash": "8a6759642cb0a83a",
+   "date_status": "ok",
+   "event_id": "ev_2bf091624b54",
+   "excerpt": "নর্কিয়ার অনুপস্থিতিতে সিরিজের শেষ টেস্টে দক্ষিণ আফ্রিকার একাদশে জায়গা পাওয়ার দৌড়ে আছেন জেরাল্ড কোয়েৎজি, অলরাউন্ডার করবিন বশ ও ডেন প্যাটারসন।",
+   "extraction": null,
+   "id": "a_28fd049eba3e0b1f",
+   "language": "bn",
+   "published_at": "2026-10-24T10:30:12+00:00",
+   "retrieved_at": "2026-10-24T11:39:11+00:00",
+   "source_id": "prothomalo",
+   "source_name": "Prothom Alo (প্রথম আলো)",
+   "title": "চোট নিয়ে ভয়, সেই চোটে পড়েই সিরিজ শেষ নর্কিয়ার",
+   "url": "https://www.prothomalo.com/sports/cricket/iiqccgpnmz"
+  },
+  "a_37d92ab604484003": {
+   "canonical_url": "https://prothomalo.com/opinion/column/58tanbqyd9",
+   "content_hash": "492aa2b352127dc7",
+   "date_status": "ok",
+   "event_id": "ev_4de672ae7891",
+   "excerpt": "সামাজিক মাধ্যমের টুকরা টুকরা আলাপের গণ্ডি পেরিয়ে এখন মূলধারার গণমাধ্যমেও উঠে আসছে মাদ্রাসায় শিশুদের ওপর নিপীড়নের ঘটনা। সে প্রেক্ষিতে ২৯ জুলাই ২০২৬ প্রথম আলোতে মনযূরুল হকের এ লেখা প্রকাশিত হয়েছিল। সাম্প্রতিক সময়ে মাদ্রাসায় শিশু নিপীড়নের ঘটনা আবারও আলোচনা তৈরি করেছে। পাঠকের আগ্রহ বিবেচনায় লেখাটি পুনঃপ্রকাশ করা হলো।",
+   "extraction": {
+    "chars": 0,
+    "reason": "Response exceeded 3000000 bytes for https://www.prothomalo.com/opinion/column/58tanbqyd9",
+    "status": "failed"
+   },
+   "id": "a_37d92ab604484003",
+   "language": "bn",
+   "published_at": "2026-10-24T08:40:09+00:00",
+   "retrieved_at": "2026-10-24T11:39:11+00:00",
+   "source_id": "prothomalo",
+   "source_name": "Prothom Alo (প্রথম আলো)",
+   "title": "মাদ্রাসায় শিশু নিপীড়ন: আলেমসমাজ কি চুপই থাকবে",
+   "url": "https://www.prothomalo.com/opinion/column/58tanbqyd9"
+  },
+  "a_41268a4aba6c69af": {
+   "canonical_url": "https://prothomalo.com/world/europe/xo4icla3q2",
+   "content_hash": "0d3df50a76c731c2",
+   "date_status": "ok",
+   "event_id": "ev_822090c79d35",
+   "excerpt": "২০১২ সালে সার্বিয়ার প্রধানমন্ত্রী নির্বাচিত হন আলেকসান্দার ভুসিচ। তার পর থেকে প্রধানমন্ত্রী ও প্রেসিডেন্ট হিসেবে তিনি দেশটির রাজনীতিতে আধিপত্য বিস্তার করে রয়েছেন।",
+   "extraction": {
+    "chars": 6733,
+    "reason": "",
+    "status": "ok"
+   },
+   "id": "a_41268a4aba6c69af",
+   "language": "bn",
+   "published_at": "2026-10-24T10:27:51+00:00",
+   "retrieved_at": "2026-10-24T11:39:11+00:00",
+   "source_id": "prothomalo",
+   "source_name": "Prothom Alo (প্রথম আলো)",
+   "title": "সার্বিয়ায় নির্বাচনে কি দীর্ঘদিনের শাসক আলেকসান্দার ভুচিস তরুণদের বিক্ষোভে হারতে বসেছেন",
+   "url": "https://www.prothomalo.com/world/europe/xo4icla3q2"
+  },
+  "a_41879e4d919545f3": {
+   "canonical_url": "https://prothomalo.com/bangladesh/6qmxm23bx9",
+   "content_hash": "d4aa620d54fd0418",
+   "date_status": "ok",
+   "event_id": "ev_c1c93fde4ef5",
+   "excerpt": "",
+   "extraction": {
+    "chars": 1370,
+    "reason": "",
+    "status": "ok"
+   },
+   "id": "a_41879e4d919545f3",
+   "language": "bn",
+   "published_at": "2026-10-24T10:40:17+00:00",
+   "retrieved_at": "2026-10-24T11:39:11+00:00",
+   "source_id": "prothomalo",
+   "source_name": "Prothom Alo (প্রথম আলো)",
+   "title": "হামের উপসর্গে আরও আটজন মারা গেছে, মোট মৃত্যু ১২২২",
+   "url": "https://www.prothomalo.com/bangladesh/6qmxm23bx9"
+  },
+  "a_456308468be44742": {
+   "canonical_url": "https://prothomalo.com/bangladesh/district/v2y221dbs8",
+   "content_hash": "6a29b36d51d237e1",
+   "date_status": "ok",
+   "event_id": "ev_041d04161c2d",
+   "excerpt": "ফায়ার সার্ভিসের কর্মকর্তারা জানান, আগুন নিয়ন্ত্রণে আনার পর ডাম্পিং বা পুরোপুরি আগুন নেভানোর কাজ চলছে। পুরোপুরি নেভাতে বেশ সময় লাগবে।",
+   "extraction": {
+    "chars": 1685,
+    "reason": "",
+    "status": "ok"
+   },
+   "id": "a_456308468be44742",
+   "language": "bn",
+   "published_at": "2026-10-24T11:07:08+00:00",
+   "retrieved_at": "2026-10-24T11:39:11+00:00",
+   "source_id": "prothomalo",
+   "source_name": "Prothom Alo (প্রথম আলো)",
+   "title": "‘আগুন ঘিরে ধরেছিলাম, তবে পানির সংকটে নিয়ন্ত্রণে আনতে বেগ পেতে হয়েছে’",
+   "url": "https://www.prothomalo.com/bangladesh/district/v2y221dbs8"
+  },
+  "a_4bfa144eacce1c89": {
+   "canonical_url": "https://prothomalo.com/onnoalo/prose/cgjddt9evg",
+   "content_hash": "5ce09827802b9e89",
+   "date_status": "ok",
+   "event_id": "ev_79911971e426",
+   "excerpt": "আমার সঙ্গে শামসুর রাহমানের এত স্মৃতি জড়িয়ে আছে যে আমি এ মুহূর্তে বুঝতে পারছি না যে আমি কোনটা ছোঁব আর কোনটা ছোঁব না।",
+   "extraction": null,
+   "id": "a_4bfa144eacce1c89",
+   "language": "bn",
+   "published_at": "2026-10-24T09:11:03+00:00",
+   "retrieved_at": "2026-10-24T11:39:11+00:00",
+   "source_id": "prothomalo",
+   "source_name": "Prothom Alo (প্রথম আলো)",
+   "title": "শহীদ কাদরীর স্মৃতিতে শামসুর রাহমান",
+   "url": "https://www.prothomalo.com/onnoalo/prose/cgjddt9evg"
+  },
+  "a_4f97710d61286e43": {
+   "canonical_url": "https://prothomalo.com/bangladesh/district/fqxuagwkru",
+   "content_hash": "b0071ac537082b0d",
+   "date_status": "ok",
+   "event_id": "ev_092a42874295",
+   "excerpt": "এক নারী লিখেছেন, ‘আমাদের গলিতে যদি এমন হয়, আমরা কীভাবে নিরাপদ থাকব।’ শাহেদ হোসাইন নামের একজনের মন্তব্য, ব্যাটারিচালিত রিকশা ছিনতাই করার সুযোগ করে দিচ্ছে।",
+   "extraction": null,
+   "id": "a_4f97710d61286e43",
+   "language": "bn",
+   "published_at": "2026-10-24T09:19:07+00:00",
+   "retrieved_at": "2026-10-24T11:39:11+00:00",
+   "source_id": "prothomalo",
+   "source_name": "Prothom Alo (প্রথম আলো)",
+   "title": "১২ সেকেন্ডে ব্যাগ ছিনিয়ে পালালেন ছিনতাইকারীরা, পেছনে ছুটলেন বৃদ্ধ",
+   "url": "https://www.prothomalo.com/bangladesh/district/fqxuagwkru"
+  },
+  "a_57c1a7a531cf0e05": {
+   "canonical_url": "https://prothomalo.com/opinion/column/d8l6znw2fg",
+   "content_hash": "79ca860e68b8fff1",
+   "date_status": "ok",
+   "event_id": "ev_e676f31697e5",
+   "excerpt": "রাশিয়ার এই ড্রোন ও ক্ষেপণাস্ত্র হামলার মূল উদ্দেশ্য কঠোর শীতের দিনে ইউক্রেনীয়দের অন্ধকারে ও তীব্র ঠান্ডায় ঠেলে দেওয়া।",
+   "extraction": {
+    "chars": 5711,
+    "reason": "",
+    "status": "ok"
+   },
+   "id": "a_57c1a7a531cf0e05",
+   "language": "bn",
+   "published_at": "2026-10-24T10:24:16+00:00",
+   "retrieved_at": "2026-10-24T11:39:11+00:00",
+   "source_id": "prothomalo",
+   "source_name": "Prothom Alo (প্রথম আলো)",
+   "title": "ট্রাম্পের নতুন নীতি যেভাবে ইউক্রেনকে আরও বিপদে ফেলে দিল",
+   "url": "https://www.prothomalo.com/opinion/column/d8l6znw2fg"
+  },
+  "a_61fd496832987616": {
+   "canonical_url": "https://prothomalo.com/entertainment/dhallywood/h3w6iw1lel",
+   "content_hash": "560d77ca4f03ec44",
+   "date_status": "ok",
+   "event_id": "ev_cec4055a1bcf",
+   "excerpt": "পরীমনির অভিনয়জীবনের দিকে ফিরে তাকালে বোঝা যায়, তাঁর অভিনয় সম্ভাবনা নিয়ে প্রশ্ন তোলার সুযোগ নেই; প্রশ্ন হলো, সেই সম্ভাবনা কাজে লাগানোর মতো গল্প ও চরিত্র কতটা পেয়েছেন",
+   "extraction": null,
+   "id": "a_61fd496832987616",
+   "language": "bn",
+   "published_at": "2026-10-24T08:38:18+00:00",
+   "retrieved_at": "2026-10-24T11:39:11+00:00",
+   "source_id": "prothomalo",
+   "source_name": "Prothom Alo (প্রথম আলো)",
+   "title": "ঘুম থেকে তুলে কেক কাটাতেন, জন্মদিনে প্রিয় মানুষকে খুঁজছেন পরীমনি",
+   "url": "https://www.prothomalo.com/entertainment/dhallywood/h3w6iw1lel"
+  },
+  "a_690c2b29488622b5": {
+   "canonical_url": "https://haal.fashion/celeb/look/y37f1b446w",
+   "content_hash": "fb3ec99a3b1374bc",
+   "date_status": "ok",
+   "event_id": "ev_b9a59542aaf0",
+   "excerpt": "গাঢ় লাল শাড়ি, সোনালি মিরর-ওয়ার্কের ব্লাউজ আর মিনিমাল সাজ। শেফালি বাগ্গার এই লুক নজর কেড়েছে নেটিজেনদের।",
+   "extraction": null,
+   "id": "a_690c2b29488622b5",
+   "language": "bn",
+   "published_at": "2026-10-24T10:30:00+00:00",
+   "retrieved_at": "2026-10-24T11:39:11+00:00",
+   "source_id": "prothomalo",
+   "source_name": "Prothom Alo (প্রথম আলো)",
+   "title": "লাল শাড়ি, সোনালি ব্লাউজে শেফালি বাগ্গা: ভাইরাল এই লুক ঘিরে এত আলোচনা কেন?",
+   "url": "https://www.haal.fashion/celeb/look/y37f1b446w"
+  },
+  "a_6de6ef5418493e31": {
+   "canonical_url": "https://prothomalo.com/video/bangladesh/hin1mgmjbk",
+   "content_hash": "35df7b508f5f9386",
+   "date_status": "ok",
+   "event_id": "ev_4b0da8525ea3",
+   "excerpt": "",
+   "extraction": null,
+   "id": "a_6de6ef5418493e31",
+   "language": "bn",
+   "published_at": "2026-10-24T09:54:18+00:00",
+   "retrieved_at": "2026-10-24T11:39:11+00:00",
+   "source_id": "prothomalo",
+   "source_name": "Prothom Alo (প্রথম আলো)",
+   "title": "ওসির সঙ্গে রুমিন ফারহানার বাগ্‌বিতণ্ডা, এবার জিডি করল পুলিশ",
+   "url": "https://www.prothomalo.com/video/bangladesh/hin1mgmjbk"
+  },
+  "a_8016ca4c719a6e95": {
+   "canonical_url": "https://prothomalo.com/world/india/g506ng3vmq",
+   "content_hash": "31aa46092105f10b",
+   "date_status": "ok",
+   "event_id": "ev_afb195eaa6e6",
+   "excerpt": "প্রতিমার গায়ে যিনি হাত দিচ্ছেন, তাঁর ধর্ম বা জাত কী এবং তিনি একজন সনাতন হিন্দু কি না, তা দেখার দায়িত্ব কার্যত পুলিশকে দিয়েছিলেন পশ্চিমবঙ্গের মুখ্যমন্ত্রী।",
+   "extraction": null,
+   "id": "a_8016ca4c719a6e95",
+   "language": "bn",
+   "published_at": "2026-10-24T09:51:11+00:00",
+   "retrieved_at": "2026-10-24T11:39:11+00:00",
+   "source_id": "prothomalo",
+   "source_name": "Prothom Alo (প্রথম আলো)",
+   "title": "প্রতিমা বিসর্জনে যুক্ত ব্যক্তিদের ধর্ম বিচার পুলিশের কাজ নয়: কলকাতা পুলিশ কমিশনার",
+   "url": "https://www.prothomalo.com/world/india/g506ng3vmq"
+  },
+  "a_872547c267386d4f": {
+   "canonical_url": "https://prothomalo.com/sports/cricket/hvqfmvbi8f",
+   "content_hash": "b2694db442a2d5a4",
+   "date_status": "ok",
+   "event_id": "ev_089d52ed0060",
+   "excerpt": "আজ দুপুর ১২টায় রাজধানীর বাংলাদেশ মেডিকেল বিশ্ববিদ্যালয় হাসপাতালে শেষনিশ্বাস ত্যাগ করেন হৃদয়।",
+   "extraction": null,
+   "id": "a_872547c267386d4f",
+   "language": "bn",
+   "published_at": "2026-10-24T10:46:24+00:00",
+   "retrieved_at": "2026-10-24T11:39:11+00:00",
+   "source_id": "prothomalo",
+   "source_name": "Prothom Alo (প্রথম আলো)",
+   "title": "মারা গেছেন ক্যানসারে আক্রান্ত পেসার হৃদয়",
+   "url": "https://www.prothomalo.com/sports/cricket/hvqfmvbi8f"
+  },
+  "a_89264ad353a6244f": {
+   "canonical_url": "https://prothomalo.com/bangladesh/district/ouwdrn4t1d",
+   "content_hash": "87c7aa7a659e3d48",
+   "date_status": "ok",
+   "event_id": "ev_86a08e8184ef",
+   "excerpt": "অবরোধ চলাকালে কোথাও অপ্রীতিকর ঘটনা ঘটেনি বলে জানিয়েছে পুলিশ। তবে বিভিন্ন স্থানে সড়কে টায়ার জ্বালিয়ে বিক্ষোভ এবং গাছের গুঁড়ি ফেলে প্রতিবন্ধকতা সৃষ্টি করেন অবরোধকারীরা।",
+   "extraction": {
+    "chars": 4960,
+    "reason": "",
+    "status": "ok"
+   },
+   "id": "a_89264ad353a6244f",
+   "language": "bn",
+   "published_at": "2026-10-24T08:53:04+00:00",
+   "retrieved_at": "2026-10-24T11:39:11+00:00",
+   "source_id": "prothomalo",
+   "source_name": "Prothom Alo (প্রথম আলো)",
+   "title": "পাহাড়ের দুই জেলার অবরোধ শেষ, যানবাহন কি চলছে",
+   "url": "https://www.prothomalo.com/bangladesh/district/ouwdrn4t1d"
+  },
+  "a_8cd6245dcf0a09e1": {
+   "canonical_url": "https://prothomalo.com/sports/football/08n862g348",
+   "content_hash": "2cf8ed8a57297d96",
+   "date_status": "ok",
+   "event_id": "ev_af8839925221",
+   "excerpt": "আসিয়ান কাপের চূড়ান্ত দলে থাকলেও সাফের প্রাথমিক দলে জায়গা হয়নি শাকিল আহাদ, মঞ্জুরুর রহমান ও শাহরিয়ার ইমনের।",
+   "extraction": null,
+   "id": "a_8cd6245dcf0a09e1",
+   "language": "bn",
+   "published_at": "2026-10-24T09:13:13+00:00",
+   "retrieved_at": "2026-10-24T11:39:11+00:00",
+   "source_id": "prothomalo",
+   "source_name": "Prothom Alo (প্রথম আলো)",
+   "title": "রোনান সুলিভানকে নিয়ে সাফের দল ঘোষণা বাংলাদেশের",
+   "url": "https://www.prothomalo.com/sports/football/08n862g348"
+  },
+  "a_95a27b11f703dfdd": {
+   "canonical_url": "https://prothomalo.com/sports/cricket/0gcruux7et",
+   "content_hash": "5d45e1dd551f78e5",
+   "date_status": "ok",
+   "event_id": "ev_b0462f1b2188",
+   "excerpt": "",
+   "extraction": null,
+   "id": "a_95a27b11f703dfdd",
+   "language": "bn",
+   "published_at": "2026-10-24T10:54:24+00:00",
+   "retrieved_at": "2026-10-24T11:39:11+00:00",
+   "source_id": "prothomalo",
+   "source_name": "Prothom Alo (প্রথম আলো)",
+   "title": "তিলকের ঝড়ে শেষ ১৮ বলে ৪৬ রান তুলে জিতল ভারত",
+   "url": "https://www.prothomalo.com/sports/cricket/0gcruux7et"
+  },
+  "a_977d731ac7439753": {
+   "canonical_url": "https://prothomalo.com/sports/football/66vu49ssqd",
+   "content_hash": "d746dd84a1ccc65a",
+   "date_status": "ok",
+   "event_id": "ev_7cc4b9b40a8e",
+   "excerpt": "",
+   "extraction": null,
+   "id": "a_977d731ac7439753",
+   "language": "bn",
+   "published_at": "2026-10-24T10:56:47+00:00",
+   "retrieved_at": "2026-10-24T11:39:11+00:00",
+   "source_id": "prothomalo",
+   "source_name": "Prothom Alo (প্রথম আলো)",
+   "title": "‎ওয়ান্ডারার্সের জালে মোহামেডানের চার গোল",
+   "url": "https://www.prothomalo.com/sports/football/66vu49ssqd"
+  },
+  "a_99ef3ebe8d62f3ff": {
+   "canonical_url": "https://prothomalo.com/bangladesh/district/1nrk874lps",
+   "content_hash": "002daf835950d092",
+   "date_status": "ok",
+   "event_id": "ev_724882cd290b",
+   "excerpt": "২০১৫ থেকে ২০২৬ সালের অক্টোবরের মাঝামাঝি পর্যন্ত ১২ বছরে সীতাকুণ্ডের জাহাজভাঙা কারখানায় দুর্ঘটনায় অন্তত ১৫০ শ্রমিক নিহত হয়েছেন।",
+   "extraction": {
+    "chars": 5077,
+    "reason": "",
+    "status": "ok"
+   },
+   "id": "a_99ef3ebe8d62f3ff",
+   "language": "bn",
+   "published_at": "2026-10-24T10:34:45+00:00",
+   "retrieved_at": "2026-10-24T11:39:11+00:00",
+   "source_id": "prothomalo",
+   "source_name": "Prothom Alo (প্রথম আলো)",
+   "title": "জাহাজভাঙা শিল্পে ১২ বছরে ১৫০ শ্রমিক নিহত, কেমন আছে পরিবারগুলো",
+   "url": "https://www.prothomalo.com/bangladesh/district/1nrk874lps"
+  },
+  "a_9d002eaaee8e81c4": {
+   "canonical_url": "https://prothomalo.com/bangladesh/district/yotalm3wcb",
+   "content_hash": "5e97937d0d650919",
+   "date_status": "ok",
+   "event_id": "ev_23dd3db57aca",
+   "excerpt": "খুলনার তেরখাদা উপজেলায় দুর্বৃত্তদের ছোড়া গুলিতে রামিম বিশ্বাস নামের যুবদলের এক নেতা আহত হয়েছেন।",
+   "extraction": null,
+   "id": "a_9d002eaaee8e81c4",
+   "language": "bn",
+   "published_at": "2026-10-24T09:56:13+00:00",
+   "retrieved_at": "2026-10-24T11:39:11+00:00",
+   "source_id": "prothomalo",
+   "source_name": "Prothom Alo (প্রথম আলো)",
+   "title": "খুলনায় মোটরসাইকেলে এসে গুলি, যুবদল নেতা আহত",
+   "url": "https://www.prothomalo.com/bangladesh/district/yotalm3wcb"
+  },
+  "a_9d3af0fd7045381f": {
+   "canonical_url": "https://prothomalo.com/bangladesh/district/ll5uh0o6yq",
+   "content_hash": "a6212cf2fad92e09",
+   "date_status": "ok",
+   "event_id": "ev_5cf284478842",
+   "excerpt": "চুয়াডাঙ্গার দুটি ফিলিং স্টেশন থেকে জ্বালানি তেল নেওয়ার পর টাকা না দিয়ে পালাচ্ছিলেন দুই মোটরসাইকেলচালক। প্রায় পাঁচ কিলোমিটার ধাওয়া করে তাঁদের আটক করে পুলিশে দিয়েছেন ফিলিং স্টেশনের লোকজন।",
+   "extraction": null,
+   "id": "a_9d3af0fd7045381f",
+   "language": "bn",
+   "published_at": "2026-10-24T09:20:15+00:00",
+   "retrieved_at": "2026-10-24T11:39:11+00:00",
+   "source_id": "prothomalo",
+   "source_name": "Prothom Alo (প্রথম আলো)",
+   "title": "পেট্রলপাম্প থেকে তেল নিয়ে পালাচ্ছিলেন দুজন, পাঁচ কিলোমিটার ধাওয়া করে আটক",
+   "url": "https://www.prothomalo.com/bangladesh/district/ll5uh0o6yq"
+  },
+  "a_9df4bd3d7552f817": {
+   "canonical_url": "https://prothomalo.com/bangladesh/environment/jsegomhliy",
+   "content_hash": "897ca7f0f6a5293c",
+   "date_status": "ok",
+   "event_id": "ev_f9c2956982ff",
+   "excerpt": "জাহাজভাঙা শিল্পমালিকদের দাবি মেনে এ শিল্পকে লাল থেকে কমলা শ্রেণিতে নেওয়ার সিদ্ধান্ত নিয়েছে সরকার।",
+   "extraction": {
+    "chars": 5359,
+    "reason": "",
+    "status": "ok"
+   },
+   "id": "a_9df4bd3d7552f817",
+   "language": "bn",
+   "published_at": "2026-10-24T09:20:10+00:00",
+   "retrieved_at": "2026-10-24T11:39:11+00:00",
+   "source_id": "prothomalo",
+   "source_name": "Prothom Alo (প্রথম আলো)",
+   "title": "জাহাজভাঙা শিল্পকে লাল থেকে কমলা শ্রেণিতে নেওয়ার সিদ্ধান্ত, ঝুঁকিতে পরিবেশ ও শ্রমিক",
+   "url": "https://www.prothomalo.com/bangladesh/environment/jsegomhliy"
+  },
+  "a_a78b9a84d3431eaa": {
+   "canonical_url": "https://prothomalo.com/video/bangladesh/hn5acp3edj",
+   "content_hash": "079d98bf272bd2da",
+   "date_status": "ok",
+   "event_id": "ev_526256da2186",
+   "excerpt": "",
+   "extraction": null,
+   "id": "a_a78b9a84d3431eaa",
+   "language": "bn",
+   "published_at": "2026-10-24T08:59:50+00:00",
+   "retrieved_at": "2026-10-24T11:39:11+00:00",
+   "source_id": "prothomalo",
+   "source_name": "Prothom Alo (প্রথম আলো)",
+   "title": "আসিফের গাড়িতে গুলি, সিসিটিভিতে যে দৃশ্য দেখা গেলো",
+   "url": "https://www.prothomalo.com/video/bangladesh/hn5acp3edj"
+  },
+  "a_ac2650f304cc2dec": {
+   "canonical_url": "https://prothomalo.com/entertainment/tv/25hnvdnggw",
+   "content_hash": "e3179a9417298c31",
+   "date_status": "ok",
+   "event_id": "ev_0f4f76c4018f",
+   "excerpt": "ক্যানসারে আক্রান্ত হয়ে মডেল ও অভিনেত্রী তুলনা আল হারুন ঢাকায় মারা গেছেন। পরিবারসহ অনেকে শোক প্রকাশ করেছেন।",
+   "extraction": null,
+   "id": "a_ac2650f304cc2dec",
+   "language": "bn",
+   "published_at": "2026-10-24T10:45:14+00:00",
+   "retrieved_at": "2026-10-24T11:39:11+00:00",
+   "source_id": "prothomalo",
+   "source_name": "Prothom Alo (প্রথম আলো)",
+   "title": "রাত ১১টায় মডেল–অভিনেত্রী তুলনাকে মৃত ঘোষণা করেন চিকিৎসক",
+   "url": "https://www.prothomalo.com/entertainment/tv/25hnvdnggw"
+  },
+  "a_af743c75eb5ea8f2": {
+   "canonical_url": "https://prothomalo.com/opinion/column/nu7yx0p9pr",
+   "content_hash": "6d6789c61007e73e",
+   "date_status": "ok",
+   "event_id": "ev_fe5a76a592e1",
+   "excerpt": "সংস্কার নিয়ে বহু আলাপ হয়েছে, কিন্তু প্রকৃতপক্ষে লক্ষ্যযোগ্য কোনো সংস্কার হয়নি। অভ্যুত্থানের পরপরই রাজনৈতিক পক্ষগুলো যার যার সামর্থ্য অনুযায়ী ক্ষমতা দখল করে নিয়েছে।",
+   "extraction": null,
+   "id": "a_af743c75eb5ea8f2",
+   "language": "bn",
+   "published_at": "2026-10-24T10:48:11+00:00",
+   "retrieved_at": "2026-10-24T11:39:11+00:00",
+   "source_id": "prothomalo",
+   "source_name": "Prothom Alo (প্রথম আলো)",
+   "title": "গণ–অভ্যুত্থানের পর হতাশাজনক পরিস্থিতি কি বিরল",
+   "url": "https://www.prothomalo.com/opinion/column/nu7yx0p9pr"
+  },
+  "a_b01265c07e60bd16": {
+   "canonical_url": "https://prothomalo.com/video/bangladesh/uagm3yhwe8",
+   "content_hash": "2957fe4b00d57243",
+   "date_status": "ok",
+   "event_id": "ev_041d04161c2d",
+   "excerpt": "",
+   "extraction": null,
+   "id": "a_b01265c07e60bd16",
+   "language": "bn",
+   "published_at": "2026-10-24T10:50:36+00:00",
+   "retrieved_at": "2026-10-24T11:39:11+00:00",
+   "source_id": "prothomalo",
+   "source_name": "Prothom Alo (প্রথম আলো)",
+   "title": "গাজীপুরে সাড়ে ৩ ঘণ্টা পর দুটি কারখানার গুদামে লাগা আগুন নিয়ন্ত্রণে",
+   "url": "https://www.prothomalo.com/video/bangladesh/uagm3yhwe8"
+  },
+  "a_bc8bc1b21868c240": {
+   "canonical_url": "https://prothomalo.com/politics/wpo8jc0k1e",
+   "content_hash": "18c129af3205b558",
+   "date_status": "ok",
+   "event_id": "ev_dca81bf1247b",
+   "excerpt": "নিয়াজ আহমেদ খান বলেন, ‘আমাদের সামনে এখনো একটা কমন থ্রেট আছে। গণ–অভ্যুত্থানের পরাজিত শক্তিকে দুর্বল মনে করার কোনো কারণ নেই।’",
+   "extraction": null,
+   "id": "a_bc8bc1b21868c240",
+   "language": "bn",
+   "published_at": "2026-10-24T10:14:03+00:00",
+   "retrieved_at": "2026-10-24T11:39:11+00:00",
+   "source_id": "prothomalo",
+   "source_name": "Prothom Alo (প্রথম আলো)",
+   "title": "গণ-অভ্যুত্থানের পরাজিত শক্তির বিপক্ষে অস্তিত্ব রক্ষায় পরস্পরের হাত ধরে রাখা দরকার: নিয়াজ আহমেদ",
+   "url": "https://www.prothomalo.com/politics/wpo8jc0k1e"
+  },
+  "a_c320dfca9fb95a84": {
+   "canonical_url": "https://prothomalo.com/education/study/m1f82f0ck3",
+   "content_hash": "ccbb8764e86d33ae",
+   "date_status": "ok",
+   "event_id": "ev_ed0c377d02c1",
+   "excerpt": "আজকের তারিখটি যদি আমরা মার্কিন ফরম্যাটে লিখি: ১০/২৪/২৬ (১০ম মাস, ২৪ তারিখ, ২৬ বছর)।",
+   "extraction": null,
+   "id": "a_c320dfca9fb95a84",
+   "language": "bn",
+   "published_at": "2026-10-24T09:36:47+00:00",
+   "retrieved_at": "2026-10-24T11:39:11+00:00",
+   "source_id": "prothomalo",
+   "source_name": "Prothom Alo (প্রথম আলো)",
+   "title": "একবিংশ শতাব্দীর শেষ পিথাগোরিয়ান তারিখ আজ: অপেক্ষা আগামী শতকের",
+   "url": "https://www.prothomalo.com/education/study/m1f82f0ck3"
+  },
+  "a_c39e76c3655e5b66": {
+   "canonical_url": "https://prothomalo.com/bangladesh/district/mwbxa4sdlr",
+   "content_hash": "b5a1a16869ba6e48",
+   "date_status": "ok",
+   "event_id": "ev_b0c23d9f0a4f",
+   "excerpt": "হঠাৎ মানসিকভাবে ‘অসুস্থ’ হয়ে পড়েছেন সুনামগঞ্জের জামালগঞ্জ উপজেলার সহকারী কমিশনার (এসিল্যান্ড) আরিফুর রহমান।",
+   "extraction": null,
+   "id": "a_c39e76c3655e5b66",
+   "language": "bn",
+   "published_at": "2026-10-24T11:22:39+00:00",
+   "retrieved_at": "2026-10-24T11:39:11+00:00",
+   "source_id": "prothomalo",
+   "source_name": "Prothom Alo (প্রথম আলো)",
+   "title": "‘আমার মৃত্যুর জন্য ইউএনও দায়ী’ বলে ফেসবুকে পোস্ট এসিল্যান্ডের, পরে হাসপাতালে ভর্তি",
+   "url": "https://www.prothomalo.com/bangladesh/district/mwbxa4sdlr"
+  },
+  "a_c3d0f72761dd36ce": {
+   "canonical_url": "https://prothomalo.com/video/bangladesh/xhd7tcd7v1",
+   "content_hash": "a41ee8e8044dc521",
+   "date_status": "ok",
+   "event_id": "ev_86a08e8184ef",
+   "excerpt": "",
+   "extraction": null,
+   "id": "a_c3d0f72761dd36ce",
+   "language": "bn",
+   "published_at": "2026-10-24T09:11:42+00:00",
+   "retrieved_at": "2026-10-24T11:39:11+00:00",
+   "source_id": "prothomalo",
+   "source_name": "Prothom Alo (প্রথম আলো)",
+   "title": "খাগড়াছড়ি-রাঙামাটিতে সড়ক অবরোধের সর্বশেষ পরিস্থিতি",
+   "url": "https://www.prothomalo.com/video/bangladesh/xhd7tcd7v1"
+  },
+  "a_e685d2cf17b648dc": {
+   "canonical_url": "https://prothomalo.com/bangladesh/district/bi5e8j42uh",
+   "content_hash": "d2c1bd0833ea004b",
+   "date_status": "ok",
+   "event_id": "ev_aca4487c166a",
+   "excerpt": "আবদুল হক নোমান বলেন, ‘বিগত আওয়ামী লীগ সরকারের আমলে আল আমিনের বিরুদ্ধে ২১টি মামলা হয়েছিল। এর মধ্যে একটি মামলায় তাঁর আট বছরের কারাদণ্ড হয়’।",
+   "extraction": null,
+   "id": "a_e685d2cf17b648dc",
+   "language": "bn",
+   "published_at": "2026-10-24T09:58:17+00:00",
+   "retrieved_at": "2026-10-24T11:39:11+00:00",
+   "source_id": "prothomalo",
+   "source_name": "Prothom Alo (প্রথম আলো)",
+   "title": "হাত-পা বেঁধে ঝোপে ফেলে রাখা হয় তাঁতী দল নেতাকে, গোঙানির শব্দ শুনে উদ্ধার",
+   "url": "https://www.prothomalo.com/bangladesh/district/bi5e8j42uh"
+  },
+  "a_ec8ae60d46fb3655": {
+   "canonical_url": "https://prothomalo.com/bangladesh/crime/qiafx2voxs",
+   "content_hash": "cb3614eb3c21bcf1",
+   "date_status": "ok",
+   "event_id": "ev_526256da2186",
+   "excerpt": "ডিসি ইবনে মিজান প্রথম আলোকে বলেন, গাড়িতে কেউ ছিল না। আসিফ আকবর তখন বিশাল সেন্টারের তৃতীয় তলায় স্টুডিওতে ছিলেন। চালকের আসন বরাবর পেছনের আসন লক্ষ্য করে গুলি করা হয়।",
+   "extraction": null,
+   "id": "a_ec8ae60d46fb3655",
+   "language": "bn",
+   "published_at": "2026-10-24T10:58:01+00:00",
+   "retrieved_at": "2026-10-24T11:39:11+00:00",
+   "source_id": "prothomalo",
+   "source_name": "Prothom Alo (প্রথম আলো)",
+   "title": "আসিফ আকবরের চালকের পেছনের আসন বরাবর গুলি করা হয়",
+   "url": "https://www.prothomalo.com/bangladesh/crime/qiafx2voxs"
+  },
+  "a_ee4aee2ef184afa6": {
+   "canonical_url": "https://prothomalo.com/lifestyle/fashion/nk9lc6xo1r",
+   "content_hash": "d976911ad34e89e6",
+   "date_status": "ok",
+   "event_id": "ev_49bcef10ec81",
+   "excerpt": "",
+   "extraction": null,
+   "id": "a_ee4aee2ef184afa6",
+   "language": "bn",
+   "published_at": "2026-10-24T10:59:23+00:00",
+   "retrieved_at": "2026-10-24T11:39:11+00:00",
+   "source_id": "prothomalo",
+   "source_name": "Prothom Alo (প্রথম আলো)",
+   "title": "ধাতব–ধূসর শাড়ি এবং সাদামাটা সাজে রানির আভিজাত্য, দেখুন ৬টি ছবি",
+   "url": "https://www.prothomalo.com/lifestyle/fashion/nk9lc6xo1r"
+  },
+  "a_f3498eb7f70714ad": {
+   "canonical_url": "https://prothomalo.com/sports/cricket/6369f3x27s",
+   "content_hash": "0899f8089cf50685",
+   "date_status": "ok",
+   "event_id": "ev_8b7bea9389b9",
+   "excerpt": "একই টুর্নামেন্টে দুই ম্যাচের দুটিতেই হেরে বাংলাদেশের রেটিং পয়েন্ট ২ কমেছে হয়েছে ৮১। অবশ্য র‍্যাঙ্কিংয়ে অবস্থানের পরিবর্তন হয়নি।",
+   "extraction": null,
+   "id": "a_f3498eb7f70714ad",
+   "language": "bn",
+   "published_at": "2026-10-24T10:17:06+00:00",
+   "retrieved_at": "2026-10-24T11:39:11+00:00",
+   "source_id": "prothomalo",
+   "source_name": "Prothom Alo (প্রথম আলো)",
+   "title": "ওয়ানডে র‍্যাঙ্কিংয়ে ইংল্যান্ডকেও ছাড়িয়ে গেল আফগানিস্তান",
+   "url": "https://www.prothomalo.com/sports/cricket/6369f3x27s"
+  },
+  "a_f9f9a8ef4f8ea8f5": {
+   "canonical_url": "https://prothomalo.com/bangladesh/district/pweudy339b",
+   "content_hash": "5184df1d92793f34",
+   "date_status": "ok",
+   "event_id": "ev_616e049c037a",
+   "excerpt": "গতকাল শুক্রবার রাতে নরসিংদীর রায়পুরা উপজেলার আমিরগঞ্জ ইউনিয়নের হাসনাবাদ এলাকায় এ দুর্ঘটনা ঘটে।",
+   "extraction": null,
+   "id": "a_f9f9a8ef4f8ea8f5",
+   "language": "bn",
+   "published_at": "2026-10-24T10:45:47+00:00",
+   "retrieved_at": "2026-10-24T11:39:11+00:00",
+   "source_id": "prothomalo",
+   "source_name": "Prothom Alo (প্রথম আলো)",
+   "title": "ঘোরাঘুরি শেষে বাড়ি ফিরছিল দুই বন্ধু, সড়ক দুর্ঘটনায় নিহত",
+   "url": "https://www.prothomalo.com/bangladesh/district/pweudy339b"
+  }
+ },
  "created_at": "2026-10-24T11:17:30+00:00",
- "editions": {},
- "events": {},
- "last_successful_edition": null,
+ "editions": {
+  "2026-10-24": {
+   "attempts": 1,
+   "chunks": [
+    {
+     "attempts": 0,
+     "index": 0,
+     "message_id": null,
+     "sha": "165ef5753c5f055e",
+     "status": "pending"
+    },
+    {
+     "attempts": 0,
+     "index": 1,
+     "message_id": null,
+     "sha": "549964e829bba8e3",
+     "status": "pending"
+    },
+    {
+     "attempts": 0,
+     "index": 2,
+     "message_id": null,
+     "sha": "8af3593a888f1aee",
+     "status": "pending"
+    },
+    {
+     "attempts": 0,
+     "index": 3,
+     "message_id": null,
+     "sha": "3ca969b27a08faa1",
+     "status": "pending"
+    },
+    {
+     "attempts": 0,
+     "index": 4,
+     "message_id": null,
+     "sha": "aabf3c35a92137b7",
+     "status": "pending"
+    },
+    {
+     "attempts": 0,
+     "index": 5,
+     "message_id": null,
+     "sha": "acd5c0d5471dd9d9",
+     "status": "pending"
+    },
+    {
+     "attempts": 0,
+     "index": 6,
+     "message_id": null,
+     "sha": "40f26c2d881d7cb3",
+     "status": "pending"
+    },
+    {
+     "attempts": 0,
+     "index": 7,
+     "message_id": null,
+     "sha": "e641ddcad5ef6c95",
+     "status": "pending"
+    },
+    {
+     "attempts": 0,
+     "index": 8,
+     "message_id": null,
+     "sha": "3d4808bcf2df8104",
+     "status": "pending"
+    }
+   ],
+   "created_at": "2026-10-24T11:39:11+00:00",
+   "date": "2026-10-24",
+   "delivered_at": "2026-10-24T11:40:45+00:00",
+   "deliveries": {
+    "1033339929": {
+     "attempts": 1,
+     "delivered_at": "2026-10-24T11:40:45+00:00",
+     "sent": {
+      "0": 33,
+      "1": 34,
+      "2": 35,
+      "3": 36,
+      "4": 37,
+      "5": 38,
+      "6": 39,
+      "7": 40,
+      "8": 41
+     },
+     "status": "done"
+    },
+    "1679140572": {
+     "attempts": 1,
+     "delivered_at": "2026-10-24T11:40:27+00:00",
+     "sent": {
+      "0": 15,
+      "1": 16,
+      "2": 17,
+      "3": 18,
+      "4": 19,
+      "5": 20,
+      "6": 21,
+      "7": 22,
+      "8": 23
+     },
+     "status": "done"
+    },
+    "8028433719": {
+     "attempts": 1,
+     "delivered_at": "2026-10-24T11:40:36+00:00",
+     "sent": {
+      "0": 24,
+      "1": 25,
+      "2": 26,
+      "3": 27,
+      "4": 28,
+      "5": 29,
+      "6": 30,
+      "7": 31,
+      "8": 32
+     },
+     "status": "done"
+    }
+   },
+   "dry_run": false,
+   "failure_notified": false,
+   "mcqs": [
+    {
+     "answer_index": 0,
+     "explanation": "উল্লিখিত সময়ে অন্তত ১৫০ শ্রমিক নিহত হয়েছেন।",
+     "fact_id": "f1",
+     "options": [
+      "১৫০ জন",
+      "২৬৪ জন",
+      "১০৫ জন",
+      "২৩ জন"
+     ],
+     "question": "২০১৫ থেকে ২০২৬ সালের অক্টোবরের মাঝামাঝি পর্যন্ত সীতাকুণ্ডের জাহাজভাঙা কারখানায় অন্তত কতজন শ্রমিক নিহত হয়েছেন?",
+     "source_event_id": "ev_724882cd290b",
+     "source_name": "Prothom Alo (প্রথম আলো)",
+     "source_story": "জাহাজভাঙা শিল্পে ১২ বছরে ১৫০ শ্রমিক নিহত, নিরাপত্তা ঘাটতির চিত্র",
+     "source_url": "https://www.prothomalo.com/bangladesh/district/1nrk874lps",
+     "subject": "bangladesh_affairs"
+    },
+    {
+     "answer_index": 0,
+     "explanation": "২০১৯ সালে সর্বোচ্চ ২৩ শ্রমিক মারা যান।",
+     "fact_id": "f3",
+     "options": [
+      "২৩ জন",
+      "৩ জন",
+      "১০ জন",
+      "২৮ জন"
+     ],
+     "question": "বিলসের হিসাব অনুযায়ী ২০১৯ সালে জাহাজভাঙা শিল্পে সর্বোচ্চ কতজন শ্রমিক মারা যান?",
+     "source_event_id": "ev_724882cd290b",
+     "source_name": "Prothom Alo (প্রথম আলো)",
+     "source_story": "জাহাজভাঙা শিল্পে ১২ বছরে ১৫০ শ্রমিক নিহত, নিরাপত্তা ঘাটতির চিত্র",
+     "source_url": "https://www.prothomalo.com/bangladesh/district/1nrk874lps",
+     "subject": "bangladesh_affairs"
+    },
+    {
+     "answer_index": 0,
+     "explanation": "বিধিমালা-২০২৩ অনুযায়ী দুটোই লাল শ্রেণির শিল্প।",
+     "fact_id": "f12",
+     "options": [
+      "লাল শ্রেণি",
+      "কমলা শ্রেণি",
+      "সবুজ শ্রেণি",
+      "হলুদ শ্রেণি"
+     ],
+     "question": "পরিবেশ সংরক্ষণ বিধিমালা-২০২৩ অনুযায়ী জাহাজভাঙা কার্যক্রম ও জাহাজভাঙা ইয়ার্ড কোন শ্রেণির শিল্প?",
+     "source_event_id": "ev_f9c2956982ff",
+     "source_name": "Prothom Alo (প্রথম আলো)",
+     "source_story": "জাহাজভাঙা শিল্প লাল থেকে কমলা শ্রেণিতে নেওয়ার সিদ্ধান্ত",
+     "source_url": "https://www.prothomalo.com/bangladesh/environment/jsegomhliy",
+     "subject": "environment_climate"
+    }
+   ],
+   "partial": false,
+   "partial_reasons": [],
+   "recipients": 3,
+   "status": "delivered",
+   "story_event_ids": [
+    "ev_724882cd290b",
+    "ev_f9c2956982ff",
+    "ev_e676f31697e5",
+    "ev_86a08e8184ef",
+    "ev_c1c93fde4ef5",
+    "ev_822090c79d35",
+    "ev_041d04161c2d",
+    "ev_6e21e4b6bb83"
+   ],
+   "unprocessed_candidates": 0
+  }
+ },
+ "events": {
+  "ev_041d04161c2d": {
+   "analysed_at": "2026-10-24T11:39:11+00:00",
+   "analysis": {
+    "analysed_article_id": "a_456308468be44742",
+    "attributed_claims": [
+     {
+      "attributed_to": "ফায়ার সার্ভিসের কর্মকর্তারা",
+      "claim": "পানির সংকটে আগুন নিয়ন্ত্রণে আনতে বেগ পেতে হয়েছে।",
+      "evidence": "“পানির সংকটে আগুন নিয়ন্ত্রণে আনতে বেগ পেতে হয়েছে বলে জানান ফায়ার সার্ভিসের কর্মকর্তারা।”"
+     },
+     {
+      "attributed_to": "গাজীপুর ফায়ার সার্ভিসের উপসহকারী পরিচালক মো. সাইদুল আলম চৌধুরী",
+      "claim": "আমরা ৩৬০ ডিগ্রি অ্যাঙ্গেলে ফায়ার ফাইটিং টেকনিকে আগুন ঘিরে ধরেছিলাম।",
+      "evidence": "“আমরা ৩৬০ ডিগ্রি অ্যাঙ্গেলে ফায়ার ফাইটিং টেকনিকে আগুন ঘিরে ধরেছিলাম।”"
+     },
+     {
+      "attributed_to": "ফায়ার সার্ভিসের উপপরিচালক কাজী নাজমুজ্জামান",
+      "claim": "আগুন লাগার কারণ ও ক্ষয়ক্ষতির পরিমাণ তাৎক্ষণিক বলা সম্ভব হচ্ছে না।",
+      "evidence": "“আগুন লাগার কারণ ও ক্ষয়ক্ষতির পরিমাণ তাৎক্ষণিক বলা সম্ভব হচ্ছে না।”"
+     }
+    ],
+    "background_context": "বাংলাদেশে শিল্পাঞ্চলে গুদাম ও কারখানায় অগ্নিকাণ্ডের ঘটনা নিয়মিত আলোচ্য বিষয়। এ ধরনের ঘটনায় সাধারণত ফায়ার সার্ভিস, স্থানীয় প্রশাসন এবং কারখানা কর্তৃপক্ষ সমন্বয় করে কাজ করে।",
+    "categories": [
+     "bangladesh_affairs",
+     "constitution_governance"
+    ],
+    "causes_effects": "প্রাথমিকভাবে আগুনের কারণ জানা যায়নি। তবে পানির সংকটের কারণে নিয়ন্ত্রণে দেরি হয়েছে এবং একটি গুদামে বিপুল পরিমাণ সুতা পুড়ে গেছে। তদন্ত কমিটি গঠন হলে প্রকৃত কারণ ও ক্ষয়ক্ষতি জানা যাবে।",
+    "criteria": {
+     "factual_density": 7.0,
+     "novelty": 5.0,
+     "significance": 6.0,
+     "syllabus_relevance": 7.0,
+     "written_potential": 7.0
+    },
+    "exam_focus": "both",
+    "headline_bn": "গাজীপুরে দুই কারখানার গুদামে আগুন নিয়ন্ত্রণে",
+    "institutions": [
+     "ফায়ার সার্ভিস",
+     "ডিবিএল",
+     "সুপ্রিম গার্মেন্টস",
+     "কাশিমপুর ফায়ার সার্ভিস",
+     "ইপিজেড",
+     "ভোগরা ফায়ার সার্ভিস"
+    ],
+    "key_facts": [
+     {
+      "evidence": "“গাজীপুর মহানগরীর কাশিমপুরে দুটি কারখানার গুদামে লাগা আগুন”",
+      "fact": "গাজীপুর মহানগরীর কাশিমপুরে দুটি কারখানার গুদামে আগুন লাগে।",
+      "prelims": true
+     },
+     {
+      "evidence": "“আগুন সাড়ে তিন ঘণ্টা পর নিয়ন্ত্রণে এসেছে।”",
+      "fact": "আগুন সাড়ে তিন ঘণ্টা পর নিয়ন্ত্রণে আসে।",
+      "prelims": true
+     },
+     {
+      "evidence": "“ফায়ার সার্ভিসের নয়টি ইউনিটের চেষ্টায়”",
+      "fact": "ফায়ার সার্ভিসের নয়টি ইউনিট আগুন নিয়ন্ত্রণে কাজ করে।",
+      "prelims": true
+     },
+     {
+      "evidence": "“আজ শনিবার বেলা আড়াইটার দিকে আগুন নিয়ন্ত্রণে আসে।”",
+      "fact": "আজ শনিবার বেলা আড়াইটার দিকে আগুন নিয়ন্ত্রণে আসে।",
+      "prelims": true
+     },
+     {
+      "evidence": "“ডিবিএল কারখানার সুতার গুদামে আগুন লাগে”",
+      "fact": "আগুন ডিবিএল কারখানার সুতার গুদামে শুরু হয়ে পাশের সুপ্রিম গার্মেন্টসের কার্টনের গুদামে ছড়িয়ে পড়ে।",
+      "prelims": true
+     },
+     {
+      "evidence": "“আমার গুদামে এক হাজার টন সুতা ছিল; সবই পুড়ে গেছে।”",
+      "fact": "ব্যবসায়ী সাইফুল ইসলাম শাহিনের গুদামে এক হাজার টন সুতা ছিল, যা পুড়ে গেছে বলে তিনি জানান।",
+      "prelims": true
+     }
+    ],
+    "mode": "full",
+    "score": 65.5,
+    "unsupported_dropped": 0,
+    "what_happened": "গাজীপুর মহানগরীর কাশিমপুরে দুটি কারখানার গুদামে আগুন লাগে এবং সাড়ে তিন ঘণ্টা পর তা নিয়ন্ত্রণে আসে। ফায়ার সার্ভিসের নয়টি ইউনিট আগুন নিয়ন্ত্রণে কাজ করে, তবে পানির সংকটে বেগ পেতে হয়। আগুন ডিবিএল কারখানার সুতার গুদাম থেকে শুরু হয়ে পাশের সুপ্রিম গার্মেন্টসের কার্টনের গুদামে ছড়িয়ে পড়ে। এখন ডাম্পিংয়ের কাজ চলছে; তবে আর ছড়ানোর আশঙ্কা নেই বলে জানানো হয়েছে।",
+    "why_it_matters": "এ ঘটনা শিল্পাঞ্চলের অগ্নিনিরাপত্তা, জরুরি সাড়া [emergency response] এবং পানিসংকটের বাস্তব সমস্যা তুলে ধরে। BCS প্রস্তুতিতে এটি দুর্যোগ ব্যবস্থাপনা, ফায়ার সার্ভিসের সক্ষমতা ও কারখানা নিরাপত্তা সংক্রান্ত প্রশ্নে কাজে লাগতে পারে।",
+    "written_angle": "এ ধরনের অগ্নিকাণ্ড শিল্পকারখানার গুদাম ব্যবস্থাপনা, অগ্নিনির্বাপণ প্রস্তুতি এবং পানি সরবরাহ ব্যবস্থার দুর্বলতা নিয়ে লিখতে ব্যবহার করা যায়। তদন্ত কমিটি, ডাম্পিং কার্যক্রম এবং ক্ষয়ক্ষতি নিরূপণ—এসব প্রশাসনিক প্রতিক্রিয়া পরীক্ষার উত্তরে গুরুত্বপূর্ণ পয়েন্ট।"
+   },
+   "article_ids": [
+    "a_456308468be44742",
+    "a_b01265c07e60bd16"
+   ],
+   "attempts": 1,
+   "created_at": "2026-10-24T11:39:11+00:00",
+   "event_id": "ev_041d04161c2d",
+   "included_in": "2026-10-24",
+   "last_error": null,
+   "screening": {
+    "categories": [
+     "bangladesh_affairs",
+     "constitution_governance",
+     "environment_climate"
+    ],
+    "decision": "select",
+    "exam_focus": "prelims",
+    "priority": 6.0,
+    "rationale": "গাজীপুরের কারখানার আগুন নিয়ন্ত্রণে আসা শিল্প দুর্ঘটনা ও দুর্যোগ ব্যবস্থাপনার দিক থেকে প্রাসঙ্গিক।"
+   },
+   "screening_attempts": 0,
+   "status": "included",
+   "updated_at": "2026-10-24T11:39:11+00:00"
+  },
+  "ev_089d52ed0060": {
+   "analysis": null,
+   "article_ids": [
+    "a_872547c267386d4f"
+   ],
+   "attempts": 0,
+   "created_at": "2026-10-24T11:39:11+00:00",
+   "event_id": "ev_089d52ed0060",
+   "included_in": null,
+   "last_error": null,
+   "screening": {
+    "categories": [],
+    "decision": "reject",
+    "exam_focus": "none",
+    "priority": 0.0,
+    "rationale": "এটি ব্যক্তিগত মৃত্যু সংবাদ, BCS current affairs-এর জন্য সীমিত গুরুত্বের।"
+   },
+   "screening_attempts": 0,
+   "status": "rejected",
+   "updated_at": "2026-10-24T11:39:11+00:00"
+  },
+  "ev_092a42874295": {
+   "analysis": null,
+   "article_ids": [
+    "a_4f97710d61286e43"
+   ],
+   "attempts": 0,
+   "created_at": "2026-10-24T11:39:11+00:00",
+   "event_id": "ev_092a42874295",
+   "included_in": null,
+   "last_error": null,
+   "screening": {
+    "categories": [],
+    "decision": "reject",
+    "exam_focus": "none",
+    "priority": 1.0,
+    "rationale": "এটি ছিনতাইয়ের স্থানীয় ঘটনা, পরীক্ষামূলক গুরুত্ব কম।"
+   },
+   "screening_attempts": 0,
+   "status": "rejected",
+   "updated_at": "2026-10-24T11:39:11+00:00"
+  },
+  "ev_0f4f76c4018f": {
+   "analysis": null,
+   "article_ids": [
+    "a_ac2650f304cc2dec"
+   ],
+   "attempts": 0,
+   "created_at": "2026-10-24T11:39:11+00:00",
+   "event_id": "ev_0f4f76c4018f",
+   "included_in": null,
+   "last_error": null,
+   "screening": {
+    "categories": [],
+    "decision": "reject",
+    "exam_focus": "none",
+    "priority": 0.0,
+    "rationale": "এটি একজন বিনোদন ব্যক্তিত্বের মৃত্যু সংবাদ, BCS প্রাসঙ্গিকতা কম।"
+   },
+   "screening_attempts": 0,
+   "status": "rejected",
+   "updated_at": "2026-10-24T11:39:11+00:00"
+  },
+  "ev_197788ca0ba2": {
+   "analysis": null,
+   "article_ids": [
+    "a_00372f30fed10736"
+   ],
+   "attempts": 0,
+   "created_at": "2026-10-24T11:39:11+00:00",
+   "event_id": "ev_197788ca0ba2",
+   "included_in": null,
+   "last_error": null,
+   "screening": {
+    "categories": [],
+    "decision": "reject",
+    "exam_focus": "none",
+    "priority": 0.0,
+    "rationale": "এটি ধর্মীয় উপদেশধর্মী লেখা, current affairs নয়।"
+   },
+   "screening_attempts": 0,
+   "status": "rejected",
+   "updated_at": "2026-10-24T11:39:11+00:00"
+  },
+  "ev_23dd3db57aca": {
+   "analysis": null,
+   "article_ids": [
+    "a_9d002eaaee8e81c4"
+   ],
+   "attempts": 0,
+   "created_at": "2026-10-24T11:39:11+00:00",
+   "event_id": "ev_23dd3db57aca",
+   "included_in": null,
+   "last_error": null,
+   "screening": {
+    "categories": [],
+    "decision": "reject",
+    "exam_focus": "none",
+    "priority": 2.0,
+    "rationale": "এটি স্থানীয় রাজনৈতিক সহিংসতার খবর, পরীক্ষার জন্য সীমিত মূল্যবান।"
+   },
+   "screening_attempts": 0,
+   "status": "rejected",
+   "updated_at": "2026-10-24T11:39:11+00:00"
+  },
+  "ev_2bf091624b54": {
+   "analysis": null,
+   "article_ids": [
+    "a_28fd049eba3e0b1f"
+   ],
+   "attempts": 0,
+   "created_at": "2026-10-24T11:39:11+00:00",
+   "event_id": "ev_2bf091624b54",
+   "included_in": null,
+   "last_error": null,
+   "screening": {
+    "categories": [],
+    "decision": "reject",
+    "exam_focus": "none",
+    "priority": 0.0,
+    "rationale": "এটি আন্তর্জাতিক ক্রীড়া-সংক্রান্ত সাধারণ দলগত খবর, BCS-এর জন্য কম মূল্যবান।"
+   },
+   "screening_attempts": 0,
+   "status": "rejected",
+   "updated_at": "2026-10-24T11:39:11+00:00"
+  },
+  "ev_2fa94c4bcf8f": {
+   "analysis": null,
+   "article_ids": [
+    "a_27bf4f217f4fb3fc"
+   ],
+   "attempts": 0,
+   "created_at": "2026-10-24T11:39:11+00:00",
+   "event_id": "ev_2fa94c4bcf8f",
+   "included_in": null,
+   "last_error": null,
+   "screening": {
+    "categories": [
+     "bangladesh_affairs",
+     "constitution_governance"
+    ],
+    "decision": "maybe",
+    "exam_focus": "prelims",
+    "priority": 5.0,
+    "rationale": "নিষিদ্ধ ছাত্রলীগের মিছিল রাজনৈতিক-আইনশৃঙ্খলা ও সংগঠন-সংক্রান্ত হওয়ায় প্রাসঙ্গিক, তবে রিপোর্টের তথ্য সীমিত।"
+   },
+   "screening_attempts": 0,
+   "status": "maybe",
+   "updated_at": "2026-10-24T11:39:11+00:00"
+  },
+  "ev_49bcef10ec81": {
+   "analysis": null,
+   "article_ids": [
+    "a_ee4aee2ef184afa6"
+   ],
+   "attempts": 0,
+   "created_at": "2026-10-24T11:39:11+00:00",
+   "event_id": "ev_49bcef10ec81",
+   "included_in": null,
+   "last_error": null,
+   "screening": {
+    "categories": [],
+    "decision": "reject",
+    "exam_focus": "none",
+    "priority": 0.0,
+    "rationale": "এটি বিনোদন/ফ্যাশনধর্মী ছবি-নির্ভর বিষয়, BCS প্রাসঙ্গিক নয়।"
+   },
+   "screening_attempts": 0,
+   "status": "rejected",
+   "updated_at": "2026-10-24T11:39:11+00:00"
+  },
+  "ev_4b0da8525ea3": {
+   "analysis": null,
+   "article_ids": [
+    "a_6de6ef5418493e31"
+   ],
+   "attempts": 0,
+   "created_at": "2026-10-24T11:39:11+00:00",
+   "event_id": "ev_4b0da8525ea3",
+   "included_in": null,
+   "last_error": null,
+   "screening": {
+    "categories": [
+     "constitution_governance"
+    ],
+    "decision": "maybe",
+    "exam_focus": "prelims",
+    "priority": 4.0,
+    "rationale": "ওসি ও রাজনৈতিক ব্যক্তির বাগ্‌বিতণ্ডা পুলিশ-প্রশাসনের জবাবদিহি প্রসঙ্গে প্রাসঙ্গিক হতে পারে।"
+   },
+   "screening_attempts": 0,
+   "status": "maybe",
+   "updated_at": "2026-10-24T11:39:11+00:00"
+  },
+  "ev_4de672ae7891": {
+   "analysed_at": "2026-10-24T11:39:11+00:00",
+   "analysis": {
+    "analysed_article_id": "a_37d92ab604484003",
+    "attributed_claims": [],
+    "background_context": "মাদ্রাসা বাংলাদেশে ধর্মীয় শিক্ষার একটি গুরুত্বপূর্ণ প্রতিষ্ঠান। শিশু অধিকার ও নিরাপদ শিক্ষাব্যবস্থা নিয়ে এ ধরনের আলোচনা সাধারণত সামাজিক ও প্রশাসনিক নজরদারি বাড়ায়।",
+    "categories": [
+     "bangladesh_affairs",
+     "constitution_governance"
+    ],
+    "causes_effects": "প্রদত্ত অংশে কারণ বিস্তারিত নেই; তবে লেখাটি ইঙ্গিত করছে যে নিপীড়নের ঘটনা জনপরিসরে আলোচনার বিষয় হয়ে উঠেছে। এর ফলে শিশু সুরক্ষা বিষয়ে সামাজিক সচেতনতা, গণমাধ্যমের নজরদারি এবং নীতিগত প্রতিক্রিয়ার চাপ বাড়তে পারে।",
+    "criteria": {
+     "factual_density": 3.0,
+     "novelty": 4.0,
+     "significance": 5.0,
+     "syllabus_relevance": 6.0,
+     "written_potential": 5.0
+    },
+    "exam_focus": "written",
+    "headline_bn": "মাদ্রাসায় শিশু নিপীড়ন নিয়ে আবারও আলোচনা",
+    "institutions": [
+     "প্রথম আলো",
+     "মাদ্রাসা"
+    ],
+    "key_facts": [
+     {
+      "evidence": "“এখন মূলধারার গণমাধ্যমেও উঠে আসছে মাদ্রাসায় শিশুদের ওপর নিপীড়নের ঘটনা।”",
+      "fact": "মূলধারার গণমাধ্যমে মাদ্রাসায় শিশুদের ওপর নিপীড়নের ঘটনা উঠে আসছে।",
+      "prelims": true
+     },
+     {
+      "evidence": "“সাম্প্রতিক সময়ে মাদ্রাসায় শিশু নিপীড়নের ঘটনা আবারও আলোচনা তৈরি করেছে।”",
+      "fact": "সাম্প্রতিক সময়ে মাদ্রাসায় শিশু নিপীড়নের ঘটনা আবারও আলোচনা তৈরি করেছে।",
+      "prelims": true
+     },
+     {
+      "evidence": "“২৯ জুলাই ২০২৬ প্রথম আলোতে মনযূরুল হকের এ লেখা প্রকাশিত হয়েছিল।”",
+      "fact": "২৯ জুলাই ২০২৬ প্রথম আলোতে মনযূরুল হকের লেখা প্রকাশিত হয়েছিল।",
+      "prelims": true
+     },
+     {
+      "evidence": "“পাঠকের আগ্রহ বিবেচনায় লেখাটি পুনঃপ্রকাশ করা হলো।”",
+      "fact": "পাঠকের আগ্রহ বিবেচনায় লেখাটি পুনঃপ্রকাশ করা হলো।",
+      "prelims": true
+     }
+    ],
+    "mode": "excerpt_only",
+    "score": 48.0,
+    "unsupported_dropped": 0,
+    "what_happened": "প্রদত্ত অংশে বলা হয়েছে, সামাজিক মাধ্যমের আলোচনার গণ্ডি পেরিয়ে এখন মূলধারার গণমাধ্যমেও মাদ্রাসায় শিশুদের ওপর নিপীড়নের ঘটনা উঠে আসছে। সাম্প্রতিক সময়ে এই বিষয়ে আবারও আলোচনা তৈরি হয়েছে, এবং পাঠকের আগ্রহের কারণে একটি পুরোনো লেখা পুনঃপ্রকাশ করা হয়েছে।",
+    "why_it_matters": "এটি শিশু সুরক্ষা, শিক্ষা প্রতিষ্ঠানে জবাবদিহি এবং সামাজিক-ধর্মীয় প্রতিষ্ঠানের ভূমিকা নিয়ে প্রশাসনিক ও নীতিগত প্রশ্ন তোলে। বিসিএসের বাংলা/সুশাসন ও বাংলাদেশ বিষয়াবলিতে শিশু অধিকার ও প্রাতিষ্ঠানিক নিরাপত্তা প্রসঙ্গে এটি প্রাসঙ্গিক।",
+    "written_angle": "এই excerptটি শিশু সুরক্ষা, শিক্ষা প্রতিষ্ঠানে নিয়ন্ত্রণব্যবস্থা এবং সামাজিক নজরদারির প্রসঙ্গকে সামনে আনে। লিখিত পরীক্ষায় বিষয়টি তুলে ধরে বলা যায়, সংবেদনশীল প্রতিষ্ঠানে শিশু নিরাপত্তা নিশ্চিত করতে জবাবদিহি ও প্রতিরোধমূলক ব্যবস্থা জরুরি।"
+   },
+   "article_ids": [
+    "a_37d92ab604484003"
+   ],
+   "attempts": 1,
+   "created_at": "2026-10-24T11:39:11+00:00",
+   "event_id": "ev_4de672ae7891",
+   "included_in": null,
+   "last_error": null,
+   "screening": {
+    "categories": [
+     "bangladesh_affairs",
+     "constitution_governance"
+    ],
+    "decision": "maybe",
+    "exam_focus": "written",
+    "priority": 6.0,
+    "rationale": "মাদ্রাসায় শিশু নিপীড়ন শিক্ষা-প্রতিষ্ঠানের সুরক্ষা ও সামাজিক সুশাসনের দিক থেকে প্রাসঙ্গিক।"
+   },
+   "screening_attempts": 0,
+   "status": "analysed",
+   "updated_at": "2026-10-24T11:39:11+00:00"
+  },
+  "ev_526256da2186": {
+   "analysis": null,
+   "article_ids": [
+    "a_a78b9a84d3431eaa",
+    "a_ec8ae60d46fb3655"
+   ],
+   "attempts": 0,
+   "created_at": "2026-10-24T11:39:11+00:00",
+   "event_id": "ev_526256da2186",
+   "included_in": null,
+   "last_error": null,
+   "screening": {
+    "categories": [
+     "bangladesh_affairs",
+     "constitution_governance"
+    ],
+    "decision": "maybe",
+    "exam_focus": "prelims",
+    "priority": 4.0,
+    "rationale": "একজন শিল্পীর গাড়িতে গুলির সিসিটিভি ফুটেজ আইনশৃঙ্খলা পরিস্থিতির খবর হিসেবে প্রাসঙ্গিক।"
+   },
+   "screening_attempts": 0,
+   "status": "maybe",
+   "updated_at": "2026-10-24T11:39:11+00:00"
+  },
+  "ev_5cf284478842": {
+   "analysis": null,
+   "article_ids": [
+    "a_9d3af0fd7045381f"
+   ],
+   "attempts": 0,
+   "created_at": "2026-10-24T11:39:11+00:00",
+   "event_id": "ev_5cf284478842",
+   "included_in": null,
+   "last_error": null,
+   "screening": {
+    "categories": [],
+    "decision": "reject",
+    "exam_focus": "none",
+    "priority": 1.0,
+    "rationale": "এটি চুরির/প্রতারণার সাধারণ অপরাধ, BCS-এ কম প্রাসঙ্গিক।"
+   },
+   "screening_attempts": 0,
+   "status": "rejected",
+   "updated_at": "2026-10-24T11:39:11+00:00"
+  },
+  "ev_616e049c037a": {
+   "analysis": null,
+   "article_ids": [
+    "a_f9f9a8ef4f8ea8f5"
+   ],
+   "attempts": 0,
+   "created_at": "2026-10-24T11:39:11+00:00",
+   "event_id": "ev_616e049c037a",
+   "included_in": null,
+   "last_error": null,
+   "screening": {
+    "categories": [],
+    "decision": "reject",
+    "exam_focus": "none",
+    "priority": 1.0,
+    "rationale": "সাধারণ সড়ক দুর্ঘটনার খবর, পরীক্ষায় তুলনামূলক কম প্রাসঙ্গিক।"
+   },
+   "screening_attempts": 0,
+   "status": "rejected",
+   "updated_at": "2026-10-24T11:39:11+00:00"
+  },
+  "ev_6e21e4b6bb83": {
+   "analysed_at": "2026-10-24T11:39:11+00:00",
+   "analysis": {
+    "analysed_article_id": "a_158a88a65033f7d4",
+    "attributed_claims": [
+     {
+      "attributed_to": "সিলেটের জেলা প্রশাসক",
+      "claim": "পরে একজন ব্যবস্থাপক ও একজন কম্পিউটার অপারেটর নিয়োগ করা হবে, তখন প্রতিদিন গণনার কাজ শেষ করা সম্ভব হবে।",
+      "evidence": "“পরে একজন ব্যবস্থাপক ও একজন কম্পিউটার অপারেটর নিয়োগ করা হবে। তখন প্রতিদিন গণনার কাজ শেষ করা সম্ভব হবে।”"
+     }
+    ],
+    "background_context": "বাংলাদেশে কিছু ধর্মীয় ও দানভিত্তিক প্রতিষ্ঠানের আয়-ব্যয় স্থানীয় প্রশাসন ও ব্যবস্থাপনা কমিটির মাধ্যমে তদারকি করা হয়।",
+    "categories": [
+     "bangladesh_affairs",
+     "constitution_governance"
+    ],
+    "causes_effects": "স্বচ্ছতা নিশ্চিত করার জন্য কমিটি গঠিত হওয়ায় দানবাক্সের টাকা গণনা ও জমা রাখার একটি নিয়মিত ব্যবস্থা চালু হয়েছে। এর ফলে আয়ের নিয়ন্ত্রণ, ভবিষ্যৎ উন্নয়ন ব্যয় এবং প্রশাসনিক নজরদারি আরও সংগঠিত হতে পারে।",
+    "criteria": {
+     "factual_density": 7.0,
+     "novelty": 5.0,
+     "significance": 5.0,
+     "syllabus_relevance": 7.0,
+     "written_potential": 6.0
+    },
+    "exam_focus": "both",
+    "headline_bn": "শাহজালাল (রহ.)-এর মাজারে পঞ্চম দফায় ডেগ ও দানবাক্স খুলে টাকা গণনা",
+    "institutions": [
+     "সিলেট জেলা প্রশাসন",
+     "মাজার ব্যবস্থাপনা কমিটি"
+    ],
+    "key_facts": [
+     {
+      "evidence": "“পঞ্চমবারের মতো টাকা গণনা শুরু হয়েছে”",
+      "fact": "শাহজালাল (রহ.)-এর মাজারে পঞ্চমবারের মতো টাকা গণনা শুরু হয়েছে।",
+      "prelims": true
+     },
+     {
+      "evidence": "“জেলা প্রশাসনের সিলগালা করা ডেগ ও নতুন করে স্থাপন করা দানবাক্স খুলে”",
+      "fact": "জেলা প্রশাসনের সিলগালা করা ডেগ ও নতুন করে স্থাপন করা দানবাক্স খোলা হয়।",
+      "prelims": true
+     },
+     {
+      "evidence": "“সিলেটের জেলা প্রশাসক আবদুল্লাহ আল মামুন, প্রশাসনের কর্মকর্তা ও মাজার ব্যবস্থাপনা কমিটির সদস্যদের উপস্থিতিতে”",
+      "fact": "গণনা শুরু হয় সিলেটের জেলা প্রশাসক আবদুল্লাহ আল মামুন, প্রশাসনের কর্মকর্তা ও মাজার ব্যবস্থাপনা কমিটির সদস্যদের উপস্থিতিতে।",
+      "prelims": true
+     },
+     {
+      "evidence": "“মোট ৮৮ লাখ ৯২ হাজার ৯৬৬ টাকা, বিভিন্ন দেশের মুদ্রা ও স্বর্ণালংকার পাওয়া গেছে”",
+      "fact": "চতুর্থ দফায় ৮৮ লাখ ৯২ হাজার ৯৬৬ টাকা, বিভিন্ন দেশের মুদ্রা ও স্বর্ণালংকার পাওয়া গেছে।",
+      "prelims": true
+     },
+     {
+      "evidence": "“আপাতত মাসে একবার টাকা গণনা করা হবে”",
+      "fact": "আপাতত মাসে একবার টাকা গণনা করা হবে বলে জেলা প্রশাসক জানান।",
+      "prelims": true
+     },
+     {
+      "evidence": "“টাকার ৩৫ শতাংশ মাজারের উন্নয়নে এবং বাকি ৬৫ শতাংশ অন্য ব্যয় নির্বাহের কাজে ব্যবহারের সিদ্ধান্ত হয়”",
+      "fact": "মাজারের টাকার ৩৫ শতাংশ মাজারের উন্নয়নে এবং বাকি ৬৫ শতাংশ অন্য ব্যয় নির্বাহে ব্যবহারের সিদ্ধান্ত হয়।",
+      "prelims": true
+     }
+    ],
+    "mode": "full",
+    "score": 61.5,
+    "unsupported_dropped": 0,
+    "what_happened": "সিলেটের হজরত শাহজালাল (রহ.)-এর মাজারে জেলা প্রশাসনের সিলগালা করা ডেগ ও নতুন করে স্থাপন করা দানবাক্স খুলে পঞ্চমবারের মতো টাকা গণনা শুরু হয়েছে। জেলা প্রশাসক, প্রশাসনের কর্মকর্তা ও মাজার ব্যবস্থাপনা কমিটির সদস্যদের উপস্থিতিতে গণনা শুরু হয়। এর আগে চতুর্থ দফায় ৮৮ লাখ ৯২ হাজার ৯৬৬ টাকা, বিভিন্ন দেশের মুদ্রা ও স্বর্ণালংকার পাওয়া যায়। আর্থিক ব্যবস্থাপনায় স্বচ্ছতা নিশ্চিত করতে গঠিত কমিটি টাকার ব্যবহারে ৩৫ শতাংশ মাজারের উন্নয়ন এবং ৬৫ শতাংশ অন্য ব্যয়ের সিদ্ধান্ত নেয়।",
+    "why_it_matters": "এটি মাজার ব্যবস্থাপনা, আর্থিক স্বচ্ছতা ও প্রশাসনিক তদারকির একটি গুরুত্বপূর্ণ স্থানীয় শাসন-সংক্রান্ত ঘটনা। BCS প্রস্তুতিতে এ ধরনের খবর থেকে প্রশাসন, তহবিল ব্যবস্থাপনা ও কমিটির সিদ্ধান্ত সম্পর্কে ধারণা তৈরি হয়।",
+    "written_angle": "এই খবরটি মাজারের আর্থিক প্রশাসন, স্বচ্ছতা এবং স্থানীয় পর্যায়ের সরকারি তদারকির উদাহরণ হিসেবে লেখা যায়। এখানে দানবাক্সের আয় কীভাবে গণনা, সংরক্ষণ ও বণ্টন করা হচ্ছে, তা প্রশাসনিক জবাবদিহির দৃষ্টিকোণ থেকে ব্যাখ্যা করা যায়।"
+   },
+   "article_ids": [
+    "a_158a88a65033f7d4"
+   ],
+   "attempts": 1,
+   "created_at": "2026-10-24T11:39:11+00:00",
+   "event_id": "ev_6e21e4b6bb83",
+   "included_in": "2026-10-24",
+   "last_error": null,
+   "screening": {
+    "categories": [
+     "bangladesh_affairs",
+     "constitution_governance"
+    ],
+    "decision": "select",
+    "exam_focus": "prelims",
+    "priority": 6.0,
+    "rationale": "মাজারের ডেগ ও দানবাক্স খোলা এবং অর্থ গণনা প্রশাসনিক তত্ত্বাবধানে হওয়ায় এটি উল্লেখযোগ্য স্থানীয় শাসন-সংক্রান্ত খবর।"
+   },
+   "screening_attempts": 0,
+   "status": "included",
+   "updated_at": "2026-10-24T11:39:11+00:00"
+  },
+  "ev_724882cd290b": {
+   "analysed_at": "2026-10-24T11:39:11+00:00",
+   "analysis": {
+    "analysed_article_id": "a_99ef3ebe8d62f3ff",
+    "attributed_claims": [
+     {
+      "attributed_to": "জাহাজভাঙা শ্রমিক ট্রেড ইউনিয়ন ফোরামের আহ্বায়ক তপন দত্ত",
+      "claim": "শ্রমিকের নিরাপত্তায় আইন থাকলেও যথাযথ প্রয়োগ নেই; সুরক্ষাসামগ্রী ও প্রশিক্ষণ নিশ্চিত না হওয়ায় দুর্ঘটনা থামছে না।",
+      "evidence": "“শ্রমিকের নিরাপত্তায় আইন থাকলেও যথাযথ প্রয়োগ নেই। প্রয়োজনীয় সুরক্ষাসামগ্রী ও প্রশিক্ষণ নিশ্চিত না হওয়ায় দুর্ঘটনা থামছে না।”"
+     },
+     {
+      "attributed_to": "জাহাজভাঙা শিল্পমালিকদের শীর্ষ সংগঠন বিএসবিআরএর সভাপতি মোহাম্মদ মহসিন চৌধুরী",
+      "claim": "দুর্ঘটনার পর নতুন নিরাপত্তা নির্দেশনা তৈরি এবং শ্রমিকদের প্রশিক্ষণকেন্দ্র চালুর উদ্যোগ নেওয়া হয়েছে।",
+      "evidence": "“দুর্ঘটনার পর নতুন নিরাপত্তা নির্দেশনা তৈরি এবং শ্রমিকদের প্রশিক্ষণকেন্দ্র চালুর উদ্যোগ নেওয়া হয়েছে।”"
+     },
+     {
+      "attributed_to": "কলকারখানা ও প্রতিষ্ঠান পরিদর্শন অধিদপ্তর চট্টগ্রামের উপমহাপরিদর্শক মো. মাহবুবুল হাসান",
+      "claim": "জটিল এই শিল্প তদারকের জন্য সরকারি প্রতিষ্ঠানগুলোর সক্ষমতার ঘাটতি রয়েছে; মাসে দুই থেকে তিনটি কারখানা পরিদর্শন করা হয়।",
+      "evidence": "“জটিল এই শিল্প তদারকের জন্য সরকারি প্রতিষ্ঠানগুলোর সক্ষমতার ঘাটতি রয়েছে। তবু মাসে দুই থেকে তিনটি কারখানা পরিদর্শন করা হয়।”"
+     }
+    ],
+    "background_context": "জাহাজভাঙা শিল্পে সাধারণত বড় জাহাজ কেটে লোহা ও নানা উপাদান আলাদা করা হয়। এ ধরনের শিল্পে ঝুঁকি বেশি থাকায় শ্রমিক সুরক্ষা, তদারকি ও জরুরি সেবা খুব গুরুত্বপূর্ণ।",
+    "categories": [
+     "bangladesh_affairs",
+     "economy",
+     "constitution_governance"
+    ],
+    "causes_effects": "প্রতিবেদন অনুযায়ী সুরক্ষাসামগ্রী, প্রশিক্ষণ, তদারকি ও দুর্ঘটনার তথ্য সংরক্ষণে ঘাটতি আছে। এর ফলে বারবার দুর্ঘটনা, শ্রমিক মৃত্যু, আহত শ্রমিকের জীবিকা সংকট এবং পরিবারগুলোর আর্থিক চাপ বাড়ছে।",
+    "criteria": {
+     "factual_density": 9.0,
+     "novelty": 8.0,
+     "significance": 8.0,
+     "syllabus_relevance": 9.0,
+     "written_potential": 9.0
+    },
+    "exam_focus": "both",
+    "headline_bn": "জাহাজভাঙা শিল্পে ১২ বছরে ১৫০ শ্রমিক নিহত, নিরাপত্তা ঘাটতির চিত্র",
+    "institutions": [
+     "বাংলাদেশ ইনস্টিটিউট অব লেবার স্টাডিজ",
+     "জাহাজভাঙা শ্রমিক ট্রেড ইউনিয়ন ফোরাম",
+     "বিএসবিআরএ",
+     "কলকারখানা ও প্রতিষ্ঠান পরিদর্শন অধিদপ্তর",
+     "শিল্প মন্ত্রণালয়",
+     "ওপেন জার্নাল অব সেফটি সায়েন্স অ্যান্ড টেকনোলজি",
+     "ফেরদৌস স্টিল শিপ রিসাইক্লিং ইন্ডাস্ট্রিজ"
+    ],
+    "key_facts": [
+     {
+      "evidence": "“২০১৫ থেকে ২০২৬ সালের অক্টোবরের মাঝামাঝি পর্যন্ত ১২ বছরে সীতাকুণ্ডের জাহাজভাঙা কারখানায় দুর্ঘটনায় অন্তত ১৫০ শ্রমিক নিহত হয়েছেন।”",
+      "fact": "২০১৫ থেকে ২০২৬ সালের অক্টোবরের মাঝামাঝি পর্যন্ত সীতাকুণ্ডের জাহাজভাঙা কারখানায় অন্তত ১৫০ শ্রমিক নিহত হয়েছেন।",
+      "prelims": true
+     },
+     {
+      "evidence": "“একই সময়ে অন্তত ২৬৪ জন আহত হয়েছেন।”",
+      "fact": "একই সময়ে অন্তত ২৬৪ জন আহত হয়েছেন।",
+      "prelims": true
+     },
+     {
+      "evidence": "“২০১৯ সালে সর্বোচ্চ ২৩ শ্রমিক মারা যান।”",
+      "fact": "বিলসের হিসাব অনুযায়ী ২০১৯ সালে সর্বোচ্চ ২৩ শ্রমিক মারা যান।",
+      "prelims": true
+     },
+     {
+      "evidence": "“চলতি বছরের প্রথম ছয় মাসে ৩ জন এবং আগস্টে ফেরদৌস স্টিলে আরও ১০ জন মারা যান।”",
+      "fact": "চলতি বছরের প্রথম ছয় মাসে ৩ জন এবং আগস্টে ফেরদৌস স্টিলে আরও ১০ জন মারা যান।",
+      "prelims": true
+     },
+     {
+      "evidence": "“চলতি বছরের প্রথম ছয় মাসে বিলসের নথিভুক্ত ২৮টি দুর্ঘটনার মধ্যে ভারী লোহা ও যন্ত্রপাতির আঘাতের ঘটনা ৯টি। ক্রেন, হুক ও তারের আঘাতের ঘটনা ৮টি এবং গ্যাস ও আগুনের ঘটনা ৫টি।”",
+      "fact": "চলতি বছরের প্রথম ছয় মাসে বিলসের নথিভুক্ত ২৮টি দুর্ঘটনার মধ্যে ভারী লোহা ও যন্ত্রপাতির আঘাতের ঘটনা ৯টি, ক্রেন, হুক ও তারের আঘাতের ঘটনা ৮টি এবং গ্যাস ও আগুনের ঘটনা ৫টি।",
+      "prelims": true
+     },
+     {
+      "evidence": "“গবেষকেরা ১৮টি কারখানার ১ হাজার ৭৪ জন শ্রমিক ও তত্ত্বাবধায়কের কাছ থেকে তথ্য সংগ্রহ করেন। গবেষণায় জাহাজভাঙার কাজে ১০৫ ধরনের সম্ভাব্য বিপদ শনাক্ত হয়।”",
+      "fact": "গবেষণায় ১৮টি কারখানার ১ হাজার ৭৪ জন শ্রমিক ও তত্ত্বাবধায়কের কাছ থেকে তথ্য সংগ্রহ করা হয় এবং ১০৫ ধরনের সম্ভাব্য বিপদ শনাক্ত হয়।",
+      "prelims": true
+     }
+    ],
+    "mode": "full",
+    "score": 86.5,
+    "unsupported_dropped": 0,
+    "what_happened": "সীতাকুণ্ডের জাহাজভাঙা শিল্পে দীর্ঘমেয়াদে শ্রমিক মৃত্যুর ও আহত হওয়ার চিত্র তুলে ধরা হয়েছে। বিলসের নথি অনুযায়ী ২০১৫ থেকে ২০২৬ সালের অক্টোবরের মাঝামাঝি পর্যন্ত অন্তত ১৫০ শ্রমিক নিহত ও ২৬৪ জন আহত হয়েছেন। সাম্প্রতিক ফেরদৌস স্টিলের দুর্ঘটনায় ১০ শ্রমিক মারা যাওয়ার ঘটনাও প্রতিবেদনে এসেছে।",
+    "why_it_matters": "এটি শ্রমিক নিরাপত্তা, শিল্প তদারকি এবং আইন প্রয়োগের দুর্বলতা বোঝার জন্য গুরুত্বপূর্ণ। BCS-এ শ্রমনীতি, শিল্পনিরাপত্তা ও প্রশাসনিক নজরদারি বিষয়ে প্রশ্নে এই খবর প্রাসঙ্গিক হতে পারে।",
+    "written_angle": "এই প্রতিবেদন থেকে শ্রমিক নিরাপত্তা, শিল্প পরিদর্শন এবং দুর্ঘটনা-পরবর্তী ক্ষতিপূরণ ব্যবস্থার সীমাবদ্ধতা নিয়ে লেখা যায়। জাহাজভাঙা শিল্পে প্রশাসনিক নজরদারি, আইন প্রয়োগ ও ঝুঁকি-ব্যবস্থাপনা উন্নয়নের প্রয়োজনীয়তা বিশ্লেষণ করা সম্ভব।"
+   },
+   "article_ids": [
+    "a_99ef3ebe8d62f3ff"
+   ],
+   "attempts": 1,
+   "created_at": "2026-10-24T11:39:11+00:00",
+   "event_id": "ev_724882cd290b",
+   "included_in": "2026-10-24",
+   "last_error": null,
+   "screening": {
+    "categories": [
+     "environment_climate",
+     "bangladesh_affairs"
+    ],
+    "decision": "select",
+    "exam_focus": "both",
+    "priority": 8.0,
+    "rationale": "জাহাজভাঙা শিল্পে দীর্ঘমেয়াদি শ্রমিক মৃত্যুর তথ্য শ্রম-নিরাপত্তা ও পরিবেশগত ঝুঁকির গুরুত্বপূর্ণ ইস্যু।"
+   },
+   "screening_attempts": 0,
+   "status": "included",
+   "updated_at": "2026-10-24T11:39:11+00:00"
+  },
+  "ev_79911971e426": {
+   "analysis": null,
+   "article_ids": [
+    "a_4bfa144eacce1c89"
+   ],
+   "attempts": 0,
+   "created_at": "2026-10-24T11:39:11+00:00",
+   "event_id": "ev_79911971e426",
+   "included_in": null,
+   "last_error": null,
+   "screening": {
+    "categories": [],
+    "decision": "reject",
+    "exam_focus": "none",
+    "priority": 0.0,
+    "rationale": "এটি সাহিত্য/স্মৃতিচারণমূলক লেখা, current affairs নয়।"
+   },
+   "screening_attempts": 0,
+   "status": "rejected",
+   "updated_at": "2026-10-24T11:39:11+00:00"
+  },
+  "ev_7cc4b9b40a8e": {
+   "analysis": null,
+   "article_ids": [
+    "a_977d731ac7439753"
+   ],
+   "attempts": 0,
+   "created_at": "2026-10-24T11:39:11+00:00",
+   "event_id": "ev_7cc4b9b40a8e",
+   "included_in": null,
+   "last_error": null,
+   "screening": {
+    "categories": [],
+    "decision": "reject",
+    "exam_focus": "none",
+    "priority": 0.0,
+    "rationale": "এটি সাধারণ ক্রীড়া ফলাফল, BCS current affairs-এর জন্য কম মূল্যবান।"
+   },
+   "screening_attempts": 0,
+   "status": "rejected",
+   "updated_at": "2026-10-24T11:39:11+00:00"
+  },
+  "ev_822090c79d35": {
+   "analysed_at": "2026-10-24T11:39:11+00:00",
+   "analysis": {
+    "analysed_article_id": "a_41268a4aba6c69af",
+    "attributed_claims": [
+     {
+      "attributed_to": "আলেকসান্দার ভুসিচ",
+      "claim": "আলেকসান্দার ভুসিচের মতে, তরুণদের আন্দোলন ‘বিদেশি মদদপুষ্ট’ এবং এর লক্ষ্য ‘রাষ্ট্রকে ধ্বংস করা’।",
+      "evidence": "“তরুণদের আন্দোলনকে ‘বিদেশি মদদপুষ্ট’ বলেছেন আলেকসান্দার ভুসিচ। তাঁর মতে, এ আন্দোলনের লক্ষ্য ‘রাষ্ট্রকে ধ্বংস করা’।”"
+     },
+     {
+      "attributed_to": "স্টুডেন্ট লিস্ট ও এর সমর্থকরা",
+      "claim": "স্টুডেন্ট লিস্ট ও এর সমর্থকদের দাবি, ভুসিচ ও এসএনএস রাষ্ট্রীয় প্রতিষ্ঠান ও গণমাধ্যমের ওপর পূর্ণ নিয়ন্ত্রণ বজায় রেখেছে।",
+      "evidence": "“আলেকসান্দার ভুসিচ ও এসএনএস রাষ্ট্রীয় প্রতিষ্ঠান ও গণমাধ্যমের ওপর পূর্ণ নিয়ন্ত্রণ বজায় রেখেছে বলে দাবি স্টুডেন্ট লিস্ট ও এর সমর্থকদের।”"
+     },
+     {
+      "attributed_to": "আন্তর্জাতিক পর্যবেক্ষকেরা",
+      "claim": "আন্তর্জাতিক পর্যবেক্ষকেরা বলেছেন, ২০২৩ সালের নির্বাচনে গণমাধ্যম পক্ষপাতিত্ব করেছিল এবং সরকারি পদ ও সম্পদ ব্যবহার করে ক্ষমতাসীনেরা একচ্ছত্র সুবিধা নিয়েছিল।",
+      "evidence": "“সার্বিয়ায় ২০২৩ সালে সর্বশেষ নির্বাচন অনুষ্ঠিত হয়েছিল। ওই নির্বাচনে গণমাধ্যম বেশ পক্ষপাতিত্ব করেছিল এবং সরকারি পদ ও সম্পদ ব্যবহার করে ক্ষমতাসীনেরা একচ্ছত্র সুবিধা নিয়েছিল বলে জানান আন্তর্জাতিক পর্যবেক্ষকেরা।”"
+     }
+    ],
+    "background_context": "সার্বিয়া বলকান অঞ্চলের একটি ইউরোপীয় দেশ। দেশটির রাজনীতিতে ক্ষমতাসীন নেতৃত্ব, গণতান্ত্রিক প্রতিযোগিতা এবং ইউরোপীয় অভিমুখ নিয়ে দীর্ঘদিন ধরে আলোচনা চলছে।",
+    "categories": [
+     "international_affairs",
+     "foreign_policy_geopolitics",
+     "constitution_governance"
+    ],
+    "causes_effects": "দুর্নীতিবিরোধী আন্দোলন, রেলস্টেশনের দুর্ঘটনা এবং রাষ্ট্রীয় প্রতিষ্ঠান নিয়ে অভিযোগ নির্বাচনের প্রতিযোগিতা তীব্র করেছে। এর ফলে ভোটকে শুধু দলীয় প্রতিদ্বন্দ্বিতা নয়, বরং শাসনব্যবস্থা, জবাবদিহি এবং সার্বিয়ার ভবিষ্যৎ পররাষ্ট্রনীতির প্রশ্ন হিসেবেও দেখা হচ্ছে।",
+    "criteria": {
+     "factual_density": 8.0,
+     "novelty": 7.0,
+     "significance": 6.0,
+     "syllabus_relevance": 7.0,
+     "written_potential": 8.0
+    },
+    "exam_focus": "both",
+    "headline_bn": "সার্বিয়ায় পার্লামেন্ট নির্বাচনে ভুচিসের সামনে তরুণদের বড় চ্যালেঞ্জ",
+    "institutions": [
+     "সার্বিয়ান প্রগ্রেসিভ পার্টি",
+     "এসএনএস",
+     "ইউরোপীয় ইউনিয়ন",
+     "এসিএলইডি",
+     "বিবিসি",
+     "নোভি সাদ বিশ্ববিদ্যালয়"
+    ],
+    "key_facts": [
+     {
+      "evidence": "“আগামীকাল রোববার পার্লামেন্ট নির্বাচন”",
+      "fact": "সার্বিয়ায় আগামীকাল রোববার পার্লামেন্ট নির্বাচন।",
+      "prelims": true
+     },
+     {
+      "evidence": "“সার্বিয়ান প্রগ্রেসিভ পার্টির (এসএনএস) প্রার্থী হিসেবে ২০১২ সালে দেশটির প্রধানমন্ত্রী নির্বাচিত হন আলেকসান্দার ভুসিচ।”",
+      "fact": "আলেকসান্দার ভুসিচ ২০১২ সালে এসএনএস প্রার্থী হিসেবে প্রধানমন্ত্রী নির্বাচিত হন।",
+      "prelims": true
+     },
+     {
+      "evidence": "“দেশটিতে তৃতীয় মেয়াদে প্রেসিডেন্ট পদে প্রার্থী হওয়ার সুযোগ নেই।”",
+      "fact": "দেশটিতে তৃতীয় মেয়াদে প্রেসিডেন্ট পদে প্রার্থী হওয়ার সুযোগ নেই।",
+      "prelims": true
+     },
+     {
+      "evidence": "“প্রায় দুই বছর ধরে চলা দুর্নীতিবিরোধী আন্দোলন থেকে উঠে এসেছে ‘স্টুডেন্ট লিস্ট’।”",
+      "fact": "দুর্নীতিবিরোধী আন্দোলন থেকে ‘স্টুডেন্ট লিস্ট’ তৈরি হয়েছে।",
+      "prelims": true
+     },
+     {
+      "evidence": "“নোভি সাদে একটি রেলস্টেশনের ছাউনি ধসে ১৬ জনের মৃত্যুর ঘটনায়”",
+      "fact": "নোভি সাদে রেলস্টেশনের ছাউনি ধসে ১৬ জনের মৃত্যু হয়।",
+      "prelims": true
+     },
+     {
+      "evidence": "“সার্বিয়ার বিভিন্ন বিশ্ববিদ্যালয়ের অনুষদভিত্তিক শিক্ষার্থী সম্মেলন থেকে ২৫০ জনকে এ নির্বাচনে প্রার্থী করা হয়েছে।”",
+      "fact": "সার্বিয়ার বিভিন্ন বিশ্ববিদ্যালয়ের অনুষদভিত্তিক শিক্ষার্থী সম্মেলন থেকে ২৫০ জনকে এ নির্বাচনে প্রার্থী করা হয়েছে।",
+      "prelims": true
+     }
+    ],
+    "mode": "full",
+    "score": 71.0,
+    "unsupported_dropped": 0,
+    "what_happened": "সার্বিয়ায় আগামীকাল রোববার পার্লামেন্ট নির্বাচন। নির্বাচনের আগে দীর্ঘদিনের শাসক আলেকসান্দার ভুসিচ তরুণদের আন্দোলন-ঘনিষ্ঠ ‘স্টুডেন্ট লিস্ট’-এর চ্যালেঞ্জের মুখে পড়েছেন। দুর্নীতিবিরোধী আন্দোলন, রেলস্টেশনের ছাউনি ধসের ঘটনায় ক্ষোভ, এবং রাষ্ট্রীয় প্রতিষ্ঠান ও গণমাধ্যমের নিয়ন্ত্রণ নিয়ে বিতর্ক এই নির্বাচনের প্রধান প্রেক্ষাপট।",
+    "why_it_matters": "এটি ইউরোপের একটি দেশের নির্বাচনী রাজনীতি, গণতান্ত্রিক প্রতিদ্বন্দ্বিতা এবং ক্ষমতার ভারসাম্য বোঝার জন্য গুরুত্বপূর্ণ। পররাষ্ট্রনীতি ও ভূ-রাজনীতির দিক থেকেও সার্বিয়ার ইইউ, রাশিয়া ও চীনের সঙ্গে সম্পর্কের প্রশ্নটি আলোচনায় এসেছে।",
+    "written_angle": "এ খবরটি সার্বিয়ার নির্বাচনী গণতন্ত্র, তরুণ নেতৃত্বের উত্থান এবং ক্ষমতার কেন্দ্রায়নের প্রশ্ন তুলে ধরে। লিখিত পরীক্ষায় এটি থেকে ‘জনআন্দোলন বনাম প্রতিষ্ঠিত শাসন’, ‘মিডিয়ার ভূমিকা’ এবং ‘বৈদেশিক নীতি ভারসাম্য’—এই তিনটি দিক বিশ্লেষণ করা যেতে পারে।"
+   },
+   "article_ids": [
+    "a_41268a4aba6c69af"
+   ],
+   "attempts": 1,
+   "created_at": "2026-10-24T11:39:11+00:00",
+   "event_id": "ev_822090c79d35",
+   "included_in": "2026-10-24",
+   "last_error": null,
+   "screening": {
+    "categories": [
+     "international_affairs",
+     "foreign_policy_geopolitics"
+    ],
+    "decision": "maybe",
+    "exam_focus": "prelims",
+    "priority": 6.0,
+    "rationale": "সার্বিয়ার নির্বাচন ও রাজনৈতিক পরিবর্তন আন্তর্জাতিক রাজনীতির দিক থেকে প্রাসঙ্গিক।"
+   },
+   "screening_attempts": 0,
+   "status": "included",
+   "updated_at": "2026-10-24T11:39:11+00:00"
+  },
+  "ev_846c02267ee0": {
+   "analysis": null,
+   "article_ids": [
+    "a_1cdef871ea21015c"
+   ],
+   "attempts": 0,
+   "created_at": "2026-10-24T11:39:11+00:00",
+   "event_id": "ev_846c02267ee0",
+   "included_in": null,
+   "last_error": null,
+   "screening": {
+    "categories": [
+     "international_affairs",
+     "constitution_governance"
+    ],
+    "decision": "maybe",
+    "exam_focus": "prelims",
+    "priority": 5.0,
+    "rationale": "ভারতের নির্বাচনী তালিকা সংশোধন ও সিইসি-সংক্রান্ত বিতর্ক প্রতিবেশী দেশের শাসন ও নির্বাচন-প্রশাসনের সঙ্গে সম্পর্কিত।"
+   },
+   "screening_attempts": 0,
+   "status": "maybe",
+   "updated_at": "2026-10-24T11:39:11+00:00"
+  },
+  "ev_86a08e8184ef": {
+   "analysed_at": "2026-10-24T11:39:11+00:00",
+   "analysis": {
+    "analysed_article_id": "a_89264ad353a6244f",
+    "attributed_claims": [
+     {
+      "attributed_to": "ছাত্র-জনতার সংগ্রাম পরিষদের সভাপতি উষাতন চাকমা",
+      "claim": "সাজেকবাসীর ন্যায্য দাবি ও অধিকার উপেক্ষা করা হলে আরও কঠোর কর্মসূচি দেওয়া হবে।",
+      "evidence": "“সাজেকবাসীর ন্যায্য দাবি ও অধিকার উপেক্ষা করা হলে এবং তাঁদের ওপর লাঠিপেটা ও গুলিবর্ষণের মতো ঘটনা ঘটলে আরও কঠোর কর্মসূচি দেওয়া হবে।”"
+     },
+     {
+      "attributed_to": "জেএসএসের তথ্য ও প্রচার সম্পাদক সজীব চাকমা",
+      "claim": "সাজেকে সাধারণ মানুষের ওপর ইউপিডিএফের সশস্ত্র সদস্যদের দীর্ঘদিনের নিপীড়ন ও হয়রানির বিষয়টি আড়াল করতেই মনগড়া অভিযোগ তোলা হচ্ছে।",
+      "evidence": "“সাজেকে সাধারণ মানুষের ওপর ইউপিডিএফের সশস্ত্র সদস্যদের দীর্ঘদিনের নিপীড়ন ও হয়রানির বিষয়টি আড়াল করতেই এমন মনগড়া অভিযোগ তোলা হচ্ছে।”"
+     },
+     {
+      "attributed_to": "আইনশৃঙ্খলা রক্ষাকারী বাহিনী",
+      "claim": "ইউপিডিএফের সশস্ত্র সদস্যরা পর্যটক ও আইনশৃঙ্খলা রক্ষাকারী বাহিনীর সদস্যদের লক্ষ্য করে গুলি চালিয়েছেন।",
+      "evidence": "“আইনশৃঙ্খলা রক্ষাকারী বাহিনী জানায়, ইউপিডিএফের সশস্ত্র সদস্যরা পর্যটক ও আইনশৃঙ্খলা রক্ষাকারী বাহিনীর সদস্যদের লক্ষ্য করে গুলি চালিয়েছেন।”"
+     }
+    ],
+    "background_context": "পার্বত্য চট্টগ্রামে স্থানীয় রাজনৈতিক ও নিরাপত্তা পরিস্থিতি অনেক সময় সড়ক অবরোধ, বিক্ষোভ ও পাল্টা অভিযোগের মধ্যে দিয়ে জটিল হয়। সাজেক একটি গুরুত্বপূর্ণ পর্যটনকেন্দ্র হওয়ায় সেখানে অস্থিরতা হলে যাতায়াত ও পর্যটন কার্যক্রমে দ্রুত প্রভাব পড়ে।",
+    "categories": [
+     "bangladesh_affairs",
+     "constitution_governance"
+    ],
+    "causes_effects": "সাজেক এলাকায় হামলা, লাঠিপেটা ও ভাঙচুরের প্রতিবাদে অবরোধ ডাকা হয়। এর ফলে কিছু সড়কে যান চলাচল ব্যাহত হয়, পর্যটক ও যাত্রীদের ভোগান্তি হয়, তবে অবরোধ শেষে যোগাযোগ স্বাভাবিক হয় এবং প্রশাসন সাজেক ভ্যালি সাময়িকভাবে বন্ধ রাখে।",
+    "criteria": {
+     "factual_density": 8.0,
+     "novelty": 6.0,
+     "significance": 7.0,
+     "syllabus_relevance": 8.0,
+     "written_potential": 7.0
+    },
+    "exam_focus": "both",
+    "headline_bn": "খাগড়াছড়ি–রাঙামাটিতে অবরোধ শেষ, সড়ক যোগাযোগ স্বাভাবিক",
+    "institutions": [
+     "ছাত্র-জনতার সংগ্রাম পরিষদ",
+     "খাগড়াছড়ি সদর থানা",
+     "রাঙামাটি জেলা প্রশাসন",
+     "রাঙামাটি-চট্টগ্রাম বাস-মিনিবাস শ্রমিক ইউনিয়ন",
+     "রাঙামাটি লঞ্চ মালিক সমিতি",
+     "পার্বত্য চট্টগ্রাম জনসংহতি সমিতি (জেএসএস)",
+     "ইউপিডিএফ",
+     "আইনশৃঙ্খলা রক্ষাকারী বাহিনী"
+    ],
+    "key_facts": [
+     {
+      "evidence": "“পার্বত্য জেলা খাগড়াছড়ি ও রাঙামাটির অর্ধদিবস সড়ক ও নৌপথে অবরোধ শেষ হয়েছে।”",
+      "fact": "খাগড়াছড়ি ও রাঙামাটিতে অর্ধদিবস সড়ক ও নৌপথে অবরোধ শেষ হয়।",
+      "prelims": true
+     },
+     {
+      "evidence": "“পরে দুপুর ১২টায় এ অবরোধ শেষ হয়।”",
+      "fact": "অবরোধ কর্মসূচি দুপুর ১২টায় শেষ হয়।",
+      "prelims": true
+     },
+     {
+      "evidence": "“‘ছাত্র-জনতার সংগ্রাম পরিষদ’ নামের একটি সংগঠনের ডাকে আজ শনিবার ভোরে এ কর্মসূচি শুরু হয়েছিল।”",
+      "fact": "এ কর্মসূচি ডাকে ছাত্র-জনতার সংগ্রাম পরিষদ।",
+      "prelims": true
+     },
+     {
+      "evidence": "“কর্মসূচি শেষ হওয়ায় দুপুর ১২টা থেকে দুই জেলায় সড়ক যোগাযোগ স্বাভাবিক হয়েছে।”",
+      "fact": "কর্মসূচি শেষে দুই জেলায় সড়ক যোগাযোগ স্বাভাবিক হয়।",
+      "prelims": true
+     },
+     {
+      "evidence": "“অবরোধ চলাকালে কোথাও অপ্রীতিকর ঘটনা ঘটেনি বলে জানিয়েছে পুলিশ।”",
+      "fact": "পুলিশ বলেছে, অবরোধ চলাকালে কোথাও অপ্রীতিকর ঘটনা ঘটেনি।",
+      "prelims": true
+     }
+    ],
+    "mode": "full",
+    "score": 74.0,
+    "unsupported_dropped": 1,
+    "what_happened": "খাগড়াছড়ি ও রাঙামাটিতে ছাত্র-জনতার সংগ্রাম পরিষদের ডাকা অর্ধদিবস সড়ক ও নৌপথে অবরোধ দুপুর ১২টায় শেষ হয়। এরপর দুই জেলায় সড়ক যোগাযোগ স্বাভাবিক হয়, যদিও কিছু স্থানে টায়ার জ্বালিয়ে ও গাছ ফেলে প্রতিবন্ধকতা সৃষ্টি করা হয়েছিল। অবরোধের পেছনে সাজেক এলাকায় হামলা, লাঠিপেটা, ভাঙচুরের প্রতিবাদ এবং সাজেকবাসীর দাবির প্রতি সংহতি জানানো হয়। পুলিশ ও স্থানীয় পরিবহন সংশ্লিষ্টরা জানিয়েছে, অবরোধ শেষে পরিস্থিতি স্বাভাবিক হয়েছে এবং নৌপথে প্রভাব পড়েনি।",
+    "why_it_matters": "এটি পার্বত্য চট্টগ্রামের চলমান নিরাপত্তা, সড়ক যোগাযোগ এবং প্রশাসনিক নিয়ন্ত্রণের সঙ্গে যুক্ত একটি গুরুত্বপূর্ণ ঘটনা। BCS-এ পার্বত্যাঞ্চলের স্থিতিশীলতা, আইনশৃঙ্খলা এবং পর্যটন-পরিবহন ব্যবস্থাপনা নিয়ে প্রশ্ন আসতে পারে।",
+    "written_angle": "পার্বত্য চট্টগ্রামে অবরোধ, পাল্টা অভিযোগ, এবং পর্যটন-সড়ক যোগাযোগের সংযোগ এ ঘটনার মূল দিক। লিখিত পরীক্ষায় এ বিষয়ে পার্বত্যাঞ্চলের আইনশৃঙ্খলা, স্থানীয় সংগঠনের ভূমিকা, এবং প্রশাসনের সতর্কতামূলক ব্যবস্থা বিশ্লেষণ করা যেতে পারে।"
+   },
+   "article_ids": [
+    "a_89264ad353a6244f",
+    "a_c3d0f72761dd36ce"
+   ],
+   "attempts": 1,
+   "created_at": "2026-10-24T11:39:11+00:00",
+   "event_id": "ev_86a08e8184ef",
+   "included_in": "2026-10-24",
+   "last_error": null,
+   "screening": {
+    "categories": [
+     "bangladesh_affairs",
+     "constitution_governance"
+    ],
+    "decision": "select",
+    "exam_focus": "prelims",
+    "priority": 7.0,
+    "rationale": "খাগড়াছড়ি-রাঙামাটির অবরোধ ও চলাচল পরিস্থিতি পার্বত্য অঞ্চলের আইনশৃঙ্খলা ও প্রশাসনিক অবস্থার সঙ্গে সম্পর্কিত।"
+   },
+   "screening_attempts": 0,
+   "status": "included",
+   "updated_at": "2026-10-24T11:39:11+00:00"
+  },
+  "ev_8b7bea9389b9": {
+   "analysis": null,
+   "article_ids": [
+    "a_f3498eb7f70714ad"
+   ],
+   "attempts": 0,
+   "created_at": "2026-10-24T11:39:11+00:00",
+   "event_id": "ev_8b7bea9389b9",
+   "included_in": null,
+   "last_error": null,
+   "screening": {
+    "categories": [
+     "international_affairs",
+     "awards_reports_indices"
+    ],
+    "decision": "maybe",
+    "exam_focus": "prelims",
+    "priority": 4.0,
+    "rationale": "আফগানিস্তানের র‌্যাঙ্কিং অগ্রগতি ও বাংলাদেশের রেটিং পয়েন্ট বদল ক্রিকেট র‌্যাঙ্কিং প্রসঙ্গে প্রাসঙ্গিক।"
+   },
+   "screening_attempts": 0,
+   "status": "maybe",
+   "updated_at": "2026-10-24T11:39:11+00:00"
+  },
+  "ev_aca4487c166a": {
+   "analysis": null,
+   "article_ids": [
+    "a_e685d2cf17b648dc"
+   ],
+   "attempts": 0,
+   "created_at": "2026-10-24T11:39:11+00:00",
+   "event_id": "ev_aca4487c166a",
+   "included_in": null,
+   "last_error": null,
+   "screening": {
+    "categories": [],
+    "decision": "reject",
+    "exam_focus": "none",
+    "priority": 2.0,
+    "rationale": "এটি রাজনৈতিক কর্মীর ওপর সহিংসতার স্থানীয় ঘটনা, কিন্তু নীতিগত দিক স্পষ্ট নয়।"
+   },
+   "screening_attempts": 0,
+   "status": "rejected",
+   "updated_at": "2026-10-24T11:39:11+00:00"
+  },
+  "ev_af8839925221": {
+   "analysis": null,
+   "article_ids": [
+    "a_8cd6245dcf0a09e1"
+   ],
+   "attempts": 0,
+   "created_at": "2026-10-24T11:39:11+00:00",
+   "event_id": "ev_af8839925221",
+   "included_in": null,
+   "last_error": null,
+   "screening": {
+    "categories": [],
+    "decision": "reject",
+    "exam_focus": "none",
+    "priority": 0.0,
+    "rationale": "এটি ফুটবল দল ঘোষণার খবর, BCS current affairs-এর জন্য কম মূল্যবান।"
+   },
+   "screening_attempts": 0,
+   "status": "rejected",
+   "updated_at": "2026-10-24T11:39:11+00:00"
+  },
+  "ev_afb195eaa6e6": {
+   "analysis": null,
+   "article_ids": [
+    "a_8016ca4c719a6e95"
+   ],
+   "attempts": 0,
+   "created_at": "2026-10-24T11:39:11+00:00",
+   "event_id": "ev_afb195eaa6e6",
+   "included_in": null,
+   "last_error": null,
+   "screening": {
+    "categories": [
+     "international_affairs"
+    ],
+    "decision": "maybe",
+    "exam_focus": "prelims",
+    "priority": 3.0,
+    "rationale": "কলকাতা পুলিশের মন্তব্যটি পার্শ্ববর্তী দেশের প্রশাসনিক অবস্থান ও ধর্মীয় সমাবেশ ব্যবস্থাপনার বিষয়ে প্রাসঙ্গিক।"
+   },
+   "screening_attempts": 0,
+   "status": "maybe",
+   "updated_at": "2026-10-24T11:39:11+00:00"
+  },
+  "ev_b0462f1b2188": {
+   "analysis": null,
+   "article_ids": [
+    "a_95a27b11f703dfdd"
+   ],
+   "attempts": 0,
+   "created_at": "2026-10-24T11:39:11+00:00",
+   "event_id": "ev_b0462f1b2188",
+   "included_in": null,
+   "last_error": null,
+   "screening": {
+    "categories": [],
+    "decision": "reject",
+    "exam_focus": "none",
+    "priority": 0.0,
+    "rationale": "এটি আন্তর্জাতিক ক্রিকেটের একটি ম্যাচ ফল, পরীক্ষামূলক গুরুত্ব কম।"
+   },
+   "screening_attempts": 0,
+   "status": "rejected",
+   "updated_at": "2026-10-24T11:39:11+00:00"
+  },
+  "ev_b0c23d9f0a4f": {
+   "analysis": null,
+   "article_ids": [
+    "a_c39e76c3655e5b66"
+   ],
+   "attempts": 0,
+   "created_at": "2026-10-24T11:39:11+00:00",
+   "event_id": "ev_b0c23d9f0a4f",
+   "included_in": null,
+   "last_error": null,
+   "screening": {
+    "categories": [],
+    "decision": "reject",
+    "exam_focus": "none",
+    "priority": 1.0,
+    "rationale": "এটি প্রশাসনিক/ব্যক্তিগত স্বাস্থ্যসংক্রান্ত স্থানীয় ঘটনা, BCS বর্তমান affairs-এর বড় প্রাসঙ্গিকতা নেই।"
+   },
+   "screening_attempts": 0,
+   "status": "rejected",
+   "updated_at": "2026-10-24T11:39:11+00:00"
+  },
+  "ev_b9a59542aaf0": {
+   "analysis": null,
+   "article_ids": [
+    "a_690c2b29488622b5"
+   ],
+   "attempts": 0,
+   "created_at": "2026-10-24T11:39:11+00:00",
+   "event_id": "ev_b9a59542aaf0",
+   "included_in": null,
+   "last_error": null,
+   "screening": {
+    "categories": [],
+    "decision": "reject",
+    "exam_focus": "none",
+    "priority": 0.0,
+    "rationale": "এটি বিনোদন ও ফ্যাশনধর্মী ভাইরাল বিষয়, বর্তমান affairs নয়।"
+   },
+   "screening_attempts": 0,
+   "status": "rejected",
+   "updated_at": "2026-10-24T11:39:11+00:00"
+  },
+  "ev_c1c93fde4ef5": {
+   "analysed_at": "2026-10-24T11:39:11+00:00",
+   "analysis": {
+    "analysed_article_id": "a_41879e4d919545f3",
+    "attributed_claims": [
+     {
+      "attributed_to": "রোগতত্ত্ববিদেরা",
+      "claim": "রোগতত্ত্ববিদদের মতে, হাম সব বয়সী মানুষের হতে পারে, তবে শিশুরাই বেশি আক্রান্ত হয়।",
+      "evidence": "“রোগতত্ত্ববিদেরা বলছেন, হাম সব বয়সী মানুষের হতে পারে, তবে শিশুরাই বেশি আক্রান্ত হয়।”"
+     },
+     {
+      "attributed_to": "রোগতত্ত্ববিদেরা",
+      "claim": "প্রাদুর্ভাবের সময় হামের উপসর্গ নিয়ে যত মৃত্যু হচ্ছে, তার সবই হামে মৃত্যু বলে বিবেচনা করা হয়।",
+      "evidence": "“প্রাদুর্ভাবের সময় হামের উপসর্গ নিয়ে যত মৃত্যু হচ্ছে, তার সবই হামে মৃত্যু বলে বিবেচনা করা হয়।”"
+     }
+    ],
+    "background_context": "হাম একটি সংক্রামক রোগ। প্রাদুর্ভাবের সময় এর নজরদারি, শনাক্তকরণ, এবং মৃত্যুহার পর্যবেক্ষণ জনস্বাস্থ্যের জন্য গুরুত্বপূর্ণ।",
+    "categories": [
+     "bangladesh_affairs",
+     "constitution_governance"
+    ],
+    "causes_effects": "প্রাদুর্ভাব চলাকালে উপসর্গভিত্তিক মৃত্যুকে হামের মৃত্যু হিসেবে গণ্য করা হচ্ছে বলে প্রতিবেদনে ইঙ্গিত আছে। এর ফলে মোট মৃত্যু ও আক্রান্তের সংখ্যা দ্রুত বেড়ে দেখা যাচ্ছে, যা স্বাস্থ্যসেবা ব্যবস্থার ওপর চাপের ইঙ্গিত দেয়।",
+    "criteria": {
+     "factual_density": 8.0,
+     "novelty": 7.0,
+     "significance": 7.0,
+     "syllabus_relevance": 8.0,
+     "written_potential": 6.0
+    },
+    "exam_focus": "both",
+    "headline_bn": "হামের উপসর্গে আরও ৮ মৃত্যু, মোট ১২২২",
+    "institutions": [
+     "স্বাস্থ্য অধিদপ্তর"
+    ],
+    "key_facts": [
+     {
+      "evidence": "“গত ১৫ মার্চ থেকে এখন পর্যন্ত হামের উপসর্গে মারা গেছে ১ হাজার ১১৮ জন।”",
+      "fact": "১৫ মার্চ থেকে এখন পর্যন্ত হামের উপসর্গে মারা গেছে ১ হাজার ১১৮ জন।",
+      "prelims": true
+     },
+     {
+      "evidence": "“আর নিশ্চিত হামে মৃত্যু ১০৪ জনের।”",
+      "fact": "নিশ্চিত হামে মৃত্যু হয়েছে ১০৪ জনের।",
+      "prelims": true
+     },
+     {
+      "evidence": "“সব মিলিয়ে মৃত্যুর সংখ্যা ১ হাজার ২২২।”",
+      "fact": "সব মিলিয়ে মৃত্যুর সংখ্যা ১ হাজার ২২২।",
+      "prelims": true
+     },
+     {
+      "evidence": "“সর্বশেষ ২৪ ঘণ্টায় সারা দেশে আরও ১ হাজার ১৪ জনের শরীরে হামের উপসর্গ দেখা দেওয়ার তথ্য পাওয়া গেছে।”",
+      "fact": "সর্বশেষ ২৪ ঘণ্টায় সারা দেশে ১ হাজার ১৪ জনের শরীরে হামের উপসর্গ দেখা দেওয়ার তথ্য পাওয়া গেছে।",
+      "prelims": true
+     },
+     {
+      "evidence": "“১৫ মার্চ থেকে এখন পর্যন্ত হামের উপসর্গ দেখা দেওয়া রোগীর সংখ্যা ২ লাখ ১৯ হাজার ৮৮৪।”",
+      "fact": "১৫ মার্চ থেকে এখন পর্যন্ত হামের উপসর্গ দেখা দেওয়া রোগীর সংখ্যা ২ লাখ ১৯ হাজার ৮৮৪।",
+      "prelims": true
+     }
+    ],
+    "mode": "full",
+    "score": 73.5,
+    "unsupported_dropped": 2,
+    "what_happened": "১৫ মার্চ থেকে এখন পর্যন্ত হামের উপসর্গে মোট ১ হাজার ১১৮ জন এবং নিশ্চিত হামে ১০৪ জন মারা গেছে; মোট মৃত্যু ১ হাজার ২২২।",
+    "why_it_matters": "এটি জনস্বাস্থ্য [public health] ও স্বাস্থ্য প্রশাসনের জন্য গুরুত্বপূর্ণ তথ্য। বিসিএস পরীক্ষায় রোগপ্রবণতা, সরকারি পর্যবেক্ষণ ব্যবস্থা, এবং প্রাদুর্ভাবকালীন মৃত্যুর হিসাব নিয়ে প্রশ্ন আসতে পারে।",
+    "written_angle": "হামের মতো সংক্রামক রোগে নিয়মিত নজরদারি, দ্রুত শনাক্তকরণ, এবং বিভাগভিত্তিক তথ্য প্রকাশ জনস্বাস্থ্য ব্যবস্থার গুরুত্বপূর্ণ অংশ। এই ধরনের তথ্য দিয়ে রোগের বিস্তার, হাসপাতালে ভর্তি, এবং মৃত্যু বিশ্লেষণ করে প্রতিরোধমূলক নীতির দিক নির্ধারণ করা যায়।"
+   },
+   "article_ids": [
+    "a_41879e4d919545f3"
+   ],
+   "attempts": 1,
+   "created_at": "2026-10-24T11:39:11+00:00",
+   "event_id": "ev_c1c93fde4ef5",
+   "included_in": "2026-10-24",
+   "last_error": null,
+   "screening": {
+    "categories": [
+     "bangladesh_affairs",
+     "awards_reports_indices"
+    ],
+    "decision": "maybe",
+    "exam_focus": "prelims",
+    "priority": 7.0,
+    "rationale": "হামের উপসর্গে মৃত্যু ও মোট মৃত্যুর সংখ্যা জনস্বাস্থ্য পরিস্থিতির গুরুত্বপূর্ণ ইঙ্গিত দেয়।"
+   },
+   "screening_attempts": 0,
+   "status": "included",
+   "updated_at": "2026-10-24T11:39:11+00:00"
+  },
+  "ev_c8ee92f47955": {
+   "analysis": null,
+   "article_ids": [
+    "a_162d36a4216faff2"
+   ],
+   "attempts": 0,
+   "created_at": "2026-10-24T11:39:11+00:00",
+   "event_id": "ev_c8ee92f47955",
+   "included_in": null,
+   "last_error": null,
+   "screening": {
+    "categories": [],
+    "decision": "reject",
+    "exam_focus": "none",
+    "priority": 1.0,
+    "rationale": "এটি সাধারণ চুরি-সংক্রান্ত স্থানীয় অপরাধ, পরীক্ষায় কম গুরুত্বের।"
+   },
+   "screening_attempts": 0,
+   "status": "rejected",
+   "updated_at": "2026-10-24T11:39:11+00:00"
+  },
+  "ev_cec4055a1bcf": {
+   "analysis": null,
+   "article_ids": [
+    "a_61fd496832987616"
+   ],
+   "attempts": 0,
+   "created_at": "2026-10-24T11:39:11+00:00",
+   "event_id": "ev_cec4055a1bcf",
+   "included_in": null,
+   "last_error": null,
+   "screening": {
+    "categories": [],
+    "decision": "reject",
+    "exam_focus": "none",
+    "priority": 0.0,
+    "rationale": "এটি বিনোদনজগতের ব্যক্তিগত/আবেগনির্ভর লেখা, BCS current affairs-এর জন্য কম প্রাসঙ্গিক।"
+   },
+   "screening_attempts": 0,
+   "status": "rejected",
+   "updated_at": "2026-10-24T11:39:11+00:00"
+  },
+  "ev_dca81bf1247b": {
+   "analysis": null,
+   "article_ids": [
+    "a_bc8bc1b21868c240"
+   ],
+   "attempts": 0,
+   "created_at": "2026-10-24T11:39:11+00:00",
+   "event_id": "ev_dca81bf1247b",
+   "included_in": null,
+   "last_error": null,
+   "screening": {
+    "categories": [
+     "bangladesh_affairs",
+     "constitution_governance"
+    ],
+    "decision": "maybe",
+    "exam_focus": "prelims",
+    "priority": 5.0,
+    "rationale": "গণ-অভ্যুত্থান-পরবর্তী রাজনৈতিক হুমকি ও ঐক্য নিয়ে বক্তব্য দেশের রাজনৈতিক বাস্তবতার সঙ্গে সম্পর্কিত।"
+   },
+   "screening_attempts": 0,
+   "status": "maybe",
+   "updated_at": "2026-10-24T11:39:11+00:00"
+  },
+  "ev_e676f31697e5": {
+   "analysed_at": "2026-10-24T11:39:11+00:00",
+   "analysis": {
+    "analysed_article_id": "a_57c1a7a531cf0e05",
+    "attributed_claims": [
+     {
+      "attributed_to": "ডোনাল্ড ট্রাম্প",
+      "claim": "রাশিয়া ইউক্রেন ইস্যুতে খুব বেশি কিছু করেনি এবং সুবিধাজনক অবস্থানে ছিল বলে ট্রাম্প মন্তব্য করেছেন।",
+      "evidence": "‘সত্যি বলতে, ইউক্রেন ইস্যুতে রাশিয়া বেশ সুবিধাজনক অবস্থানেই ছিল। তারা খুব বেশি কিছু করেনি।’"
+     },
+     {
+      "attributed_to": "প্রতিবেদন",
+      "claim": "ট্রাম্পের মতে ইউক্রেনের ওপর রুশ হামলার ফলে জেলেনস্কির প্রতি তিনি ক্ষুব্ধ হয়েছেন।",
+      "evidence": "ঠিক তখনই এই হামলার কারণে জেলেনস্কির প্রতি ক্ষুব্ধ হন ট্রাম্প।"
+     },
+     {
+      "attributed_to": "ভলোদিমির জেলেনস্কি",
+      "claim": "জেলেনস্কি বলেছেন, জ্বালানি স্থাপনায় হামলা বন্ধে পারস্পরিক যুদ্ধবিরতিতে তিনি রাজি, তবে মস্কোও একই প্রতিক্রিয়া দেখাতে হবে।",
+      "evidence": "জেলেনস্কি আবারও জ্বালানি স্থাপনায় হামলা বন্ধে পারস্পরিক যুদ্ধবিরতি গ্রহণে তাঁর ইচ্ছার কথা পুনর্ব্যক্ত করেছেন, তবে তা কেবল মস্কো একই প্রতিক্রিয়া দেখালেই সম্ভব।"
+     }
+    ],
+    "background_context": "ইউক্রেন যুদ্ধের শুরু থেকে জ্বালানি অবকাঠামো দুই পক্ষের গুরুত্বপূর্ণ লক্ষ্য হয়ে উঠেছে। এমন সংঘাতে বিদ্যুৎ, তাপ, পরিবহন ও নাগরিক নিরাপত্তা একসঙ্গে প্রভাবিত হয়।",
+    "categories": [
+     "foreign_policy_geopolitics",
+     "international_affairs",
+     "environment_climate"
+    ],
+    "causes_effects": "প্রতিবেদন অনুযায়ী রাশিয়ার হামলার লক্ষ্য ইউক্রেনকে শীতকালে বিদ্যুৎ ও তাপসংকটে ফেলা এবং জনগণের সমর্থন দুর্বল করা। এর ফলে বিদ্যুৎ বিচ্ছিন্নতা, গণপরিবহন স্থবিরতা, এবং ইউরোপীয় সহায়তা পাঠানোর ক্ষেত্রেও জটিলতা তৈরি হচ্ছে।",
+    "criteria": {
+     "factual_density": 9.0,
+     "novelty": 8.0,
+     "significance": 9.0,
+     "syllabus_relevance": 8.0,
+     "written_potential": 8.0
+    },
+    "exam_focus": "both",
+    "headline_bn": "ট্রাম্পের নীতির পরিবর্তন ও রুশ হামলায় ইউক্রেনের জ্বালানি সংকট আরও তীব্র",
+    "institutions": [
+     "কিয়েভ স্কুল অব ইকোনমিকস",
+     "জাতিসংঘের ইউক্রেনবিষয়ক পর্যবেক্ষণ মিশন",
+     "স্পেসএক্স",
+     "স্টারশিল্ড",
+     "সেন্টার ফর ইস্টার্ন স্টাডিজ",
+     "উক্রেনেরগো",
+     "ফরেন পলিসি"
+    ],
+    "key_facts": [
+     {
+      "evidence": "মার্কিন প্রেসিডেন্ট ডোনাল্ড ট্রাম্প গত সোমবার বলেছেন যে ইউক্রেনের ভবিষ্যৎ নিয়ে রাশিয়া ও চীনের সঙ্গে আলোচনায় বসতে তিনি রাজি আছেন।",
+      "fact": "ডোনাল্ড ট্রাম্প ইউক্রেনের ভবিষ্যৎ নিয়ে রাশিয়া ও চীনের সঙ্গে আলোচনায় বসতে রাজি বলেছেন।",
+      "prelims": true
+     },
+     {
+      "evidence": "কিয়েভ স্কুল অব ইকোনমিকস-এর তথ্য অনুযায়ী, কেবল সেপ্টেম্বর মাসেই মস্কো ইউক্রেনের বেসামরিক লক্ষ্যবস্তুতে প্রায় চার হাজার হামলা চালিয়েছে",
+      "fact": "কিয়েভ স্কুল অব ইকোনমিকস-এর তথ্য অনুযায়ী সেপ্টেম্বর মাসে মস্কো ইউক্রেনের বেসামরিক লক্ষ্যবস্তুতে প্রায় চার হাজার হামলা চালিয়েছে।",
+      "prelims": true
+     },
+     {
+      "evidence": "যা আগের বছরের তুলনায় ৬৫ শতাংশ বেশি।",
+      "fact": "এই হামলা আগের বছরের তুলনায় ৬৫ শতাংশ বেশি ছিল।",
+      "prelims": true
+     },
+     {
+      "evidence": "গত মাসে ৩০০ জনেরও বেশি মানুষ নিহত হয়েছেন",
+      "fact": "জাতিসংঘের ইউক্রেনবিষয়ক পর্যবেক্ষণ মিশনের মতে গত মাসে ৩০০ জনেরও বেশি মানুষ নিহত হয়েছেন।",
+      "prelims": true
+     },
+     {
+      "evidence": "জুলাইয়ের মাঝামাঝি থেকে এমন একটি দিনও যায়নি যেদিন ইউক্রেনের জ্বালানি স্থাপনায় কোনো হামলা হয়নি; এই সময়ের মধ্যে দুই হাজারটিরও বেশি আঘাত হানা হয়েছে।",
+      "fact": "জুলাইয়ের মাঝামাঝি থেকে ইউক্রেনের জ্বালানি স্থাপনায় কোনো দিনও হামলা বন্ধ হয়নি, এবং এই সময়ে দুই হাজারটিরও বেশি আঘাত হানা হয়েছে।",
+      "prelims": true
+     },
+     {
+      "evidence": "যুদ্ধের আগের তুলনায় ইউক্রেন এখন তার বিদ্যুৎ উৎপাদন ক্ষমতার প্রায় দুই-তৃতীয়াংশ হারিয়ে ফেলেছে।",
+      "fact": "যুদ্ধের আগের তুলনায় ইউক্রেন এখন তার বিদ্যুৎ উৎপাদন ক্ষমতার প্রায় দুই-তৃতীয়াংশ হারিয়ে ফেলেছে।",
+      "prelims": true
+     }
+    ],
+    "mode": "full",
+    "score": 84.5,
+    "unsupported_dropped": 0,
+    "what_happened": "মার্কিন প্রেসিডেন্ট ডোনাল্ড ট্রাম্প বলেছেন, ইউক্রেনের ভবিষ্যৎ নিয়ে রাশিয়া ও চীনের সঙ্গে আলোচনায় বসতে তিনি রাজি। একই সময়ে ইউক্রেনে রুশ ড্রোন ও ক্ষেপণাস্ত্র হামলা অব্যাহত রয়েছে, বিশেষ করে হাসপাতাল, স্কুল ও জ্বালানি স্থাপনাগুলোতে। নিবন্ধে বলা হয়েছে, ইউক্রেনের জ্বালানি অবকাঠামো গুরুতর ক্ষতিগ্রস্ত, কিয়েভের বিদ্যুৎ ব্যবস্থা আরও সংকটে আছে, এবং যুক্তরাষ্ট্রের নীতিতে পরিবর্তন নিয়ে প্রেসিডেন্ট ভলোদিমির জেলেনস্কি উদ্বিগ্ন।",
+    "why_it_matters": "এটি ইউক্রেন যুদ্ধ, যুক্তরাষ্ট্রের নীতি, জ্বালানি নিরাপত্তা এবং যুদ্ধকালীন কূটনীতির একটি গুরুত্বপূর্ণ সমসাময়িক উদাহরণ। বিসিএসের আন্তর্জাতিক বিষয়াবলি, পররাষ্ট্রনীতি এবং সমসাময়িক ভূ-রাজনীতি অধ্যয়নে এটি প্রাসঙ্গিক।",
+    "written_angle": "এই প্রতিবেদনটি যুদ্ধকালে জ্বালানি অবকাঠামোকে লক্ষ্য করে হামলার কৌশল, তার মানবিক প্রভাব এবং কূটনৈতিক সমঝোতার সীমাবদ্ধতা দেখায়। লিখিত পরীক্ষায় এটিকে যুদ্ধ, জ্বালানি নিরাপত্তা, এবং বড় শক্তিগুলোর নীতি পরিবর্তনের প্রভাবের উদাহরণ হিসেবে ব্যবহার করা যায়।"
+   },
+   "article_ids": [
+    "a_57c1a7a531cf0e05"
+   ],
+   "attempts": 1,
+   "created_at": "2026-10-24T11:39:11+00:00",
+   "event_id": "ev_e676f31697e5",
+   "included_in": "2026-10-24",
+   "last_error": null,
+   "screening": {
+    "categories": [
+     "international_affairs",
+     "foreign_policy_geopolitics"
+    ],
+    "decision": "maybe",
+    "exam_focus": "prelims",
+    "priority": 7.0,
+    "rationale": "যুক্তরাষ্ট্র-ইউক্রেন-রাশিয়া প্রেক্ষাপটের এই খবরটি ভূ-রাজনৈতিকভাবে গুরুত্বপূর্ণ।"
+   },
+   "screening_attempts": 0,
+   "status": "included",
+   "updated_at": "2026-10-24T11:39:11+00:00"
+  },
+  "ev_ed0c377d02c1": {
+   "analysis": null,
+   "article_ids": [
+    "a_c320dfca9fb95a84"
+   ],
+   "attempts": 0,
+   "created_at": "2026-10-24T11:39:11+00:00",
+   "event_id": "ev_ed0c377d02c1",
+   "included_in": null,
+   "last_error": null,
+   "screening": {
+    "categories": [],
+    "decision": "reject",
+    "exam_focus": "none",
+    "priority": 0.0,
+    "rationale": "এটি কৌতূহলোদ্দীপক গণিত/তারিখভিত্তিক তথ্য, BCS current affairs-এর জন্য তেমন গুরুত্বপূর্ণ নয়।"
+   },
+   "screening_attempts": 0,
+   "status": "rejected",
+   "updated_at": "2026-10-24T11:39:11+00:00"
+  },
+  "ev_f60182393c60": {
+   "analysis": null,
+   "article_ids": [
+    "a_12355be2b7fc7cb9"
+   ],
+   "attempts": 0,
+   "created_at": "2026-10-24T11:39:11+00:00",
+   "event_id": "ev_f60182393c60",
+   "included_in": null,
+   "last_error": null,
+   "screening": {
+    "categories": [
+     "bangladesh_affairs",
+     "constitution_governance"
+    ],
+    "decision": "maybe",
+    "exam_focus": "prelims",
+    "priority": 3.0,
+    "rationale": "সমঝোতা না করলে লাশ ফেলার হুমকি ধরনের সংবাদে সহিংসতা ও আইনশৃঙ্খলার ইস্যু থাকতে পারে, তবে তথ্য কম।"
+   },
+   "screening_attempts": 0,
+   "status": "maybe",
+   "updated_at": "2026-10-24T11:39:11+00:00"
+  },
+  "ev_f9c2956982ff": {
+   "analysed_at": "2026-10-24T11:39:11+00:00",
+   "analysis": {
+    "analysed_article_id": "a_9df4bd3d7552f817",
+    "attributed_claims": [
+     {
+      "attributed_to": "জাহাজভাঙা শিল্পের উদ্যোক্তারা",
+      "claim": "এ শিল্প লাল শ্রেণিতে থাকায় ইয়ার্ড স্থাপনের অনুমোদন পেতে ৯০ দিনের মতো সময় লাগে এবং এতে উদ্যোক্তারা আর্থিকভাবে ক্ষতিগ্রস্ত হচ্ছেন।",
+      "evidence": "“এ শিল্প লাল শ্রেণিতে থাকায় ইয়ার্ড স্থাপনের অনুমোদন পেতে ৯০ দিনের মতো সময় লাগে। এতে তাঁরা আর্থিকভাবে ক্ষতিগ্রস্ত হচ্ছেন।”"
+     },
+     {
+      "attributed_to": "পরিবেশবাদীরা",
+      "claim": "সরকারের সিদ্ধান্তের ফলে শ্রমিক ও পরিবেশ দুটোই ঝুঁকিতে পড়বে।",
+      "evidence": "“সরকারের এ সিদ্ধান্তের ফলে শ্রমিক ও পরিবেশ দুটোই ঝুঁকিতে পড়বে বলে আশঙ্কা করছেন পরিবেশবাদীরা।”"
+     },
+     {
+      "attributed_to": "পরিবেশবাদীরা",
+      "claim": "জাহাজভাঙা শিল্প উচ্চ ঝুঁকি ও দূষণকারী শিল্প; আইএলও এ শিল্পকে সবচেয়ে বিপজ্জনক হিসেবে আখ্যা দিয়েছে।",
+      "evidence": "“আন্তর্জাতিক শ্রম সংস্থা (আইএলও) এ শিল্পকে সবচেয়ে বিপজ্জনক হিসেবে আখ্যা দিয়েছে।”"
+     }
+    ],
+    "background_context": "জাহাজভাঙা শিল্পে জাহাজকে ভেঙে পুনঃব্যবহারযোগ্য উপাদান উদ্ধার করা হয়। এ ধরনের শিল্প সাধারণত পরিবেশ, শ্রমনিরাপত্তা এবং উপকূলীয় ব্যবস্থাপনার সঙ্গে ঘনিষ্ঠভাবে যুক্ত থাকে।",
+    "categories": [
+     "environment_climate",
+     "constitution_governance",
+     "bangladesh_affairs"
+    ],
+    "causes_effects": "কারণ হিসেবে প্রতিবেদনে বলা হয়েছে, ব্যবসায়ীরা অনুমোদন প্রক্রিয়া দ্রুত করতে চান এবং সরকার শিল্পকে সম্ভাবনাময় হিসেবে দেখছে। সম্ভাব্য ফল হিসেবে EIA ও কেন্দ্রীয় তদারকি কমে গেলে দূষণ পর্যবেক্ষণ দুর্বল হতে পারে, আর শ্রমিক ও উপকূলীয় পরিবেশের ঝুঁকি বাড়তে পারে।",
+    "criteria": {
+     "factual_density": 8.0,
+     "novelty": 8.0,
+     "significance": 8.0,
+     "syllabus_relevance": 9.0,
+     "written_potential": 9.0
+    },
+    "exam_focus": "both",
+    "headline_bn": "জাহাজভাঙা শিল্প লাল থেকে কমলা শ্রেণিতে নেওয়ার সিদ্ধান্ত",
+    "institutions": [
+     "প্রধানমন্ত্রীর কার্যালয়",
+     "পরিবেশ, বন ও জলবায়ু পরিবর্তন মন্ত্রণালয়",
+     "শিল্প মন্ত্রণালয়",
+     "নৌপরিবহন প্রতিমন্ত্রীর দপ্তর",
+     "মন্ত্রিপরিষদ বিভাগ",
+     "অর্থ বিভাগ",
+     "আইন ও সংসদবিষয়ক মন্ত্রণালয়",
+     "পরিবেশ অধিদপ্তর"
+    ],
+    "key_facts": [
+     {
+      "evidence": "“এ শিল্পকে লাল থেকে কমলা শ্রেণিতে নেওয়ার সিদ্ধান্ত নিয়েছে সরকার।”",
+      "fact": "জাহাজভাঙা শিল্পকে লাল থেকে কমলা শ্রেণিতে নেওয়ার সিদ্ধান্ত নিয়েছে সরকার।",
+      "prelims": true
+     },
+     {
+      "evidence": "“ইয়ার্ড স্থাপনের আগে পরিবেশগত প্রভাব সমীক্ষা করার বাধ্যবাধকতা উঠে যাওয়ার সুযোগ তৈরি হচ্ছে।”",
+      "fact": "কমলা শ্রেণিতে গেলে ইয়ার্ড স্থাপনের আগে পরিবেশগত প্রভাব সমীক্ষা [EIA] করার বাধ্যবাধকতা উঠতে পারে।",
+      "prelims": true
+     },
+     {
+      "evidence": "“গত ২৯ সেপ্টেম্বর এ শিল্পকে লাল থেকে কমলায় নিয়ে আসার বিষয়ে সিদ্ধান্ত নেয় এ-সংক্রান্ত কমিটি।”",
+      "fact": "গত ২৯ সেপ্টেম্বর এ সিদ্ধান্ত নেয় এ-সংক্রান্ত কমিটি।",
+      "prelims": true
+     },
+     {
+      "evidence": "“আগস্ট মাসে ... প্রধানমন্ত্রীর কার্যালয় থেকে এ কমিটি গঠন করে দেওয়া হয়েছিল।”",
+      "fact": "আগস্ট মাসে প্রধানমন্ত্রীর কার্যালয় এ-সংক্রান্ত কমিটি গঠন করে।",
+      "prelims": true
+     },
+     {
+      "evidence": "“কমিটির সভাপতি পরিবেশ, বন ও জলবায়ু পরিবর্তনমন্ত্রী আবদুল আউয়াল মিন্টু।”",
+      "fact": "কমিটির সভাপতি ছিলেন পরিবেশ, বন ও জলবায়ু পরিবর্তনমন্ত্রী আবদুল আউয়াল মিন্টু।",
+      "prelims": true
+     },
+     {
+      "evidence": "“পরিবেশ সংরক্ষণ বিধিমালা-২০২৩ অনুযায়ী, জাহাজভাঙা কার্যক্রম ও জাহাজভাঙা ইয়ার্ড দুটোই লাল শ্রেণির শিল্প।”",
+      "fact": "পরিবেশ সংরক্ষণ বিধিমালা-২০২৩ অনুযায়ী জাহাজভাঙা কার্যক্রম ও জাহাজভাঙা ইয়ার্ড দুটোই লাল শ্রেণির শিল্প।",
+      "prelims": true
+     }
+    ],
+    "mode": "full",
+    "score": 84.5,
+    "unsupported_dropped": 0,
+    "what_happened": "সরকার জাহাজভাঙা শিল্পকে লাল শ্রেণি থেকে কমলা শ্রেণিতে নেওয়ার সিদ্ধান্ত নিয়েছে। এতে ইয়ার্ড স্থাপনের আগে পরিবেশগত প্রভাব সমীক্ষা [EIA] করার বাধ্যবাধকতা উঠে যাওয়ার সুযোগ তৈরি হচ্ছে বলে প্রতিবেদনে বলা হয়েছে। সিদ্ধান্তটি পরিবেশ ও শ্রমিক নিরাপত্তার জন্য ঝুঁকি তৈরি করতে পারে বলে পরিবেশবাদীরা আশঙ্কা করছেন।",
+    "why_it_matters": "এটি পরিবেশ নিয়ন্ত্রণ, শিল্পনীতি এবং শ্রমিক নিরাপত্তা—তিনটি বিষয়কে একসঙ্গে জড়িত করেছে, যা BCS-এর লিখিত ও প্রিলিমস উভয়ের জন্য গুরুত্বপূর্ণ। জাহাজভাঙা শিল্প বাংলাদেশের উপকূলীয় পরিবেশ, প্রশাসনিক অনুমোদন প্রক্রিয়া এবং আন্তর্জাতিক মানদণ্ডের সঙ্গে যুক্ত একটি সংবেদনশীল খাত।",
+    "written_angle": "লিখিত পরীক্ষায় এ বিষয়টি পরিবেশগত শাসন, শিল্প অনুমোদন প্রক্রিয়া, এবং উন্নয়ন বনাম পরিবেশ সুরক্ষার দ্বন্দ্ব হিসেবে বিশ্লেষণ করা যায়। পাশাপাশি প্রশাসনিক সিদ্ধান্তে অংশীজনের অংশগ্রহণ, আদালতের রায়-আদেশের সঙ্গে সামঞ্জস্য, এবং শ্রমিক নিরাপত্তা—এই তিন দিকও তুলে ধরা যেতে পারে।"
+   },
+   "article_ids": [
+    "a_9df4bd3d7552f817"
+   ],
+   "attempts": 1,
+   "created_at": "2026-10-24T11:39:11+00:00",
+   "event_id": "ev_f9c2956982ff",
+   "included_in": "2026-10-24",
+   "last_error": null,
+   "screening": {
+    "categories": [
+     "environment_climate",
+     "constitution_governance"
+    ],
+    "decision": "select",
+    "exam_focus": "both",
+    "priority": 8.0,
+    "rationale": "জাহাজভাঙা শিল্পকে লাল থেকে কমলা শ্রেণিতে নেওয়ার সরকারি সিদ্ধান্ত পরিবেশ ও নীতিনির্ধারণের গুরুত্বপূর্ণ খবর।"
+   },
+   "screening_attempts": 0,
+   "status": "included",
+   "updated_at": "2026-10-24T11:39:11+00:00"
+  },
+  "ev_fe5a76a592e1": {
+   "analysis": null,
+   "article_ids": [
+    "a_af743c75eb5ea8f2"
+   ],
+   "attempts": 0,
+   "created_at": "2026-10-24T11:39:11+00:00",
+   "event_id": "ev_fe5a76a592e1",
+   "included_in": null,
+   "last_error": null,
+   "screening": {
+    "categories": [
+     "constitution_governance",
+     "bangladesh_affairs"
+    ],
+    "decision": "maybe",
+    "exam_focus": "written",
+    "priority": 6.0,
+    "rationale": "গণ-অভ্যুত্থান-পরবর্তী সংস্কার ও ক্ষমতা দখল নিয়ে বিশ্লেষণধর্মী আলোচনা আছে, যা শাসন ও রাজনৈতিক প্রেক্ষাপটে প্রাসঙ্গিক।"
+   },
+   "screening_attempts": 0,
+   "status": "maybe",
+   "updated_at": "2026-10-24T11:39:11+00:00"
+  }
+ },
+ "last_successful_edition": "2026-10-24",
  "notes": [],
  "runs": [
   {
@@ -36,10 +2414,69 @@
    "run_id": "483d68df27",
    "started_at": "2026-10-24T11:17:30+00:00",
    "stories": 0
+  },
+  {
+   "dry_run": false,
+   "edition_date": "2026-10-24",
+   "errors": [
+    "Source dhakatribune failed: robots.txt disallows https://www.dhakatribune.com/feed/",
+    "Source dhakatribune_business failed: robots.txt disallows https://www.dhakatribune.com/feed/business"
+   ],
+   "estimated_cost_usd": 0.0919,
+   "finished_at": "2026-10-24T11:40:45+00:00",
+   "llm_calls": 11,
+   "llm_usage": {
+    "gemini": {
+     "calls_incl_retries": 0,
+     "input_tokens": 0,
+     "output_tokens": 0,
+     "requests": 0
+    },
+    "openai": {
+     "calls_incl_retries": 11,
+     "input_tokens": 28345,
+     "output_tokens": 15691,
+     "requests": 11
+    }
+   },
+   "mcqs": 3,
+   "outcome": "delivered",
+   "partial": false,
+   "providers_disabled": {},
+   "run_id": "d2ce6ff001",
+   "started_at": "2026-10-24T11:39:11+00:00",
+   "stories": 8
   }
  ],
  "schema_version": 2,
- "source_health": {},
+ "source_health": {
+  "dailystar": {
+   "consecutive_failures": 0,
+   "last_attempt": "2026-10-24T11:39:11+00:00",
+   "last_item_count": 10,
+   "last_success": "2026-10-24T11:39:11+00:00",
+   "last_warnings": []
+  },
+  "dhakatribune": {
+   "consecutive_failures": 1,
+   "last_attempt": "2026-10-24T11:39:11+00:00",
+   "last_error": "robots.txt disallows https://www.dhakatribune.com/feed/",
+   "last_failure": "2026-10-24T11:39:11+00:00"
+  },
+  "dhakatribune_business": {
+   "consecutive_failures": 1,
+   "last_attempt": "2026-10-24T11:39:11+00:00",
+   "last_error": "robots.txt disallows https://www.dhakatribune.com/feed/business",
+   "last_failure": "2026-10-24T11:39:11+00:00"
+  },
+  "prothomalo": {
+   "consecutive_failures": 0,
+   "last_attempt": "2026-10-24T11:39:11+00:00",
+   "last_item_count": 40,
+   "last_success": "2026-10-24T11:39:11+00:00",
+   "last_warnings": []
+  }
+ },
  "subscribers": {
   "1033339929": {
    "chat_id": "1033339929",
@@ -72,5 +2509,5 @@
  "telegram": {
   "last_update_id": 894171900
  },
- "updated_at": "2026-10-24T11:37:12+00:00"
+ "updated_at": "2026-10-24T11:40:45+00:00"
 }
