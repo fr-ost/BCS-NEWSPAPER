@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" width="640" height="640">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#00875F"/><stop offset="1" stop-color="#004D38"/>
+    </linearGradient>
+    <filter id="sh" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#00261b" flood-opacity="0.45"/>
+    </filter>
+  </defs>
+  <rect width="640" height="640" fill="url(#bg)"/>
+  <!-- red sun from the flag, rising behind the paper -->
+  <circle cx="320" cy="250" r="150" fill="#F42A41"/>
+  <!-- newspaper -->
+  <g filter="url(#sh)">
+    <path d="M150 250 h300 a20 20 0 0 1 20 20 v190 a30 30 0 0 1 -30 30 h-270 a30 30 0 0 1 -30 -30 v-200 a10 10 0 0 1 10 -10z" fill="#FFFFFF"/>
+    <path d="M470 300 h20 a10 10 0 0 1 10 10 v150 a30 30 0 0 1 -30 30" fill="#E8EEEB"/>
+  </g>
+  <!-- masthead -->
+  <text x="300" y="322" text-anchor="middle" font-family="DejaVu Sans, Arial, Helvetica, sans-serif" font-weight="800" font-size="76" letter-spacing="6" fill="#004D38">BCS</text>
+  <rect x="172" y="340" width="256" height="6" rx="3" fill="#F42A41"/>
+  <!-- headline lines -->
+  <rect x="172" y="366" width="120" height="14" rx="7" fill="#9FB5AC"/>
+  <rect x="172" y="392" width="120" height="14" rx="7" fill="#C7D5CF"/>
+  <rect x="172" y="418" width="120" height="14" rx="7" fill="#C7D5CF"/>
+  <rect x="172" y="444" width="90"  height="14" rx="7" fill="#C7D5CF"/>
+  <!-- check mark box = MCQ -->
+  <rect x="312" y="366" width="116" height="92" rx="14" fill="#00875F"/>
+  <path d="M338 412 l20 20 l42 -44" fill="none" stroke="#FFFFFF" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
