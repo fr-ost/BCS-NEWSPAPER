@@ -68,6 +68,7 @@ class FakeTelegram:
         self.sent: list[str] = []
         self.sent_to: list[tuple[str, str]] = []
         self.replies: list[tuple[str, str]] = []
+        self.documents: list[tuple[str, str, bytes, str]] = []
         self.calls = 0
         self.fail_on = fail_on or set()
         self.permanent = permanent
@@ -93,6 +94,17 @@ class FakeTelegram:
         self.sent_to.append((chat_id, text))
         return SendResult(message_id=1000 + len(self.sent))
 
+    def send_document(self, chat_id, content: bytes, filename: str, caption: str = "") -> SendResult:
+        """Counted as an edition message (call number) like send_message."""
+        chat_id = str(chat_id)
+        self.calls += 1
+        if chat_id in self.gone:
+            raise TelegramError("Forbidden: bot was blocked by the user", permanent=True, recipient_gone=True)
+        if self.calls in self.fail_on:
+            raise TelegramError("simulated failure", permanent=self.permanent)
+        self.documents.append((chat_id, filename, content, caption))
+        return SendResult(message_id=5000 + len(self.documents))
+
 
 def no_sleep(_seconds):
     return None
@@ -100,7 +112,7 @@ def no_sleep(_seconds):
 
 @pytest.fixture
 def make_pipeline(settings, sources):
-    def factory(provider=None, telegram=None, dry_run=False, feed_dir: Path | None = None, store=None):
+    def factory(provider=None, telegram=None, dry_run=False, feed_dir: Path | None = None, store=None, pdf_builder=None):
         provider = provider or MockProvider()
         store = store or StateStore(settings.state_path, settings.state.retention_days, settings.state.max_run_history)
         return Pipeline(
@@ -112,6 +124,7 @@ def make_pipeline(settings, sources):
             telegram=telegram,
             dry_run=dry_run,
             offline_feed_dir=feed_dir or SAMPLE_DIR / "feeds",
+            pdf_builder=pdf_builder,
         )
 
     return factory

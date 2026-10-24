@@ -143,12 +143,16 @@ class TelegramClient:
     def _redact(self, text: str) -> str:
         return text.replace(self._token, "***") if self._token else text
 
-    def _post(self, method: str, payload: dict) -> dict:
+    def _post(self, method: str, payload: dict, files: dict | None = None) -> dict:
         url = f"{self.api_base}/bot{self._token}/{method}"
         last: TelegramError | None = None
         for attempt in range(self.max_retries + 1):
             try:
-                resp = self.session.post(url, json=payload, timeout=self.timeout)
+                if files:
+                    # multipart/form-data; file content is bytes so every retry re-sends it fully
+                    resp = self.session.post(url, data=payload, files=files, timeout=max(self.timeout, 120))
+                else:
+                    resp = self.session.post(url, json=payload, timeout=self.timeout)
             except requests.RequestException as exc:
                 # Note: a timeout may hide a delivered message; retries are bounded.
                 last = TelegramError(f"Network error calling Telegram: {type(exc).__name__}")
@@ -213,6 +217,17 @@ class TelegramClient:
                 data = self._post("sendMessage", payload)
                 return SendResult(message_id=int(data["result"]["message_id"]), fallback_plain=True)
             raise
+        except (KeyError, TypeError, ValueError) as exc:
+            raise TelegramError("Telegram response missing message_id") from exc
+
+    def send_document(self, chat_id: str | int, content: bytes, filename: str, caption: str = "") -> SendResult:
+        """Send a file (e.g. the edition PDF) to one chat."""
+        chat_id = str(chat_id)
+        self._space(chat_id)
+        payload = {"chat_id": chat_id, "caption": caption[:1000]}
+        data = self._post("sendDocument", payload, files={"document": (filename, content, "application/pdf")})
+        try:
+            return SendResult(message_id=int(data["result"]["message_id"]))
         except (KeyError, TypeError, ValueError) as exc:
             raise TelegramError("Telegram response missing message_id") from exc
 

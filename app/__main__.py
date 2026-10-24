@@ -2,6 +2,8 @@
 
 Commands:
   run              Build today's edition and deliver it to Telegram.
+  run --manual     Extra edition with whatever is new since the last one
+                   (used by manual "live" runs; can be run any number of times).
   run --dry-run    Build with real feeds and the real model, but never send.
                    Uses a scratch state file, so production state is untouched.
   run --offline    Fully offline dry run: bundled sample feeds + mock model.
@@ -29,6 +31,7 @@ from .config import PROJECT_ROOT, ConfigError, Settings, load_settings
 from .extractor import Extraction, clean_article_html, extract_article
 from .http import FetchError, Fetcher, RobotsDisallowed
 from .llm import LLMError, build_llm, build_provider
+from .pdf import make_pdf_builder
 from .pipeline import Pipeline
 from .sources import load_sources
 from .state import StateError, StateStore, StateVersionError
@@ -174,6 +177,7 @@ def cmd_run(settings: Settings, args) -> int:
         telegram=telegram,
         dry_run=dry_run,
         offline_feed_dir=feed_dir,
+        pdf_builder=None if args.no_pdf else make_pdf_builder(),
     )
     edition_date = date.fromisoformat(args.date) if args.date else None
     now = utcnow()
@@ -182,7 +186,7 @@ def cmd_run(settings: Settings, args) -> int:
         from datetime import datetime, timezone
 
         now = datetime(2026, 10, 23, 2, 0, tzinfo=timezone.utc)
-    result = pipeline.run(now=now, edition_date=edition_date)
+    result = pipeline.run(now=now, edition_date=edition_date, manual=args.manual)
     payload = {
         "outcome": result.outcome,
         "edition_date": result.edition_date,
@@ -373,6 +377,8 @@ def main(argv: list[str] | None = None) -> int:
     run.add_argument("--offline", action="store_true", help="sample feeds + mock model; implies --dry-run")
     run.add_argument("--provider", choices=["openai", "gemini", "ollama", "mock"], help="use only this provider (no fallback)")
     run.add_argument("--date", help="edition date YYYY-MM-DD (testing)")
+    run.add_argument("--manual", action="store_true", help="extra edition even if today's was already sent (only new stories)")
+    run.add_argument("--no-pdf", action="store_true", help="don't create/send the PDF")
     sub.add_parser("test-telegram", help="register new subscribers and send each a test message")
     sub.add_parser("subscribers", help="read /start and /stop now and list subscribers")
     sub.add_parser("verify-sources", help="check configured feeds live")

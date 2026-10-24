@@ -2,7 +2,9 @@
 render → deliver, with a state checkpoint after every stage and story.
 
 Idempotency rules:
-- One edition per Asia/Dhaka date. A delivered edition is never re-sent.
+- The scheduled run makes one edition per Asia/Dhaka date and never re-sends it.
+- A manual run (``manual=True``) always makes an extra edition with whatever
+  is new since the last one; stories already sent are never repeated.
 - An edition is rendered once and its chunks stored before sending. Delivery
   is tracked per subscriber and per chunk; a retry sends only the chunks a
   subscriber has not yet received.
@@ -13,6 +15,7 @@ Idempotency rules:
 
 from __future__ import annotations
 
+import hashlib
 import json
 import logging
 import uuid
@@ -36,7 +39,7 @@ from .llm import (
     TransientLLMError,
 )
 from .questions import generate_mcqs
-from .render import render_edition, render_failure_notice
+from .render import bn_date, render_edition, render_failure_notice, render_pdf_html
 from .scoring import rank_stories
 from .screening import screen_events
 from .sources import Source
@@ -53,6 +56,7 @@ MAX_LINKS_PER_STORY = 4
 SOURCE_FAILURE_ALERT = 3
 
 ArticleFetcher = Callable[[str], Extraction]
+PdfBuilder = Callable[[str], bytes]  # HTML -> PDF bytes
 
 
 @dataclass
@@ -85,6 +89,7 @@ class Pipeline:
         telegram: TelegramClient | None = None,
         dry_run: bool = False,
         offline_feed_dir: Path | None = None,
+        pdf_builder: PdfBuilder | None = None,
     ):
         self.s = settings
         self.sources = sources
@@ -96,6 +101,8 @@ class Pipeline:
         self.telegram = telegram
         self.dry_run = dry_run
         self.offline_feed_dir = offline_feed_dir
+        self.pdf_builder = pdf_builder
+        self._pdf_cache: dict[str, bytes | None] = {}
         self.state: dict = {}
         self.errors: list[str] = []
         self.llm_stop_reason: str | None = None  # "quota" | "permanent: ..." when the model became unusable
@@ -134,18 +141,18 @@ class Pipeline:
         return sorted(arts, key=key)
 
     # ------------------------------------------------------------------ run
-    def run(self, now: datetime | None = None, edition_date: date | None = None) -> RunResult:
+    def run(self, now: datetime | None = None, edition_date: date | None = None, manual: bool = False) -> RunResult:
         now = now or utcnow()
         tz = get_tz(self.s.edition.timezone)
         ed_date = edition_date or now.astimezone(tz).date()
         key = ed_date.isoformat()
         self.state = self.store.load()
-        run_record = {"run_id": uuid.uuid4().hex[:10], "started_at": iso(now), "edition_date": key, "dry_run": self.dry_run}
+        run_record = {"run_id": uuid.uuid4().hex[:10], "started_at": iso(now), "edition_date": key, "dry_run": self.dry_run, "manual": manual}
         if self.store.recovered:
             self._error("State had to be recovered or reset; duplicate protection may be weaker for this run")
         result = RunResult(outcome="failed", edition_date=key)
         try:
-            result = self._run(now, ed_date, key)
+            result = self._run(now, ed_date, key, manual)
         except Exception as exc:
             self._error(f"Unexpected error: {type(exc).__name__}: {exc}")
             result = RunResult(outcome="failed", edition_date=key)
@@ -197,8 +204,17 @@ class Pipeline:
             self._error(f"Could not read new subscribers this run: {exc}")
         self._save()
 
-    def _run(self, now: datetime, ed_date: date, key: str) -> RunResult:
+    def _run(self, now: datetime, ed_date: date, key: str, manual: bool = False) -> RunResult:
         self._sync_subscribers(now)
+        manual = manual and not self.dry_run
+        if manual:
+            # Finish any interrupted edition from today before starting another.
+            for ed in self.state["editions"].values():
+                if ed.get("edition_date", ed["date"][:10]) == key and ed["status"] in ("ready", "delivering") and ed.get("chunks"):
+                    log.info("Resuming delivery of edition %s before a new manual edition", ed["date"])
+                    return self._deliver(ed)
+            n = 1 + sum(1 for k in self.state["editions"] if k.startswith(f"{key}-m"))
+            key = f"{key}-m{n}"
         edition = self.state["editions"].get(key)
         if edition and edition["status"] == "delivered":
             log.info("Edition %s already delivered; nothing to do", key)
@@ -216,6 +232,8 @@ class Pipeline:
         previous = edition or {}
         edition = {
             "date": key,
+            "edition_date": ed_date.isoformat(),
+            "manual": manual,
             "status": "building",
             "created_at": iso(now),
             "attempts": int(previous.get("attempts", 0)) + 1,
@@ -266,6 +284,10 @@ class Pipeline:
             self.sources,
             self.s.edition.mcq_count,
             notices=self._model_notices() + self._source_notices(),
+            extra=manual,
+            since_last=any(
+                e.get("edition_date") == ed_date.isoformat() and e["status"] == "delivered" for e in self.state["editions"].values()
+            ),
         )
         chunks = chunk_sections(sections, self.s.telegram.max_message_chars)
         edition.update(
@@ -278,6 +300,8 @@ class Pipeline:
             chunks=[{"index": i, "text": c, "sha": sha256(c)[:16], "status": "pending", "message_id": None, "attempts": 0} for i, c in enumerate(chunks)],
         )
         output_path = self._write_output(key, chunks, edition)
+        if stories:
+            self._build_pdf(edition, ed_date, stories, mcqs, partial_reasons, manual)
         self._save()
 
         if self.dry_run:
@@ -522,31 +546,32 @@ class Pipeline:
             self._save()  # checkpoint after every story
 
     # ------------------------------------------------------------------ Stage E
+    def _story_for_event(self, ev: dict) -> dict:
+        arts = self._articles_of(ev)
+        analysed = self.state["articles"].get(ev["analysis"].get("analysed_article_id")) or arts[0]
+        links, names = [], []
+        for a in [analysed, *[x for x in arts if x is not analysed]]:
+            if a["source_name"] not in names and len(links) < MAX_LINKS_PER_STORY:
+                names.append(a["source_name"])
+                links.append((a["source_name"], a["url"]))
+        return {
+            "event_id": ev["event_id"],
+            "analysis": ev["analysis"],
+            "score": ev["analysis"]["score"],
+            "published_at": analysed.get("published_at"),
+            "date_status": analysed.get("date_status"),
+            "source_names": names,
+            "links": links,
+            "primary_url": analysed["url"],
+            "primary_source": analysed["source_name"],
+        }
+
     def _select(self, now: datetime) -> list[dict]:
-        stories = []
-        for ev in self.state["events"].values():
-            if ev["status"] != "analysed" or not ev.get("analysis") or not self._fresh(self._event_time(ev), now):
-                continue
-            arts = self._articles_of(ev)
-            analysed = self.state["articles"].get(ev["analysis"].get("analysed_article_id")) or arts[0]
-            links, names = [], []
-            for a in [analysed, *[x for x in arts if x is not analysed]]:
-                if a["source_name"] not in names and len(links) < MAX_LINKS_PER_STORY:
-                    names.append(a["source_name"])
-                    links.append((a["source_name"], a["url"]))
-            stories.append(
-                {
-                    "event_id": ev["event_id"],
-                    "analysis": ev["analysis"],
-                    "score": ev["analysis"]["score"],
-                    "published_at": analysed.get("published_at"),
-                    "date_status": analysed.get("date_status"),
-                    "source_names": names,
-                    "links": links,
-                    "primary_url": analysed["url"],
-                    "primary_source": analysed["source_name"],
-                }
-            )
+        stories = [
+            self._story_for_event(ev)
+            for ev in self.state["events"].values()
+            if ev["status"] == "analysed" and ev.get("analysis") and self._articles_of(ev) and self._fresh(self._event_time(ev), now)
+        ]
         return rank_stories(stories, self.s.edition.min_story_score, self.s.edition.max_stories)
 
     # ------------------------------------------------------------------ Stage G
@@ -584,6 +609,73 @@ class Pipeline:
             self._error(f"Could not write edition output: {exc}")
             return None
 
+    def _pdf_path(self, key: str) -> Path:
+        return self.s.output_dir / f"edition-{key}{'-dry-run' if self.dry_run else ''}.pdf"
+
+    def _build_pdf(self, edition: dict, ed_date: date, stories: list[dict], mcqs: list[dict], partial_reasons: list[str], extra: bool) -> bytes | None:
+        """Render the edition as a PDF. Best effort: never blocks the text edition."""
+        key = edition["date"]
+        if self.pdf_builder is None:
+            return None
+        try:
+            html = render_pdf_html(ed_date, stories, mcqs, partial_reasons, self.sources, extra=extra)
+            pdf = self.pdf_builder(html)
+            if not pdf.startswith(b"%PDF"):
+                raise ValueError("builder did not return a PDF")
+            path = self._pdf_path(key)
+            path.parent.mkdir(parents=True, exist_ok=True)
+            path.write_bytes(pdf)
+        except Exception as exc:  # PDF problems must never stop delivery
+            edition["pdf_error"] = self.s.secrets.redact(f"{type(exc).__name__}: {exc}")[:300]
+            self._error(f"PDF could not be created; sending text only: {exc}")
+            self._pdf_cache[key] = None
+            return None
+        edition["pdf"] = {"file": path.name, "bytes": len(pdf), "sha": hashlib.sha256(pdf).hexdigest()[:16]}
+        edition.pop("pdf_error", None)
+        self._pdf_cache[key] = pdf
+        return pdf
+
+    def _pdf_for(self, edition: dict) -> bytes | None:
+        """PDF for delivery: from this run, from disk, or rebuilt from state
+        (a resumed delivery may run on a fresh machine without the file)."""
+        key = edition["date"]
+        if key in self._pdf_cache:
+            return self._pdf_cache[key]
+        if not edition.get("pdf") or not edition.get("story_event_ids"):
+            return None
+        path = self._pdf_path(key)
+        if path.exists():
+            self._pdf_cache[key] = path.read_bytes()
+            return self._pdf_cache[key]
+        events = [self.state["events"].get(eid) for eid in edition["story_event_ids"]]
+        if not all(ev and ev.get("analysis") and self._articles_of(ev) for ev in events):
+            self._pdf_cache[key] = None
+            return None
+        stories = [self._story_for_event(ev) for ev in events]
+        ed_date = date.fromisoformat(edition.get("edition_date", key[:10]))
+        return self._build_pdf(edition, ed_date, stories, edition.get("mcqs", []), edition.get("partial_reasons", []), bool(edition.get("manual")))
+
+    def _send_pdf(self, sub: dict, record: dict, edition: dict, pdf: bytes, now: datetime) -> bool:
+        """Send the PDF to one subscriber. Returns False if delivery must stop."""
+        ed_date = date.fromisoformat(edition.get("edition_date", edition["date"][:10]))
+        suffix = f"-extra{edition['date'].rsplit('-m', 1)[-1]}" if edition.get("manual") else ""
+        filename = f"BCS-Briefing-{ed_date.isoformat()}{suffix}.pdf"
+        caption = f"📄 আজকের ব্রিফিং (PDF) — {bn_date(ed_date)}"
+        try:
+            sent = self.telegram.send_document(sub["chat_id"], pdf, filename, caption)
+        except TelegramError as exc:
+            record["last_error"] = self.s.secrets.redact(str(exc))[:300]
+            if exc.recipient_gone:
+                deactivate(self.state, sub["chat_id"], "unreachable (blocked bot or left)", now)
+                record["status"] = "recipient_gone"
+            else:
+                self._error(f"PDF delivery to subscriber {sub.get('name', '?')} failed: {exc}")
+            self._save()
+            return False
+        record["pdf_message_id"] = sent.message_id
+        self._save()
+        return True
+
     def _deliver(self, edition: dict) -> RunResult:
         """Send the stored chunks to every active subscriber.
 
@@ -612,6 +704,7 @@ class Pipeline:
         edition["status"] = "delivering"
         deliveries = edition.setdefault("deliveries", {})
         chunks = sorted(edition["chunks"], key=lambda c: c["index"])
+        pdf = self._pdf_for(edition)
         for sub in recipients:
             cid = sub["chat_id"]
             record = deliveries.setdefault(cid, {"sent": {}, "status": "pending", "attempts": 0})
@@ -636,6 +729,9 @@ class Pipeline:
                 record["sent"][idx] = sent.message_id
                 self._save()  # checkpoint after each confirmed message
             else:
+                # All text messages arrived; the PDF comes last.
+                if pdf and not record.get("pdf_message_id") and not self._send_pdf(sub, record, edition, pdf, now):
+                    continue
                 record["status"] = "done"
                 record["delivered_at"] = iso(utcnow())
                 self._save()
