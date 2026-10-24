@@ -15,7 +15,7 @@ on:
         options:
           - offline         # sample data + mock model: no API calls at all
           - dry-run         # real feeds + real model (OpenAI, Gemini fallback), no Telegram, state untouched
-          - live            # the real daily edition (same as the schedule)
+          - live            # send now: an extra edition with anything new (any number of times a day)
           - subscribers     # register new /start and /stop now, list subscribers
           - test-telegram   # register new subscribers, send each a test message
           - verify-sources  # check every configured feed live
@@ -38,11 +38,20 @@ jobs:
     timeout-minutes: 30
     env:
       MODE: ${{ github.event_name == 'schedule' && 'live' || inputs.mode }}
+      EVENT: ${{ github.event_name }}
       PYTHONUNBUFFERED: "1"
     steps:
       - name: Warn if repository is public
-        if: ${{ !github.event.repository.private }}
-        run: echo "::warning::This repository is public. state/state.json (reading history and your subscribers' Telegram chat ids and first names) is committed here. Make the repository private (Settings → General → Danger Zone)."
+        # Scheduled runs don't carry repository details in their event payload,
+        # so ask the API. Needs only the always-granted metadata permission.
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          visibility="$(gh api "repos/${GITHUB_REPOSITORY}" --jq .visibility 2>/dev/null || echo unknown)"
+          echo "Repository visibility: ${visibility}"
+          if [ "$visibility" = "public" ]; then
+            echo "::warning::This repository is public. state/state.json (reading history and your subscribers' Telegram chat ids and first names) is committed here. Make the repository private (Settings → General → Danger Zone)."
+          fi
 
       - name: Check out repository (includes saved state)
         uses: actions/checkout@v5
@@ -56,6 +65,16 @@ jobs:
 
       - name: Install pinned dependencies
         run: pip install -r requirements.txt -r requirements-dev.txt
+
+      - name: Install Bengali fonts for the PDF
+        if: env.MODE == 'live' || env.MODE == 'dry-run' || env.MODE == 'offline'
+        # Best effort: without it the PDF may lack Bengali glyphs, but text messages are unaffected.
+        continue-on-error: true
+        timeout-minutes: 5
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq --no-install-recommends fonts-noto-core
+          fc-list | grep -i -c bengali || true
 
       - name: Unit tests (fully mocked, no API calls)
         if: env.MODE == 'live' || env.MODE == 'dry-run' || env.MODE == 'offline'
@@ -73,7 +92,10 @@ jobs:
           GEMINI_MODEL: ${{ vars.GEMINI_MODEL }}
         run: |
           case "$MODE" in
-            live)           python -m app run ;;
+            live)
+              # The 08:00 schedule sends one edition per day. A manual run always sends an
+              # extra edition with whatever is new since the last one.
+              if [ "$EVENT" = "schedule" ]; then python -m app run; else python -m app run --manual; fi ;;
             dry-run)        python -m app run --dry-run ;;
             offline)        python -m app run --offline ;;
             subscribers)    python -m app subscribers ;;
@@ -124,7 +146,7 @@ jobs:
 
       - name: Upload edition and diagnostics
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: briefing-${{ env.MODE }}-${{ github.run_id }}
           path: |

@@ -10,6 +10,7 @@ from __future__ import annotations
 
 import html
 from datetime import date
+from pathlib import Path
 
 from .config import SUBJECTS
 from .sources import Source
@@ -108,8 +109,16 @@ def render_edition(
     sources: list[Source],
     mcq_target: int,
     notices: list[str] | None = None,
+    extra: bool = False,
+    since_last: bool = False,
 ) -> list[str]:
-    """Return logical sections (each a string of newline-joined lines)."""
+    """Return logical sections (each a string of newline-joined lines).
+
+    ``extra`` marks an additional (manually triggered) edition, which only
+    carries stories not sent in an earlier edition. ``since_last`` words an
+    empty edition as "nothing new since the last briefing" (an earlier
+    edition already went out today).
+    """
     story_sections = [
         "\n".join(_story_section(i, s, official_references(s["analysis"], sources))) for i, s in enumerate(stories, start=1)
     ]
@@ -132,7 +141,8 @@ def render_edition(
         mcq_sections.append("\n".join(a_lines))
 
     minutes = estimate_minutes(story_sections + mcq_sections)
-    header = [f"📰 <b>বিসিএস দৈনিক ব্রিফিং</b> — {bn_date(edition_date)}"]
+    title = "🔄 <b>বিসিএস ব্রিফিং: অতিরিক্ত আপডেট</b>" if extra else "📰 <b>বিসিএস দৈনিক ব্রিফিং</b>"
+    header = [f"{title} — {bn_date(edition_date)}"]
     if stories:
         header.append(f"📚 {bn_num(len(stories))}টি খবর · ⏱ পড়তে প্রায় {bn_num(minutes)} মিনিট")
     if partial_reasons:
@@ -142,7 +152,10 @@ def render_edition(
             header.append(f"   • বিশ্লেষণ বাকি আছে এমন প্রার্থী খবর: {bn_num(unprocessed)}টি (পরে আবার চেষ্টা করা হবে)")
     if not stories:
         header.append("")
-        header.append("আজ বিসিএস-এর জন্য যথেষ্ট প্রাসঙ্গিক ও যাচাইযোগ্য কোনো খবর পাওয়া যায়নি। অপ্রাসঙ্গিক খবর দিয়ে ব্রিফিং পূরণ করা হয়নি।")
+        if extra or since_last:
+            header.append("সর্বশেষ ব্রিফিংয়ের পর বিসিএস-এর জন্য নতুন কোনো প্রাসঙ্গিক ও যাচাইযোগ্য খবর পাওয়া যায়নি। আগে পাঠানো খবর আবার পাঠানো হয়নি।")
+        else:
+            header.append("আজ বিসিএস-এর জন্য যথেষ্ট প্রাসঙ্গিক ও যাচাইযোগ্য কোনো খবর পাওয়া যায়নি। অপ্রাসঙ্গিক খবর দিয়ে ব্রিফিং পূরণ করা হয়নি।")
     elif len(mcqs) < mcq_target:
         header.append(f"ℹ️ যাচাইকৃত তথ্য থেকে {bn_num(len(mcqs))}টি নির্ভরযোগ্য MCQ তৈরি করা গেছে (লক্ষ্য {bn_num(mcq_target)}টি)।")
 
@@ -167,3 +180,141 @@ def render_failure_notice(edition_date: date, reason: str, unprocessed: int) -> 
         lines.append(f"অপেক্ষমাণ প্রার্থী খবর: {bn_num(unprocessed)}টি — পরের রানে নিয়ন্ত্রিতভাবে আবার চেষ্টা করা হবে।")
     lines.append("কোনো খবর বা বিশ্লেষণ বানিয়ে পাঠানো হয়নি।")
     return "\n".join(lines)
+
+
+# --------------------------------------------------------------------- PDF
+
+LOGO_PATH = Path(__file__).resolve().parent.parent / "assets" / "logo.png"
+
+PDF_CSS = """
+@page { size: A4; margin: 14mm 13mm 16mm 13mm; }
+* { box-sizing: border-box; }
+body { margin: 0; color: #1d2b26; font-size: 10.5pt; line-height: 1.55;
+  font-family: "Noto Sans Bengali", "Noto Serif Bengali", "Hind Siliguri", "Lohit Bengali", "Kalpurush", "SolaimanLipi", "Noto Sans", sans-serif; }
+a { color: #00694a; text-decoration: none; }
+.masthead { display: flex; align-items: center; gap: 12px; background: #00563f; color: #fff;
+  border-radius: 10px; padding: 12px 16px; border-bottom: 4px solid #f42a41; }
+.masthead img { width: 52px; height: 52px; border-radius: 50%; }
+.masthead h1 { margin: 0; font-size: 19pt; line-height: 1.25; }
+.masthead .meta { font-size: 10pt; opacity: .9; }
+.notice { margin: 10px 0 0; padding: 8px 12px; border-radius: 8px; background: #fff4f4; border-left: 4px solid #f42a41; font-size: 9.5pt; }
+.notice.info { background: #eef6f2; border-left-color: #00875f; }
+.story { margin: 14px 0 0; padding: 10px 14px 12px; border: 1px solid #d5e2dc; border-radius: 10px; break-inside: avoid; page-break-inside: avoid; }
+.story h2 { margin: 0 0 4px; font-size: 13pt; line-height: 1.35; color: #00563f; }
+.tags { font-size: 8.8pt; color: #4d6159; margin-bottom: 6px; }
+.chip { display: inline-block; padding: 0 7px; margin-right: 4px; border-radius: 9px; background: #e3efe9; color: #00563f; }
+.chip.score { background: #fde8ea; color: #b3172a; }
+.excerpt { font-size: 9pt; color: #9a3412; margin: 2px 0 6px; }
+h3 { margin: 8px 0 2px; font-size: 10.5pt; color: #00563f; }
+h3 small { font-weight: normal; color: #6b7c75; font-size: 8.5pt; }
+p { margin: 2px 0; }
+ul { margin: 2px 0 2px 18px; padding: 0; }
+li { margin: 1px 0; }
+li.prelims::marker { content: "📌 "; }
+.sources { margin-top: 6px; font-size: 8.8pt; color: #4d6159; }
+.section-title { margin: 18px 0 6px; font-size: 14pt; color: #00563f; border-bottom: 2px solid #d5e2dc; padding-bottom: 3px; }
+.mcq { margin: 8px 0; break-inside: avoid; }
+.mcq .opts { display: grid; grid-template-columns: 1fr 1fr; gap: 2px 18px; margin: 3px 0 0 14px; }
+.answers { break-before: page; page-break-before: always; }
+.answer { margin: 6px 0; break-inside: avoid; }
+.footer { margin-top: 18px; font-size: 8.5pt; color: #6b7c75; border-top: 1px solid #d5e2dc; padding-top: 6px; }
+"""
+
+
+def _logo_data_uri() -> str:
+    try:
+        import base64
+
+        return "data:image/png;base64," + base64.b64encode(LOGO_PATH.read_bytes()).decode()
+    except OSError:
+        return ""
+
+
+def _pdf_story(n: int, story: dict, sources: list[Source]) -> str:
+    note = story["analysis"]
+    cats = "".join(f'<span class="chip">{esc(SUBJECTS[c])}</span>' for c in note["categories"] if c in SUBJECTS)
+    focus = FOCUS_LABELS.get(note.get("exam_focus"), "প্রিলি")
+    published = parse_iso(story.get("published_at"))
+    when = bn_date(published.date()) if published and story.get("date_status") == "ok" else "প্রকাশের তারিখ যাচাই করা যায়নি"
+    parts = [
+        '<section class="story">',
+        f"<h2>{bn_num(n)}. {esc(note['headline_bn'])}</h2>",
+        f'<div class="tags">{cats}<span class="chip">{focus}</span><span class="chip score">স্কোর {bn_num(int(round(note["score"])))}/১০০</span>'
+        f" &nbsp;📰 {esc(', '.join(story['source_names']))} · {when}</div>",
+    ]
+    if note.get("mode") == "excerpt_only":
+        parts.append('<div class="excerpt">⚠️ শুধু সংক্ষিপ্তাংশ (excerpt) থেকে তৈরি — পূর্ণ প্রতিবেদন পাওয়া যায়নি।</div>')
+    parts.append(f"<h3>কী ঘটেছে</h3><p>{esc(note['what_happened'])}</p>")
+    if note.get("why_it_matters"):
+        parts.append(f"<h3>বিসিএস-এ কেন গুরুত্বপূর্ণ</h3><p>{esc(note['why_it_matters'])}</p>")
+    prelims = [f for f in note["key_facts"] if f.get("prelims")]
+    others = [f for f in note["key_facts"] if not f.get("prelims")]
+    if others:
+        parts.append("<h3>গুরুত্বপূর্ণ তথ্য <small>(প্রতিবেদন থেকে)</small></h3><ul>" + "".join(f"<li>{esc(f['fact'])}</li>" for f in others) + "</ul>")
+    if prelims:
+        parts.append("<h3>📌 প্রিলির জন্য মনে রাখুন <small>(প্রতিবেদন থেকে)</small></h3><ul>" + "".join(f"<li>{esc(f['fact'])}</li>" for f in prelims) + "</ul>")
+    if note.get("attributed_claims"):
+        parts.append("<h3>উদ্ধৃত দাবি <small>(যাচাইকৃত তথ্য নয়)</small></h3><ul>"
+                     + "".join(f"<li>{esc(c['attributed_to'])}: {esc(c['claim'])}</li>" for c in note["attributed_claims"]) + "</ul>")
+    if note.get("written_angle"):
+        parts.append(f"<h3>✍️ লিখিত পরীক্ষার দৃষ্টিকোণ <small>(AI বিশ্লেষণ)</small></h3><p>{esc(note['written_angle'])}</p>")
+    if note.get("causes_effects"):
+        parts.append(f"<h3>কারণ ও প্রভাব <small>(AI বিশ্লেষণ)</small></h3><p>{esc(note['causes_effects'])}</p>")
+    if note.get("background_context"):
+        parts.append(f"<h3>পটভূমি <small>(প্রতিবেদনের বাইরের সাধারণ প্রেক্ষাপট)</small></h3><p>{esc(note['background_context'])}</p>")
+    links = " | ".join(link(u, name) for name, u in story["links"])
+    refs = official_references(note, sources)
+    official = (" &nbsp;🏛 দাপ্তরিক সূত্র: " + " | ".join(link(u, name) for name, u in refs)) if refs else ""
+    parts.append(f'<div class="sources">🔗 {links}{official}</div></section>')
+    return "\n".join(parts)
+
+
+def render_pdf_html(
+    edition_date: date,
+    stories: list[dict],
+    mcqs: list[dict],
+    partial_reasons: list[str],
+    sources: list[Source],
+    extra: bool = False,
+) -> str:
+    """A self-contained, printable HTML page for the PDF version.
+
+    All article/model text is escaped and the page allows no scripts or
+    external loads (Content-Security-Policy), so content can't run code.
+    """
+    title = "বিসিএস ব্রিফিং: অতিরিক্ত আপডেট" if extra else "বিসিএস দৈনিক ব্রিফিং"
+    logo = _logo_data_uri()
+    body = [
+        '<header class="masthead">',
+        f'<img src="{logo}" alt="">' if logo else "",
+        f'<div><h1>{title}</h1><div class="meta">{bn_date(edition_date)} · {bn_num(len(stories))}টি খবর'
+        + (f" · {bn_num(len(mcqs))}টি MCQ" if mcqs else "") + "</div></div></header>",
+    ]
+    if partial_reasons:
+        body.append('<div class="notice"><b>⚠️ আংশিক সংস্করণ:</b> ' + " ".join(esc(r) for r in partial_reasons) + "</div>")
+    body.extend(_pdf_story(i, s, sources) for i, s in enumerate(stories, start=1))
+    if mcqs:
+        body.append('<h2 class="section-title">🧠 অনুশীলনী (MCQ)</h2>'
+                    '<div class="notice info">উত্তর শেষ পৃষ্ঠায় — আগে নিজে চেষ্টা করুন।</div>')
+        for i, q in enumerate(mcqs, start=1):
+            opts = "".join(f"<div>({OPTION_LABELS[j]}) {esc(o)}</div>" for j, o in enumerate(q["options"]))
+            body.append(f'<div class="mcq"><b>প্রশ্ন {bn_num(i)}.</b> {esc(q["question"])}<div class="opts">{opts}</div></div>')
+        body.append('<div class="answers"><h2 class="section-title">✅ উত্তর ও ব্যাখ্যা</h2>')
+        for i, q in enumerate(mcqs, start=1):
+            ans = f"({OPTION_LABELS[q['answer_index']]}) {q['options'][q['answer_index']]}"
+            expl = f"<br>{esc(q['explanation'])}" if q.get("explanation") else ""
+            subject = SUBJECTS.get(q["subject"], "")
+            body.append(f'<div class="answer"><b>{bn_num(i)}. {esc(ans)}</b>{expl}'
+                        f'<div class="sources">🏷 {esc(subject)} · সূত্র: {link(q["source_url"], q["source_name"])}</div></div>')
+        body.append("</div>")
+    body.append(
+        '<div class="footer">AI-সহায়িত নোট। "প্রতিবেদন থেকে" অংশগুলো মূল লেখার উদ্ধৃতির সঙ্গে মিলিয়ে রাখা হয়েছে; '
+        '"AI বিশ্লেষণ" ও "পটভূমি" অংশ ব্যাখ্যামূলক। গুরুত্বপূর্ণ তথ্য মূল সূত্রে যাচাই করে নিন।</div>'
+    )
+    csp = "default-src 'none'; style-src 'unsafe-inline'; img-src data:; font-src data:"
+    return (
+        '<!doctype html><html lang="bn"><head><meta charset="utf-8">'
+        f'<meta http-equiv="Content-Security-Policy" content="{csp}">'
+        f"<title>{title} — {bn_date(edition_date)}</title><style>{PDF_CSS}</style></head><body>"
+        + "\n".join(body) + "</body></html>"
+    )

@@ -16,7 +16,7 @@ def env(monkeypatch, tmp_path, **extra):
 
 def test_offline_dry_run_needs_no_credentials_and_leaves_state_untouched(monkeypatch, tmp_path):
     env(monkeypatch, tmp_path)
-    assert main(["run", "--offline"]) == 0
+    assert main(["run", "--offline", "--no-pdf"]) == 0
     result = json.loads((tmp_path / "out" / "run-result.json").read_text())
     assert result["outcome"] == "dry_run" and result["stories"] == 3 and result["mcqs"] == 3
     assert not (tmp_path / "state" / "state.json").exists()  # production state never written

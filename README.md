@@ -10,7 +10,7 @@ Every morning (target **08:00 Asia/Dhaka**) a GitHub Actions job:
 4. reads the accessible article text and writes **grounded Bengali study notes**,
 5. ranks stories with a configurable rubric (5–8 on a normal day, fewer on a thin day, never padded),
 6. writes **three validated MCQs** from verified facts,
-7. sends **one organised edition** on Telegram to everyone who subscribed to the bot: you and your friends (split into several messages only when needed).
+7. sends **one organised edition** on Telegram to everyone who subscribed to the bot: you and your friends (split into several messages only when needed), followed by a **PDF copy** of the same edition.
 
 Expected cost: roughly **US$2–8 per month (≈ ৳250–1,000)** of prepaid OpenAI credit, depending on the model. If the credit runs out, the free Gemini fallback takes over, so the briefing keeps coming. GitHub Actions and Telegram are free. Details in [Cost](#cost-and-free-tier-limits).
 
@@ -19,6 +19,7 @@ Expected cost: roughly **US$2–8 per month (≈ ৳250–1,000)** of prepaid Op
 ## Contents
 
 - [What a briefing looks like](#what-a-briefing-looks-like)
+- [Manual runs and the PDF](#manual-runs-and-the-pdf)
 - [Architecture and data flow](#architecture-and-data-flow)
 - [Full setup guide](#full-setup-guide)
 - [Subscribers: you and your friends](#subscribers-you-and-your-friends)
@@ -65,7 +66,32 @@ Expected cost: roughly **US$2–8 per month (≈ ৳250–1,000)** of prepaid Op
 ✅ উত্তর ও ব্যাখ্যা (ট্যাপ করে দেখুন)  ← answers hidden behind Telegram spoilers
 ```
 
-Run `python -m app run --offline` to render a full sample edition from bundled fictional data (no API keys needed).
+After the text messages, each subscriber also receives `BCS-Briefing-<date>.pdf`: the same edition laid out for A4 (good for printing or saving), with the MCQ answers on the last page.
+
+Run `python -m app run --offline` to render a full sample edition (text and, if Chrome/Chromium is installed, the PDF) from bundled fictional data. No API keys are needed.
+
+## Manual runs and the PDF
+
+**Scheduled vs manual runs**
+
+| Run | Limit | What it sends |
+|---|---|---|
+| Scheduled (08:00) | Once per day; re-runs never duplicate | The daily edition |
+| Manual `live` (Run workflow button) | **Unlimited** | An **extra edition** ("🔄 অতিরিক্ত আপডেট") with any stories that are **new since the last edition** |
+
+- A story is never sent twice. If nothing new has turned up, a manual run sends a short "সর্বশেষ ব্রিফিংয়ের পর নতুন কোনো প্রাসঙ্গিক খবর পাওয়া যায়নি" note, so you can see it worked.
+- A manual run before 08:00 doesn't stop the scheduled edition; that one then carries only what's new.
+- If an earlier edition today was interrupted, a manual run finishes delivering it first instead of starting another.
+- **Cost:** a manual run only analyses *new* articles, so repeated runs are cheap. Each is still a few OpenAI calls (about $0.01–0.10, depending on how much is new).
+- Locally: `python -m app run --manual`.
+
+**The PDF**
+- It's made with headless Chrome/Chromium from the same notes. GitHub's runners have Google Chrome, and the workflow installs the Noto fonts so Bengali renders correctly.
+- It's sent **after** all text messages, per subscriber, and tracked like a message: a retry sends only what's missing, and if the file is gone on a later run it's rebuilt from the saved state.
+- It's best effort. If it can't be made (no browser, font problem), the text edition is still sent and the run log/state records `pdf_error`.
+- No PDF is sent for an empty "nothing new" edition or a failure notice.
+- Turn it off with `python -m app run --no-pdf`; use a specific browser with the `CHROME_PATH` environment variable.
+- The PDF HTML escapes all article and model text and has a Content-Security-Policy that blocks scripts and external loads.
 
 ---
 
@@ -128,7 +154,7 @@ Typical model usage per day: 1 screening + up to 9 analyses + 1 MCQ call ≈ **1
 | `sample_data/` | Fictional feeds/articles for offline runs and tests |
 | `tests/` | Pytest suite (all external calls mocked) |
 
-Dependencies: Python 3.12 (3.11+ works), `requests`, `feedparser`, `beautifulsoup4`; `pytest` for tests. OpenAI and Gemini are called over plain REST (no SDKs), which keeps the provider layer swappable.
+Dependencies: Python 3.12 (3.11+ works), `requests`, `feedparser`, `beautifulsoup4`; `pytest` for tests; Chrome/Chromium and a Bengali font (Noto) for the PDF, both present or installed on GitHub's runners. OpenAI and Gemini are called over plain REST (no SDKs), which keeps the provider layer swappable.
 
 ---
 
@@ -229,7 +255,7 @@ Secrets are masked in logs, and this app also redacts them from its own messages
 | 4 | `subscribers` | First, you (and your friends) open the **invite link** and press **Start**. Then this run registers you, sends each person a welcome message, and lists who's subscribed | Welcome replies only |
 | 5 | `test-telegram` | Delivery works for every subscriber | 1 test message per subscriber |
 | 6 | `dry-run` | Full real pipeline. Download the artifact to read the edition; the run summary shows tokens used and estimated cost | ~11 OpenAI calls (≈ $0.05–0.25), **nothing sent**, saved state untouched |
-| 7 | `live` | The real thing | Sends the edition to every subscriber, commits state |
+| 7 | `live` | The real thing | Sends an edition (text + PDF) to every subscriber, commits state. Run it **as often as you like**: each manual run sends whatever is new since the last edition |
 
 After `verify-sources`, edit `config/sources.toml`: set `enabled = false` for any source that doesn't show `OK`, and update its `verification` note. See [News sources](#news-sources).
 
@@ -237,7 +263,7 @@ After `verify-sources`, edit `config/sources.toml`: set `enabled = false` for an
 
 The cron line `0 2 * * *` runs daily at **02:00 UTC = 08:00 Asia/Dhaka** (Bangladesh is UTC+6 with no daylight saving). GitHub cron is always UTC.
 
-GitHub doesn't guarantee the minute: scheduled runs often start several minutes late, sometimes much later at busy times, and occasionally get skipped. If one is skipped, run `live` manually. Re-running the same day never sends a duplicate.
+GitHub doesn't guarantee the minute: scheduled runs often start several minutes late, sometimes much later at busy times, and occasionally get skipped. If one is skipped, run `live` manually. A re-run of the *scheduled* job never sends a duplicate; *manual* runs send extra editions with only new stories.
 
 ### Setup checklist
 
@@ -308,7 +334,9 @@ Avoid running `python -m app run`, `subscribers` or `test-telegram` locally *and
 
 | Command | Effect |
 |---|---|
-| `python -m app run` | Register new subscribers, build today's edition and deliver it to all of them. No-op if today's edition was already delivered. Skips building (no model calls, no cost) when nobody has subscribed. |
+| `python -m app run` | Register new subscribers, build today's edition and deliver it (text + PDF) to all of them. No-op if today's edition was already delivered. Skips building (no model calls, no cost) when nobody has subscribed. |
+| `python -m app run --manual` | Extra edition with whatever is new since the last one; can run any number of times (the workflow's manual `live` uses this). |
+| `python -m app run --no-pdf` | Don't create or send the PDF. |
 | `python -m app run --dry-run` | Real feeds + real model, **never sends**. Uses `output/dry-run-state.json` (fresh each time), so production state is untouched. |
 | `python -m app run --offline` | Bundled fictional sample data + mock model. No network, no keys. Implies `--dry-run`. |
 | `python -m app run --date 2026-10-24` | Override the edition date (testing). |
@@ -398,7 +426,7 @@ When this happens mid-run:
 - **Validation on startup:** malformed records are dropped individually; a corrupt file is preserved as `state.json.corrupt-<time>` and recovered from the backup, or (last resort) a fresh state is started and the run log says so.
 - **Migration:** older schemas are upgraded in steps (v1 → v2 added subscribers). A file from a **newer** schema is never overwritten; the run stops instead.
 - **Subscribers:** chat id, first name, type (private/group), active/inactive, join/leave time, plus the last processed Telegram `update_id` so no `/start` is handled twice.
-- **Idempotent delivery:** an edition is rendered once and its chunks saved *before* sending. For each subscriber, each chunk's Telegram message id is saved as soon as Telegram confirms it. An edition is marked `delivered` only when **every active subscriber** has **all** chunks. A retry sends each person only what they're missing; a delivered date is never sent again.
+- **Idempotent delivery:** an edition is rendered once and its chunks saved *before* sending. For each subscriber, each chunk's Telegram message id is saved as soon as Telegram confirms it. An edition is marked `delivered` only when **every active subscriber** has **all** chunks. The PDF counts as the last item. A retry sends each person only what they're missing. The scheduled edition for a date is never sent twice; manual extra editions are stored as `<date>-m1`, `-m2`, … and never repeat a story.
   - Residual risk: if the runner dies in the instant between Telegram accepting a message and the state write, that one chunk could be sent twice on retry. Telegram has no idempotency key to prevent this.
 - **Git:** the workflow commits `state/state.json` with the workflow token (`contents: write` only). On a rejected push it rebases and retries; if the state file itself conflicts it **stops without overwriting** newer state and keeps this run's state in the workflow artifact. It never force-pushes. A `concurrency` group ensures only one run touches state at a time.
 - **If a state commit fails,** the edition was still delivered (or saved in the artifact), the job turns red, and you get a Telegram notice. Download the artifact to recover the state if needed.
@@ -418,6 +446,7 @@ To **reset** everything: delete `state/state.json` and commit. The next run star
 | Symptom | Likely cause / fix |
 |---|---|
 | `Telegram rejected request (401)` | Wrong `TELE_BOT_TOKEN` |
+| Briefing arrives but no PDF | Check the run log for `PDF could not be created` / `pdf_error`. Usually no Chrome or the font step failed; the text edition is unaffected |
 | Run says `no_subscribers` / "No subscribers yet" | Nobody has pressed Start yet, or their Start is older than 24 h → open the invite link, press Start, run `subscribers` |
 | Friend pressed Start but got no welcome | Replies only happen at the next run → run `subscribers`. Got "❌ আমন্ত্রণ লিংক… সঠিক নয়" → they used the plain bot link, not the invite link |
 | "সদস্যসংখ্যা পূর্ণ" reply | `max_subscribers` reached → raise it in `config/settings.toml` |
