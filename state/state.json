@@ -2496,18 +2496,27 @@
    "status": "active",
    "type": "private"
   },
+  "7872342619": {
+   "chat_id": "7872342619",
+   "joined_at": "2026-10-24T13:28:01+00:00",
+   "left_at": null,
+   "left_reason": null,
+   "name": "Jinia🌻 .",
+   "status": "active",
+   "type": "private"
+  },
   "8028433719": {
    "chat_id": "8028433719",
    "joined_at": "2026-10-24T11:29:48+00:00",
-   "left_at": null,
-   "left_reason": null,
+   "left_at": "2026-10-24T13:28:01+00:00",
+   "left_reason": "/stop",
    "name": "Elena",
-   "status": "active",
+   "status": "inactive",
    "type": "private"
   }
  },
  "telegram": {
-  "last_update_id": 894171900
+  "last_update_id": 894171903
  },
- "updated_at": "2026-10-24T11:40:45+00:00"
+ "updated_at": "2026-10-24T13:28:03+00:00"
 }
