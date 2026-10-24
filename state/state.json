@@ -41,6 +41,15 @@
  "schema_version": 2,
  "source_health": {},
  "subscribers": {
+  "1033339929": {
+   "chat_id": "1033339929",
+   "joined_at": "2026-10-24T11:37:12+00:00",
+   "left_at": null,
+   "left_reason": null,
+   "name": "saman Olid",
+   "status": "active",
+   "type": "private"
+  },
   "1679140572": {
    "chat_id": "1679140572",
    "joined_at": "2026-10-24T11:29:48+00:00",
@@ -61,7 +70,7 @@
   }
  },
  "telegram": {
-  "last_update_id": 894171898
+  "last_update_id": 894171900
  },
- "updated_at": "2026-10-24T11:32:33+00:00"
+ "updated_at": "2026-10-24T11:37:12+00:00"
 }
