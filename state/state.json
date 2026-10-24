@@ -40,9 +40,28 @@
  ],
  "schema_version": 2,
  "source_health": {},
- "subscribers": {},
- "telegram": {
-  "last_update_id": null
+ "subscribers": {
+  "1679140572": {
+   "chat_id": "1679140572",
+   "joined_at": "2026-10-24T11:29:48+00:00",
+   "left_at": null,
+   "left_reason": null,
+   "name": "Shahriar Ahmed",
+   "status": "active",
+   "type": "private"
+  },
+  "8028433719": {
+   "chat_id": "8028433719",
+   "joined_at": "2026-10-24T11:29:48+00:00",
+   "left_at": null,
+   "left_reason": null,
+   "name": "Elena",
+   "status": "active",
+   "type": "private"
+  }
  },
- "updated_at": "2026-10-24T11:17:34+00:00"
+ "telegram": {
+  "last_update_id": 894171898
+ },
+ "updated_at": "2026-10-24T11:29:49+00:00"
 }
