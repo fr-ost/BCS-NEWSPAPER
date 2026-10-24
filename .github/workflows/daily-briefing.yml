@@ -41,8 +41,16 @@ jobs:
       PYTHONUNBUFFERED: "1"
     steps:
       - name: Warn if repository is public
-        if: ${{ !github.event.repository.private }}
-        run: echo "::warning::This repository is public. state/state.json (reading history and your subscribers' Telegram chat ids and first names) is committed here. Make the repository private (Settings → General → Danger Zone)."
+        # Scheduled runs don't carry repository details in their event payload,
+        # so ask the API. Needs only the always-granted metadata permission.
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          visibility="$(gh api "repos/${GITHUB_REPOSITORY}" --jq .visibility 2>/dev/null || echo unknown)"
+          echo "Repository visibility: ${visibility}"
+          if [ "$visibility" = "public" ]; then
+            echo "::warning::This repository is public. state/state.json (reading history and your subscribers' Telegram chat ids and first names) is committed here. Make the repository private (Settings → General → Danger Zone)."
+          fi
 
       - name: Check out repository (includes saved state)
         uses: actions/checkout@v5
@@ -124,7 +132,7 @@ jobs:
 
       - name: Upload edition and diagnostics
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: briefing-${{ env.MODE }}-${{ github.run_id }}
           path: |
