@@ -2,10 +2,19 @@ name: Daily BCS briefing
 
 on:
   schedule:
-    # GitHub cron is always UTC. 02:00 UTC = 08:00 Asia/Dhaka (UTC+6, no DST).
-    # Scheduled runs are best-effort: they often start several minutes late
-    # (sometimes much later) and can be dropped when GitHub is under load.
-    - cron: "0 2 * * *"
+    # GitHub cron is always UTC; Asia/Dhaka is UTC+6 with no DST.
+    # GitHub starts scheduled runs late (often 10-60+ min, worst at :00) and
+    # sometimes drops them, so the work is split:
+    #   PREPARE (early): collect, analyse, build text + PDF, hold until 08:00.
+    #   DELIVER (08:00 + backups): send the held edition. Takes ~1 minute.
+    # The scheduled edition is sent at most once per day, so extra triggers are
+    # harmless no-ops. For delivery at exactly 08:00 also set up the free
+    # external trigger described in the README ("deliver" mode at 07:59).
+    - cron: "13 0 * * *"   # 06:13 Dhaka  prepare
+    - cron: "43 0 * * *"   # 06:43 Dhaka  prepare (backup)
+    - cron: "0 2 * * *"    # 08:00 Dhaka  deliver
+    - cron: "20 2 * * *"   # 08:20 Dhaka  deliver (backup)
+    - cron: "50 2 * * *"   # 08:50 Dhaka  deliver (last backup; builds + sends if nothing was prepared)
   workflow_dispatch:
     inputs:
       mode:
@@ -16,6 +25,7 @@ on:
           - offline         # sample data + mock model: no API calls at all
           - dry-run         # real feeds + real model (OpenAI, Gemini fallback), no Telegram, state untouched
           - live            # send now: an extra edition with anything new (any number of times a day)
+          - deliver         # send today's scheduled edition if not sent yet (for an external 08:00 trigger)
           - subscribers     # register new /start and /stop now, list subscribers
           - test-telegram   # register new subscribers, send each a test message
           - verify-sources  # check every configured feed live
@@ -37,8 +47,10 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 30
     env:
-      MODE: ${{ github.event_name == 'schedule' && 'live' || inputs.mode }}
-      EVENT: ${{ github.event_name }}
+      # Scheduled runs: "prepare" early, "deliver" at/after 08:00.
+      MODE: ${{ github.event_name == 'schedule' && ((github.event.schedule == '13 0 * * *' || github.event.schedule == '43 0 * * *') && 'prepare' || 'deliver') || inputs.mode }}
+      # Crash notices to subscribers only after the last automatic chance (or a manual/external run).
+      NOTIFY_ON_FAILURE: ${{ github.event_name != 'schedule' || github.event.schedule == '50 2 * * *' }}
       PYTHONUNBUFFERED: "1"
     steps:
       - name: Warn if repository is public
@@ -67,7 +79,7 @@ jobs:
         run: pip install -r requirements.txt -r requirements-dev.txt
 
       - name: Install Bengali fonts for the PDF
-        if: env.MODE == 'live' || env.MODE == 'dry-run' || env.MODE == 'offline'
+        if: env.MODE == 'prepare' || env.MODE == 'deliver' || env.MODE == 'live' || env.MODE == 'dry-run' || env.MODE == 'offline'
         # Best effort: without it the PDF may lack Bengali glyphs, but text messages are unaffected.
         continue-on-error: true
         timeout-minutes: 5
@@ -77,7 +89,7 @@ jobs:
           fc-list | grep -i -c bengali || true
 
       - name: Unit tests (fully mocked, no API calls)
-        if: env.MODE == 'live' || env.MODE == 'dry-run' || env.MODE == 'offline'
+        if: env.MODE == 'prepare' || env.MODE == 'deliver' || env.MODE == 'live' || env.MODE == 'dry-run' || env.MODE == 'offline'
         run: python -m pytest
 
       - name: Run (${{ env.MODE }})
@@ -92,10 +104,9 @@ jobs:
           GEMINI_MODEL: ${{ vars.GEMINI_MODEL }}
         run: |
           case "$MODE" in
-            live)
-              # The 08:00 schedule sends one edition per day. A manual run always sends an
-              # extra edition with whatever is new since the last one.
-              if [ "$EVENT" = "schedule" ]; then python -m app run; else python -m app run --manual; fi ;;
+            prepare)        python -m app run --hold ;;   # build early, release at 08:00
+            deliver)        python -m app run ;;          # send the held edition (or build + send)
+            live)           python -m app run --manual ;; # manual: extra edition with anything new
             dry-run)        python -m app run --dry-run ;;
             offline)        python -m app run --offline ;;
             subscribers)    python -m app subscribers ;;
@@ -107,7 +118,7 @@ jobs:
           esac
 
       - name: Commit and push state
-        if: always() && (env.MODE == 'live' || env.MODE == 'subscribers' || env.MODE == 'test-telegram')
+        if: always() && (env.MODE == 'prepare' || env.MODE == 'deliver' || env.MODE == 'live' || env.MODE == 'subscribers' || env.MODE == 'test-telegram')
         run: |
           if [ ! -f state/state.json ]; then
             echo "No state file was produced; nothing to commit."
@@ -139,7 +150,7 @@ jobs:
           exit 1
 
       - name: Notify Telegram about a failed run
-        if: failure() && env.MODE == 'live'
+        if: failure() && env.NOTIFY_ON_FAILURE == 'true' && (env.MODE == 'deliver' || env.MODE == 'live')
         env:
           TELE_BOT_TOKEN: ${{ secrets.TELE_BOT_TOKEN }}
         run: python -m app notify-failure

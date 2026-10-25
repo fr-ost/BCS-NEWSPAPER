@@ -2,6 +2,8 @@
 
 Commands:
   run              Build today's edition and deliver it to Telegram.
+  run --hold       Prepare today's edition early and hold it until
+                   edition.delivery_time (08:00); a later run sends it.
   run --manual     Extra edition with whatever is new since the last one
                    (used by manual "live" runs; can be run any number of times).
   run --dry-run    Build with real feeds and the real model, but never send.
@@ -37,7 +39,7 @@ from .sources import load_sources
 from .state import StateError, StateStore, StateVersionError
 from .subscribers import active_subscribers, deactivate, sync_subscribers
 from .telegram_delivery import TelegramClient, TelegramError
-from .util import utcnow
+from .util import get_tz, utcnow
 
 SAMPLE_DIR = PROJECT_ROOT / "sample_data"
 RESULT_FILE = "run-result.json"
@@ -108,6 +110,16 @@ def offline_article_fetcher(settings: Settings, articles_dir: Path):
         return Extraction(status="ok", text=text)
 
     return fetch
+
+
+def release_time(settings: Settings, now):
+    """Today's delivery_time in the edition timezone, as an aware datetime."""
+    from datetime import datetime, time as dtime
+
+    tz = get_tz(settings.edition.timezone)
+    hh, mm = (int(x) for x in settings.edition.delivery_time.split(":"))
+    local_day = now.astimezone(tz).date()
+    return datetime.combine(local_day, dtime(hh, mm), tzinfo=tz)
 
 
 def write_result(settings: Settings, payload: dict) -> None:
@@ -186,7 +198,8 @@ def cmd_run(settings: Settings, args) -> int:
         from datetime import datetime, timezone
 
         now = datetime(2026, 10, 23, 2, 0, tzinfo=timezone.utc)
-    result = pipeline.run(now=now, edition_date=edition_date, manual=args.manual)
+    hold_until = release_time(settings, now) if args.hold else None
+    result = pipeline.run(now=now, edition_date=edition_date, manual=args.manual, hold_until=hold_until)
     payload = {
         "outcome": result.outcome,
         "edition_date": result.edition_date,
@@ -377,6 +390,7 @@ def main(argv: list[str] | None = None) -> int:
     run.add_argument("--offline", action="store_true", help="sample feeds + mock model; implies --dry-run")
     run.add_argument("--provider", choices=["openai", "gemini", "ollama", "mock"], help="use only this provider (no fallback)")
     run.add_argument("--date", help="edition date YYYY-MM-DD (testing)")
+    run.add_argument("--hold", action="store_true", help="prepare now but don't send before edition.delivery_time (early scheduled run)")
     run.add_argument("--manual", action="store_true", help="extra edition even if today's was already sent (only new stories)")
     run.add_argument("--no-pdf", action="store_true", help="don't create/send the PDF")
     sub.add_parser("test-telegram", help="register new subscribers and send each a test message")

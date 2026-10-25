@@ -36,11 +36,11 @@ feed_url = "https://www.dhakatribune.com/feed/"
 type = "newspaper"
 language = "en"
 subjects = ["bangladesh_affairs", "international_affairs", "foreign_policy_geopolitics", "constitution_governance"]
-enabled = true
+enabled = false
 fetch_articles = true
 timeout_seconds = 20
 max_retries = 2
-verification = "Main feed is the self-referencing link in search-indexed Dhaka Tribune category RSS documents (2026). Not yet checked live from CI."
+verification = "DISABLED 2026-10-24: the site's robots.txt disallows this bot for its feeds (checked live from GitHub Actions). Respecting it."
 
 [[source]]
 id = "dhakatribune_business"
@@ -50,11 +50,11 @@ feed_url = "https://www.dhakatribune.com/feed/business"
 type = "newspaper"
 language = "en"
 subjects = ["economy", "awards_reports_indices"]
-enabled = true
+enabled = false
 fetch_articles = true
 timeout_seconds = 20
 max_retries = 2
-verification = "Search-indexed RSS 2.0 document observed (channel 'Business', July 2026). Not yet checked live from CI."
+verification = "DISABLED 2026-10-24: the site's robots.txt disallows this bot for its feeds (checked live from GitHub Actions). Respecting it."
 
 [[source]]
 id = "dailystar"

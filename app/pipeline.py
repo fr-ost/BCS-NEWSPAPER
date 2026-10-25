@@ -18,6 +18,7 @@ from __future__ import annotations
 import hashlib
 import json
 import logging
+import time
 import uuid
 from collections.abc import Callable
 from dataclasses import dataclass, field
@@ -74,7 +75,7 @@ class RunResult:
 
     @property
     def ok(self) -> bool:
-        return self.outcome in {"delivered", "already_delivered", "dry_run", "failure_notified", "no_subscribers"}
+        return self.outcome in {"delivered", "already_delivered", "dry_run", "failure_notified", "no_subscribers", "prepared"}
 
 
 class Pipeline:
@@ -107,6 +108,8 @@ class Pipeline:
         self.errors: list[str] = []
         self.llm_stop_reason: str | None = None  # "quota" | "permanent: ..." when the model became unusable
         self.screening_incomplete = False
+        self._started = time.monotonic()
+        self._hold_until: datetime | None = None
 
     # ------------------------------------------------------------------ helpers
     def _save(self) -> None:
@@ -141,8 +144,15 @@ class Pipeline:
         return sorted(arts, key=key)
 
     # ------------------------------------------------------------------ run
-    def run(self, now: datetime | None = None, edition_date: date | None = None, manual: bool = False) -> RunResult:
+    def run(self, now: datetime | None = None, edition_date: date | None = None, manual: bool = False, hold_until: datetime | None = None) -> RunResult:
+        """Build and deliver an edition.
+
+        ``hold_until``: build everything now but don't send before this time
+        (UTC). A later run (the 08:00 delivery trigger) sends the stored edition.
+        """
         now = now or utcnow()
+        self._started = time.monotonic()
+        self._hold_until = hold_until
         tz = get_tz(self.s.edition.timezone)
         ed_date = edition_date or now.astimezone(tz).date()
         key = ed_date.isoformat()
@@ -220,6 +230,8 @@ class Pipeline:
             log.info("Edition %s already delivered; nothing to do", key)
             return RunResult(outcome="already_delivered", edition_date=key, stories=len(edition.get("story_event_ids", [])))
         if edition and edition["status"] in ("ready", "delivering") and edition.get("chunks"):
+            if self._hold_until is not None and not self.dry_run and now < self._hold_until:
+                return RunResult(outcome="prepared", edition_date=key, stories=len(edition.get("story_event_ids", [])))
             if self.dry_run:
                 return RunResult(outcome="dry_run", edition_date=key, stories=len(edition.get("story_event_ids", [])))
             log.info("Resuming delivery of edition %s", key)
@@ -275,6 +287,16 @@ class Pipeline:
                 reason = "AI মডেলে ত্রুটি, তাই আজ বিশ্লেষণ করা যায়নি।"
             return self._fail(edition, ed_date, reason, unprocessed)
 
+        earlier_today = any(
+            e.get("edition_date") == ed_date.isoformat() and e["status"] == "delivered" for e in self.state["editions"].values()
+        )
+        if not stories and not manual and earlier_today and not partial_reasons:
+            # A manual edition already went out today and nothing new turned up:
+            # don't message everyone just to say so.
+            edition.update(status="delivered", delivered_at=iso(utcnow()), recipients=0, story_event_ids=[], mcqs=[], chunks=[], skipped="nothing new since an earlier edition today")
+            self._save()
+            return RunResult(outcome="delivered", edition_date=key)
+
         sections = render_edition(
             ed_date,
             stories,
@@ -285,9 +307,7 @@ class Pipeline:
             self.s.edition.mcq_count,
             notices=self._model_notices() + self._source_notices(),
             extra=manual,
-            since_last=any(
-                e.get("edition_date") == ed_date.isoformat() and e["status"] == "delivered" for e in self.state["editions"].values()
-            ),
+            since_last=earlier_today,
         )
         chunks = chunk_sections(sections, self.s.telegram.max_message_chars)
         edition.update(
@@ -303,6 +323,14 @@ class Pipeline:
         if stories:
             self._build_pdf(edition, ed_date, stories, mcqs, partial_reasons, manual)
         self._save()
+
+        if self._hold_until is not None and not self.dry_run:
+            effective_now = now + timedelta(seconds=time.monotonic() - self._started)
+            if effective_now < self._hold_until:
+                log.info("Edition %s prepared; holding until %s for delivery", key, iso(self._hold_until))
+                edition["hold_until"] = iso(self._hold_until)
+                self._save()
+                return RunResult(outcome="prepared", edition_date=key, stories=len(stories), mcqs=len(mcqs), partial=bool(partial_reasons), output_path=output_path)
 
         if self.dry_run:
             log.info("Dry run: edition rendered to %s, not sent", output_path)

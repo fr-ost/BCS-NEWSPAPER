@@ -47,6 +47,8 @@ class EditionConfig:
     min_story_score: float = 55
     freshness_hours: int = 36
     mcq_count: int = 3
+    # Local time (edition.timezone) when the scheduled edition is released.
+    delivery_time: str = "08:00"
 
 
 @dataclass(frozen=True)
@@ -231,6 +233,8 @@ def load_settings(config_dir: Path | None = None, env: dict[str, str] | None = N
         raise ConfigError("edition.max_stories must be between 1 and 15")
     if edition.mcq_count < 0:
         raise ConfigError("edition.mcq_count must be >= 0")
+    if not re.fullmatch(r"([01]\d|2[0-3]):[0-5]\d", edition.delivery_time):
+        raise ConfigError("edition.delivery_time must be HH:MM (24-hour)")
     invite = env.get("BOT_INVITE_CODE", "").strip()
     if invite and not re.fullmatch(r"[A-Za-z0-9_-]{8,64}", invite):
         raise ConfigError("BOT_INVITE_CODE must be 8-64 characters of A-Z, a-z, 0-9, _ or - (Telegram start-link rules)")
