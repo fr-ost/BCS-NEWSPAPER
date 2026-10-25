@@ -64,11 +64,11 @@ feed_url = "https://www.thedailystar.net/frontpage/rss.xml"
 type = "newspaper"
 language = "en"
 subjects = ["bangladesh_affairs", "economy", "environment_climate", "foreign_policy_geopolitics", "constitution_governance"]
-enabled = true
+enabled = false
 fetch_articles = true
 timeout_seconds = 20
 max_retries = 2
-verification = "Listed as the front-page feed in public OPML directories (e.g. plenaryapp/awesome-rss-feeds). Not yet checked live from CI."
+verification = "DISABLED 2026-10-25: feed is stale (newest item 2022-07-22); replaced by the Daily Star section feeds below."
 
 [[source]]
 id = "un_news_asia_pacific"
@@ -85,7 +85,7 @@ enabled = false
 fetch_articles = true
 timeout_seconds = 20
 max_retries = 2
-verification = "UNVERIFIED: inferred from UN News regional feed URL pattern."
+verification = "Verified live 2026-10-25 (HTTP 200) but kept off: un_news_all covers it."
 
 # Official sources without a verified feed. Kept as reference homepages so
 # analysis can point to primary sources; they are never scraped.
@@ -149,7 +149,9 @@ timeout_seconds = 20
 max_retries = 2
 verification = "No feed known. Reference only."
 
-# --- Candidate feeds under live verification (disabled until verify-sources passes) ---
+# --- Added 2026-10-25 after live verification (python -m app verify-sources on GitHub Actions) ---
+# Tested and NOT added: Daily Star /rss.xml and TBS /rss.xml (stale), BSS, Kaler Kantho and Samakal
+# (robots.txt disallows bots), Financial Express and Jugantor (malformed feeds), Prothom Alo English (2 items).
 
 [[source]]
 id = "bbc_bangla"
@@ -159,39 +161,11 @@ feed_url = "https://feeds.bbci.co.uk/bengali/rss.xml"
 type = "newspaper"
 language = "bn"
 subjects = ["international_affairs", "foreign_policy_geopolitics", "bangladesh_affairs", "science_technology"]
-enabled = false
+enabled = true
 fetch_articles = true
 timeout_seconds = 20
-max_retries = 1
-verification = "CANDIDATE: not yet verified live."
-
-[[source]]
-id = "prothomalo_en"
-name = "Prothom Alo English"
-homepage = "https://en.prothomalo.com/"
-feed_url = "https://en.prothomalo.com/feed"
-type = "newspaper"
-language = "en"
-subjects = ["bangladesh_affairs", "economy", "international_affairs"]
-enabled = false
-fetch_articles = true
-timeout_seconds = 20
-max_retries = 1
-verification = "CANDIDATE: not yet verified live."
-
-[[source]]
-id = "dailystar_all"
-name = "The Daily Star (all)"
-homepage = "https://www.thedailystar.net/"
-feed_url = "https://www.thedailystar.net/rss.xml"
-type = "newspaper"
-language = "en"
-subjects = ["bangladesh_affairs", "economy", "international_affairs"]
-enabled = false
-fetch_articles = true
-timeout_seconds = 20
-max_retries = 1
-verification = "CANDIDATE: not yet verified live."
+max_retries = 2
+verification = "Verified live from GitHub Actions 2026-10-25: HTTP 200, 14 fresh items."
 
 [[source]]
 id = "dailystar_business"
@@ -201,11 +175,11 @@ feed_url = "https://www.thedailystar.net/business/rss.xml"
 type = "newspaper"
 language = "en"
 subjects = ["economy"]
-enabled = false
+enabled = true
 fetch_articles = true
 timeout_seconds = 20
-max_retries = 1
-verification = "CANDIDATE: not yet verified live."
+max_retries = 2
+verification = "Verified live from GitHub Actions 2026-10-25: HTTP 200, 10 fresh items."
 
 [[source]]
 id = "dailystar_environment"
@@ -215,11 +189,11 @@ feed_url = "https://www.thedailystar.net/environment/rss.xml"
 type = "newspaper"
 language = "en"
 subjects = ["environment_climate"]
-enabled = false
+enabled = true
 fetch_articles = true
 timeout_seconds = 20
-max_retries = 1
-verification = "CANDIDATE: not yet verified live."
+max_retries = 2
+verification = "Verified live from GitHub Actions 2026-10-25: HTTP 200, 10 fresh items."
 
 [[source]]
 id = "dailystar_bangladesh"
@@ -229,11 +203,11 @@ feed_url = "https://www.thedailystar.net/news/bangladesh/rss.xml"
 type = "newspaper"
 language = "en"
 subjects = ["bangladesh_affairs", "constitution_governance"]
-enabled = false
+enabled = true
 fetch_articles = true
 timeout_seconds = 20
-max_retries = 1
-verification = "CANDIDATE: not yet verified live."
+max_retries = 2
+verification = "Verified live from GitHub Actions 2026-10-25: HTTP 200, 10 fresh items."
 
 [[source]]
 id = "dailystar_world"
@@ -243,25 +217,11 @@ feed_url = "https://www.thedailystar.net/news/world/rss.xml"
 type = "newspaper"
 language = "en"
 subjects = ["international_affairs"]
-enabled = false
+enabled = true
 fetch_articles = true
 timeout_seconds = 20
-max_retries = 1
-verification = "CANDIDATE: not yet verified live."
-
-[[source]]
-id = "tbs"
-name = "The Business Standard"
-homepage = "https://www.tbsnews.net/"
-feed_url = "https://www.tbsnews.net/rss.xml"
-type = "newspaper"
-language = "en"
-subjects = ["economy", "bangladesh_affairs"]
-enabled = false
-fetch_articles = true
-timeout_seconds = 20
-max_retries = 1
-verification = "CANDIDATE: not yet verified live."
+max_retries = 2
+verification = "Verified live from GitHub Actions 2026-10-25: HTTP 200, 10 fresh items."
 
 [[source]]
 id = "un_news_all"
@@ -271,78 +231,8 @@ feed_url = "https://news.un.org/feed/subscribe/en/news/all/rss.xml"
 type = "international_org"
 language = "en"
 subjects = ["international_affairs", "environment_climate"]
-enabled = false
+enabled = true
 fetch_articles = true
 timeout_seconds = 20
-max_retries = 1
-verification = "CANDIDATE: not yet verified live."
-
-[[source]]
-id = "bss_en"
-name = "BSS (state news agency)"
-homepage = "https://www.bssnews.net/"
-feed_url = "https://www.bssnews.net/rss.xml"
-type = "news_agency"
-language = "en"
-subjects = ["bangladesh_affairs", "constitution_governance"]
-enabled = false
-fetch_articles = true
-timeout_seconds = 20
-max_retries = 1
-verification = "CANDIDATE: not yet verified live."
-
-[[source]]
-id = "financial_express"
-name = "The Financial Express"
-homepage = "https://thefinancialexpress.com.bd/"
-feed_url = "https://thefinancialexpress.com.bd/rss.xml"
-type = "newspaper"
-language = "en"
-subjects = ["economy"]
-enabled = false
-fetch_articles = true
-timeout_seconds = 20
-max_retries = 1
-verification = "CANDIDATE: not yet verified live."
-
-[[source]]
-id = "jugantor"
-name = "যুগান্তর"
-homepage = "https://www.jugantor.com/"
-feed_url = "https://www.jugantor.com/feed/rss.xml"
-type = "newspaper"
-language = "bn"
-subjects = ["bangladesh_affairs"]
-enabled = false
-fetch_articles = true
-timeout_seconds = 20
-max_retries = 1
-verification = "CANDIDATE: not yet verified live."
-
-[[source]]
-id = "kalerkantho"
-name = "কালের কণ্ঠ"
-homepage = "https://www.kalerkantho.com/"
-feed_url = "https://www.kalerkantho.com/rss.xml"
-type = "newspaper"
-language = "bn"
-subjects = ["bangladesh_affairs"]
-enabled = false
-fetch_articles = true
-timeout_seconds = 20
-max_retries = 1
-verification = "CANDIDATE: not yet verified live."
-
-[[source]]
-id = "samakal"
-name = "সমকাল"
-homepage = "https://samakal.com/"
-feed_url = "https://samakal.com/feed"
-type = "newspaper"
-language = "bn"
-subjects = ["bangladesh_affairs"]
-enabled = false
-fetch_articles = true
-timeout_seconds = 20
-max_retries = 1
-verification = "CANDIDATE: not yet verified live."
+max_retries = 2
+verification = "Verified live from GitHub Actions 2026-10-25: HTTP 200, 30 items, newest 2026-10-24."
