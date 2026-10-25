@@ -142,3 +142,27 @@ def test_rendered_story_shows_syllabus_and_question(make_pipeline):
     make_pipeline(telegram=tg).run(now=NOW)
     text = "\n".join(tg.sent)
     assert "🎯 সিলেবাস:" in text and "📝 সম্ভাব্য প্রশ্ন:" in text
+
+
+def test_old_rule_items_are_rescreened_and_old_analyses_ignored(make_pipeline, settings):
+    import json
+
+    from .test_pipeline import Programmable
+
+    make_pipeline(telegram=FakeTelegram()).run(now=NOW)
+    state = json.loads(settings.state_path.read_text())
+    # Simulate pre-calibration records: one 'maybe' screening without story_type,
+    # one analysed story without syllabus_topic, neither yet sent.
+    evs = [e for e in state["events"].values() if e["status"] == "included"]
+    old_screen, old_analysis = evs[0], evs[1]
+    old_screen.update(status="maybe", screening={"decision": "maybe", "priority": 9, "categories": [], "rationale": "", "exam_focus": "none"})
+    old_analysis["status"] = "analysed"
+    old_analysis["analysis"].pop("syllabus_topic")
+    settings.state_path.write_text(json.dumps(state))
+    prov = Programmable()
+    tg = FakeTelegram()
+    r = make_pipeline(provider=prov, telegram=tg).run(now=NOW, manual=True)
+    assert "screening" in prov.tasks  # the old 'maybe' was screened again under the new rules
+    after = json.loads(settings.state_path.read_text())["events"]
+    assert "story_type" in (after[old_screen["event_id"]].get("screening") or {})
+    assert old_analysis["event_id"] not in json.loads(settings.state_path.read_text())["editions"][r.edition_date]["story_event_ids"]
