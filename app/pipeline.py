@@ -110,6 +110,7 @@ class Pipeline:
         self.profile = profile or load_syllabus(settings.config_dir)
         self._title_filters = [re.compile(p, re.I) for p in settings.filters.exclude_title_patterns]
         self.prefiltered = 0
+        self.screen_stats: dict[str, int] = {}
         self._pdf_cache: dict[str, bytes | None] = {}
         self.state: dict = {}
         self.errors: list[str] = []
@@ -269,6 +270,7 @@ class Pipeline:
         self._analyse(now)
         self._save()
         stories = self._select(now)
+        self._log_selection(stories)
         mcqs, mcq_problem = self._questions(stories)
 
         unprocessed = self._unprocessed_count(now)
@@ -492,6 +494,8 @@ class Pipeline:
                 continue
             ev["screening"] = dec
             ev["status"] = {"select": "selected", "maybe": "maybe", "reject": "rejected"}[dec["decision"]]
+            reason = dec.get("forced_reject") or dec["decision"]
+            self.screen_stats[reason] = self.screen_stats.get(reason, 0) + 1
             ev["updated_at"] = iso(now)
 
     def _apply_merges(self, merges: list[tuple[str, str]], decided: dict[str, dict]) -> None:
@@ -600,6 +604,17 @@ class Pipeline:
             self._save()  # checkpoint after every story
 
     # ------------------------------------------------------------------ Stage E
+    def _log_selection(self, stories: list[dict]) -> None:
+        """Human-readable selection report in the run log (for tuning)."""
+        log.info("Selection report: pre-filtered %d items; screening %s", self.prefiltered, dict(sorted(self.screen_stats.items())))
+        rejected = [ev for ev in self.state["events"].values() if ev["status"] == "analysis_rejected" and ev.get("last_error")]
+        for ev in rejected[-10:]:
+            title = self._articles_of(ev)[0]["title"] if self._articles_of(ev) else ev["event_id"]
+            log.info("  analysis rejected: %s :: %s", title[:80], ev["last_error"][:120])
+        for st in stories:
+            a = st["analysis"]
+            log.info("  SELECTED [%s] %s :: %s", a["score"], a.get("syllabus_topic"), a["headline_bn"][:90])
+
     def _story_for_event(self, ev: dict) -> dict:
         arts = self._articles_of(ev)
         analysed = self.state["articles"].get(ev["analysis"].get("analysed_article_id")) or arts[0]
