@@ -53,6 +53,8 @@ def _story_section(n: int, story: dict, official_refs: list[tuple[str, str]]) ->
     if note.get("mode") == "excerpt_only":
         lines.append("⚠️ <i>শুধু সংক্ষিপ্তাংশ (excerpt) থেকে তৈরি — পূর্ণ প্রতিবেদন পাওয়া যায়নি।</i>")
     lines.append("")
+    if note.get("syllabus_label"):
+        lines.append(f"🎯 সিলেবাস: {esc(note['syllabus_label'])}")
     lines.append(f"<b>কী ঘটেছে:</b> {esc(note['what_happened'])}")
     if note.get("why_it_matters"):
         lines.append(f"<b>বিসিএস-এ কেন গুরুত্বপূর্ণ:</b> {esc(note['why_it_matters'])}")
@@ -74,6 +76,8 @@ def _story_section(n: int, story: dict, official_refs: list[tuple[str, str]]) ->
         lines.append(f"<b>কারণ ও প্রভাব</b> <i>(AI বিশ্লেষণ)</i>: {esc(note['causes_effects'])}")
     if note.get("background_context"):
         lines.append(f"<b>পটভূমি</b> <i>(প্রতিবেদনের বাইরের সাধারণ প্রেক্ষাপট)</i>: {esc(note['background_context'])}")
+    if note.get("likely_question"):
+        lines.append(f"<b>📝 সম্ভাব্য প্রশ্ন:</b> {esc(note['likely_question'])}")
     links = " | ".join(link(u, name) for name, u in story["links"])
     lines.append(f"🔗 {links}")
     if official_refs:
@@ -244,6 +248,8 @@ def _pdf_story(n: int, story: dict, sources: list[Source]) -> str:
     ]
     if note.get("mode") == "excerpt_only":
         parts.append('<div class="excerpt">⚠️ শুধু সংক্ষিপ্তাংশ (excerpt) থেকে তৈরি — পূর্ণ প্রতিবেদন পাওয়া যায়নি।</div>')
+    if note.get("syllabus_label"):
+        parts.append(f'<div class="tags">🎯 সিলেবাস: {esc(note["syllabus_label"])}</div>')
     parts.append(f"<h3>কী ঘটেছে</h3><p>{esc(note['what_happened'])}</p>")
     if note.get("why_it_matters"):
         parts.append(f"<h3>বিসিএস-এ কেন গুরুত্বপূর্ণ</h3><p>{esc(note['why_it_matters'])}</p>")
@@ -262,6 +268,8 @@ def _pdf_story(n: int, story: dict, sources: list[Source]) -> str:
         parts.append(f"<h3>কারণ ও প্রভাব <small>(AI বিশ্লেষণ)</small></h3><p>{esc(note['causes_effects'])}</p>")
     if note.get("background_context"):
         parts.append(f"<h3>পটভূমি <small>(প্রতিবেদনের বাইরের সাধারণ প্রেক্ষাপট)</small></h3><p>{esc(note['background_context'])}</p>")
+    if note.get("likely_question"):
+        parts.append(f"<h3>📝 সম্ভাব্য প্রশ্ন</h3><p>{esc(note['likely_question'])}</p>")
     links = " | ".join(link(u, name) for name, u in story["links"])
     refs = official_references(note, sources)
     official = (" &nbsp;🏛 দাপ্তরিক সূত্র: " + " | ".join(link(u, name) for name, u in refs)) if refs else ""

@@ -10,7 +10,7 @@ delivery_time = "08:00"
 min_target_stories = 5
 max_stories = 8
 # Stories scoring below this (0-100) are never included, even on a thin day.
-min_story_score = 55
+min_story_score = 65
 # Only consider items published within this window (hours) of the run.
 freshness_hours = 36
 # Number of MCQs in a complete edition.
@@ -34,6 +34,33 @@ min_article_chars = 600
 max_article_chars = 12_000
 # Minimum excerpt length that permits a clearly labelled excerpt-only analysis.
 min_excerpt_chars_for_analysis = 220
+
+[selection]
+# Recalibrated after reviewing real editions (see config/syllabus.toml).
+# A story needs syllabus_relevance >= this (0-10) from the full analysis.
+min_syllabus_relevance = 7
+# "maybe" stories from screening are analysed only with priority >= this.
+maybe_min_priority = 7
+# Diversity: at most this many stories per syllabus topic in one edition.
+max_stories_per_topic = 1
+
+[filters]
+# Dropped before any AI call. Matched as substrings of the URL path
+# (lower-case). Covers Prothom Alo and Daily Star section paths.
+exclude_url_paths = [
+  "/sports/", "/entertainment/", "/lifestyle/", "/opinion/", "/religion/",
+  "/video/", "/photo/", "/chakri/", "/fun/", "/celeb/", "/travel/", "/feature/",
+  "/durporobash/", "/activities/", "/onnoalo/", "/bangladesh/district/",
+  "/bangladesh/crime/", "/bangladesh/capital/", "/education/", "/biology/",
+  "/physics/", "/technology/gadget/", "/astrology/", "/rashifol/", "/football/",
+  "/cricket/", "/star-multimedia/", "/showbiz/", "/life-living/", "/shout/",
+  "/tech-startup/", "/book-reviews/", "/campus/", "/star-youth/",
+]
+# Dropped if the title matches any of these (case-insensitive regex).
+exclude_title_patterns = [
+  "আজ টিভিতে", "রাশিফল", "পাঠকের ছবি", "ছবিতে দেখুন", "^ভিডিও", "লাইভ স্কোর",
+  "\\bhoroscope\\b", "\\bin pictures\\b", "\\bphoto ?story\\b",
+]
 
 [screening]
 # Max candidate events sent to the screening call per run.

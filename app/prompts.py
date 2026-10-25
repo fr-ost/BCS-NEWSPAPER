@@ -39,33 +39,56 @@ def wrap_untrusted(obj: object) -> str:
     return f"{BEGIN}\n{sanitize_untrusted(data)}\n{END}"
 
 
-SCREENING_SYSTEM = f"""You are a screening assistant for Bangladesh Civil Service (BCS) exam preparation.
-You rank news candidates for BCS current-affairs relevance using the official BPSC syllabus as reference
-(Bangladesh affairs, international affairs, economy, geography/environment/disaster management, science and ICT,
-constitution and governance, ethics and good governance, foreign relations, international organisations, awards, reports and indices).
+SCREENING_SYSTEM = f"""You are a senior BCS (Bangladesh Civil Service) question setter and coach. You decide which news items are worth
+a serious candidate's limited study time. Use the BPSC syllabus topic list provided with each request as the only reference:
+preliminary subjects, and written papers 005 (Bangladesh Affairs), 007 (International Affairs) and 010 (General Science & Technology).
 
 {SECURITY_RULES}
 {NEUTRALITY_RULES}
-SELECTION POLICY:
-- Select stories with clear exam value: government policy and decisions, laws, constitutional/institutional matters, budget and macro-economy,
-  trade, official statistics, international agreements and visits, international organisations, climate and environment, disasters,
-  science/technology milestones, major global events, awards, reports and indices.
-- Reject routine crime, celebrity/entertainment, ordinary sports, repetitive partisan statements, opinion pieces without new facts,
-  and low-value local incidents — unless the event has clear, substantial BCS relevance.
-- Do not reject a story only because its headline is vague if the excerpt shows substantial importance.
-- "maybe" means relevant but weaker; it may be analysed if capacity remains.
-- same_event_as: list other candidate ids that report the SAME specific event (including reports in another language). Leave empty when unsure.
+SELECTION TEST — select only if ALL are true:
+1. The item maps clearly to ONE topic in the syllabus list (give its id).
+2. It is a substantive development: a decision, law, policy, official data, agreement, visit, appointment, award, report/index,
+   major international event or disaster — not commentary, not a daily situation update, not an individual incident.
+3. A BPSC preliminary MCQ or a written question could plausibly be set from it in the next 1-2 years, because it contains a
+   durable fact (name, number, institution, place, agreement, rank, date) or a policy issue worth analysing.
+
+ALWAYS REJECT (choose the matching story_type):
+- opinion: columns, editorials, interviews, "what should be done" pieces, analysis without a new fact.
+- feature / human_interest: profiles, life stories, explainers, tips, nostalgia.
+- crime_accident: crimes, arrests, murders, fires, road accidents — unless a large national disaster or a policy/law follows.
+- local_admin: city corporation drives, district administration notices, local traffic or blockades.
+- party_politics: rallies, processions, party statements, clashes, banned-group activity, politicians' remarks.
+- court_case_individual: cases against individuals (unless a landmark constitutional ruling).
+- foreign_domestic_minor: other countries' internal politics or incidents without international significance.
+- sports_entertainment, lifestyle, religion_culture_local, other_low_value.
+When unsure between select and reject, reject. A thin edition is better than a padded one.
+
+decision: "select" (clearly passes), "maybe" (passes but weaker; only analysed if priority >= 7), "reject".
+priority (0-10): expected exam value. Be strict: a typical day's news is mostly 0-4; 8-10 only for items a coach would
+put on the must-read list (constitutional/legal change, budget/monetary data, treaty/agreement, state visit outcome,
+major international decision, award winner, index ranking).
+same_event_as: other candidate ids reporting the SAME specific event (also across languages). Leave empty when unsure.
 """
 
 
-def screening_prompt(candidates: list[dict]) -> str:
+def screening_prompt(candidates: list[dict], profile=None) -> str:
+    types = ", ".join(profile.story_types) if profile else ""
+    catalog = profile.catalog_text() if profile else ""
+    examples = profile.examples_text() if profile else ""
     return f"""Screen these news candidates. Use only the ids given.
 
+BCS SYLLABUS TOPICS (use the id; "none" if no topic fits):
+{catalog}
+
+Allowed story_type values: {types}
 Allowed categories: {SUBJECT_LIST}
 
+{examples}
+
 Return JSON exactly in this shape:
-{{"results": [{{"id": "c1", "decision": "select|maybe|reject", "categories": ["economy"], "rationale": "one short sentence",
-  "exam_focus": "prelims|written|both|none", "priority": 0-10, "same_event_as": ["c7"]}}]}}
+{{"results": [{{"id": "c1", "story_type": "policy_decision", "topic": "bd_budget_fiscal", "decision": "select|maybe|reject",
+  "categories": ["economy"], "exam_hook": "the fact or issue an exam could ask about, one short sentence",
+  "rationale": "one short sentence", "exam_focus": "prelims|written|both|none", "priority": 0-10, "same_event_as": ["c7"]}}]}}
 Include one result per candidate.
 
 Candidates:
@@ -73,10 +96,24 @@ Candidates:
 """
 
 
-ANALYSIS_SYSTEM = f"""You are a careful BCS current-affairs analyst writing study notes for a Bangladeshi civil-service candidate.
+ANALYSIS_SYSTEM = f"""You are a senior BCS question setter and careful current-affairs analyst writing study notes for a Bangladeshi
+civil-service candidate. Judge strictly whether the item deserves study time; then write grounded notes.
 
 {SECURITY_RULES}
 {NEUTRALITY_RULES}
+RELEVANCE: If the item is commentary/opinion, a feature, an individual incident, crime, local administration, party politics,
+foreign domestic trivia, sports/entertainment/lifestyle — or it does not map clearly to one syllabus topic — set relevant=false.
+
+SCORING (be strict and calibrated; most news is 3-6, reserve 9-10 for must-know items):
+- syllabus_relevance: 9-10 directly matches a syllabus item and an MCQ/written question can be set from it (constitutional
+  amendment, budget/monetary figure, treaty signed, award winner, index rank); 7-8 clearly maps to a topic with durable facts;
+  5-6 loosely connected; 0-4 not exam material.
+- significance: 9-10 national/global turning point; 7-8 nationally important decision or major international event;
+  5-6 sectoral; 0-4 local or individual.
+- factual_density: 9-10 several memorisable facts (numbers, names, institutions, dates); 5-6 a few; 0-4 mostly opinion.
+- written_potential: 9-10 a full written-exam question (causes, effects, policy options); 0-4 nothing to analyse.
+- novelty: 9-10 a new decision/data released now; 0-4 a rehash of known information.
+
 GROUNDING RULES:
 - Use ONLY facts stated in the provided source text. Never invent statistics, dates, quotations, treaty details or institutional positions.
 - Copy every number exactly as written in the source (same figure and unit; do not convert currencies or units, do not round).
@@ -84,6 +121,7 @@ GROUNDING RULES:
 - Claims made by a person or party go in attributed_claims with who made them, not in key_facts.
 - why_it_matters, written_angle and causes_effects are your analysis: base them on the source; do not add new figures.
 - background_context is optional general background that is NOT from the article; keep it brief, qualitative and free of numbers.
+- likely_question: one exam-style question a BPSC setter could ask from this item's facts (Bengali).
 - If the source text is only an excerpt, analyse only what it contains.
 - If evidence is insufficient for a useful note, set evidence_sufficient=false and explain in rejection_reason.
 
@@ -94,8 +132,10 @@ ANALYSIS_SHAPE = """{
  "relevant": true,
  "rejection_reason": "",
  "headline_bn": "short Bengali headline",
+ "syllabus_topic": "topic id from the list",
  "categories": ["economy"],
  "exam_focus": "prelims|written|both",
+ "likely_question": "one exam-style question in Bengali",
  "what_happened": "2-3 sentence factual summary in Bengali",
  "why_it_matters": "1-2 sentences on BCS relevance",
  "key_facts": [{"fact": "Bengali fact", "evidence": "verbatim quote from source", "prelims": true}],
@@ -109,16 +149,21 @@ ANALYSIS_SHAPE = """{
 }"""
 
 
-def analysis_prompt(headline: str, source_name: str, published: str | None, mode: str, text: str) -> str:
+def analysis_prompt(headline: str, source_name: str, published: str | None, mode: str, text: str, profile=None) -> str:
     mode_note = (
         "FULL ARTICLE TEXT (cleaned)."
         if mode == "full"
         else "EXCERPT ONLY: the full article was not accessible. Analyse only this excerpt and do not speculate beyond it."
     )
+    catalog = profile.catalog_text() if profile else ""
     return f"""Analyse this news item for BCS preparation.
-Allowed categories: {SUBJECT_LIST}
-Scoring criteria (0-10 each): syllabus_relevance, significance (national/international), factual_density (useful facts,
-statistics, institutions, agreements, reports), written_potential, novelty (importance of new developments).
+
+BCS SYLLABUS TOPICS (syllabus_topic must be one of these ids; if none fits, set relevant=false):
+{catalog}
+
+Allowed categories (at most 2, the most specific first): {SUBJECT_LIST}
+Use constitution_governance only for constitutional, legal, institutional or policy matters — not for crime or law-and-order news.
+Score with the calibrated SCORING scale from your instructions.
 Give at most 6 key_facts and mark prelims=true for facts worth memorising for MCQs.
 
 Return JSON exactly in this shape:

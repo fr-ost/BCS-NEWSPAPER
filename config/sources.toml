@@ -148,3 +148,201 @@ fetch_articles = false
 timeout_seconds = 20
 max_retries = 2
 verification = "No feed known. Reference only."
+
+# --- Candidate feeds under live verification (disabled until verify-sources passes) ---
+
+[[source]]
+id = "bbc_bangla"
+name = "BBC News বাংলা"
+homepage = "https://www.bbc.com/bengali"
+feed_url = "https://feeds.bbci.co.uk/bengali/rss.xml"
+type = "newspaper"
+language = "bn"
+subjects = ["international_affairs", "foreign_policy_geopolitics", "bangladesh_affairs", "science_technology"]
+enabled = false
+fetch_articles = true
+timeout_seconds = 20
+max_retries = 1
+verification = "CANDIDATE: not yet verified live."
+
+[[source]]
+id = "prothomalo_en"
+name = "Prothom Alo English"
+homepage = "https://en.prothomalo.com/"
+feed_url = "https://en.prothomalo.com/feed"
+type = "newspaper"
+language = "en"
+subjects = ["bangladesh_affairs", "economy", "international_affairs"]
+enabled = false
+fetch_articles = true
+timeout_seconds = 20
+max_retries = 1
+verification = "CANDIDATE: not yet verified live."
+
+[[source]]
+id = "dailystar_all"
+name = "The Daily Star (all)"
+homepage = "https://www.thedailystar.net/"
+feed_url = "https://www.thedailystar.net/rss.xml"
+type = "newspaper"
+language = "en"
+subjects = ["bangladesh_affairs", "economy", "international_affairs"]
+enabled = false
+fetch_articles = true
+timeout_seconds = 20
+max_retries = 1
+verification = "CANDIDATE: not yet verified live."
+
+[[source]]
+id = "dailystar_business"
+name = "The Daily Star — Business"
+homepage = "https://www.thedailystar.net/business"
+feed_url = "https://www.thedailystar.net/business/rss.xml"
+type = "newspaper"
+language = "en"
+subjects = ["economy"]
+enabled = false
+fetch_articles = true
+timeout_seconds = 20
+max_retries = 1
+verification = "CANDIDATE: not yet verified live."
+
+[[source]]
+id = "dailystar_environment"
+name = "The Daily Star — Environment"
+homepage = "https://www.thedailystar.net/environment"
+feed_url = "https://www.thedailystar.net/environment/rss.xml"
+type = "newspaper"
+language = "en"
+subjects = ["environment_climate"]
+enabled = false
+fetch_articles = true
+timeout_seconds = 20
+max_retries = 1
+verification = "CANDIDATE: not yet verified live."
+
+[[source]]
+id = "dailystar_bangladesh"
+name = "The Daily Star — Bangladesh"
+homepage = "https://www.thedailystar.net/news/bangladesh"
+feed_url = "https://www.thedailystar.net/news/bangladesh/rss.xml"
+type = "newspaper"
+language = "en"
+subjects = ["bangladesh_affairs", "constitution_governance"]
+enabled = false
+fetch_articles = true
+timeout_seconds = 20
+max_retries = 1
+verification = "CANDIDATE: not yet verified live."
+
+[[source]]
+id = "dailystar_world"
+name = "The Daily Star — World"
+homepage = "https://www.thedailystar.net/news/world"
+feed_url = "https://www.thedailystar.net/news/world/rss.xml"
+type = "newspaper"
+language = "en"
+subjects = ["international_affairs"]
+enabled = false
+fetch_articles = true
+timeout_seconds = 20
+max_retries = 1
+verification = "CANDIDATE: not yet verified live."
+
+[[source]]
+id = "tbs"
+name = "The Business Standard"
+homepage = "https://www.tbsnews.net/"
+feed_url = "https://www.tbsnews.net/rss.xml"
+type = "newspaper"
+language = "en"
+subjects = ["economy", "bangladesh_affairs"]
+enabled = false
+fetch_articles = true
+timeout_seconds = 20
+max_retries = 1
+verification = "CANDIDATE: not yet verified live."
+
+[[source]]
+id = "un_news_all"
+name = "UN News — All"
+homepage = "https://news.un.org/en/"
+feed_url = "https://news.un.org/feed/subscribe/en/news/all/rss.xml"
+type = "international_org"
+language = "en"
+subjects = ["international_affairs", "environment_climate"]
+enabled = false
+fetch_articles = true
+timeout_seconds = 20
+max_retries = 1
+verification = "CANDIDATE: not yet verified live."
+
+[[source]]
+id = "bss_en"
+name = "BSS (state news agency)"
+homepage = "https://www.bssnews.net/"
+feed_url = "https://www.bssnews.net/rss.xml"
+type = "news_agency"
+language = "en"
+subjects = ["bangladesh_affairs", "constitution_governance"]
+enabled = false
+fetch_articles = true
+timeout_seconds = 20
+max_retries = 1
+verification = "CANDIDATE: not yet verified live."
+
+[[source]]
+id = "financial_express"
+name = "The Financial Express"
+homepage = "https://thefinancialexpress.com.bd/"
+feed_url = "https://thefinancialexpress.com.bd/rss.xml"
+type = "newspaper"
+language = "en"
+subjects = ["economy"]
+enabled = false
+fetch_articles = true
+timeout_seconds = 20
+max_retries = 1
+verification = "CANDIDATE: not yet verified live."
+
+[[source]]
+id = "jugantor"
+name = "যুগান্তর"
+homepage = "https://www.jugantor.com/"
+feed_url = "https://www.jugantor.com/feed/rss.xml"
+type = "newspaper"
+language = "bn"
+subjects = ["bangladesh_affairs"]
+enabled = false
+fetch_articles = true
+timeout_seconds = 20
+max_retries = 1
+verification = "CANDIDATE: not yet verified live."
+
+[[source]]
+id = "kalerkantho"
+name = "কালের কণ্ঠ"
+homepage = "https://www.kalerkantho.com/"
+feed_url = "https://www.kalerkantho.com/rss.xml"
+type = "newspaper"
+language = "bn"
+subjects = ["bangladesh_affairs"]
+enabled = false
+fetch_articles = true
+timeout_seconds = 20
+max_retries = 1
+verification = "CANDIDATE: not yet verified live."
+
+[[source]]
+id = "samakal"
+name = "সমকাল"
+homepage = "https://samakal.com/"
+feed_url = "https://samakal.com/feed"
+type = "newspaper"
+language = "bn"
+subjects = ["bangladesh_affairs"]
+enabled = false
+fetch_articles = true
+timeout_seconds = 20
+max_retries = 1
+verification = "CANDIDATE: not yet verified live."

@@ -18,12 +18,14 @@ from __future__ import annotations
 import hashlib
 import json
 import logging
+import re
 import time
 import uuid
 from collections.abc import Callable
 from dataclasses import dataclass, field
 from datetime import date, datetime, timedelta
 from pathlib import Path
+from urllib.parse import urlsplit
 
 from .analysis import AnalysisInput, AnalysisRejected, analyse
 from .collector import FeedItem, SourceReport, collect, load_fixture_items
@@ -45,6 +47,7 @@ from .scoring import rank_stories
 from .screening import screen_events
 from .sources import Source
 from .state import StateStore
+from .syllabus import SyllabusProfile, load_syllabus
 from .subscribers import active_subscribers, deactivate, ensure_structures, sync_subscribers
 from .telegram_delivery import TelegramClient, TelegramError, chunk_sections
 from .util import get_tz, iso, normalize_text, parse_iso, sha256, utcnow
@@ -91,6 +94,7 @@ class Pipeline:
         dry_run: bool = False,
         offline_feed_dir: Path | None = None,
         pdf_builder: PdfBuilder | None = None,
+        profile: SyllabusProfile | None = None,
     ):
         self.s = settings
         self.sources = sources
@@ -103,6 +107,9 @@ class Pipeline:
         self.dry_run = dry_run
         self.offline_feed_dir = offline_feed_dir
         self.pdf_builder = pdf_builder
+        self.profile = profile or load_syllabus(settings.config_dir)
+        self._title_filters = [re.compile(p, re.I) for p in settings.filters.exclude_title_patterns]
+        self.prefiltered = 0
         self._pdf_cache: dict[str, bytes | None] = {}
         self.state: dict = {}
         self.errors: list[str] = []
@@ -182,6 +189,7 @@ class Pipeline:
                 mcqs=result.mcqs,
                 partial=result.partial,
                 llm_calls=self.llm.calls_made,
+                prefiltered=self.prefiltered,
                 errors=self.errors[-20:],
             )
             self.state.setdefault("runs", []).append(run_record)
@@ -359,7 +367,12 @@ class Pipeline:
                 continue
             if item.date_status == "ok" and not self._fresh(item.published_at, now):
                 continue  # old item still in the feed
+            if self._excluded(item):
+                self.prefiltered += 1
+                continue  # off-syllabus section (sports, opinion, district, ...); never costs a model call
             new_items.append(item)
+        if self.prefiltered:
+            log.info("Pre-filter dropped %d off-syllabus items (sections/titles)", self.prefiltered)
         if not new_items:
             log.info("No new articles")
             return reports
@@ -397,6 +410,14 @@ class Pipeline:
                 ev["updated_at"] = iso(now)
         log.info("Collected %d new articles into %d events", len(new_dicts), len(set(mapping.values())))
         return reports
+
+    def _excluded(self, item: FeedItem) -> bool:
+        path = (urlsplit(item.url).path or "/").lower()
+        if not path.endswith("/"):
+            path += "/"
+        if any(seg in path for seg in self.s.filters.exclude_url_paths):
+            return True
+        return any(p.search(item.title) for p in self._title_filters)
 
     def _update_source_health(self, reports: list[SourceReport], now: datetime) -> None:
         health = self.state["source_health"]
@@ -441,7 +462,7 @@ class Pipeline:
             )
         outcome = None
         try:
-            outcome = screen_events(self.llm, payload, self.s.screening.batch_size)
+            outcome = screen_events(self.llm, payload, self.s.screening.batch_size, self.profile, self.s.selection.maybe_min_priority)
         except QuotaExhaustedError as exc:
             self.llm_stop_reason = "quota"
             self._error(f"Screening stopped: {exc}")
@@ -546,7 +567,12 @@ class Pipeline:
             art = self.state["articles"][inp.article_id]
             ev["attempts"] = ev.get("attempts", 0) + 1
             try:
-                note = analyse(self.llm, inp, art["title"], art["source_name"], art.get("published_at"), self.s.weights)
+                note = analyse(
+                    self.llm, inp, art["title"], art["source_name"], art.get("published_at"), self.s.weights,
+                    self.profile, self.s.selection.min_syllabus_relevance,
+                )
+                if note.get("syllabus_topic"):
+                    note["syllabus_label"] = self.profile.topics[note["syllabus_topic"]].label
             except AnalysisRejected as exc:
                 ev["status"] = "analysis_rejected"
                 ev["last_error"] = str(exc)[:300]
@@ -600,7 +626,7 @@ class Pipeline:
             for ev in self.state["events"].values()
             if ev["status"] == "analysed" and ev.get("analysis") and self._articles_of(ev) and self._fresh(self._event_time(ev), now)
         ]
-        return rank_stories(stories, self.s.edition.min_story_score, self.s.edition.max_stories)
+        return rank_stories(stories, self.s.edition.min_story_score, self.s.edition.max_stories, self.s.selection.max_stories_per_topic)
 
     # ------------------------------------------------------------------ Stage G
     def _questions(self, stories: list[dict]) -> tuple[list[dict], str | None]:

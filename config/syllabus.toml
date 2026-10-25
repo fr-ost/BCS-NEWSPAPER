@@ -1,0 +1,266 @@
+# BCS syllabus profile used to select news.
+#
+# Built from the BPSC syllabus (preliminary subjects; written papers 005
+# Bangladesh Affairs, 007 International Affairs, 010 General Science & Technology,
+# plus geography/environment/disaster management and ethics/good governance).
+#
+# Every story must map to one of these topics or it is dropped. Keep topics
+# fine-grained: at most `selection.max_stories_per_topic` stories per topic are
+# sent in one edition.
+#
+# subject = one of: bangladesh_affairs, international_affairs, economy,
+#   environment_climate, science_technology, foreign_policy_geopolitics,
+#   constitution_governance, awards_reports_indices
+
+# ---------------------------------------------------------- Bangladesh affairs
+[topic.bd_constitution]
+label = "সংবিধান, সংশোধনী ও সাংবিধানিক প্রতিষ্ঠান"
+subject = "constitution_governance"
+hint = "constitutional amendments, constitutional bodies (EC, PSC, C&AG, Ombudsman), referendum, fundamental principles"
+
+[topic.bd_parliament_law]
+label = "সংসদ, আইন ও অধ্যাদেশ"
+subject = "constitution_governance"
+hint = "laws/ordinances passed or approved by cabinet, parliamentary procedure, major bills"
+
+[topic.bd_judiciary]
+label = "বিচার বিভাগ ও গুরুত্বপূর্ণ রায়"
+subject = "constitution_governance"
+hint = "Supreme Court structure, landmark judgments with national policy effect, judicial reform (NOT individual criminal cases)"
+
+[topic.bd_election]
+label = "নির্বাচন কমিশন ও নির্বাচনী ব্যবস্থা"
+subject = "constitution_governance"
+hint = "election schedule, electoral law/RPO, voter roll, electoral reform (NOT party campaign news)"
+
+[topic.bd_admin_reform]
+label = "জনপ্রশাসন, স্থানীয় সরকার ও রাষ্ট্র সংস্কার"
+subject = "constitution_governance"
+hint = "reform commissions, civil service, local government structure, decentralisation (NOT routine local notices)"
+
+[topic.bd_good_governance]
+label = "সুশাসন, দুর্নীতি দমন ও মানবাধিকার প্রতিষ্ঠান"
+subject = "constitution_governance"
+hint = "ACC, RTI, NHRC, transparency/integrity policy, ethics and values in public service"
+
+[topic.bd_budget_fiscal]
+label = "বাজেট, রাজস্ব, এডিপি ও সরকারি ঋণ"
+subject = "economy"
+hint = "national budget, NBR revenue, ADP implementation, public debt, fiscal policy"
+
+[topic.bd_macro_data]
+label = "সামষ্টিক অর্থনীতি: জিডিপি, মূল্যস্ফীতি, রিজার্ভ, রেমিট্যান্স"
+subject = "economy"
+hint = "official statistics from BBS/Bangladesh Bank/EPB: GDP, inflation, reserves, remittance, exports, FDI"
+
+[topic.bd_banking_monetary]
+label = "বাংলাদেশ ব্যাংক, মুদ্রানীতি ও আর্থিক খাত"
+subject = "economy"
+hint = "monetary policy, policy rate, exchange rate, banking sector reform, capital market regulation"
+
+[topic.bd_trade_industry]
+label = "বাণিজ্য, শিল্পনীতি, পোশাক খাত ও এলডিসি উত্তরণ"
+subject = "economy"
+hint = "export sectors, RMG, trade agreements/GSP, LDC graduation, industrial policy, EPZ/economic zones"
+
+[topic.bd_energy_power]
+label = "বিদ্যুৎ ও জ্বালানি"
+subject = "economy"
+hint = "power generation, gas/LNG, Rooppur nuclear plant, renewable energy policy, energy prices"
+
+[topic.bd_infrastructure]
+label = "মেগা প্রকল্প, যোগাযোগ ও উন্নয়ন প্রকল্প"
+subject = "bangladesh_affairs"
+hint = "ECNEC/ADP approvals, Padma/Metro rail/ports/railways, development plans (Five-Year Plan, Delta Plan)"
+
+[topic.bd_agriculture_food]
+label = "কৃষি, খাদ্য নিরাপত্তা, মৎস্য ও প্রাণিসম্পদ"
+subject = "bangladesh_affairs"
+hint = "crop production, food stock, prices policy, fisheries/hilsa, livestock"
+
+[topic.bd_social_sector]
+label = "জনসংখ্যা, শিক্ষা, স্বাস্থ্যনীতি, দারিদ্র্য ও সামাজিক সুরক্ষা"
+subject = "bangladesh_affairs"
+hint = "census/surveys, education policy/curriculum, health system policy, poverty data, safety-net programmes"
+
+[topic.bd_gender_rights]
+label = "নারী উন্নয়ন, শিশু অধিকার ও প্রান্তিক জনগোষ্ঠী"
+subject = "bangladesh_affairs"
+hint = "national policy/law/data on women, children, disability, ethnic minorities (policy level, not single incidents)"
+
+[topic.bd_cht_ethnic]
+label = "পার্বত্য চট্টগ্রাম ও ক্ষুদ্র নৃগোষ্ঠী"
+subject = "bangladesh_affairs"
+hint = "CHT Peace Accord implementation, regional council, policy decisions (not daily traffic/blockade updates)"
+
+[topic.bd_history_heritage]
+label = "ইতিহাস, মুক্তিযুদ্ধ, ঐতিহ্য ও সংস্কৃতি"
+subject = "bangladesh_affairs"
+hint = "Liberation War, national days, UNESCO heritage, GI products, archaeology, language movement"
+
+[topic.bd_ict_digital]
+label = "আইসিটি, ডিজিটাল সেবা ও সাইবার নীতি"
+subject = "science_technology"
+hint = "ICT policy, digital services, telecom/internet regulation, data protection, cyber security law"
+
+[topic.bd_migration_labour]
+label = "প্রবাসী শ্রম, শ্রম অভিবাসন ও শ্রমনীতি"
+subject = "economy"
+hint = "labour migration data and agreements, labour law, workplace safety policy, minimum wage"
+
+# ---------------------------------------- Geography, environment, disaster mgmt
+[topic.env_climate]
+label = "জলবায়ু পরিবর্তন ও জলবায়ু কূটনীতি"
+subject = "environment_climate"
+hint = "adaptation/mitigation, climate finance, NDC, COP negotiations, loss and damage"
+
+[topic.env_pollution_conservation]
+label = "পরিবেশ দূষণ, পরিবেশ আইন ও জীববৈচিত্র্য"
+subject = "environment_climate"
+hint = "air/river pollution policy, environmental rules and classifications, forests, Sundarbans, wildlife"
+
+[topic.env_disaster]
+label = "প্রাকৃতিক দুর্যোগ ও দুর্যোগ ব্যবস্থাপনা"
+subject = "environment_climate"
+hint = "cyclones, floods, earthquakes, preparedness programmes (CPP), early warning, major disasters worldwide"
+
+[topic.env_rivers_water]
+label = "নদী, পানিবণ্টন ও পানি নিরাপত্তা"
+subject = "environment_climate"
+hint = "Teesta/Ganges water sharing, transboundary rivers, dams upstream, river management"
+
+[topic.geo_maritime_blue]
+label = "সমুদ্রসীমা, বঙ্গোপসাগর ও ব্লু ইকোনমি"
+subject = "bangladesh_affairs"
+hint = "maritime boundary, Bay of Bengal geopolitics, deep-sea resources, ports"
+
+# ---------------------------------------------------------------- Foreign policy
+[topic.fp_bilateral]
+label = "বাংলাদেশের দ্বিপক্ষীয় সম্পর্ক, সফর ও চুক্তি"
+subject = "foreign_policy_geopolitics"
+hint = "state visits, MoUs/agreements, bilateral relations with India, China, USA, Japan, Myanmar, Gulf, EU etc."
+
+[topic.fp_rohingya]
+label = "রোহিঙ্গা সংকট"
+subject = "foreign_policy_geopolitics"
+hint = "repatriation, funding, ICJ case, Myanmar situation affecting Bangladesh"
+
+[topic.fp_multilateral_bd]
+label = "আন্তর্জাতিক সংস্থায় বাংলাদেশ"
+subject = "foreign_policy_geopolitics"
+hint = "UN peacekeeping, Bangladesh at UN/SAARC/BIMSTEC/OIC/D-8/WTO, elections to international bodies"
+
+# --------------------------------------------------------- International affairs
+[topic.int_un_system]
+label = "জাতিসংঘ ব্যবস্থা ও আন্তর্জাতিক আদালত"
+subject = "international_affairs"
+hint = "UNSC decisions, UN agencies, ICJ/ICC rulings, UN reform"
+
+[topic.int_global_economy]
+label = "বৈশ্বিক অর্থনীতি ও আন্তর্জাতিক আর্থিক প্রতিষ্ঠান"
+subject = "international_affairs"
+hint = "World Bank, IMF, WTO, G7/G20, BRICS, global trade/tariffs, oil prices"
+
+[topic.int_regional_orgs]
+label = "আঞ্চলিক সংস্থা ও জোট"
+subject = "international_affairs"
+hint = "ASEAN, EU, NATO, GCC, AU, SCO, APEC, Quad, summits and membership changes"
+
+[topic.int_conflicts]
+label = "বিশ্বের প্রধান সংঘাত ও সংকট"
+subject = "foreign_policy_geopolitics"
+hint = "Palestine/Israel, Ukraine/Russia, Iran nuclear, Kashmir, South China Sea, Korea, Myanmar, Sudan (substantive developments)"
+
+[topic.int_major_powers]
+label = "পরাশক্তির পররাষ্ট্রনীতি ও ভূ-রাজনীতি"
+subject = "foreign_policy_geopolitics"
+hint = "US, China, Russia, India, EU, Japan foreign policy shifts, alliances, sanctions"
+
+[topic.int_leadership_elections]
+label = "গুরুত্বপূর্ণ দেশের সরকার পরিবর্তন ও জাতীয় নির্বাচন"
+subject = "international_affairs"
+hint = "new heads of state/government and national elections in major or neighbouring countries only"
+
+[topic.int_treaties_summits]
+label = "আন্তর্জাতিক চুক্তি, সম্মেলন ও ঘোষণা"
+subject = "international_affairs"
+hint = "treaties, conventions, summits, declarations and who hosts/chairs them"
+
+[topic.int_security_nuclear]
+label = "পারমাণবিক কর্মসূচি, অস্ত্র নিয়ন্ত্রণ ও নিরাপত্তা"
+subject = "foreign_policy_geopolitics"
+hint = "nuclear programmes, arms control treaties, terrorism policy, military alliances"
+
+# ------------------------------------------------------- Science and technology
+[topic.sci_space]
+label = "মহাকাশ গবেষণা ও স্যাটেলাইট"
+subject = "science_technology"
+hint = "space missions, satellites, space agencies"
+
+[topic.sci_health]
+label = "জনস্বাস্থ্য, রোগ, টিকা ও চিকিৎসা গবেষণা"
+subject = "science_technology"
+hint = "outbreaks/epidemics (national scale), vaccines, WHO decisions, medical breakthroughs"
+
+[topic.sci_tech_ai]
+label = "প্রযুক্তি, কৃত্রিম বুদ্ধিমত্তা ও টেলিযোগাযোগ"
+subject = "science_technology"
+hint = "AI, semiconductors, major tech policy/regulation, internet/cyber developments (not gadget launches)"
+
+[topic.sci_discovery]
+label = "বৈজ্ঞানিক আবিষ্কার ও নতুন জ্বালানি প্রযুক্তি"
+subject = "science_technology"
+hint = "significant discoveries, new materials/energy technologies (not pop-science explainers)"
+
+# ------------------------------------------------------ Awards, reports, indices
+[topic.awd_awards]
+label = "পুরস্কার ও সম্মাননা"
+subject = "awards_reports_indices"
+hint = "Nobel, Booker, Magsaysay, major scientific medals, Ekushey/Independence awards, international honours for Bangladeshis"
+
+[topic.rep_indices]
+label = "আন্তর্জাতিক সূচক, প্রতিবেদন ও র‍্যাংকিং"
+subject = "awards_reports_indices"
+hint = "HDI, CPI, Global Hunger Index, press freedom, climate risk, World Bank/IMF/UN reports with Bangladesh ranking"
+
+[topic.rep_appointments_firsts]
+label = "গুরুত্বপূর্ণ নিয়োগ, প্রথম ও রেকর্ড"
+subject = "awards_reports_indices"
+hint = "heads of major national/international institutions, 'first ever' achievements, records"
+
+# ------------------------------------------------------------ selection policy
+[policy]
+# Story types the screening model must choose from. Rejected types are dropped
+# by code no matter what the model decides.
+accepted_types = [
+  "policy_decision", "law_constitution", "economic_data", "development_project",
+  "diplomacy", "international_event", "international_org", "environment_disaster",
+  "science_technology", "public_health", "report_index", "award_appointment",
+]
+rejected_types = [
+  "opinion", "feature", "crime_accident", "local_admin", "party_politics",
+  "court_case_individual", "foreign_domestic_minor", "sports_entertainment",
+  "lifestyle", "religion_culture_local", "human_interest", "other_low_value",
+]
+
+# Shown to the model as calibration examples (real items from earlier runs).
+bad_examples = [
+  "Donation boxes of a shrine opened and counted (local/religious, no exam value)",
+  "City corporation warns against footpath shops (routine local notice)",
+  "Police chief says extortionists are linked to power (statement, no decision)",
+  "Banned student wing's procession / attack on police (party politics, law and order)",
+  "Indian state chief minister attacks election commissioner's brother (foreign domestic trivia)",
+  "Bangladeshis charged with immigration fraud in Canada (individual court case)",
+  "Factory fire was hard to control due to water shortage (incident, no policy outcome)",
+  "Opinion column or interview arguing what the government should do (opinion, no new fact)",
+  "Road blockade in two hill districts ends, are vehicles moving? (daily situation update)",
+]
+good_examples = [
+  "PM's state visit to Japan: agreements, investment and cooperation (bilateral relations)",
+  "ECNEC approves 15 projects worth Tk X crore (development, budget data)",
+  "Shipbreaking industry moved from Red to Orange category by Department of Environment (environment law)",
+  "Bengali physicist Ashoke Sen receives the Oskar Klein Medal (award, prelims fact)",
+  "US-Israel threaten Iran; regional military posture shifts (international conflict)",
+  "Bangladesh Bank raises policy rate to X percent (monetary policy, prelims fact)",
+  "Cabinet approves draft amendment to the Labour Act (law, written + prelims)",
+]

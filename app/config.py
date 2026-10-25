@@ -70,6 +70,19 @@ class ExtractionConfig:
 
 
 @dataclass(frozen=True)
+class SelectionConfig:
+    min_syllabus_relevance: float = 7
+    maybe_min_priority: float = 7
+    max_stories_per_topic: int = 1
+
+
+@dataclass(frozen=True)
+class FilterConfig:
+    exclude_url_paths: tuple[str, ...] = ()
+    exclude_title_patterns: tuple[str, ...] = ()
+
+
+@dataclass(frozen=True)
 class ScreeningConfig:
     max_candidates: int = 60
     batch_size: int = 60
@@ -150,6 +163,8 @@ class Settings:
     edition: EditionConfig
     collection: CollectionConfig
     extraction: ExtractionConfig
+    selection: SelectionConfig
+    filters: FilterConfig
     screening: ScreeningConfig
     analysis: AnalysisConfig
     weights: dict[str, float]
@@ -173,6 +188,23 @@ def _section(cls, data: dict, name: str):
     if unknown:
         raise ConfigError(f"Unknown keys in [{name}]: {sorted(unknown)}")
     return cls(**raw)
+
+
+def _filters(data: dict) -> FilterConfig:
+    raw = data.get("filters", {})
+    unknown = set(raw) - {"exclude_url_paths", "exclude_title_patterns"}
+    if unknown:
+        raise ConfigError(f"Unknown keys in [filters]: {sorted(unknown)}")
+    patterns = tuple(str(x) for x in raw.get("exclude_title_patterns", ()))
+    for pat in patterns:
+        try:
+            re.compile(pat, re.I)
+        except re.error as exc:
+            raise ConfigError(f"Invalid [filters] title pattern {pat!r}: {exc}") from exc
+    return FilterConfig(
+        exclude_url_paths=tuple(str(x).lower() for x in raw.get("exclude_url_paths", ())),
+        exclude_title_patterns=patterns,
+    )
 
 
 def validate_weights(weights: dict[str, float]) -> dict[str, float]:
@@ -247,6 +279,8 @@ def load_settings(config_dir: Path | None = None, env: dict[str, str] | None = N
         edition=edition,
         collection=_section(CollectionConfig, data, "collection"),
         extraction=_section(ExtractionConfig, data, "extraction"),
+        selection=_section(SelectionConfig, data, "selection"),
+        filters=_filters(data),
         screening=_section(ScreeningConfig, data, "screening"),
         analysis=_section(AnalysisConfig, data, "analysis"),
         weights=validate_weights(data.get("scoring", {}).get("weights", {})),

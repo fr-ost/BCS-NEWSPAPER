@@ -18,6 +18,24 @@ from .base import LLMProvider, LLMRequest
 _SENTENCE = re.compile(r"(?<=[.!?।])\s+")
 
 
+_TOPIC_KEYWORDS = (
+    ("remittance", "bd_macro_data"), ("রেমিট্যান্স", "bd_macro_data"),
+    ("labour", "bd_parliament_law"), ("শ্রম", "bd_parliament_law"),
+    ("cyclone", "env_disaster"), ("ঘূর্ণিঝড়", "env_disaster"),
+    ("nepal", "fp_bilateral"), ("নেপাল", "fp_bilateral"),
+)
+_FALLBACK_TOPICS = ("bd_infrastructure", "int_conflicts", "sci_health", "rep_indices", "env_climate")
+
+
+def _mock_topic(text: str) -> str:
+    """Deterministic syllabus topic for offline runs (keyword, else hash)."""
+    low = (text or "").lower()
+    for kw, topic in _TOPIC_KEYWORDS:
+        if kw in low:
+            return topic
+    return _FALLBACK_TOPICS[sum(map(ord, low)) % len(_FALLBACK_TOPICS)]
+
+
 def _sentences(text: str) -> list[str]:
     return [s.strip() for s in _SENTENCE.split(text or "") if len(s.strip()) > 40]
 
@@ -38,6 +56,9 @@ class MockProvider(LLMProvider):
             results.append(
                 {
                     "id": c["id"],
+                    "story_type": "policy_decision" if substantial else "other_low_value",
+                    "topic": _mock_topic(c.get("title", "") + " " + c.get("excerpt", "")) if substantial else "none",
+                    "exam_hook": "[মক] নমুনা পরীক্ষা-সংযোগ",
                     "decision": "select" if substantial else "reject",
                     "categories": ["bangladesh_affairs"],
                     "rationale": "[মক] দৈর্ঘ্যভিত্তিক নমুনা বাছাই",
@@ -56,8 +77,10 @@ class MockProvider(LLMProvider):
             "relevant": bool(facts),
             "rejection_reason": "" if facts else "[মক] পর্যাপ্ত তথ্য নেই",
             "headline_bn": f"[মক] {payload.get('headline', '')}",
+            "syllabus_topic": _mock_topic(payload.get("headline", "") + " " + payload.get("text", "")[:300]),
             "categories": ["bangladesh_affairs"],
             "exam_focus": "both",
+            "likely_question": "[মক] এই খবর থেকে একটি নমুনা প্রশ্ন?",
             "what_happened": f"[মক সারাংশ] {sents[0] if sents else ''}",
             "why_it_matters": "[মক] এটি অফলাইন পরীক্ষার নমুনা লেখা, প্রকৃত বিশ্লেষণ নয়।",
             "key_facts": facts,
