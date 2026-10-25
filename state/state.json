@@ -100,6 +100,26 @@
    "title": "দোকানপাট খোলা রাখার সময়সীমা আগের নিয়মে ফিরল, বন্ধ রাত আটটায়",
    "url": "https://www.prothomalo.com/business/economics/9rtzd38irj"
   },
+  "a_08c86eb06fc42fc6": {
+   "canonical_url": "https://thedailystar.net/news/bangladesh/news/community-clinics-be-renamed-4306801",
+   "content_hash": "d4750ac8db77746c",
+   "date_status": "ok",
+   "event_id": "ev_50fdcb4f03c2",
+   "excerpt": "Health Minister Sardar Md Sakhawat Husain has announced plans to rename all community clinics across the country as Family Welfare Centres to expand healthcare services at the union level.",
+   "extraction": {
+    "chars": 1646,
+    "reason": "",
+    "status": "ok"
+   },
+   "id": "a_08c86eb06fc42fc6",
+   "language": "en",
+   "published_at": "2026-10-24T18:00:00+00:00",
+   "retrieved_at": "2026-10-25T03:13:13+00:00",
+   "source_id": "dailystar_bangladesh",
+   "source_name": "The Daily Star — Bangladesh",
+   "title": "Community clinics to be renamed",
+   "url": "https://www.thedailystar.net/news/bangladesh/news/community-clinics-be-renamed-4306801"
+  },
   "a_0d466c394a6de301": {
    "canonical_url": "https://prothomalo.com/world/europe/uqi1yu06hs",
    "content_hash": "e5210015f12c42f8",
@@ -240,6 +260,26 @@
    "title": "পাঞ্জাবের মুখ্যমন্ত্রীর তিরে বিদ্ধ জ্ঞানেশ কুমারের ভাই",
    "url": "https://www.prothomalo.com/world/india/0ki4cxwm2d"
   },
+  "a_1e4362954edcc238": {
+   "canonical_url": "https://prothomalo.com/bangladesh/p639yhxvrh",
+   "content_hash": "3116bdb7b3389d91",
+   "date_status": "ok",
+   "event_id": "ev_45b8e577bf57",
+   "excerpt": "জরুরি সতর্কবার্তার পর বাংলাদেশে ভূমিসেবা এবং কেন্দ্রীয় ব্যাংকসহ কিছু ওয়েবসাইট বন্ধ করা হয়েছে।",
+   "extraction": {
+    "chars": 7812,
+    "reason": "",
+    "status": "ok"
+   },
+   "id": "a_1e4362954edcc238",
+   "language": "bn",
+   "published_at": "2026-10-25T03:03:26+00:00",
+   "retrieved_at": "2026-10-25T03:13:13+00:00",
+   "source_id": "prothomalo",
+   "source_name": "Prothom Alo (প্রথম আলো)",
+   "title": "সাইবার ঝুঁকি বিশ্বজুড়ে, প্রভাব বাংলাদেশেও",
+   "url": "https://www.prothomalo.com/bangladesh/p639yhxvrh"
+  },
   "a_1e46fc9dc3b7a796": {
    "canonical_url": "https://prothomalo.com/bangladesh/district/nyljxykjkz",
    "content_hash": "9e33cff273c7f08a",
@@ -255,6 +295,26 @@
    "source_name": "Prothom Alo (প্রথম আলো)",
    "title": "বাড়িতে সাহায্য চাইতে গিয়ে মোবাইল চুরি, অভিযুক্তকে ধরতে গিয়ে বৃদ্ধের মৃত্যু",
    "url": "https://www.prothomalo.com/bangladesh/district/nyljxykjkz"
+  },
+  "a_1fc5f82785aed471": {
+   "canonical_url": "https://thedailystar.net/news/world/middle-east/news/2200-palestinians-forced-leave-hebron-4306681",
+   "content_hash": "8e53f185c032190d",
+   "date_status": "ok",
+   "event_id": "ev_82b4f1f60746",
+   "excerpt": "The Israeli military forced around 2,200 Palestinians to leave their homes in Hebron in the occupied West Bank, a Palestinian official said yesterday, a day after a Palestinian attack killed two Israeli soldiers.",
+   "extraction": {
+    "chars": 4269,
+    "reason": "",
+    "status": "ok"
+   },
+   "id": "a_1fc5f82785aed471",
+   "language": "en",
+   "published_at": "2026-10-24T18:00:00+00:00",
+   "retrieved_at": "2026-10-25T03:13:13+00:00",
+   "source_id": "dailystar_world",
+   "source_name": "The Daily Star — World",
+   "title": "2,200 Palestinians forced to leave Hebron",
+   "url": "https://www.thedailystar.net/news/world/middle-east/news/2200-palestinians-forced-leave-hebron-4306681"
   },
   "a_203c0404058b8478": {
    "canonical_url": "https://kishoralo.com/feature/s2rtb961xh",
@@ -308,6 +368,22 @@
    "title": "চোট নিয়ে ভয়, সেই চোটে পড়েই সিরিজ শেষ নর্কিয়ার",
    "url": "https://www.prothomalo.com/sports/cricket/iiqccgpnmz"
   },
+  "a_2bfb29d963c8af65": {
+   "canonical_url": "https://bbc.com/bengali/articles/cm20vg3p6lzvo?at_campaign=rss&at_medium=RSS",
+   "content_hash": "699b9c9433b92616",
+   "date_status": "ok",
+   "event_id": "ev_b59ebb00ae3a",
+   "excerpt": "প্রথমে প্যারিসের দক্ষিণ-পশ্চিমে ট্রেপস শহরে এবং পরে লা ভেরিয়েরে গুলির ঘটনা ঘটে। হামলাকারী নিজের গাড়ি থেকেই গুলি চালান। প্রায় ১৫ মিনিট ধরে হামলাটি চলে। হামলাকারীকে অভিবাসীদের লক্ষ্যবস্তু করতে দেখা গেছে। পরে তাকে গ্রেপ্তার করা হয়।",
+   "extraction": null,
+   "id": "a_2bfb29d963c8af65",
+   "language": "bn",
+   "published_at": "2026-10-24T03:39:25+00:00",
+   "retrieved_at": "2026-10-25T03:13:13+00:00",
+   "source_id": "bbc_bangla",
+   "source_name": "BBC News বাংলা",
+   "title": "প্যারিসের কাছে প্রাণঘাতী গুলির ঘটনাকে 'বর্ণবাদী সন্ত্রাসী হামলা' বললেন ম্যাক্রঁ",
+   "url": "https://www.bbc.com/bengali/articles/cm20vg3p6lzvo?at_medium=RSS&at_campaign=rss"
+  },
   "a_30905f6b2900c01c": {
    "canonical_url": "https://prothomalo.com/education/higher-education/5dp552hmbv",
    "content_hash": "04c4219157ae5b1d",
@@ -323,6 +399,38 @@
    "source_name": "Prothom Alo (প্রথম আলো)",
    "title": "উন্নত ক্যারিয়ার গঠনে যে ১০ বিদেশি ভাষা শিক্ষা এগিয়ে রাখবে আপনাকে",
    "url": "https://www.prothomalo.com/education/higher-education/5dp552hmbv"
+  },
+  "a_32893b8946661391": {
+   "canonical_url": "https://bbc.com/bengali/articles/cmx2wnd0e55zo?at_campaign=rss&at_medium=RSS",
+   "content_hash": "a09d38e18b11d128",
+   "date_status": "ok",
+   "event_id": "ev_9b85bebe0f33",
+   "excerpt": "বাংলাদেশের রাজনীতিতে 'গুপ্ত-সুপ্ত' বিতর্ক আবারও আলোচনায়। কে কোন দলের হয়ে রাজনীতি করছেন, কার আনুগত্য কোথায়, কে অনুপ্রবেশকারী আর কে প্রক্সি -এমন নানা বিতর্ক রাজনীতিতে। এসব নিয়ে পাল্টাপাল্টি অভিযোগও করছেন বিভিন্ন দলের নেতারা।",
+   "extraction": null,
+   "id": "a_32893b8946661391",
+   "language": "bn",
+   "published_at": "2026-10-24T01:51:42+00:00",
+   "retrieved_at": "2026-10-25T03:13:13+00:00",
+   "source_id": "bbc_bangla",
+   "source_name": "BBC News বাংলা",
+   "title": "'গুপ্ত-সুপ্ত' বাংলাদেশের রাজনীতিতে কী প্রভাব ফেলছে?",
+   "url": "https://www.bbc.com/bengali/articles/cmx2wnd0e55zo?at_medium=RSS&at_campaign=rss"
+  },
+  "a_3356b06d57010cee": {
+   "canonical_url": "https://thedailystar.net/news/world/news/police-fire-tear-gas-new-french-protests-kick-4306361",
+   "content_hash": "70e7f66fd2be4793",
+   "date_status": "ok",
+   "event_id": "ev_46a908f2ed77",
+   "excerpt": "Rights groups criticise restrictions, warning of threats to peaceful protest",
+   "extraction": null,
+   "id": "a_3356b06d57010cee",
+   "language": "en",
+   "published_at": "2026-10-24T12:42:13+00:00",
+   "retrieved_at": "2026-10-25T03:13:13+00:00",
+   "source_id": "dailystar_world",
+   "source_name": "The Daily Star — World",
+   "title": "Police fire tear gas as new French protests kick off",
+   "url": "https://www.thedailystar.net/news/world/news/police-fire-tear-gas-new-french-protests-kick-4306361"
   },
   "a_34c286b11a4de17e": {
    "canonical_url": "https://nagorik.prothomalo.com/durporobash/kbe6x6cgs7",
@@ -359,6 +467,22 @@
    "source_name": "Prothom Alo (প্রথম আলো)",
    "title": "মাদ্রাসায় শিশু নিপীড়ন: আলেমসমাজ কি চুপই থাকবে",
    "url": "https://www.prothomalo.com/opinion/column/58tanbqyd9"
+  },
+  "a_3908a8a881cb6ace": {
+   "canonical_url": "https://thedailystar.net/business/economy/news/creative-economy-be-part-economic-growth-khosru-4306531",
+   "content_hash": "418924784a2ca7ec",
+   "date_status": "ok",
+   "event_id": "ev_688f86f475b8",
+   "excerpt": "Finance and Planning Minister Amir Khosru Mahmud Chowdhury yesterday said the government wants to bring art and culture into mainstream economic activity, making the creative economy a new component of Bangladesh’s development.",
+   "extraction": null,
+   "id": "a_3908a8a881cb6ace",
+   "language": "en",
+   "published_at": "2026-10-24T18:00:00+00:00",
+   "retrieved_at": "2026-10-25T03:13:13+00:00",
+   "source_id": "dailystar_business",
+   "source_name": "The Daily Star — Business",
+   "title": "Creative economy to be part of economic growth: Khosru",
+   "url": "https://www.thedailystar.net/business/economy/news/creative-economy-be-part-economic-growth-khosru-4306531"
   },
   "a_3e0a7209ef7da655": {
    "canonical_url": "https://prothomalo.com/sports/football/6flw2cmyw1",
@@ -520,6 +644,22 @@
    "title": "১২ সেকেন্ডে ব্যাগ ছিনিয়ে পালালেন ছিনতাইকারীরা, পেছনে ছুটলেন বৃদ্ধ",
    "url": "https://www.prothomalo.com/bangladesh/district/fqxuagwkru"
   },
+  "a_5024dd3ba36c6f08": {
+   "canonical_url": "https://thedailystar.net/business/economy/news/biman-doubles-dhaka-narita-flights-4306536",
+   "content_hash": "c627b2bb6b5d2af3",
+   "date_status": "ok",
+   "event_id": "ev_320a4d3e5583",
+   "excerpt": "Biman Bangladesh Airlines will double its weekly flights between Dhaka and Japan’s Narita from October 29, coinciding with Prime Minister Tarique Rahman’s official visit to Japan, a senior airline official said yesterday.",
+   "extraction": null,
+   "id": "a_5024dd3ba36c6f08",
+   "language": "en",
+   "published_at": "2026-10-24T18:00:00+00:00",
+   "retrieved_at": "2026-10-25T03:13:13+00:00",
+   "source_id": "dailystar_business",
+   "source_name": "The Daily Star — Business",
+   "title": "Biman doubles Dhaka-Narita flights",
+   "url": "https://www.thedailystar.net/business/economy/news/biman-doubles-dhaka-narita-flights-4306536"
+  },
   "a_51ab05b42a3a5b61": {
    "canonical_url": "https://prothomalo.com/education/examination/rojsow6r16",
    "content_hash": "07ddc90e46079077",
@@ -535,6 +675,38 @@
    "source_name": "Prothom Alo (প্রথম আলো)",
    "title": "মুক্তিযুদ্ধ পরিচালনায় দেশকে ভাগ করা হয় ১১টি সেক্টরে। প্রাথমিক বৃত্তি পরীক্ষা–২০২৬",
    "url": "https://www.prothomalo.com/education/examination/rojsow6r16"
+  },
+  "a_51e83dd9e20e561f": {
+   "canonical_url": "https://bbc.com/bengali/articles/cqp8g6rkpy3xo?at_campaign=rss&at_medium=RSS",
+   "content_hash": "de32109be06d1d49",
+   "date_status": "ok",
+   "event_id": "ev_d9e6fbc10244",
+   "excerpt": "ক্যান্সার ও অকাল মেনোপজ হয়েছিল তার। তবে ২৩ বছর আগে ক্যাসান্ড্রা বেকনের শরীর থেকে নেওয়া ডিম্বাশয়ের টিস্যু সফলভাবে তার শরীরে পুনরায় প্রতিস্থাপন করা হয়, যার ফলে তিনি ৪৪ বছর বয়সে তিনি একটি ছেলেশিশু জন্ম দিতে সক্ষম হন।",
+   "extraction": null,
+   "id": "a_51e83dd9e20e561f",
+   "language": "bn",
+   "published_at": "2026-10-24T09:00:26+00:00",
+   "retrieved_at": "2026-10-25T03:13:13+00:00",
+   "source_id": "bbc_bangla",
+   "source_name": "BBC News বাংলা",
+   "title": "ক্যান্সার, অকাল মেনোপজ ও কয়েক দশকের লড়াই: যেভাবে হিমায়িত ডিম্বাশয় টিস্যু থেকে জন্ম নিল এক সুস্থ শিশু",
+   "url": "https://www.bbc.com/bengali/articles/cqp8g6rkpy3xo?at_medium=RSS&at_campaign=rss"
+  },
+  "a_5567eb59e3fb9f01": {
+   "canonical_url": "https://bbc.com/bengali/articles/cmn8eq9vepq5o?at_campaign=rss&at_medium=RSS",
+   "content_hash": "654bf6da2109faca",
+   "date_status": "ok",
+   "event_id": "ev_e18eb225d7ce",
+   "excerpt": "আখের এই জাতটি রসালো, নরম ও চিবোতে খুব মজার। এছাড়া আখের রসে প্রাকৃতিক চিনির পরিমাণ যে পরিমাণ থাকলে ডায়াবেটিক রোগীদের জন্য সমস্যা হতে পারে এই জাতে তার পরিমাণ নির্ধারিত মাত্রার চেয়ে কম।",
+   "extraction": null,
+   "id": "a_5567eb59e3fb9f01",
+   "language": "bn",
+   "published_at": "2026-10-24T07:34:32+00:00",
+   "retrieved_at": "2026-10-25T03:13:13+00:00",
+   "source_id": "bbc_bangla",
+   "source_name": "BBC News বাংলা",
+   "title": "রসে ভরপুর আখের নাম 'ব্ল্যাক রুবি', এর বৈশিষ্ট্য কী",
+   "url": "https://www.bbc.com/bengali/articles/cmn8eq9vepq5o?at_medium=RSS&at_campaign=rss"
   },
   "a_57c1a7a531cf0e05": {
    "canonical_url": "https://prothomalo.com/opinion/column/d8l6znw2fg",
@@ -587,6 +759,22 @@
    "source_name": "Prothom Alo (প্রথম আলো)",
    "title": "ব্ল্যাক কফি কি রক্তে শর্করা ও কোলেস্টেরল নিয়ন্ত্রণে সাহায্য করে?",
    "url": "https://www.haal.fashion/lifestyle/well-being/842ny14e48"
+  },
+  "a_5ad50d53e37e4323": {
+   "canonical_url": "https://thedailystar.net/news/bangladesh/news/we-must-keep-returning-abul-maksuds-work-4306751",
+   "content_hash": "acc89b03cae2ff58",
+   "date_status": "ok",
+   "event_id": "ev_d6f7dbced6f0",
+   "excerpt": "Late writer, journalist and researcher Syed Abul Maksud was a man of conviction who challenged conventional wisdom, pursued historical truth and stood against injustice, speakers said at a discussion yesterday.",
+   "extraction": null,
+   "id": "a_5ad50d53e37e4323",
+   "language": "en",
+   "published_at": "2026-10-24T18:00:00+00:00",
+   "retrieved_at": "2026-10-25T03:13:13+00:00",
+   "source_id": "dailystar_bangladesh",
+   "source_name": "The Daily Star — Bangladesh",
+   "title": "‘We must keep returning to Abul Maksud’s work’",
+   "url": "https://www.thedailystar.net/news/bangladesh/news/we-must-keep-returning-abul-maksuds-work-4306751"
   },
   "a_5ea700f6b60a6fe4": {
    "canonical_url": "https://haal.fashion/lifestyle/pkfsfku69e",
@@ -719,6 +907,54 @@
    "source_name": "Prothom Alo (প্রথম আলো)",
    "title": "বাড়ি ভাড়া নিয়ে মাদক কারবারের অভিযোগ, পুলিশ সদস্যসহ আটক ৩",
    "url": "https://www.prothomalo.com/bangladesh/district/wuydcnno38"
+  },
+  "a_7169a1de04484f1d": {
+   "canonical_url": "https://thedailystar.net/business/economy/news/prime-bank-partners-le-dor-offer-benefits-priority-banking-customers-4306546",
+   "content_hash": "cf061675653cb0d7",
+   "date_status": "ok",
+   "event_id": "ev_32e536989d7e",
+   "excerpt": "Prime Bank PLC has signed an agreement with LE D’OR, a French bakery, patisserie and café chain operating in Dhaka, to offer privileges to its priority banking customers.",
+   "extraction": null,
+   "id": "a_7169a1de04484f1d",
+   "language": "en",
+   "published_at": "2026-10-24T18:00:00+00:00",
+   "retrieved_at": "2026-10-25T03:13:13+00:00",
+   "source_id": "dailystar_business",
+   "source_name": "The Daily Star — Business",
+   "title": "Prime Bank partners with LE D’OR to offer benefits to priority banking customers",
+   "url": "https://www.thedailystar.net/business/economy/news/prime-bank-partners-le-dor-offer-benefits-priority-banking-customers-4306546"
+  },
+  "a_71adda2d325e11ea": {
+   "canonical_url": "https://bbc.com/bengali/articles/c6m2d1gx277go?at_campaign=rss&at_medium=RSS",
+   "content_hash": "fa821c09bb63c4b2",
+   "date_status": "ok",
+   "event_id": "ev_3907a3fc2a41",
+   "excerpt": "গত কয়েক মাস ধরে এল নিনো আরও শক্তিশালী হয়েছে এবং এটি ইতোমধ্যেই বৈশ্বিক আবহাওয়ার ধরনে উল্লেখযোগ্য প্রভাব ফেলছে।",
+   "extraction": null,
+   "id": "a_71adda2d325e11ea",
+   "language": "bn",
+   "published_at": "2026-10-24T10:36:16+00:00",
+   "retrieved_at": "2026-10-25T03:13:13+00:00",
+   "source_id": "bbc_bangla",
+   "source_name": "BBC News বাংলা",
+   "title": "বৃষ্টি-ঘূর্ণিঝড়ের আচরণ বদলে দেওয়াসহ বিশ্ব আবহাওয়ায় যে পাঁচ প্রভাব ফেলেছে এল নিনো",
+   "url": "https://www.bbc.com/bengali/articles/c6m2d1gx277go?at_medium=RSS&at_campaign=rss"
+  },
+  "a_762f1f3aa1becbe7": {
+   "canonical_url": "https://thedailystar.net/business/global-economy/news/apples-foldable-iphone-hits-stores-4306541",
+   "content_hash": "5b78c60c51e20c97",
+   "date_status": "ok",
+   "event_id": "ev_0e67448d1641",
+   "excerpt": "Apple’s first folding phone, the iPhone Duo, hit stores around the world on Friday with a price tag of about $2,000 and less of the fanfare that accompanied previous iPhone launches.",
+   "extraction": null,
+   "id": "a_762f1f3aa1becbe7",
+   "language": "en",
+   "published_at": "2026-10-24T18:00:00+00:00",
+   "retrieved_at": "2026-10-25T03:13:13+00:00",
+   "source_id": "dailystar_business",
+   "source_name": "The Daily Star — Business",
+   "title": "Apple’s foldable iPhone hits stores",
+   "url": "https://www.thedailystar.net/business/global-economy/news/apples-foldable-iphone-hits-stores-4306541"
   },
   "a_7667cc253f16561f": {
    "canonical_url": "https://prothomalo.com/technology/science/6qs8e5mwyd",
@@ -928,6 +1164,42 @@
    "title": "৭৫ বছর ছাঁটাই ছাড়াই চলছে কোম্পানিটি; পরিচালনা পদ্ধতি দেখতে ভিড় সিইওদের",
    "url": "https://www.prothomalo.com/chakri/chakri-news/migv2f6fyu"
   },
+  "a_8c4835632c4b956a": {
+   "canonical_url": "https://thedailystar.net/news/environment/natural-disaster/news/low-pressure-over-bay-may-turn-cyclone-rain-forecast-october-27-4306291",
+   "content_hash": "0ae0dcd890165dc8",
+   "date_status": "ok",
+   "event_id": "ev_2407e2ff73e4",
+   "excerpt": "Bangladesh-proposed name Arnab to be used for next cyclone; Murasu follows",
+   "extraction": {
+    "chars": 2216,
+    "reason": "",
+    "status": "ok"
+   },
+   "id": "a_8c4835632c4b956a",
+   "language": "en",
+   "published_at": "2026-10-24T09:14:37+00:00",
+   "retrieved_at": "2026-10-25T03:13:13+00:00",
+   "source_id": "dailystar_environment",
+   "source_name": "The Daily Star — Environment",
+   "title": "Low pressure over Bay may turn into cyclone; rain forecast from October 27",
+   "url": "https://www.thedailystar.net/news/environment/natural-disaster/news/low-pressure-over-bay-may-turn-cyclone-rain-forecast-october-27-4306291"
+  },
+  "a_8c8b534767595892": {
+   "canonical_url": "https://thedailystar.net/news/bangladesh/news/stranded-home-migrants-fear-losing-saudi-jobs-4306746",
+   "content_hash": "2836b172ea47fb8d",
+   "date_status": "ok",
+   "event_id": "ev_513935540010",
+   "excerpt": "For Al-Amin, a migrant worker in Saudi Arabia’s Dammam, seven days have passed since his leave expired, but he remains stranded in Bangladesh, uncertain when he can return to work.",
+   "extraction": null,
+   "id": "a_8c8b534767595892",
+   "language": "en",
+   "published_at": "2026-10-24T18:00:00+00:00",
+   "retrieved_at": "2026-10-25T03:13:13+00:00",
+   "source_id": "dailystar_bangladesh",
+   "source_name": "The Daily Star — Bangladesh",
+   "title": "Stranded at home, migrants fear losing Saudi jobs",
+   "url": "https://www.thedailystar.net/news/bangladesh/news/stranded-home-migrants-fear-losing-saudi-jobs-4306746"
+  },
   "a_8cd6245dcf0a09e1": {
    "canonical_url": "https://prothomalo.com/sports/football/08n862g348",
    "content_hash": "2cf8ed8a57297d96",
@@ -980,6 +1252,38 @@
    "title": "বুয়েটের ভর্তি পরীক্ষায় প্রথম নাফিস এখন কাজ করছেন ব্লুমবার্গে",
    "url": "https://www.prothomalo.com/lifestyle/lhd5upiszn"
   },
+  "a_8fa19907be5708b2": {
+   "canonical_url": "https://thedailystar.net/news/bangladesh/obituary/news/journalist-shafiqur-rahman-passes-away-4306741",
+   "content_hash": "bfd95ece614c15b0",
+   "date_status": "ok",
+   "event_id": "ev_79d75b49f719",
+   "excerpt": "Freedom fighter Muhammad Shafiqur Rahman, a former lawmaker from Chandpur-4 and former president of the Jatiya Press Club, died at a hospital in Dhaka yesterday. He was 77.",
+   "extraction": null,
+   "id": "a_8fa19907be5708b2",
+   "language": "en",
+   "published_at": "2026-10-24T18:00:00+00:00",
+   "retrieved_at": "2026-10-25T03:13:13+00:00",
+   "source_id": "dailystar_bangladesh",
+   "source_name": "The Daily Star — Bangladesh",
+   "title": "Journalist Shafiqur Rahman passes away",
+   "url": "https://www.thedailystar.net/news/bangladesh/obituary/news/journalist-shafiqur-rahman-passes-away-4306741"
+  },
+  "a_916a3157b71603e0": {
+   "canonical_url": "https://news.un.org/feed/view/en/story/2026/10/1168663",
+   "content_hash": "f2f2a4eca2f72913",
+   "date_status": "ok",
+   "event_id": "ev_c2ac7b6e80dc",
+   "excerpt": "When Tahani Al-Numeiri heard the first explosions in Khartoum, her hometown, war seemed so remote that she assumed they were celebrations from a nearby wedding. It was the morning of 15 April 2023, and the paramilitary Rapid Support Forces had just turned their guns on the army.",
+   "extraction": null,
+   "id": "a_916a3157b71603e0",
+   "language": "en",
+   "published_at": "2026-10-24T12:00:00+00:00",
+   "retrieved_at": "2026-10-25T03:13:13+00:00",
+   "source_id": "un_news_all",
+   "source_name": "UN News — All",
+   "title": "Women ‘first to suffer’ under siege, first to step up as frontline responders in Sudan",
+   "url": "https://news.un.org/feed/view/en/story/2026/10/1168663"
+  },
   "a_920a8a8fcab463e2": {
    "canonical_url": "https://prothomalo.com/video/48tbg66bgg",
    "content_hash": "6dc3a15f5ee3cf92",
@@ -995,6 +1299,42 @@
    "source_name": "Prothom Alo (প্রথম আলো)",
    "title": "ঘোরাঘুরি করাই কাজ, পেশা হিসেবে ট্র্যাভেল ব্লগিং কেমন",
    "url": "https://www.prothomalo.com/video/48tbg66bgg"
+  },
+  "a_927b230d816cd9ca": {
+   "canonical_url": "https://thedailystar.net/news/environment/news/tk-87cr-climate-smart-urban-project-cards-4306431",
+   "content_hash": "e1fb9a73140666f5",
+   "date_status": "ok",
+   "event_id": "ev_58e8c29fd7cf",
+   "excerpt": "Germany-funded initiative to cover four municipalities",
+   "extraction": {
+    "chars": 3379,
+    "reason": "",
+    "status": "ok"
+   },
+   "id": "a_927b230d816cd9ca",
+   "language": "en",
+   "published_at": "2026-10-24T14:37:00+00:00",
+   "retrieved_at": "2026-10-25T03:13:13+00:00",
+   "source_id": "dailystar_environment",
+   "source_name": "The Daily Star — Environment",
+   "title": "Tk 87cr climate-smart urban project on cards",
+   "url": "https://www.thedailystar.net/news/environment/news/tk-87cr-climate-smart-urban-project-cards-4306431"
+  },
+  "a_93fd626fd474c6a4": {
+   "canonical_url": "https://thedailystar.net/news/bangladesh/news/islamic-leaders-want-peaceful-ijtema-4306731",
+   "content_hash": "88d1215e78532859",
+   "date_status": "ok",
+   "event_id": "ev_4f80b8d7b3a1",
+   "excerpt": "A section of Islamic leaders yesterday placed two demands before the government to ensure the smooth and peaceful holding of Bishwa Ijtema next year.",
+   "extraction": null,
+   "id": "a_93fd626fd474c6a4",
+   "language": "en",
+   "published_at": "2026-10-24T18:00:00+00:00",
+   "retrieved_at": "2026-10-25T03:13:13+00:00",
+   "source_id": "dailystar_bangladesh",
+   "source_name": "The Daily Star — Bangladesh",
+   "title": "Islamic leaders want peaceful Ijtema",
+   "url": "https://www.thedailystar.net/news/bangladesh/news/islamic-leaders-want-peaceful-ijtema-4306731"
   },
   "a_957486bd81713638": {
    "canonical_url": "https://prothomalo.com/video/bangladesh/hkgpdicyvx",
@@ -1047,6 +1387,22 @@
    "source_name": "Prothom Alo (প্রথম আলো)",
    "title": "মাদ্রাসায় শিশু সুরক্ষা নিশ্চিত ও দায়ীদের জবাবদিহির আওতায় আনার আহ্বান",
    "url": "https://www.prothomalo.com/bangladesh/9mkb2puq33"
+  },
+  "a_976b422629d3379c": {
+   "canonical_url": "https://thedailystar.net/news/world/news/fresh-clashes-rock-france-protesters-march-4306821",
+   "content_hash": "a130d5fb0082daf1",
+   "date_status": "ok",
+   "event_id": "ev_46a908f2ed77",
+   "excerpt": "Clashes erupted across France on Saturday as protesters took to the streets, a week after marches that degenerated into violence and prompted a firm security backlash from President Emmanuel Macron, who is scrambling to restore order.",
+   "extraction": null,
+   "id": "a_976b422629d3379c",
+   "language": "en",
+   "published_at": "2026-10-25T02:24:47+00:00",
+   "retrieved_at": "2026-10-25T03:13:13+00:00",
+   "source_id": "dailystar_world",
+   "source_name": "The Daily Star — World",
+   "title": "Fresh clashes rock France as protesters march on",
+   "url": "https://www.thedailystar.net/news/world/news/fresh-clashes-rock-france-protesters-march-4306821"
   },
   "a_977d731ac7439753": {
    "canonical_url": "https://prothomalo.com/sports/football/66vu49ssqd",
@@ -1136,6 +1492,38 @@
    "title": "লেনোভোর নতুন মডেলের গেমিং ল্যাপটপ বাজারে",
    "url": "https://www.prothomalo.com/technology/gadget/w3brvnppus"
   },
+  "a_9bca1e557dc3db95": {
+   "canonical_url": "https://bbc.com/bengali/articles/c9dr8n7pd4zko?at_campaign=rss&at_medium=RSS",
+   "content_hash": "03d2e220d82da064",
+   "date_status": "ok",
+   "event_id": "ev_d5f20da941e3",
+   "excerpt": "ওই শিশুর বাবার দায়ের করা মামলায় ওই শিক্ষককে আটকের পর আদালতের মাধ্যমে কারাগারে পাঠানো হয়েছে। একই সঙ্গে মাদ্রাসাটির অধ্যক্ষও শিশুটির বাবাকে আসামি করে পাল্টা একটি মামলা করেছেন।",
+   "extraction": null,
+   "id": "a_9bca1e557dc3db95",
+   "language": "bn",
+   "published_at": "2026-10-24T15:17:53+00:00",
+   "retrieved_at": "2026-10-25T03:13:13+00:00",
+   "source_id": "bbc_bangla",
+   "source_name": "BBC News বাংলা",
+   "title": "টঙ্গীতে মাদ্রাসা শিক্ষককে চড় মারা ব্যক্তিকে গ্রেফতার করতে চায় পুলিশ",
+   "url": "https://www.bbc.com/bengali/articles/c9dr8n7pd4zko?at_medium=RSS&at_campaign=rss"
+  },
+  "a_9c0b87b1415a92a7": {
+   "canonical_url": "https://thedailystar.net/news/world/middle-east/news/saudi-civil-defence-issues-potential-danger-warning-makkah-jeddah-4306281",
+   "content_hash": "1421279091feb89a",
+   "date_status": "ok",
+   "event_id": "ev_2255d200a75e",
+   "excerpt": "The Gulf kingdom has come under repeated attack from Yemen's Iran-backed Houthis in recent weeks as part of the latter country's revived civil war",
+   "extraction": null,
+   "id": "a_9c0b87b1415a92a7",
+   "language": "en",
+   "published_at": "2026-10-24T09:04:38+00:00",
+   "retrieved_at": "2026-10-25T03:13:13+00:00",
+   "source_id": "dailystar_world",
+   "source_name": "The Daily Star — World",
+   "title": "Saudi civil defence issues 'potential danger' warning for Makkah, Jeddah",
+   "url": "https://www.thedailystar.net/news/world/middle-east/news/saudi-civil-defence-issues-potential-danger-warning-makkah-jeddah-4306281"
+  },
   "a_9c7248f77e917fbb": {
    "canonical_url": "https://prothomalo.com/video/bangladesh/vhnz47pow1",
    "content_hash": "3f2753121100b330",
@@ -1203,6 +1591,26 @@
    "source_name": "Prothom Alo (প্রথম আলো)",
    "title": "জাহাজভাঙা শিল্পকে লাল থেকে কমলা শ্রেণিতে নেওয়ার সিদ্ধান্ত, ঝুঁকিতে পরিবেশ ও শ্রমিক",
    "url": "https://www.prothomalo.com/bangladesh/environment/jsegomhliy"
+  },
+  "a_a2c3b1f6d868b2fc": {
+   "canonical_url": "https://thedailystar.net/news/bangladesh/diplomacy/news/internal-matter-foreign-ministry-4306771",
+   "content_hash": "9464a23b02c59854",
+   "date_status": "ok",
+   "event_id": "ev_7947c7e014b5",
+   "excerpt": "The decision to bring Bangladesh’s Ambassador to Japan Md Daud Ali back to Dhaka during Prime Minister Tarique Rahman’s upcoming visit to Japan is an internal matter of the Ministry of Foreign Affairs, said State Minister Shama Obaed Islam yesterday.",
+   "extraction": {
+    "chars": 1772,
+    "reason": "",
+    "status": "ok"
+   },
+   "id": "a_a2c3b1f6d868b2fc",
+   "language": "en",
+   "published_at": "2026-10-24T18:00:00+00:00",
+   "retrieved_at": "2026-10-25T03:13:13+00:00",
+   "source_id": "dailystar_bangladesh",
+   "source_name": "The Daily Star — Bangladesh",
+   "title": "‘An internal matter of foreign ministry’",
+   "url": "https://www.thedailystar.net/news/bangladesh/diplomacy/news/internal-matter-foreign-ministry-4306771"
   },
   "a_a78b9a84d3431eaa": {
    "canonical_url": "https://prothomalo.com/video/bangladesh/hn5acp3edj",
@@ -1272,6 +1680,22 @@
    "title": "গণ–অভ্যুত্থানের পর হতাশাজনক পরিস্থিতি কি বিরল",
    "url": "https://www.prothomalo.com/opinion/column/nu7yx0p9pr"
   },
+  "a_afba70e7eb0d0b00": {
+   "canonical_url": "https://thedailystar.net/news/bangladesh/news/keeping-rickshaw-art-alive-4306761",
+   "content_hash": "0ab0cba5a5b33082",
+   "date_status": "ok",
+   "event_id": "ev_4d28da34f0fa",
+   "excerpt": "With a brush in hand and a lifetime of stories in colour, Mohammad Hanif Pappu breathes life into another rickshaw painting at his workshop in Hossaini Dalan, Old Dhaka.",
+   "extraction": null,
+   "id": "a_afba70e7eb0d0b00",
+   "language": "en",
+   "published_at": "2026-10-24T18:00:00+00:00",
+   "retrieved_at": "2026-10-25T03:13:13+00:00",
+   "source_id": "dailystar_bangladesh",
+   "source_name": "The Daily Star — Bangladesh",
+   "title": "Keeping rickshaw art alive",
+   "url": "https://www.thedailystar.net/news/bangladesh/news/keeping-rickshaw-art-alive-4306761"
+  },
   "a_b01265c07e60bd16": {
    "canonical_url": "https://prothomalo.com/video/bangladesh/uagm3yhwe8",
    "content_hash": "2957fe4b00d57243",
@@ -1288,6 +1712,94 @@
    "title": "গাজীপুরে সাড়ে ৩ ঘণ্টা পর দুটি কারখানার গুদামে লাগা আগুন নিয়ন্ত্রণে",
    "url": "https://www.prothomalo.com/video/bangladesh/uagm3yhwe8"
   },
+  "a_b1450a9b67510506": {
+   "canonical_url": "https://thedailystar.net/news/bangladesh/news/climate-finance-must-come-grants-not-loans-4306736",
+   "content_hash": "15538c79e9dd6c33",
+   "date_status": "ok",
+   "event_id": "ev_e48340793b03",
+   "excerpt": "Bangladesh should prioritise climate justice, secure grant-based financing and strengthen youth-led climate initiatives at the upcoming COP31 climate summit, said speakers at a dialogue yesterday.",
+   "extraction": {
+    "chars": 4051,
+    "reason": "",
+    "status": "ok"
+   },
+   "id": "a_b1450a9b67510506",
+   "language": "en",
+   "published_at": "2026-10-24T18:00:00+00:00",
+   "retrieved_at": "2026-10-25T03:13:13+00:00",
+   "source_id": "dailystar_bangladesh",
+   "source_name": "The Daily Star — Bangladesh",
+   "title": "Climate finance must come as grants, not loans",
+   "url": "https://www.thedailystar.net/news/bangladesh/news/climate-finance-must-come-grants-not-loans-4306736"
+  },
+  "a_b1d8bb442a31d590": {
+   "canonical_url": "https://thedailystar.net/news/world/middle-east/news/thousands-protest-crackdown-media-turkey-4306711",
+   "content_hash": "a03808b09e06076e",
+   "date_status": "ok",
+   "event_id": "ev_6b8d92612e00",
+   "excerpt": "Thousands rallied in Istanbul and Ankara yesterday against what they described as growing pressure on journalists in Turkey, including arrests, media shutdowns and the appointment of state administrators.",
+   "extraction": null,
+   "id": "a_b1d8bb442a31d590",
+   "language": "en",
+   "published_at": "2026-10-24T18:00:00+00:00",
+   "retrieved_at": "2026-10-25T03:13:13+00:00",
+   "source_id": "dailystar_world",
+   "source_name": "The Daily Star — World",
+   "title": "Thousands protest crackdown on media in Turkey",
+   "url": "https://www.thedailystar.net/news/world/middle-east/news/thousands-protest-crackdown-media-turkey-4306711"
+  },
+  "a_b71f7f617906d985": {
+   "canonical_url": "https://thedailystar.net/news/world/middle-east/news/saudi-forces-launch-deadly-strikes-yemen-houthi-media-4306371",
+   "content_hash": "553de43600f8044e",
+   "date_status": "ok",
+   "event_id": "ev_2255d200a75e",
+   "excerpt": "Houthi-linked media report strikes on a house and cement factory",
+   "extraction": null,
+   "id": "a_b71f7f617906d985",
+   "language": "en",
+   "published_at": "2026-10-24T12:45:31+00:00",
+   "retrieved_at": "2026-10-25T03:13:13+00:00",
+   "source_id": "dailystar_world",
+   "source_name": "The Daily Star — World",
+   "title": "Saudi forces launch deadly strikes on Yemen: Houthi media",
+   "url": "https://www.thedailystar.net/news/world/middle-east/news/saudi-forces-launch-deadly-strikes-yemen-houthi-media-4306371"
+  },
+  "a_b83640db3f1cb17f": {
+   "canonical_url": "https://thedailystar.net/news/world/news/riyadh-airport-resume-flights-sunday-following-closure-after-houthi-attacks-4306836",
+   "content_hash": "9f2868891abf1e39",
+   "date_status": "ok",
+   "event_id": "ev_2255d200a75e",
+   "excerpt": "Saudi Arabia's international airport in capital Riyadh on Saturday said flights would resume the following day after a two-week closure that followed deadly attacks by Yemen's Houthis, who have kept up their strikes on the kingdom",
+   "extraction": {
+    "chars": 1341,
+    "reason": "",
+    "status": "ok"
+   },
+   "id": "a_b83640db3f1cb17f",
+   "language": "en",
+   "published_at": "2026-10-25T02:33:47+00:00",
+   "retrieved_at": "2026-10-25T03:13:13+00:00",
+   "source_id": "dailystar_world",
+   "source_name": "The Daily Star — World",
+   "title": "Riyadh airport to resume flights Sunday following closure after Houthi attacks",
+   "url": "https://www.thedailystar.net/news/world/news/riyadh-airport-resume-flights-sunday-following-closure-after-houthi-attacks-4306836"
+  },
+  "a_b9c44bcc6c682ab4": {
+   "canonical_url": "https://thedailystar.net/news/world/news/obama-blasts-trumps-chaos-and-cruelty-while-campaigning-democrats-4306826",
+   "content_hash": "287a71acbfaae771",
+   "date_status": "ok",
+   "event_id": "ev_1a717cc543c0",
+   "excerpt": "Former US president Barack Obama delivered scathing criticisms of his successor, Donald Trump, at rallies Saturday in Ohio and Michigan to support Democratic candidates ahead of the November 3 midterm elections",
+   "extraction": null,
+   "id": "a_b9c44bcc6c682ab4",
+   "language": "en",
+   "published_at": "2026-10-25T02:27:16+00:00",
+   "retrieved_at": "2026-10-25T03:13:13+00:00",
+   "source_id": "dailystar_world",
+   "source_name": "The Daily Star — World",
+   "title": "Obama blasts Trump's 'chaos and cruelty' while campaigning for Democrats",
+   "url": "https://www.thedailystar.net/news/world/news/obama-blasts-trumps-chaos-and-cruelty-while-campaigning-democrats-4306826"
+  },
   "a_bc8bc1b21868c240": {
    "canonical_url": "https://prothomalo.com/politics/wpo8jc0k1e",
    "content_hash": "18c129af3205b558",
@@ -1303,6 +1815,22 @@
    "source_name": "Prothom Alo (প্রথম আলো)",
    "title": "গণ-অভ্যুত্থানের পরাজিত শক্তির বিপক্ষে অস্তিত্ব রক্ষায় পরস্পরের হাত ধরে রাখা দরকার: নিয়াজ আহমেদ",
    "url": "https://www.prothomalo.com/politics/wpo8jc0k1e"
+  },
+  "a_bfa68b8979be621f": {
+   "canonical_url": "https://thedailystar.net/news/world/europe/news/1000-held-france-erupts-protests-violence-again-4306686",
+   "content_hash": "2ad25ee759a3758a",
+   "date_status": "ok",
+   "event_id": "ev_46a908f2ed77",
+   "excerpt": "French police arrested nearly 1,000 people yesterday as hundreds of thousands of demonstrators marched yesterday, with largely peaceful rallies giving way to clashes in Paris and Marseille as night fell despite a huge security operation aimed at preventing a repeat of last week’s unrest.",
+   "extraction": null,
+   "id": "a_bfa68b8979be621f",
+   "language": "en",
+   "published_at": "2026-10-24T18:00:00+00:00",
+   "retrieved_at": "2026-10-25T03:13:13+00:00",
+   "source_id": "dailystar_world",
+   "source_name": "The Daily Star — World",
+   "title": "1,000 held as France erupts in protests, violence again",
+   "url": "https://www.thedailystar.net/news/world/europe/news/1000-held-france-erupts-protests-violence-again-4306686"
   },
   "a_c0a9890cbab894a5": {
    "canonical_url": "https://prothomalo.com/business/economics/opp5ah8t1c",
@@ -1324,6 +1852,22 @@
    "title": "ধানমন্ডি, শাহবাগ, মতিঝিল, যাত্রাবাড়ী, লালবাগসহ বিভিন্ন এলাকার সড়ক মেরামতে ৭০০ কোটি টাকার প্রকল্প",
    "url": "https://www.prothomalo.com/business/economics/opp5ah8t1c"
   },
+  "a_c0f8e7e550cbe7e4": {
+   "canonical_url": "https://prothomalo.com/bangladesh/jdfpqktia5",
+   "content_hash": "c7c52dff833e90dc",
+   "date_status": "ok",
+   "event_id": "ev_4b04363ea82d",
+   "excerpt": "শুভ সকাল। আজ দিনের শুরুতেই পড়তে পারেন দেশ-বিদেশের আলোচিত পাঁচ খবর ও বিশ্লেষণ।",
+   "extraction": null,
+   "id": "a_c0f8e7e550cbe7e4",
+   "language": "bn",
+   "published_at": "2026-10-25T02:45:44+00:00",
+   "retrieved_at": "2026-10-25T03:13:13+00:00",
+   "source_id": "prothomalo",
+   "source_name": "Prothom Alo (প্রথম আলো)",
+   "title": "সকালেই পড়ুন আলোচিত ৫ খবর",
+   "url": "https://www.prothomalo.com/bangladesh/jdfpqktia5"
+  },
   "a_c1a21b287c793d33": {
    "canonical_url": "https://prothomalo.com/bangladesh/district/guofm3vvpa",
    "content_hash": "f0ab740da036dac9",
@@ -1343,6 +1887,22 @@
    "source_name": "Prothom Alo (প্রথম আলো)",
    "title": "গোপালগঞ্জে নিষিদ্ধ ছাত্রলীগ–যুবলীগের মিছিল থেকে পুলিশের গাড়িতে হামলা, তিন পুলিশ সদস্যকে মারধর",
    "url": "https://www.prothomalo.com/bangladesh/district/guofm3vvpa"
+  },
+  "a_c272ecb29504aa2f": {
+   "canonical_url": "https://bbc.com/bengali/articles/ckz7x91znjx9o?at_campaign=rss&at_medium=RSS",
+   "content_hash": "1b2c6f923b2a1dbf",
+   "date_status": "ok",
+   "event_id": "ev_68dbfa95df17",
+   "excerpt": "ইংল্যান্ডের প্রথম রাজা হিসেবে অ্যাথেলস্ট্যানের অভিষেকের ১১০০ বছর পূর্ণ হয়েছে। কিন্তু তারপরও তিনি ইতিহাসের বইগুলোতে আশ্চর্যজনকভাবে অনুপস্থিত। তবে তিনি নিজে অনেকটাই বিস্মৃত হলেও, তার সময়ে চালু হওয়া বহু আচার ও আনুষ্ঠানিকতা আজও পালিত হচ্ছে যুক্তরাজ্যে।",
+   "extraction": null,
+   "id": "a_c272ecb29504aa2f",
+   "language": "bn",
+   "published_at": "2026-10-25T01:32:58+00:00",
+   "retrieved_at": "2026-10-25T03:13:13+00:00",
+   "source_id": "bbc_bangla",
+   "source_name": "BBC News বাংলা",
+   "title": "ইংল্যান্ড কীভাবে নিজের প্রথম রাজাকে ভুলে গেল?",
+   "url": "https://www.bbc.com/bengali/articles/ckz7x91znjx9o?at_medium=RSS&at_campaign=rss"
   },
   "a_c320dfca9fb95a84": {
    "canonical_url": "https://prothomalo.com/education/study/m1f82f0ck3",
@@ -1528,6 +2088,22 @@
    "title": "তৃণমূল ছেড়ে বিজেপির ‘কথামতো’ চলার পুরস্কার পেলেন ইউসুফ পাঠান",
    "url": "https://www.prothomalo.com/world/india/3sswr2w925"
   },
+  "a_d0fdcf9eebfc0073": {
+   "canonical_url": "https://thedailystar.net/business/economy/news/idra-wants-move-hq-agargaon-despite-cheaper-motijheel-option-4306521",
+   "content_hash": "c73ce26f73854c7a",
+   "date_status": "ok",
+   "event_id": "ev_3f67099d2103",
+   "excerpt": "The Insurance Development and Regulatory Authority (IDRA) is seeking approval to relocate its headquarters to IDB Bhaban in Agargaon, Dhaka, despite an increase of nearly Tk 2 crore in annual office costs and the greater concentration of insurance companies around its current location in Motijheel.",
+   "extraction": null,
+   "id": "a_d0fdcf9eebfc0073",
+   "language": "en",
+   "published_at": "2026-10-24T18:00:00+00:00",
+   "retrieved_at": "2026-10-25T03:13:13+00:00",
+   "source_id": "dailystar_business",
+   "source_name": "The Daily Star — Business",
+   "title": "IDRA wants to move HQ to Agargaon despite cheaper Motijheel option",
+   "url": "https://www.thedailystar.net/business/economy/news/idra-wants-move-hq-agargaon-despite-cheaper-motijheel-option-4306521"
+  },
   "a_d174ac6bd93ee2a3": {
    "canonical_url": "https://prothomalo.com/bangladesh/capital/352bh0mak3",
    "content_hash": "7ab27c0ab3033f8e",
@@ -1547,6 +2123,26 @@
    "source_name": "Prothom Alo (প্রথম আলো)",
    "title": "ফুটপাতে দোকান বসালেই মামলা, মালামাল জব্দের হুঁশিয়ারি ডিএসসিসির",
    "url": "https://www.prothomalo.com/bangladesh/capital/352bh0mak3"
+  },
+  "a_d4b8b7407625e5a2": {
+   "canonical_url": "https://thedailystar.net/news/bangladesh/news/cwasa-plans-90000-smart-meters-2030-4306796",
+   "content_hash": "9266fe4429ab1f5b",
+   "date_status": "ok",
+   "event_id": "ev_1ab9d629b8e0",
+   "excerpt": "Chattogram WASA plans to install 90,000 automatic meter reading (AMR) meters by December 2030 to curb water losses, prevent billing irregularities and improve revenue collection.",
+   "extraction": {
+    "chars": 3382,
+    "reason": "",
+    "status": "ok"
+   },
+   "id": "a_d4b8b7407625e5a2",
+   "language": "en",
+   "published_at": "2026-10-24T18:00:00+00:00",
+   "retrieved_at": "2026-10-25T03:13:13+00:00",
+   "source_id": "dailystar_bangladesh",
+   "source_name": "The Daily Star — Bangladesh",
+   "title": "CWASA plans 90,000 smart meters by 2030",
+   "url": "https://www.thedailystar.net/news/bangladesh/news/cwasa-plans-90000-smart-meters-2030-4306796"
   },
   "a_d5afe5c6de069237": {
    "canonical_url": "https://prothomalo.com/chakri/employment/v9qkchzp8b",
@@ -1644,6 +2240,22 @@
    "title": "হাওরের মাছ, টিলার পান ও সবজির টানে জমজমাট ধোবারহাট",
    "url": "https://www.prothomalo.com/bangladesh/district/nvowual34d"
   },
+  "a_e280b19d2e495874": {
+   "canonical_url": "https://prothomalo.com/business/personal-finance/hvkyju02qb",
+   "content_hash": "26c28782908176b3",
+   "date_status": "ok",
+   "event_id": "ev_cb4ae8167bfc",
+   "excerpt": "যেসব গ্রাহকের অন্য ব্যাংকে উচ্চ সুদে ব্যক্তিগত ও আবাসন ঋণ রয়েছে, তাঁরা কোনো খরচ ছাড়াই ৯ শতাংশ সুদে ব্র্যাক ব্যাংকে ঋণ স্থানান্তরের সুযোগ পাবেন। এর ফলে তাঁদের প্রতি মাসের কিস্তি খরচ অনেকাংশে কমে যাবে।",
+   "extraction": null,
+   "id": "a_e280b19d2e495874",
+   "language": "bn",
+   "published_at": "2026-10-25T02:30:00+00:00",
+   "retrieved_at": "2026-10-25T03:13:13+00:00",
+   "source_id": "prothomalo",
+   "source_name": "Prothom Alo (প্রথম আলো)",
+   "title": "ব্র্যাক ব্যাংকে ৯ শতাংশ সুদে ঋণ স্থানান্তরের সুযোগ, বাড়তি খরচ নেই",
+   "url": "https://www.prothomalo.com/business/personal-finance/hvkyju02qb"
+  },
   "a_e55f0b8b928958e3": {
    "canonical_url": "https://prothomalo.com/religion/islam/gxeawqwfzv",
    "content_hash": "c6d635a9d9925004",
@@ -1692,6 +2304,22 @@
    "title": "হাত-পা বেঁধে ঝোপে ফেলে রাখা হয় তাঁতী দল নেতাকে, গোঙানির শব্দ শুনে উদ্ধার",
    "url": "https://www.prothomalo.com/bangladesh/district/bi5e8j42uh"
   },
+  "a_e8f301d105782f2c": {
+   "canonical_url": "https://prothomalo.com/world/middle-east/elu3jlz53e",
+   "content_hash": "0b3bdebdf60dbae1",
+   "date_status": "ok",
+   "event_id": "ev_2255d200a75e",
+   "excerpt": "এদিকে সৌদি আরবের সিভিল ডিফেন্স জানিয়েছে, মক্কা ও মদিনা অঞ্চলের দিকে হুতিদের ছোড়া দুটি ব্যালিস্টিক ক্ষেপণাস্ত্র প্রতিহত করা হয়েছে।",
+   "extraction": null,
+   "id": "a_e8f301d105782f2c",
+   "language": "bn",
+   "published_at": "2026-10-25T02:49:24+00:00",
+   "retrieved_at": "2026-10-25T03:13:13+00:00",
+   "source_id": "prothomalo",
+   "source_name": "Prothom Alo (প্রথম আলো)",
+   "title": "সৌদি আরবে ৭টি হামলার দাবি হুতিদের, মক্কায় পড়ল ক্ষেপণাস্ত্রের অংশ",
+   "url": "https://www.prothomalo.com/world/middle-east/elu3jlz53e"
+  },
   "a_ec8ae60d46fb3655": {
    "canonical_url": "https://prothomalo.com/bangladesh/crime/qiafx2voxs",
    "content_hash": "cb3614eb3c21bcf1",
@@ -1707,6 +2335,22 @@
    "source_name": "Prothom Alo (প্রথম আলো)",
    "title": "আসিফ আকবরের চালকের পেছনের আসন বরাবর গুলি করা হয়",
    "url": "https://www.prothomalo.com/bangladesh/crime/qiafx2voxs"
+  },
+  "a_eda4e2856898ee12": {
+   "canonical_url": "https://bbc.com/bengali/articles/cx7vp0d3z5q8o?at_campaign=rss&at_medium=RSS",
+   "content_hash": "974b386a5eb29edd",
+   "date_status": "ok",
+   "event_id": "ev_1e78b4af0df2",
+   "excerpt": "আজ রোববার ২৫শে আক্টোবর ঢাকা থেকে প্রকাশিত পত্রিকাগুলোয় সংবিধান সংশোধন সম্পর্কিত বিশেষ কমিটির বৈঠকের খবর গুরুত্ব পেয়েছে। এছাড়াও গুরুত্ব পেয়েছে সাতটি ইসলামী দলের জোট গঠন, স্থানীয় সরকার নির্বাচনসহ রাজনীতির নানা খবর।",
+   "extraction": null,
+   "id": "a_eda4e2856898ee12",
+   "language": "bn",
+   "published_at": "2026-10-25T02:58:08+00:00",
+   "retrieved_at": "2026-10-25T03:13:13+00:00",
+   "source_id": "bbc_bangla",
+   "source_name": "BBC News বাংলা",
+   "title": "পত্রিকা: 'তত্ত্বাবধায়ক সরকার গঠনে নতুন ধারণা'",
+   "url": "https://www.bbc.com/bengali/articles/cx7vp0d3z5q8o?at_medium=RSS&at_campaign=rss"
   },
   "a_ee4aee2ef184afa6": {
    "canonical_url": "https://prothomalo.com/lifestyle/fashion/nk9lc6xo1r",
@@ -1726,11 +2370,15 @@
   },
   "a_ef4616553bdbcf2a": {
    "canonical_url": "https://bondhushava.com/activities/cthzr0snxz",
-   "content_hash": "e2e6c236ef83ebd0",
+   "content_hash": "014fe941a040dc2e",
    "date_status": "ok",
    "event_id": "ev_1c152ac9d559",
    "excerpt": "সভায় নদ-নদীর মাছ ও অন্যান্য জলজ সম্পদ সংরক্ষণ, মৎস্যসম্পদের টেকসই ব্যবস্থাপনা এবং নদীর প্রাকৃতিক পরিবেশ রক্ষায় জেলেদের ভূমিকা নিয়ে আলোচনা করা হয়। বিশেষ করে বৈদ্যুতিক পদ্ধতিতে মাছ শিকার, চীনা জাল বা শয়তান জালের ব্যবহার এবং এসব পদ্ধতির কারণে মাছের পোনা, ছোট মাছ ও অন্যান্য জলজ প্রাণীর ক্ষতির বিষয়টি গুরুত্বের সঙ্গে তুলে ধরা হয়।",
-   "extraction": null,
+   "extraction": {
+    "chars": 2168,
+    "reason": "",
+    "status": "ok"
+   },
    "id": "a_ef4616553bdbcf2a",
    "language": "bn",
    "published_at": "2026-10-24T12:41:03+00:00",
@@ -1739,6 +2387,62 @@
    "source_name": "Prothom Alo (প্রথম আলো)",
    "title": "নদীর মাছ রক্ষায় গাইবান্ধায় জেলেদের সঙ্গে বন্ধুসভার মতবিনিময়",
    "url": "https://www.bondhushava.com/activities/cthzr0snxz"
+  },
+  "a_ef706737c1ab4570": {
+   "canonical_url": "https://thedailystar.net/business/global-economy/news/indonesia-cuts-gas-exports-singapore-4306576",
+   "content_hash": "e23768ce23e62854",
+   "date_status": "ok",
+   "event_id": "ev_9973cc6cd3e9",
+   "excerpt": "Indonesia cut exports of natural gas to Singapore on Saturday to prioritise domestic demand, an official said, with the two countries at loggerheads over regional air pollution emanating from wildfires on the vast archipelago.",
+   "extraction": {
+    "chars": 2947,
+    "reason": "",
+    "status": "ok"
+   },
+   "id": "a_ef706737c1ab4570",
+   "language": "en",
+   "published_at": "2026-10-24T18:00:00+00:00",
+   "retrieved_at": "2026-10-25T03:13:13+00:00",
+   "source_id": "dailystar_business",
+   "source_name": "The Daily Star — Business",
+   "title": "Indonesia cuts gas exports to Singapore",
+   "url": "https://www.thedailystar.net/business/global-economy/news/indonesia-cuts-gas-exports-singapore-4306576"
+  },
+  "a_f012bd73c4894bd5": {
+   "canonical_url": "https://thedailystar.net/business/global-economy/news/trump-lifts-some-canada-tariffs-ahead-midterms-4306571",
+   "content_hash": "75213fb7c3730c86",
+   "date_status": "ok",
+   "event_id": "ev_9f8873f592df",
+   "excerpt": "President Donald Trump’s administration lifted some tariffs on Canadian imports Friday, two weeks ahead of midterm elections, after a vulnerable Republican candidate said she’d lobbied for the change.",
+   "extraction": {
+    "chars": 3533,
+    "reason": "",
+    "status": "ok"
+   },
+   "id": "a_f012bd73c4894bd5",
+   "language": "en",
+   "published_at": "2026-10-24T18:00:00+00:00",
+   "retrieved_at": "2026-10-25T03:13:13+00:00",
+   "source_id": "dailystar_business",
+   "source_name": "The Daily Star — Business",
+   "title": "Trump lifts some Canada tariffs ahead of midterms",
+   "url": "https://www.thedailystar.net/business/global-economy/news/trump-lifts-some-canada-tariffs-ahead-midterms-4306571"
+  },
+  "a_f082a1ee1755eac8": {
+   "canonical_url": "https://thedailystar.net/news/world/middle-east/news/saudi-oil-sites-aden-base-attacked-after-deadly-strikes-say-houthis-4306701",
+   "content_hash": "cb249a66673a69cd",
+   "date_status": "ok",
+   "event_id": "ev_2255d200a75e",
+   "excerpt": "Yemen’s Houthis launched fresh attacks on Saudi Arabia and the seat of Yemen’s internationally recognised government yesterday after blaming the kingdom for strikes that the Iran-backed group said killed 17 people.",
+   "extraction": null,
+   "id": "a_f082a1ee1755eac8",
+   "language": "en",
+   "published_at": "2026-10-24T18:00:00+00:00",
+   "retrieved_at": "2026-10-25T03:13:13+00:00",
+   "source_id": "dailystar_world",
+   "source_name": "The Daily Star — World",
+   "title": "Saudi oil sites, Aden base attacked after deadly strikes, say Houthis",
+   "url": "https://www.thedailystar.net/news/world/middle-east/news/saudi-oil-sites-aden-base-attacked-after-deadly-strikes-say-houthis-4306701"
   },
   "a_f3498eb7f70714ad": {
    "canonical_url": "https://prothomalo.com/sports/cricket/6369f3x27s",
@@ -1755,6 +2459,38 @@
    "source_name": "Prothom Alo (প্রথম আলো)",
    "title": "ওয়ানডে র‍্যাঙ্কিংয়ে ইংল্যান্ডকেও ছাড়িয়ে গেল আফগানিস্তান",
    "url": "https://www.prothomalo.com/sports/cricket/6369f3x27s"
+  },
+  "a_f3f51f12b119ae97": {
+   "canonical_url": "https://thedailystar.net/business/global-economy/news/why-ai-data-centres-are-powering-boom-fuel-cell-demand-4306551",
+   "content_hash": "e200942e9ee87e24",
+   "date_status": "ok",
+   "event_id": "ev_58fea51a4adb",
+   "excerpt": "Fuel cells are gaining traction among US hyperscalers racing to build data centers for the AI boom but struggling with grid constraints to secure quick and reliable power.",
+   "extraction": null,
+   "id": "a_f3f51f12b119ae97",
+   "language": "en",
+   "published_at": "2026-10-24T18:00:00+00:00",
+   "retrieved_at": "2026-10-25T03:13:13+00:00",
+   "source_id": "dailystar_business",
+   "source_name": "The Daily Star — Business",
+   "title": "Why AI data centres are powering a boom in fuel-cell demand",
+   "url": "https://www.thedailystar.net/business/global-economy/news/why-ai-data-centres-are-powering-boom-fuel-cell-demand-4306551"
+  },
+  "a_f5e11d786e1745c5": {
+   "canonical_url": "https://thedailystar.net/business/organisation-news/news/ncc-bank-provides-free-agri-inputs-3000-farmers-4306561",
+   "content_hash": "5133634d0f5b528c",
+   "date_status": "ok",
+   "event_id": "ev_eb0135d00881",
+   "excerpt": "NCC Bank PLC has distributed free agricultural inputs among 3,000 marginal farmers in three areas of Bogura under a special corporate social responsibility (CSR) programme to boost production and strengthen food security.",
+   "extraction": null,
+   "id": "a_f5e11d786e1745c5",
+   "language": "en",
+   "published_at": "2026-10-24T18:00:00+00:00",
+   "retrieved_at": "2026-10-25T03:13:13+00:00",
+   "source_id": "dailystar_business",
+   "source_name": "The Daily Star — Business",
+   "title": "NCC Bank provides free agri inputs to 3,000 farmers",
+   "url": "https://www.thedailystar.net/business/organisation-news/news/ncc-bank-provides-free-agri-inputs-3000-farmers-4306561"
   },
   "a_f9f9a8ef4f8ea8f5": {
    "canonical_url": "https://prothomalo.com/bangladesh/district/pweudy339b",
@@ -1787,6 +2523,22 @@
    "source_name": "Prothom Alo (প্রথম আলো)",
    "title": "খাওয়ার সময় অস্বাভাবিক ঘাম হয় কেন?",
    "url": "https://www.prothomalo.com/lifestyle/health/nrezc9j9m7"
+  },
+  "a_fff1f9f696c4f684": {
+   "canonical_url": "https://thedailystar.net/business/organisation-news/news/midland-bank-holds-200th-executive-committee-meeting-4306556",
+   "content_hash": "7a0a9791f43fa96f",
+   "date_status": "ok",
+   "event_id": "ev_101a1ffff35f",
+   "excerpt": "Midland Bank PLC has held its 200th executive committee meeting (ECM) at its head office in Dhaka.",
+   "extraction": null,
+   "id": "a_fff1f9f696c4f684",
+   "language": "en",
+   "published_at": "2026-10-24T18:00:00+00:00",
+   "retrieved_at": "2026-10-25T03:13:13+00:00",
+   "source_id": "dailystar_business",
+   "source_name": "The Daily Star — Business",
+   "title": "Midland Bank holds 200th executive committee meeting",
+   "url": "https://www.thedailystar.net/business/organisation-news/news/midland-bank-holds-200th-executive-committee-meeting-4306556"
   }
  },
  "created_at": "2026-10-24T11:17:30+00:00",
@@ -2383,6 +3135,176 @@
     "ev_2fa94c4bcf8f"
    ],
    "unprocessed_candidates": 0
+  },
+  "2026-10-25-m1": {
+   "attempts": 1,
+   "chunks": [
+    {
+     "attempts": 0,
+     "index": 0,
+     "message_id": null,
+     "sha": "b158bf50914cd032",
+     "status": "pending"
+    },
+    {
+     "attempts": 0,
+     "index": 1,
+     "message_id": null,
+     "sha": "211056952b644015",
+     "status": "pending"
+    },
+    {
+     "attempts": 0,
+     "index": 2,
+     "message_id": null,
+     "sha": "71f6886a45c01d7a",
+     "status": "pending"
+    },
+    {
+     "attempts": 0,
+     "index": 3,
+     "message_id": null,
+     "sha": "26b5523b19ef7ca3",
+     "status": "pending"
+    },
+    {
+     "attempts": 0,
+     "index": 4,
+     "message_id": null,
+     "sha": "d728767be488fa65",
+     "status": "pending"
+    }
+   ],
+   "created_at": "2026-10-25T03:13:13+00:00",
+   "date": "2026-10-25-m1",
+   "delivered_at": "2026-10-25T03:15:33+00:00",
+   "deliveries": {
+    "1033339929": {
+     "attempts": 1,
+     "delivered_at": "2026-10-25T03:15:19+00:00",
+     "pdf_message_id": 123,
+     "sent": {
+      "0": 118,
+      "1": 119,
+      "2": 120,
+      "3": 121,
+      "4": 122
+     },
+     "status": "done"
+    },
+    "1433480564": {
+     "attempts": 1,
+     "delivered_at": "2026-10-25T03:15:33+00:00",
+     "pdf_message_id": 135,
+     "sent": {
+      "0": 130,
+      "1": 131,
+      "2": 132,
+      "3": 133,
+      "4": 134
+     },
+     "status": "done"
+    },
+    "1679140572": {
+     "attempts": 1,
+     "delivered_at": "2026-10-25T03:15:12+00:00",
+     "pdf_message_id": 117,
+     "sent": {
+      "0": 112,
+      "1": 113,
+      "2": 114,
+      "3": 115,
+      "4": 116
+     },
+     "status": "done"
+    },
+    "7872342619": {
+     "attempts": 1,
+     "delivered_at": "2026-10-25T03:15:26+00:00",
+     "pdf_message_id": 129,
+     "sent": {
+      "0": 124,
+      "1": 125,
+      "2": 126,
+      "3": 127,
+      "4": 128
+     },
+     "status": "done"
+    }
+   },
+   "dry_run": false,
+   "edition_date": "2026-10-25",
+   "failure_notified": false,
+   "manual": true,
+   "mcqs": [
+    {
+     "answer_index": 0,
+     "explanation": "ফ্যাক্ট অনুযায়ী COP31-এ এই তিনটি বিষয় অগ্রাধিকার দিতে বলা হয়েছে।",
+     "fact_id": "f1",
+     "options": [
+      "জলবায়ু ন্যায়বিচার, অনুদানভিত্তিক অর্থায়ন ও যুবনেতৃত্বাধীন উদ্যোগ",
+      "বাণিজ্য চুক্তি, শুল্ক হ্রাস ও অবকাঠামো রপ্তানি",
+      "শিক্ষা সংস্কার, স্বাস্থ্যসেবা ও কৃষি ভর্তুকি",
+      "জ্বালানি আমদানি, সুদহার বৃদ্ধি ও শিল্পনীতি"
+     ],
+     "question": "COP31-এ বাংলাদেশকে কোন বিষয়গুলো অগ্রাধিকার দিতে বলা হয়েছে?",
+     "source_event_id": "ev_e48340793b03",
+     "source_name": "The Daily Star — Bangladesh",
+     "source_story": "জলবায়ু অর্থায়নে অনুদানভিত্তিক সহায়তার দাবি",
+     "source_url": "https://www.thedailystar.net/news/bangladesh/news/climate-finance-must-come-grants-not-loans-4306736",
+     "subject": "environment_climate"
+    },
+    {
+     "answer_index": 0,
+     "explanation": "ফ্যাক্টে বলা হয়েছে বাংলাদেশের অবদান 0.5 percent-এরও কম।",
+     "fact_id": "f2",
+     "options": [
+      "0.5 percent-এরও কম",
+      "1 percent-এর বেশি",
+      "5 percent-এরও কম",
+      "10 percent-এরও বেশি"
+     ],
+     "question": "বাংলাদেশ বৈশ্বিক কার্বন নিঃসরণে কতটুকু অবদান রাখে?",
+     "source_event_id": "ev_e48340793b03",
+     "source_name": "The Daily Star — Bangladesh",
+     "source_story": "জলবায়ু অর্থায়নে অনুদানভিত্তিক সহায়তার দাবি",
+     "source_url": "https://www.thedailystar.net/news/bangladesh/news/climate-finance-must-come-grants-not-loans-4306736",
+     "subject": "environment_climate"
+    },
+    {
+     "answer_index": 0,
+     "explanation": "ফ্যাক্ট অনুযায়ী 2030 সালের লক্ষ্য 20 percent।",
+     "fact_id": "f3",
+     "options": [
+      "20 percent",
+      "30 percent",
+      "40 percent",
+      "50 percent"
+     ],
+     "question": "বাংলাদেশ 2030 সালের মধ্যে বিদ্যুতের কত percent নবায়নযোগ্য উৎস থেকে উৎপাদনের লক্ষ্য নিয়েছে?",
+     "source_event_id": "ev_e48340793b03",
+     "source_name": "The Daily Star — Bangladesh",
+     "source_story": "জলবায়ু অর্থায়নে অনুদানভিত্তিক সহায়তার দাবি",
+     "source_url": "https://www.thedailystar.net/news/bangladesh/news/climate-finance-must-come-grants-not-loans-4306736",
+     "subject": "environment_climate"
+    }
+   ],
+   "partial": false,
+   "partial_reasons": [],
+   "pdf": {
+    "bytes": 263975,
+    "file": "edition-2026-10-25-m1.pdf",
+    "sha": "47d5ec11786be1c9"
+   },
+   "recipients": 4,
+   "status": "delivered",
+   "story_event_ids": [
+    "ev_e48340793b03",
+    "ev_45b8e577bf57",
+    "ev_58e8c29fd7cf",
+    "ev_2407e2ff73e4"
+   ],
+   "unprocessed_candidates": 3
   }
  },
  "events": {
@@ -2400,14 +3322,17 @@
     "categories": [
      "science_technology"
     ],
-    "decision": "maybe",
-    "exam_focus": "prelims",
-    "priority": 3.0,
-    "rationale": "পাঁচ সেকেন্ড নিয়মের বৈজ্ঞানিক প্রমাণ নিয়ে আলোচনা বিজ্ঞানভিত্তিক হলেও পরীক্ষায় সীমিত গুরুত্বের।"
+    "decision": "reject",
+    "exam_focus": "none",
+    "exam_hook": "পাঁচ সেকেন্ড নিয়মের বৈজ্ঞানিক ভিত্তি নিয়ে আলোচনা।",
+    "priority": 0.0,
+    "rationale": "এটি জনপ্রিয় বিজ্ঞানধর্মী ব্যাখ্যা; পরীক্ষাযোগ্য বড় নীতি বা আবিষ্কার নয়।",
+    "story_type": "feature",
+    "topic": null
    },
    "screening_attempts": 0,
-   "status": "maybe",
-   "updated_at": "2026-10-25T02:30:10+00:00"
+   "status": "rejected",
+   "updated_at": "2026-10-25T03:13:13+00:00"
   },
   "ev_0388b38f634a": {
    "analysis": null,
@@ -2423,14 +3348,17 @@
     "categories": [
      "science_technology"
     ],
-    "decision": "maybe",
-    "exam_focus": "prelims",
+    "decision": "select",
+    "exam_focus": "both",
+    "exam_hook": "জ্যোতির্বিজ্ঞানীরা ভ্যান গঘের দ্য স্টারি নাইট আঁকার সময় নিয়ে নতুন তথ্য পেয়েছেন।",
     "priority": 4.0,
-    "rationale": "জ্যোতির্বিজ্ঞানীদের নতুন তথ্য বৈজ্ঞানিক জ্ঞানভিত্তিক হওয়ায় বিজ্ঞান অংশে কিছু মূল্য আছে।"
+    "rationale": "শিল্পকর্মের ইতিহাস নিয়ে নতুন বৈজ্ঞানিক বিশ্লেষণ আছে, তবে পরীক্ষায় গুরুত্ব সীমিত।",
+    "story_type": "science_technology",
+    "topic": "sci_discovery"
    },
    "screening_attempts": 0,
-   "status": "maybe",
-   "updated_at": "2026-10-25T02:30:10+00:00"
+   "status": "selected",
+   "updated_at": "2026-10-25T03:13:13+00:00"
   },
   "ev_041498f0a258": {
    "analysis": null,
@@ -2751,6 +3679,32 @@
    "status": "rejected",
    "updated_at": "2026-10-25T02:30:10+00:00"
   },
+  "ev_0e67448d1641": {
+   "analysis": null,
+   "article_ids": [
+    "a_762f1f3aa1becbe7"
+   ],
+   "attempts": 0,
+   "created_at": "2026-10-25T03:13:13+00:00",
+   "event_id": "ev_0e67448d1641",
+   "included_in": null,
+   "last_error": null,
+   "screening": {
+    "categories": [
+     "science_technology"
+    ],
+    "decision": "reject",
+    "exam_focus": "none",
+    "exam_hook": "অ্যাপলের ভাঁজ করা আইফোন বাজারে এসেছে।",
+    "priority": 1.0,
+    "rationale": "এটি ভোক্তা পণ্য লঞ্চ, BCS-এর জন্য কম প্রাসঙ্গিক।",
+    "story_type": "sports_entertainment",
+    "topic": null
+   },
+   "screening_attempts": 0,
+   "status": "rejected",
+   "updated_at": "2026-10-25T03:13:13+00:00"
+  },
   "ev_0f4f76c4018f": {
    "analysis": null,
    "article_ids": [
@@ -2771,6 +3725,32 @@
    "screening_attempts": 0,
    "status": "rejected",
    "updated_at": "2026-10-24T11:39:11+00:00"
+  },
+  "ev_101a1ffff35f": {
+   "analysis": null,
+   "article_ids": [
+    "a_fff1f9f696c4f684"
+   ],
+   "attempts": 0,
+   "created_at": "2026-10-25T03:13:13+00:00",
+   "event_id": "ev_101a1ffff35f",
+   "included_in": null,
+   "last_error": null,
+   "screening": {
+    "categories": [
+     "economy"
+    ],
+    "decision": "reject",
+    "exam_focus": "none",
+    "exam_hook": "এক ব্যাংকের নির্বাহী কমিটির ২০০তম বৈঠক।",
+    "priority": 0.0,
+    "rationale": "এটি অভ্যন্তরীণ কর্পোরেট মিটিং, পরীক্ষাযোগ্য জাতীয় ইস্যু নয়।",
+    "story_type": "corporate_commercial",
+    "topic": null
+   },
+   "screening_attempts": 0,
+   "status": "rejected",
+   "updated_at": "2026-10-25T03:13:13+00:00"
   },
   "ev_105bb3d96a4d": {
    "analysis": null,
@@ -2941,6 +3921,58 @@
    "status": "rejected",
    "updated_at": "2026-10-24T11:39:11+00:00"
   },
+  "ev_1a717cc543c0": {
+   "analysis": null,
+   "article_ids": [
+    "a_b9c44bcc6c682ab4"
+   ],
+   "attempts": 0,
+   "created_at": "2026-10-25T03:13:13+00:00",
+   "event_id": "ev_1a717cc543c0",
+   "included_in": null,
+   "last_error": null,
+   "screening": {
+    "categories": [
+     "foreign_policy_geopolitics"
+    ],
+    "decision": "reject",
+    "exam_focus": "none",
+    "exam_hook": "ওবামা ডেমোক্র্যাটদের সমর্থনে ট্রাম্পকে সমালোচনা করেছেন।",
+    "priority": 1.0,
+    "rationale": "এটি যুক্তরাষ্ট্রের নির্বাচনী প্রচার ও দলীয় রাজনীতি, BCS-এর জন্য কম প্রাসঙ্গিক।",
+    "story_type": "party_politics",
+    "topic": null
+   },
+   "screening_attempts": 0,
+   "status": "rejected",
+   "updated_at": "2026-10-25T03:13:13+00:00"
+  },
+  "ev_1ab9d629b8e0": {
+   "analysis": null,
+   "article_ids": [
+    "a_d4b8b7407625e5a2"
+   ],
+   "attempts": 1,
+   "created_at": "2026-10-25T03:13:13+00:00",
+   "event_id": "ev_1ab9d629b8e0",
+   "included_in": null,
+   "last_error": "Syllabus relevance 4 below 7",
+   "screening": {
+    "categories": [
+     "bangladesh_affairs"
+    ],
+    "decision": "select",
+    "exam_focus": "both",
+    "exam_hook": "চট্টগ্রাম ওয়াসা ২০৩০ সালের মধ্যে ৯০ হাজার স্মার্ট মিটার বসানোর পরিকল্পনা করেছে।",
+    "priority": 6.0,
+    "rationale": "এটি পানি-ব্যবস্থাপনা ও অবকাঠামো উন্নয়নের নির্দিষ্ট লক্ষ্য-ভিত্তিক সিদ্ধান্ত।",
+    "story_type": "policy_decision",
+    "topic": "bd_infrastructure"
+   },
+   "screening_attempts": 0,
+   "status": "analysis_rejected",
+   "updated_at": "2026-10-25T03:13:13+00:00"
+  },
   "ev_1b4bdf0ef8f2": {
    "analysed_at": "2026-10-24T13:40:25+00:00",
    "analysis": {
@@ -3045,24 +4077,82 @@
    "article_ids": [
     "a_ef4616553bdbcf2a"
    ],
-   "attempts": 0,
+   "attempts": 1,
    "created_at": "2026-10-24T13:40:25+00:00",
    "event_id": "ev_1c152ac9d559",
+   "included_in": null,
+   "last_error": "এটি স্থানীয় সচেতনতা/কর্মসূচি সংবাদ। কোনো জাতীয় নীতি, আইন প্রণয়ন, সরকারি সিদ্ধান্ত, পরিসংখ্যান বা পরীক্ষায় টানার মতো বড় ঘটনা নেই। BCS-এর জন্য অধ্যয়ন-যোগ্যতা কম।",
+   "screening": {
+    "categories": [
+     "bangladesh_affairs"
+    ],
+    "decision": "select",
+    "exam_focus": "written",
+    "exam_hook": "গাইবান্ধায় নদীর মাছ রক্ষায় জেলেদের সঙ্গে সংরক্ষণমূলক আলোচনা হয়েছে।",
+    "priority": 5.0,
+    "rationale": "মৎস্যসম্পদ সংরক্ষণ ও টেকসই ব্যবস্থাপনার বিষয়টি কৃষি-খাদ্য নিরাপত্তার সঙ্গে যুক্ত।",
+    "story_type": "policy_decision",
+    "topic": "bd_agriculture_food"
+   },
+   "screening_attempts": 0,
+   "status": "analysis_rejected",
+   "updated_at": "2026-10-25T03:13:13+00:00"
+  },
+  "ev_1e78b4af0df2": {
+   "analysis": null,
+   "article_ids": [
+    "a_eda4e2856898ee12"
+   ],
+   "attempts": 0,
+   "created_at": "2026-10-25T03:13:13+00:00",
+   "event_id": "ev_1e78b4af0df2",
    "included_in": null,
    "last_error": null,
    "screening": {
     "categories": [
-     "environment_climate",
-     "bangladesh_affairs"
+     "constitution_governance"
     ],
-    "decision": "maybe",
-    "exam_focus": "prelims",
+    "decision": "reject",
+    "exam_focus": "none",
+    "exam_hook": "সংবিধান সংশোধন নিয়ে বিশেষ কমিটির বৈঠকের খবর।",
     "priority": 4.0,
-    "rationale": "নদীর মাছ সংরক্ষণ ও টেকসই মৎস্যসম্পদ ব্যবস্থাপনা পরিবেশ ও জীববৈচিত্র্য দৃষ্টিতে প্রাসঙ্গিক।"
+    "rationale": "এটি সংবাদ সারসংক্ষেপ ও রাজনৈতিক প্রসঙ্গের মিশ্রণ; নির্দিষ্ট নতুন সিদ্ধান্ত স্পষ্ট নয়।",
+    "story_type": "law_constitution",
+    "topic": "bd_constitution"
    },
    "screening_attempts": 0,
-   "status": "maybe",
-   "updated_at": "2026-10-24T13:40:25+00:00"
+   "status": "rejected",
+   "updated_at": "2026-10-25T03:13:13+00:00"
+  },
+  "ev_2255d200a75e": {
+   "analysis": null,
+   "article_ids": [
+    "a_9c0b87b1415a92a7",
+    "a_b71f7f617906d985",
+    "a_b83640db3f1cb17f",
+    "a_e8f301d105782f2c",
+    "a_f082a1ee1755eac8"
+   ],
+   "attempts": 1,
+   "created_at": "2026-10-25T03:13:13+00:00",
+   "event_id": "ev_2255d200a75e",
+   "included_in": null,
+   "last_error": "এটি সৌদি আরবের একটি নির্দিষ্ট বিমানবন্দরের কার্যক্রম পুনরায় চালুর সংবাদ। এটি বাংলাদেশের সিলেবাসে সরাসরি গুরুত্বপূর্ণ নয় এবং স্থানীয়/একক ঘটনার পর্যায়ে পড়ে।",
+   "screening": {
+    "categories": [
+     "foreign_policy_geopolitics"
+    ],
+    "decision": "select",
+    "exam_focus": "both",
+    "exam_hook": "হুতিরা সৌদি আরবে নতুন হামলার দাবি করেছে এবং ব্যালিস্টিক ক্ষেপণাস্ত্র প্রতিহত করার কথা বলা হয়েছে।",
+    "priority": 6.0,
+    "rationale": "মধ্যপ্রাচ্যের সংঘাতে নির্দিষ্ট সামরিক ঘটনা ও আঞ্চলিক নিরাপত্তা প্রভাব আছে।",
+    "story_type": "international_event",
+    "topic": "int_conflicts"
+   },
+   "screening_attempts": 0,
+   "status": "analysis_rejected",
+   "updated_at": "2026-10-25T03:13:13+00:00"
   },
   "ev_23bc96a8e0f7": {
    "analysis": null,
@@ -3105,6 +4195,111 @@
    "screening_attempts": 0,
    "status": "rejected",
    "updated_at": "2026-10-24T11:39:11+00:00"
+  },
+  "ev_2407e2ff73e4": {
+   "analysed_at": "2026-10-25T03:13:13+00:00",
+   "analysis": {
+    "analysed_article_id": "a_8c4835632c4b956a",
+    "attributed_claims": [
+     {
+      "attributed_to": "BMD meteorologist AKM Nazmul Haque",
+      "claim": "বাংলাদেশের দিকে অগ্রসর হওয়ার সম্ভাবনা খুব কম, তবে পুরোপুরি উড়িয়ে দেওয়া যায় না।",
+      "evidence": "\"the likelihood of it moving towards Bangladesh is very low. However, we cannot completely rule out the possibility,\" he told The Daily Star."
+     },
+     {
+      "attributed_to": "BMD meteorologist AKM Nazmul Haque",
+      "claim": "উপকূলীয় খুলনা, বরিশাল ও চট্টগ্রামে ২৭ অক্টোবর থেকে বৃষ্টি বাড়তে পারে; খুলনা, রাজশাহী ও রংপুরে ২৯ অক্টোবর বৃষ্টি হতে পারে।",
+      "evidence": "\"rainfall may increase in the coastal areas of Khulna, Barishal and Chattogram from October 27, while Khulna, Rajshahi and Rangpur may see rain from October 29, Nazmul said.\""
+     },
+     {
+      "attributed_to": "BMD meteorologist AKM Nazmul Haque",
+      "claim": "ঘূর্ণিঝড় হলে এর নাম হবে Arnab; আরব সাগরের নিম্নচাপ আগে ঘূর্ণিঝড়ে পরিণত হলে নাম Arnab হবে না।",
+      "evidence": "\"If the system develops into a cyclone, it will be named Arnab, a name proposed by Bangladesh, he said.\""
+     }
+    ],
+    "background_context": "বঙ্গোপসাগরে ঘূর্ণিঝড়ের মৌসুমে নিম্নচাপ তৈরি হওয়া স্বাভাবিক একটি আবহাওয়া ঘটনা। বাংলাদেশের উপকূলীয় অঞ্চল এ ধরনের ব্যবস্থার প্রভাবে বারবার ঝুঁকির মধ্যে থাকে।",
+    "categories": [
+     "environment_climate"
+    ],
+    "causes_effects": "বঙ্গোপসাগরের অনুকূল আবহাওয়া পরিস্থিতিতে নিম্নচাপ শক্তিশালী হয়ে depression ও পরে cyclone-এ রূপ নিতে পারে। এর ফলে উপকূলীয় এলাকায় বৃষ্টি বাড়তে পারে এবং সমুদ্রে মাছ ধরার কার্যক্রমে ঝুঁকি সৃষ্টি হতে পারে।",
+    "criteria": {
+     "factual_density": 6.0,
+     "novelty": 7.0,
+     "significance": 6.0,
+     "syllabus_relevance": 8.0,
+     "written_potential": 5.0
+    },
+    "exam_focus": "both",
+    "headline_bn": "বঙ্গোপসাগরে নিম্নচাপ: ঘূর্ণিঝড়ে রূপ নিতে পারে, ২৭ অক্টোবর থেকে বৃষ্টির পূর্বাভাস",
+    "institutions": [
+     "Bangladesh Meteorological Department (BMD)",
+     "The Daily Star"
+    ],
+    "key_facts": [
+     {
+      "evidence": "\"A well-marked low-pressure system over the east-central and southeast Bay of Bengal may intensify into a cyclone\"",
+      "fact": "বঙ্গোপসাগরের পূর্ব-মধ্য ও দক্ষিণ-পূর্ব অংশে একটি সুস্পষ্ট নিম্নচাপ ঘূর্ণিঝড়ে পরিণত হতে পারে।",
+      "prelims": true
+     },
+     {
+      "evidence": "\"is likely to move towards India’s Andhra Pradesh coast\"",
+      "fact": "নিম্নচাপটি ভারতের অন্ধ্র প্রদেশের উপকূলে যেতে পারে বলে বলা হয়েছে।",
+      "prelims": true
+     },
+     {
+      "evidence": "\"two or three low-pressure systems could form over the Bay of Bengal this month\"",
+      "fact": "BMD মাসের শুরুতে জানিয়েছিল, এ মাসে বঙ্গোপসাগরে দুই বা তিনটি নিম্নচাপ তৈরি হতে পারে।",
+      "prelims": true
+     },
+     {
+      "evidence": "\"the well-marked low could develop into a depression today\"",
+      "fact": "BMD meteorologist AKM Nazmul Haque বলেছেন, নিম্নচাপটি আজ depression-এ পরিণত হতে পারে।",
+      "prelims": true
+     },
+     {
+      "evidence": "\"the likelihood of it moving towards Bangladesh is very low. However, we cannot completely rule out the possibility\"",
+      "fact": "বাংলাদেশের দিকে ঘূর্ণিঝড়টির অগ্রসর হওয়ার সম্ভাবনা খুব কম বলা হয়েছে, তবে একেবারে নাকচ করা হয়নি।",
+      "prelims": true
+     },
+     {
+      "evidence": "\"Fishing boats and trawlers in the northern Bay have been advised to avoid venturing into deep waters\"",
+      "fact": "নদীবন্দর ও জেলেদের জন্য উত্তর বঙ্গোপসাগরে গভীর সমুদ্রে না যাওয়ার পরামর্শ দেওয়া হয়েছে।",
+      "prelims": true
+     }
+    ],
+    "likely_question": "বঙ্গোপসাগরের নিম্নচাপ, সম্ভাব্য ঘূর্ণিঝড়ের নামকরণ এবং উপকূলীয় অঞ্চলে বৃষ্টির পূর্বাভাস—এ বিষয়ে সংক্ষেপে আলোচনা করুন।",
+    "mode": "full",
+    "score": 65.5,
+    "syllabus_label": "প্রাকৃতিক দুর্যোগ ও দুর্যোগ ব্যবস্থাপনা",
+    "syllabus_topic": "env_disaster",
+    "unsupported_dropped": 0,
+    "what_happened": "বঙ্গোপসাগরের পূর্ব-মধ্য ও দক্ষিণ-পূর্ব অংশে একটি সুস্পষ্ট নিম্নচাপ ঘূর্ণিঝড়ে পরিণত হতে পারে বলে আবহাওয়াবিদেরা জানিয়েছেন। এটি ভারতের অন্ধ্র প্রদেশের দিকে যেতে পারে বলে ধারণা করা হচ্ছে, তবে বাংলাদেশের দিকে যাওয়ার সম্ভাবনা খুব কম বলা হয়েছে। বাংলাদেশ আবহাওয়া অধিদপ্তর (BMD) জানিয়েছিল, এ মাসে বঙ্গোপসাগরে দুই বা তিনটি নিম্নচাপ তৈরি হতে পারে, যার একটি ঘূর্ণিঝড়ে রূপ নিতে পারে। নিম্নচাপটি ঘনীভূত হলে ২৭ অক্টোবর থেকে দক্ষিণ-পশ্চিম ও উত্তরাঞ্চলে বৃষ্টি বাড়তে পারে বলে পূর্বাভাস দেওয়া হয়েছে।",
+    "why_it_matters": "এ ধরনের আবহাওয়া-সংক্রান্ত সতর্কতা দুর্যোগ প্রস্তুতি, নৌযান চলাচল, এবং উপকূলীয় জননিরাপত্তার জন্য গুরুত্বপূর্ণ। BCS-এর জন্য এটি দুর্যোগ ব্যবস্থাপনা ও আবহাওয়া পূর্বাভাসভিত্তিক প্রশ্নে কাজে লাগতে পারে।",
+    "written_angle": "দুর্যোগ পূর্বাভাস, উপকূলীয় ঝুঁকি এবং জেলেদের জন্য আগাম সতর্কতার গুরুত্ব নিয়ে প্রশ্ন আসতে পারে। এছাড়া আঞ্চলিক নামকরণ প্রক্রিয়া ও বঙ্গোপসাগরে আবহাওয়া ব্যবস্থার গতিপথও আলোচ্য হতে পারে।"
+   },
+   "article_ids": [
+    "a_8c4835632c4b956a"
+   ],
+   "attempts": 1,
+   "created_at": "2026-10-25T03:13:13+00:00",
+   "event_id": "ev_2407e2ff73e4",
+   "included_in": "2026-10-25-m1",
+   "last_error": null,
+   "screening": {
+    "categories": [
+     "environment_climate"
+    ],
+    "decision": "select",
+    "exam_focus": "both",
+    "exam_hook": "বঙ্গোপসাগরে নিম্নচাপ ঘূর্ণিঝড়ে রূপ নিতে পারে এবং ২৭ অক্টোবর থেকে বৃষ্টির পূর্বাভাস আছে।",
+    "priority": 7.0,
+    "rationale": "ঘূর্ণিঝড়-সংক্রান্ত পূর্বাভাস ও নামকরণ দুর্যোগ ব্যবস্থাপনায় পরীক্ষাযোগ্য।",
+    "story_type": "environment_disaster",
+    "topic": "env_disaster"
+   },
+   "screening_attempts": 0,
+   "status": "included",
+   "updated_at": "2026-10-25T03:13:13+00:00"
   },
   "ev_26ead982634f": {
    "analysis": null,
@@ -3247,6 +4442,58 @@
    "status": "included",
    "updated_at": "2026-10-25T02:30:10+00:00"
   },
+  "ev_320a4d3e5583": {
+   "analysis": null,
+   "article_ids": [
+    "a_5024dd3ba36c6f08"
+   ],
+   "attempts": 0,
+   "created_at": "2026-10-25T03:13:13+00:00",
+   "event_id": "ev_320a4d3e5583",
+   "included_in": null,
+   "last_error": null,
+   "screening": {
+    "categories": [
+     "foreign_policy_geopolitics"
+    ],
+    "decision": "select",
+    "exam_focus": "both",
+    "exam_hook": "জাপান সফরের সঙ্গে মিলিয়ে বিমান ঢাকা-নারিতা ফ্লাইট দ্বিগুণ করছে।",
+    "priority": 5.0,
+    "rationale": "এটি দ্বিপক্ষীয় সফরের সঙ্গে যুক্ত পরিবহন-সম্পর্কিত প্রাসঙ্গিক তথ্য।",
+    "story_type": "diplomacy",
+    "topic": "fp_bilateral"
+   },
+   "screening_attempts": 0,
+   "status": "selected",
+   "updated_at": "2026-10-25T03:13:13+00:00"
+  },
+  "ev_32e536989d7e": {
+   "analysis": null,
+   "article_ids": [
+    "a_7169a1de04484f1d"
+   ],
+   "attempts": 0,
+   "created_at": "2026-10-25T03:13:13+00:00",
+   "event_id": "ev_32e536989d7e",
+   "included_in": null,
+   "last_error": null,
+   "screening": {
+    "categories": [
+     "economy"
+    ],
+    "decision": "reject",
+    "exam_focus": "none",
+    "exam_hook": "এক ব্যাংকের বাণিজ্যিক অংশীদারিত্ব।",
+    "priority": 0.0,
+    "rationale": "এটি একক প্রতিষ্ঠানের অফার ও চুক্তি, নীতি-গুরুত্ব নেই।",
+    "story_type": "corporate_commercial",
+    "topic": null
+   },
+   "screening_attempts": 0,
+   "status": "rejected",
+   "updated_at": "2026-10-25T03:13:13+00:00"
+  },
   "ev_346eb0a2a517": {
    "analysed_at": "2026-10-25T02:30:10+00:00",
    "analysis": {
@@ -3360,6 +4607,32 @@
    "status": "rejected",
    "updated_at": "2026-10-24T13:40:25+00:00"
   },
+  "ev_3907a3fc2a41": {
+   "analysis": null,
+   "article_ids": [
+    "a_71adda2d325e11ea"
+   ],
+   "attempts": 0,
+   "created_at": "2026-10-25T03:13:13+00:00",
+   "event_id": "ev_3907a3fc2a41",
+   "included_in": null,
+   "last_error": null,
+   "screening": {
+    "categories": [
+     "environment_climate"
+    ],
+    "decision": "reject",
+    "exam_focus": "none",
+    "exam_hook": "এল নিনোর প্রভাব নিয়ে ব্যাখ্যামূলক লেখা।",
+    "priority": 1.0,
+    "rationale": "এটি ব্যাখ্যাধর্মী ফিচার, নতুন নীতি বা বড় ঘটনা নয়।",
+    "story_type": "feature",
+    "topic": null
+   },
+   "screening_attempts": 0,
+   "status": "rejected",
+   "updated_at": "2026-10-25T03:13:13+00:00"
+  },
   "ev_3adbd1a78b99": {
    "analysis": null,
    "article_ids": [
@@ -3372,17 +4645,19 @@
    "last_error": null,
    "screening": {
     "categories": [
-     "science_technology",
-     "awards_reports_indices"
+     "science_technology"
     ],
-    "decision": "maybe",
-    "exam_focus": "prelims",
-    "priority": 3.0,
-    "rationale": "ব্ল্যাক কফির স্বাস্থ্যপ্রভাব নিয়ে গবেষণাভিত্তিক আলোচনা বিজ্ঞান অংশে সামান্য প্রাসঙ্গিকতা রাখে।"
+    "decision": "reject",
+    "exam_focus": "none",
+    "exam_hook": "ব্ল্যাক কফি নিয়ে স্বাস্থ্য-ধর্মী আলোচনা।",
+    "priority": 0.0,
+    "rationale": "এটি সাধারণ স্বাস্থ্য পরামর্শধর্মী লেখা, নতুন নীতি বা বড় গবেষণা নয়।",
+    "story_type": "feature",
+    "topic": null
    },
    "screening_attempts": 0,
-   "status": "maybe",
-   "updated_at": "2026-10-25T02:30:10+00:00"
+   "status": "rejected",
+   "updated_at": "2026-10-25T03:13:13+00:00"
   },
   "ev_3c39f8d72f90": {
    "analysis": null,
@@ -3529,6 +4804,32 @@
    "status": "rejected",
    "updated_at": "2026-10-24T13:40:25+00:00"
   },
+  "ev_3f67099d2103": {
+   "analysis": null,
+   "article_ids": [
+    "a_d0fdcf9eebfc0073"
+   ],
+   "attempts": 0,
+   "created_at": "2026-10-25T03:13:13+00:00",
+   "event_id": "ev_3f67099d2103",
+   "included_in": null,
+   "last_error": null,
+   "screening": {
+    "categories": [
+     "constitution_governance"
+    ],
+    "decision": "reject",
+    "exam_focus": "none",
+    "exam_hook": "IDRA-এর প্রধান কার্যালয় স্থানান্তরের প্রস্তাব।",
+    "priority": 3.0,
+    "rationale": "এটি একটি দপ্তরের অফিস স্থানান্তর-সংক্রান্ত প্রশাসনিক বিষয়, পরীক্ষার জন্য দুর্বল।",
+    "story_type": "policy_decision",
+    "topic": "bd_good_governance"
+   },
+   "screening_attempts": 0,
+   "status": "rejected",
+   "updated_at": "2026-10-25T03:13:13+00:00"
+  },
   "ev_44ccf137af98": {
    "analysed_at": "2026-10-25T02:30:10+00:00",
    "analysis": {
@@ -3620,6 +4921,141 @@
    "status": "analysed",
    "updated_at": "2026-10-25T02:30:10+00:00"
   },
+  "ev_45b8e577bf57": {
+   "analysed_at": "2026-10-25T03:13:13+00:00",
+   "analysis": {
+    "analysed_article_id": "a_1e4362954edcc238",
+    "attributed_claims": [
+     {
+      "attributed_to": "যুক্তরাষ্ট্রের দুটি সাইবারনিরাপত্তা প্রতিষ্ঠান ক্যালিফ ও উইজের গবেষকরা / বিবিসি-উদ্ধৃত প্রতিবেদন",
+      "claim": "পিএইচপি নিরাপত্তা ত্রুটি এক দশকের বেশি সময় ধরে ছিল, তবে তা এত দিন ধরা পড়েনি; গত সপ্তাহে এআইয়ের সাহায্যে শনাক্ত করা হয়।",
+      "evidence": "পিএইচপিতে এই ত্রুটি এক দশকের বেশি সময় ধরে ছিল। তবে তা এত দিন ধরা পড়েনি। গত সপ্তাহে বিষয়টি কৃত্রিম বুদ্ধিমত্তার (এআই) সাহায্যে শনাক্ত করেন যুক্তরাষ্ট্রের দুটি সাইবারনিরাপত্তা প্রতিষ্ঠানের একদল গবেষক।"
+     },
+     {
+      "attributed_to": "বাংলাদেশ ব্যাংকের নির্বাহী পরিচালক ও মুখপাত্র আরিফ হোসেন খান",
+      "claim": "বাংলাদেশ ব্যাংকের মুখপাত্র বলেন, সতর্কতার অংশ হিসেবে ওয়েবসাইট বন্ধ রাখা হয়েছে এবং ব্যাংকিং সেবায় প্রভাব পড়েনি।",
+      "evidence": "‘সতর্কতার অংশ হিসেবে ওয়েবসাইট বন্ধ রাখা হয়েছে। ... এতে ব্যাংকিং সেবায় কোনো ধরনের প্রভাব পড়েনি। ঝুঁকি কমে গেলে ওয়েবসাইট খুলে দেওয়া হবে।’"
+     }
+    ],
+    "background_context": "পিএইচপি বহু ওয়েবসাইটের ব্যাক-এন্ডে ব্যবহৃত একটি প্রোগ্রামিং ভাষা। সরকারি সেবা, ব্যাংকিং এবং হাসপাতালের মতো খাতে এর ওপর নির্ভরতা থাকায় নিরাপত্তা ত্রুটি বড় প্রভাব ফেলতে পারে।",
+    "categories": [
+     "science_technology",
+     "constitution_governance"
+    ],
+    "causes_effects": "কারণ হিসেবে পিএইচপির নিরাপত্তা ত্রুটি এবং বিশ্বব্যাপী সতর্কতা দেখানো হয়েছে। ফলে বাংলাদেশে বহু সেবা সাময়িকভাবে বন্ধ, কিছু সাইট হালনাগাদ, এবং নিরাপত্তা যাচাইয়ের ওপর জোর দেওয়া হয়েছে; এতে সেবা ব্যাহত না হলেও সাইবার প্রস্তুতির গুরুত্ব বেড়েছে।",
+    "criteria": {
+     "factual_density": 8.0,
+     "novelty": 8.0,
+     "significance": 6.0,
+     "syllabus_relevance": 7.0,
+     "written_potential": 6.0
+    },
+    "exam_focus": "both",
+    "headline_bn": "পিএইচপি নিরাপত্তা ত্রুটিতে বাংলাদেশেও সাইবার সতর্কতা",
+    "institutions": [
+     "বিজিডি ই-গভ সার্ট",
+     "ল্যান্ডডটগভডটবিডি",
+     "বাংলাদেশ ব্যাংক",
+     "বাংলাদেশ কম্পিউটার কাউন্সিল",
+     "ক্যালিফ",
+     "উইজ",
+     "যুক্তরাষ্ট্রের জাতীয় নিরাপত্তা সংস্থা",
+     "টেকগ্লোবাল ইনস্টিটিউট"
+    ],
+    "key_facts": [
+     {
+      "evidence": "দেশে মাসে প্রায় তিন লাখ মানুষ অনলাইনে জমির নামজারি বা মিউটেশন সেবা নেন।",
+      "fact": "দেশে মাসে প্রায় তিন লাখ মানুষ অনলাইনে জমির নামজারি বা মিউটেশন সেবা নেন।",
+      "prelims": true
+     },
+     {
+      "evidence": "বিজিডি ই-গভ সার্টের জরুরি সাইবার সতর্কবার্তার অংশ হিসেবে ওয়েবসাইট হালনাগাদ করা হচ্ছে। এ কারণে ভূমিসেবা বন্ধ।",
+      "fact": "ভূমিসেবার ওয়েবসাইট ল্যান্ডডটগভডটবিডি জরুরি সাইবার সতর্কবার্তার অংশ হিসেবে হালনাগাদ করা হচ্ছে বলে বন্ধ রাখা হয়।",
+      "prelims": true
+     },
+     {
+      "evidence": "নিরাপত্তায় এই ত্রুটির কারণে বিশ্বজুড়ে ওয়েবসাইট বন্ধের ঘটনা ঘটেছে। বাংলাদেশেও বেশ কিছু ওয়েবসাইট বন্ধ রাখা হয়েছে।",
+      "fact": "বিশ্বজুড়ে পিএইচপির নিরাপত্তা ত্রুটি ধরা পড়ার পর বাংলাদেশে কয়েকটি ওয়েবসাইট বন্ধ রাখা হয়।",
+      "prelims": true
+     },
+     {
+      "evidence": "জরুরি সতর্কবার্তার পর বাংলাদেশ ব্যাংক বৃহস্পতিবার থেকে তাদের ওয়েবসাইট বন্ধ রেখেছে। কেন্দ্রীয় ব্যাংকের এই পদক্ষেপের পর সতর্কতামূলক ব্যবস্থা হিসেবে আরও কয়েকটি ব্যাংকও ওয়েবসাইট বন্ধ করে দেয়।",
+      "fact": "বাংলাদেশ ব্যাংক বৃহস্পতিবার থেকে তাদের ওয়েবসাইট বন্ধ রেখেছে এবং পরে আরও কয়েকটি ব্যাংক একই ব্যবস্থা নেয়।",
+      "prelims": true
+     },
+     {
+      "evidence": "ব্যাংকগুলো হলো অগ্রণী ব্যাংক, জনতা ব্যাংক, আইএফআইসি ব্যাংক, স্ট্যান্ডার্ড ইসলামী ব্যাংক, এসবিএসি ব্যাংক ও বেঙ্গল কমার্শিয়াল ব্যাংক।",
+      "fact": "বন্ধ রাখা ব্যাংকগুলোর মধ্যে অগ্রণী ব্যাংক, জনতা ব্যাংক, আইএফআইসি ব্যাংক, স্ট্যান্ডার্ড ইসলামী ব্যাংক, এসবিএসি ব্যাংক ও বেঙ্গল কমার্শিয়াল ব্যাংক রয়েছে।",
+      "prelims": true
+     },
+     {
+      "evidence": "২০২৩ সালের জানুয়ারি থেকে ২০২৬ সালের মে পর্যন্ত বাংলাদেশে অন্তত ৬৮টি তথ্য ফাঁসের ঘটনা ঘটেছে।",
+      "fact": "টেকগ্লোবাল ইনস্টিটিউটের মতে ২০২৩ সালের জানুয়ারি থেকে ২০২৬ সালের মে পর্যন্ত বাংলাদেশে অন্তত ৬৮টি তথ্য ফাঁসের ঘটনা ঘটেছে।",
+      "prelims": true
+     }
+    ],
+    "likely_question": "পিএইচপি নিরাপত্তা ত্রুটির কারণে বাংলাদেশে কী ধরনের সতর্কতামূলক ব্যবস্থা নেওয়া হয়েছে? সংক্ষেপে ব্যাখ্যা করুন।",
+    "mode": "full",
+    "score": 69.0,
+    "syllabus_label": "আইসিটি, ডিজিটাল সেবা ও সাইবার নীতি",
+    "syllabus_topic": "bd_ict_digital",
+    "unsupported_dropped": 0,
+    "what_happened": "বিশ্বজুড়ে পিএইচপি-সংক্রান্ত নিরাপত্তা ত্রুটি ধরা পড়ায় বাংলাদেশেও একাধিক সরকারি ও বেসরকারি ওয়েবসাইট সাময়িকভাবে বন্ধ বা হালনাগাদ করা হয়েছে। বাংলাদেশ ব্যাংক, ভূমিসেবার ওয়েবসাইট এবং কয়েকটি ব্যাংক সতর্কতামূলক ব্যবস্থা নেয়; সার্ট জানিয়েছে অন্তত একটি হাসপাতালের ওয়েবসাইট আক্রান্ত হয়েছে বলে শনাক্ত করা হয়েছে।",
+    "why_it_matters": "এটি বাংলাদেশের ডিজিটাল সেবা, আর্থিক খাত এবং গুরুত্বপূর্ণ তথ্য পরিকাঠামোর সাইবার ঝুঁকি বোঝার জন্য প্রাসঙ্গিক। বিসিএসের জন্য আইসিটি শাসন, সাইবার নিরাপত্তা এবং সরকারি সেবার ধারাবাহিকতা বিষয়ে প্রশ্ন করা যেতে পারে।",
+    "written_angle": "বাংলাদেশে সরকারি ও আর্থিক খাতের ডিজিটাল অবকাঠামো সাইবার ঝুঁকিতে কতটা সংবেদনশীল, তা এই খবর থেকে স্পষ্ট। ভবিষ্যৎ প্রশ্নে সাইবার সতর্কতা, গুরুত্বপূর্ণ তথ্য পরিকাঠামো এবং নাগরিক সেবার ধারাবাহিকতা নিয়ে বিশ্লেষণ চাওয়া যেতে পারে।"
+   },
+   "article_ids": [
+    "a_1e4362954edcc238"
+   ],
+   "attempts": 1,
+   "created_at": "2026-10-25T03:13:13+00:00",
+   "event_id": "ev_45b8e577bf57",
+   "included_in": "2026-10-25-m1",
+   "last_error": null,
+   "screening": {
+    "categories": [
+     "science_technology"
+    ],
+    "decision": "select",
+    "exam_focus": "both",
+    "exam_hook": "বাংলাদেশের কিছু সরকারি ওয়েবসাইট বন্ধ করা এবং সাইবার ঝুঁকি নিয়ে সতর্কবার্তা জারি করা হয়েছে।",
+    "priority": 8.0,
+    "rationale": "জাতীয় সাইবার ঝুঁকি ও সরকারি ডিজিটাল সেবায় প্রভাব একটি পরীক্ষাযোগ্য নীতি-সংক্রান্ত বিষয়।",
+    "story_type": "science_technology",
+    "topic": "bd_ict_digital"
+   },
+   "screening_attempts": 0,
+   "status": "included",
+   "updated_at": "2026-10-25T03:13:13+00:00"
+  },
+  "ev_46a908f2ed77": {
+   "analysis": null,
+   "article_ids": [
+    "a_3356b06d57010cee",
+    "a_976b422629d3379c",
+    "a_bfa68b8979be621f"
+   ],
+   "attempts": 0,
+   "created_at": "2026-10-25T03:13:13+00:00",
+   "event_id": "ev_46a908f2ed77",
+   "included_in": null,
+   "last_error": null,
+   "screening": {
+    "categories": [
+     "foreign_policy_geopolitics"
+    ],
+    "decision": "reject",
+    "exam_focus": "none",
+    "exam_hook": "ফ্রান্সে আবার বিক্ষোভ ও সংঘর্ষ হয়েছে।",
+    "priority": 1.0,
+    "rationale": "এটি একটি দেশের অভ্যন্তরীণ অস্থিরতার দৈনিক আপডেট, আন্তর্জাতিক গুরুত্বপূর্ণ সিদ্ধান্ত নয়।",
+    "story_type": "foreign_domestic_minor",
+    "topic": null
+   },
+   "screening_attempts": 0,
+   "status": "rejected",
+   "updated_at": "2026-10-25T03:13:13+00:00"
+  },
   "ev_478f4c997918": {
    "analysis": null,
    "article_ids": [
@@ -3632,17 +5068,19 @@
    "last_error": null,
    "screening": {
     "categories": [
-     "bangladesh_affairs",
-     "economy"
+     "bangladesh_affairs"
     ],
-    "decision": "maybe",
-    "exam_focus": "prelims",
-    "priority": 4.0,
-    "rationale": "ঐতিহ্যবাহী বাজার ও কৃষিপণ্যের বাণিজ্য সম্পর্কে লেখা স্থানীয় অর্থনীতি ও গ্রামীণ বাজার ব্যবস্থায় কিছু প্রাসঙ্গিকতা রাখে।"
+    "decision": "reject",
+    "exam_focus": "none",
+    "exam_hook": "হাওরের একটি পুরোনো বাজারের বর্ণনা।",
+    "priority": 0.0,
+    "rationale": "এটি মানবিক/ফিচারধর্মী বাজার-প্রতিবেদন, পরীক্ষাযোগ্য নীতি বা সিদ্ধান্ত নয়।",
+    "story_type": "feature",
+    "topic": null
    },
    "screening_attempts": 0,
-   "status": "maybe",
-   "updated_at": "2026-10-25T02:30:10+00:00"
+   "status": "rejected",
+   "updated_at": "2026-10-25T03:13:13+00:00"
   },
   "ev_49bcef10ec81": {
    "analysis": null,
@@ -3665,6 +5103,32 @@
    "status": "rejected",
    "updated_at": "2026-10-24T11:39:11+00:00"
   },
+  "ev_4b04363ea82d": {
+   "analysis": null,
+   "article_ids": [
+    "a_c0f8e7e550cbe7e4"
+   ],
+   "attempts": 0,
+   "created_at": "2026-10-25T03:13:13+00:00",
+   "event_id": "ev_4b04363ea82d",
+   "included_in": null,
+   "last_error": null,
+   "screening": {
+    "categories": [
+     "foreign_policy_geopolitics"
+    ],
+    "decision": "reject",
+    "exam_focus": "none",
+    "exam_hook": "দৈনিক আলোচিত খবরের সংকলন।",
+    "priority": 0.0,
+    "rationale": "এটি কেবল একটি হেডলাইন-সংকলন, নিজস্ব কোনো পরীক্ষাযোগ্য নতুন ঘটনা নয়।",
+    "story_type": "other_low_value",
+    "topic": null
+   },
+   "screening_attempts": 0,
+   "status": "rejected",
+   "updated_at": "2026-10-25T03:13:13+00:00"
+  },
   "ev_4b0da8525ea3": {
    "analysis": null,
    "article_ids": [
@@ -3679,14 +5143,43 @@
     "categories": [
      "constitution_governance"
     ],
-    "decision": "maybe",
-    "exam_focus": "prelims",
-    "priority": 4.0,
-    "rationale": "ওসি ও রাজনৈতিক ব্যক্তির বাগ্‌বিতণ্ডা পুলিশ-প্রশাসনের জবাবদিহি প্রসঙ্গে প্রাসঙ্গিক হতে পারে।"
+    "decision": "reject",
+    "exam_focus": "none",
+    "exam_hook": "একজন সাংসদের সঙ্গে ওসির বাগ্‌বিতণ্ডা।",
+    "priority": 0.0,
+    "rationale": "এটি রাজনৈতিক-প্রশাসনিক ঝামেলা, পরীক্ষাযোগ্য উন্নয়ন নয়।",
+    "story_type": "party_politics",
+    "topic": null
    },
    "screening_attempts": 0,
-   "status": "maybe",
-   "updated_at": "2026-10-24T11:39:11+00:00"
+   "status": "rejected",
+   "updated_at": "2026-10-25T03:13:13+00:00"
+  },
+  "ev_4d28da34f0fa": {
+   "analysis": null,
+   "article_ids": [
+    "a_afba70e7eb0d0b00"
+   ],
+   "attempts": 0,
+   "created_at": "2026-10-25T03:13:13+00:00",
+   "event_id": "ev_4d28da34f0fa",
+   "included_in": null,
+   "last_error": null,
+   "screening": {
+    "categories": [
+     "bangladesh_affairs"
+    ],
+    "decision": "reject",
+    "exam_focus": "none",
+    "exam_hook": "রিকশা শিল্প সংরক্ষণ নিয়ে ফিচার।",
+    "priority": 0.0,
+    "rationale": "এটি সাংস্কৃতিক ফিচার, নতুন রাষ্ট্রীয় সিদ্ধান্ত নয়।",
+    "story_type": "feature",
+    "topic": "bd_history_heritage"
+   },
+   "screening_attempts": 0,
+   "status": "rejected",
+   "updated_at": "2026-10-25T03:13:13+00:00"
   },
   "ev_4de672ae7891": {
    "analysed_at": "2026-10-24T11:39:11+00:00",
@@ -3784,6 +5277,32 @@
    "status": "rejected",
    "updated_at": "2026-10-25T02:30:10+00:00"
   },
+  "ev_4f80b8d7b3a1": {
+   "analysis": null,
+   "article_ids": [
+    "a_93fd626fd474c6a4"
+   ],
+   "attempts": 0,
+   "created_at": "2026-10-25T03:13:13+00:00",
+   "event_id": "ev_4f80b8d7b3a1",
+   "included_in": null,
+   "last_error": null,
+   "screening": {
+    "categories": [
+     "bangladesh_affairs"
+    ],
+    "decision": "reject",
+    "exam_focus": "none",
+    "exam_hook": "বিশ্ব ইজতেমা আয়োজন নিয়ে কিছু ইসলামি নেতার দাবি।",
+    "priority": 0.0,
+    "rationale": "এটি স্থানীয়/আয়োজন-সংক্রান্ত খবর, জাতীয় নীতির বিষয় নয়।",
+    "story_type": "local_admin",
+    "topic": null
+   },
+   "screening_attempts": 0,
+   "status": "rejected",
+   "updated_at": "2026-10-25T03:13:13+00:00"
+  },
   "ev_4f912fbc18dc": {
    "analysis": null,
    "article_ids": [
@@ -3805,6 +5324,58 @@
    "status": "rejected",
    "updated_at": "2026-10-25T02:30:10+00:00"
   },
+  "ev_50fdcb4f03c2": {
+   "analysis": null,
+   "article_ids": [
+    "a_08c86eb06fc42fc6"
+   ],
+   "attempts": 1,
+   "created_at": "2026-10-25T03:13:13+00:00",
+   "event_id": "ev_50fdcb4f03c2",
+   "included_in": null,
+   "last_error": "এটি মূলত স্বাস্থ্য প্রশাসনের একটি ঘোষণাধর্মী সংবাদ। BCS সিলেবাসের দেওয়া বিষয়গুলোর সঙ্গে সরাসরি ও শক্তভাবে মেলে না। কমিউনিটি ক্লিনিকের নাম পরিবর্তন ও হাসপাতাল পরিদর্শন—এ ধরনের খবর সাধারণত পরীক্ষার জন্য উচ্চ-গুরুত্বপূর্ণ স্থায়ী নীতিগত বিষয় হিসেবে ধরা হয় না।",
+   "screening": {
+    "categories": [
+     "bangladesh_affairs"
+    ],
+    "decision": "select",
+    "exam_focus": "both",
+    "exam_hook": "দেশের সব কমিউনিটি ক্লিনিকের নাম পরিবর্তন করে ফ্যামিলি ওয়েলফেয়ার সেন্টার করার পরিকল্পনা ঘোষণা করা হয়েছে।",
+    "priority": 6.0,
+    "rationale": "এটি স্বাস্থ্যসেবা ব্যবস্থায় সরকারি নাম ও কাঠামোগত পরিবর্তন, পরীক্ষায় আসতে পারে।",
+    "story_type": "policy_decision",
+    "topic": "bd_social_sector"
+   },
+   "screening_attempts": 0,
+   "status": "analysis_rejected",
+   "updated_at": "2026-10-25T03:13:13+00:00"
+  },
+  "ev_513935540010": {
+   "analysis": null,
+   "article_ids": [
+    "a_8c8b534767595892"
+   ],
+   "attempts": 0,
+   "created_at": "2026-10-25T03:13:13+00:00",
+   "event_id": "ev_513935540010",
+   "included_in": null,
+   "last_error": null,
+   "screening": {
+    "categories": [
+     "bangladesh_affairs"
+    ],
+    "decision": "reject",
+    "exam_focus": "none",
+    "exam_hook": "সৌদি আরবে কর্মসংস্থান নিয়ে এক প্রবাসীর অনিশ্চয়তা।",
+    "priority": 1.0,
+    "rationale": "এটি ব্যক্তিগত অভিবাসী-সংক্রান্ত মানবিক গল্প, নীতিগত সিদ্ধান্ত নয়।",
+    "story_type": "foreign_domestic_minor",
+    "topic": null
+   },
+   "screening_attempts": 0,
+   "status": "rejected",
+   "updated_at": "2026-10-25T03:13:13+00:00"
+  },
   "ev_526256da2186": {
    "analysis": null,
    "article_ids": [
@@ -3818,17 +5389,19 @@
    "last_error": null,
    "screening": {
     "categories": [
-     "bangladesh_affairs",
-     "constitution_governance"
+     "bangladesh_affairs"
     ],
-    "decision": "maybe",
-    "exam_focus": "prelims",
-    "priority": 4.0,
-    "rationale": "একজন শিল্পীর গাড়িতে গুলির সিসিটিভি ফুটেজ আইনশৃঙ্খলা পরিস্থিতির খবর হিসেবে প্রাসঙ্গিক।"
+    "decision": "reject",
+    "exam_focus": "none",
+    "exam_hook": "আসিফ আকবরের গাড়িতে গুলি।",
+    "priority": 0.0,
+    "rationale": "এটি একটি ফৌজদারি/সহিংস ঘটনার খবর, নীতিগত গুরুত্ব নেই।",
+    "story_type": "crime_accident",
+    "topic": null
    },
    "screening_attempts": 0,
-   "status": "maybe",
-   "updated_at": "2026-10-24T11:39:11+00:00"
+   "status": "rejected",
+   "updated_at": "2026-10-25T03:13:13+00:00"
   },
   "ev_5413b92d12de": {
    "analysis": null,
@@ -3853,6 +5426,127 @@
    "screening_attempts": 0,
    "status": "failed",
    "updated_at": "2026-10-24T13:40:25+00:00"
+  },
+  "ev_58e8c29fd7cf": {
+   "analysed_at": "2026-10-25T03:13:13+00:00",
+   "analysis": {
+    "analysed_article_id": "a_927b230d816cd9ca",
+    "attributed_claims": [],
+    "background_context": "বাংলাদেশে দ্রুত নগরায়ণ, স্থানীয় সেবা-চাহিদা এবং জলবায়ু ঝুঁকি একসঙ্গে বাড়ছে। তাই ছোট ও মাঝারি পৌরসভায় সহনশীল নগর পরিকল্পনা এখন নীতিগত গুরুত্ব পাচ্ছে।",
+    "categories": [
+     "bangladesh_affairs",
+     "environment_climate"
+    ],
+    "causes_effects": "প্রস্তাবে বলা হয়েছে, স্থানীয় পর্যায়ে সক্ষমতার ঘাটতি, দুর্বল সমন্বয়, অপর্যাপ্ত পরিকল্পনা ও অর্থসংকটের কারণে জলবায়ু-সহনশীল অবকাঠামো গড়ে ওঠা বাধাগ্রস্ত হচ্ছে। প্রকল্পটি প্রশিক্ষণ, পরিকল্পনা সহায়তা এবং পাইলট উদ্যোগের মাধ্যমে এসব ঘাটতি কমাতে চায়।",
+    "criteria": {
+     "factual_density": 7.0,
+     "novelty": 8.0,
+     "significance": 6.0,
+     "syllabus_relevance": 7.0,
+     "written_potential": 6.0
+    },
+    "exam_focus": "both",
+    "headline_bn": "জলবায়ু-সহনশীল নগর উন্নয়নে ৮৭.৪০ কোটি টাকার প্রকল্প",
+    "institutions": [
+     "Executive Committee of the National Economic Council",
+     "Planning Commission",
+     "Centre for Environmental and Geographic Information Services",
+     "Local Government Engineering Department",
+     "Local Government Division",
+     "GIZ",
+     "Sustainable Development Goal 11"
+    ],
+    "key_facts": [
+     {
+      "evidence": "The government has proposed a Tk 87.40 crore Germany-funded project",
+      "fact": "সরকার ৮৭.৪০ কোটি টাকার একটি জার্মানি-অর্থায়িত প্রকল্প প্রস্তাব করেছে।",
+      "prelims": true
+     },
+     {
+      "evidence": "The project, titled “Innovation for Climate-smart Urban Development”",
+      "fact": "প্রকল্পটির নাম 'Innovation for Climate-smart Urban Development'।",
+      "prelims": true
+     },
+     {
+      "evidence": "is set to be placed before the Executive Committee of the National Economic Council for approval tomorrow.",
+      "fact": "প্রকল্পটি একনেকের অনুমোদনের জন্য আগামীকাল তোলা হবে।",
+      "prelims": true
+     },
+     {
+      "evidence": "It will undertake 12 pilot initiatives in Chapainawabganj, Charghat, Gaibandha and Sirajganj municipalities",
+      "fact": "চাঁপাইনবাবগঞ্জ, চারঘাট, গাইবান্ধা ও সিরাজগঞ্জ পৌরসভায় ১২টি পাইলট উদ্যোগ নেওয়া হবে।",
+      "prelims": true
+     },
+     {
+      "evidence": "with the entire Tk 87.40 crore coming as a grant from German development cooperation agency GIZ.",
+      "fact": "পুরো ৮৭.৪০ কোটি টাকাই জিআইজেডের অনুদান হিসেবে আসবে।",
+      "prelims": true
+     },
+     {
+      "evidence": "The Local Government Engineering Department (LGED) will implement the project under the Local Government Division",
+      "fact": "প্রকল্পটি এলজিইডি স্থানীয় সরকার বিভাগের অধীনে বাস্তবায়ন করবে।",
+      "prelims": true
+     }
+    ],
+    "likely_question": "জলবায়ু-সহনশীল নগর উন্নয়নে প্রস্তাবিত প্রকল্পটির লক্ষ্য, অর্থায়ন ও বাস্তবায়ন কাঠামো ব্যাখ্যা করুন।",
+    "mode": "full",
+    "score": 67.0,
+    "syllabus_label": "মেগা প্রকল্প, যোগাযোগ ও উন্নয়ন প্রকল্প",
+    "syllabus_topic": "bd_infrastructure",
+    "unsupported_dropped": 0,
+    "what_happened": "সরকার চারটি পৌরসভায় জলবায়ু-সহনশীল নগর উন্নয়ন促 করার জন্য ৮৭.৪০ কোটি টাকার একটি জার্মানি-অর্থায়িত প্রকল্প প্রস্তাব করেছে। প্রকল্পটি আগামীকাল একনেকের অনুমোদনের জন্য তোলা হবে এবং এতে চাঁপাইনবাবগঞ্জ, চারঘাট, গাইবান্ধা ও সিরাজগঞ্জ পৌরসভায় ১২টি পাইলট উদ্যোগ নেওয়ার কথা আছে।",
+    "why_it_matters": "এটি স্থানীয় সরকার, নগর পরিকল্পনা ও জলবায়ু অভিযোজন—তিনটি গুরুত্বপূর্ণ পরীক্ষার বিষয়কে একত্র করে। প্রকল্পে কীভাবে অর্থ বরাদ্দ, প্রশিক্ষণ এবং প্রাতিষ্ঠানিক সক্ষমতা বাড়ানোর কথা বলা হয়েছে, তা এমসিকিউ ও লিখিত উভয় পরীক্ষার জন্যই প্রাসঙ্গিক।",
+    "written_angle": "উপজেলা ও পৌরপর্যায়ে জলবায়ু অভিযোজনকে কার্যকর করতে স্থানীয় সক্ষমতা, সমন্বয় ও পরিকল্পনার ঘাটতি কীভাবে বাধা হয়ে দাঁড়ায়—এ প্রকল্প তার একটি নীতি-ভিত্তিক উদাহরণ। লিখিত পরীক্ষায় স্থানীয় সরকার প্রতিষ্ঠানের ভূমিকা, বিদেশি অনুদান, এবং টেকসই নগর উন্নয়নের সঙ্গে SDG 11-এর সংযোগ আলোচনা করা যেতে পারে।"
+   },
+   "article_ids": [
+    "a_927b230d816cd9ca"
+   ],
+   "attempts": 1,
+   "created_at": "2026-10-25T03:13:13+00:00",
+   "event_id": "ev_58e8c29fd7cf",
+   "included_in": "2026-10-25-m1",
+   "last_error": null,
+   "screening": {
+    "categories": [
+     "environment_climate"
+    ],
+    "decision": "select",
+    "exam_focus": "both",
+    "exam_hook": "চারটি পৌরসভায় ৮৭ কোটি টাকার জলবায়ু-স্মার্ট নগর প্রকল্প হাতে নেওয়া হচ্ছে।",
+    "priority": 6.0,
+    "rationale": "এটি জলবায়ু অভিযোজনভিত্তিক প্রকল্প, পরীক্ষায় প্রশ্ন হতে পারে।",
+    "story_type": "policy_decision",
+    "topic": "env_climate"
+   },
+   "screening_attempts": 0,
+   "status": "included",
+   "updated_at": "2026-10-25T03:13:13+00:00"
+  },
+  "ev_58fea51a4adb": {
+   "analysis": null,
+   "article_ids": [
+    "a_f3f51f12b119ae97"
+   ],
+   "attempts": 0,
+   "created_at": "2026-10-25T03:13:13+00:00",
+   "event_id": "ev_58fea51a4adb",
+   "included_in": null,
+   "last_error": null,
+   "screening": {
+    "categories": [
+     "science_technology"
+    ],
+    "decision": "reject",
+    "exam_focus": "none",
+    "exam_hook": "এআই ডেটা সেন্টারের কারণে ফুয়েল-সেলের চাহিদা বাড়ছে।",
+    "priority": 3.0,
+    "rationale": "এটি প্রযুক্তি-ব্যবসার প্রবণতা; BCS-এর জন্য তুলনামূলকভাবে কম পরীক্ষাযোগ্য।",
+    "story_type": "science_technology",
+    "topic": "sci_tech_ai"
+   },
+   "screening_attempts": 0,
+   "status": "rejected",
+   "updated_at": "2026-10-25T03:13:13+00:00"
   },
   "ev_5cf284478842": {
    "analysis": null,
@@ -4102,6 +5796,84 @@
    "screening_attempts": 0,
    "status": "included",
    "updated_at": "2026-10-25T02:30:10+00:00"
+  },
+  "ev_688f86f475b8": {
+   "analysis": null,
+   "article_ids": [
+    "a_3908a8a881cb6ace"
+   ],
+   "attempts": 0,
+   "created_at": "2026-10-25T03:13:13+00:00",
+   "event_id": "ev_688f86f475b8",
+   "included_in": null,
+   "last_error": null,
+   "screening": {
+    "categories": [
+     "economy"
+    ],
+    "decision": "select",
+    "exam_focus": "both",
+    "exam_hook": "বাংলাদেশের উন্নয়ন কৌশলে ক্রিয়েটিভ ইকোনমিকে অন্তর্ভুক্ত করার কথা বলা হয়েছে।",
+    "priority": 5.0,
+    "rationale": "অর্থনৈতিক নীতিতে নতুন ক্ষেত্র অন্তর্ভুক্তির ধারণা আছে, যা লিখিত পরীক্ষায় কাজে লাগতে পারে।",
+    "story_type": "policy_decision",
+    "topic": "bd_trade_industry"
+   },
+   "screening_attempts": 0,
+   "status": "selected",
+   "updated_at": "2026-10-25T03:13:13+00:00"
+  },
+  "ev_68dbfa95df17": {
+   "analysis": null,
+   "article_ids": [
+    "a_c272ecb29504aa2f"
+   ],
+   "attempts": 0,
+   "created_at": "2026-10-25T03:13:13+00:00",
+   "event_id": "ev_68dbfa95df17",
+   "included_in": null,
+   "last_error": null,
+   "screening": {
+    "categories": [
+     "bangladesh_affairs"
+    ],
+    "decision": "reject",
+    "exam_focus": "none",
+    "exam_hook": "ইংল্যান্ডের প্রথম রাজা অ্যাথেলস্ট্যান নিয়ে ইতিহাসভিত্তিক লেখা।",
+    "priority": 1.0,
+    "rationale": "এটি ইতিহাসভিত্তিক ফিচার, নতুন শাসননীতি বা সমসাময়িক ঘটনা নয়।",
+    "story_type": "feature",
+    "topic": "bd_history_heritage"
+   },
+   "screening_attempts": 0,
+   "status": "rejected",
+   "updated_at": "2026-10-25T03:13:13+00:00"
+  },
+  "ev_6b8d92612e00": {
+   "analysis": null,
+   "article_ids": [
+    "a_b1d8bb442a31d590"
+   ],
+   "attempts": 0,
+   "created_at": "2026-10-25T03:13:13+00:00",
+   "event_id": "ev_6b8d92612e00",
+   "included_in": null,
+   "last_error": null,
+   "screening": {
+    "categories": [
+     "foreign_policy_geopolitics"
+    ],
+    "decision": "reject",
+    "exam_focus": "none",
+    "exam_hook": "তুরস্কে সাংবাদিকদের ওপর চাপের বিরুদ্ধে বিক্ষোভ।",
+    "priority": 2.0,
+    "rationale": "এটি অন্য দেশের অভ্যন্তরীণ মানবাধিকার/বিক্ষোভের খবর, BCS-এর জন্য কম প্রাসঙ্গিক।",
+    "story_type": "foreign_domestic_minor",
+    "topic": null
+   },
+   "screening_attempts": 0,
+   "status": "rejected",
+   "updated_at": "2026-10-25T03:13:13+00:00"
   },
   "ev_6e21e4b6bb83": {
    "analysed_at": "2026-10-24T11:39:11+00:00",
@@ -4428,6 +6200,32 @@
    "status": "rejected",
    "updated_at": "2026-10-24T13:40:25+00:00"
   },
+  "ev_7947c7e014b5": {
+   "analysis": null,
+   "article_ids": [
+    "a_a2c3b1f6d868b2fc"
+   ],
+   "attempts": 1,
+   "created_at": "2026-10-25T03:13:13+00:00",
+   "event_id": "ev_7947c7e014b5",
+   "included_in": null,
+   "last_error": "এটি মূলত কূটনৈতিক সফর-সংক্রান্ত দৈনিক রাজনৈতিক সংবাদ। এতে নীতি, চুক্তি, র‍্যাংকিং, আইনি সিদ্ধান্ত বা পরীক্ষায় নিয়মিত জিজ্ঞাস্য স্থায়ী তথ্য খুব কম; তাই BCS প্রস্তুতির জন্য উচ্চ অগ্রাধিকারযোগ্য নয়।",
+   "screening": {
+    "categories": [
+     "foreign_policy_geopolitics"
+    ],
+    "decision": "select",
+    "exam_focus": "both",
+    "exam_hook": "জাপান সফরের আগে বাংলাদেশের রাষ্ট্রদূতকে ঢাকায় ফেরানো বিদেশ মন্ত্রণালয়ের অভ্যন্তরীণ বিষয় বলা হয়েছে।",
+    "priority": 6.0,
+    "rationale": "জাপান-সম্পর্কিত কূটনৈতিক প্রস্তুতি ও রাষ্ট্রদূত বদলি পরীক্ষাযোগ্য দ্বিপক্ষীয় বিষয়।",
+    "story_type": "diplomacy",
+    "topic": "fp_bilateral"
+   },
+   "screening_attempts": 0,
+   "status": "analysis_rejected",
+   "updated_at": "2026-10-25T03:13:13+00:00"
+  },
   "ev_796626a74020": {
    "analysed_at": "2026-10-24T13:40:25+00:00",
    "analysis": {
@@ -4555,6 +6353,32 @@
    "screening_attempts": 0,
    "status": "rejected",
    "updated_at": "2026-10-24T11:39:11+00:00"
+  },
+  "ev_79d75b49f719": {
+   "analysis": null,
+   "article_ids": [
+    "a_8fa19907be5708b2"
+   ],
+   "attempts": 0,
+   "created_at": "2026-10-25T03:13:13+00:00",
+   "event_id": "ev_79d75b49f719",
+   "included_in": null,
+   "last_error": null,
+   "screening": {
+    "categories": [
+     "bangladesh_affairs"
+    ],
+    "decision": "reject",
+    "exam_focus": "none",
+    "exam_hook": "জ্যেষ্ঠ সাংবাদিক শফিকুর রহমানের মৃত্যু।",
+    "priority": 0.0,
+    "rationale": "এটি ব্যক্তিগত মৃত্যুসংবাদ, পরীক্ষাযোগ্য নীতি-ঘটনা নয়।",
+    "story_type": "award_appointment",
+    "topic": null
+   },
+   "screening_attempts": 0,
+   "status": "rejected",
+   "updated_at": "2026-10-25T03:13:13+00:00"
   },
   "ev_7cc4b9b40a8e": {
    "analysis": null,
@@ -4768,6 +6592,32 @@
    "screening_attempts": 0,
    "status": "included",
    "updated_at": "2026-10-24T11:39:11+00:00"
+  },
+  "ev_82b4f1f60746": {
+   "analysis": null,
+   "article_ids": [
+    "a_1fc5f82785aed471"
+   ],
+   "attempts": 1,
+   "created_at": "2026-10-25T03:13:13+00:00",
+   "event_id": "ev_82b4f1f60746",
+   "included_in": null,
+   "last_error": "এটি মূলত ফিলিস্তিন-ইসরায়েল সংঘাতের একটি স্থানীয়/ঘটনা-ভিত্তিক সংবাদ। বাংলাদেশের BCS সিলেবাসে এটি সরাসরি অধ্যয়ন-যোগ্য বিষয় নয়; এখানে আইন-শৃঙ্খলা, ব্যক্তিগত ভোগান্তি ও যুদ্ধক্ষেত্রের তাৎক্ষণিক বিবরণ আছে, কিন্তু নির্দিষ্ট কোনো treaty, UN সিদ্ধান্ত, বা নীতিগত/প্রাতিষ্ঠানিক নতুন তথ্য নেই।",
+   "screening": {
+    "categories": [
+     "foreign_policy_geopolitics"
+    ],
+    "decision": "select",
+    "exam_focus": "both",
+    "exam_hook": "হেবরন থেকে প্রায় ২,২০০ ফিলিস্তিনিকে ঘর ছাড়তে বাধ্য করার দাবি এসেছে।",
+    "priority": 7.0,
+    "rationale": "এটি ইসরায়েল-ফিলিস্তিন সংঘাতের গুরুত্বপূর্ণ মানবিক ও নিরাপত্তাজনিত ঘটনা।",
+    "story_type": "international_event",
+    "topic": "int_conflicts"
+   },
+   "screening_attempts": 0,
+   "status": "analysis_rejected",
+   "updated_at": "2026-10-25T03:13:13+00:00"
   },
   "ev_8344d65981a1": {
    "analysis": null,
@@ -5015,17 +6865,19 @@
    "last_error": null,
    "screening": {
     "categories": [
-     "international_affairs",
      "awards_reports_indices"
     ],
-    "decision": "maybe",
-    "exam_focus": "prelims",
-    "priority": 4.0,
-    "rationale": "আফগানিস্তানের র‌্যাঙ্কিং অগ্রগতি ও বাংলাদেশের রেটিং পয়েন্ট বদল ক্রিকেট র‌্যাঙ্কিং প্রসঙ্গে প্রাসঙ্গিক।"
+    "decision": "reject",
+    "exam_focus": "none",
+    "exam_hook": "আফগানিস্তানের ওয়ানডে র‍্যাঙ্কিং উন্নতি।",
+    "priority": 0.0,
+    "rationale": "এটি ক্রীড়া-র‍্যাঙ্কিং, BCS syllabus-এর বাইরে।",
+    "story_type": "report_index",
+    "topic": null
    },
    "screening_attempts": 0,
-   "status": "maybe",
-   "updated_at": "2026-10-24T11:39:11+00:00"
+   "status": "rejected",
+   "updated_at": "2026-10-25T03:13:13+00:00"
   },
   "ev_8d451ae942ab": {
    "analysed_at": "2026-10-24T13:40:25+00:00",
@@ -5299,16 +7151,71 @@
    "last_error": null,
    "screening": {
     "categories": [
-     "economy"
+     "bangladesh_affairs"
     ],
-    "decision": "maybe",
-    "exam_focus": "prelims",
-    "priority": 3.0,
-    "rationale": "একটি বড় নিয়োগ বিজ্ঞপ্তি, চাকরি-সংক্রান্ত হলেও current affairs হিসেবে সীমিত প্রাসঙ্গিকতা আছে।"
+    "decision": "reject",
+    "exam_focus": "none",
+    "exam_hook": "এক এনজিওর নিয়োগ বিজ্ঞপ্তি।",
+    "priority": 0.0,
+    "rationale": "এটি চাকরির বিজ্ঞাপন, নীতি বা রাষ্ট্রীয় সিদ্ধান্ত নয়।",
+    "story_type": "corporate_commercial",
+    "topic": null
    },
    "screening_attempts": 0,
-   "status": "maybe",
-   "updated_at": "2026-10-24T13:40:25+00:00"
+   "status": "rejected",
+   "updated_at": "2026-10-25T03:13:13+00:00"
+  },
+  "ev_9973cc6cd3e9": {
+   "analysis": null,
+   "article_ids": [
+    "a_ef706737c1ab4570"
+   ],
+   "attempts": 1,
+   "created_at": "2026-10-25T03:13:13+00:00",
+   "event_id": "ev_9973cc6cd3e9",
+   "included_in": null,
+   "last_error": "এটি মূলত একটি বিদেশি ব্যবসা/পরিবেশসংক্রান্ত সংবাদ। বাংলাদেশে প্রযোজ্য সুনির্দিষ্ট নীতি, প্রতিষ্ঠান বা পরীক্ষাযোগ্য জাতীয় ঘটনার সঙ্গে সরাসরি মেলে না। তাই BCS প্রস্তুতির জন্য অগ্রাধিকারযোগ্য নয়।",
+   "screening": {
+    "categories": [
+     "economy"
+    ],
+    "decision": "select",
+    "exam_focus": "both",
+    "exam_hook": "ইন্দোনেশিয়া দেশীয় চাহিদাকে অগ্রাধিকার দিয়ে সিঙ্গাপুরে গ্যাস রপ্তানি কমিয়েছে।",
+    "priority": 6.0,
+    "rationale": "জ্বালানি রপ্তানি-আমদানি নীতি ও আঞ্চলিক অর্থনীতির গুরুত্বপূর্ণ ঘটনা।",
+    "story_type": "policy_decision",
+    "topic": "int_global_economy"
+   },
+   "screening_attempts": 0,
+   "status": "analysis_rejected",
+   "updated_at": "2026-10-25T03:13:13+00:00"
+  },
+  "ev_9b85bebe0f33": {
+   "analysis": null,
+   "article_ids": [
+    "a_32893b8946661391"
+   ],
+   "attempts": 0,
+   "created_at": "2026-10-25T03:13:13+00:00",
+   "event_id": "ev_9b85bebe0f33",
+   "included_in": null,
+   "last_error": null,
+   "screening": {
+    "categories": [
+     "constitution_governance"
+    ],
+    "decision": "reject",
+    "exam_focus": "none",
+    "exam_hook": "বাংলাদেশের রাজনীতিতে ‘গুপ্ত-সুপ্ত’ বিতর্ক।",
+    "priority": 0.0,
+    "rationale": "এটি রাজনৈতিক বিশ্লেষণ ও মন্তব্য, নির্দিষ্ট নতুন রাষ্ট্রীয় ঘটনা নয়।",
+    "story_type": "party_politics",
+    "topic": null
+   },
+   "screening_attempts": 0,
+   "status": "rejected",
+   "updated_at": "2026-10-25T03:13:13+00:00"
   },
   "ev_9d47db446624": {
    "analysis": null,
@@ -5353,6 +7260,32 @@
    "screening_attempts": 0,
    "status": "rejected",
    "updated_at": "2026-10-24T13:40:25+00:00"
+  },
+  "ev_9f8873f592df": {
+   "analysis": null,
+   "article_ids": [
+    "a_f012bd73c4894bd5"
+   ],
+   "attempts": 1,
+   "created_at": "2026-10-25T03:13:13+00:00",
+   "event_id": "ev_9f8873f592df",
+   "included_in": null,
+   "last_error": "এটি যুক্তরাষ্ট্র-Canada tariff ও midterm election নিয়ে বিদেশি বাণিজ্য-রাজনীতির খবর। বাংলাদেশ সিলেবাসের সরাসরি কোনো টপিকের সঙ্গে স্পষ্টভাবে মেলে না; BCS-এর জন্য অধ্যয়ন-অগ্রাধিকার কম।",
+   "screening": {
+    "categories": [
+     "economy"
+    ],
+    "decision": "select",
+    "exam_focus": "both",
+    "exam_hook": "যুক্তরাষ্ট্র কানাডার কিছু আমদানি শুল্ক তুলে নিয়েছে।",
+    "priority": 7.0,
+    "rationale": "শুল্কনীতি বদল আন্তর্জাতিক বাণিজ্য ও অর্থনীতিতে সরাসরি প্রভাব ফেলে।",
+    "story_type": "policy_decision",
+    "topic": "int_global_economy"
+   },
+   "screening_attempts": 0,
+   "status": "analysis_rejected",
+   "updated_at": "2026-10-25T03:13:13+00:00"
   },
   "ev_aca4487c166a": {
    "analysis": null,
@@ -5408,16 +7341,19 @@
    "last_error": null,
    "screening": {
     "categories": [
-     "international_affairs"
+     "foreign_policy_geopolitics"
     ],
-    "decision": "maybe",
-    "exam_focus": "prelims",
-    "priority": 3.0,
-    "rationale": "কলকাতা পুলিশের মন্তব্যটি পার্শ্ববর্তী দেশের প্রশাসনিক অবস্থান ও ধর্মীয় সমাবেশ ব্যবস্থাপনার বিষয়ে প্রাসঙ্গিক।"
+    "decision": "reject",
+    "exam_focus": "none",
+    "exam_hook": "কলকাতা পুলিশের মন্তব্য প্রতিমা বিসর্জন প্রসঙ্গে।",
+    "priority": 0.0,
+    "rationale": "এটি প্রতিবেশী দেশের স্থানীয় মন্তব্য, BCS-এর জন্য কম প্রাসঙ্গিক।",
+    "story_type": "foreign_domestic_minor",
+    "topic": null
    },
    "screening_attempts": 0,
-   "status": "maybe",
-   "updated_at": "2026-10-24T11:39:11+00:00"
+   "status": "rejected",
+   "updated_at": "2026-10-25T03:13:13+00:00"
   },
   "ev_b0462f1b2188": {
    "analysis": null,
@@ -5460,6 +7396,32 @@
    "screening_attempts": 0,
    "status": "rejected",
    "updated_at": "2026-10-24T11:39:11+00:00"
+  },
+  "ev_b59ebb00ae3a": {
+   "analysis": null,
+   "article_ids": [
+    "a_2bfb29d963c8af65"
+   ],
+   "attempts": 0,
+   "created_at": "2026-10-25T03:13:13+00:00",
+   "event_id": "ev_b59ebb00ae3a",
+   "included_in": null,
+   "last_error": null,
+   "screening": {
+    "categories": [
+     "foreign_policy_geopolitics"
+    ],
+    "decision": "reject",
+    "exam_focus": "none",
+    "exam_hook": "ফ্রান্সে বর্ণবাদী হামলার অভিযোগ।",
+    "priority": 1.0,
+    "rationale": "এটি একটি দেশের অভ্যন্তরীণ হামলার ঘটনা, BCS-এর জন্য কম প্রাসঙ্গিক।",
+    "story_type": "foreign_domestic_minor",
+    "topic": null
+   },
+   "screening_attempts": 0,
+   "status": "rejected",
+   "updated_at": "2026-10-25T03:13:13+00:00"
   },
   "ev_b8ae5a466594": {
    "analysis": null,
@@ -5639,6 +7601,32 @@
    "status": "included",
    "updated_at": "2026-10-24T11:39:11+00:00"
   },
+  "ev_c2ac7b6e80dc": {
+   "analysis": null,
+   "article_ids": [
+    "a_916a3157b71603e0"
+   ],
+   "attempts": 0,
+   "created_at": "2026-10-25T03:13:13+00:00",
+   "event_id": "ev_c2ac7b6e80dc",
+   "included_in": null,
+   "last_error": null,
+   "screening": {
+    "categories": [
+     "foreign_policy_geopolitics"
+    ],
+    "decision": "reject",
+    "exam_focus": "none",
+    "exam_hook": "সুদানে নারীদের যুদ্ধকালীন অভিজ্ঞতা নিয়ে ইউএন নিউজ ফিচার।",
+    "priority": 0.0,
+    "rationale": "এটি মানবিক ফিচার, নতুন নীতি বা সিদ্ধান্ত নয়।",
+    "story_type": "feature",
+    "topic": null
+   },
+   "screening_attempts": 0,
+   "status": "rejected",
+   "updated_at": "2026-10-25T03:13:13+00:00"
+  },
   "ev_c34d6ca266c9": {
    "analysis": null,
    "article_ids": [
@@ -5682,6 +7670,32 @@
    "screening_attempts": 0,
    "status": "rejected",
    "updated_at": "2026-10-24T11:39:11+00:00"
+  },
+  "ev_cb4ae8167bfc": {
+   "analysis": null,
+   "article_ids": [
+    "a_e280b19d2e495874"
+   ],
+   "attempts": 0,
+   "created_at": "2026-10-25T03:13:13+00:00",
+   "event_id": "ev_cb4ae8167bfc",
+   "included_in": null,
+   "last_error": null,
+   "screening": {
+    "categories": [
+     "economy"
+    ],
+    "decision": "reject",
+    "exam_focus": "none",
+    "exam_hook": "ব্র্যাক ব্যাংকের ঋণ স্থানান্তর সুবিধা।",
+    "priority": 1.0,
+    "rationale": "এটি একটি একক ব্যাংকের পণ্য/অফার, নীতি বা খাতব্যাপী সিদ্ধান্ত নয়।",
+    "story_type": "corporate_commercial",
+    "topic": "bd_banking_monetary"
+   },
+   "screening_attempts": 0,
+   "status": "rejected",
+   "updated_at": "2026-10-25T03:13:13+00:00"
   },
   "ev_cdb06b138a6a": {
    "analysis": null,
@@ -5727,6 +7741,32 @@
    "status": "rejected",
    "updated_at": "2026-10-24T11:39:11+00:00"
   },
+  "ev_d5f20da941e3": {
+   "analysis": null,
+   "article_ids": [
+    "a_9bca1e557dc3db95"
+   ],
+   "attempts": 0,
+   "created_at": "2026-10-25T03:13:13+00:00",
+   "event_id": "ev_d5f20da941e3",
+   "included_in": null,
+   "last_error": null,
+   "screening": {
+    "categories": [
+     "bangladesh_affairs"
+    ],
+    "decision": "reject",
+    "exam_focus": "none",
+    "exam_hook": "মাদ্রাসা শিক্ষককে চড় মারার ঘটনায় মামলা ও গ্রেপ্তার।",
+    "priority": 0.0,
+    "rationale": "এটি ব্যক্তিগত ফৌজদারি/আইনশৃঙ্খলা মামলা, নীতিগত পরীক্ষার বিষয় নয়।",
+    "story_type": "crime_accident",
+    "topic": null
+   },
+   "screening_attempts": 0,
+   "status": "rejected",
+   "updated_at": "2026-10-25T03:13:13+00:00"
+  },
   "ev_d619cf521176": {
    "analysis": null,
    "article_ids": [
@@ -5749,6 +7789,32 @@
    "screening_attempts": 0,
    "status": "rejected",
    "updated_at": "2026-10-24T13:40:25+00:00"
+  },
+  "ev_d6f7dbced6f0": {
+   "analysis": null,
+   "article_ids": [
+    "a_5ad50d53e37e4323"
+   ],
+   "attempts": 0,
+   "created_at": "2026-10-25T03:13:13+00:00",
+   "event_id": "ev_d6f7dbced6f0",
+   "included_in": null,
+   "last_error": null,
+   "screening": {
+    "categories": [
+     "bangladesh_affairs"
+    ],
+    "decision": "reject",
+    "exam_focus": "none",
+    "exam_hook": "সৈয়দ আবুল মকসুদের কাজ নিয়ে স্মরণসভা।",
+    "priority": 0.0,
+    "rationale": "এটি স্মরণ/আলোচনাধর্মী ফিচার, নতুন রাষ্ট্রীয় সিদ্ধান্ত নয়।",
+    "story_type": "feature",
+    "topic": null
+   },
+   "screening_attempts": 0,
+   "status": "rejected",
+   "updated_at": "2026-10-25T03:13:13+00:00"
   },
   "ev_d7794a748ad7": {
    "analysis": null,
@@ -5839,6 +7905,32 @@
    "screening_attempts": 0,
    "status": "rejected",
    "updated_at": "2026-10-25T02:30:10+00:00"
+  },
+  "ev_d9e6fbc10244": {
+   "analysis": null,
+   "article_ids": [
+    "a_51e83dd9e20e561f"
+   ],
+   "attempts": 0,
+   "created_at": "2026-10-25T03:13:13+00:00",
+   "event_id": "ev_d9e6fbc10244",
+   "included_in": null,
+   "last_error": null,
+   "screening": {
+    "categories": [
+     "science_technology"
+    ],
+    "decision": "reject",
+    "exam_focus": "none",
+    "exam_hook": "হিমায়িত ডিম্বাশয় টিস্যু থেকে সুস্থ শিশুর জন্ম।",
+    "priority": 2.0,
+    "rationale": "এটি চিকিৎসাবিজ্ঞানের কেস-ধর্মী ফিচার, বড় নীতিগত বা জনস্বাস্থ্য সিদ্ধান্ত নয়।",
+    "story_type": "science_technology",
+    "topic": "sci_health"
+   },
+   "screening_attempts": 0,
+   "status": "rejected",
+   "updated_at": "2026-10-25T03:13:13+00:00"
   },
   "ev_da93a8ebd366": {
    "analysed_at": "2026-10-25T02:30:10+00:00",
@@ -5977,17 +8069,45 @@
    "last_error": null,
    "screening": {
     "categories": [
-     "bangladesh_affairs",
      "constitution_governance"
     ],
-    "decision": "maybe",
-    "exam_focus": "prelims",
-    "priority": 5.0,
-    "rationale": "গণ-অভ্যুত্থান-পরবর্তী রাজনৈতিক হুমকি ও ঐক্য নিয়ে বক্তব্য দেশের রাজনৈতিক বাস্তবতার সঙ্গে সম্পর্কিত।"
+    "decision": "reject",
+    "exam_focus": "none",
+    "exam_hook": "রাজনীতিতে ‘গুপ্ত-সুপ্ত’ বিতর্ক।",
+    "priority": 0.0,
+    "rationale": "এটি রাজনৈতিক মন্তব্য ও বিতর্ক, নির্দিষ্ট নীতি/সিদ্ধান্ত নয়।",
+    "story_type": "party_politics",
+    "topic": null
    },
    "screening_attempts": 0,
-   "status": "maybe",
-   "updated_at": "2026-10-24T11:39:11+00:00"
+   "status": "rejected",
+   "updated_at": "2026-10-25T03:13:13+00:00"
+  },
+  "ev_e18eb225d7ce": {
+   "analysis": null,
+   "article_ids": [
+    "a_5567eb59e3fb9f01"
+   ],
+   "attempts": 0,
+   "created_at": "2026-10-25T03:13:13+00:00",
+   "event_id": "ev_e18eb225d7ce",
+   "included_in": null,
+   "last_error": null,
+   "screening": {
+    "categories": [
+     "bangladesh_affairs"
+    ],
+    "decision": "reject",
+    "exam_focus": "none",
+    "exam_hook": "আখের নতুন জাত ‘ব্ল্যাক রুবি’ নিয়ে ব্যাখ্যা।",
+    "priority": 1.0,
+    "rationale": "এটি কৃষি-ফিচার, নতুন সরকারি নীতি বা বড় তথ্য নয়।",
+    "story_type": "feature",
+    "topic": "bd_agriculture_food"
+   },
+   "screening_attempts": 0,
+   "status": "rejected",
+   "updated_at": "2026-10-25T03:13:13+00:00"
   },
   "ev_e46497f3dee6": {
    "analysis": null,
@@ -6009,6 +8129,107 @@
    "screening_attempts": 0,
    "status": "rejected",
    "updated_at": "2026-10-25T02:30:10+00:00"
+  },
+  "ev_e48340793b03": {
+   "analysed_at": "2026-10-25T03:13:13+00:00",
+   "analysis": {
+    "analysed_article_id": "a_b1450a9b67510506",
+    "attributed_claims": [
+     {
+      "attributed_to": "State Minister for Foreign Affairs Shama Obaed Islam",
+      "claim": "বাংলাদেশের কার্বন নিঃসরণ খুবই কম, কিন্তু দেশটি ভুক্তভোগী।",
+      "evidence": "“Bangladesh’s carbon emissions are extremely limited, almost negligible, yet the country remains a victim.”"
+     },
+     {
+      "attributed_to": "Touhidul Islam",
+      "claim": "বর্ধিত 1.5°C উষ্ণায়নসীমা অতিক্রম করলে অপরিবর্তনীয় পরিণতি হবে।",
+      "evidence": "warned that exceeding the 1.5°C warming threshold would have irreversible consequences."
+     }
+    ],
+    "background_context": "COP হলো UN climate change conference, যেখানে দেশগুলো জলবায়ু নীতি, অর্থায়ন ও প্রতিশ্রুতি নিয়ে আলোচনা করে। Loss and Damage Fund মূলত জলবায়ুজনিত ক্ষতি ও ক্ষতির প্রভাব মোকাবিলার জন্য ব্যবহৃত হয়।",
+    "categories": [
+     "environment_climate"
+    ],
+    "causes_effects": "কার্বন নিঃসরণে কম অবদান থাকা সত্ত্বেও বাংলাদেশ জলবায়ু ঝুঁকির বড় ভুক্তভোগী—এই বাস্তবতা অনুদানভিত্তিক অর্থায়নের দাবি জোরালো করছে। যদি অর্থায়ন, প্রযুক্তি হস্তান্তর এবং সক্ষমতা বৃদ্ধি না মেলে, তবে জলবায়ু অভিযোজন, নগর ব্যবস্থাপনা এবং ঝুঁকিপূর্ণ জনগোষ্ঠীর সুরক্ষা কঠিন হবে।",
+    "criteria": {
+     "factual_density": 7.0,
+     "novelty": 6.0,
+     "significance": 7.0,
+     "syllabus_relevance": 9.0,
+     "written_potential": 8.0
+    },
+    "exam_focus": "both",
+    "headline_bn": "জলবায়ু অর্থায়নে অনুদানভিত্তিক সহায়তার দাবি",
+    "institutions": [
+     "ActionAid",
+     "CIRDAP",
+     "31st UN Climate Change Conference (COP31)",
+     "Nature Conservation Management",
+     "Center for Atmospheric Pollution Studies",
+     "WaterAid Bangladesh",
+     "Centre for Climate Change and Environmental Research",
+     "Paris Agreement"
+    ],
+    "key_facts": [
+     {
+      "evidence": "Bangladesh should prioritise climate justice, secure grant-based financing and strengthen youth-led climate initiatives at the upcoming COP31 climate summit, said speakers at a dialogue yesterday.",
+      "fact": "বক্তারা COP31-এ বাংলাদেশকে জলবায়ু ন্যায়বিচার, অনুদানভিত্তিক অর্থায়ন এবং যুবনেতৃত্বাধীন উদ্যোগকে অগ্রাধিকার দিতে বলেছেন।",
+      "prelims": true
+     },
+     {
+      "evidence": "Bangladesh contributes less than 0.5 percent of global carbon emissions but remains among the countries most vulnerable to climate change.",
+      "fact": "বাংলাদেশ বৈশ্বিক কার্বন নিঃসরণের 0.5 percent-এরও কম অবদান রাখে, তবে জলবায়ু ঝুঁকিতে অত্যন্ত vulnerable।",
+      "prelims": true
+     },
+     {
+      "evidence": "Bangladesh aims to generate 20 percent of its electricity from renewable sources by 2030 and 30 percent by 2040.",
+      "fact": "বাংলাদেশ 2030 সালের মধ্যে বিদ্যুতের 20 percent নবায়নযোগ্য উৎস থেকে এবং 2040 সালের মধ্যে 30 percent উৎপাদনের লক্ষ্য নিয়েছে।",
+      "prelims": true
+     },
+     {
+      "evidence": "Bangladesh had demonstrated climate leadership by pledging a 20 percent emissions reduction by 2035 and allocating $25 billion from domestic sources.",
+      "fact": "বাংলাদেশ 2035 সালের মধ্যে 20 percent emissions reduction-এর অঙ্গীকার করেছে এবং দেশীয় উৎস থেকে $25 billion বরাদ্দ করেছে।",
+      "prelims": true
+     },
+     {
+      "evidence": "would require $90 billion in international support",
+      "fact": "জলবায়ু লক্ষ্য পূরণে $90 billion আন্তর্জাতিক সহায়তার প্রয়োজন হবে বলে বলা হয়েছে।",
+      "prelims": true
+     }
+    ],
+    "likely_question": "বাংলাদেশ কেন জলবায়ু অর্থায়নে ঋণের বদলে অনুদান চাইছে? COP31-এ উত্থাপিত প্রধান দাবিগুলো ব্যাখ্যা কর।",
+    "mode": "full",
+    "score": 76.5,
+    "syllabus_label": "জলবায়ু পরিবর্তন ও জলবায়ু কূটনীতি",
+    "syllabus_topic": "env_climate",
+    "unsupported_dropped": 2,
+    "what_happened": "ঢাকায় এক আলোচনায় বক্তারা COP31-এ বাংলাদেশকে জলবায়ু ন্যায়বিচার, অনুদানভিত্তিক অর্থায়ন এবং যুবনেতৃত্বাধীন জলবায়ু উদ্যোগকে অগ্রাধিকার দেওয়ার আহ্বান জানান। তারা বলেন, বাংলাদেশ বৈশ্বিক কার্বন নিঃসরণে খুব কম অবদান রাখলেও জলবায়ু পরিবর্তনের ঝুঁকিতে সবচেয়ে vulnerable দেশগুলোর একটি।",
+    "why_it_matters": "এটি সরাসরি জলবায়ু কূটনীতি, আন্তর্জাতিক জলবায়ু অর্থায়ন এবং বাংলাদেশের অবস্থান-সংক্রান্ত গুরুত্বপূর্ণ বিষয়। BCS-এ COP, Loss and Damage Fund, NDC, renewable target—এসব থেকে প্রিলিমস ও লিখিত উভয় ধরনের প্রশ্ন হতে পারে।",
+    "written_angle": "এই খবরটি জলবায়ু ন্যায়বিচার, Loss and Damage Fund, এবং আন্তর্জাতিক জলবায়ু অর্থায়নের ন্যায্য বণ্টন নিয়ে লিখিত প্রশ্নের জন্য উপযোগী। বাংলাদেশ কীভাবে ক্ষতিগ্রস্ত দেশ হিসেবে অনুদানভিত্তিক অর্থায়ন ও স্থানীয় পর্যায়ে সরাসরি প্রবেশাধিকার দাবি করছে, তা বিশ্লেষণ করা যেতে পারে।"
+   },
+   "article_ids": [
+    "a_b1450a9b67510506"
+   ],
+   "attempts": 1,
+   "created_at": "2026-10-25T03:13:13+00:00",
+   "event_id": "ev_e48340793b03",
+   "included_in": "2026-10-25-m1",
+   "last_error": null,
+   "screening": {
+    "categories": [
+     "environment_climate"
+    ],
+    "decision": "select",
+    "exam_focus": "both",
+    "exam_hook": "কপ31-এ জলবায়ু অর্থায়ন অনুদানভিত্তিক হওয়া উচিত বলে বাংলাদেশি বক্তারা বলেছেন।",
+    "priority": 7.0,
+    "rationale": "জলবায়ু অর্থায়ন ও COP31-এর প্রসঙ্গ পরীক্ষায় আসতে পারে এবং নীতিগত গুরুত্ব আছে।",
+    "story_type": "policy_decision",
+    "topic": "env_climate"
+   },
+   "screening_attempts": 0,
+   "status": "included",
+   "updated_at": "2026-10-25T03:13:13+00:00"
   },
   "ev_e676f31697e5": {
    "analysed_at": "2026-10-24T11:39:11+00:00",
@@ -6139,6 +8360,32 @@
    "screening_attempts": 0,
    "status": "rejected",
    "updated_at": "2026-10-24T13:40:25+00:00"
+  },
+  "ev_eb0135d00881": {
+   "analysis": null,
+   "article_ids": [
+    "a_f5e11d786e1745c5"
+   ],
+   "attempts": 0,
+   "created_at": "2026-10-25T03:13:13+00:00",
+   "event_id": "ev_eb0135d00881",
+   "included_in": null,
+   "last_error": null,
+   "screening": {
+    "categories": [
+     "economy"
+    ],
+    "decision": "reject",
+    "exam_focus": "none",
+    "exam_hook": "এক ব্যাংকের CSR উদ্যোগে কৃষি উপকরণ বিতরণ।",
+    "priority": 1.0,
+    "rationale": "এটি একটি প্রতিষ্ঠানের CSR কার্যক্রম; খাতব্যাপী নীতি বা রাষ্ট্রীয় সিদ্ধান্ত নয়।",
+    "story_type": "corporate_commercial",
+    "topic": "bd_agriculture_food"
+   },
+   "screening_attempts": 0,
+   "status": "rejected",
+   "updated_at": "2026-10-25T03:13:13+00:00"
   },
   "ev_ec2d58f570a0": {
    "analysis": null,
@@ -6367,17 +8614,19 @@
    "last_error": null,
    "screening": {
     "categories": [
-     "bangladesh_affairs",
-     "constitution_governance"
+     "bangladesh_affairs"
     ],
-    "decision": "maybe",
-    "exam_focus": "prelims",
-    "priority": 3.0,
-    "rationale": "সমঝোতা না করলে লাশ ফেলার হুমকি ধরনের সংবাদে সহিংসতা ও আইনশৃঙ্খলার ইস্যু থাকতে পারে, তবে তথ্য কম।"
+    "decision": "reject",
+    "exam_focus": "none",
+    "exam_hook": "লাশ ফেলার হুমকি।",
+    "priority": 0.0,
+    "rationale": "এটি হুমকি-সংক্রান্ত অপরাধমূলক খবর, পরীক্ষার উপযোগী নয়।",
+    "story_type": "crime_accident",
+    "topic": null
    },
    "screening_attempts": 0,
-   "status": "maybe",
-   "updated_at": "2026-10-24T11:39:11+00:00"
+   "status": "rejected",
+   "updated_at": "2026-10-25T03:13:13+00:00"
   },
   "ev_f9c2956982ff": {
    "analysed_at": "2026-10-24T11:39:11+00:00",
@@ -6656,7 +8905,7 @@
    "updated_at": "2026-10-24T13:40:25+00:00"
   }
  },
- "last_successful_edition": "2026-10-25",
+ "last_successful_edition": "2026-10-25-m1",
  "notes": [],
  "runs": [
   {
@@ -6813,15 +9062,81 @@
    "run_id": "c5428d4b77",
    "started_at": "2026-10-25T02:30:10+00:00",
    "stories": 8
+  },
+  {
+   "dry_run": false,
+   "edition_date": "2026-10-25",
+   "errors": [],
+   "estimated_cost_usd": 0.1321,
+   "finished_at": "2026-10-25T03:15:33+00:00",
+   "llm_calls": 14,
+   "llm_usage": {
+    "gemini": {
+     "calls_incl_retries": 0,
+     "input_tokens": 0,
+     "output_tokens": 0,
+     "requests": 0
+    },
+    "openai": {
+     "calls_incl_retries": 14,
+     "input_tokens": 56917,
+     "output_tokens": 19859,
+     "requests": 14
+    }
+   },
+   "manual": true,
+   "mcqs": 3,
+   "outcome": "delivered",
+   "partial": false,
+   "prefiltered": 10,
+   "providers_disabled": {},
+   "run_id": "1feffd7ba0",
+   "started_at": "2026-10-25T03:13:13+00:00",
+   "stories": 4
   }
  ],
  "schema_version": 2,
  "source_health": {
+  "bbc_bangla": {
+   "consecutive_failures": 0,
+   "last_attempt": "2026-10-25T03:13:13+00:00",
+   "last_item_count": 14,
+   "last_success": "2026-10-25T03:13:13+00:00",
+   "last_warnings": []
+  },
   "dailystar": {
    "consecutive_failures": 0,
    "last_attempt": "2026-10-25T02:30:10+00:00",
    "last_item_count": 10,
    "last_success": "2026-10-25T02:30:10+00:00",
+   "last_warnings": []
+  },
+  "dailystar_bangladesh": {
+   "consecutive_failures": 0,
+   "last_attempt": "2026-10-25T03:13:13+00:00",
+   "last_item_count": 10,
+   "last_success": "2026-10-25T03:13:13+00:00",
+   "last_warnings": []
+  },
+  "dailystar_business": {
+   "consecutive_failures": 0,
+   "last_attempt": "2026-10-25T03:13:13+00:00",
+   "last_item_count": 10,
+   "last_success": "2026-10-25T03:13:13+00:00",
+   "last_warnings": []
+  },
+  "dailystar_environment": {
+   "consecutive_failures": 0,
+   "last_attempt": "2026-10-25T03:13:13+00:00",
+   "last_item_count": 10,
+   "last_success": "2026-10-25T03:13:13+00:00",
+   "last_warnings": []
+  },
+  "dailystar_world": {
+   "consecutive_failures": 0,
+   "last_attempt": "2026-10-25T03:13:13+00:00",
+   "last_item_count": 10,
+   "last_success": "2026-10-25T03:13:13+00:00",
    "last_warnings": []
   },
   "dhakatribune": {
@@ -6838,9 +9153,16 @@
   },
   "prothomalo": {
    "consecutive_failures": 0,
-   "last_attempt": "2026-10-25T02:30:10+00:00",
-   "last_item_count": 25,
-   "last_success": "2026-10-25T02:30:10+00:00",
+   "last_attempt": "2026-10-25T03:13:13+00:00",
+   "last_item_count": 37,
+   "last_success": "2026-10-25T03:13:13+00:00",
+   "last_warnings": []
+  },
+  "un_news_all": {
+   "consecutive_failures": 0,
+   "last_attempt": "2026-10-25T03:13:13+00:00",
+   "last_item_count": 30,
+   "last_success": "2026-10-25T03:13:13+00:00",
    "last_warnings": []
   }
  },
@@ -6851,6 +9173,15 @@
    "left_at": null,
    "left_reason": null,
    "name": "saman Olid",
+   "status": "active",
+   "type": "private"
+  },
+  "1433480564": {
+   "chat_id": "1433480564",
+   "joined_at": "2026-10-25T03:13:13+00:00",
+   "left_at": null,
+   "left_reason": null,
+   "name": "🇧🇩sifat Bin Siddique 🇧🇩",
    "status": "active",
    "type": "private"
   },
@@ -6883,7 +9214,7 @@
   }
  },
  "telegram": {
-  "last_update_id": 894171904
+  "last_update_id": 894171905
  },
- "updated_at": "2026-10-25T02:31:46+00:00"
+ "updated_at": "2026-10-25T03:15:33+00:00"
 }
