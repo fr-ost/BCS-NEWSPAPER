@@ -16,6 +16,22 @@
    "title": "দান–সদকা কোথায় করবেন, কোথায় করবেন না",
    "url": "https://www.prothomalo.com/religion/islam/fntonqvf9d"
   },
+  "a_02b570aedef4aa3b": {
+   "canonical_url": "https://prothomalo.com/sports/ajh9d32wuo",
+   "content_hash": "2c7bdd44cfb8abfc",
+   "date_status": "ok",
+   "event_id": "ev_9d47db446624",
+   "excerpt": "",
+   "extraction": null,
+   "id": "a_02b570aedef4aa3b",
+   "language": "bn",
+   "published_at": "2026-10-25T01:00:00+00:00",
+   "retrieved_at": "2026-10-25T02:30:10+00:00",
+   "source_id": "prothomalo",
+   "source_name": "Prothom Alo (প্রথম আলো)",
+   "title": "আজ টিভিতে যা দেখবেন (২৫ অক্টোবর ২০২৬)",
+   "url": "https://www.prothomalo.com/sports/ajh9d32wuo"
+  },
   "a_02c8c45354e9fb8f": {
    "canonical_url": "https://prothomalo.com/bangladesh/district/4d4ih7sxz4",
    "content_hash": "93a5b5e1c93fabf8",
@@ -48,13 +64,33 @@
    "title": "পিকআপ নিয়ে এসে গরু চুরি, বাধা দেওয়ায় খামারমালিককে ছুরিকাঘাত",
    "url": "https://www.prothomalo.com/bangladesh/district/qkklq7lfru"
   },
+  "a_03d8e619f3e8c21c": {
+   "canonical_url": "https://prothomalo.com/religion/k0onzvtr4q",
+   "content_hash": "cb2c630514625180",
+   "date_status": "ok",
+   "event_id": "ev_4ec8c5cc69b3",
+   "excerpt": "শাস্ত্রমতে, দেবী লক্ষ্মী ধনসম্পদ তথা ঐশ্বর্যের প্রতীক। উন্নতি, আলো, জ্ঞান, সৌভাগ্য, উর্বরতা, দানশীলতা, সাহস ও সৌন্দর্যের দেবী হিসেবে পরিচিত লক্ষ্মী।",
+   "extraction": null,
+   "id": "a_03d8e619f3e8c21c",
+   "language": "bn",
+   "published_at": "2026-10-25T00:00:00+00:00",
+   "retrieved_at": "2026-10-25T02:30:10+00:00",
+   "source_id": "prothomalo",
+   "source_name": "Prothom Alo (প্রথম আলো)",
+   "title": "আজ লক্ষ্মীপূজা",
+   "url": "https://www.prothomalo.com/religion/k0onzvtr4q"
+  },
   "a_05f8423da3faafe0": {
    "canonical_url": "https://prothomalo.com/business/economics/9rtzd38irj",
-   "content_hash": "44b99b8cc7d7617f",
+   "content_hash": "3692bccada5e30d6",
    "date_status": "ok",
    "event_id": "ev_44ccf137af98",
    "excerpt": "",
-   "extraction": null,
+   "extraction": {
+    "chars": 674,
+    "reason": "",
+    "status": "ok"
+   },
    "id": "a_05f8423da3faafe0",
    "language": "bn",
    "published_at": "2026-10-24T12:04:26+00:00",
@@ -63,6 +99,22 @@
    "source_name": "Prothom Alo (প্রথম আলো)",
    "title": "দোকানপাট খোলা রাখার সময়সীমা আগের নিয়মে ফিরল, বন্ধ রাত আটটায়",
    "url": "https://www.prothomalo.com/business/economics/9rtzd38irj"
+  },
+  "a_0d466c394a6de301": {
+   "canonical_url": "https://prothomalo.com/world/europe/uqi1yu06hs",
+   "content_hash": "e5210015f12c42f8",
+   "date_status": "ok",
+   "event_id": "ev_ba8e5146b682",
+   "excerpt": "২২ বছর বয়সী এক শিক্ষার্থী রয়টার্সকে বলেন, মানুষ ভাঙচুর হওয়া দোকানের জন্য কান্নাকাটি করছে। অথচ সারা বছর ধরে যারা আরও গরিব হচ্ছে, তাদের জন্য কারও মায়া নেই।",
+   "extraction": null,
+   "id": "a_0d466c394a6de301",
+   "language": "bn",
+   "published_at": "2026-10-24T23:09:09+00:00",
+   "retrieved_at": "2026-10-25T02:30:10+00:00",
+   "source_id": "prothomalo",
+   "source_name": "Prothom Alo (প্রথম আলো)",
+   "title": "‘এভাবে হাল ছেড়ে দেওয়া যায় না, রাজপথে ফিরতেই হতো’",
+   "url": "https://www.prothomalo.com/world/europe/uqi1yu06hs"
   },
   "a_0de31838d62b14a6": {
    "canonical_url": "https://prothomalo.com/chakri/employment/149jj3z6a6",
@@ -152,13 +204,33 @@
    "title": "হামলার হুমকি দিচ্ছে যুক্তরাষ্ট্র-ইসরায়েল, আক্রমণাত্মক সামরিক নীতি নিচ্ছে ইরান, নতুন করে যুদ্ধ কি আসন্ন",
    "url": "https://www.prothomalo.com/world/middle-east/1o3rq9pezv"
   },
+  "a_1b1b0f6691979e86": {
+   "canonical_url": "https://nagorik.prothomalo.com/durporobash/xwda1h34rx",
+   "content_hash": "4bb92348604eef82",
+   "date_status": "ok",
+   "event_id": "ev_07cb55e05a35",
+   "excerpt": "আমেরিকার প্রেসিডেন্ট ট্রাম্পের কানসাসে সমাবেশে শতাধিক বিক্ষোভকারী দুর্নীতি ও প্রশাসনিক দুর্নীতির অভিযোগে প্রতিবাদ করেন। ট্রাম্প ইমিগ্র্যান্টদের দায়ী করেন এবং সমর্থকদের ভোট দেওয়ার আহ্বান জানান",
+   "extraction": null,
+   "id": "a_1b1b0f6691979e86",
+   "language": "bn",
+   "published_at": "2026-10-25T01:00:00+00:00",
+   "retrieved_at": "2026-10-25T02:30:10+00:00",
+   "source_id": "prothomalo",
+   "source_name": "Prothom Alo (প্রথম আলো)",
+   "title": "ট্রাম্পের সমাবেশে একদিন",
+   "url": "https://nagorik.prothomalo.com/durporobash/xwda1h34rx"
+  },
   "a_1cdef871ea21015c": {
    "canonical_url": "https://prothomalo.com/world/india/0ki4cxwm2d",
-   "content_hash": "bbf6e84c112df67b",
+   "content_hash": "43488c3f33fb306d",
    "date_status": "ok",
    "event_id": "ev_846c02267ee0",
    "excerpt": "পাঞ্জাবের ভোটার তালিকা সংশোধন ও সিইসি জ্ঞানেশ কুমারের কাজকর্ম নিয়ে স্বাধীন তদন্তের দাবি জানিয়ে এক প্রস্তাব শুক্রবার পাঞ্জাব বিধানসভায় গৃহীত হয়েছে।",
-   "extraction": null,
+   "extraction": {
+    "chars": 3943,
+    "reason": "",
+    "status": "ok"
+   },
    "id": "a_1cdef871ea21015c",
    "language": "bn",
    "published_at": "2026-10-24T08:54:07+00:00",
@@ -202,11 +274,15 @@
   },
   "a_27bf4f217f4fb3fc": {
    "canonical_url": "https://prothomalo.com/bangladesh/district/tmch7oco64",
-   "content_hash": "b53835219d6ea1c0",
+   "content_hash": "bae3d09313101ce3",
    "date_status": "ok",
    "event_id": "ev_2fa94c4bcf8f",
    "excerpt": "ভিডিওতে দেখা যায়, সামনে একটি ব্যানার হাতে নিয়ে মিছিল করছেন নিষিদ্ধ ছাত্রলীগের নেতা-কর্মীরা। হাতে রঙিন লগি-বইঠা নিয়ে মিছিলে অংশগ্রহণ করেন বেশ কয়েকজন।",
-   "extraction": null,
+   "extraction": {
+    "chars": 734,
+    "reason": "",
+    "status": "ok"
+   },
    "id": "a_27bf4f217f4fb3fc",
    "language": "bn",
    "published_at": "2026-10-24T10:50:15+00:00",
@@ -231,6 +307,22 @@
    "source_name": "Prothom Alo (প্রথম আলো)",
    "title": "চোট নিয়ে ভয়, সেই চোটে পড়েই সিরিজ শেষ নর্কিয়ার",
    "url": "https://www.prothomalo.com/sports/cricket/iiqccgpnmz"
+  },
+  "a_30905f6b2900c01c": {
+   "canonical_url": "https://prothomalo.com/education/higher-education/5dp552hmbv",
+   "content_hash": "04c4219157ae5b1d",
+   "date_status": "ok",
+   "event_id": "ev_92581c88faff",
+   "excerpt": "উন্নত ক্যারিয়ারে বিদেশি ভাষা জানা অপরিহার্য একটি বিষয়। বিশ্বায়নের গতিশীলতায় বহুজাতি সংস্কৃতিগুলো পরস্পরের সঙ্গে মিশে একাকার হয়ে যাচ্ছে।",
+   "extraction": null,
+   "id": "a_30905f6b2900c01c",
+   "language": "bn",
+   "published_at": "2026-10-25T02:05:59+00:00",
+   "retrieved_at": "2026-10-25T02:30:10+00:00",
+   "source_id": "prothomalo",
+   "source_name": "Prothom Alo (প্রথম আলো)",
+   "title": "উন্নত ক্যারিয়ার গঠনে যে ১০ বিদেশি ভাষা শিক্ষা এগিয়ে রাখবে আপনাকে",
+   "url": "https://www.prothomalo.com/education/higher-education/5dp552hmbv"
   },
   "a_34c286b11a4de17e": {
    "canonical_url": "https://nagorik.prothomalo.com/durporobash/kbe6x6cgs7",
@@ -267,6 +359,22 @@
    "source_name": "Prothom Alo (প্রথম আলো)",
    "title": "মাদ্রাসায় শিশু নিপীড়ন: আলেমসমাজ কি চুপই থাকবে",
    "url": "https://www.prothomalo.com/opinion/column/58tanbqyd9"
+  },
+  "a_3e0a7209ef7da655": {
+   "canonical_url": "https://prothomalo.com/sports/football/6flw2cmyw1",
+   "content_hash": "10fcbbec00aea916",
+   "date_status": "ok",
+   "event_id": "ev_7cd5e6a1f12a",
+   "excerpt": "লা লিগায় আগামীকাল রাতে বার্সেলোনার মুখোমুখি হবে রিয়াল মাদ্রিদ। এই ম্যাচের ফল ঠিক করে দিতে পারে পাঁচটি প্রশ্নের উত্তর।",
+   "extraction": null,
+   "id": "a_3e0a7209ef7da655",
+   "language": "bn",
+   "published_at": "2026-10-25T01:30:00+00:00",
+   "retrieved_at": "2026-10-25T02:30:10+00:00",
+   "source_id": "prothomalo",
+   "source_name": "Prothom Alo (প্রথম আলো)",
+   "title": "এল ক্লাসিকোর ফল ঠিক করে দিতে পারে যে পাঁচ প্রশ্নের উত্তর",
+   "url": "https://www.prothomalo.com/sports/football/6flw2cmyw1"
   },
   "a_41268a4aba6c69af": {
    "canonical_url": "https://prothomalo.com/world/europe/xo4icla3q2",
@@ -347,6 +455,38 @@
    "source_name": "Prothom Alo (প্রথম আলো)",
    "title": "প্রধানমন্ত্রীর সফরে বিনিয়োগ ও অর্থনৈতিক সহযোগিতায় নতুন গতির আশা টোকিওর",
    "url": "https://www.prothomalo.com/bangladesh/ob9uxo0iek"
+  },
+  "a_4947271c24390bac": {
+   "canonical_url": "https://prothomalo.com/fun/v95rje7240",
+   "content_hash": "11c29ed2345c7ba6",
+   "date_status": "ok",
+   "event_id": "ev_fdd840944ca5",
+   "excerpt": "",
+   "extraction": null,
+   "id": "a_4947271c24390bac",
+   "language": "bn",
+   "published_at": "2026-10-25T02:00:00+00:00",
+   "retrieved_at": "2026-10-25T02:30:10+00:00",
+   "source_id": "prothomalo",
+   "source_name": "Prothom Alo (প্রথম আলো)",
+   "title": "আমি হলাম গ্লোবাল ডিগবাজি স্টার: জায়েদ খান",
+   "url": "https://www.prothomalo.com/fun/v95rje7240"
+  },
+  "a_495957edbf27f781": {
+   "canonical_url": "https://bigganchinta.com/biology/byqiffkm12",
+   "content_hash": "0ab4cd7034554c52",
+   "date_status": "ok",
+   "event_id": "ev_7fafd5a1423b",
+   "excerpt": "",
+   "extraction": null,
+   "id": "a_495957edbf27f781",
+   "language": "bn",
+   "published_at": "2026-10-25T01:00:00+00:00",
+   "retrieved_at": "2026-10-25T02:30:10+00:00",
+   "source_id": "prothomalo",
+   "source_name": "Prothom Alo (প্রথম আলো)",
+   "title": "মেঝেতে পড়ে যাওয়া খাবার ৫ সেকেন্ডের মধ্যে তুলে খাওয়া কি উচিত",
+   "url": "https://www.bigganchinta.com/biology/byqiffkm12"
   },
   "a_4bfa144eacce1c89": {
    "canonical_url": "https://prothomalo.com/onnoalo/prose/cgjddt9evg",
@@ -432,6 +572,22 @@
    "title": "অন্তরঙ্গ দৃশ্যে অভিনয় নিয়ে বিতর্কে, মল্লিকা এখন কী করছেন",
    "url": "https://www.prothomalo.com/entertainment/bollywood/879srecm7y"
   },
+  "a_5a0f74d1a00c3e3c": {
+   "canonical_url": "https://haal.fashion/lifestyle/well-being/842ny14e48",
+   "content_hash": "127c8bd0e16abab9",
+   "date_status": "ok",
+   "event_id": "ev_3adbd1a78b99",
+   "excerpt": "চিনি ছাড়া ব্ল্যাক কফি কম ক্যালরির পানীয় হিসেবে জনপ্রিয়। রক্তে শর্করা, কোলেস্টেরল ও লিভারের স্বাস্থ্যে এর সম্ভাব্য প্রভাব নিয়ে রয়েছে নানা গবেষণা। তবে উপকার পেতে কী জানা জরুরি?",
+   "extraction": null,
+   "id": "a_5a0f74d1a00c3e3c",
+   "language": "bn",
+   "published_at": "2026-10-25T01:00:00+00:00",
+   "retrieved_at": "2026-10-25T02:30:10+00:00",
+   "source_id": "prothomalo",
+   "source_name": "Prothom Alo (প্রথম আলো)",
+   "title": "ব্ল্যাক কফি কি রক্তে শর্করা ও কোলেস্টেরল নিয়ন্ত্রণে সাহায্য করে?",
+   "url": "https://www.haal.fashion/lifestyle/well-being/842ny14e48"
+  },
   "a_5ea700f6b60a6fe4": {
    "canonical_url": "https://haal.fashion/lifestyle/pkfsfku69e",
    "content_hash": "2ff9189aacf61389",
@@ -447,6 +603,42 @@
    "source_name": "Prothom Alo (প্রথম আলো)",
    "title": "মেসির হাতে পুরস্কার তুলে দিয়ে আলোচনায় স্পেনের ভবিষ্যৎ রানি লিওনর",
    "url": "https://www.haal.fashion/lifestyle/pkfsfku69e"
+  },
+  "a_5f82af064c482b8c": {
+   "canonical_url": "https://prothomalo.com/religion/fts3ek8ww7",
+   "content_hash": "b11ec64330762082",
+   "date_status": "ok",
+   "event_id": "ev_fc579820d349",
+   "excerpt": "বুদ্ধপূজা, সংঘদান, পিণ্ডদান, অষ্টপরিষ্কার দান, পঞ্চশীল প্রার্থনা, শীল গ্রহণ, প্রদীপপূজা ও ফানুস ওড়ানোর মতো নানা আচার পালন করা হয় প্রবারণা পূর্ণিমায়।",
+   "extraction": null,
+   "id": "a_5f82af064c482b8c",
+   "language": "bn",
+   "published_at": "2026-10-24T23:30:00+00:00",
+   "retrieved_at": "2026-10-25T02:30:10+00:00",
+   "source_id": "prothomalo",
+   "source_name": "Prothom Alo (প্রথম আলো)",
+   "title": "শুভ প্রবারণা পূর্ণিমা আজ",
+   "url": "https://www.prothomalo.com/religion/fts3ek8ww7"
+  },
+  "a_604f9c0d72d244d2": {
+   "canonical_url": "https://prothomalo.com/opinion/column/1eba5fj2vk",
+   "content_hash": "c12a136dc1f5eb26",
+   "date_status": "ok",
+   "event_id": "ev_6e5cd7156b36",
+   "excerpt": "",
+   "extraction": {
+    "chars": 4761,
+    "reason": "",
+    "status": "ok"
+   },
+   "id": "a_604f9c0d72d244d2",
+   "language": "bn",
+   "published_at": "2026-10-25T01:50:00+00:00",
+   "retrieved_at": "2026-10-25T02:30:10+00:00",
+   "source_id": "prothomalo",
+   "source_name": "Prothom Alo (প্রথম আলো)",
+   "title": "রাশিয়া কি যুক্তরাষ্ট্র-ইরানকে এক টেবিলে নিয়ে আসতে পারবে",
+   "url": "https://www.prothomalo.com/opinion/column/1eba5fj2vk"
   },
   "a_61fd496832987616": {
    "canonical_url": "https://prothomalo.com/entertainment/dhallywood/h3w6iw1lel",
@@ -480,6 +672,22 @@
    "title": "লাল শাড়ি, সোনালি ব্লাউজে শেফালি বাগ্গা: ভাইরাল এই লুক ঘিরে এত আলোচনা কেন?",
    "url": "https://www.haal.fashion/celeb/look/y37f1b446w"
   },
+  "a_6d885b02a423ea5a": {
+   "canonical_url": "https://prothomalo.com/entertainment/bollywood/bgjcuhqgx1",
+   "content_hash": "50a82124d4a950ac",
+   "date_status": "ok",
+   "event_id": "ev_0e5d2cf94bee",
+   "excerpt": "মাত্র আড়াই থেকে তিন কোটি টাকা বাজেটে নির্মিত ছবিটি বক্স অফিসে আয় করেছে ১১০ কোটি টাকা।",
+   "extraction": null,
+   "id": "a_6d885b02a423ea5a",
+   "language": "bn",
+   "published_at": "2026-10-25T02:00:00+00:00",
+   "retrieved_at": "2026-10-25T02:30:10+00:00",
+   "source_id": "prothomalo",
+   "source_name": "Prothom Alo (প্রথম আলো)",
+   "title": "আড়াই কোটি বিনিয়োগে আয় ১১০ কোটি! পরিচালকের সাক্ষাৎ পেতে মরিয়া প্রযোজকেরা",
+   "url": "https://www.prothomalo.com/entertainment/bollywood/bgjcuhqgx1"
+  },
   "a_6de6ef5418493e31": {
    "canonical_url": "https://prothomalo.com/video/bangladesh/hin1mgmjbk",
    "content_hash": "35df7b508f5f9386",
@@ -511,6 +719,22 @@
    "source_name": "Prothom Alo (প্রথম আলো)",
    "title": "বাড়ি ভাড়া নিয়ে মাদক কারবারের অভিযোগ, পুলিশ সদস্যসহ আটক ৩",
    "url": "https://www.prothomalo.com/bangladesh/district/wuydcnno38"
+  },
+  "a_7667cc253f16561f": {
+   "canonical_url": "https://prothomalo.com/technology/science/6qs8e5mwyd",
+   "content_hash": "00d193f88c6d40e7",
+   "date_status": "ok",
+   "event_id": "ev_0388b38f634a",
+   "excerpt": "",
+   "extraction": null,
+   "id": "a_7667cc253f16561f",
+   "language": "bn",
+   "published_at": "2026-10-25T02:00:00+00:00",
+   "retrieved_at": "2026-10-25T02:30:10+00:00",
+   "source_id": "prothomalo",
+   "source_name": "Prothom Alo (প্রথম আলো)",
+   "title": "ভ্যান গঘের বিখ্যাত চিত্রকর্ম দ্য স্টারি নাইট আঁকার সময় নিয়ে জ্যোতির্বিজ্ঞানীদের নতুন তথ্য",
+   "url": "https://www.prothomalo.com/technology/science/6qs8e5mwyd"
   },
   "a_7bc4e3cd1afadbc4": {
    "canonical_url": "https://prothomalo.com/world/94ztp26a3b",
@@ -547,6 +771,26 @@
    "source_name": "Prothom Alo (প্রথম আলো)",
    "title": "প্রতিমা বিসর্জনে যুক্ত ব্যক্তিদের ধর্ম বিচার পুলিশের কাজ নয়: কলকাতা পুলিশ কমিশনার",
    "url": "https://www.prothomalo.com/world/india/g506ng3vmq"
+  },
+  "a_841f2a83ef03243f": {
+   "canonical_url": "https://prothomalo.com/opinion/interview/tnn1of6c7e",
+   "content_hash": "67a6d634ea4d35b5",
+   "date_status": "ok",
+   "event_id": "ev_666b1a01fee0",
+   "excerpt": "ডেঙ্গু এখন শুধু ঢাকা বা বড় শহরে সীমাবদ্ধ নেই, ছড়িয়ে পড়ছে গ্রামাঞ্চলেও। এডিস মশা নিয়ন্ত্রণে ঘাটতি থাকায় প্রতিরোধের বিকল্প ব্যবস্থা হিসেবে টিকাকে জাতীয় কৌশলে যুক্ত করার পক্ষে জনস্বাস্থ্যবিদ বে-নজীর আহমদ। তাঁর মতে, প্রধানমন্ত্রী তারেক রহমানের আসন্ন জাপান সফরে কিউডেঙ্গা টিকা সংগ্রহ ও সাশ্রয়ী দামে সরবরাহের বিষয়টি আলোচনায় আনা যেতে পারে। প্রথম আলোর পক্ষে সাক্ষাৎকার নিয়েছেন পার্থ শঙ্কর সাহা।",
+   "extraction": {
+    "chars": 9973,
+    "reason": "",
+    "status": "ok"
+   },
+   "id": "a_841f2a83ef03243f",
+   "language": "bn",
+   "published_at": "2026-10-25T02:00:00+00:00",
+   "retrieved_at": "2026-10-25T02:30:10+00:00",
+   "source_id": "prothomalo",
+   "source_name": "Prothom Alo (প্রথম আলো)",
+   "title": "প্রধানমন্ত্রীর জাপান সফরে ডেঙ্গুর টিকার প্রসঙ্গ তোলা যায়",
+   "url": "https://www.prothomalo.com/opinion/interview/tnn1of6c7e"
   },
   "a_872547c267386d4f": {
    "canonical_url": "https://prothomalo.com/sports/cricket/hvqfmvbi8f",
@@ -668,6 +912,22 @@
    "title": "মিসরের প্রাচীন পিরামিডের পাশে দৌড় প্রতিযোগিতা",
    "url": "https://www.prothomalo.com/video/international/i7eidvzpxc"
   },
+  "a_8c1b51d57d64e5b7": {
+   "canonical_url": "https://prothomalo.com/chakri/chakri-news/migv2f6fyu",
+   "content_hash": "1e020c1246771f6f",
+   "date_status": "ok",
+   "event_id": "ev_f5e8595e14e0",
+   "excerpt": "",
+   "extraction": null,
+   "id": "a_8c1b51d57d64e5b7",
+   "language": "bn",
+   "published_at": "2026-10-25T02:04:44+00:00",
+   "retrieved_at": "2026-10-25T02:30:10+00:00",
+   "source_id": "prothomalo",
+   "source_name": "Prothom Alo (প্রথম আলো)",
+   "title": "৭৫ বছর ছাঁটাই ছাড়াই চলছে কোম্পানিটি; পরিচালনা পদ্ধতি দেখতে ভিড় সিইওদের",
+   "url": "https://www.prothomalo.com/chakri/chakri-news/migv2f6fyu"
+  },
   "a_8cd6245dcf0a09e1": {
    "canonical_url": "https://prothomalo.com/sports/football/08n862g348",
    "content_hash": "2cf8ed8a57297d96",
@@ -704,6 +964,38 @@
    "title": "সব ওষুধ কিনতে হয় রোগীর, দুঃখ প্রকাশ করে টাকা দিলেন স্বাস্থ্যমন্ত্রী",
    "url": "https://www.prothomalo.com/bangladesh/district/h0t6jycge8"
   },
+  "a_8f3949f82a422818": {
+   "canonical_url": "https://prothomalo.com/lifestyle/lhd5upiszn",
+   "content_hash": "03bedeb7fead86f3",
+   "date_status": "ok",
+   "event_id": "ev_7e89e60266e4",
+   "excerpt": "",
+   "extraction": null,
+   "id": "a_8f3949f82a422818",
+   "language": "bn",
+   "published_at": "2026-10-25T02:00:00+00:00",
+   "retrieved_at": "2026-10-25T02:30:10+00:00",
+   "source_id": "prothomalo",
+   "source_name": "Prothom Alo (প্রথম আলো)",
+   "title": "বুয়েটের ভর্তি পরীক্ষায় প্রথম নাফিস এখন কাজ করছেন ব্লুমবার্গে",
+   "url": "https://www.prothomalo.com/lifestyle/lhd5upiszn"
+  },
+  "a_920a8a8fcab463e2": {
+   "canonical_url": "https://prothomalo.com/video/48tbg66bgg",
+   "content_hash": "6dc3a15f5ee3cf92",
+   "date_status": "ok",
+   "event_id": "ev_105bb3d96a4d",
+   "excerpt": "",
+   "extraction": null,
+   "id": "a_920a8a8fcab463e2",
+   "language": "bn",
+   "published_at": "2026-10-25T02:00:00+00:00",
+   "retrieved_at": "2026-10-25T02:30:10+00:00",
+   "source_id": "prothomalo",
+   "source_name": "Prothom Alo (প্রথম আলো)",
+   "title": "ঘোরাঘুরি করাই কাজ, পেশা হিসেবে ট্র্যাভেল ব্লগিং কেমন",
+   "url": "https://www.prothomalo.com/video/48tbg66bgg"
+  },
   "a_957486bd81713638": {
    "canonical_url": "https://prothomalo.com/video/bangladesh/hkgpdicyvx",
    "content_hash": "ee4f8876540ef760",
@@ -738,11 +1030,15 @@
   },
   "a_96d90d4cf048f383": {
    "canonical_url": "https://prothomalo.com/bangladesh/9mkb2puq33",
-   "content_hash": "c96ab441693138ba",
+   "content_hash": "b629531c55a1a815",
    "date_status": "ok",
    "event_id": "ev_eff58995486a",
    "excerpt": "এমজেএফ বলেছে, শিশুদের ওপর নির্যাতন প্রতিরোধ এবং তাদের নিরাপত্তা নিশ্চিত করতে সরকার, শিক্ষাপ্রতিষ্ঠান, পরিবার ও সমাজকে একসঙ্গে কাজ করতে হবে।",
-   "extraction": null,
+   "extraction": {
+    "chars": 2661,
+    "reason": "",
+    "status": "ok"
+   },
    "id": "a_96d90d4cf048f383",
    "language": "bn",
    "published_at": "2026-10-24T11:42:32+00:00",
@@ -770,11 +1066,15 @@
   },
   "a_97c247ce094583ce": {
    "canonical_url": "https://bigganchinta.com/events/oop1m2khwp",
-   "content_hash": "0bdddc802977bfde",
+   "content_hash": "73d427835f924388",
    "date_status": "ok",
    "event_id": "ev_346eb0a2a517",
    "excerpt": "",
-   "extraction": null,
+   "extraction": {
+    "chars": 2983,
+    "reason": "",
+    "status": "ok"
+   },
    "id": "a_97c247ce094583ce",
    "language": "bn",
    "published_at": "2026-10-24T12:44:48+00:00",
@@ -954,11 +1254,15 @@
   },
   "a_af743c75eb5ea8f2": {
    "canonical_url": "https://prothomalo.com/opinion/column/nu7yx0p9pr",
-   "content_hash": "6d6789c61007e73e",
+   "content_hash": "1c08ef8b665939d0",
    "date_status": "ok",
    "event_id": "ev_fe5a76a592e1",
    "excerpt": "সংস্কার নিয়ে বহু আলাপ হয়েছে, কিন্তু প্রকৃতপক্ষে লক্ষ্যযোগ্য কোনো সংস্কার হয়নি। অভ্যুত্থানের পরপরই রাজনৈতিক পক্ষগুলো যার যার সামর্থ্য অনুযায়ী ক্ষমতা দখল করে নিয়েছে।",
-   "extraction": null,
+   "extraction": {
+    "chars": 9578,
+    "reason": "",
+    "status": "ok"
+   },
    "id": "a_af743c75eb5ea8f2",
    "language": "bn",
    "published_at": "2026-10-24T10:48:11+00:00",
@@ -1124,6 +1428,38 @@
    "title": "চীন সীমান্তবর্তী অরুণাচল প্রদেশে বাঁধ নির্মাণের বিরুদ্ধে বিক্ষোভ, পুলিশের সঙ্গে সংঘর্ষ",
    "url": "https://www.prothomalo.com/world/india/2t7erl9lp9"
   },
+  "a_c84b92b69a03befc": {
+   "canonical_url": "https://prothomalo.com/religion/islam/b7yn4c1jnj",
+   "content_hash": "5cb197835101d7c9",
+   "date_status": "ok",
+   "event_id": "ev_e46497f3dee6",
+   "excerpt": "এমন কিছু সময় আছে, যখন ক্ষমার দরজা চিরতরে বন্ধ হয়ে যায়। ওই বিশেষ মুহূর্তে মানুষ হাজারবার অনুশোচনা করলেও আল্লাহ আর সেই তওবা কবুল করেন না।",
+   "extraction": null,
+   "id": "a_c84b92b69a03befc",
+   "language": "bn",
+   "published_at": "2026-10-24T22:30:00+00:00",
+   "retrieved_at": "2026-10-25T02:30:10+00:00",
+   "source_id": "prothomalo",
+   "source_name": "Prothom Alo (প্রথম আলো)",
+   "title": "যখন তওবা করলেও আল্লাহ ক্ষমা করবেন না",
+   "url": "https://www.prothomalo.com/religion/islam/b7yn4c1jnj"
+  },
+  "a_c942a4e5d20f5556": {
+   "canonical_url": "https://prothomalo.com/entertainment/ott/oms05h3chx",
+   "content_hash": "ecaff29b3cfa25de",
+   "date_status": "ok",
+   "event_id": "ev_23bc96a8e0f7",
+   "excerpt": "শিশুশিল্পী হিসেবে অভিনয় শুরু করেছিলেন বিদুষী বর্ণিতা। লাক্স সুপারস্টার চ্যাম্পিয়ন হওয়ার পর শিহাব শাহীনের ওয়েব সিনেমা ‘ক্যাফে আমব্রেলা’–তে কেন্দ্রীয় চরিত্রে অভিনয় করেছেন তিনি।",
+   "extraction": null,
+   "id": "a_c942a4e5d20f5556",
+   "language": "bn",
+   "published_at": "2026-10-25T01:00:00+00:00",
+   "retrieved_at": "2026-10-25T02:30:10+00:00",
+   "source_id": "prothomalo",
+   "source_name": "Prothom Alo (প্রথম আলো)",
+   "title": "শিশুশিল্পী থেকে লাক্স সুপারস্টার চ্যাম্পিয়ন, বর্ণিতার সামনে কী",
+   "url": "https://www.prothomalo.com/entertainment/ott/oms05h3chx"
+  },
   "a_ca6aaede3d19a860": {
    "canonical_url": "https://prothomalo.com/bangladesh/district/xovb7kygzk",
    "content_hash": "acc21a53faf4525c",
@@ -1143,6 +1479,22 @@
    "source_name": "Prothom Alo (প্রথম আলো)",
    "title": "চাঁদাবাজরা হয় সন্ত্রাসী অথবা কোনো না কোনো ক্ষমতার সঙ্গে যুক্ত: আইজিপি",
    "url": "https://www.prothomalo.com/bangladesh/district/xovb7kygzk"
+  },
+  "a_cab9b96e4478d79d": {
+   "canonical_url": "https://kishoralo.com/feature/l0qd3jpg94",
+   "content_hash": "36d63bdd0d2cd03f",
+   "date_status": "ok",
+   "event_id": "ev_01c9d30f1d77",
+   "excerpt": "অনেকে বিষয়টি নিয়ে সন্দেহ প্রকাশ করলেও, স্বীকার করতেই হবে, মাঝেমধ্যে আমরা এখনো এই ঝুঁকি নিই। অনেকের তো আবার এটি একধরনের অভ্যাসে পরিণত হয়েছে",
+   "extraction": null,
+   "id": "a_cab9b96e4478d79d",
+   "language": "bn",
+   "published_at": "2026-10-25T01:00:00+00:00",
+   "retrieved_at": "2026-10-25T02:30:10+00:00",
+   "source_id": "prothomalo",
+   "source_name": "Prothom Alo (প্রথম আলো)",
+   "title": "পড়ে যাওয়া খাবার তুলে খাওয়ার পাঁচ সেকেন্ড নিয়মের কি কোনো বৈজ্ঞানিক প্রমাণ আছে",
+   "url": "https://www.kishoralo.com/feature/l0qd3jpg94"
   },
   "a_cd0f69b2c9489d1d": {
    "canonical_url": "https://bondhushava.com/activities/0o5h3r3jig",
@@ -1178,11 +1530,15 @@
   },
   "a_d174ac6bd93ee2a3": {
    "canonical_url": "https://prothomalo.com/bangladesh/capital/352bh0mak3",
-   "content_hash": "d8d9ab438499121b",
+   "content_hash": "7ab27c0ab3033f8e",
    "date_status": "ok",
    "event_id": "ev_da93a8ebd366",
    "excerpt": "ডিএসসিসি প্রশাসক বলেছেন, মানবিকতার দোহাই দিয়ে রাস্তা ও ফুটপাত দখলের সুযোগ নেই। নির্ধারিত নিয়মের বাইরে দোকান বসালে মালামাল জব্দের পাশাপাশি আইনি ব্যবস্থা নেওয়া হবে।",
-   "extraction": null,
+   "extraction": {
+    "chars": 2226,
+    "reason": "",
+    "status": "ok"
+   },
    "id": "a_d174ac6bd93ee2a3",
    "language": "bn",
    "published_at": "2026-10-24T12:54:20+00:00",
@@ -1207,6 +1563,86 @@
    "source_name": "Prothom Alo (প্রথম আলো)",
    "title": "কুমিল্লা বিশ্ববিদ্যালয়ে ৩৫ পদে চাকরি, করুন আবেদন",
    "url": "https://www.prothomalo.com/chakri/employment/v9qkchzp8b"
+  },
+  "a_d5e9bcea2e46c753": {
+   "canonical_url": "https://nagorik.prothomalo.com/travel/l563xn37sv",
+   "content_hash": "ca8e2f879720d24b",
+   "date_status": "ok",
+   "event_id": "ev_f06b8daa9148",
+   "excerpt": "",
+   "extraction": null,
+   "id": "a_d5e9bcea2e46c753",
+   "language": "bn",
+   "published_at": "2026-10-25T02:09:18+00:00",
+   "retrieved_at": "2026-10-25T02:30:10+00:00",
+   "source_id": "prothomalo",
+   "source_name": "Prothom Alo (প্রথম আলো)",
+   "title": "মালয়েশিয়া ভ্রমণ: কালের যাত্রাধ্বনি–৩",
+   "url": "https://nagorik.prothomalo.com/travel/l563xn37sv"
+  },
+  "a_d93fa6ec4d52ae95": {
+   "canonical_url": "https://prothomalo.com/bangladesh/kpppa2rfxb",
+   "content_hash": "69baabc92136ac8c",
+   "date_status": "ok",
+   "event_id": "ev_666b1a01fee0",
+   "excerpt": "জাপানি প্রধানমন্ত্রীর আমন্ত্রণে তারেক রহমান জাপান-বাংলাদেশ অর্থনৈতিক ফোরামে মূল বক্তব্য দেবেন। তাকাইচির সঙ্গে শীর্ষ বৈঠক ২৭ অক্টোবর।",
+   "extraction": null,
+   "id": "a_d93fa6ec4d52ae95",
+   "language": "bn",
+   "published_at": "2026-10-25T01:02:37+00:00",
+   "retrieved_at": "2026-10-25T02:30:10+00:00",
+   "source_id": "prothomalo",
+   "source_name": "Prothom Alo (প্রথম আলো)",
+   "title": "প্রধানমন্ত্রী কাল জাপান যাচ্ছেন, বিনিয়োগে নতুন গতির আশা",
+   "url": "https://www.prothomalo.com/bangladesh/kpppa2rfxb"
+  },
+  "a_da72d5213f42c766": {
+   "canonical_url": "https://haal.fashion/celeb/look/x6q8ahkc9o",
+   "content_hash": "1d68557f44dcf492",
+   "date_status": "ok",
+   "event_id": "ev_d9a2e1269398",
+   "excerpt": "বিয়ের পোশাক নিয়ে অনেকেরই থাকে নানা পরিকল্পনা। কেউ বেছে নেন চিরচেনা লাল, কেউ আবার প্রচলিত রঙের বাইরে গিয়ে নতুন কিছু পরতে চান। অভিনেত্রী সুনেরাহ্‌ বিনতে কামালের পছন্দও একটু অন্য রকম। চলুন, জেনে আসি বিস্তারিত।",
+   "extraction": null,
+   "id": "a_da72d5213f42c766",
+   "language": "bn",
+   "published_at": "2026-10-25T02:00:00+00:00",
+   "retrieved_at": "2026-10-25T02:30:10+00:00",
+   "source_id": "prothomalo",
+   "source_name": "Prothom Alo (প্রথম আলো)",
+   "title": "বিয়েতে এই রঙের শাড়িই পরতে চান সুনেরাহ্‌ বিনতে কামাল",
+   "url": "https://www.haal.fashion/celeb/look/x6q8ahkc9o"
+  },
+  "a_dcef5eaf6b88e612": {
+   "canonical_url": "https://prothomalo.com/photo/bangladesh/va2ev1vwef",
+   "content_hash": "66d65384bcb9c169",
+   "date_status": "ok",
+   "event_id": "ev_4f912fbc18dc",
+   "excerpt": "",
+   "extraction": null,
+   "id": "a_dcef5eaf6b88e612",
+   "language": "bn",
+   "published_at": "2026-10-25T02:00:00+00:00",
+   "retrieved_at": "2026-10-25T02:30:10+00:00",
+   "source_id": "prothomalo",
+   "source_name": "Prothom Alo (প্রথম আলো)",
+   "title": "মহাসড়কে চলে যে যার মতো",
+   "url": "https://www.prothomalo.com/photo/bangladesh/va2ev1vwef"
+  },
+  "a_e002b57481e7ef54": {
+   "canonical_url": "https://prothomalo.com/bangladesh/district/nvowual34d",
+   "content_hash": "95944ad16d1116b6",
+   "date_status": "ok",
+   "event_id": "ev_478f4c997918",
+   "excerpt": "১০০ বছরের বেশি পুরোনো এই বাজার হাওর-নদীর মাছ আর স্থানীয় কৃষকের ফলানো সবজি দিয়ে শুরু হয়েছিল। এখনো মাছ আর শাকসবজিই এখানকার প্রধান পণ্য।",
+   "extraction": null,
+   "id": "a_e002b57481e7ef54",
+   "language": "bn",
+   "published_at": "2026-10-25T02:00:00+00:00",
+   "retrieved_at": "2026-10-25T02:30:10+00:00",
+   "source_id": "prothomalo",
+   "source_name": "Prothom Alo (প্রথম আলো)",
+   "title": "হাওরের মাছ, টিলার পান ও সবজির টানে জমজমাট ধোবারহাট",
+   "url": "https://www.prothomalo.com/bangladesh/district/nvowual34d"
   },
   "a_e55f0b8b928958e3": {
    "canonical_url": "https://prothomalo.com/religion/islam/gxeawqwfzv",
@@ -1746,9 +2182,256 @@
     "ev_1b4bdf0ef8f2"
    ],
    "unprocessed_candidates": 4
+  },
+  "2026-10-25": {
+   "attempts": 1,
+   "chunks": [
+    {
+     "attempts": 0,
+     "index": 0,
+     "message_id": null,
+     "sha": "4e1743e0a17905dd",
+     "status": "pending"
+    },
+    {
+     "attempts": 0,
+     "index": 1,
+     "message_id": null,
+     "sha": "ff6e5b9650a6b99b",
+     "status": "pending"
+    },
+    {
+     "attempts": 0,
+     "index": 2,
+     "message_id": null,
+     "sha": "14eedfa3213c5b06",
+     "status": "pending"
+    },
+    {
+     "attempts": 0,
+     "index": 3,
+     "message_id": null,
+     "sha": "98b5487b3af51ad6",
+     "status": "pending"
+    },
+    {
+     "attempts": 0,
+     "index": 4,
+     "message_id": null,
+     "sha": "0145605e90bb2bf6",
+     "status": "pending"
+    },
+    {
+     "attempts": 0,
+     "index": 5,
+     "message_id": null,
+     "sha": "e9d1ff84f6681ac3",
+     "status": "pending"
+    },
+    {
+     "attempts": 0,
+     "index": 6,
+     "message_id": null,
+     "sha": "c486cdc47b4beb28",
+     "status": "pending"
+    },
+    {
+     "attempts": 0,
+     "index": 7,
+     "message_id": null,
+     "sha": "4bab3967a0dcebf8",
+     "status": "pending"
+    },
+    {
+     "attempts": 0,
+     "index": 8,
+     "message_id": null,
+     "sha": "e3e6f750639bbea6",
+     "status": "pending"
+    }
+   ],
+   "created_at": "2026-10-25T02:30:10+00:00",
+   "date": "2026-10-25",
+   "delivered_at": "2026-10-25T02:31:46+00:00",
+   "deliveries": {
+    "1033339929": {
+     "attempts": 1,
+     "delivered_at": "2026-10-25T02:31:35+00:00",
+     "pdf_message_id": 100,
+     "sent": {
+      "0": 91,
+      "1": 92,
+      "2": 93,
+      "3": 94,
+      "4": 95,
+      "5": 96,
+      "6": 97,
+      "7": 98,
+      "8": 99
+     },
+     "status": "done"
+    },
+    "1679140572": {
+     "attempts": 1,
+     "delivered_at": "2026-10-25T02:31:23+00:00",
+     "pdf_message_id": 90,
+     "sent": {
+      "0": 81,
+      "1": 82,
+      "2": 83,
+      "3": 84,
+      "4": 85,
+      "5": 86,
+      "6": 87,
+      "7": 88,
+      "8": 89
+     },
+     "status": "done"
+    },
+    "7872342619": {
+     "attempts": 1,
+     "delivered_at": "2026-10-25T02:31:46+00:00",
+     "pdf_message_id": 110,
+     "sent": {
+      "0": 101,
+      "1": 102,
+      "2": 103,
+      "3": 104,
+      "4": 105,
+      "5": 106,
+      "6": 107,
+      "7": 108,
+      "8": 109
+     },
+     "status": "done"
+    }
+   },
+   "dry_run": false,
+   "edition_date": "2026-10-25",
+   "failure_notified": false,
+   "manual": false,
+   "mcqs": [
+    {
+     "answer_index": 2,
+     "explanation": "উল্লেখিত তথ্য অনুযায়ী ডেঙ্গুর চারটি সেরোটাইপ আছে।",
+     "fact_id": "f4",
+     "options": [
+      "দুটি",
+      "তিনটি",
+      "চারটি",
+      "পাঁচটি"
+     ],
+     "question": "ডেঙ্গু ভাইরাসের কতটি সেরোটাইপ আছে বলে উল্লেখ করা হয়েছে?",
+     "source_event_id": "ev_666b1a01fee0",
+     "source_name": "Prothom Alo (প্রথম আলো)",
+     "source_story": "ডেঙ্গু প্রতিরোধ কৌশলে টিকা যুক্ত করার আলোচনা",
+     "source_url": "https://www.prothomalo.com/opinion/interview/tnn1of6c7e",
+     "subject": "bangladesh_affairs"
+    },
+    {
+     "answer_index": 0,
+     "explanation": "তিনটি নির্দিষ্ট প্রতিষ্ঠানে সক্ষমতা বাড়ানোর কথা বলা হয়েছে।",
+     "fact_id": "f5",
+     "options": [
+      "আইইডিসিআর, আইসিডিডিআরবি এবং ন্যাশনাল ইনস্টিটিউট অব ল্যাবরেটরি মেডিসিন",
+      "বিআইডিএস, বিএসএমএমইউ এবং আইএমএস",
+      "পিজি হাসপাতাল, বারডেম এবং বিএআরআই",
+      "ডিএনসিসি, বিডা এবং এনবিআর"
+     ],
+     "question": "কোন প্রতিষ্ঠানগুলোতে জিনোম সিকোয়েন্সিংয়ের সক্ষমতা বাড়ানোর কথা বলা হয়েছে?",
+     "source_event_id": "ev_666b1a01fee0",
+     "source_name": "Prothom Alo (প্রথম আলো)",
+     "source_story": "ডেঙ্গু প্রতিরোধ কৌশলে টিকা যুক্ত করার আলোচনা",
+     "source_url": "https://www.prothomalo.com/opinion/interview/tnn1of6c7e",
+     "subject": "bangladesh_affairs"
+    },
+    {
+     "answer_index": 2,
+     "explanation": "উল্লেখিত হিসাবে দুই ডোজের টিকায় প্রায় ৮ থেকে ১০ হাজার টাকা লাগতে পারে।",
+     "fact_id": "f6",
+     "options": [
+      "প্রায় ২ থেকে ৩ হাজার টাকা",
+      "প্রায় ৪ থেকে ৫ হাজার টাকা",
+      "প্রায় ৮ থেকে ১০ হাজার টাকা",
+      "প্রায় ১২ থেকে ১৫ হাজার টাকা"
+     ],
+     "question": "দুই ডোজের টিকায় জনপ্রতি আনুমানিক কত টাকা লাগতে পারে?",
+     "source_event_id": "ev_666b1a01fee0",
+     "source_name": "Prothom Alo (প্রথম আলো)",
+     "source_story": "ডেঙ্গু প্রতিরোধ কৌশলে টিকা যুক্ত করার আলোচনা",
+     "source_url": "https://www.prothomalo.com/opinion/interview/tnn1of6c7e",
+     "subject": "bangladesh_affairs"
+    }
+   ],
+   "partial": false,
+   "partial_reasons": [],
+   "pdf": {
+    "bytes": 341778,
+    "file": "edition-2026-10-25.pdf",
+    "sha": "d9e4de1a6c6114bb"
+   },
+   "recipients": 3,
+   "status": "delivered",
+   "story_event_ids": [
+    "ev_666b1a01fee0",
+    "ev_6e5cd7156b36",
+    "ev_846c02267ee0",
+    "ev_fe5a76a592e1",
+    "ev_da93a8ebd366",
+    "ev_eff58995486a",
+    "ev_346eb0a2a517",
+    "ev_2fa94c4bcf8f"
+   ],
+   "unprocessed_candidates": 0
   }
  },
  "events": {
+  "ev_01c9d30f1d77": {
+   "analysis": null,
+   "article_ids": [
+    "a_cab9b96e4478d79d"
+   ],
+   "attempts": 0,
+   "created_at": "2026-10-25T02:30:10+00:00",
+   "event_id": "ev_01c9d30f1d77",
+   "included_in": null,
+   "last_error": null,
+   "screening": {
+    "categories": [
+     "science_technology"
+    ],
+    "decision": "maybe",
+    "exam_focus": "prelims",
+    "priority": 3.0,
+    "rationale": "পাঁচ সেকেন্ড নিয়মের বৈজ্ঞানিক প্রমাণ নিয়ে আলোচনা বিজ্ঞানভিত্তিক হলেও পরীক্ষায় সীমিত গুরুত্বের।"
+   },
+   "screening_attempts": 0,
+   "status": "maybe",
+   "updated_at": "2026-10-25T02:30:10+00:00"
+  },
+  "ev_0388b38f634a": {
+   "analysis": null,
+   "article_ids": [
+    "a_7667cc253f16561f"
+   ],
+   "attempts": 0,
+   "created_at": "2026-10-25T02:30:10+00:00",
+   "event_id": "ev_0388b38f634a",
+   "included_in": null,
+   "last_error": null,
+   "screening": {
+    "categories": [
+     "science_technology"
+    ],
+    "decision": "maybe",
+    "exam_focus": "prelims",
+    "priority": 4.0,
+    "rationale": "জ্যোতির্বিজ্ঞানীদের নতুন তথ্য বৈজ্ঞানিক জ্ঞানভিত্তিক হওয়ায় বিজ্ঞান অংশে কিছু মূল্য আছে।"
+   },
+   "screening_attempts": 0,
+   "status": "maybe",
+   "updated_at": "2026-10-25T02:30:10+00:00"
+  },
   "ev_041498f0a258": {
    "analysis": null,
    "article_ids": [
@@ -1984,6 +2667,27 @@
    "status": "included",
    "updated_at": "2026-10-24T13:40:25+00:00"
   },
+  "ev_07cb55e05a35": {
+   "analysis": null,
+   "article_ids": [
+    "a_1b1b0f6691979e86"
+   ],
+   "attempts": 0,
+   "created_at": "2026-10-25T02:30:10+00:00",
+   "event_id": "ev_07cb55e05a35",
+   "included_in": null,
+   "last_error": null,
+   "screening": {
+    "categories": [],
+    "decision": "reject",
+    "exam_focus": "none",
+    "priority": 1.0,
+    "rationale": "যুক্তরাষ্ট্রের সমাবেশ ও প্রতিবাদ নিয়ে রাজনৈতিক খবর হলেও এর নির্দিষ্ট নীতি বা আন্তর্জাতিক প্রভাব স্পষ্ট নয়।"
+   },
+   "screening_attempts": 0,
+   "status": "rejected",
+   "updated_at": "2026-10-25T02:30:10+00:00"
+  },
   "ev_089d52ed0060": {
    "analysis": null,
    "article_ids": [
@@ -2026,6 +2730,27 @@
    "status": "rejected",
    "updated_at": "2026-10-24T11:39:11+00:00"
   },
+  "ev_0e5d2cf94bee": {
+   "analysis": null,
+   "article_ids": [
+    "a_6d885b02a423ea5a"
+   ],
+   "attempts": 0,
+   "created_at": "2026-10-25T02:30:10+00:00",
+   "event_id": "ev_0e5d2cf94bee",
+   "included_in": null,
+   "last_error": null,
+   "screening": {
+    "categories": [],
+    "decision": "reject",
+    "exam_focus": "none",
+    "priority": 0.0,
+    "rationale": "একটি চলচ্চিত্রের বাণিজ্যিক সাফল্য নিয়ে বিনোদনধর্মী খবর, পরীক্ষার জন্য প্রাসঙ্গিক নয়।"
+   },
+   "screening_attempts": 0,
+   "status": "rejected",
+   "updated_at": "2026-10-25T02:30:10+00:00"
+  },
   "ev_0f4f76c4018f": {
    "analysis": null,
    "article_ids": [
@@ -2046,6 +2771,27 @@
    "screening_attempts": 0,
    "status": "rejected",
    "updated_at": "2026-10-24T11:39:11+00:00"
+  },
+  "ev_105bb3d96a4d": {
+   "analysis": null,
+   "article_ids": [
+    "a_920a8a8fcab463e2"
+   ],
+   "attempts": 0,
+   "created_at": "2026-10-25T02:30:10+00:00",
+   "event_id": "ev_105bb3d96a4d",
+   "included_in": null,
+   "last_error": null,
+   "screening": {
+    "categories": [],
+    "decision": "reject",
+    "exam_focus": "none",
+    "priority": 0.0,
+    "rationale": "ট্র্যাভেল ব্লগিং একটি পেশা হিসেবে আলোচনা করা হয়েছে, কিন্তু BCS-এর জন্য সীমিত সংবাদমূল্য আছে।"
+   },
+   "screening_attempts": 0,
+   "status": "rejected",
+   "updated_at": "2026-10-25T02:30:10+00:00"
   },
   "ev_119c672ec3d4": {
    "analysed_at": "2026-10-24T13:40:25+00:00",
@@ -2318,6 +3064,27 @@
    "status": "maybe",
    "updated_at": "2026-10-24T13:40:25+00:00"
   },
+  "ev_23bc96a8e0f7": {
+   "analysis": null,
+   "article_ids": [
+    "a_c942a4e5d20f5556"
+   ],
+   "attempts": 0,
+   "created_at": "2026-10-25T02:30:10+00:00",
+   "event_id": "ev_23bc96a8e0f7",
+   "included_in": null,
+   "last_error": null,
+   "screening": {
+    "categories": [],
+    "decision": "reject",
+    "exam_focus": "none",
+    "priority": 0.0,
+    "rationale": "অভিনয়জগতের ব্যক্তিগত ক্যারিয়ার গল্প, BCS-এর জন্য কম প্রাসঙ্গিক।"
+   },
+   "screening_attempts": 0,
+   "status": "rejected",
+   "updated_at": "2026-10-25T02:30:10+00:00"
+  },
   "ev_23dd3db57aca": {
    "analysis": null,
    "article_ids": [
@@ -2384,14 +3151,87 @@
    "updated_at": "2026-10-24T11:39:11+00:00"
   },
   "ev_2fa94c4bcf8f": {
-   "analysis": null,
+   "analysed_at": "2026-10-25T02:30:10+00:00",
+   "analysis": {
+    "analysed_article_id": "a_27bf4f217f4fb3fc",
+    "attributed_claims": [
+     {
+      "attributed_to": "বাঁশখালী থানার ভারপ্রাপ্ত কর্মকর্তা (ওসি) মো. রবিউল হক",
+      "claim": "পুলিশ খবর পেয়ে তাৎক্ষণিক ঘটনাস্থলে পৌঁছায়।",
+      "evidence": "তিনি বলেন, আশপাশে থাকা পুলিশ সদস্যরা মিছিলের খবর পেয়ে তাৎক্ষণিক ঘটনাস্থলে পৌঁছান।"
+     },
+     {
+      "attributed_to": "বাঁশখালী থানার ভারপ্রাপ্ত কর্মকর্তা (ওসি) মো. রবিউল হক",
+      "claim": "অংশগ্রহণকারীদের পরিচয় শনাক্ত করে তাঁদের আইনের আওতায় আনার চেষ্টা চলছে।",
+      "evidence": "মিছিলে অংশগ্রহণকারীদের পরিচয় শনাক্ত করে তাঁদের আইনের আওতায় আনার চেষ্টা চলছে।"
+     }
+    ],
+    "background_context": "বাংলাদেশে নিষিদ্ধ বা আইনবহির্ভূত ঘোষিত সংগঠনের কার্যক্রম সাধারণত আইনশৃঙ্খলা ও নিরাপত্তা আলোচনায় আসে। স্থানীয় পর্যায়ে এমন ঘটনা প্রশাসনিক নজরদারি এবং মাঠপর্যায়ের পুলিশি প্রতিক্রিয়ার সঙ্গে সম্পর্কিত থাকে।",
+    "categories": [
+     "bangladesh_affairs",
+     "constitution_governance"
+    ],
+    "causes_effects": "প্রতিবেদন অনুযায়ী মিছিলের খবর সামাজিক যোগাযোগমাধ্যমে ছড়িয়ে পড়ে এবং পুলিশ তাৎক্ষণিক ব্যবস্থা নেয়। এর ফলে ঘটনাটিকে ঘিরে নজরদারি, শনাক্তকরণ এবং আইনের আওতায় আনার প্রশাসনিক প্রক্রিয়া শুরু হয়েছে।",
+    "criteria": {
+     "factual_density": 6.0,
+     "novelty": 5.0,
+     "significance": 5.0,
+     "syllabus_relevance": 7.0,
+     "written_potential": 6.0
+    },
+    "exam_focus": "both",
+    "headline_bn": "বাঁশখালীতে নিষিদ্ধ ছাত্রলীগের লগি-বইঠা মিছিল",
+    "institutions": [
+     "ছাত্রলীগ",
+     "বাঁশখালী থানা",
+     "পুলিশ"
+    ],
+    "key_facts": [
+     {
+      "evidence": "চট্টগ্রামের বাঁশখালীতে লগি-বইঠা নিয়ে মিছিল করেছে নিষিদ্ধ ছাত্রলীগ।",
+      "fact": "চট্টগ্রামের বাঁশখালীতে নিষিদ্ধ ছাত্রলীগের মিছিল হয়েছে।",
+      "prelims": true
+     },
+     {
+      "evidence": "মিছিলের একাধিক ভিডিও সামাজিক যোগাযোগমাধ্যমে ছড়িয়ে পড়েছে।",
+      "fact": "মিছিলের একাধিক ভিডিও সামাজিক যোগাযোগমাধ্যমে ছড়িয়ে পড়ে।",
+      "prelims": true
+     },
+     {
+      "evidence": "আজ শনিবার ভোর ছয়টার দিকে উপজেলার কাথরিয়া ইউনিয়নের চুনতি বাজার এলাকায় এ মিছিল অনুষ্ঠিত হয়।",
+      "fact": "মিছিলটি আজ শনিবার ভোর ছয়টার দিকে কাথরিয়া ইউনিয়নের চুনতি বাজার এলাকায় অনুষ্ঠিত হয়।",
+      "prelims": true
+     },
+     {
+      "evidence": "ভিডিওতে দেখা যায়, সামনে একটি ব্যানার হাতে নিয়ে মিছিল করছেন নিষিদ্ধ ছাত্রলীগের নেতা-কর্মীরা। হাতে রঙিন লগি-বইঠা নিয়ে মিছিলে অংশগ্রহণ করেন বেশ কয়েকজন। মিছিলটি একপর্যায়ে বাজার এলাকায় থামে। সেখানে একজনকে বক্তব্য দিতেও দেখা যায়।",
+      "fact": "ভিডিওতে ব্যানার হাতে মিছিল, রঙিন লগি-বইঠা বহন এবং বাজার এলাকায় থেমে বক্তব্য দেওয়ার দৃশ্য দেখা যায়।",
+      "prelims": true
+     },
+     {
+      "evidence": "জানতে চাইলে মিছিলের সত্যতা নিশ্চিত করেছেন বাঁশখালী থানার ভারপ্রাপ্ত কর্মকর্তা (ওসি) মো. রবিউল হক।",
+      "fact": "বাঁশখালী থানার ওসি মো. রবিউল হক মিছিলের সত্যতা নিশ্চিত করেছেন।",
+      "prelims": true
+     },
+     {
+      "evidence": "তিনি বলেন, আশপাশে থাকা পুলিশ সদস্যরা মিছিলের খবর পেয়ে তাৎক্ষণিক ঘটনাস্থলে পৌঁছান। এরপর মিছিলে আসা লোকজনকে ধাওয়া দেওয়া হয়। মিছিলে অংশগ্রহণকারীদের পরিচয় শনাক্ত করে তাঁদের আইনের আওতায় আনার চেষ্টা চলছে।",
+      "fact": "পুলিশ খবর পেয়ে ঘটনাস্থলে গিয়ে মিছিলে আসা লোকজনকে ধাওয়া দেয় এবং অংশগ্রহণকারীদের শনাক্ত করে আইনের আওতায় আনার চেষ্টা চলছে।",
+      "prelims": true
+     }
+    ],
+    "mode": "full",
+    "score": 59.5,
+    "unsupported_dropped": 0,
+    "what_happened": "চট্টগ্রামের বাঁশখালীর কাথরিয়া ইউনিয়নের চুনতি বাজার এলাকায় নিষিদ্ধ ছাত্রলীগের একটি মিছিল হয়েছে। মিছিলের একাধিক ভিডিও সামাজিক যোগাযোগমাধ্যমে ছড়িয়ে পড়েছে এবং এতে লগি-বইঠা হাতে অংশ নেওয়ার কথা প্রতিবেদনে বলা হয়েছে। বাঁশখালী থানার ওসি মিছিলের সত্যতা নিশ্চিত করেছেন এবং পুলিশ ঘটনাস্থলে গিয়ে অংশগ্রহণকারীদের ধাওয়া দেয়।",
+    "why_it_matters": "এটি আইনশৃঙ্খলা, নিষিদ্ধ সংগঠনের তৎপরতা এবং পুলিশের তাৎক্ষণিক প্রতিক্রিয়ার সঙ্গে সম্পর্কিত একটি ঘটনা। BCS পরীক্ষায় এ ধরনের খবর প্রশাসন, সুশাসন ও নিরাপত্তা ব্যবস্থার বাস্তব উদাহরণ হিসেবে কাজে লাগতে পারে।",
+    "written_angle": "এই ঘটনা আইনশৃঙ্খলা রক্ষায় মাঠ প্রশাসনের দ্রুত সাড়া, সামাজিক যোগাযোগমাধ্যমে ভিডিও-নির্ভর তথ্যপ্রবাহ এবং নিষিদ্ধ সংগঠনের কার্যক্রম নজরদারির গুরুত্ব তুলে ধরে। লিখিত পরীক্ষায় সুশাসন, জননিরাপত্তা ও আইন প্রয়োগের বাস্তব চ্যালেঞ্জের উদাহরণ হিসেবে এটি ব্যবহার করা যায়।"
+   },
    "article_ids": [
     "a_27bf4f217f4fb3fc"
    ],
-   "attempts": 0,
+   "attempts": 1,
    "created_at": "2026-10-24T11:39:11+00:00",
    "event_id": "ev_2fa94c4bcf8f",
-   "included_in": null,
+   "included_in": "2026-10-25",
    "last_error": null,
    "screening": {
     "categories": [
@@ -2404,18 +3244,84 @@
     "rationale": "নিষিদ্ধ ছাত্রলীগের মিছিল রাজনৈতিক-আইনশৃঙ্খলা ও সংগঠন-সংক্রান্ত হওয়ায় প্রাসঙ্গিক, তবে রিপোর্টের তথ্য সীমিত।"
    },
    "screening_attempts": 0,
-   "status": "maybe",
-   "updated_at": "2026-10-24T11:39:11+00:00"
+   "status": "included",
+   "updated_at": "2026-10-25T02:30:10+00:00"
   },
   "ev_346eb0a2a517": {
-   "analysis": null,
+   "analysed_at": "2026-10-25T02:30:10+00:00",
+   "analysis": {
+    "analysed_article_id": "a_97c247ce094583ce",
+    "attributed_claims": [],
+    "background_context": "অস্কার ক্লেইন মেডেল তাত্ত্বিক পদার্থবিজ্ঞানের একটি মর্যাদাপূর্ণ আন্তর্জাতিক পুরস্কার। স্ট্রিং থিওরি মহাবিশ্বের মৌলিক কণা ও মহাকর্ষকে এক কাঠামোয় ব্যাখ্যা করার চেষ্টা করে।",
+    "categories": [
+     "science_technology"
+    ],
+    "causes_effects": "স্ট্রিং থিওরি নিয়ে অশোক সেনের দীর্ঘ গবেষণা তাঁকে আন্তর্জাতিক স্বীকৃতি এনে দিয়েছে। পুরস্কারটি তাঁর কাজকে বৈশ্বিক বিজ্ঞানসমাজে আরও দৃশ্যমান করবে এবং মৌলিক পদার্থবিজ্ঞানের গবেষণার গুরুত্ব তুলে ধরবে।",
+    "criteria": {
+     "factual_density": 7.0,
+     "novelty": 7.0,
+     "significance": 6.0,
+     "syllabus_relevance": 7.0,
+     "written_potential": 7.0
+    },
+    "exam_focus": "both",
+    "headline_bn": "অস্কার ক্লেইন মেডেল পেলেন বাঙালি বিজ্ঞানী অশোক সেন",
+    "institutions": [
+     "স্টকহোম বিশ্ববিদ্যালয়",
+     "রয়্যাল সুইডিশ একাডেমি অব সায়েন্সেস",
+     "নোবেল কমিটি ফর ফিজিকস",
+     "ইন্টারন্যাশনাল সেন্টার ফর থিওরেটিক্যাল সায়েন্সেস",
+     "ইনফোসিস-মাধব চেয়ার",
+     "টাটা ইনস্টিটিউট অব ফান্ডামেন্টাল রিসার্চ",
+     "হরিশচন্দ্র রিসার্চ ইনস্টিটিউট",
+     "আইআইটি কানপুর"
+    ],
+    "key_facts": [
+     {
+      "evidence": "“এবার সেই কাজের চূড়ান্ত স্বীকৃতি হিসেবে তিনি পেলেন পদার্থবিজ্ঞানের অন্যতম মর্যাদাপূর্ণ পুরস্কার ‘অস্কার ক্লেইন মেডেল’। ২০২৬ সালের এই পুরস্কার পাওয়ার মাধ্যমে”",
+      "fact": "অশোক সেন ২০২৬ সালের অস্কার ক্লেইন মেডেল পেয়েছেন।",
+      "prelims": true
+     },
+     {
+      "evidence": "“তিনি প্রথম ভারতীয় বিজ্ঞানী হিসেবে এই সম্মাননা অর্জন করলেন।”",
+      "fact": "তিনি প্রথম ভারতীয় বিজ্ঞানী হিসেবে এই সম্মাননা অর্জন করলেন।",
+      "prelims": true
+     },
+     {
+      "evidence": "“১৯৮৮ সাল থেকে দেওয়া হচ্ছে অস্কার ক্লেইন মেডেল।”",
+      "fact": "অস্কার ক্লেইন মেডেল ১৯৮৮ সাল থেকে দেওয়া হচ্ছে।",
+      "prelims": true
+     },
+     {
+      "evidence": "“সুইডেনের তাত্ত্বিক পদার্থবিজ্ঞানী অস্কার ক্লেইনের নামানুসারে এই পুরস্কারের নামকরণ করা হয়েছে।”",
+      "fact": "এই পুরস্কার সুইডেনের তাত্ত্বিক পদার্থবিজ্ঞানী অস্কার ক্লেইনের নামানুসারে নামকরণ করা হয়েছে।",
+      "prelims": true
+     },
+     {
+      "evidence": "“সুইডেনের স্টকহোম বিশ্ববিদ্যালয় এবং রয়্যাল সুইডিশ একাডেমি অব সায়েন্সেসের নোবেল কমিটি ফর ফিজিকস যৌথভাবে এই পদক প্রদান করে।”",
+      "fact": "স্টকহোম বিশ্ববিদ্যালয় এবং রয়্যাল সুইডিশ একাডেমি অব সায়েন্সেসের নোবেল কমিটি ফর ফিজিকস যৌথভাবে এই পদক প্রদান করে।",
+      "prelims": true
+     },
+     {
+      "evidence": "“২০২৬ সালের ২২ অক্টোবর স্টকহোম বিশ্ববিদ্যালয়ের আলবানোভা সেন্টারে এই পুরস্কার গ্রহণ উপলক্ষে অশোক সেন ‘গ্র্যাভিটি ফ্রম স্ট্রিংস অ্যান্ড স্ট্রিংস ফ্রম গ্র্যাভিটি’ শিরোনামে একটি বিশেষ বক্তৃতাও দেন।”",
+      "fact": "২০২৬ সালের ২২ অক্টোবর স্টকহোম বিশ্ববিদ্যালয়ের আলবানোভা সেন্টারে তিনি পুরস্কার গ্রহণ উপলক্ষে একটি বিশেষ বক্তৃতা দেন।",
+      "prelims": true
+     }
+    ],
+    "mode": "full",
+    "score": 67.5,
+    "unsupported_dropped": 0,
+    "what_happened": "বাঙালি বিজ্ঞানী অশোক সেন ২০২৬ সালের অস্কার ক্লেইন মেডেল পেয়েছেন। স্ট্রিং থিওরি [string theory] নিয়ে তাঁর গবেষণার স্বীকৃতি হিসেবে তাঁকে এই মর্যাদাপূর্ণ পদক দেওয়া হয় এবং তিনি প্রথম ভারতীয় বিজ্ঞানী হিসেবে এই সম্মাননা অর্জন করেন।",
+    "why_it_matters": "বাংলাদেশি বিসিএসের বিজ্ঞান ও প্রযুক্তি এবং আন্তর্জাতিক বিষয়াবলির প্রস্তুতিতে এটি গুরুত্বপূর্ণ খবর। কারণ এতে তাত্ত্বিক পদার্থবিজ্ঞান, আন্তর্জাতিক পুরস্কার এবং দক্ষিণ এশিয়ার একজন বিজ্ঞানীর বৈশ্বিক স্বীকৃতি একসঙ্গে এসেছে।",
+    "written_angle": "এটি বিজ্ঞানমনস্কতার পাশাপাশি বৈশ্বিক গবেষণায় দক্ষিণ এশীয় বিজ্ঞানীদের অবদান বোঝার জন্য ভালো উদাহরণ। বিসিএস লিখিত পরীক্ষায় তাত্ত্বিক পদার্থবিজ্ঞান, স্ট্রিং থিওরি এবং আন্তর্জাতিক পুরস্কারের গুরুত্ব সংক্ষেপে ব্যাখ্যা করা যেতে পারে।"
+   },
    "article_ids": [
     "a_97c247ce094583ce"
    ],
-   "attempts": 0,
+   "attempts": 1,
    "created_at": "2026-10-24T13:40:25+00:00",
    "event_id": "ev_346eb0a2a517",
-   "included_in": null,
+   "included_in": "2026-10-25",
    "last_error": null,
    "screening": {
     "categories": [
@@ -2428,8 +3334,8 @@
     "rationale": "অশোক সেনের আন্তর্জাতিক পুরস্কার প্রাপ্তি বিজ্ঞান ও পুরস্কারভিত্তিক দৃষ্টিতে গুরুত্বপূর্ণ।"
    },
    "screening_attempts": 0,
-   "status": "selected",
-   "updated_at": "2026-10-24T13:40:25+00:00"
+   "status": "included",
+   "updated_at": "2026-10-25T02:30:10+00:00"
   },
   "ev_377af5827198": {
    "analysis": null,
@@ -2453,6 +3359,30 @@
    "screening_attempts": 0,
    "status": "rejected",
    "updated_at": "2026-10-24T13:40:25+00:00"
+  },
+  "ev_3adbd1a78b99": {
+   "analysis": null,
+   "article_ids": [
+    "a_5a0f74d1a00c3e3c"
+   ],
+   "attempts": 0,
+   "created_at": "2026-10-25T02:30:10+00:00",
+   "event_id": "ev_3adbd1a78b99",
+   "included_in": null,
+   "last_error": null,
+   "screening": {
+    "categories": [
+     "science_technology",
+     "awards_reports_indices"
+    ],
+    "decision": "maybe",
+    "exam_focus": "prelims",
+    "priority": 3.0,
+    "rationale": "ব্ল্যাক কফির স্বাস্থ্যপ্রভাব নিয়ে গবেষণাভিত্তিক আলোচনা বিজ্ঞান অংশে সামান্য প্রাসঙ্গিকতা রাখে।"
+   },
+   "screening_attempts": 0,
+   "status": "maybe",
+   "updated_at": "2026-10-25T02:30:10+00:00"
   },
   "ev_3c39f8d72f90": {
    "analysis": null,
@@ -2600,11 +3530,78 @@
    "updated_at": "2026-10-24T13:40:25+00:00"
   },
   "ev_44ccf137af98": {
-   "analysis": null,
+   "analysed_at": "2026-10-25T02:30:10+00:00",
+   "analysis": {
+    "analysed_article_id": "a_05f8423da3faafe0",
+    "attributed_claims": [
+     {
+      "attributed_to": "বিদ্যুৎ, জ্বালানি ও খনিজ সম্পদ মন্ত্রণালয়",
+      "claim": "দুর্গাপূজার কেনাকাটার সুবিধার্থে দোকানপাট, শপিং মল ও বিপণিবিতান রাত ১০টা পর্যন্ত খোলা থাকবে।",
+      "evidence": "\"৫ অক্টোবর বিদ্যুৎ, জ্বালানি ও খনিজ সম্পদ মন্ত্রণালয় নির্দেশনা দিয়ে বলেছিল, দুর্গাপূজার কেনাকাটার সুবিধার্থে দোকানপাট, শপিং মল ও বিপণিবিতান রাত আটটার পরিবর্তে রাত ১০টা পর্যন্ত খোলা থাকবে।\""
+     }
+    ],
+    "background_context": "বাংলাদেশে উৎসব, ব্যবসা-বাণিজ্য এবং প্রশাসনিক সময়সূচি নিয়ে নিয়মিত নির্দেশনা দেওয়া হয়।",
+    "categories": [
+     "economy",
+     "bangladesh_affairs"
+    ],
+    "causes_effects": "দুর্গাপূজার কেনাকাটার সুবিধা দিতে সময় বাড়ানো হয়েছিল, পরে নির্ধারিত তারিখে আগের নিয়মে ফেরানো হয়েছে। এতে বোঝা যায় যে উৎসবকালীন চাহিদা বিবেচনায় নীতিগত সাময়িক ছাড় দেওয়া হয়, কিন্তু নির্দিষ্ট সময় শেষে স্বাভাবিক নিয়ম পুনর্বহাল করা হয়।",
+    "criteria": {
+     "factual_density": 5.0,
+     "novelty": 3.0,
+     "significance": 4.0,
+     "syllabus_relevance": 6.0,
+     "written_potential": 4.0
+    },
+    "exam_focus": "prelims",
+    "headline_bn": "দোকানপাট রাত আটটায় বন্ধের পুরোনো নিয়মে ফেরা",
+    "institutions": [
+     "বিদ্যুৎ, জ্বালানি ও খনিজ সম্পদ মন্ত্রণালয়",
+     "বাংলাদেশ দোকান মালিক সমিতি"
+    ],
+    "key_facts": [
+     {
+      "evidence": "\"এখন থেকে রাত আটটা পর্যন্ত দোকানপাট খোলা থাকবে।\"",
+      "fact": "দোকানপাট এখন রাত আটটা পর্যন্ত খোলা থাকবে।",
+      "prelims": true
+     },
+     {
+      "evidence": "\"গতকাল শুক্রবার এই সময়সীমা চালু হয়েছে।\"",
+      "fact": "গতকাল শুক্রবার এই সময়সীমা চালু হয়েছে।",
+      "prelims": true
+     },
+     {
+      "evidence": "\"৫ অক্টোবর বিদ্যুৎ, জ্বালানি ও খনিজ সম্পদ মন্ত্রণালয় নির্দেশনা দিয়ে বলেছিল, দুর্গাপূজার কেনাকাটার সুবিধার্থে দোকানপাট, শপিং মল ও বিপণিবিতান রাত আটটার পরিবর্তে রাত ১০টা পর্যন্ত খোলা থাকবে।\"",
+      "fact": "৫ অক্টোবর বিদ্যুৎ, জ্বালানি ও খনিজ সম্পদ মন্ত্রণালয় নির্দেশনা দিয়েছিল দোকানপাট, শপিং মল ও বিপণিবিতান রাত ১০টা পর্যন্ত খোলা থাকবে।",
+      "prelims": true
+     },
+     {
+      "evidence": "\"২২ অক্টোবর পর্যন্ত বেলা ১১টা থেকে রাত ১০টা পর্যন্ত এই বর্ধিত সময় কার্যকর থাকবে।\"",
+      "fact": "২২ অক্টোবর পর্যন্ত বেলা ১১টা থেকে রাত ১০টা পর্যন্ত বর্ধিত সময় কার্যকর ছিল।",
+      "prelims": true
+     },
+     {
+      "evidence": "\"২৩ অক্টোবর থেকে আবার আগের নিয়মে (রাত আটটা) ফিরবে।\"",
+      "fact": "২৩ অক্টোবর থেকে আবার আগের নিয়মে রাত আটটায় ফেরার কথা বলা হয়েছিল।",
+      "prelims": true
+     },
+     {
+      "evidence": "\"বাংলাদেশ দোকান মালিক সমিতির দাবির পরিপ্রেক্ষিতে দুর্গাপূজার কেনাকাটার সুবিধার্থে দোকানপাটের বর্ধিত সময় কার্যকর করা হয়েছিল।\"",
+      "fact": "বাংলাদেশ দোকান মালিক সমিতির দাবির পরিপ্রেক্ষিতে বর্ধিত সময় কার্যকর করা হয়েছিল।",
+      "prelims": true
+     }
+    ],
+    "mode": "full",
+    "score": 47.0,
+    "unsupported_dropped": 0,
+    "what_happened": "দোকানপাট খোলা রাখার সময়সীমা আগের নিয়মে ফিরে গেছে। এখন থেকে রাত আটটা পর্যন্ত দোকানপাট খোলা থাকবে। এর আগে দুর্গাপূজার কেনাকাটার সুবিধার্থে সময়সীমা সাময়িকভাবে রাত ১০টা পর্যন্ত বাড়ানো হয়েছিল।",
+    "why_it_matters": "এটি প্রশাসনিক নির্দেশনা ও বাণিজ্যিক কার্যক্রমের সময়সূচি-সংক্রান্ত একটি বাস্তব নীতিগত বিষয়। BCS-এর প্রিলিমসে মন্ত্রণালয়ের সিদ্ধান্ত, সময়সীমা পরিবর্তন এবং সংশ্লিষ্ট প্রেক্ষাপট থেকে প্রশ্ন আসতে পারে।",
+    "written_angle": "এটি সময়ভিত্তিক বাণিজ্য নিয়ন্ত্রণ ও উৎসবকেন্দ্রিক বাজার ব্যবস্থাপনার একটি উদাহরণ। প্রশাসনিক নির্দেশনা কীভাবে মৌসুমি চাহিদা অনুযায়ী পরিবর্তিত হয়, তা লিখিত পরীক্ষায় আলোচনা করা যেতে পারে।"
+   },
    "article_ids": [
     "a_05f8423da3faafe0"
    ],
-   "attempts": 0,
+   "attempts": 1,
    "created_at": "2026-10-24T13:40:25+00:00",
    "event_id": "ev_44ccf137af98",
    "included_in": null,
@@ -2620,8 +3617,32 @@
     "rationale": "দোকানপাট খোলা রাখার সময়সীমা পরিবর্তন নগর ব্যবস্থাপনা ও প্রশাসনিক সিদ্ধান্তের খবর।"
    },
    "screening_attempts": 0,
-   "status": "selected",
-   "updated_at": "2026-10-24T13:40:25+00:00"
+   "status": "analysed",
+   "updated_at": "2026-10-25T02:30:10+00:00"
+  },
+  "ev_478f4c997918": {
+   "analysis": null,
+   "article_ids": [
+    "a_e002b57481e7ef54"
+   ],
+   "attempts": 0,
+   "created_at": "2026-10-25T02:30:10+00:00",
+   "event_id": "ev_478f4c997918",
+   "included_in": null,
+   "last_error": null,
+   "screening": {
+    "categories": [
+     "bangladesh_affairs",
+     "economy"
+    ],
+    "decision": "maybe",
+    "exam_focus": "prelims",
+    "priority": 4.0,
+    "rationale": "ঐতিহ্যবাহী বাজার ও কৃষিপণ্যের বাণিজ্য সম্পর্কে লেখা স্থানীয় অর্থনীতি ও গ্রামীণ বাজার ব্যবস্থায় কিছু প্রাসঙ্গিকতা রাখে।"
+   },
+   "screening_attempts": 0,
+   "status": "maybe",
+   "updated_at": "2026-10-25T02:30:10+00:00"
   },
   "ev_49bcef10ec81": {
    "analysis": null,
@@ -2741,6 +3762,48 @@
    "screening_attempts": 0,
    "status": "analysed",
    "updated_at": "2026-10-24T11:39:11+00:00"
+  },
+  "ev_4ec8c5cc69b3": {
+   "analysis": null,
+   "article_ids": [
+    "a_03d8e619f3e8c21c"
+   ],
+   "attempts": 0,
+   "created_at": "2026-10-25T02:30:10+00:00",
+   "event_id": "ev_4ec8c5cc69b3",
+   "included_in": null,
+   "last_error": null,
+   "screening": {
+    "categories": [],
+    "decision": "reject",
+    "exam_focus": "none",
+    "priority": 1.0,
+    "rationale": "ধর্মীয় উৎসবসংক্রান্ত সংবাদ, BCS current affairs-এর নির্বাচিত শ্রেণিতে পড়ে না।"
+   },
+   "screening_attempts": 0,
+   "status": "rejected",
+   "updated_at": "2026-10-25T02:30:10+00:00"
+  },
+  "ev_4f912fbc18dc": {
+   "analysis": null,
+   "article_ids": [
+    "a_dcef5eaf6b88e612"
+   ],
+   "attempts": 0,
+   "created_at": "2026-10-25T02:30:10+00:00",
+   "event_id": "ev_4f912fbc18dc",
+   "included_in": null,
+   "last_error": null,
+   "screening": {
+    "categories": [],
+    "decision": "reject",
+    "exam_focus": "none",
+    "priority": 2.0,
+    "rationale": "মহাসড়কে ট্রাফিক শৃঙ্খলা নিয়ে সাধারণ অভিযোগ, তবে উল্লেখযোগ্য নীতি বা সরকারি সিদ্ধান্ত নেই।"
+   },
+   "screening_attempts": 0,
+   "status": "rejected",
+   "updated_at": "2026-10-25T02:30:10+00:00"
   },
   "ev_526256da2186": {
    "analysis": null,
@@ -2930,6 +3993,116 @@
    "status": "included",
    "updated_at": "2026-10-24T13:40:25+00:00"
   },
+  "ev_666b1a01fee0": {
+   "analysed_at": "2026-10-25T02:30:10+00:00",
+   "analysis": {
+    "analysed_article_id": "a_841f2a83ef03243f",
+    "attributed_claims": [
+     {
+      "attributed_to": "বে-নজীর আহমদ",
+      "claim": "এবারের ডেঙ্গু পরিস্থিতিতে জুনের আগপর্যন্ত রোগী কম ছিল, পরে কয়েক মাসে রোগী ব্যাপকভাবে বেড়েছে।",
+      "evidence": "“বছরের প্রথম ভাগে—অর্থাৎ জুনের আগপর্যন্ত—ডেঙ্গুর রোগী তেমন ছিল না।”"
+     },
+     {
+      "attributed_to": "বে-নজীর আহমদ",
+      "claim": "কিউডেঙ্গা সংক্রমণ ও হাসপাতালে ভর্তি কমাতে উল্লেখযোগ্যভাবে কার্যকর।",
+      "evidence": "“কিউডেঙ্গা সংক্রমণ ও হাসপাতালে ভর্তি কমাতে উল্লেখযোগ্যভাবে কার্যকর।”"
+     },
+     {
+      "attributed_to": "বে-নজীর আহমদ",
+      "claim": "জাপানে বছরে প্রায় ৬০ লাখ ডোজ টিকা তৈরি হয়।",
+      "evidence": "“জাপানে বছরে প্রায় ৬০ লাখ ডোজ টিকা তৈরি হয়।”"
+     }
+    ],
+    "background_context": "ডেঙ্গু একটি মশাবাহিত ভাইরাল রোগ। বাংলাদেশে সাধারণত বর্ষা ও আর্দ্র মৌসুমে এর ঝুঁকি বাড়ে, আর নিয়ন্ত্রণে জনসচেতনতা, মশা দমন ও স্বাস্থ্যসেবা প্রস্তুতি গুরুত্বপূর্ণ।",
+    "categories": [
+     "bangladesh_affairs",
+     "science_technology",
+     "constitution_governance"
+    ],
+    "causes_effects": "আবহাওয়া অনুকূল হওয়া, এডিস মশার ব্যাপক প্রজনন, মানুষের চলাচল এবং দুর্বল কীটতাত্ত্বিক সক্ষমতা ডেঙ্গু বিস্তারে ভূমিকা রাখছে। এর ফলে ঢাকার বাইরে, এমনকি গ্রামাঞ্চলেও রোগী শনাক্ত হচ্ছে এবং প্রতিরোধে টিকা, ল্যাব সক্ষমতা ও স্বাস্থ্যব্যবস্থার প্রস্তুতির প্রয়োজন বাড়ছে।",
+    "criteria": {
+     "factual_density": 8.0,
+     "novelty": 8.0,
+     "significance": 8.0,
+     "syllabus_relevance": 9.0,
+     "written_potential": 9.0
+    },
+    "exam_focus": "both",
+    "headline_bn": "ডেঙ্গু প্রতিরোধ কৌশলে টিকা যুক্ত করার আলোচনা",
+    "institutions": [
+     "আইইডিসিআর",
+     "আইসিডিডিআরবি",
+     "ন্যাশনাল ইনস্টিটিউট অব ল্যাবরেটরি মেডিসিন",
+     "বিশ্ব স্বাস্থ্য সংস্থা",
+     "উপজেলা স্বাস্থ্য কমপ্লেক্স",
+     "স্বাস্থ্য মন্ত্রণালয়",
+     "স্থানীয় সরকার বিভাগ",
+     "জাহাঙ্গীরনগর বিশ্ববিদ্যালয়"
+    ],
+    "key_facts": [
+     {
+      "evidence": "“ডেঙ্গু এখন শুধু ঢাকা বা বড় শহরে সীমাবদ্ধ নেই, ছড়িয়ে পড়ছে গ্রামাঞ্চলেও।”",
+      "fact": "ডেঙ্গু এখন ঢাকা ও বড় শহরের বাইরে গ্রামাঞ্চলেও ছড়িয়ে পড়ছে।",
+      "prelims": true
+     },
+     {
+      "evidence": "“প্রতিরোধের বিকল্প ব্যবস্থা হিসেবে টিকাকে জাতীয় কৌশলে যুক্ত করার পক্ষে জনস্বাস্থ্যবিদ বে-নজীর আহমদ।”",
+      "fact": "বে-নজীর আহমদ টিকাকে জাতীয় ডেঙ্গু প্রতিরোধ কৌশলে যুক্ত করার পক্ষে মত দিয়েছেন।",
+      "prelims": true
+     },
+     {
+      "evidence": "“প্রধানমন্ত্রী তারেক রহমানের আসন্ন জাপান সফরে কিউডেঙ্গা টিকা সংগ্রহ ও সাশ্রয়ী দামে সরবরাহের বিষয়টি আলোচনায় আনা যেতে পারে।”",
+      "fact": "তিনি কিউডেঙ্গা টিকা সংগ্রহ ও সাশ্রয়ী দামে সরবরাহের বিষয়টি জাপান সফরে আলোচনায় আনার কথা বলেছেন।",
+      "prelims": true
+     },
+     {
+      "evidence": "“ডেঙ্গু ভাইরাসের চারটি সেরোটাইপ আছে—ডেন-১, ডেন-২, ডেন-৩ ও ডেন-৪।”",
+      "fact": "ডেঙ্গুর চারটি সেরোটাইপ আছে: ডেন-১, ডেন-২, ডেন-৩ ও ডেন-৪।",
+      "prelims": true
+     },
+     {
+      "evidence": "“আইইডিসিআর, আইসিডিডিআরবি এবং ন্যাশনাল ইনস্টিটিউট অব ল্যাবরেটরি মেডিসিনে জিনোম সিকোয়েন্সিংয়ের সক্ষমতা বাড়ানো দরকার।”",
+      "fact": "আইইডিসিআর, আইসিডিডিআরবি এবং ন্যাশনাল ইনস্টিটিউট অব ল্যাবরেটরি মেডিসিনে জিনোম সিকোয়েন্সিংয়ের সক্ষমতা বাড়ানোর কথা বলা হয়েছে।",
+      "prelims": true
+     },
+     {
+      "evidence": "“দুই ডোজের টিকায় জনপ্রতি প্রায় ৮ থেকে ১০ হাজার টাকা লাগতে পারে।”",
+      "fact": "দুই ডোজের টিকায় জনপ্রতি প্রায় ৮ থেকে ১০ হাজার টাকা লাগতে পারে।",
+      "prelims": true
+     }
+    ],
+    "mode": "full",
+    "score": 84.5,
+    "unsupported_dropped": 0,
+    "what_happened": "জনস্বাস্থ্যবিদ বে-নজীর আহমদ বলেছেন, ডেঙ্গু এখন ঢাকা ও বড় শহরের বাইরে গ্রামাঞ্চলেও ছড়াচ্ছে এবং এডিস মশা নিয়ন্ত্রণে ঘাটতি থাকায় টিকাকে জাতীয় কৌশলে যুক্ত করা যেতে পারে। তিনি প্রধানমন্ত্রী তারেক রহমানের আসন্ন জাপান সফরে কিউডেঙ্গা টিকা সংগ্রহ ও সাশ্রয়ী দামে সরবরাহের বিষয়টি আলোচনায় তোলার পরামর্শ দিয়েছেন।",
+    "why_it_matters": "ডেঙ্গু এখন জনস্বাস্থ্যের পাশাপাশি স্থানীয় সরকার, রোগনির্ণয়, ভ্যাকসিন নীতি ও চিকিৎসা প্রস্তুতির বিষয় হয়ে উঠেছে। BCS পরীক্ষায় এটি স্বাস্থ্যব্যবস্থা, সুশাসন এবং জনস্বাস্থ্য নীতির সমন্বিত উদাহরণ হিসেবে গুরুত্বপূর্ণ।",
+    "written_angle": "ডেঙ্গু প্রতিরোধে শুধু ফগিং বা পরিচ্ছন্নতা অভিযান যথেষ্ট নয়; মশা নিয়ন্ত্রণ, সেরোটাইপিং, জিনোম সিকোয়েন্সিং, সেরোসার্ভিলেন্স এবং টিকা নীতি একসঙ্গে বিবেচনা করতে হবে। ঝুঁকিভিত্তিক টিকা কর্মসূচি, চিকিৎসা প্রস্তুতি এবং স্থানীয় সরকারের কীটতাত্ত্বিক সক্ষমতা বৃদ্ধির মাধ্যমে সমন্বিত জনস্বাস্থ্য কৌশল গড়ে তোলা যায়।"
+   },
+   "article_ids": [
+    "a_841f2a83ef03243f",
+    "a_d93fa6ec4d52ae95"
+   ],
+   "attempts": 1,
+   "created_at": "2026-10-25T02:30:10+00:00",
+   "event_id": "ev_666b1a01fee0",
+   "included_in": "2026-10-25",
+   "last_error": null,
+   "screening": {
+    "categories": [
+     "foreign_policy_geopolitics",
+     "science_technology",
+     "economy"
+    ],
+    "decision": "select",
+    "exam_focus": "both",
+    "priority": 8.0,
+    "rationale": "জাপান সফরে ডেঙ্গু টিকা সংগ্রহ ও দামের বিষয়ে আলোচনা সম্ভাব্য হওয়ায় এটি স্বাস্থ্য, বিদেশনীতি ও কূটনৈতিক প্রাসঙ্গিকতায় গুরুত্বপূর্ণ।"
+   },
+   "screening_attempts": 0,
+   "status": "included",
+   "updated_at": "2026-10-25T02:30:10+00:00"
+  },
   "ev_6e21e4b6bb83": {
    "analysed_at": "2026-10-24T11:39:11+00:00",
    "analysis": {
@@ -3020,6 +4193,110 @@
    "screening_attempts": 0,
    "status": "included",
    "updated_at": "2026-10-24T11:39:11+00:00"
+  },
+  "ev_6e5cd7156b36": {
+   "analysed_at": "2026-10-25T02:30:10+00:00",
+   "analysis": {
+    "analysed_article_id": "a_604f9c0d72d244d2",
+    "attributed_claims": [
+     {
+      "attributed_to": "প্রতিবেদক/বিশ্লেষক",
+      "claim": "এ উদ্যোগ সফল হবে কি না তা এখনই অনুমান করা তাড়াহুড়া হবে।",
+      "evidence": "এই প্রচেষ্টা সফল হবে কি না তা অনুমান করা এখনই তাড়াহুড়া হয়ে যাবে"
+     },
+     {
+      "attributed_to": "প্রতিবেদক/বিশ্লেষক",
+      "claim": "রাশিয়ার পারমাণবিক কর্মসূচির সবকটি দিক সম্পর্কে পূর্ণ পারদর্শিতা ও জ্ঞান রয়েছে।",
+      "evidence": "ইরানের পারমাণবিক কর্মসূচির সবকটি দিক সম্পর্কে রাশিয়ার পূর্ণ পারদর্শিতা ও জ্ঞান রয়েছে।"
+     },
+     {
+      "attributed_to": "প্রতিবেদক/বিশ্লেষক",
+      "claim": "মস্কো নাকি তেহরানকে রক্ষায় ব্যর্থ হয়েছে—এমন সমালোচনা ভিত্তিহীন।",
+      "evidence": "অতএব, মস্কো নাকি ২০২৫ সালের ১২ দিনের যুদ্ধে এবং চলমান সামরিক সংঘাতের সময় তেহরানকে রক্ষায় এগিয়ে আসতে ব্যর্থ হয়েছে—এমন সমালোচনা ভিত্তিহীন।"
+     }
+    ],
+    "background_context": "ইরানের পারমাণবিক ইস্যু বহু বছর ধরে আন্তর্জাতিক কূটনীতির কেন্দ্রবিন্দুতে রয়েছে। এতে যুক্তরাষ্ট্র, ইউরোপীয় শক্তি, রাশিয়া ও চীনের মতো পক্ষগুলো জড়িত থেকেছে।",
+    "categories": [
+     "foreign_policy_geopolitics",
+     "international_affairs"
+    ],
+    "causes_effects": "প্রতিবেদন অনুযায়ী, রাশিয়া ইরানের পারমাণবিক কর্মসূচি সম্পর্কে অভিজ্ঞতা, দুই দেশের সাম্প্রতিক ঘনিষ্ঠতা এবং চলমান আন্তর্জাতিক সংকটকে কাজে লাগিয়ে মধ্যস্থতার সুযোগ দেখছে। এর সম্ভাব্য প্রভাব হতে পারে নতুন পারমাণবিক আলোচনার পথ তৈরি হওয়া এবং বৃহৎ শক্তিগুলোর কূটনৈতিক সমন্বয় বৃদ্ধি পাওয়া।",
+    "criteria": {
+     "factual_density": 8.0,
+     "novelty": 7.0,
+     "significance": 8.0,
+     "syllabus_relevance": 8.0,
+     "written_potential": 8.0
+    },
+    "exam_focus": "both",
+    "headline_bn": "ইরান-যুক্তরাষ্ট্র আলোচনায় রাশিয়ার সম্ভাব্য মধ্যস্থতা",
+    "institutions": [
+     "রোসাটম",
+     "যৌথ ব্যাপক কর্মপরিকল্পনা (জেসিপিওএ)",
+     "আন্তর্জাতিক উত্তর-দক্ষিণ পরিবহন করিডর",
+     "এশিয়া-প্যাসিফিক ইকোনমিক কো–অপারেশন (অ্যাপেক)",
+     "মস্কোর হাইয়ার স্কুল অব ইকোনমিকস"
+    ],
+    "key_facts": [
+     {
+      "evidence": "এই সপ্তাহে রাশিয়ার পররাষ্ট্রমন্ত্রী সের্গেই লাভরভ ইরান সফর করেন, যেখানে তিনি ইরানের প্রেসিডেন্ট মাসুদ পেজেশকিয়ান এবং অন্যান্য বেশ কয়েকজন কর্মকর্তার সঙ্গে বৈঠক করেছেন।",
+      "fact": "সের্গেই লাভরভ ইরান সফর করে প্রেসিডেন্ট মাসুদ পেজেশকিয়ানসহ কয়েকজন কর্মকর্তার সঙ্গে বৈঠক করেছেন।",
+      "prelims": true
+     },
+     {
+      "evidence": "মস্কো পারমাণবিক চুক্তি সম্পর্কিত সম্ভাব্য আলোচনায় ওয়াশিংটন ও তেহরানের মধ্যে মধ্যস্থতা করার প্রস্তাব দিয়েছে।",
+      "fact": "মস্কো পারমাণবিক চুক্তি সম্পর্কিত সম্ভাব্য আলোচনায় ওয়াশিংটন ও তেহরানের মধ্যে মধ্যস্থতা করার প্রস্তাব দিয়েছে।",
+      "prelims": true
+     },
+     {
+      "evidence": "বর্তমানে বুশেহরে পারমাণবিক বিদ্যুৎকেন্দ্রের দুটি নতুন ইউনিট নির্মাণ করছে রাশিয়া।",
+      "fact": "রাশিয়া বুশেহরে পারমাণবিক বিদ্যুৎকেন্দ্রের দুটি নতুন ইউনিট নির্মাণ করছে।",
+      "prelims": true
+     },
+     {
+      "evidence": "২০২৫ সালের শুরুর দিকে, দুই দেশ একটি বিস্তৃত কৌশলগত অংশীদারত্ব চুক্তি স্বাক্ষর করে",
+      "fact": "২০২৫ সালের শুরুর দিকে দুই দেশ একটি বিস্তৃত কৌশলগত অংশীদারত্ব চুক্তি স্বাক্ষর করে।",
+      "prelims": true
+     },
+     {
+      "evidence": "রাশিয়ানরা চুক্তিতে একটি পারস্পরিক সামরিক সহায়তার ধারা অন্তর্ভুক্ত করার প্রস্তাব করেছিল, কিন্তু ইরানিরা তাতে সম্মতি দেয়নি।",
+      "fact": "রাশিয়ানরা চুক্তিতে একটি পারস্পরিক সামরিক সহায়তার ধারা অন্তর্ভুক্ত করার প্রস্তাব করেছিল, কিন্তু ইরানিরা তাতে সম্মতি দেয়নি।",
+      "prelims": true
+     },
+     {
+      "evidence": "রাশিয়া ইরানের সঙ্গে মধ্যস্থতা করার ক্ষেত্রে মস্কো বেশ শক্তিশালী অবস্থানে রয়েছে, কারণ তারা ২০১৫ সালের যৌথ ব্যাপক কর্মপরিকল্পনা (জেসিপিওএ) স্বাক্ষরকারী আটপক্ষীয় আলোচনার অংশ ছিল",
+      "fact": "রাশিয়া ২০১৫ সালের যৌথ ব্যাপক কর্মপরিকল্পনা (জেসিপিওএ) স্বাক্ষরকারী আটপক্ষীয় আলোচনার অংশ ছিল।",
+      "prelims": true
+     }
+    ],
+    "mode": "full",
+    "score": 79.0,
+    "unsupported_dropped": 0,
+    "what_happened": "রাশিয়ার পররাষ্ট্রমন্ত্রী সের্গেই লাভরভ ইরান সফর করে প্রেসিডেন্ট মাসুদ পেজেশকিয়ানসহ কয়েকজন কর্মকর্তার সঙ্গে বৈঠক করেছেন। প্রতিবেদনটিতে বলা হয়েছে, পারমাণবিক চুক্তি নিয়ে ওয়াশিংটন ও তেহরানের মধ্যে মধ্যস্থতার প্রস্তাব দিতে মস্কো সক্রিয় হয়েছে এবং রাশিয়া নিজেকে সম্ভাব্য শক্তিশালী মধ্যস্থতাকারী হিসেবে তুলে ধরছে।",
+    "why_it_matters": "এটি যুক্তরাষ্ট্র-ইরান সম্পর্ক, রাশিয়ার কূটনৈতিক ভূমিকা এবং ইরান-সংক্রান্ত পারমাণবিক আলোচনার সঙ্গে যুক্ত একটি গুরুত্বপূর্ণ আন্তর্জাতিক ইস্যু। BCS পরীক্ষায় এটি পররাষ্ট্রনীতি, ভূরাজনীতি এবং পারমাণবিক কূটনীতি বোঝার জন্য কাজে লাগতে পারে।",
+    "written_angle": "এটি পারমাণবিক কূটনীতি ও শক্তিধর রাষ্ট্রগুলোর মধ্যস্থতার রাজনীতির একটি উদাহরণ। পরীক্ষায় রাশিয়ার সম্ভাব্য ভূমিকা, জেসিপিওএ, এবং যুক্তরাষ্ট্র-ইরান-রাশিয়া ত্রিপক্ষীয় সমীকরণ বিশ্লেষণ করা যেতে পারে।"
+   },
+   "article_ids": [
+    "a_604f9c0d72d244d2"
+   ],
+   "attempts": 1,
+   "created_at": "2026-10-25T02:30:10+00:00",
+   "event_id": "ev_6e5cd7156b36",
+   "included_in": "2026-10-25",
+   "last_error": null,
+   "screening": {
+    "categories": [
+     "international_affairs",
+     "foreign_policy_geopolitics"
+    ],
+    "decision": "select",
+    "exam_focus": "both",
+    "priority": 7.0,
+    "rationale": "রাশিয়া, যুক্তরাষ্ট্র ও ইরানকে ঘিরে কূটনৈতিক মধ্যস্থতার সম্ভাবনা আন্তর্জাতিক সম্পর্কের দিক থেকে গুরুত্বপূর্ণ।"
+   },
+   "screening_attempts": 0,
+   "status": "included",
+   "updated_at": "2026-10-25T02:30:10+00:00"
   },
   "ev_724882cd290b": {
    "analysed_at": "2026-10-24T11:39:11+00:00",
@@ -3300,6 +4577,27 @@
    "status": "rejected",
    "updated_at": "2026-10-24T11:39:11+00:00"
   },
+  "ev_7cd5e6a1f12a": {
+   "analysis": null,
+   "article_ids": [
+    "a_3e0a7209ef7da655"
+   ],
+   "attempts": 0,
+   "created_at": "2026-10-25T02:30:10+00:00",
+   "event_id": "ev_7cd5e6a1f12a",
+   "included_in": null,
+   "last_error": null,
+   "screening": {
+    "categories": [],
+    "decision": "reject",
+    "exam_focus": "none",
+    "priority": 0.0,
+    "rationale": "ফুটবল ম্যাচ-সংক্রান্ত খেলাধুলার বিশ্লেষণ, BCS current affairs-এর বাইরে।"
+   },
+   "screening_attempts": 0,
+   "status": "rejected",
+   "updated_at": "2026-10-25T02:30:10+00:00"
+  },
   "ev_7df9d3df628b": {
    "analysis": null,
    "article_ids": [
@@ -3322,6 +4620,48 @@
    "screening_attempts": 0,
    "status": "rejected",
    "updated_at": "2026-10-24T13:40:25+00:00"
+  },
+  "ev_7e89e60266e4": {
+   "analysis": null,
+   "article_ids": [
+    "a_8f3949f82a422818"
+   ],
+   "attempts": 0,
+   "created_at": "2026-10-25T02:30:10+00:00",
+   "event_id": "ev_7e89e60266e4",
+   "included_in": null,
+   "last_error": null,
+   "screening": {
+    "categories": [],
+    "decision": "reject",
+    "exam_focus": "none",
+    "priority": 1.0,
+    "rationale": "ব্যক্তিগত সাফল্যের মানবিক-গল্প, নীতি বা জাতীয় প্রাসঙ্গিকতা নেই।"
+   },
+   "screening_attempts": 0,
+   "status": "rejected",
+   "updated_at": "2026-10-25T02:30:10+00:00"
+  },
+  "ev_7fafd5a1423b": {
+   "analysis": null,
+   "article_ids": [
+    "a_495957edbf27f781"
+   ],
+   "attempts": 0,
+   "created_at": "2026-10-25T02:30:10+00:00",
+   "event_id": "ev_7fafd5a1423b",
+   "included_in": null,
+   "last_error": null,
+   "screening": {
+    "categories": [],
+    "decision": "reject",
+    "exam_focus": "none",
+    "priority": 0.0,
+    "rationale": "খাবার নিয়ে সাধারণ জীবনধর্মী প্রশ্ন, কোনো পরীক্ষাযোগ্য current-affairs value নেই।"
+   },
+   "screening_attempts": 0,
+   "status": "rejected",
+   "updated_at": "2026-10-25T02:30:10+00:00"
   },
   "ev_822090c79d35": {
    "analysed_at": "2026-10-24T11:39:11+00:00",
@@ -3453,14 +4793,98 @@
    "updated_at": "2026-10-24T13:40:25+00:00"
   },
   "ev_846c02267ee0": {
-   "analysis": null,
+   "analysed_at": "2026-10-25T02:30:10+00:00",
+   "analysis": {
+    "analysed_article_id": "a_1cdef871ea21015c",
+    "attributed_claims": [
+     {
+      "attributed_to": "পাঞ্জাবের মুখ্যমন্ত্রী ভগবন্ত সিং মান",
+      "claim": "দিল্লি বিমানবন্দরে তাঁকে অহেতুক আটকানো হয় এবং এটি রাজনৈতিক প্রতিশোধের কায়দা।",
+      "evidence": "“দিল্লি বিমানবন্দরে তাঁকে অহেতুক আটকে রাখা হয়”"
+     },
+     {
+      "attributed_to": "পাঞ্জাবের মুখ্যমন্ত্রী ভগবন্ত সিং মান",
+      "claim": "শুল্ক বিভাগের কর্মীরা ওপর মহলের চাপের কথা বলে ৫০ হাজার রুপি জরিমানার কথা বলেন।",
+      "evidence": "“ওপর মহল থেকে তাঁদের ওপর খুব চাপ রয়েছে। একটা চালান কাটতেই হবে। তারপর তাঁরা ৫০ হাজার রুপি জরিমানা ধার্য করেন।”"
+     },
+     {
+      "attributed_to": "বিজেপির রাজ্য সাধারণ সম্পাদক অনিল সারিন",
+      "claim": "প্রটোকল অনুযায়ী মুখ্যমন্ত্রীরা কিছু সুবিধা পান, কিন্তু তাঁদের সঙ্গীরা সেই সুবিধা পান না।",
+      "evidence": "“প্রটোকল অনুযায়ী মুখ্যমন্ত্রীরা অবশ্যই কিছু সুবিধা পান”"
+     }
+    ],
+    "background_context": "ভারতে মুখ্যমন্ত্রীদের বিদেশ সফরের আগে কেন্দ্রীয় অনুমতি প্রয়োজন হতে পারে। পাঞ্জাবে আপ, বিজেপি ও কংগ্রেসের মধ্যে রাজনৈতিক প্রতিদ্বন্দ্বিতা রয়েছে, এবং নির্বাচন-সম্পর্কিত ইস্যুতে উত্তেজনা দেখা যায়।",
+    "categories": [
+     "foreign_policy_geopolitics",
+     "constitution_governance",
+     "bangladesh_affairs"
+    ],
+    "causes_effects": "সংবাদ অনুযায়ী, এসআইআর ইস্যু ও কেন্দ্রের সঙ্গে রাজনৈতিক রেষারেষি এই বিতর্ককে আরও তীব্র করেছে। এর ফলে নির্বাচন কমিশন ও প্রশাসনিক সিদ্ধান্তকে ঘিরে নতুন রাজনৈতিক সংঘাত তৈরি হয়েছে এবং বিধানসভায় তদন্তের দাবি উঠেছে।",
+    "criteria": {
+     "factual_density": 8.0,
+     "novelty": 7.0,
+     "significance": 7.0,
+     "syllabus_relevance": 8.0,
+     "written_potential": 8.0
+    },
+    "exam_focus": "both",
+    "headline_bn": "দিল্লি বিমানবন্দরে মানের অভিযোগ, সিইসির ভাইকে ঘিরে বিতর্ক",
+    "institutions": [
+     "পাঞ্জাব বিধানসভা",
+     "দিল্লি শুল্ক বিভাগ",
+     "ভারতের মুখ্য নির্বাচন কমিশনার",
+     "পাঞ্জাব ও হরিয়ানা হাইকোর্ট",
+     "আম আদমি পার্টি",
+     "বিজেপি",
+     "কংগ্রেস",
+     "শিরোমনি অকালি দল"
+    ],
+    "key_facts": [
+     {
+      "evidence": "“দিল্লি বিমানবন্দরে তাঁকে তিন ঘণ্টা আটকে রাখার”",
+      "fact": "ভগবন্ত সিং মান দাবি করেন, দিল্লি বিমানবন্দরে তাঁকে তিন ঘণ্টা আটকে রাখা হয়।",
+      "prelims": true
+     },
+     {
+      "evidence": "“৫০ হাজার রুপি জরিমানার চালান কাটা হয়”",
+      "fact": "তিনি বলেন, তাঁকে ৫০ হাজার রুপি জরিমানার চালান কাটা হয়।",
+      "prelims": true
+     },
+     {
+      "evidence": "“তিনি এ দেশের মুখ্য নির্বাচন কমিশনার জ্ঞানেশ কুমারের ভাই মণীশ কুমার।”",
+      "fact": "মান অভিযোগ করেন, এ ঘটনায় যুক্ত ব্যক্তি ছিলেন মুখ্য নির্বাচন কমিশনার জ্ঞানেশ কুমারের ভাই মণীশ কুমার।",
+      "prelims": true
+     },
+     {
+      "evidence": "“পাঞ্জাবের ভোটার তালিকা সংশোধন (এসআইআর) ও সিইসি জ্ঞানেশ কুমারের কাজকর্ম নিয়ে স্বাধীন তদন্তের দাবি জানিয়ে এক প্রস্তাব শুক্রবার পাঞ্জাব বিধানসভায় গৃহীত হয়।”",
+      "fact": "পাঞ্জাব বিধানসভায় এসআইআর ও সিইসি জ্ঞানেশ কুমারের কাজকর্ম নিয়ে স্বাধীন তদন্তের দাবি জানিয়ে একটি প্রস্তাব গৃহীত হয়।",
+      "prelims": true
+     },
+     {
+      "evidence": "“প্রস্তাব পাস হওয়ার সময় কংগ্রেস, শিরোমনি অকালি দল ও বিজেপি সদস্যরা সভায় উপস্থিত ছিলেন না।”",
+      "fact": "প্রস্তাব পাসের সময় কংগ্রেস, শিরোমনি অকালি দল ও বিজেপি সদস্যরা সভায় উপস্থিত ছিলেন না।",
+      "prelims": true
+     },
+     {
+      "evidence": "“হাইকোর্টের নির্দেশেই তিনি ১৭ থেকে ২১ অক্টোবর প্যারিস যান ‘এসআইএএল প্যারিস ২০২৬’ আন্তর্জাতিক খাদ্যমেলায় যোগ দিতে।”",
+      "fact": "মানের ফ্রান্স সফর ১৭ থেকে ২১ অক্টোবর প্যারিসে ‘এসআইএএল প্যারিস ২০২৬’ আন্তর্জাতিক খাদ্যমেলায় যোগ দেওয়ার জন্য ছিল।",
+      "prelims": true
+     }
+    ],
+    "mode": "full",
+    "score": 76.5,
+    "unsupported_dropped": 0,
+    "what_happened": "পাঞ্জাবের মুখ্যমন্ত্রী ভগবন্ত সিং মান রাজ্য বিধানসভায় অভিযোগ করেন যে দিল্লি বিমানবন্দরে তাঁকে তিন ঘণ্টা আটকে রাখা হয়, জিনিসপত্র তল্লাশি করা হয় এবং ৫০ হাজার রুপি জরিমানা করা হয়। তিনি দাবি করেন, এর নেপথ্যে ছিলেন ভারতের মুখ্য নির্বাচন কমিশনার জ্ঞানেশ কুমারের ভাই মণীশ কুমার। একই সঙ্গে পাঞ্জাব বিধানসভায় এসআইআর ও সিইসি জ্ঞানেশ কুমারের কাজকর্ম নিয়ে স্বাধীন তদন্তের দাবি জানিয়ে একটি প্রস্তাব গৃহীত হয়।",
+    "why_it_matters": "এটি নির্বাচন কমিশন, কেন্দ্র-রাজ্য সম্পর্ক এবং প্রশাসনিক নিরপেক্ষতা নিয়ে বিতর্ক তৈরি করেছে। ভারতের ভেতরের এই ঘটনাটি সংবিধানিক প্রতিষ্ঠান ও রাজনৈতিক সংঘাত বোঝার জন্য BCS-এ প্রাসঙ্গিক।",
+    "written_angle": "প্রশ্নটি নির্বাচন কমিশনের নিরপেক্ষতা, প্রশাসনিক ক্ষমতার অপব্যবহার এবং কেন্দ্র-রাজ্য রাজনৈতিক টানাপোড়েনের সঙ্গে যুক্ত। একই সঙ্গে বিদেশ সফরের অনুমতি, বিধানসভায় প্রস্তাব গ্রহণ এবং রাজনৈতিক অভিযোগের পারস্পরিক সম্পর্ক লিখিত উত্তরে আলোচনার সুযোগ তৈরি করে।"
+   },
    "article_ids": [
     "a_1cdef871ea21015c"
    ],
-   "attempts": 0,
+   "attempts": 1,
    "created_at": "2026-10-24T11:39:11+00:00",
    "event_id": "ev_846c02267ee0",
-   "included_in": null,
+   "included_in": "2026-10-25",
    "last_error": null,
    "screening": {
     "categories": [
@@ -3473,8 +4897,8 @@
     "rationale": "ভারতের নির্বাচনী তালিকা সংশোধন ও সিইসি-সংক্রান্ত বিতর্ক প্রতিবেশী দেশের শাসন ও নির্বাচন-প্রশাসনের সঙ্গে সম্পর্কিত।"
    },
    "screening_attempts": 0,
-   "status": "maybe",
-   "updated_at": "2026-10-24T11:39:11+00:00"
+   "status": "included",
+   "updated_at": "2026-10-25T02:30:10+00:00"
   },
   "ev_86a08e8184ef": {
    "analysed_at": "2026-10-24T11:39:11+00:00",
@@ -3819,6 +5243,27 @@
    "status": "included",
    "updated_at": "2026-10-24T13:40:25+00:00"
   },
+  "ev_92581c88faff": {
+   "analysis": null,
+   "article_ids": [
+    "a_30905f6b2900c01c"
+   ],
+   "attempts": 0,
+   "created_at": "2026-10-25T02:30:10+00:00",
+   "event_id": "ev_92581c88faff",
+   "included_in": null,
+   "last_error": null,
+   "screening": {
+    "categories": [],
+    "decision": "reject",
+    "exam_focus": "none",
+    "priority": 0.0,
+    "rationale": "বিদেশি ভাষা শেখা নিয়ে সাধারণ পরামর্শধর্মী লেখা, পরীক্ষায় সরাসরি প্রাসঙ্গিক নতুন তথ্য নেই।"
+   },
+   "screening_attempts": 0,
+   "status": "rejected",
+   "updated_at": "2026-10-25T02:30:10+00:00"
+  },
   "ev_942e6602a580": {
    "analysis": null,
    "article_ids": [
@@ -3864,6 +5309,27 @@
    "screening_attempts": 0,
    "status": "maybe",
    "updated_at": "2026-10-24T13:40:25+00:00"
+  },
+  "ev_9d47db446624": {
+   "analysis": null,
+   "article_ids": [
+    "a_02b570aedef4aa3b"
+   ],
+   "attempts": 0,
+   "created_at": "2026-10-25T02:30:10+00:00",
+   "event_id": "ev_9d47db446624",
+   "included_in": null,
+   "last_error": null,
+   "screening": {
+    "categories": [],
+    "decision": "reject",
+    "exam_focus": "none",
+    "priority": 0.0,
+    "rationale": "টিভি অনুষ্ঠানসূচি কেবল তথ্যসূচক, BCS current affairs-এর সঙ্গে সম্পর্কিত নয়।"
+   },
+   "screening_attempts": 0,
+   "status": "rejected",
+   "updated_at": "2026-10-25T02:30:10+00:00"
   },
   "ev_9ee4a08efb42": {
    "analysis": null,
@@ -4038,6 +5504,27 @@
    "screening_attempts": 0,
    "status": "rejected",
    "updated_at": "2026-10-24T11:39:11+00:00"
+  },
+  "ev_ba8e5146b682": {
+   "analysis": null,
+   "article_ids": [
+    "a_0d466c394a6de301"
+   ],
+   "attempts": 0,
+   "created_at": "2026-10-25T02:30:10+00:00",
+   "event_id": "ev_ba8e5146b682",
+   "included_in": null,
+   "last_error": null,
+   "screening": {
+    "categories": [],
+    "decision": "reject",
+    "exam_focus": "none",
+    "priority": 2.0,
+    "rationale": "উদ্ধৃত মন্তব্যসহ সামাজিক অস্থিরতার মানবিক চিত্র, তবে নির্দিষ্ট নীতি বা রাষ্ট্রীয় সিদ্ধান্ত নেই।"
+   },
+   "screening_attempts": 0,
+   "status": "rejected",
+   "updated_at": "2026-10-25T02:30:10+00:00"
   },
   "ev_bb1c0d5559d3": {
    "analysis": null,
@@ -4332,15 +5819,114 @@
    "status": "rejected",
    "updated_at": "2026-10-24T13:40:25+00:00"
   },
-  "ev_da93a8ebd366": {
+  "ev_d9a2e1269398": {
    "analysis": null,
+   "article_ids": [
+    "a_da72d5213f42c766"
+   ],
+   "attempts": 0,
+   "created_at": "2026-10-25T02:30:10+00:00",
+   "event_id": "ev_d9a2e1269398",
+   "included_in": null,
+   "last_error": null,
+   "screening": {
+    "categories": [],
+    "decision": "reject",
+    "exam_focus": "none",
+    "priority": 0.0,
+    "rationale": "অভিনেত্রীর পোশাক-সংক্রান্ত বিনোদনধর্মী প্রতিবেদন, পরীক্ষায় কোনো মূল্য যোগ করে না।"
+   },
+   "screening_attempts": 0,
+   "status": "rejected",
+   "updated_at": "2026-10-25T02:30:10+00:00"
+  },
+  "ev_da93a8ebd366": {
+   "analysed_at": "2026-10-25T02:30:10+00:00",
+   "analysis": {
+    "analysed_article_id": "a_d174ac6bd93ee2a3",
+    "attributed_claims": [
+     {
+      "attributed_to": "ডিএসসিসি প্রশাসক মো. আবদুস সালাম",
+      "claim": "অবৈধ হকার ও ভাসমান দোকান রাস্তায় যানজট, যত্রতত্র ময়লা ফেলা এবং পথচারীদের চলাচলে বিঘ্ন সৃষ্টির জন্য অনেকাংশে দায়ী।",
+      "evidence": "রাস্তায় যানজট, যত্রতত্র ময়লা ফেলা এবং পথচারীদের চলাচলে বিঘ্ন সৃষ্টির জন্য অনেকাংশে দায়ী অবৈধ হকার ও ভাসমান দোকান।"
+     },
+     {
+      "attributed_to": "ডিএসসিসি প্রশাসক মো. আবদুস সালাম",
+      "claim": "সিটি করপোরেশনের নির্ধারিত নিয়মের বাইরে দোকান বসালে মালামাল জব্দের পাশাপাশি আইনি ব্যবস্থা নেওয়া হবে।",
+      "evidence": "সিটি করপোরেশনের নির্ধারিত নিয়মের বাইরে দোকান বসালে মালামাল জব্দের পাশাপাশি আইনি ব্যবস্থা নেওয়া হবে।"
+     },
+     {
+      "attributed_to": "ডিএসসিসি প্রশাসক মো. আবদুস সালাম",
+      "claim": "সিআইডি কর্তৃপক্ষের অনুরোধে জনস্বার্থে এসটিএসটি অন্যত্র সরিয়ে সেখানে গাড়ি পার্কিংয়ের ব্যবস্থা করা হয়েছে।",
+      "evidence": "সিআইডি কর্তৃপক্ষের অনুরোধে জনস্বার্থে এসটিএসটি অন্যত্র সরিয়ে সেখানে গাড়ি পার্কিংয়ের ব্যবস্থা করা হয়েছে।"
+     }
+    ],
+    "background_context": "ঢাকার মতো ঘনবসতিপূর্ণ শহরে ফুটপাত, বর্জ্য ব্যবস্থাপনা, যানজট এবং ডেঙ্গু নিয়ন্ত্রণ সবসময় গুরুত্বপূর্ণ নগর-প্রশাসনিক বিষয়।",
+    "categories": [
+     "bangladesh_affairs",
+     "constitution_governance",
+     "environment_climate"
+    ],
+    "causes_effects": "অবৈধ দোকান ও হকারের কারণে রাস্তা দখল, যানজট এবং পথচারী চলাচলে বাধা তৈরি হচ্ছে বলে প্রশাসক উল্লেখ করেছেন। এর প্রতিক্রিয়ায় উচ্ছেদ অভিযান, মামলা, মালামাল জব্দ এবং পরিচ্ছন্নতা অভিযান জোরদার করার কথা বলা হয়েছে; পাশাপাশি ডেঙ্গু প্রতিরোধে পানি জমতে না দেওয়ার ওপর জোর দেওয়া হয়েছে।",
+    "criteria": {
+     "factual_density": 7.0,
+     "novelty": 6.0,
+     "significance": 7.0,
+     "syllabus_relevance": 8.0,
+     "written_potential": 7.0
+    },
+    "exam_focus": "both",
+    "headline_bn": "ফুটপাত দখলে সরাসরি মামলা ও মালামাল জব্দের হুঁশিয়ারি ডিএসসিসির",
+    "institutions": [
+     "ঢাকা দক্ষিণ সিটি করপোরেশন",
+     "সিআইডি"
+    ],
+    "key_facts": [
+     {
+      "evidence": "রাস্তা ও ফুটপাত দখল করে অবৈধ দোকান বসালে এখন থেকে সরাসরি মামলা করা হবে। একই সঙ্গে জব্দ করা হবে দোকানের মালামাল।",
+      "fact": "রাস্তা ও ফুটপাত দখল করে অবৈধ দোকান বসালে এখন থেকে সরাসরি মামলা করা হবে এবং দোকানের মালামাল জব্দ করা হবে।",
+      "prelims": true
+     },
+     {
+      "evidence": "ঢাকা দক্ষিণ সিটি করপোরেশনের (ডিএসসিসি) প্রশাসক মো. আবদুস সালাম এই হুঁশিয়ারি দিয়েছেন।",
+      "fact": "ডিএসসিসির প্রশাসক মো. আবদুস সালাম এই হুঁশিয়ারি দিয়েছেন।",
+      "prelims": true
+     },
+     {
+      "evidence": "এদিন ডিএসসিসির ৭৫টি ওয়ার্ডে একযোগে পরিচ্ছন্নতা অভিযান চালানো হয়।",
+      "fact": "এদিন ডিএসসিসির ৭৫টি ওয়ার্ডে একযোগে পরিচ্ছন্নতা অভিযান চালানো হয়।",
+      "prelims": true
+     },
+     {
+      "evidence": "আগামী সপ্তাহে নিউমার্কেটে আবার উচ্ছেদ অভিযান চালানোর ঘোষণা দিয়েছেন ডিএসসিসি প্রশাসক।",
+      "fact": "আগামী সপ্তাহে নিউমার্কেটে আবার উচ্ছেদ অভিযান চালানোর ঘোষণা দেওয়া হয়েছে।",
+      "prelims": true
+     },
+     {
+      "evidence": "ডেঙ্গু নিয়ন্ত্রণে পরিচ্ছন্নতার বিকল্প নেই। কোথাও তিন দিনের বেশি পানি জমতে দেওয়া যাবে না।",
+      "fact": "ডেঙ্গু নিয়ন্ত্রণে পরিচ্ছন্নতার বিকল্প নেই এবং কোথাও তিন দিনের বেশি পানি জমতে দেওয়া যাবে না।",
+      "prelims": true
+     },
+     {
+      "evidence": "মালিবাগে পুলিশের অপরাধ তদন্ত বিভাগের (সিআইডি) কার্যালয়ের সামনে থাকা বর্জ্য স্থানান্তর কেন্দ্র (এসটিএস) সরিয়ে নেওয়ার বিষয়েও কথা বলেন ডিএসসিসি প্রশাসক।",
+      "fact": "মালিবাগে সিআইডি কার্যালয়ের সামনে থাকা বর্জ্য স্থানান্তর কেন্দ্র (এসটিএস) সরিয়ে নেওয়া হয়েছে এবং নতুন একটি এসটিএস নির্মাণ করা হচ্ছে।",
+      "prelims": true
+     }
+    ],
+    "mode": "full",
+    "score": 72.0,
+    "unsupported_dropped": 0,
+    "what_happened": "ঢাকা দক্ষিণ সিটি করপোরেশনের প্রশাসক মো. আবদুস সালাম বলেছেন, রাস্তা ও ফুটপাত দখল করে অবৈধ দোকান বসালে এখন থেকে সরাসরি মামলা করা হবে এবং দোকানের মালামাল জব্দ করা হবে। তিনি নিউমার্কেট এলাকায় আবার উচ্ছেদ অভিযান চালানোর ঘোষণা দেন এবং ডেঙ্গু প্রতিরোধে পরিচ্ছন্নতা ও জনসচেতনতার ওপর জোর দেন।",
+    "why_it_matters": "এটি নগর ব্যবস্থাপনা, আইনশৃঙ্খলা, ফুটপাত ব্যবস্থাপনা এবং জনস্বাস্থ্যসংশ্লিষ্ট BCS প্রস্তুতির জন্য গুরুত্বপূর্ণ। ঢাকা শহরের যানজট, বর্জ্য ব্যবস্থাপনা ও ডেঙ্গু নিয়ন্ত্রণের মতো বিষয়েও এ খবরে প্রশাসনিক পদক্ষেপের দিকটি উঠে এসেছে।",
+    "written_angle": "এই খবরে স্থানীয় সরকারের আইন প্রয়োগ, ফুটপাত ব্যবস্থাপনা এবং নগর পরিষ্কার-পরিচ্ছন্নতার সমন্বিত চিত্র পাওয়া যায়। লিখিত পরীক্ষায় নগর শাসন, জনস্বাস্থ্য ও সুশাসনের প্রসঙ্গে সিটি করপোরেশনের ভূমিকা বিশ্লেষণ করা যেতে পারে।"
+   },
    "article_ids": [
     "a_d174ac6bd93ee2a3"
    ],
-   "attempts": 0,
+   "attempts": 1,
    "created_at": "2026-10-24T13:40:25+00:00",
    "event_id": "ev_da93a8ebd366",
-   "included_in": null,
+   "included_in": "2026-10-25",
    "last_error": null,
    "screening": {
     "categories": [
@@ -4353,8 +5939,8 @@
     "rationale": "ফুটপাত দখল ও আইনি ব্যবস্থা নিয়ে ডিএসসিসির নির্দেশনা স্থানীয় শাসন ও নগর ব্যবস্থাপনায় প্রাসঙ্গিক।"
    },
    "screening_attempts": 0,
-   "status": "selected",
-   "updated_at": "2026-10-24T13:40:25+00:00"
+   "status": "included",
+   "updated_at": "2026-10-25T02:30:10+00:00"
   },
   "ev_dac8d879be17": {
    "analysis": null,
@@ -4402,6 +5988,27 @@
    "screening_attempts": 0,
    "status": "maybe",
    "updated_at": "2026-10-24T11:39:11+00:00"
+  },
+  "ev_e46497f3dee6": {
+   "analysis": null,
+   "article_ids": [
+    "a_c84b92b69a03befc"
+   ],
+   "attempts": 0,
+   "created_at": "2026-10-25T02:30:10+00:00",
+   "event_id": "ev_e46497f3dee6",
+   "included_in": null,
+   "last_error": null,
+   "screening": {
+    "categories": [],
+    "decision": "reject",
+    "exam_focus": "none",
+    "priority": 0.0,
+    "rationale": "ধর্মীয় উপদেশমূলক লেখা, পরীক্ষামূলক current affairs হিসেবে প্রাসঙ্গিক নয়।"
+   },
+   "screening_attempts": 0,
+   "status": "rejected",
+   "updated_at": "2026-10-25T02:30:10+00:00"
   },
   "ev_e676f31697e5": {
    "analysed_at": "2026-10-24T11:39:11+00:00",
@@ -4601,14 +6208,96 @@
    "updated_at": "2026-10-24T11:39:11+00:00"
   },
   "ev_eff58995486a": {
-   "analysis": null,
+   "analysed_at": "2026-10-25T02:30:10+00:00",
+   "analysis": {
+    "analysed_article_id": "a_96d90d4cf048f383",
+    "attributed_claims": [
+     {
+      "attributed_to": "এমজেএফ",
+      "claim": "গণমাধ্যমে প্রকাশিত ঘটনার চেয়ে প্রকৃত ঘটনার সংখ্যা অনেক বেশি হতে পারে।",
+      "evidence": "বিজ্ঞপ্তিতে এমজেএফ বলেছে, গণমাধ্যমে প্রকাশিত ঘটনার চেয়ে প্রকৃত ঘটনার সংখ্যা অনেক বেশি হতে পারে।"
+     },
+     {
+      "attributed_to": "এমজেএফ",
+      "claim": "ভয়, সামাজিক লজ্জা কিংবা চাপের কারণে অনেক শিশু হয়তো নির্যাতনের কথা বলতে পারে না।",
+      "evidence": "ভয়, সামাজিক লজ্জা কিংবা চাপের কারণে অনেক শিশু হয়তো নির্যাতনের কথা বলতে পারে না।"
+     },
+     {
+      "attributed_to": "এমজেএফ",
+      "claim": "শিক্ষা মন্ত্রণালয়, মাদ্রাসা কর্তৃপক্ষ ও স্থানীয় প্রশাসনকে শিশু সুরক্ষা জোরদার করার আহ্বান জানানো হয়েছে।",
+      "evidence": "শিক্ষা মন্ত্রণালয়, মাদ্রাসা কর্তৃপক্ষ ও স্থানীয় প্রশাসনকে শিশু সুরক্ষা জোরদার করার আহ্বান জানাচ্ছে এমজেএফ।"
+     }
+    ],
+    "background_context": "শিক্ষাপ্রতিষ্ঠানে শিশু সুরক্ষা ও যৌন হয়রানি প্রতিরোধ সাধারণত নীতিমালা, অভিযোগ গ্রহণের ব্যবস্থা এবং মনিটরিংয়ের সঙ্গে সম্পর্কিত একটি গুরুত্বপূর্ণ প্রশাসনিক বিষয়।",
+    "categories": [
+     "constitution_governance",
+     "bangladesh_affairs"
+    ],
+    "causes_effects": "অভিযোগ প্রকাশের পরও ভয়, সামাজিক লজ্জা ও চাপের কারণে শিশুদের নীরব থাকার ঝুঁকি আছে। তাই অভিযোগ জানার নিরাপদ পরিবেশ, দ্রুত তদন্ত, সুরক্ষা সেবা এবং প্রতিরোধ কমিটি কার্যকর করা হলে নির্যাতন কমানো ও জবাবদিহি বাড়ানো সম্ভব হতে পারে।",
+    "criteria": {
+     "factual_density": 7.0,
+     "novelty": 5.0,
+     "significance": 6.0,
+     "syllabus_relevance": 8.0,
+     "written_potential": 7.0
+    },
+    "exam_focus": "both",
+    "headline_bn": "মাদ্রাসায় শিশু সুরক্ষা ও জবাবদিহি নিশ্চিতের আহ্বান",
+    "institutions": [
+     "মানুষের জন্য ফাউন্ডেশন (এমজেএফ)",
+     "হাইকোর্ট",
+     "মহিলা ও শিশুবিষয়ক মন্ত্রণালয়",
+     "সমাজকল্যাণ মন্ত্রণালয়",
+     "শিক্ষা মন্ত্রণালয়",
+     "মাদ্রাসা কর্তৃপক্ষ",
+     "স্থানীয় প্রশাসন"
+    ],
+    "key_facts": [
+     {
+      "evidence": "দেশের বিভিন্ন মাদ্রাসায় শিশুদের যৌন নির্যাতন ও হয়রানির অভিযোগের সাম্প্রতিক খবরে গভীর উদ্বেগ ও ক্ষোভ প্রকাশ করেছে মানুষের জন্য ফাউন্ডেশন (এমজেএফ)।",
+      "fact": "এমজেএফ দেশের বিভিন্ন মাদ্রাসায় শিশুদের যৌন নির্যাতন ও হয়রানির অভিযোগে গভীর উদ্বেগ ও ক্ষোভ প্রকাশ করেছে।",
+      "prelims": true
+     },
+     {
+      "evidence": "প্রতিটি অভিযোগ দ্রুত ও নিরপেক্ষভাবে তদন্ত করে দায়ী ব্যক্তিদের আইনের আওতায় আনতে হবে।",
+      "fact": "সংস্থাটি প্রতিটি অভিযোগ দ্রুত ও নিরপেক্ষভাবে তদন্ত করে দায়ীদের আইনের আওতায় আনার দাবি জানিয়েছে।",
+      "prelims": true
+     },
+     {
+      "evidence": "নির্যাতনের শিকার শিশুদের প্রয়োজনীয় চিকিৎসা, মানসিক সহায়তা ও আইনি সেবা নিশ্চিত করার পাশাপাশি",
+      "fact": "ভুক্তভোগী শিশুদের চিকিৎসা, মানসিক সহায়তা ও আইনি সেবা নিশ্চিত করার কথা বলা হয়েছে।",
+      "prelims": true
+     },
+     {
+      "evidence": "তাদের পরিচয়, গোপনীয়তা ও মর্যাদা রক্ষা করতে হবে।",
+      "fact": "শিশুদের পরিচয়, গোপনীয়তা ও মর্যাদা রক্ষার ওপর জোর দেওয়া হয়েছে।",
+      "prelims": true
+     },
+     {
+      "evidence": "গাজীপুর, টঙ্গী, সাভার ও কুষ্টিয়ায় মাদ্রাসার শিক্ষার্থীদের যৌন নির্যাতনের অভিযোগ সম্প্রতি গণমাধ্যমে প্রকাশিত হয়েছে",
+      "fact": "গাজীপুর, টঙ্গী, সাভার ও কুষ্টিয়ায় মাদ্রাসার শিক্ষার্থীদের যৌন নির্যাতনের অভিযোগ সম্প্রতি গণমাধ্যমে প্রকাশিত হয়েছে।",
+      "prelims": true
+     },
+     {
+      "evidence": "২০০৯ সালে হাইকোর্টের ঐতিহাসিক নির্দেশনা এবং পরবর্তী নির্দেশনার আলোকে মাদ্রাসাসহ সব শিক্ষাপ্রতিষ্ঠানে যৌন হয়রানি প্রতিরোধ কমিটি গঠন ও কার্যকর করার দাবি জানিয়েছে।",
+      "fact": "এমজেএফ ২০০৯ সালের হাইকোর্টের নির্দেশনা ও পরবর্তী নির্দেশনার আলোকে সব শিক্ষাপ্রতিষ্ঠানে যৌন হয়রানি প্রতিরোধ কমিটি গঠন ও কার্যকর করার দাবি জানিয়েছে।",
+      "prelims": true
+     }
+    ],
+    "mode": "full",
+    "score": 68.5,
+    "unsupported_dropped": 0,
+    "what_happened": "মানুষের জন্য ফাউন্ডেশন (এমজেএফ) দেশের বিভিন্ন মাদ্রাসায় শিশুদের যৌন নির্যাতন ও হয়রানির অভিযোগে উদ্বেগ প্রকাশ করেছে। সংস্থাটি দ্রুত ও নিরপেক্ষ তদন্ত, দায়ীদের আইনের আওতায় আনা, এবং ভুক্তভোগী শিশুদের চিকিৎসা, মানসিক সহায়তা, আইনি সেবা ও গোপনীয়তা সুরক্ষার দাবি জানিয়েছে।",
+    "why_it_matters": "এটি শিশু সুরক্ষা, শিক্ষাপ্রতিষ্ঠানের জবাবদিহি এবং অভিযোগ তদন্তের প্রশাসনিক সক্ষমতার সঙ্গে সম্পর্কিত। বিসিএস পরীক্ষায় শিশু অধিকার, প্রতিষ্ঠানিক সুশাসন এবং সরকারি সমন্বয়ের প্রসঙ্গে এটি প্রাসঙ্গিক।",
+    "written_angle": "এই খবরটি শিশু অধিকার, শিক্ষাপ্রতিষ্ঠানের নিরাপত্তা এবং সরকারি ও সামাজিক জবাবদিহির সংযোগ দেখায়। লিখিত উত্তরে শিশু সুরক্ষায় অভিযোগ গ্রহণ, দ্রুত তদন্ত, ভুক্তভোগী সহায়তা এবং প্রতিরোধমূলক প্রাতিষ্ঠানিক ব্যবস্থার গুরুত্ব তুলে ধরা যেতে পারে।"
+   },
    "article_ids": [
     "a_96d90d4cf048f383"
    ],
-   "attempts": 0,
+   "attempts": 1,
    "created_at": "2026-10-24T13:40:25+00:00",
    "event_id": "ev_eff58995486a",
-   "included_in": null,
+   "included_in": "2026-10-25",
    "last_error": null,
    "screening": {
     "categories": [
@@ -4621,8 +6310,50 @@
     "rationale": "মাদ্রাসায় শিশু সুরক্ষা ও জবাবদিহি নিশ্চিতের আহ্বান শিশু অধিকার ও সুশাসন বিষয়ে গুরুত্বপূর্ণ।"
    },
    "screening_attempts": 0,
-   "status": "selected",
-   "updated_at": "2026-10-24T13:40:25+00:00"
+   "status": "included",
+   "updated_at": "2026-10-25T02:30:10+00:00"
+  },
+  "ev_f06b8daa9148": {
+   "analysis": null,
+   "article_ids": [
+    "a_d5e9bcea2e46c753"
+   ],
+   "attempts": 0,
+   "created_at": "2026-10-25T02:30:10+00:00",
+   "event_id": "ev_f06b8daa9148",
+   "included_in": null,
+   "last_error": null,
+   "screening": {
+    "categories": [],
+    "decision": "reject",
+    "exam_focus": "none",
+    "priority": 0.0,
+    "rationale": "ভ্রমণধর্মী শিরোনামে BCS-উপযোগী কোনো নীতি, অর্থনীতি বা আন্তর্জাতিক বিষয় নেই।"
+   },
+   "screening_attempts": 0,
+   "status": "rejected",
+   "updated_at": "2026-10-25T02:30:10+00:00"
+  },
+  "ev_f5e8595e14e0": {
+   "analysis": null,
+   "article_ids": [
+    "a_8c1b51d57d64e5b7"
+   ],
+   "attempts": 0,
+   "created_at": "2026-10-25T02:30:10+00:00",
+   "event_id": "ev_f5e8595e14e0",
+   "included_in": null,
+   "last_error": null,
+   "screening": {
+    "categories": [],
+    "decision": "reject",
+    "exam_focus": "none",
+    "priority": 1.0,
+    "rationale": "কোম্পানির ব্যবস্থাপনা বিষয়ে সাধারণ মানবিক আগ্রহের গল্প, BCS current affairs-এর জন্য সীমিত মূল্য।"
+   },
+   "screening_attempts": 0,
+   "status": "rejected",
+   "updated_at": "2026-10-25T02:30:10+00:00"
   },
   "ev_f60182393c60": {
    "analysis": null,
@@ -4756,15 +6487,136 @@
    "status": "included",
    "updated_at": "2026-10-24T11:39:11+00:00"
   },
-  "ev_fe5a76a592e1": {
+  "ev_fc579820d349": {
    "analysis": null,
+   "article_ids": [
+    "a_5f82af064c482b8c"
+   ],
+   "attempts": 0,
+   "created_at": "2026-10-25T02:30:10+00:00",
+   "event_id": "ev_fc579820d349",
+   "included_in": null,
+   "last_error": null,
+   "screening": {
+    "categories": [],
+    "decision": "reject",
+    "exam_focus": "none",
+    "priority": 1.0,
+    "rationale": "ধর্মীয় উৎসবের আনুষ্ঠানিক বর্ণনা, BCS সিলেবাসের current affairs অগ্রাধিকারভুক্ত নয়।"
+   },
+   "screening_attempts": 0,
+   "status": "rejected",
+   "updated_at": "2026-10-25T02:30:10+00:00"
+  },
+  "ev_fdd840944ca5": {
+   "analysis": null,
+   "article_ids": [
+    "a_4947271c24390bac"
+   ],
+   "attempts": 0,
+   "created_at": "2026-10-25T02:30:10+00:00",
+   "event_id": "ev_fdd840944ca5",
+   "included_in": null,
+   "last_error": null,
+   "screening": {
+    "categories": [],
+    "decision": "reject",
+    "exam_focus": "none",
+    "priority": 0.0,
+    "rationale": "বিনোদনধর্মী মন্তব্যভিত্তিক কনটেন্ট, BCS সিলেবাসের জন্য প্রাসঙ্গিক নয়।"
+   },
+   "screening_attempts": 0,
+   "status": "rejected",
+   "updated_at": "2026-10-25T02:30:10+00:00"
+  },
+  "ev_fe5a76a592e1": {
+   "analysed_at": "2026-10-25T02:30:10+00:00",
+   "analysis": {
+    "analysed_article_id": "a_af743c75eb5ea8f2",
+    "attributed_claims": [
+     {
+      "attributed_to": "মোগাদ্দেম",
+      "claim": "বিপ্লবের পরও অনেক ক্ষেত্রে গণতান্ত্রিক আদর্শের বদলে নতুন একনায়কতন্ত্র প্রতিষ্ঠা পায়।",
+      "evidence": "“বিপ্লবের পর প্রায়ই গণতান্ত্রিক আদর্শ প্রতিষ্ঠার পরিবর্তে একক কর্তৃত্ববাদী শাসনের অবসান ঘটিয়ে নতুন একনায়কতন্ত্র প্রতিষ্ঠা পায়।”"
+     },
+     {
+      "attributed_to": "মোগাদ্দেমের বিশ্লেষণ",
+      "claim": "মধ্যপন্থী ও বামপন্থী নেতাদের সহিংসতা ব্যবহারে অনীহা চরমপন্থীদের কর্তৃত্ববাদী শাসন সুসংহত করার সুযোগ করে দেয়।",
+      "evidence": "“মধ্যপন্থী ও বামপন্থী নেতাদের সহিংসতা ব্যবহারে অনীহা কীভাবে চরমপন্থীদের কর্তৃত্ববাদী শাসন সুসংহত করার সুযোগ করে দিয়েছিল।”"
+     }
+    ],
+    "background_context": "বিপ্লব ও গণ–অভ্যুত্থানের পর অনেক দেশে নতুন শাসন প্রতিষ্ঠার আশা তৈরি হয়। কিন্তু ইতিহাসে দেখা যায়, ক্ষমতা বদলালেও প্রাতিষ্ঠানিক ও রাজনৈতিক সংস্কৃতি বদলাতে সময় লাগে।",
+    "categories": [
+     "constitution_governance",
+     "bangladesh_affairs",
+     "foreign_policy_geopolitics"
+    ],
+    "causes_effects": "লেখার বিশ্লেষণ অনুযায়ী, বৈষম্য, রাজনৈতিক অসন্তোষ ও শাসকের গ্রহণযোগ্যতা হ্রাস সমাজকে অভ্যুত্থানের দিকে ঠেলে দেয়। কিন্তু বিপ্লব-পরবর্তী সময়ে যদি দ্রুত রাজনৈতিক আচরণ বদলায় না, তাহলে চরমপন্থী শক্তি শূন্যতা কাজে লাগিয়ে নতুন কর্তৃত্ববাদী বাস্তবতা তৈরি করতে পারে।",
+    "criteria": {
+     "factual_density": 7.0,
+     "novelty": 7.0,
+     "significance": 7.0,
+     "syllabus_relevance": 8.0,
+     "written_potential": 8.0
+    },
+    "exam_focus": "both",
+    "headline_bn": "জুলাই গণ–অভ্যুত্থান-পরবর্তী হতাশা ও বিপ্লব-পরবর্তী স্বৈরতন্ত্রের বিশ্লেষণ",
+    "institutions": [
+     "শিল্পকলা একাডেমি",
+     "জর্জটাউন ইউনিভার্সিটি",
+     "প্রথম আলো",
+     "আওয়ামী লীগ",
+     "বিএনপি",
+     "জাতীয় পার্টি",
+     "জামায়াতে ইসলামী",
+     "ছাত্রশিবির"
+    ],
+    "key_facts": [
+     {
+      "evidence": "“মুক্তিযুদ্ধের পর জুলাই গণ–অভ্যুত্থানেই প্রথম দেশব্যাপী আন্দোলন ছড়িয়ে পড়েছিল।”",
+      "fact": "লেখায় বলা হয়েছে, জুলাই গণ–অভ্যুত্থানই মুক্তিযুদ্ধের পর প্রথম দেশব্যাপী আন্দোলন ছিল।",
+      "prelims": true
+     },
+     {
+      "evidence": "“শিল্পকলা একাডেমির ডিজিটাল আর্কাইভের ১১১টি গ্রাফিতি বিশ্লেষণ করে আমি দেখাই”",
+      "fact": "শিল্পকলা একাডেমির ডিজিটাল আর্কাইভের ১১১টি গ্রাফিতি বিশ্লেষণ করে জুলাই আন্দোলনের রাজনৈতিক বার্তা ব্যাখ্যা করা হয়েছে।",
+      "prelims": true
+     },
+     {
+      "evidence": "“১৯৮৫ থেকে ২০১৪ সাল পর্যন্ত বিশ্বজুড়ে প্রায় ৫৬টি বিপ্লব সংঘটিত হয়েছে”",
+      "fact": "লেখায় মার্ক বেইসিঙ্গারের উদ্ধৃতি দিয়ে বলা হয়েছে, ১৯৮৫ থেকে ২০১৪ সাল পর্যন্ত বিশ্বজুড়ে প্রায় ৫৬টি বিপ্লব সফলভাবে শাসকদের ক্ষমতাচ্যুত করেছিল।",
+      "prelims": true
+     },
+     {
+      "evidence": "“এ সময়ে আরও ৬৭টি বিপ্লবের চেষ্টা হয়েছিল”",
+      "fact": "একই সময়ে আরও ৬৭টি বিপ্লবের চেষ্টা হয়েছিল, কিন্তু সেগুলো শাসনক্ষমতা বদলাতে পারেনি।",
+      "prelims": true
+     },
+     {
+      "evidence": "“সম্প্রতি কেবল ২০২৫ সালেই ১১টি জেন-জি অভ্যুত্থান হয়েছে, যা থেকে অন্তত ৩টি দেশে সরকারের পতন হয়েছে।”",
+      "fact": "লেখায় বলা হয়েছে, ২০২৫ সালেই ১১টি জেন-জি অভ্যুত্থান হয়েছে এবং অন্তত ৩টি দেশে সরকারের পতন হয়েছে।",
+      "prelims": true
+     },
+     {
+      "evidence": "“আমলাতান্ত্রিক কাঠামো, রাজনৈতিক সংস্কৃতি, বিচারব্যবস্থা একই রকম থেকে গেছে—কোনো পরিবর্তন হয়নি।”",
+      "fact": "বাংলাদেশে শাসক পরিবর্তনের পরও আমলাতান্ত্রিক কাঠামো, রাজনৈতিক সংস্কৃতি ও বিচারব্যবস্থা একই রকম রয়ে গেছে বলে লেখায় দাবি করা হয়েছে।",
+      "prelims": true
+     }
+    ],
+    "mode": "full",
+    "score": 74.5,
+    "unsupported_dropped": 0,
+    "what_happened": "লেখাটি জুলাই গণ–অভ্যুত্থানের পর বাংলাদেশের রাজনৈতিক পরিস্থিতি কেন হতাশাজনক হয়েছে, তা ফাথালি এম মোগাদ্দেমের বিপ্লব-পরবর্তী শাসন বিশ্লেষণের আলোকে ব্যাখ্যা করেছে। এতে বলা হয়েছে, শাসকের পতনের পরও আমলাতান্ত্রিক কাঠামো, রাজনৈতিক সংস্কৃতি ও বিচারব্যবস্থায় বড় পরিবর্তন হয়নি; বরং নতুনভাবে ক্ষমতা দখল ও কর্তৃত্ববাদী প্রবণতা দেখা দিয়েছে।",
+    "why_it_matters": "BCS-এর জন্য এটি গণ–আন্দোলন, শাসনব্যবস্থা, ক্ষমতা-হস্তান্তর, রাজনৈতিক সংস্কার এবং কর্তৃত্ববাদ বিষয়ে গুরুত্বপূর্ণ। বাংলাদেশে গণতান্ত্রিক রূপান্তর কেন থমকে যায়, তা বোঝার জন্যও লেখাটি সহায়ক।",
+    "written_angle": "বাংলাদেশের অভ্যুত্থান-পরবর্তী রাজনীতিতে কেবল ক্ষমতার পালাবদল যথেষ্ট নয়; প্রাতিষ্ঠানিক সংস্কার, রাজনৈতিক সংস্কৃতি ও সামাজিক সহনশীলতার পরিবর্তন জরুরি। এই লেখাটি দেখায়, নেতৃত্ব বদলালেও সংগঠিত চরমপন্থা, মব রাজনীতি ও ক্ষমতা-কেন্দ্রিক প্রবণতা টিকে থাকলে গণতান্ত্রিক প্রত্যাশা পূরণ হয় না।"
+   },
    "article_ids": [
     "a_af743c75eb5ea8f2"
    ],
-   "attempts": 0,
+   "attempts": 1,
    "created_at": "2026-10-24T11:39:11+00:00",
    "event_id": "ev_fe5a76a592e1",
-   "included_in": null,
+   "included_in": "2026-10-25",
    "last_error": null,
    "screening": {
     "categories": [
@@ -4777,8 +6629,8 @@
     "rationale": "গণ-অভ্যুত্থান-পরবর্তী সংস্কার ও ক্ষমতা দখল নিয়ে বিশ্লেষণধর্মী আলোচনা আছে, যা শাসন ও রাজনৈতিক প্রেক্ষাপটে প্রাসঙ্গিক।"
    },
    "screening_attempts": 0,
-   "status": "maybe",
-   "updated_at": "2026-10-24T11:39:11+00:00"
+   "status": "included",
+   "updated_at": "2026-10-25T02:30:10+00:00"
   },
   "ev_ff5008289b42": {
    "analysis": null,
@@ -4804,7 +6656,7 @@
    "updated_at": "2026-10-24T13:40:25+00:00"
   }
  },
- "last_successful_edition": "2026-10-24-m1",
+ "last_successful_edition": "2026-10-25",
  "notes": [],
  "runs": [
   {
@@ -4931,15 +6783,45 @@
    "run_id": "cdcbe40a0f",
    "started_at": "2026-10-24T13:40:25+00:00",
    "stories": 8
+  },
+  {
+   "dry_run": false,
+   "edition_date": "2026-10-25",
+   "errors": [],
+   "estimated_cost_usd": 0.0866,
+   "finished_at": "2026-10-25T02:31:46+00:00",
+   "llm_calls": 11,
+   "llm_usage": {
+    "gemini": {
+     "calls_incl_retries": 0,
+     "input_tokens": 0,
+     "output_tokens": 0,
+     "requests": 0
+    },
+    "openai": {
+     "calls_incl_retries": 11,
+     "input_tokens": 27772,
+     "output_tokens": 14615,
+     "requests": 11
+    }
+   },
+   "manual": false,
+   "mcqs": 3,
+   "outcome": "delivered",
+   "partial": false,
+   "providers_disabled": {},
+   "run_id": "c5428d4b77",
+   "started_at": "2026-10-25T02:30:10+00:00",
+   "stories": 8
   }
  ],
  "schema_version": 2,
  "source_health": {
   "dailystar": {
    "consecutive_failures": 0,
-   "last_attempt": "2026-10-24T13:40:25+00:00",
+   "last_attempt": "2026-10-25T02:30:10+00:00",
    "last_item_count": 10,
-   "last_success": "2026-10-24T13:40:25+00:00",
+   "last_success": "2026-10-25T02:30:10+00:00",
    "last_warnings": []
   },
   "dhakatribune": {
@@ -4956,9 +6838,9 @@
   },
   "prothomalo": {
    "consecutive_failures": 0,
-   "last_attempt": "2026-10-24T13:40:25+00:00",
-   "last_item_count": 40,
-   "last_success": "2026-10-24T13:40:25+00:00",
+   "last_attempt": "2026-10-25T02:30:10+00:00",
+   "last_item_count": 25,
+   "last_success": "2026-10-25T02:30:10+00:00",
    "last_warnings": []
   }
  },
@@ -5001,7 +6883,7 @@
   }
  },
  "telegram": {
-  "last_update_id": 894171903
+  "last_update_id": 894171904
  },
- "updated_at": "2026-10-24T13:42:05+00:00"
+ "updated_at": "2026-10-25T02:31:46+00:00"
 }
