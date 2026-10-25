@@ -2,10 +2,13 @@ name: Daily BCS briefing
 
 on:
   schedule:
-    # GitHub cron is always UTC. 02:00 UTC = 08:00 Asia/Dhaka (UTC+6, no DST).
-    # Scheduled runs are best-effort: they often start several minutes late
-    # (sometimes much later) and can be dropped when GitHub is under load.
-    - cron: "0 2 * * *"
+    # GitHub cron is always UTC; Asia/Dhaka is UTC+6 with no DST.
+    # Scheduled runs are best-effort and often start late, worst at the top of
+    # the hour, so we use off-peak minutes and a backup trigger. The app sends
+    # the scheduled edition at most once per day, so the backup is a no-op if
+    # the first run already delivered.
+    - cron: "23 1 * * *"   # 07:23 Dhaka: main run, usually delivered by ~08:00
+    - cron: "53 2 * * *"   # 08:53 Dhaka: backup if the first run was dropped or failed
   workflow_dispatch:
     inputs:
       mode:

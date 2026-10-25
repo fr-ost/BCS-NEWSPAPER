@@ -275,6 +275,16 @@ class Pipeline:
                 reason = "AI মডেলে ত্রুটি, তাই আজ বিশ্লেষণ করা যায়নি।"
             return self._fail(edition, ed_date, reason, unprocessed)
 
+        earlier_today = any(
+            e.get("edition_date") == ed_date.isoformat() and e["status"] == "delivered" for e in self.state["editions"].values()
+        )
+        if not stories and not manual and earlier_today and not partial_reasons:
+            # A manual edition already went out today and nothing new turned up:
+            # don't message everyone just to say so.
+            edition.update(status="delivered", delivered_at=iso(utcnow()), recipients=0, story_event_ids=[], mcqs=[], chunks=[], skipped="nothing new since an earlier edition today")
+            self._save()
+            return RunResult(outcome="delivered", edition_date=key)
+
         sections = render_edition(
             ed_date,
             stories,
@@ -285,9 +295,7 @@ class Pipeline:
             self.s.edition.mcq_count,
             notices=self._model_notices() + self._source_notices(),
             extra=manual,
-            since_last=any(
-                e.get("edition_date") == ed_date.isoformat() and e["status"] == "delivered" for e in self.state["editions"].values()
-            ),
+            since_last=earlier_today,
         )
         chunks = chunk_sections(sections, self.s.telegram.max_message_chars)
         edition.update(

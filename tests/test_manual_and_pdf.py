@@ -54,7 +54,9 @@ def test_manual_run_first_does_not_block_scheduled_run(make_pipeline, settings):
     tg2 = FakeTelegram()
     r2 = make_pipeline(telegram=tg2).run(now=NOW)
     assert r2.outcome == "delivered" and r2.edition_date == "2026-10-23"
-    assert r2.stories == 0 and "সর্বশেষ ব্রিফিংয়ের পর" in tg2.sent[0]  # says "nothing new", not "no news today"
+    assert r2.stories == 0 and tg2.sent == []  # nothing new: no message to everyone
+    tg3 = FakeTelegram()
+    assert make_pipeline(telegram=tg3).run(now=NOW).outcome == "already_delivered" and tg3.sent == []  # backup cron is a no-op
     state = load_state(settings)
     assert state["editions"]["2026-10-23-m1"]["manual"] is True
     assert state["editions"]["2026-10-23"]["manual"] is False

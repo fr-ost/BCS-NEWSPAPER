@@ -98,7 +98,7 @@ Run `python -m app run --offline` to render a full sample edition (text and, if 
 ## Architecture and data flow
 
 ```
-        ┌──────────── GitHub Actions (cron 02:00 UTC = 08:00 Dhaka) ────────────┐
+        ┌───── GitHub Actions (cron 01:23 UTC = 07:23 Dhaka, backup 08:53) ─────┐
         │                                                                       │
  RSS ──▶│ A. collector.py   fetch feeds (robots.txt, timeouts, size caps)       │
  feeds  │        │          normalise URLs, parse dates safely                  │
@@ -261,7 +261,11 @@ After `verify-sources`, edit `config/sources.toml`: set `enabled = false` for an
 
 ### Step 7: Let the schedule run
 
-The cron line `0 2 * * *` runs daily at **02:00 UTC = 08:00 Asia/Dhaka** (Bangladesh is UTC+6 with no daylight saving). GitHub cron is always UTC.
+Two cron lines (GitHub cron is always UTC; Bangladesh is UTC+6 with no daylight saving):
+- `23 1 * * *` = **07:23 Dhaka**, the main run. It starts early and off the hour because GitHub delays top-of-the-hour schedules the most, so the briefing usually arrives around 07:30–08:00.
+- `53 2 * * *` = **08:53 Dhaka**, a backup in case GitHub dropped or delayed the first run. The scheduled edition is sent at most once a day, so if the first run already delivered, the backup does nothing.
+
+If you sent a manual edition before the scheduled run and nothing new has appeared since, the scheduled run doesn't message anyone.
 
 GitHub doesn't guarantee the minute: scheduled runs often start several minutes late, sometimes much later at busy times, and occasionally get skipped. If one is skipped, run `live` manually. A re-run of the *scheduled* job never sends a duplicate; *manual* runs send extra editions with only new stories.
 
