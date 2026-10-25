@@ -26,6 +26,7 @@ Expected cost: roughly **US$2–8 per month (≈ ৳250–1,000)** of prepaid Op
 - [Running locally](#running-locally)
 - [Manual runs and modes](#manual-runs-and-modes)
 - [News sources](#news-sources)
+- [How stories are selected (BCS syllabus calibration)](#how-stories-are-selected-bcs-syllabus-calibration)
 - [Factual grounding: how hallucinations are kept out](#factual-grounding-how-hallucinations-are-kept-out)
 - [Partial editions and quota exhaustion](#partial-editions-and-quota-exhaustion)
 - [State persistence and recovery](#state-persistence-and-recovery)
@@ -394,16 +395,20 @@ Exit codes: `0` success / dry run / already delivered; `1` failed; `2` failed bu
 
 Sources live in `config/sources.toml`. Each entry has a name, homepage, `feed_url` (only if verified), type, subject relevance, `enabled`, `fetch_articles`, timeout, retry limit and a `verification` note.
 
-**Feed verification status at build time.** The build environment couldn't reach news sites directly, so none of these has been fetched live yet. Status is based on public evidence:
+**Feed status (verified live from GitHub Actions on 2026-10-25 with `verify-sources`):**
 
-| Source | Feed | Evidence | Shipped as |
-|---|---|---|---|
-| Prothom Alo | `https://www.prothomalo.com/feed` | Used by your working prototype | enabled |
-| Dhaka Tribune | `https://www.dhakatribune.com/feed/` | Feed exists, but its **robots.txt disallows this bot** (seen in live runs) | **disabled** (we don't bypass robots.txt) |
-| Dhaka Tribune Business | `https://www.dhakatribune.com/feed/business` | Same robots.txt block | **disabled** |
-| The Daily Star | `https://www.thedailystar.net/frontpage/rss.xml` | Listed in public OPML feed directories | enabled |
-| UN News Asia-Pacific | regional feed URL pattern | Pattern only; exact feed unconfirmed | **disabled** |
-| BSS, Bangladesh Bank, BBS, MoFA | none | No official feed found | reference only (never fetched) |
+| Source | Feed | Status |
+|---|---|---|
+| Prothom Alo | `https://www.prothomalo.com/feed` | enabled: fresh; noisy sections are pre-filtered |
+| BBC News বাংলা | `https://feeds.bbci.co.uk/bengali/rss.xml` | enabled: fresh; strong on international affairs |
+| The Daily Star: Bangladesh / Business / Environment / World | `https://www.thedailystar.net/{news/bangladesh,business,environment,news/world}/rss.xml` | enabled: fresh |
+| UN News (all) | `https://news.un.org/feed/subscribe/en/news/all/rss.xml` | enabled: fresh |
+| The Daily Star front page | `https://www.thedailystar.net/frontpage/rss.xml` | **disabled**: stale (newest item 2022) |
+| Dhaka Tribune (main, business) | `https://www.dhakatribune.com/feed/…` | **disabled**: robots.txt disallows bots |
+| UN News Asia-Pacific | regional feed | off (covered by UN News all) |
+| BSS, Bangladesh Bank, BBS, MoFA | — | reference links only |
+
+Tested and not added: Daily Star `/rss.xml` and TBS (stale); BSS, Kaler Kantho and Samakal (robots.txt blocks bots); Financial Express and Jugantor (broken feeds).
 
 **Run `verify-sources` (Step 6) and disable anything that fails.** A failing source never stops the others. Its health is tracked in state, and after 3 consecutive failures the edition footer shows a maintenance notice.
 
@@ -414,6 +419,26 @@ Sources live in `config/sources.toml`. Each entry has a name, homepage, `feed_ur
 **Access rules.** The fetcher uses an honest user agent, obeys `robots.txt`, never retries 401/403/451, and never bypasses paywalls or anti-bot protection. If a page is blocked, the story uses a clearly labelled **excerpt-only** analysis (when the feed excerpt is substantial) or is skipped.
 
 ---
+
+## How stories are selected (BCS syllabus calibration)
+
+Selection was recalibrated after reviewing real editions, which had included opinion columns, local notices, party politics, crime, a single company's offers and foreign domestic trivia. A story now has to pass five gates, and every gate is enforced by code, not only by asking the model:
+
+1. **Section/title pre-filter, before any AI call** (`[filters]` in `config/settings.toml`). It drops URL sections such as `/sports/`, `/entertainment/`, `/lifestyle/`, `/opinion/`, `/religion/`, `/bangladesh/district/`, `/bangladesh/crime/` and `/video/`, plus junk titles ("আজ টিভিতে", horoscopes). This removes about 30–40% of items at no cost.
+2. **Screening against the syllabus profile** (`config/syllabus.toml`). The model must give a **story type** and one of **42 syllabus topics**, built from the BPSC preliminary syllabus and written papers 005, 007 and 010 (constitution, budget, monetary policy, bilateral relations, Rohingya, climate diplomacy, UN system, conflicts, awards, indices…).
+   - Code rejects opinion, feature, crime/accident, local admin, party politics, individual court cases, corporate/commercial news, foreign domestic trivia, sports, entertainment and lifestyle, whatever the model decided.
+   - An item with no valid syllabus topic is rejected.
+   - "Maybe" items are dropped unless their priority is at least 7.
+3. **Full analysis with calibrated scoring.** The prompt defines what each score level means (most news is 3–6; 9–10 only for must-know items). A story needs **syllabus relevance ≥ 7** and a valid syllabus topic.
+4. **Ranking:** total score **≥ 65**, at most **one story per syllabus topic** (so two shipbreaking stories can't both get in), and 8 at most.
+5. **No padding:** if only 2 stories pass, the edition has 2.
+
+Each story shows its **🎯 syllabus topic** and a **📝 likely exam question**. Every run logs a *selection report* (pre-filtered count, screening outcomes by reason, analysis rejections, selected stories with topic and score). See it under the run's "Run (…)" step in the Actions tab.
+
+**Tuning:**
+- Too strict or too loose? Adjust `selection.min_syllabus_relevance`, `edition.min_story_score` and `selection.maybe_min_priority` in `config/settings.toml`.
+- Add or rename topics, or add good/bad examples, in `config/syllabus.toml`.
+- Drop a whole section with `filters.exclude_url_paths`.
 
 ## Factual grounding: how hallucinations are kept out
 
@@ -630,13 +655,17 @@ The scheduled workflow runs the unit tests before each live run; if they fail, n
 | Key | Default | Meaning |
 |---|---|---|
 | `edition.max_stories` / `min_target_stories` | 8 / 5 | Target range. A ceiling, not a quota |
-| `edition.min_story_score` | 55 | Stories below this (0–100) are never included |
+| `edition.min_story_score` | 65 | Stories below this (0–100) are never included |
+| `selection.min_syllabus_relevance` | 7 | Minimum syllabus relevance (0–10) from the full analysis |
+| `selection.maybe_min_priority` | 7 | "Maybe" items below this screening priority are dropped |
+| `selection.max_stories_per_topic` | 1 | Diversity: stories per syllabus topic per edition |
+| `filters.exclude_url_paths` / `exclude_title_patterns` | sections list | Dropped before any AI call |
 | `edition.freshness_hours` | 36 | Items older than this are ignored or expire |
 | `edition.mcq_count` | 3 | MCQs per complete edition |
 | `extraction.min_article_chars` | 600 | Below this, the body counts as unavailable → excerpt-only |
 | `extraction.max_article_chars` | 12000 | Text sent to the model is truncated here |
 | `extraction.min_excerpt_chars_for_analysis` | 220 | Below this, an excerpt-only story is skipped |
-| `analysis.max_analyses_per_run` | 9 | Model calls for analysis per run |
+| `analysis.max_analyses_per_run` | 12 | Model calls for analysis per run |
 | `analysis.max_attempts_per_story` | 3 | Then the story is abandoned |
 | `scoring.weights.*` | 0.30/0.25/0.20/0.15/0.10 | Rubric weights, must sum to 1 |
 | `llm.provider` | `openai` | Primary: `openai`, `gemini`, `ollama` or `mock` |
@@ -645,7 +674,7 @@ The scheduled workflow runs the unit tests before each live run; if they fail, n
 | `llm.openai_reasoning_effort` | `""` | Optional `low`/`minimal` to cut reasoning tokens (cost) |
 | `llm.openai_usd_per_million_input/output` | 0.75 / 4.50 | Only for the logged cost estimate |
 | `llm.gemini_model` | `gemini-3.8-flash` | Override with `GEMINI_MODEL` |
-| `llm.max_calls_per_run` | 16 | Hard cap per provider, including retries |
+| `llm.max_calls_per_run` | 20 | Hard cap per provider, including retries |
 | `llm.min_seconds_between_calls` | 6 | Request spacing |
 | `telegram.max_message_chars` | 3800 | Chunk size (Telegram's limit is 4096) |
 | `telegram.max_subscribers` | 10 | Cap on active subscribers |

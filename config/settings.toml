@@ -70,7 +70,7 @@ batch_size = 60
 
 [analysis]
 # Maximum full-article analyses per run (each is one model call).
-max_analyses_per_run = 9
+max_analyses_per_run = 12
 # A story that fails analysis this many times is abandoned.
 max_attempts_per_story = 3
 
@@ -116,7 +116,7 @@ max_output_tokens = 8192
 request_timeout_seconds = 120
 # Budget per provider across the whole run, including retries. Caps OpenAI
 # spend and keeps Gemini well inside free-tier daily request quotas.
-max_calls_per_run = 16
+max_calls_per_run = 20
 # Spacing between Gemini/Ollama calls (free-tier per-minute limits).
 min_seconds_between_calls = 6.0
 max_retries = 3

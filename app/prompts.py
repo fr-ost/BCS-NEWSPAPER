@@ -60,6 +60,8 @@ ALWAYS REJECT (choose the matching story_type):
 - party_politics: rallies, processions, party statements, clashes, banned-group activity, politicians' remarks.
 - court_case_individual: cases against individuals (unless a landmark constitutional ruling).
 - foreign_domestic_minor: other countries' internal politics or incidents without international significance.
+- corporate_commercial: one company's products, offers, results, office moves, market prices of a single firm
+  (sector-wide policy or official sector data is fine).
 - sports_entertainment, lifestyle, religion_culture_local, other_low_value.
 When unsure between select and reject, reject. A thin edition is better than a padded one.
 
@@ -101,7 +103,7 @@ civil-service candidate. Judge strictly whether the item deserves study time; th
 
 {SECURITY_RULES}
 {NEUTRALITY_RULES}
-RELEVANCE: If the item is commentary/opinion, a feature, an individual incident, crime, local administration, party politics,
+RELEVANCE: If the item is commentary/opinion, a feature, an individual incident, crime, local administration, party politics, a single company's commercial news,
 foreign domestic trivia, sports/entertainment/lifestyle — or it does not map clearly to one syllabus topic — set relevant=false.
 
 SCORING (be strict and calibrated; most news is 3-6, reserve 9-10 for must-know items):
