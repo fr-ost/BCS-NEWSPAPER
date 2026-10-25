@@ -98,7 +98,7 @@ Run `python -m app run --offline` to render a full sample edition (text and, if 
 ## Architecture and data flow
 
 ```
-        ┌───── GitHub Actions (cron 01:23 UTC = 07:23 Dhaka, backup 08:53) ─────┐
+        ┌──── GitHub Actions: prepare 06:13, deliver 08:00 Dhaka (+ backups) ───┐
         │                                                                       │
  RSS ──▶│ A. collector.py   fetch feeds (robots.txt, timeouts, size caps)       │
  feeds  │        │          normalise URLs, parse dates safely                  │
@@ -261,11 +261,45 @@ After `verify-sources`, edit `config/sources.toml`: set `enabled = false` for an
 
 ### Step 7: Let the schedule run
 
-Two cron lines (GitHub cron is always UTC; Bangladesh is UTC+6 with no daylight saving):
-- `23 1 * * *` = **07:23 Dhaka**, the main run. It starts early and off the hour because GitHub delays top-of-the-hour schedules the most, so the briefing usually arrives around 07:30–08:00.
-- `53 2 * * *` = **08:53 Dhaka**, a backup in case GitHub dropped or delayed the first run. The scheduled edition is sent at most once a day, so if the first run already delivered, the backup does nothing.
+**How the 08:00 delivery works.** GitHub's built-in timer is unreliable: scheduled runs usually start 10–60+ minutes late (worst at the top of the hour) and are sometimes skipped. So the daily run is split in two (times are Dhaka, UTC+6, no DST; GitHub cron is UTC):
 
-If you sent a manual edition before the scheduled run and nothing new has appeared since, the scheduled run doesn't message anyone.
+| Cron (UTC) | Dhaka | Phase | What it does |
+|---|---|---|---|
+| `13 0 * * *` | 06:13 | prepare | Collect, analyse, build the text and PDF, **hold until 08:00** |
+| `43 0 * * *` | 06:43 | prepare (backup) | Same, if the first didn't run; no-op if already prepared |
+| `0 2 * * *` | 08:00 | deliver | Send the held edition (about 1 minute of work) |
+| `20 2 * * *` | 08:20 | deliver (backup) | No-op if already sent |
+| `50 2 * * *` | 08:50 | deliver (last backup) | No-op if sent; otherwise builds and sends. Subscribers get a failure notice only if this last attempt fails |
+
+The scheduled edition is sent **at most once per day**, so the extra triggers never cause duplicates. If a prepare run starts after 08:00, it sends straight away.
+
+With GitHub alone, the briefing typically arrives between 08:00 and 08:30, because GitHub may still start the 08:00 delivery late. **For delivery at exactly 08:00, add the free external trigger below.**
+
+If you sent a manual edition before the scheduled one and nothing new has appeared since, the scheduled run doesn't message anyone.
+
+### Exact 08:00 delivery with a free external trigger (recommended)
+
+[cron-job.org](https://cron-job.org) is free and fires on the minute. It calls GitHub's API to start the workflow in `deliver` mode, which only sends the prepared edition, so it finishes in about a minute.
+
+1. **Create a GitHub token that can only start this workflow.**
+   - GitHub → your avatar → **Settings → Developer settings → Personal access tokens → Fine-grained tokens → Generate new token**.
+   - Name: `bcs-08-trigger`. Expiration: 1 year (set a reminder to renew).
+   - **Repository access → Only select repositories → `fr-ost/bcs-newspaper`**.
+   - **Permissions → Repository permissions → Actions: Read and write**. Leave everything else as "No access".
+   - Generate, then copy the token (starts with `github_pat_`).
+2. **Create the timer at cron-job.org.** Sign up (free), then **Create cronjob**:
+   - **URL:** `https://api.github.com/repos/fr-ost/bcs-newspaper/actions/workflows/daily-briefing.yml/dispatches`
+   - **Schedule:** every day at **07:59**, time zone **Asia/Dhaka**. GitHub needs about a minute to start a runner, so messages arrive at about 08:00–08:01.
+   - **Advanced → Request method:** `POST`.
+   - **Headers:**
+     - `Authorization`: `Bearer github_pat_…your token…`
+     - `Accept`: `application/vnd.github+json`
+     - `X-GitHub-Api-Version`: `2022-11-28`
+   - **Request body:** `{"ref":"main","inputs":{"mode":"deliver"}}`
+   - Save, then use **Test run**. GitHub returns **204 No Content** when it works, and a `deliver` run appears in the Actions tab. That run does nothing if today's edition is already sent, so testing is safe.
+3. The GitHub schedules stay as backups. If cron-job.org is ever down, the 08:00/08:20/08:50 GitHub triggers still send the edition.
+
+The token can only start or read workflow runs in this one repository; it can't read your code or secrets. If it leaks, delete it under Developer settings and make a new one.
 
 GitHub doesn't guarantee the minute: scheduled runs often start several minutes late, sometimes much later at busy times, and occasionally get skipped. If one is skipped, run `live` manually. A re-run of the *scheduled* job never sends a duplicate; *manual* runs send extra editions with only new stories.
 
@@ -339,6 +373,7 @@ Avoid running `python -m app run`, `subscribers` or `test-telegram` locally *and
 | Command | Effect |
 |---|---|
 | `python -m app run` | Register new subscribers, build today's edition and deliver it (text + PDF) to all of them. No-op if today's edition was already delivered. Skips building (no model calls, no cost) when nobody has subscribed. |
+| `python -m app run --hold` | Prepare today's edition and hold it until `edition.delivery_time` (08:00); a later run sends it. Used by the early scheduled runs. |
 | `python -m app run --manual` | Extra edition with whatever is new since the last one; can run any number of times (the workflow's manual `live` uses this). |
 | `python -m app run --no-pdf` | Don't create or send the PDF. |
 | `python -m app run --dry-run` | Real feeds + real model, **never sends**. Uses `output/dry-run-state.json` (fresh each time), so production state is untouched. |
@@ -364,8 +399,8 @@ Sources live in `config/sources.toml`. Each entry has a name, homepage, `feed_ur
 | Source | Feed | Evidence | Shipped as |
 |---|---|---|---|
 | Prothom Alo | `https://www.prothomalo.com/feed` | Used by your working prototype | enabled |
-| Dhaka Tribune | `https://www.dhakatribune.com/feed/` | Self-link inside search-indexed Dhaka Tribune RSS documents | enabled |
-| Dhaka Tribune Business | `https://www.dhakatribune.com/feed/business` | Search-indexed RSS 2.0 document observed | enabled |
+| Dhaka Tribune | `https://www.dhakatribune.com/feed/` | Feed exists, but its **robots.txt disallows this bot** (seen in live runs) | **disabled** (we don't bypass robots.txt) |
+| Dhaka Tribune Business | `https://www.dhakatribune.com/feed/business` | Same robots.txt block | **disabled** |
 | The Daily Star | `https://www.thedailystar.net/frontpage/rss.xml` | Listed in public OPML feed directories | enabled |
 | UN News Asia-Pacific | regional feed URL pattern | Pattern only; exact feed unconfirmed | **disabled** |
 | BSS, Bangladesh Bank, BBS, MoFA | none | No official feed found | reference only (never fetched) |

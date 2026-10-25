@@ -4,6 +4,8 @@
 
 [edition]
 timezone = "Asia/Dhaka"
+# The scheduled edition is prepared early and released at this local time.
+delivery_time = "08:00"
 # Target story count. These are limits, not quotas: low-relevance days send fewer.
 min_target_stories = 5
 max_stories = 8
