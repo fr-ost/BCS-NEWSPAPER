@@ -444,7 +444,7 @@ class Pipeline:
     def _screen(self, now: datetime) -> None:
         events = [
             ev for ev in self.state["events"].values()
-            if ev["status"] == "new" and self._fresh(self._event_time(ev), now)
+            if (ev["status"] == "new" or self._legacy_screening(ev)) and self._fresh(self._event_time(ev), now)
         ]
         events.sort(key=lambda ev: (self._event_time(ev) or "", ev["event_id"]), reverse=True)
         events = events[: self.s.screening.max_candidates]
@@ -498,9 +498,18 @@ class Pipeline:
             self.screen_stats[reason] = self.screen_stats.get(reason, 0) + 1
             ev["updated_at"] = iso(now)
 
+    @staticmethod
+    def _legacy_screening(ev: dict) -> bool:
+        """Selected/maybe under the pre-syllabus rules: screen again."""
+        return ev["status"] in ("selected", "maybe") and "story_type" not in (ev.get("screening") or {})
+
     def _apply_merges(self, merges: list[tuple[str, str]], decided: dict[str, dict]) -> None:
         events = self.state["events"]
-        groups = {eid: events[eid]["article_ids"] for pair in merges for eid in pair if eid in events and events[eid]["status"] == "new"}
+        groups = {
+            eid: events[eid]["article_ids"]
+            for pair in merges for eid in pair
+            if eid in events and (events[eid]["status"] == "new" or self._legacy_screening(events[eid]))
+        }
         merged = merge_groups(groups, [(a, b) for a, b in merges if a in groups and b in groups])
         for root, members in merged.items():
             absorbed = [eid for eid in groups if eid != root and set(groups[eid]) <= set(members)]
@@ -640,6 +649,7 @@ class Pipeline:
             self._story_for_event(ev)
             for ev in self.state["events"].values()
             if ev["status"] == "analysed" and ev.get("analysis") and self._articles_of(ev) and self._fresh(self._event_time(ev), now)
+            and ev["analysis"].get("syllabus_topic")  # analyses made before the syllabus calibration are ignored
         ]
         return rank_stories(stories, self.s.edition.min_story_score, self.s.edition.max_stories, self.s.selection.max_stories_per_topic)
 
