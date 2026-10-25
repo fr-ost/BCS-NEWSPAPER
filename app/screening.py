@@ -48,7 +48,10 @@ def build_candidates(events: list[dict]) -> tuple[list[dict], dict[str, str]]:
     return candidates, id_map
 
 
-def validate_screening(raw: object, id_map: dict[str, str]) -> ScreeningOutcome:
+def validate_screening(raw: object, id_map: dict[str, str], profile=None, maybe_min_priority: float = 7) -> ScreeningOutcome:
+    """Validate model output. With a syllabus ``profile``, code enforces the
+    selection policy: rejected story types, missing/unknown syllabus topics and
+    low-priority "maybe" items are rejected whatever the model decided."""
     if isinstance(raw, list):
         raw = {"results": raw}
     if not isinstance(raw, dict) or not isinstance(raw.get("results"), list):
@@ -73,13 +76,29 @@ def validate_screening(raw: object, id_map: dict[str, str]) -> ScreeningOutcome:
         if isinstance(priority, bool) or not isinstance(priority, (int, float)):
             priority = 5
         focus = item.get("exam_focus") if item.get("exam_focus") in EXAM_FOCUS else "none"
-        out.decisions[id_map[cid]] = {
+        priority = max(0.0, min(10.0, float(priority)))
+        record = {
             "decision": decision,
-            "categories": list(dict.fromkeys(categories)),
+            "categories": list(dict.fromkeys(categories))[:2],
             "rationale": clean_model_text(item.get("rationale"), 300),
             "exam_focus": focus,
-            "priority": max(0.0, min(10.0, float(priority))),
+            "priority": priority,
         }
+        if profile is not None:
+            story_type = item.get("story_type") if item.get("story_type") in profile.story_types else "other_low_value"
+            topic = item.get("topic") if item.get("topic") in profile.topics else None
+            record.update(story_type=story_type, topic=topic, exam_hook=clean_model_text(item.get("exam_hook"), 200))
+            forced = None
+            if story_type in profile.rejected_types:
+                forced = f"story type {story_type}"
+            elif topic is None:
+                forced = "no syllabus topic"
+            elif decision == "maybe" and priority < maybe_min_priority:
+                forced = f"weak maybe (priority {priority:g})"
+            if forced and decision != "reject":
+                record["decision"] = "reject"
+                record["forced_reject"] = forced
+        out.decisions[id_map[cid]] = record
         for other in item.get("same_event_as") or []:
             if isinstance(other, str) and other in id_map and other != cid:
                 out.merges.append((id_map[cid], id_map[other]))
@@ -87,7 +106,7 @@ def validate_screening(raw: object, id_map: dict[str, str]) -> ScreeningOutcome:
     return out
 
 
-def screen_events(client: LLMClient, events: list[dict], batch_size: int) -> ScreeningOutcome:
+def screen_events(client: LLMClient, events: list[dict], batch_size: int, profile=None, maybe_min_priority: float = 7) -> ScreeningOutcome:
     """Screen events in batches. Quota errors propagate after earlier batches
     are merged into the returned outcome via the ``partial`` attribute."""
     total = ScreeningOutcome()
@@ -97,13 +116,13 @@ def screen_events(client: LLMClient, events: list[dict], batch_size: int) -> Scr
         request = LLMRequest(
             task="screening",
             system=SCREENING_SYSTEM,
-            prompt=screening_prompt(candidates),
+            prompt=screening_prompt(candidates, profile),
             payload={"candidates": candidates},
             max_output_tokens=8192,
         )
         try:
             raw = client.generate_json(request)
-            outcome = validate_screening(raw, id_map)
+            outcome = validate_screening(raw, id_map, profile, maybe_min_priority)
         except Exception as exc:
             exc.partial = total  # type: ignore[attr-defined]
             raise

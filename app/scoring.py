@@ -34,8 +34,23 @@ def weighted_score(criteria: dict[str, float], weights: dict[str, float]) -> flo
     return round(total * 10, 1)
 
 
-def rank_stories(stories: list[dict], min_score: float, max_stories: int) -> list[dict]:
-    """Pick the best stories. Never pads: only those meeting ``min_score``."""
+def rank_stories(stories: list[dict], min_score: float, max_stories: int, max_per_topic: int | None = None) -> list[dict]:
+    """Pick the best stories. Never pads: only those meeting ``min_score``.
+
+    ``max_per_topic`` keeps the edition diverse: once a syllabus topic has
+    that many stories, lower-scoring stories on the same topic are skipped.
+    """
     eligible = [s for s in stories if s.get("score", 0) >= min_score]
     eligible.sort(key=lambda s: (-s["score"], s.get("published_at") or "", s["event_id"]))
-    return eligible[:max_stories]
+    picked: list[dict] = []
+    per_topic: dict[str, int] = {}
+    for story in eligible:
+        topic = (story.get("analysis") or {}).get("syllabus_topic")
+        if max_per_topic and topic:
+            if per_topic.get(topic, 0) >= max_per_topic:
+                continue
+            per_topic[topic] = per_topic.get(topic, 0) + 1
+        picked.append(story)
+        if len(picked) >= max_stories:
+            break
+    return picked

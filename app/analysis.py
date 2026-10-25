@@ -37,7 +37,15 @@ def allowed_numbers_for(source_text: str, headline: str, published_at: str | Non
     return allowed
 
 
-def validate_analysis(raw: object, source_text: str, headline: str, published_at: str | None, weights: dict[str, float]) -> dict:
+def validate_analysis(
+    raw: object,
+    source_text: str,
+    headline: str,
+    published_at: str | None,
+    weights: dict[str, float],
+    profile=None,
+    min_syllabus_relevance: float = 0,
+) -> dict:
     """Validate and ground a model analysis. Returns a note dict.
 
     Raises InvalidResponseError for malformed output and AnalysisRejected when
@@ -53,6 +61,13 @@ def validate_analysis(raw: object, source_text: str, headline: str, published_at
         criteria = validate_criteria(raw.get("scores"))
     except ScoreError as exc:
         raise InvalidResponseError(f"Invalid scores: {exc}") from exc
+    topic = None
+    if profile is not None:
+        topic = raw.get("syllabus_topic") if raw.get("syllabus_topic") in profile.topics else None
+        if topic is None:
+            raise AnalysisRejected("No BCS syllabus topic fits this item")
+    if criteria["syllabus_relevance"] < min_syllabus_relevance:
+        raise AnalysisRejected(f"Syllabus relevance {criteria['syllabus_relevance']:g} below {min_syllabus_relevance:g}")
 
     allowed = allowed_numbers_for(source_text, headline, published_at)
     dropped = 0
@@ -100,12 +115,17 @@ def validate_analysis(raw: object, source_text: str, headline: str, published_at
         raise AnalysisRejected("Summary could not be grounded in the source text")
 
     categories = [c for c in raw.get("categories") or [] if isinstance(c, str) and c in SUBJECTS]
+    if topic is not None:
+        categories.insert(0, profile.topics[topic].subject)  # the topic's subject is authoritative
+    categories = list(dict.fromkeys(categories))[:2]
     focus = raw.get("exam_focus") if raw.get("exam_focus") in ("prelims", "written", "both") else "prelims"
     institutions = [clean_model_text(x, 120) for x in (raw.get("institutions") or []) if isinstance(x, str)][:8]
 
     return {
         "headline_bn": clean_model_text(raw.get("headline_bn"), 200) or headline,
-        "categories": list(dict.fromkeys(categories)),
+        "categories": categories,
+        "syllabus_topic": topic,
+        "likely_question": clean_model_text(raw.get("likely_question"), 300),
         "exam_focus": focus,
         "key_facts": facts,
         "attributed_claims": claims,
@@ -117,15 +137,24 @@ def validate_analysis(raw: object, source_text: str, headline: str, published_at
     }
 
 
-def analyse(client: LLMClient, inp: AnalysisInput, headline: str, source_name: str, published_at: str | None, weights: dict[str, float]) -> dict:
+def analyse(
+    client: LLMClient,
+    inp: AnalysisInput,
+    headline: str,
+    source_name: str,
+    published_at: str | None,
+    weights: dict[str, float],
+    profile=None,
+    min_syllabus_relevance: float = 0,
+) -> dict:
     request = LLMRequest(
         task="analysis",
         system=ANALYSIS_SYSTEM,
-        prompt=analysis_prompt(headline, source_name, published_at, inp.mode, inp.text),
+        prompt=analysis_prompt(headline, source_name, published_at, inp.mode, inp.text, profile),
         payload={"headline": headline, "source": source_name, "mode": inp.mode, "text": inp.text, "published": published_at},
     )
     raw = client.generate_json(request)
-    note = validate_analysis(raw, inp.text, headline, published_at, weights)
+    note = validate_analysis(raw, inp.text, headline, published_at, weights, profile, min_syllabus_relevance)
     note["mode"] = inp.mode
     note["analysed_article_id"] = inp.article_id
     return note
