@@ -240,7 +240,8 @@ accepted_types = [
 rejected_types = [
   "opinion", "feature", "crime_accident", "local_admin", "party_politics",
   "court_case_individual", "foreign_domestic_minor", "sports_entertainment",
-  "lifestyle", "religion_culture_local", "human_interest", "other_low_value",
+  "lifestyle", "religion_culture_local", "human_interest", "corporate_commercial",
+  "other_low_value",
 ]
 
 # Shown to the model as calibration examples (real items from earlier runs).
@@ -254,6 +255,9 @@ bad_examples = [
   "Factory fire was hard to control due to water shortage (incident, no policy outcome)",
   "Opinion column or interview arguing what the government should do (opinion, no new fact)",
   "Road blockade in two hill districts ends, are vehicles moving? (daily situation update)",
+  "A private bank offers loan transfers at 9 percent interest (single company's commercial offer)",
+  "Regulator wants to move its head office to another building (office logistics)",
+  "Foreign airport resumes flights after closure (operational update, no policy)",
 ]
 good_examples = [
   "PM's state visit to Japan: agreements, investment and cooperation (bilateral relations)",
@@ -263,4 +267,6 @@ good_examples = [
   "US-Israel threaten Iran; regional military posture shifts (international conflict)",
   "Bangladesh Bank raises policy rate to X percent (monetary policy, prelims fact)",
   "Cabinet approves draft amendment to the Labour Act (law, written + prelims)",
+  "COP31: Bangladesh and LDCs demand grant-based climate finance (climate diplomacy)",
+  "Government renames a national institution or programme (prelims fact: new official name)",
 ]
