@@ -100,6 +100,22 @@
    "title": "Pharma exports need stronger logistics to compete globally",
    "url": "https://www.thedailystar.net/business/column/news/pharma-exports-need-stronger-logistics-compete-globally-4307276"
   },
+  "a_0585ad055e3c044d": {
+   "canonical_url": "https://news.un.org/feed/view/en/story/2026/10/1168667",
+   "content_hash": "ef72fbe35cbe1cef",
+   "date_status": "ok",
+   "event_id": "ev_dbf1861f188f",
+   "excerpt": "The UN’s Ebola coordinator and the head of the World Health Organization (WHO) have deplored the killing of a nurse working to halt the spread of the disease in the Democratic Republic of the Congo (DRC).",
+   "extraction": null,
+   "id": "a_0585ad055e3c044d",
+   "language": "en",
+   "published_at": "2026-10-26T12:00:00+00:00",
+   "retrieved_at": "2026-10-27T04:55:40+00:00",
+   "source_id": "un_news_all",
+   "source_name": "UN News — All",
+   "title": "Ebola: UN officials condemn killing of nurse in DR Congo",
+   "url": "https://news.un.org/feed/view/en/story/2026/10/1168667"
+  },
   "a_05f8423da3faafe0": {
    "canonical_url": "https://prothomalo.com/business/economics/9rtzd38irj",
    "content_hash": "3692bccada5e30d6",
@@ -139,6 +155,42 @@
    "source_name": "The Daily Star — Bangladesh",
    "title": "Community clinics to be renamed",
    "url": "https://www.thedailystar.net/news/bangladesh/news/community-clinics-be-renamed-4306801"
+  },
+  "a_0a0acc62b2005d82": {
+   "canonical_url": "https://thedailystar.net/news/world/united-states/news/trump-blasts-norway-over-nobel-peace-prize-snub-4308441",
+   "content_hash": "2617a0b5addde997",
+   "date_status": "ok",
+   "event_id": "ev_5962b9e08e92",
+   "excerpt": "US President Donald Trump attacked Norway during a campaign rally, calling it a “shit house country,” and said that Norwegian immigrants were not welcome in the United States because its Nobel Committee had not awarded him the Peace Prize.",
+   "extraction": null,
+   "id": "a_0a0acc62b2005d82",
+   "language": "en",
+   "published_at": "2026-10-26T18:00:00+00:00",
+   "retrieved_at": "2026-10-27T04:55:40+00:00",
+   "source_id": "dailystar_world",
+   "source_name": "The Daily Star — World",
+   "title": "Trump blasts Norway over Nobel Peace Prize snub",
+   "url": "https://www.thedailystar.net/news/world/united-states/news/trump-blasts-norway-over-nobel-peace-prize-snub-4308441"
+  },
+  "a_0cdb0d30c942f003": {
+   "canonical_url": "https://thedailystar.net/news/environment/weather/news/cyclone-arnab-forms-over-bay-cross-india-wednesday-very-severe-storm-4307646",
+   "content_hash": "fc9a87f8014ad6af",
+   "date_status": "ok",
+   "event_id": "ev_bc4d3241014b",
+   "excerpt": "Bangladesh may see light rain over two days as maritime ports asked to hoist signal No 2",
+   "extraction": {
+    "chars": 3965,
+    "reason": "",
+    "status": "ok"
+   },
+   "id": "a_0cdb0d30c942f003",
+   "language": "en",
+   "published_at": "2026-10-26T07:19:21+00:00",
+   "retrieved_at": "2026-10-27T04:55:40+00:00",
+   "source_id": "dailystar_environment",
+   "source_name": "The Daily Star — Environment",
+   "title": "Cyclone Arnab forms over Bay, to cross India on Wednesday as very severe storm",
+   "url": "https://www.thedailystar.net/news/environment/weather/news/cyclone-arnab-forms-over-bay-cross-india-wednesday-very-severe-storm-4307646"
   },
   "a_0d466c394a6de301": {
    "canonical_url": "https://prothomalo.com/world/europe/uqi1yu06hs",
@@ -188,6 +240,22 @@
    "title": "ফ্রান্সজুড়ে আরেক দফা গণবিক্ষোভের পর সংঘর্ষ, গ্রেপ্তার প্রায় ১ হাজার",
    "url": "https://www.bbc.com/bengali/articles/ckp8g2yd7605o?at_medium=RSS&at_campaign=rss"
   },
+  "a_111c821cdd63f735": {
+   "canonical_url": "https://bbc.com/bengali/articles/ckn9rz9j7e3po?at_campaign=rss&at_medium=RSS",
+   "content_hash": "24ed559bf93d4582",
+   "date_status": "ok",
+   "event_id": "ev_ed5446f141b5",
+   "excerpt": "দুই বছরেরও কম সময়ে ছাত্ররা আলেকজান্ডার ভুচিচের ১৪ বছরের রাজনৈতিক আধিপত্য ভেঙে ফেলতে সফল হয়েছে।",
+   "extraction": null,
+   "id": "a_111c821cdd63f735",
+   "language": "bn",
+   "published_at": "2026-10-27T01:25:40+00:00",
+   "retrieved_at": "2026-10-27T04:55:40+00:00",
+   "source_id": "bbc_bangla",
+   "source_name": "BBC News বাংলা",
+   "title": "ছাত্র আন্দোলন কীভাবে সার্বিয়ার ভুচিচের ১৪ বছরের ক্ষমতার পতন ঘটাল",
+   "url": "https://www.bbc.com/bengali/articles/ckn9rz9j7e3po?at_medium=RSS&at_campaign=rss"
+  },
   "a_12355be2b7fc7cb9": {
    "canonical_url": "https://prothomalo.com/bangladesh/crime/smjhotaa-naa-krle-laash-phelaar-humki",
    "content_hash": "fede0805d6fe84a8",
@@ -203,6 +271,22 @@
    "source_name": "Prothom Alo (প্রথম আলো)",
    "title": "সমঝোতা না করলে লাশ ফেলার হুমকি",
    "url": "https://www.prothomalo.com/bangladesh/crime/smjhotaa-naa-krle-laash-phelaar-humki"
+  },
+  "a_13e30bed1dc588aa": {
+   "canonical_url": "https://thedailystar.net/news/bangladesh/news/plan-35-new-planes-biman-gives-consultants-just-8-days-bid-4308391",
+   "content_hash": "6ddb17fdad6b319e",
+   "date_status": "ok",
+   "event_id": "ev_3c44c802233a",
+   "excerpt": "Biman Bangladesh Airlines has given eight days to submit bids for consultancy services for the national flag carrier’s massive fleet expansion, raising questions about the quality of bids that will be received.",
+   "extraction": null,
+   "id": "a_13e30bed1dc588aa",
+   "language": "en",
+   "published_at": "2026-10-26T18:00:00+00:00",
+   "retrieved_at": "2026-10-27T04:55:40+00:00",
+   "source_id": "dailystar_bangladesh",
+   "source_name": "The Daily Star — Bangladesh",
+   "title": "Plan for 35 new planes: Biman gives consultants just 8 days to bid",
+   "url": "https://www.thedailystar.net/news/bangladesh/news/plan-35-new-planes-biman-gives-consultants-just-8-days-bid-4308391"
   },
   "a_158a88a65033f7d4": {
    "canonical_url": "https://prothomalo.com/bangladesh/district/3aqr3iijem",
@@ -276,6 +360,22 @@
    "title": "ট্রাম্পের সমাবেশে একদিন",
    "url": "https://nagorik.prothomalo.com/durporobash/xwda1h34rx"
   },
+  "a_1b6343cbc74f98b2": {
+   "canonical_url": "https://thedailystar.net/news/bangladesh/news/cops-foil-protest-against-attacks-bauls-over-joy-bangla-slogan-4308446",
+   "content_hash": "59f0e83e3ca33eaf",
+   "date_status": "ok",
+   "event_id": "ev_a95657f1035d",
+   "excerpt": "Police foiled a human chain organised by artistes and cultural activists in the capital’s Dhanmondi 27 area yesterday afternoon and detained former Chhatra Union president Dipak Shil, who was participating in the demonstration.",
+   "extraction": null,
+   "id": "a_1b6343cbc74f98b2",
+   "language": "en",
+   "published_at": "2026-10-26T18:00:00+00:00",
+   "retrieved_at": "2026-10-27T04:55:40+00:00",
+   "source_id": "dailystar_bangladesh",
+   "source_name": "The Daily Star — Bangladesh",
+   "title": "Cops foil protest against attacks on bauls over ‘Joy Bangla’ slogan",
+   "url": "https://www.thedailystar.net/news/bangladesh/news/cops-foil-protest-against-attacks-bauls-over-joy-bangla-slogan-4308446"
+  },
   "a_1cdef871ea21015c": {
    "canonical_url": "https://prothomalo.com/world/india/0ki4cxwm2d",
    "content_hash": "43488c3f33fb306d",
@@ -295,6 +395,26 @@
    "source_name": "Prothom Alo (প্রথম আলো)",
    "title": "পাঞ্জাবের মুখ্যমন্ত্রীর তিরে বিদ্ধ জ্ঞানেশ কুমারের ভাই",
    "url": "https://www.prothomalo.com/world/india/0ki4cxwm2d"
+  },
+  "a_1d7127ceff38cf32": {
+   "canonical_url": "https://thedailystar.net/news/world/news/us-canada-working-deal-ease-steel-auto-tariffs-sources-say-4308516",
+   "content_hash": "ce08d13f0dc91ca1",
+   "date_status": "ok",
+   "event_id": "ev_388f24deeb7f",
+   "excerpt": "Talks focus on Section 232 duties on Canadian steel and autos, sources say",
+   "extraction": {
+    "chars": 4429,
+    "reason": "",
+    "status": "ok"
+   },
+   "id": "a_1d7127ceff38cf32",
+   "language": "en",
+   "published_at": "2026-10-27T03:06:54+00:00",
+   "retrieved_at": "2026-10-27T04:55:40+00:00",
+   "source_id": "dailystar_world",
+   "source_name": "The Daily Star — World",
+   "title": "US, Canada working on deal to ease steel, auto tariffs, sources say",
+   "url": "https://www.thedailystar.net/news/world/news/us-canada-working-deal-ease-steel-auto-tariffs-sources-say-4308516"
   },
   "a_1e4362954edcc238": {
    "canonical_url": "https://prothomalo.com/bangladesh/p639yhxvrh",
@@ -400,6 +520,26 @@
    "title": "Overflight, landing charges: 27 carriers leave CAAB chasing Tk 114cr dues",
    "url": "https://www.thedailystar.net/news/bangladesh/news/overflight-landing-charges-27-carriers-leave-caab-chasing-tk-114cr-dues-4307486"
   },
+  "a_25b28e42ff00fb53": {
+   "canonical_url": "https://news.un.org/feed/view/en/story/2026/10/1168672",
+   "content_hash": "732eae7e8e6845c3",
+   "date_status": "ok",
+   "event_id": "ev_a5855d3953eb",
+   "excerpt": "Israel’s “aggressive operation” in the West Bank city of Hebron raises serious concerns of ethnic cleansing, UN human rights chief Volker Türk warned on Monday, as the number of Palestinians forced from their homes passed 3,000 on the eve of Israeli elections.",
+   "extraction": {
+    "chars": 4531,
+    "reason": "",
+    "status": "ok"
+   },
+   "id": "a_25b28e42ff00fb53",
+   "language": "en",
+   "published_at": "2026-10-26T12:00:00+00:00",
+   "retrieved_at": "2026-10-27T04:55:40+00:00",
+   "source_id": "un_news_all",
+   "source_name": "UN News — All",
+   "title": "West Bank: Hebron crackdown displaces thousands, Türk warns of ethnic cleansing",
+   "url": "https://news.un.org/feed/view/en/story/2026/10/1168672"
+  },
   "a_26822af0762f36a3": {
    "canonical_url": "https://thedailystar.net/news/bangladesh/news/next-polls-under-caretaker-govt-4307426",
    "content_hash": "64bcfe4fa631314a",
@@ -456,6 +596,26 @@
    "title": "UK consumer confidence tumbles",
    "url": "https://www.thedailystar.net/business/global-economy/news/uk-consumer-confidence-tumbles-4307266"
   },
+  "a_28cf2b6e0f7512d3": {
+   "canonical_url": "https://news.un.org/feed/view/en/story/2026/10/1168670",
+   "content_hash": "beb9ad2f26fa2d1b",
+   "date_status": "ok",
+   "event_id": "ev_1f8217a3831a",
+   "excerpt": "Top human rights experts investigating Russia’s full-scale invasion of Ukraine said on Monday that the Russian authorities had committed war crimes and crimes against humanity by attacking civilians and vital energy infrastructure, among other violations of international law.",
+   "extraction": {
+    "chars": 3910,
+    "reason": "",
+    "status": "ok"
+   },
+   "id": "a_28cf2b6e0f7512d3",
+   "language": "en",
+   "published_at": "2026-10-26T12:00:00+00:00",
+   "retrieved_at": "2026-10-27T04:55:40+00:00",
+   "source_id": "un_news_all",
+   "source_name": "UN News — All",
+   "title": "Ukraine: Investigators find Russia committed war crimes by targeting civilians",
+   "url": "https://news.un.org/feed/view/en/story/2026/10/1168670"
+  },
   "a_28fd049eba3e0b1f": {
    "canonical_url": "https://prothomalo.com/sports/cricket/iiqccgpnmz",
    "content_hash": "8a6759642cb0a83a",
@@ -504,6 +664,22 @@
    "title": "বাংলাদেশে সাপের বিষের প্রতিষেধক বা অ্যান্টিভেনম তৈরির কাজ কতদূর?",
    "url": "https://www.bbc.com/bengali/articles/c70gleqrnljo?at_medium=RSS&at_campaign=rss"
   },
+  "a_2b1bbd2d3272359f": {
+   "canonical_url": "https://thedailystar.net/news/environment/news/3-former-prabartak-sangha-officials-fined-hill-cutting-4308341",
+   "content_hash": "07477e04fb25af50",
+   "date_status": "ok",
+   "event_id": "ev_2c5ee98e06bd",
+   "excerpt": "Court fines each Tk 2 lakh",
+   "extraction": null,
+   "id": "a_2b1bbd2d3272359f",
+   "language": "en",
+   "published_at": "2026-10-26T18:16:53+00:00",
+   "retrieved_at": "2026-10-27T04:55:40+00:00",
+   "source_id": "dailystar_environment",
+   "source_name": "The Daily Star — Environment",
+   "title": "3 former Prabartak Sangha officials fined for hill cutting",
+   "url": "https://www.thedailystar.net/news/environment/news/3-former-prabartak-sangha-officials-fined-hill-cutting-4308341"
+  },
   "a_2bfb29d963c8af65": {
    "canonical_url": "https://bbc.com/bengali/articles/cm20vg3p6lzvo?at_campaign=rss&at_medium=RSS",
    "content_hash": "699b9c9433b92616",
@@ -551,6 +727,22 @@
    "source_name": "The Daily Star — World",
    "title": "Brazil's Lula clinches poll victory, Bolsonaro seeks to annul election",
    "url": "https://www.thedailystar.net/news/world/news/brazils-lula-clinches-poll-victory-bolsonaro-seeks-annul-election-4307566"
+  },
+  "a_2f766bf0f9170937": {
+   "canonical_url": "https://bbc.com/bengali/articles/cmx2wr592pzko?at_campaign=rss&at_medium=RSS",
+   "content_hash": "b7e1ad88c782df36",
+   "date_status": "ok",
+   "event_id": "ev_390dbe5e283e",
+   "excerpt": "আইজিপির 'ক্রসফায়ার' নিয়ে মন্তব্যের পর এর নিন্দা ও প্রতিবাদ জানিয়েছে মানবাধিকার সংস্থা এবং বাংলাদেশের রাজনৈতিক দলগুলোও। আইজিপিকে জবাবদিহি করা ও তার অপসারণের দাবিও উঠেছে।",
+   "extraction": null,
+   "id": "a_2f766bf0f9170937",
+   "language": "bn",
+   "published_at": "2026-10-26T16:13:21+00:00",
+   "retrieved_at": "2026-10-27T04:55:40+00:00",
+   "source_id": "bbc_bangla",
+   "source_name": "BBC News বাংলা",
+   "title": "'ক্রসফায়ার' নিয়ে আইজিপির মন্তব্যের পর কেন 'ব্যাখ্যা' দিতে হলো পুলিশকে?",
+   "url": "https://www.bbc.com/bengali/articles/cmx2wr592pzko?at_medium=RSS&at_campaign=rss"
   },
   "a_30905f6b2900c01c": {
    "canonical_url": "https://prothomalo.com/education/higher-education/5dp552hmbv",
@@ -728,6 +920,22 @@
    "title": "হামের উপসর্গে আরও আটজন মারা গেছে, মোট মৃত্যু ১২২২",
    "url": "https://www.prothomalo.com/bangladesh/6qmxm23bx9"
   },
+  "a_41bd2d81ec53e6e6": {
+   "canonical_url": "https://prothomalo.com/world/usa/z2jq8r2da1",
+   "content_hash": "60d467df4418472c",
+   "date_status": "ok",
+   "event_id": "ev_0ad9618f6a1d",
+   "excerpt": "রয়টার্স-ইপসোস জরিপে দেখা যায়, মূল্যস্ফীতি ও জ্বালানির দাম বৃদ্ধিতে ভোটাররা হতাশ। ডেমোক্র্যাটরা কংগ্রেসের প্রতিনিধি পরিষদের নিয়ন্ত্রণ নিতে পারে বলে বিশ্লেষকেরা মনে করছেন।",
+   "extraction": null,
+   "id": "a_41bd2d81ec53e6e6",
+   "language": "bn",
+   "published_at": "2026-10-27T02:58:11+00:00",
+   "retrieved_at": "2026-10-27T04:55:40+00:00",
+   "source_id": "prothomalo",
+   "source_name": "Prothom Alo (প্রথম আলো)",
+   "title": "মধ্যবর্তী নির্বাচনের আগে ট্রাম্পের জনসমর্থন বেড়ে দাঁড়িয়েছে ৩২ শতাংশে",
+   "url": "https://www.prothomalo.com/world/usa/z2jq8r2da1"
+  },
   "a_456308468be44742": {
    "canonical_url": "https://prothomalo.com/bangladesh/district/v2y221dbs8",
    "content_hash": "6a29b36d51d237e1",
@@ -816,6 +1024,26 @@
    "title": "মেঝেতে পড়ে যাওয়া খাবার ৫ সেকেন্ডের মধ্যে তুলে খাওয়া কি উচিত",
    "url": "https://www.bigganchinta.com/biology/byqiffkm12"
   },
+  "a_49c5286b5c775675": {
+   "canonical_url": "https://thedailystar.net/business/economy/news/state-banks-get-mds-private-sector-after-20-years-4308151",
+   "content_hash": "17f162220dfa2bf5",
+   "date_status": "ok",
+   "event_id": "ev_5c8be27a1148",
+   "excerpt": "The government has appointed private-sector executives to lead Janata and Agrani banks for the first time in 20 years, following a recent relaxation of eligibility criteria for chief executives of state-owned lenders.",
+   "extraction": {
+    "chars": 3169,
+    "reason": "",
+    "status": "ok"
+   },
+   "id": "a_49c5286b5c775675",
+   "language": "en",
+   "published_at": "2026-10-26T18:00:00+00:00",
+   "retrieved_at": "2026-10-27T04:55:40+00:00",
+   "source_id": "dailystar_business",
+   "source_name": "The Daily Star — Business",
+   "title": "State banks get MDs from private sector after 20 years",
+   "url": "https://www.thedailystar.net/business/economy/news/state-banks-get-mds-private-sector-after-20-years-4308151"
+  },
   "a_49e3fedf2b07a261": {
    "canonical_url": "https://thedailystar.net/business/economy/news/adp-spending-hits-17-year-low-q1-4307306",
    "content_hash": "5c745b1a45e166b2",
@@ -851,6 +1079,22 @@
    "source_name": "Prothom Alo (প্রথম আলো)",
    "title": "শহীদ কাদরীর স্মৃতিতে শামসুর রাহমান",
    "url": "https://www.prothomalo.com/onnoalo/prose/cgjddt9evg"
+  },
+  "a_4cc9e586b1af3555": {
+   "canonical_url": "https://thedailystar.net/news/bangladesh/news/health-ministry-spending-thousands-crores-left-untouched-4308401",
+   "content_hash": "ad22b54330e588c7",
+   "date_status": "ok",
+   "event_id": "ev_ddb066776e44",
+   "excerpt": "The government has nearly doubled the health ministry’s development allocation this fiscal year, but the ministry spent less than 2 percent of its project funds in the first quarter, raising concerns about its capacity to utilise the increased funding.",
+   "extraction": null,
+   "id": "a_4cc9e586b1af3555",
+   "language": "en",
+   "published_at": "2026-10-26T18:00:00+00:00",
+   "retrieved_at": "2026-10-27T04:55:40+00:00",
+   "source_id": "dailystar_bangladesh",
+   "source_name": "The Daily Star — Bangladesh",
+   "title": "Health ministry spending: Thousands of crores left untouched",
+   "url": "https://www.thedailystar.net/news/bangladesh/news/health-ministry-spending-thousands-crores-left-untouched-4308401"
   },
   "a_4f97710d61286e43": {
    "canonical_url": "https://prothomalo.com/bangladesh/district/fqxuagwkru",
@@ -984,6 +1228,22 @@
    "title": "ট্রাম্পের নতুন নীতি যেভাবে ইউক্রেনকে আরও বিপদে ফেলে দিল",
    "url": "https://www.prothomalo.com/opinion/column/d8l6znw2fg"
   },
+  "a_57d44e5676da964d": {
+   "canonical_url": "https://bbc.com/bengali/articles/cvglw88we0yro?at_campaign=rss&at_medium=RSS",
+   "content_hash": "53d3febafec72bdc",
+   "date_status": "ok",
+   "event_id": "ev_56e059d59081",
+   "excerpt": "\"ধর্মীয় শিক্ষাদানকারী প্রতিষ্ঠান হওয়ার অর্থ এই নয় যে, তা জবাবদিহিতা, সুশাসন ও মানোন্নয়নের ঊর্ধ্বে থাকবে। বরং দ্বীনি প্রতিষ্ঠানের ক্ষেত্রেই স্বচ্ছতা, নৈতিকতা ও জবাবদিহিতা আরও দৃশ্যমান হওয়া উচিত,\" ফেসবুকে লিখেছেন ইসলামি বক্তা মিজানুর রহমান আজহারি।",
+   "extraction": null,
+   "id": "a_57d44e5676da964d",
+   "language": "bn",
+   "published_at": "2026-10-26T08:34:08+00:00",
+   "retrieved_at": "2026-10-27T04:55:40+00:00",
+   "source_id": "bbc_bangla",
+   "source_name": "BBC News বাংলা",
+   "title": "কওমি মাদ্রাসায় শিশুদের যৌন নির্যাতনের ঘটনা থামছে না কেন?",
+   "url": "https://www.bbc.com/bengali/articles/cvglw88we0yro?at_medium=RSS&at_campaign=rss"
+  },
   "a_5803d874ccd1aba7": {
    "canonical_url": "https://thedailystar.net/news/world/europe/news/unrise-europe-arrests-overdrive-france-spain-portugal-4307511",
    "content_hash": "62c9f91c0e18828a",
@@ -1064,6 +1324,22 @@
    "title": "‘We must keep returning to Abul Maksud’s work’",
    "url": "https://www.thedailystar.net/news/bangladesh/news/we-must-keep-returning-abul-maksuds-work-4306751"
   },
+  "a_5cf9e949b640f48d": {
+   "canonical_url": "https://prothomalo.com/bangladesh/zonzjmklra",
+   "content_hash": "44767edbaf47b6d7",
+   "date_status": "ok",
+   "event_id": "ev_4b04363ea82d",
+   "excerpt": "২০২৫ সালে সৌদি আরবে মৃত্যুদণ্ড কার্যকর হয়েছে রেকর্ড ৩৫৬টি। এক বছর আগে, ২০২৪ সালে এ সংখ্যা ছিল ৩৪৫, যা তখন ছিল গত এক দশকের সর্বোচ্চ।",
+   "extraction": null,
+   "id": "a_5cf9e949b640f48d",
+   "language": "bn",
+   "published_at": "2026-10-27T03:15:08+00:00",
+   "retrieved_at": "2026-10-27T04:55:40+00:00",
+   "source_id": "prothomalo",
+   "source_name": "Prothom Alo (প্রথম আলো)",
+   "title": "সকালেই পড়ুন আলোচিত ৫ খবর",
+   "url": "https://www.prothomalo.com/bangladesh/zonzjmklra"
+  },
   "a_5ea700f6b60a6fe4": {
    "canonical_url": "https://haal.fashion/lifestyle/pkfsfku69e",
    "content_hash": "2ff9189aacf61389",
@@ -1116,6 +1392,22 @@
    "title": "রাশিয়া কি যুক্তরাষ্ট্র-ইরানকে এক টেবিলে নিয়ে আসতে পারবে",
    "url": "https://www.prothomalo.com/opinion/column/1eba5fj2vk"
   },
+  "a_6060488eec70b7a5": {
+   "canonical_url": "https://thedailystar.net/news/bangladesh/news/drive-against-illegal-resorts-coxs-bazar-4308451",
+   "content_hash": "47054bdaee5d5515",
+   "date_status": "ok",
+   "event_id": "ev_d27daeae4350",
+   "excerpt": "Authorities yesterday demolished a four-storey resort building in Ukhiya’s Inani during a joint drive against unauthorised hotels and resorts along Cox’s Bazar’s Marine Drive.",
+   "extraction": null,
+   "id": "a_6060488eec70b7a5",
+   "language": "en",
+   "published_at": "2026-10-26T18:00:00+00:00",
+   "retrieved_at": "2026-10-27T04:55:40+00:00",
+   "source_id": "dailystar_bangladesh",
+   "source_name": "The Daily Star — Bangladesh",
+   "title": "Drive against illegal resorts in Cox’s Bazar",
+   "url": "https://www.thedailystar.net/news/bangladesh/news/drive-against-illegal-resorts-coxs-bazar-4308451"
+  },
   "a_61fd496832987616": {
    "canonical_url": "https://prothomalo.com/entertainment/dhallywood/h3w6iw1lel",
    "content_hash": "560d77ca4f03ec44",
@@ -1152,6 +1444,38 @@
    "title": "বঙ্গোপসাগরের গভীর নিম্নচাপটি আরো ঘনীভূত হয়ে সোমবার ঘূর্ণিঝড়ে পরিণত হতে পারে বলে পূর্বাভাস",
    "url": "https://www.bbc.co.uk/bengali/live/cx98zpj6me8gt?at_medium=RSS&at_campaign=rss"
   },
+  "a_658758eef39be361": {
+   "canonical_url": "https://thedailystar.net/business/economy/news/how-exposed-bangladesh-prolonged-saudi-crisis-4308171",
+   "content_hash": "7a66e552046d7aeb",
+   "date_status": "ok",
+   "event_id": "ev_c78dad89bb0a",
+   "excerpt": "Bangladesh is unlikely to see an immediate fall in remittances from Saudi Arabia even as Houthi attacks on the kingdom intensified from early October, but a slowdown in new migration could weigh on inflows in the years ahead.",
+   "extraction": null,
+   "id": "a_658758eef39be361",
+   "language": "en",
+   "published_at": "2026-10-26T18:00:00+00:00",
+   "retrieved_at": "2026-10-27T04:55:40+00:00",
+   "source_id": "dailystar_business",
+   "source_name": "The Daily Star — Business",
+   "title": "How exposed is Bangladesh to a prolonged Saudi crisis?",
+   "url": "https://www.thedailystar.net/business/economy/news/how-exposed-bangladesh-prolonged-saudi-crisis-4308171"
+  },
+  "a_672135264bee9f49": {
+   "canonical_url": "https://prothomalo.com/world/middle-east/rkosffnr41",
+   "content_hash": "c7a17e8931ecd05a",
+   "date_status": "ok",
+   "event_id": "ev_896b59a958dc",
+   "excerpt": "",
+   "extraction": null,
+   "id": "a_672135264bee9f49",
+   "language": "bn",
+   "published_at": "2026-10-27T02:00:00+00:00",
+   "retrieved_at": "2026-10-27T04:55:40+00:00",
+   "source_id": "prothomalo",
+   "source_name": "Prothom Alo (প্রথম আলো)",
+   "title": "সৌদিতে প্রবাসীদের মৃত্যুদণ্ড: ‘ভাষা বোঝেন না, আইনজীবী পান না, লাশও ফেরে না’",
+   "url": "https://www.prothomalo.com/world/middle-east/rkosffnr41"
+  },
   "a_690c2b29488622b5": {
    "canonical_url": "https://haal.fashion/celeb/look/y37f1b446w",
    "content_hash": "fb3ec99a3b1374bc",
@@ -1167,6 +1491,22 @@
    "source_name": "Prothom Alo (প্রথম আলো)",
    "title": "লাল শাড়ি, সোনালি ব্লাউজে শেফালি বাগ্গা: ভাইরাল এই লুক ঘিরে এত আলোচনা কেন?",
    "url": "https://www.haal.fashion/celeb/look/y37f1b446w"
+  },
+  "a_69dd9a1e2e21e526": {
+   "canonical_url": "https://bbc.com/bengali/articles/c6g7xe53d211o?at_campaign=rss&at_medium=RSS",
+   "content_hash": "a474abda8c81aa71",
+   "date_status": "ok",
+   "event_id": "ev_776ed094b44c",
+   "excerpt": "ডিসেম্বরকে কেন্দ্র করে আওআমী লীগের ষড়যন্ত্র ও অর্থায়নের বিনিময়ে রাষ্ট্রের বিভিন্ন পর্যায়ে পদায়ন চলছে বলে অভিযোগ, জাপানের প্রধানমন্ত্রীর সঙ্গে আজ বাংলাদেশের প্রধানমন্ত্রী তারেক রহমানের বৈঠক - ঢাকা থেকে প্রকাশিত মঙ্গলবারের সংবাদপত্রে গুরুত্ব পেয়েছে এসব খবর।",
+   "extraction": null,
+   "id": "a_69dd9a1e2e21e526",
+   "language": "bn",
+   "published_at": "2026-10-27T03:00:26+00:00",
+   "retrieved_at": "2026-10-27T04:55:40+00:00",
+   "source_id": "bbc_bangla",
+   "source_name": "BBC News বাংলা",
+   "title": "পত্রিকা: 'প্রধানমন্ত্রী ও মন্ত্রীদের বাসভবনের দায়িত্বে আ'লীগপন্থী কর্মকর্তারা'",
+   "url": "https://www.bbc.com/bengali/articles/c6g7xe53d211o?at_medium=RSS&at_campaign=rss"
   },
   "a_6ba48de46c90cd2b": {
    "canonical_url": "https://bbc.com/bengali/articles/cme3xejj0lzgo?at_campaign=rss&at_medium=RSS",
@@ -1216,6 +1556,22 @@
    "title": "ওসির সঙ্গে রুমিন ফারহানার বাগ্‌বিতণ্ডা, এবার জিডি করল পুলিশ",
    "url": "https://www.prothomalo.com/video/bangladesh/hin1mgmjbk"
   },
+  "a_6f51571f05eb31c3": {
+   "canonical_url": "https://prothomalo.com/business/personal-finance/la4hin3ek0",
+   "content_hash": "2009d8b4a2594a10",
+   "date_status": "ok",
+   "event_id": "ev_5378c83f498f",
+   "excerpt": "",
+   "extraction": null,
+   "id": "a_6f51571f05eb31c3",
+   "language": "bn",
+   "published_at": "2026-10-27T02:30:00+00:00",
+   "retrieved_at": "2026-10-27T04:55:40+00:00",
+   "source_id": "prothomalo",
+   "source_name": "Prothom Alo (প্রথম আলো)",
+   "title": "আয়কর রিটার্ন কখন দিলে ছাড় পাবেন, কখন জরিমানায় পড়বেন, জেনে নিন",
+   "url": "https://www.prothomalo.com/business/personal-finance/la4hin3ek0"
+  },
   "a_6ff790be3fe6082a": {
    "canonical_url": "https://prothomalo.com/bangladesh/district/wuydcnno38",
    "content_hash": "eefb009bf9370e15",
@@ -1231,6 +1587,42 @@
    "source_name": "Prothom Alo (প্রথম আলো)",
    "title": "বাড়ি ভাড়া নিয়ে মাদক কারবারের অভিযোগ, পুলিশ সদস্যসহ আটক ৩",
    "url": "https://www.prothomalo.com/bangladesh/district/wuydcnno38"
+  },
+  "a_7132b97a7a635a7c": {
+   "canonical_url": "https://thedailystar.net/news/bangladesh/news/igp-draws-flak-over-crossfire-comment-4308386",
+   "content_hash": "5b3b97551e6f6d23",
+   "date_status": "ok",
+   "event_id": "ev_390dbe5e283e",
+   "excerpt": "Opposition political parties, rights organisations and journalist bodies yesterday sharply criticised Inspector General of Police (IGP) Ali Hossain Fakir over his comments suggesting police could use “crossfire” if authorised by the government.",
+   "extraction": null,
+   "id": "a_7132b97a7a635a7c",
+   "language": "en",
+   "published_at": "2026-10-26T18:00:00+00:00",
+   "retrieved_at": "2026-10-27T04:55:40+00:00",
+   "source_id": "dailystar_bangladesh",
+   "source_name": "The Daily Star — Bangladesh",
+   "title": "IGP draws flak over ‘crossfire’ comment",
+   "url": "https://www.thedailystar.net/news/bangladesh/news/igp-draws-flak-over-crossfire-comment-4308386"
+  },
+  "a_7167aff6d4adc8ba": {
+   "canonical_url": "https://thedailystar.net/business/economy/news/foreign-loan-disbursements-fall-42-jul-sept-4308141",
+   "content_hash": "3db2cb0b734cae61",
+   "date_status": "ok",
+   "event_id": "ev_70c8a519bb93",
+   "excerpt": "Bangladesh received about half of the $1.27 billion in foreign loan commitments in the first quarter of the 2026-27 financial year, according to provisional data released by the Economic Relations Division (ERD) yesterday.",
+   "extraction": {
+    "chars": 2542,
+    "reason": "",
+    "status": "ok"
+   },
+   "id": "a_7167aff6d4adc8ba",
+   "language": "en",
+   "published_at": "2026-10-26T18:00:00+00:00",
+   "retrieved_at": "2026-10-27T04:55:40+00:00",
+   "source_id": "dailystar_business",
+   "source_name": "The Daily Star — Business",
+   "title": "Foreign loan disbursements fall 42% in Jul-Sept",
+   "url": "https://www.thedailystar.net/business/economy/news/foreign-loan-disbursements-fall-42-jul-sept-4308141"
   },
   "a_7169a1de04484f1d": {
    "canonical_url": "https://thedailystar.net/business/economy/news/prime-bank-partners-le-dor-offer-benefits-priority-banking-customers-4306546",
@@ -1344,6 +1736,42 @@
    "title": "ব্রাজিলে চতুর্থবারের মতো প্রেসিডেন্ট নির্বাচিত লুলা, সামনে বৈরী কংগ্রেস ও বিভক্ত দেশ",
    "url": "https://www.bbc.com/bengali/articles/cqlye383181do?at_medium=RSS&at_campaign=rss"
   },
+  "a_77a20b87ee1fab3c": {
+   "canonical_url": "https://bbc.com/bengali/articles/cmwy4glx5e0lo?at_campaign=rss&at_medium=RSS",
+   "content_hash": "3c65891bbe786896",
+   "date_status": "ok",
+   "event_id": "ev_776ed094b44c",
+   "excerpt": "বাংলাদেশের প্রধানমন্ত্রী তারেক রহমানের সফরটি এমন সময় অনুষ্ঠিত হচ্ছে, যখন জাপানি ঋণের সুদের হার বাড়ানো নিয়ে বাংলাদেশের মধ্যে উদ্বেগ তৈরি হয়েছে। কারণ গত পাঁচ বছরে জাপান অন্তত চার বার ঋণের সুদ বাড়িয়েছে। এছাড়া বিভিন্ন উন্নয়ন প্রকল্প করে জাপানের নানা ধরনের শর্তারোপ নিয়েও অস্বস্তি আছে বাংলাদেশে।",
+   "extraction": {
+    "chars": 9158,
+    "reason": "",
+    "status": "ok"
+   },
+   "id": "a_77a20b87ee1fab3c",
+   "language": "bn",
+   "published_at": "2026-10-26T14:37:12+00:00",
+   "retrieved_at": "2026-10-27T04:55:40+00:00",
+   "source_id": "bbc_bangla",
+   "source_name": "BBC News বাংলা",
+   "title": "তারেক রহমানের জাপান সফরে কী চাইছে বাংলাদেশ",
+   "url": "https://www.bbc.com/bengali/articles/cmwy4glx5e0lo?at_medium=RSS&at_campaign=rss"
+  },
+  "a_7919e1977422b522": {
+   "canonical_url": "https://news.un.org/feed/view/en/story/2026/10/1168669",
+   "content_hash": "a624e08ee128521a",
+   "date_status": "ok",
+   "event_id": "ev_01433b40e628",
+   "excerpt": "UN Secretary-General António Guterres called for dialogue and diplomacy to end the war between Iran and the United States in remarks on Monday to journalists in Cairo, Egypt.",
+   "extraction": null,
+   "id": "a_7919e1977422b522",
+   "language": "en",
+   "published_at": "2026-10-26T12:00:00+00:00",
+   "retrieved_at": "2026-10-27T04:55:40+00:00",
+   "source_id": "un_news_all",
+   "source_name": "UN News — All",
+   "title": "In Egypt, Guterres warns against Iran-US escalation",
+   "url": "https://news.un.org/feed/view/en/story/2026/10/1168669"
+  },
   "a_7a1526a48a14a5e5": {
    "canonical_url": "https://prothomalo.com/world/south-america/s1vvptn39x",
    "content_hash": "0064d9cf1696e0ac",
@@ -1379,6 +1807,38 @@
    "source_name": "Prothom Alo (প্রথম আলো)",
    "title": "কানাডায় অভিবাসন জালিয়াতির অভিযোগে পাঁচ বাংলাদেশির বিরুদ্ধে মামলা, একজনের বিরুদ্ধে গ্রেপ্তারি পরোয়ানা",
    "url": "https://www.prothomalo.com/world/94ztp26a3b"
+  },
+  "a_7e5140b0d937cdc8": {
+   "canonical_url": "https://thedailystar.net/business/global-economy/news/job-concerns-rise-china-ai-generated-actors-take-roles-4308126",
+   "content_hash": "3799caf9930722e5",
+   "date_status": "ok",
+   "event_id": "ev_baff426ea584",
+   "excerpt": "Artificial intelligence-generated actors are moving from online short dramas into advertising and other commercial settings in China, offering production teams a cheaper and more controllable alternative to human performers, while raising questions about employment and the future of the entertainment industry.",
+   "extraction": null,
+   "id": "a_7e5140b0d937cdc8",
+   "language": "en",
+   "published_at": "2026-10-26T18:00:00+00:00",
+   "retrieved_at": "2026-10-27T04:55:40+00:00",
+   "source_id": "dailystar_business",
+   "source_name": "The Daily Star — Business",
+   "title": "Job concerns rise in China as AI-generated actors take roles",
+   "url": "https://www.thedailystar.net/business/global-economy/news/job-concerns-rise-china-ai-generated-actors-take-roles-4308126"
+  },
+  "a_7f36953355232eda": {
+   "canonical_url": "https://thedailystar.net/business/global-economy/news/dollar-edges-oil-gas-import-payments-mount-4308146",
+   "content_hash": "4fd2164e92ed27c3",
+   "date_status": "ok",
+   "event_id": "ev_06f4c38f74dc",
+   "excerpt": "The US dollar rose slightly against the taka yesterday as banks faced mounting pressure to settle letters of credit (LCs) for oil and gas imports.",
+   "extraction": null,
+   "id": "a_7f36953355232eda",
+   "language": "en",
+   "published_at": "2026-10-26T18:00:00+00:00",
+   "retrieved_at": "2026-10-27T04:55:40+00:00",
+   "source_id": "dailystar_business",
+   "source_name": "The Daily Star — Business",
+   "title": "Dollar edges up as oil, gas import payments mount",
+   "url": "https://www.thedailystar.net/business/global-economy/news/dollar-edges-oil-gas-import-payments-mount-4308146"
   },
   "a_8016ca4c719a6e95": {
    "canonical_url": "https://prothomalo.com/world/india/g506ng3vmq",
@@ -1435,6 +1895,22 @@
    "source_name": "Prothom Alo (প্রথম আলো)",
    "title": "প্রধানমন্ত্রীর জাপান সফরে ডেঙ্গুর টিকার প্রসঙ্গ তোলা যায়",
    "url": "https://www.prothomalo.com/opinion/interview/tnn1of6c7e"
+  },
+  "a_842f8a2545e44241": {
+   "canonical_url": "https://thedailystar.net/business/column/news/the-merchandisers-vulnerable-phone-4308121",
+   "content_hash": "00661800e91d4338",
+   "date_status": "ok",
+   "event_id": "ev_c7859ab1a9fa",
+   "excerpt": "Nasrin is a senior merchandiser at a knitwear factory in Gazipur. She handles two European buyers who keep her phone busy past midnight: WhatsApp groups with sourcing teams and production managers, emails about shipments, photos of lab dips and costing sheets. To understand the account, its prices, people and payment history, you would need her phone.",
+   "extraction": null,
+   "id": "a_842f8a2545e44241",
+   "language": "en",
+   "published_at": "2026-10-26T18:00:00+00:00",
+   "retrieved_at": "2026-10-27T04:55:40+00:00",
+   "source_id": "dailystar_business",
+   "source_name": "The Daily Star — Business",
+   "title": "The merchandiser’s vulnerable phone",
+   "url": "https://www.thedailystar.net/business/column/news/the-merchandisers-vulnerable-phone-4308121"
   },
   "a_872547c267386d4f": {
    "canonical_url": "https://prothomalo.com/sports/cricket/hvqfmvbi8f",
@@ -1764,6 +2240,22 @@
    "title": "ঘোরাঘুরি করাই কাজ, পেশা হিসেবে ট্র্যাভেল ব্লগিং কেমন",
    "url": "https://www.prothomalo.com/video/48tbg66bgg"
   },
+  "a_926cad741de9d34b": {
+   "canonical_url": "https://thedailystar.net/news/world/news/bad-omen-syria-bans-women-university-courses-4308511",
+   "content_hash": "02f17d0bce3dbdb1",
+   "date_status": "ok",
+   "event_id": "ev_1bacdb2e0f1d",
+   "excerpt": "The recent announcement that Syrian tertiary institutes will not allow women into some courses has triggered debate. Critics worry it may be a sign that the new Syrian government is restricting women's rights",
+   "extraction": null,
+   "id": "a_926cad741de9d34b",
+   "language": "en",
+   "published_at": "2026-10-27T02:57:31+00:00",
+   "retrieved_at": "2026-10-27T04:55:40+00:00",
+   "source_id": "dailystar_world",
+   "source_name": "The Daily Star — World",
+   "title": "A bad omen? Syria bans women from university courses",
+   "url": "https://www.thedailystar.net/news/world/news/bad-omen-syria-bans-women-university-courses-4308511"
+  },
   "a_927b230d816cd9ca": {
    "canonical_url": "https://thedailystar.net/news/environment/news/tk-87cr-climate-smart-urban-project-cards-4306431",
    "content_hash": "e1fb9a73140666f5",
@@ -1799,6 +2291,22 @@
    "source_name": "The Daily Star — Bangladesh",
    "title": "Islamic leaders want peaceful Ijtema",
    "url": "https://www.thedailystar.net/news/bangladesh/news/islamic-leaders-want-peaceful-ijtema-4306731"
+  },
+  "a_945517e7569f6102": {
+   "canonical_url": "https://thedailystar.net/news/world/news/trump-made-us-midterms-about-himself-will-it-backfire-4308501",
+   "content_hash": "f47c81bfce1ce5ed",
+   "date_status": "ok",
+   "event_id": "ev_0ad9618f6a1d",
+   "excerpt": "Trump has blitzed the campaign trail in the month before the November 3 vote, jetting across the country for near-daily rallies in the fervent belief that he alone can fire up his MAGA base",
+   "extraction": null,
+   "id": "a_945517e7569f6102",
+   "language": "en",
+   "published_at": "2026-10-27T02:44:38+00:00",
+   "retrieved_at": "2026-10-27T04:55:40+00:00",
+   "source_id": "dailystar_world",
+   "source_name": "The Daily Star — World",
+   "title": "Trump made US midterms about himself. Will it backfire?",
+   "url": "https://www.thedailystar.net/news/world/news/trump-made-us-midterms-about-himself-will-it-backfire-4308501"
   },
   "a_957486bd81713638": {
    "canonical_url": "https://prothomalo.com/video/bangladesh/hkgpdicyvx",
@@ -1903,6 +2411,38 @@
    "source_name": "Prothom Alo (প্রথম আলো)",
    "title": "অস্কার ক্লেইন মেডেল পেলেন বাঙালি বিজ্ঞানী অশোক সেন",
    "url": "https://www.bigganchinta.com/events/oop1m2khwp"
+  },
+  "a_987a56fa52045345": {
+   "canonical_url": "https://bbc.com/bengali/articles/cq4g1jkl3nn8o?at_campaign=rss&at_medium=RSS",
+   "content_hash": "9d31e2a7175d6249",
+   "date_status": "ok",
+   "event_id": "ev_98d65219a6eb",
+   "excerpt": "কাঁটাতারের বেড়াসহ সৃষ্ট নানা প্রতিবন্ধকতায় ভারতের সাথে সীমান্তের বাংলাদেশ অংশে আটকা পড়ে আছে ১৩০টির বেশি বন্য হাতি। ঘটনা কূটনীতির পর্যায় পর্যন্তও গড়িয়েছে। বাংলাদেশ বিষয়টিতে ভারতের কাছে উদ্বেগ জানিয়েছে; কিন্তু মিলছে না কোনো সমাধান।",
+   "extraction": null,
+   "id": "a_987a56fa52045345",
+   "language": "bn",
+   "published_at": "2026-10-26T06:07:38+00:00",
+   "retrieved_at": "2026-10-27T04:55:40+00:00",
+   "source_id": "bbc_bangla",
+   "source_name": "BBC News বাংলা",
+   "title": "ভারতে প্রবেশ প্রায় বন্ধ, শেরপুর সীমান্তে আটকে পড়া হাতিগুলোর কী হবে?",
+   "url": "https://www.bbc.com/bengali/articles/cq4g1jkl3nn8o?at_medium=RSS&at_campaign=rss"
+  },
+  "a_99bf24356f5c73ee": {
+   "canonical_url": "https://bbc.co.uk/bengali/live/cmed3wd0yvjwt?at_campaign=rss&at_medium=RSS",
+   "content_hash": "acab2baaa74d43ff",
+   "date_status": "missing",
+   "event_id": "ev_776ed094b44c",
+   "excerpt": "'ক্রসফায়ার' নিয়ে পুলিশের মহাপরিদর্শক (আইজিপি) মো. আলী হোসেন ফকিরের বক্তব্য ঘিরে আলোচনা-সমালোচনার মধ্যেই বিষয়টি নিয়ে ব্যাখ্যা দিয়েছে পুলিশ সদরদপ্তর। এদিকে, মক্কা প্রতিরক্ষা চুক্তি সই করা দেশ সৌদি আরব, তুরস্ক ও পাকিস্তানের কর্মকর্তারা তেহরানে ইরানের কর্মকর্তাদের সঙ্গে বৈঠক করেছেন।",
+   "extraction": null,
+   "id": "a_99bf24356f5c73ee",
+   "language": "bn",
+   "published_at": null,
+   "retrieved_at": "2026-10-27T04:55:40+00:00",
+   "source_id": "bbc_bangla",
+   "source_name": "BBC News বাংলা",
+   "title": "সৌদি আরব, তুরস্ক ও পাকিস্তানের সঙ্গে বৈঠক শেষে মস্কো রওনা হলেন ইরানের প্রেসিডেন্ট",
+   "url": "https://www.bbc.co.uk/bengali/live/cmed3wd0yvjwt?at_medium=RSS&at_campaign=rss"
   },
   "a_99ef3ebe8d62f3ff": {
    "canonical_url": "https://prothomalo.com/bangladesh/district/1nrk874lps",
@@ -2092,6 +2632,22 @@
    "title": "‘An internal matter of foreign ministry’",
    "url": "https://www.thedailystar.net/news/bangladesh/diplomacy/news/internal-matter-foreign-ministry-4306771"
   },
+  "a_a3a6a30c3e8ad179": {
+   "canonical_url": "https://prothomalo.com/bangladesh/ju03c6m4qe",
+   "content_hash": "b16da5ca6b588c83",
+   "date_status": "ok",
+   "event_id": "ev_390dbe5e283e",
+   "excerpt": "সংবিধানের ৩২ নম্বর অনুচ্ছেদে স্পষ্ট উল্লেখ আছে, ‘আইনানুযায়ী ব্যতীত জীবন ও ব্যক্তিস্বাধীনতা হইতে কোনো ব্যক্তিকে বঞ্চিত করা যাইবে না।’",
+   "extraction": null,
+   "id": "a_a3a6a30c3e8ad179",
+   "language": "bn",
+   "published_at": "2026-10-27T04:31:39+00:00",
+   "retrieved_at": "2026-10-27T04:55:40+00:00",
+   "source_id": "prothomalo",
+   "source_name": "Prothom Alo (প্রথম আলো)",
+   "title": "পুলিশপ্রধানের মুখে ক্রসফায়ারের কথা কেন ভীতিকর",
+   "url": "https://www.prothomalo.com/bangladesh/ju03c6m4qe"
+  },
   "a_a58459e5fa1cd679": {
    "canonical_url": "https://prothomalo.com/world/south-america/ibaab5b93l",
    "content_hash": "ee0078808740b2ec",
@@ -2156,6 +2712,26 @@
    "title": "সন্ধ্যায় সারা দিনের খবর",
    "url": "https://www.prothomalo.com/bangladesh/9djbsoopcs"
   },
+  "a_ae4d1ed564a57d5a": {
+   "canonical_url": "https://thedailystar.net/business/global-economy/news/first-round-fta-talks-malaysia-starts-today-4308161",
+   "content_hash": "bfb98e401ae173e5",
+   "date_status": "ok",
+   "event_id": "ev_32c093c6ba71",
+   "excerpt": "Bangladesh and Malaysia will begin negotiations for a free trade agreement (FTA) in Dhaka today as Bangladesh seeks to secure preferential market access after its graduation from the least developed country (LDC) category.",
+   "extraction": {
+    "chars": 4988,
+    "reason": "",
+    "status": "ok"
+   },
+   "id": "a_ae4d1ed564a57d5a",
+   "language": "en",
+   "published_at": "2026-10-26T18:00:00+00:00",
+   "retrieved_at": "2026-10-27T04:55:40+00:00",
+   "source_id": "dailystar_business",
+   "source_name": "The Daily Star — Business",
+   "title": "First round of FTA talks with Malaysia starts today",
+   "url": "https://www.thedailystar.net/business/global-economy/news/first-round-fta-talks-malaysia-starts-today-4308161"
+  },
   "a_af27705943665de4": {
    "canonical_url": "https://thedailystar.net/business/global-economy/news/sri-lanka-seeks-faster-green-energy-shift-after-oil-shocks-4307281",
    "content_hash": "7c7bf92c426185f2",
@@ -2191,6 +2767,26 @@
    "source_name": "Prothom Alo (প্রথম আলো)",
    "title": "গণ–অভ্যুত্থানের পর হতাশাজনক পরিস্থিতি কি বিরল",
    "url": "https://www.prothomalo.com/opinion/column/nu7yx0p9pr"
+  },
+  "a_af84b0bc7217b043": {
+   "canonical_url": "https://news.un.org/feed/view/en/story/2026/10/1168673",
+   "content_hash": "dfb08014a78ebfa5",
+   "date_status": "ok",
+   "event_id": "ev_2472bbe850a2",
+   "excerpt": "War is growing deadlier for women and girls, who accounted for one in four of the more than 37,000 civilians killed in armed conflict last year – double their share in 2021 – according to major UN report released Monday.",
+   "extraction": {
+    "chars": 3053,
+    "reason": "",
+    "status": "ok"
+   },
+   "id": "a_af84b0bc7217b043",
+   "language": "en",
+   "published_at": "2026-10-26T12:00:00+00:00",
+   "retrieved_at": "2026-10-27T04:55:40+00:00",
+   "source_id": "un_news_all",
+   "source_name": "UN News — All",
+   "title": "Women and girls’ share of civilian war deaths doubles since 2021",
+   "url": "https://news.un.org/feed/view/en/story/2026/10/1168673"
   },
   "a_afba70e7eb0d0b00": {
    "canonical_url": "https://thedailystar.net/news/bangladesh/news/keeping-rickshaw-art-alive-4306761",
@@ -2312,6 +2908,22 @@
    "title": "Country’s only DAP fertiliser plant remains shut for 4 months",
    "url": "https://www.thedailystar.net/business/economy/news/countrys-only-dap-fertiliser-plant-remains-shut-4-months-4307311"
   },
+  "a_b7c41e1d32e18017": {
+   "canonical_url": "https://thedailystar.net/news/bangladesh/diplomacy/news/tarique-takaichi-begin-bilateral-summit-tokyo-4308526",
+   "content_hash": "33082dc63aa6d006",
+   "date_status": "ok",
+   "event_id": "ev_776ed094b44c",
+   "excerpt": "Talks focus on trade, investment, strategic partnership and cooperation in key sectors",
+   "extraction": null,
+   "id": "a_b7c41e1d32e18017",
+   "language": "en",
+   "published_at": "2026-10-27T03:22:28+00:00",
+   "retrieved_at": "2026-10-27T04:55:40+00:00",
+   "source_id": "dailystar_bangladesh",
+   "source_name": "The Daily Star — Bangladesh",
+   "title": "Tarique, Takaichi begin bilateral summit in Tokyo",
+   "url": "https://www.thedailystar.net/news/bangladesh/diplomacy/news/tarique-takaichi-begin-bilateral-summit-tokyo-4308526"
+  },
   "a_b83640db3f1cb17f": {
    "canonical_url": "https://thedailystar.net/news/world/news/riyadh-airport-resume-flights-sunday-following-closure-after-houthi-attacks-4306836",
    "content_hash": "9f2868891abf1e39",
@@ -2348,6 +2960,22 @@
    "title": "Why do planes keep circling before landing? The UN has a plan to fix it",
    "url": "https://news.un.org/feed/view/en/story/2026/10/1168666"
   },
+  "a_b96453f8de5a4bb5": {
+   "canonical_url": "https://thedailystar.net/news/world/news/israel-give-verdict-netanyahu-pivotal-election-4308486",
+   "content_hash": "9c4b49e5d37bda86",
+   "date_status": "ok",
+   "event_id": "ev_5356fbad9796",
+   "excerpt": "Israelis will cast their ballots in the shadow of three years of multi-front regional wars triggered by October 7, with the trauma still fresh and questions over accountability and security central to the campaign",
+   "extraction": null,
+   "id": "a_b96453f8de5a4bb5",
+   "language": "en",
+   "published_at": "2026-10-27T02:32:37+00:00",
+   "retrieved_at": "2026-10-27T04:55:40+00:00",
+   "source_id": "dailystar_world",
+   "source_name": "The Daily Star — World",
+   "title": "Israel to give verdict on Netanyahu in pivotal election",
+   "url": "https://www.thedailystar.net/news/world/news/israel-give-verdict-netanyahu-pivotal-election-4308486"
+  },
   "a_b9c44bcc6c682ab4": {
    "canonical_url": "https://thedailystar.net/news/world/news/obama-blasts-trumps-chaos-and-cruelty-while-campaigning-democrats-4306826",
    "content_hash": "287a71acbfaae771",
@@ -2364,6 +2992,26 @@
    "title": "Obama blasts Trump's 'chaos and cruelty' while campaigning for Democrats",
    "url": "https://www.thedailystar.net/news/world/news/obama-blasts-trumps-chaos-and-cruelty-while-campaigning-democrats-4306826"
   },
+  "a_ba48b52409376174": {
+   "canonical_url": "https://thedailystar.net/business/economy/news/govt-wants-1b-korean-budget-support-tackle-energy-shocks-4308156",
+   "content_hash": "9eb37683e8fe2392",
+   "date_status": "ok",
+   "event_id": "ev_3454eb8f8fed",
+   "excerpt": "The government is looking to secure $1 billion in budget support from South Korea to help manage the economic fallout from prolonged unrest in the Middle East, as rising energy costs put pressure on public finances and foreign exchange reserves.",
+   "extraction": {
+    "chars": 4775,
+    "reason": "",
+    "status": "ok"
+   },
+   "id": "a_ba48b52409376174",
+   "language": "en",
+   "published_at": "2026-10-26T18:00:00+00:00",
+   "retrieved_at": "2026-10-27T04:55:40+00:00",
+   "source_id": "dailystar_business",
+   "source_name": "The Daily Star — Business",
+   "title": "Govt wants $1b Korean budget support to tackle energy shocks",
+   "url": "https://www.thedailystar.net/business/economy/news/govt-wants-1b-korean-budget-support-tackle-energy-shocks-4308156"
+  },
   "a_bc8bc1b21868c240": {
    "canonical_url": "https://prothomalo.com/politics/wpo8jc0k1e",
    "content_hash": "18c129af3205b558",
@@ -2379,6 +3027,22 @@
    "source_name": "Prothom Alo (প্রথম আলো)",
    "title": "গণ-অভ্যুত্থানের পরাজিত শক্তির বিপক্ষে অস্তিত্ব রক্ষায় পরস্পরের হাত ধরে রাখা দরকার: নিয়াজ আহমেদ",
    "url": "https://www.prothomalo.com/politics/wpo8jc0k1e"
+  },
+  "a_bd8c8de38b1d3f61": {
+   "canonical_url": "https://thedailystar.net/news/world/news/us-midterms-five-issues-shaping-the-vote-4308496",
+   "content_hash": "a912002a9fa1eadd",
+   "date_status": "ok",
+   "event_id": "ev_0ad9618f6a1d",
+   "excerpt": "The campaign is playing out against an unusually combustible mix of economic anxiety, war, immigration battles, corruption concerns and unease over rapidly expanding artificial intelligence",
+   "extraction": null,
+   "id": "a_bd8c8de38b1d3f61",
+   "language": "en",
+   "published_at": "2026-10-27T02:40:57+00:00",
+   "retrieved_at": "2026-10-27T04:55:40+00:00",
+   "source_id": "dailystar_world",
+   "source_name": "The Daily Star — World",
+   "title": "US midterms: five issues shaping the vote",
+   "url": "https://www.thedailystar.net/news/world/news/us-midterms-five-issues-shaping-the-vote-4308496"
   },
   "a_bfa68b8979be621f": {
    "canonical_url": "https://thedailystar.net/news/world/europe/news/1000-held-france-erupts-protests-violence-again-4306686",
@@ -2432,6 +3096,26 @@
    "title": "সকালেই পড়ুন আলোচিত ৫ খবর",
    "url": "https://www.prothomalo.com/bangladesh/jdfpqktia5"
   },
+  "a_c123d1020fba4e47": {
+   "canonical_url": "https://thedailystar.net/news/bangladesh/news/sovereign-bond-promotion-govt-hold-roadshows-hk-nyc-london-4308406",
+   "content_hash": "5ac59da05526fc97",
+   "date_status": "ok",
+   "event_id": "ev_e779833028c9",
+   "excerpt": "The government will hold roadshows in London, New York and Hong Kong in preparation for the sovereign bond issue.",
+   "extraction": {
+    "chars": 3758,
+    "reason": "",
+    "status": "ok"
+   },
+   "id": "a_c123d1020fba4e47",
+   "language": "en",
+   "published_at": "2026-10-26T18:00:00+00:00",
+   "retrieved_at": "2026-10-27T04:55:40+00:00",
+   "source_id": "dailystar_bangladesh",
+   "source_name": "The Daily Star — Bangladesh",
+   "title": "Sovereign bond promotion: Govt to hold roadshows in HK, NYC, London",
+   "url": "https://www.thedailystar.net/news/bangladesh/news/sovereign-bond-promotion-govt-hold-roadshows-hk-nyc-london-4308406"
+  },
   "a_c1a21b287c793d33": {
    "canonical_url": "https://prothomalo.com/bangladesh/district/guofm3vvpa",
    "content_hash": "f0ab740da036dac9",
@@ -2468,6 +3152,22 @@
    "title": "ইংল্যান্ড কীভাবে নিজের প্রথম রাজাকে ভুলে গেল?",
    "url": "https://www.bbc.com/bengali/articles/ckz7x91znjx9o?at_medium=RSS&at_campaign=rss"
   },
+  "a_c302a8b8a2393709": {
+   "canonical_url": "https://thedailystar.net/news/world/middle-east/news/houthi-missile-sites-destroyed-yemen-4308426",
+   "content_hash": "d1e285c9330a0d54",
+   "date_status": "ok",
+   "event_id": "ev_7486de9406c1",
+   "excerpt": "The Saudi-led military coalition fighting Yemen’s Houthis struck several of its missile launchers and storage facilities, a spokesman said yesterday, while the Iran-backed group claimed a new attack on Riyadh’s international airport.",
+   "extraction": null,
+   "id": "a_c302a8b8a2393709",
+   "language": "en",
+   "published_at": "2026-10-26T18:00:00+00:00",
+   "retrieved_at": "2026-10-27T04:55:40+00:00",
+   "source_id": "dailystar_world",
+   "source_name": "The Daily Star — World",
+   "title": "Houthi missile sites destroyed in Yemen",
+   "url": "https://www.thedailystar.net/news/world/middle-east/news/houthi-missile-sites-destroyed-yemen-4308426"
+  },
   "a_c320dfca9fb95a84": {
    "canonical_url": "https://prothomalo.com/education/study/m1f82f0ck3",
    "content_hash": "ccbb8764e86d33ae",
@@ -2483,6 +3183,26 @@
    "source_name": "Prothom Alo (প্রথম আলো)",
    "title": "একবিংশ শতাব্দীর শেষ পিথাগোরিয়ান তারিখ আজ: অপেক্ষা আগামী শতকের",
    "url": "https://www.prothomalo.com/education/study/m1f82f0ck3"
+  },
+  "a_c32655dec802dd4e": {
+   "canonical_url": "https://prothomalo.com/bangladesh/0bwpbq76an",
+   "content_hash": "9faa52629d7d01c7",
+   "date_status": "ok",
+   "event_id": "ev_59e364aca2c0",
+   "excerpt": "হামের টিকার কার্যকারিতা নিয়ে প্রথমবারের মতো গবেষণা। আইইডিসিআরের নেতৃত্বে ৬ প্রতিষ্ঠানের ১২ জন গবেষক কাজটি করেছেন।",
+   "extraction": {
+    "chars": 6365,
+    "reason": "",
+    "status": "ok"
+   },
+   "id": "a_c32655dec802dd4e",
+   "language": "bn",
+   "published_at": "2026-10-27T03:04:57+00:00",
+   "retrieved_at": "2026-10-27T04:55:40+00:00",
+   "source_id": "prothomalo",
+   "source_name": "Prothom Alo (প্রথম আলো)",
+   "title": "হামের টিকা ঠিকমতো কাজে আসছে না, ২৭ শতাংশ শিশুর অ্যান্টিবডি হয়নি",
+   "url": "https://www.prothomalo.com/bangladesh/0bwpbq76an"
   },
   "a_c39e76c3655e5b66": {
    "canonical_url": "https://prothomalo.com/bangladesh/district/mwbxa4sdlr",
@@ -2548,6 +3268,22 @@
    "title": "তাঁরা শুধু থাপড়ান, ভিডিও করেন, ভিউ লাখ লাখ",
    "url": "https://www.prothomalo.com/bangladesh/capital/vveqsbxrz9"
   },
+  "a_c59ef825a8b71403": {
+   "canonical_url": "https://thedailystar.net/news/world/news/israels-principal-parties-the-upcoming-election-4308491",
+   "content_hash": "f63077d8d3a0757b",
+   "date_status": "ok",
+   "event_id": "ev_5356fbad9796",
+   "excerpt": "Some seven million Israelis will be eligible to vote",
+   "extraction": null,
+   "id": "a_c59ef825a8b71403",
+   "language": "en",
+   "published_at": "2026-10-27T02:37:35+00:00",
+   "retrieved_at": "2026-10-27T04:55:40+00:00",
+   "source_id": "dailystar_world",
+   "source_name": "The Daily Star — World",
+   "title": "Israel's principal parties in the upcoming election",
+   "url": "https://www.thedailystar.net/news/world/news/israels-principal-parties-the-upcoming-election-4308491"
+  },
   "a_c5d1e173d9eeda54": {
    "canonical_url": "https://prothomalo.com/world/india/2t7erl9lp9",
    "content_hash": "8acf71d1537fe71d",
@@ -2583,6 +3319,22 @@
    "source_name": "Prothom Alo (প্রথম আলো)",
    "title": "যখন তওবা করলেও আল্লাহ ক্ষমা করবেন না",
    "url": "https://www.prothomalo.com/religion/islam/b7yn4c1jnj"
+  },
+  "a_c863d42f2de2f8b8": {
+   "canonical_url": "https://bbc.com/bengali/articles/cq70pl2n7r4po?at_campaign=rss&at_medium=RSS",
+   "content_hash": "085f8ab7bb7b7cf8",
+   "date_status": "ok",
+   "event_id": "ev_14726b7f90ef",
+   "excerpt": "ভারতশাসিত জম্মু ও কাশ্মীরের সাবেক মুখ্যমন্ত্রী ফারুক আবদুল্লাহর সাম্প্রতিক বক্তব্য ঘিরে বিতর্কের সৃষ্টি হয়েছে। তার দল ন্যাশনাল কনফারেন্সের এক অনুষ্ঠানে পাকিস্তানের দিকে ইঙ্গিত করে ফারুক আবদুল্লাহ দাবি করেন, ভারতশাসিত কাশ্মীর সম্পর্কে প্রতিবেশী দেশ সর্বত্র সরব থেকেছে।",
+   "extraction": null,
+   "id": "a_c863d42f2de2f8b8",
+   "language": "bn",
+   "published_at": "2026-10-26T12:32:44+00:00",
+   "retrieved_at": "2026-10-27T04:55:40+00:00",
+   "source_id": "bbc_bangla",
+   "source_name": "BBC News বাংলা",
+   "title": "'কাশ্মীরকে রক্ষা করছে পাকিস্তান'- ফারুক আবদুল্লাহর মন্তব্য নিয়ে ভারতে বিতর্ক",
+   "url": "https://www.bbc.com/bengali/articles/cq70pl2n7r4po?at_medium=RSS&at_campaign=rss"
   },
   "a_c942a4e5d20f5556": {
    "canonical_url": "https://prothomalo.com/entertainment/ott/oms05h3chx",
@@ -2768,6 +3520,22 @@
    "title": "IDRA wants to move HQ to Agargaon despite cheaper Motijheel option",
    "url": "https://www.thedailystar.net/business/economy/news/idra-wants-move-hq-agargaon-despite-cheaper-motijheel-option-4306521"
   },
+  "a_d14ae999d8fc35bf": {
+   "canonical_url": "https://prothomalo.com/bangladesh/q7s2twiabq",
+   "content_hash": "28959258a33daed2",
+   "date_status": "ok",
+   "event_id": "ev_776ed094b44c",
+   "excerpt": "মঙ্গলবার স্থানীয় সময় বেলা সাড়ে ১১টায় টোকিওতে প্রধানমন্ত্রীর কার্যালয় কান্তেইয়ে এসে পৌঁছালে তারেক রহমানকে উষ্ণ অভ্যর্থনা জানানো হয়।",
+   "extraction": null,
+   "id": "a_d14ae999d8fc35bf",
+   "language": "bn",
+   "published_at": "2026-10-27T03:20:33+00:00",
+   "retrieved_at": "2026-10-27T04:55:40+00:00",
+   "source_id": "prothomalo",
+   "source_name": "Prothom Alo (প্রথম আলো)",
+   "title": "উষ্ণ অভ্যর্থনা, গার্ড অব অনারের পর তারেক রহমানের সঙ্গে বৈঠকে সানায়ে তাকাইচি",
+   "url": "https://www.prothomalo.com/bangladesh/q7s2twiabq"
+  },
   "a_d174ac6bd93ee2a3": {
    "canonical_url": "https://prothomalo.com/bangladesh/capital/352bh0mak3",
    "content_hash": "7ab27c0ab3033f8e",
@@ -2788,6 +3556,22 @@
    "title": "ফুটপাতে দোকান বসালেই মামলা, মালামাল জব্দের হুঁশিয়ারি ডিএসসিসির",
    "url": "https://www.prothomalo.com/bangladesh/capital/352bh0mak3"
   },
+  "a_d243bc3f4d175d03": {
+   "canonical_url": "https://prothomalo.com/world/middle-east/aky04rpw0o",
+   "content_hash": "6185b9fb48bec2b7",
+   "date_status": "ok",
+   "event_id": "ev_5356fbad9796",
+   "excerpt": "ইসরায়েলের পার্লামেন্ট নেসেটের এবারের নির্বাচনে ভোটার প্রায় ৭৩ লাখ। নেসেটের ১২০ আসনে ভোট হচ্ছে। একক সংখ্যাগরিষ্ঠতার জন্য ৬১টি আসনে জয় পেতে হবে।",
+   "extraction": null,
+   "id": "a_d243bc3f4d175d03",
+   "language": "bn",
+   "published_at": "2026-10-27T04:14:57+00:00",
+   "retrieved_at": "2026-10-27T04:55:40+00:00",
+   "source_id": "prothomalo",
+   "source_name": "Prothom Alo (প্রথম আলো)",
+   "title": "ট্রাম্পের সমর্থন ও যুদ্ধে নেতৃত্ব—এ দুইয়ে ভর করে টিকতে চাইছেন নেতানিয়াহু",
+   "url": "https://www.prothomalo.com/world/middle-east/aky04rpw0o"
+  },
   "a_d4b8b7407625e5a2": {
    "canonical_url": "https://thedailystar.net/news/bangladesh/news/cwasa-plans-90000-smart-meters-2030-4306796",
    "content_hash": "9266fe4429ab1f5b",
@@ -2807,6 +3591,22 @@
    "source_name": "The Daily Star — Bangladesh",
    "title": "CWASA plans 90,000 smart meters by 2030",
    "url": "https://www.thedailystar.net/news/bangladesh/news/cwasa-plans-90000-smart-meters-2030-4306796"
+  },
+  "a_d50cccf3d691e20a": {
+   "canonical_url": "https://thedailystar.net/news/world/news/microsoft-offers-buyouts-around-60000-employees-contain-costs-4308506",
+   "content_hash": "3b0333c0a87d69f0",
+   "date_status": "ok",
+   "event_id": "ev_dc147d3c8205",
+   "excerpt": "Microsoft had 223,000 full-time employees globally as of June ‌30, ⁠2026, according to its annual filing",
+   "extraction": null,
+   "id": "a_d50cccf3d691e20a",
+   "language": "en",
+   "published_at": "2026-10-27T02:50:00+00:00",
+   "retrieved_at": "2026-10-27T04:55:40+00:00",
+   "source_id": "dailystar_world",
+   "source_name": "The Daily Star — World",
+   "title": "Microsoft offers buyouts to around 60,000 employees to contain costs",
+   "url": "https://www.thedailystar.net/news/world/news/microsoft-offers-buyouts-around-60000-employees-contain-costs-4308506"
   },
   "a_d5afe5c6de069237": {
    "canonical_url": "https://prothomalo.com/chakri/employment/v9qkchzp8b",
@@ -2936,6 +3736,54 @@
    "title": "ব্র্যাক ব্যাংকে ৯ শতাংশ সুদে ঋণ স্থানান্তরের সুযোগ, বাড়তি খরচ নেই",
    "url": "https://www.prothomalo.com/business/personal-finance/hvkyju02qb"
   },
+  "a_e3121b40dcfaec35": {
+   "canonical_url": "https://prothomalo.com/business/industry/4gbuqleomc",
+   "content_hash": "ae2129884eefc481",
+   "date_status": "ok",
+   "event_id": "ev_a487bfb454f6",
+   "excerpt": "",
+   "extraction": null,
+   "id": "a_e3121b40dcfaec35",
+   "language": "bn",
+   "published_at": "2026-10-27T03:30:00+00:00",
+   "retrieved_at": "2026-10-27T04:55:40+00:00",
+   "source_id": "prothomalo",
+   "source_name": "Prothom Alo (প্রথম আলো)",
+   "title": "জিপি ৯ মাসে ১১,৭৫৬ কোটি টাকা ব্যবসা করেছে",
+   "url": "https://www.prothomalo.com/business/industry/4gbuqleomc"
+  },
+  "a_e36572c68f370685": {
+   "canonical_url": "https://thedailystar.net/business/economy/news/coordinated-efforts-key-jobs-youth-disabilities-4308131",
+   "content_hash": "a76af778edc1005d",
+   "date_status": "ok",
+   "event_id": "ev_2395a969344b",
+   "excerpt": "Bangladesh needs coordinated efforts by the government, employers, training institutions and development organisations to help young people with disabilities transition from skills development to decent employment, speakers said at a roundtable yesterday.",
+   "extraction": null,
+   "id": "a_e36572c68f370685",
+   "language": "en",
+   "published_at": "2026-10-26T18:00:00+00:00",
+   "retrieved_at": "2026-10-27T04:55:40+00:00",
+   "source_id": "dailystar_business",
+   "source_name": "The Daily Star — Business",
+   "title": "Coordinated efforts key to jobs for youth with disabilities",
+   "url": "https://www.thedailystar.net/business/economy/news/coordinated-efforts-key-jobs-youth-disabilities-4308131"
+  },
+  "a_e3d686be3b9fb807": {
+   "canonical_url": "https://thedailystar.net/news/bangladesh/news/fertiliser-dealer-appointment-js-committee-seeks-probe-alleged-irregularities-4308411",
+   "content_hash": "fb87e990a6fdb913",
+   "date_status": "ok",
+   "event_id": "ev_ff3081ebf545",
+   "excerpt": "Members of the Parliamentary Standing Committee on the Ministry of Agriculture yesterday voiced concern over allegations of irregularities, political influence and bribery in the appointment of fertiliser dealers in several districts, and called for investigations and action if claims are proven.",
+   "extraction": null,
+   "id": "a_e3d686be3b9fb807",
+   "language": "en",
+   "published_at": "2026-10-26T18:00:00+00:00",
+   "retrieved_at": "2026-10-27T04:55:40+00:00",
+   "source_id": "dailystar_bangladesh",
+   "source_name": "The Daily Star — Bangladesh",
+   "title": "Fertiliser dealer appointment: JS committee seeks probe into alleged irregularities",
+   "url": "https://www.thedailystar.net/news/bangladesh/news/fertiliser-dealer-appointment-js-committee-seeks-probe-alleged-irregularities-4308411"
+  },
   "a_e55f0b8b928958e3": {
    "canonical_url": "https://prothomalo.com/religion/islam/gxeawqwfzv",
    "content_hash": "c6d635a9d9925004",
@@ -2951,6 +3799,22 @@
    "source_name": "Prothom Alo (প্রথম আলো)",
    "title": "সন্তানের ধর্মীয় শিক্ষা: কোথায় পড়াবেন, কোথায় পড়াবেন না",
    "url": "https://www.prothomalo.com/religion/islam/gxeawqwfzv"
+  },
+  "a_e58676b925ba43de": {
+   "canonical_url": "https://thedailystar.net/news/bangladesh/news/five-universities-student-unions-hog-headlines-wrong-reasons-4308396",
+   "content_hash": "d0486efd28dbc0f3",
+   "date_status": "ok",
+   "event_id": "ev_9b9a53ffa70b",
+   "excerpt": "Elected with a mandate to protect students’ rights, student union leaders at five major public universities have instead repeatedly been embroiled in controversies over student assaults, teacher intimidation, administrative interference, and divisive initiatives.",
+   "extraction": null,
+   "id": "a_e58676b925ba43de",
+   "language": "en",
+   "published_at": "2026-10-26T18:00:00+00:00",
+   "retrieved_at": "2026-10-27T04:55:40+00:00",
+   "source_id": "dailystar_bangladesh",
+   "source_name": "The Daily Star — Bangladesh",
+   "title": "Student unions at five universities hog headlines for wrong reasons",
+   "url": "https://www.thedailystar.net/news/bangladesh/news/five-universities-student-unions-hog-headlines-wrong-reasons-4308396"
   },
   "a_e65b82a328370c12": {
    "canonical_url": "https://prothomalo.com/lifestyle/style/nvon8h9qhn",
@@ -2983,6 +3847,22 @@
    "source_name": "Prothom Alo (প্রথম আলো)",
    "title": "হাত-পা বেঁধে ঝোপে ফেলে রাখা হয় তাঁতী দল নেতাকে, গোঙানির শব্দ শুনে উদ্ধার",
    "url": "https://www.prothomalo.com/bangladesh/district/bi5e8j42uh"
+  },
+  "a_e804efb13a54cd5f": {
+   "canonical_url": "https://thedailystar.net/business/economy/news/govts-one-stop-service-portal-mygov-goes-offline-4308136",
+   "content_hash": "54037fb14fcdc9f7",
+   "date_status": "ok",
+   "event_id": "ev_db86469f3bbc",
+   "excerpt": "Bangladesh’s one-stop government service portal, myGov, went offline yesterday, leaving citizens and businesses unable to access a wide range of public services, as authorities announced “urgent maintenance” for security and service quality upgrades.",
+   "extraction": null,
+   "id": "a_e804efb13a54cd5f",
+   "language": "en",
+   "published_at": "2026-10-26T18:00:00+00:00",
+   "retrieved_at": "2026-10-27T04:55:40+00:00",
+   "source_id": "dailystar_business",
+   "source_name": "The Daily Star — Business",
+   "title": "Govt’s one-stop service portal myGov goes offline",
+   "url": "https://www.thedailystar.net/business/economy/news/govts-one-stop-service-portal-mygov-goes-offline-4308136"
   },
   "a_e8f301d105782f2c": {
    "canonical_url": "https://prothomalo.com/world/middle-east/elu3jlz53e",
@@ -3035,6 +3915,22 @@
    "source_name": "The Daily Star — Bangladesh",
    "title": "Dengue, measles rage on as govt drives fall short",
    "url": "https://www.thedailystar.net/news/bangladesh/news/dengue-measles-rage-govt-drives-fall-short-4307411"
+  },
+  "a_ecd1267dcb68263c": {
+   "canonical_url": "https://thedailystar.net/news/bangladesh/diplomacy/news/tarique-seeks-turn-bangladesh-japan-ties-engine-shared-prosperity-4308536",
+   "content_hash": "09c56ee98de8d051",
+   "date_status": "ok",
+   "event_id": "ev_776ed094b44c",
+   "excerpt": "PM invites Japanese investors to explore opportunities in Bangladesh",
+   "extraction": null,
+   "id": "a_ecd1267dcb68263c",
+   "language": "en",
+   "published_at": "2026-10-27T03:57:03+00:00",
+   "retrieved_at": "2026-10-27T04:55:40+00:00",
+   "source_id": "dailystar_bangladesh",
+   "source_name": "The Daily Star — Bangladesh",
+   "title": "Tarique seeks to turn Bangladesh-Japan ties into engine of shared prosperity",
+   "url": "https://www.thedailystar.net/news/bangladesh/diplomacy/news/tarique-seeks-turn-bangladesh-japan-ties-engine-shared-prosperity-4308536"
   },
   "a_eda4e2856898ee12": {
    "canonical_url": "https://bbc.com/bengali/articles/cx7vp0d3z5q8o?at_campaign=rss&at_medium=RSS",
@@ -3195,6 +4091,22 @@
    "source_name": "The Daily Star — Business",
    "title": "Why AI data centres are powering a boom in fuel-cell demand",
    "url": "https://www.thedailystar.net/business/global-economy/news/why-ai-data-centres-are-powering-boom-fuel-cell-demand-4306551"
+  },
+  "a_f44a6259c5189911": {
+   "canonical_url": "https://thedailystar.net/news/world/news/brazil-no-ones-backyard-4308421",
+   "content_hash": "14294370ca8d40f4",
+   "date_status": "ok",
+   "event_id": "ev_6c0d29c8c798",
+   "excerpt": "Brazilian President Luiz Inácio Lula da Silva won a fourth presidential term after defeating conservative challenger Flávio Bolsonaro in Sunday’s runoff election, with the electoral authority confirming his victory and extending left-wing leadership in Latin America’s largest economy.",
+   "extraction": null,
+   "id": "a_f44a6259c5189911",
+   "language": "en",
+   "published_at": "2026-10-26T18:00:00+00:00",
+   "retrieved_at": "2026-10-27T04:55:40+00:00",
+   "source_id": "dailystar_world",
+   "source_name": "The Daily Star — World",
+   "title": "‘Brazil is no one’s backyard’",
+   "url": "https://www.thedailystar.net/news/world/news/brazil-no-ones-backyard-4308421"
   },
   "a_f5e11d786e1745c5": {
    "canonical_url": "https://thedailystar.net/business/organisation-news/news/ncc-bank-provides-free-agri-inputs-3000-farmers-4306561",
@@ -4223,9 +5135,241 @@
     "ev_ded5708c7790"
    ],
    "unprocessed_candidates": 8
+  },
+  "2026-10-27": {
+   "attempts": 1,
+   "chunks": [
+    {
+     "attempts": 0,
+     "index": 0,
+     "message_id": null,
+     "sha": "b93d289c56857dac",
+     "status": "pending"
+    },
+    {
+     "attempts": 0,
+     "index": 1,
+     "message_id": null,
+     "sha": "3a309fef48043f79",
+     "status": "pending"
+    },
+    {
+     "attempts": 0,
+     "index": 2,
+     "message_id": null,
+     "sha": "9e3127e6c224078e",
+     "status": "pending"
+    },
+    {
+     "attempts": 0,
+     "index": 3,
+     "message_id": null,
+     "sha": "cfe8c44b230b12f5",
+     "status": "pending"
+    },
+    {
+     "attempts": 0,
+     "index": 4,
+     "message_id": null,
+     "sha": "f7bdd43b5ec79179",
+     "status": "pending"
+    },
+    {
+     "attempts": 0,
+     "index": 5,
+     "message_id": null,
+     "sha": "1f1aa6d9ca7295ba",
+     "status": "pending"
+    },
+    {
+     "attempts": 0,
+     "index": 6,
+     "message_id": null,
+     "sha": "a7e0850010ac7281",
+     "status": "pending"
+    },
+    {
+     "attempts": 0,
+     "index": 7,
+     "message_id": null,
+     "sha": "52f08a764f230e3a",
+     "status": "pending"
+    }
+   ],
+   "created_at": "2026-10-27T04:55:40+00:00",
+   "date": "2026-10-27",
+   "delivered_at": "2026-10-27T04:58:55+00:00",
+   "deliveries": {
+    "1033339929": {
+     "attempts": 1,
+     "delivered_at": "2026-10-27T04:58:35+00:00",
+     "pdf_message_id": 183,
+     "sent": {
+      "0": 175,
+      "1": 176,
+      "2": 177,
+      "3": 178,
+      "4": 179,
+      "5": 180,
+      "6": 181,
+      "7": 182
+     },
+     "status": "done"
+    },
+    "1433480564": {
+     "attempts": 1,
+     "delivered_at": "2026-10-27T04:58:55+00:00",
+     "pdf_message_id": 201,
+     "sent": {
+      "0": 193,
+      "1": 194,
+      "2": 195,
+      "3": 196,
+      "4": 197,
+      "5": 198,
+      "6": 199,
+      "7": 200
+     },
+     "status": "done"
+    },
+    "1679140572": {
+     "attempts": 1,
+     "delivered_at": "2026-10-27T04:58:24+00:00",
+     "pdf_message_id": 174,
+     "sent": {
+      "0": 166,
+      "1": 167,
+      "2": 168,
+      "3": 169,
+      "4": 170,
+      "5": 171,
+      "6": 172,
+      "7": 173
+     },
+     "status": "done"
+    },
+    "7872342619": {
+     "attempts": 1,
+     "delivered_at": "2026-10-27T04:58:46+00:00",
+     "pdf_message_id": 192,
+     "sent": {
+      "0": 184,
+      "1": 185,
+      "2": 186,
+      "3": 187,
+      "4": 188,
+      "5": 189,
+      "6": 190,
+      "7": 191
+     },
+     "status": "done"
+    }
+   },
+   "dry_run": false,
+   "edition_date": "2026-10-27",
+   "failure_notified": false,
+   "manual": false,
+   "mcqs": [
+    {
+     "answer_index": 0,
+     "explanation": "কমিশনটি ২০২২ সালের মার্চে নিয়োগ পায়।",
+     "fact_id": "f3",
+     "options": [
+      "২০২২ সালের মার্চে",
+      "২০২১ সালের মার্চে",
+      "২০২২ সালের মে মাসে",
+      "২০২৩ সালের মার্চে"
+     ],
+     "question": "কমিশনটি কবে UN Human Rights Council দ্বারা নিয়োগ পায়?",
+     "source_event_id": "ev_1f8217a3831a",
+     "source_name": "UN News — All",
+     "source_story": "ইউক্রেনে বেসামরিক ও জ্বালানি অবকাঠামো লক্ষ্য করে রাশিয়ার যুদ্ধাপরাধের অভিযোগ",
+     "source_url": "https://news.un.org/feed/view/en/story/2026/10/1168670",
+     "subject": "international_affairs"
+    },
+    {
+     "answer_index": 0,
+     "explanation": "সরকার ১ বিলিয়ন ডলার বাজেট সহায়তা চাইছে।",
+     "fact_id": "f13",
+     "options": [
+      "১ বিলিয়ন ডলার",
+      "৫ বিলিয়ন ডলার",
+      "১০০ মিলিয়ন ডলার",
+      "১৪ বিলিয়ন ডলার"
+     ],
+     "question": "সরকার দক্ষিণ কোরিয়ার কাছে কত ডলার বাজেট সহায়তা চাইছে?",
+     "source_event_id": "ev_3454eb8f8fed",
+     "source_name": "The Daily Star — Business",
+     "source_story": "দক্ষিণ কোরিয়ার কাছে ১ বিলিয়ন ডলার বাজেট সহায়তা চাইছে সরকার",
+     "source_url": "https://www.thedailystar.net/business/economy/news/govt-wants-1b-korean-budget-support-tackle-energy-shocks-4308156",
+     "subject": "economy"
+    },
+    {
+     "answer_index": 0,
+     "explanation": "প্রায় সাড়ে ছয় বিলিয়ন ডলারের ঘোষণা আসতে পারে।",
+     "fact_id": "f8",
+     "options": [
+      "সাড়ে ছয় বিলিয়ন ডলার",
+      "দুই বিলিয়ন ডলার",
+      "আট বিলিয়ন ডলার",
+      "এক বিলিয়ন ডলার"
+     ],
+     "question": "বাংলাদেশের বেসরকারি খাতের জন্য জাপানের আগামী পাঁচ বছরে প্রায় কত বিনিয়োগের ঘোষণা আসতে পারে?",
+     "source_event_id": "ev_776ed094b44c",
+     "source_name": "BBC News বাংলা",
+     "source_story": "জাপান সফরে বাংলাদেশ-জাপান বিনিয়োগ ও কৌশলগত অংশীদারিত্বের আলোচনা",
+     "source_url": "https://www.bbc.com/bengali/articles/cmwy4glx5e0lo?at_medium=RSS&at_campaign=rss",
+     "subject": "foreign_policy_geopolitics"
+    }
+   ],
+   "partial": false,
+   "partial_reasons": [],
+   "pdf": {
+    "bytes": 344084,
+    "file": "edition-2026-10-27.pdf",
+    "sha": "7646b0959d0022b4"
+   },
+   "recipients": 4,
+   "status": "delivered",
+   "story_event_ids": [
+    "ev_1f8217a3831a",
+    "ev_776ed094b44c",
+    "ev_3454eb8f8fed",
+    "ev_32c093c6ba71",
+    "ev_bc4d3241014b",
+    "ev_5c8be27a1148",
+    "ev_70c8a519bb93"
+   ],
+   "unprocessed_candidates": 7
   }
  },
  "events": {
+  "ev_01433b40e628": {
+   "analysis": null,
+   "article_ids": [
+    "a_7919e1977422b522"
+   ],
+   "attempts": 0,
+   "created_at": "2026-10-27T04:55:40+00:00",
+   "event_id": "ev_01433b40e628",
+   "included_in": null,
+   "last_error": null,
+   "screening": {
+    "categories": [
+     "foreign_policy_geopolitics"
+    ],
+    "decision": "reject",
+    "exam_focus": "none",
+    "exam_hook": "The UN chief urged dialogue over Iran-US escalation in Cairo.",
+    "priority": 2.0,
+    "rationale": "This is a general appeal rather than a substantive new agreement or decision.",
+    "story_type": "international_event",
+    "topic": "int_conflicts"
+   },
+   "screening_attempts": 0,
+   "status": "rejected",
+   "updated_at": "2026-10-27T04:55:40+00:00"
+  },
   "ev_01c9d30f1d77": {
    "analysis": null,
    "article_ids": [
@@ -4565,6 +5709,33 @@
    "status": "included",
    "updated_at": "2026-10-24T13:40:25+00:00"
   },
+  "ev_06f4c38f74dc": {
+   "analysis": null,
+   "article_ids": [
+    "a_7f36953355232eda"
+   ],
+   "attempts": 0,
+   "created_at": "2026-10-27T04:55:40+00:00",
+   "event_id": "ev_06f4c38f74dc",
+   "included_in": null,
+   "last_error": null,
+   "screening": {
+    "categories": [
+     "economy"
+    ],
+    "decision": "reject",
+    "exam_focus": "written",
+    "exam_hook": "The dollar rose against the taka as import payments for oil and gas increased.",
+    "forced_reject": "weak maybe (priority 5)",
+    "priority": 5.0,
+    "rationale": "Useful market movement, but not as strong as an official policy or structural banking development.",
+    "story_type": "economic_data",
+    "topic": "bd_banking_monetary"
+   },
+   "screening_attempts": 0,
+   "status": "rejected",
+   "updated_at": "2026-10-27T04:55:40+00:00"
+  },
   "ev_07cb55e05a35": {
    "analysis": null,
    "article_ids": [
@@ -4627,6 +5798,34 @@
    "screening_attempts": 0,
    "status": "rejected",
    "updated_at": "2026-10-24T11:39:11+00:00"
+  },
+  "ev_0ad9618f6a1d": {
+   "analysis": null,
+   "article_ids": [
+    "a_41bd2d81ec53e6e6",
+    "a_945517e7569f6102",
+    "a_bd8c8de38b1d3f61"
+   ],
+   "attempts": 0,
+   "created_at": "2026-10-27T04:55:40+00:00",
+   "event_id": "ev_0ad9618f6a1d",
+   "included_in": null,
+   "last_error": null,
+   "screening": {
+    "categories": [
+     "foreign_policy_geopolitics"
+    ],
+    "decision": "reject",
+    "exam_focus": "none",
+    "exam_hook": "The story reports a poll on Trump’s approval ahead of US midterm elections.",
+    "priority": 1.0,
+    "rationale": "Opinion-poll style election coverage is not a durable high-value exam item for the syllabus list given.",
+    "story_type": "report_index",
+    "topic": "int_leadership_elections"
+   },
+   "screening_attempts": 0,
+   "status": "rejected",
+   "updated_at": "2026-10-27T04:55:40+00:00"
   },
   "ev_0c264effd2fe": {
    "analysis": null,
@@ -4873,6 +6072,32 @@
    "status": "included",
    "updated_at": "2026-10-24T13:40:25+00:00"
   },
+  "ev_14726b7f90ef": {
+   "analysis": null,
+   "article_ids": [
+    "a_c863d42f2de2f8b8"
+   ],
+   "attempts": 0,
+   "created_at": "2026-10-27T04:55:40+00:00",
+   "event_id": "ev_14726b7f90ef",
+   "included_in": null,
+   "last_error": null,
+   "screening": {
+    "categories": [
+     "foreign_policy_geopolitics"
+    ],
+    "decision": "reject",
+    "exam_focus": "none",
+    "exam_hook": "A dispute over a Kashmiri politician’s remarks is discussed.",
+    "priority": 0.0,
+    "rationale": "This is domestic political controversy in India, which has low BCS value here.",
+    "story_type": "foreign_domestic_minor",
+    "topic": null
+   },
+   "screening_attempts": 0,
+   "status": "rejected",
+   "updated_at": "2026-10-27T04:55:40+00:00"
+  },
   "ev_169f679f0516": {
    "analysis": null,
    "article_ids": [
@@ -5069,6 +6294,32 @@
    "status": "included",
    "updated_at": "2026-10-24T13:40:25+00:00"
   },
+  "ev_1bacdb2e0f1d": {
+   "analysis": null,
+   "article_ids": [
+    "a_926cad741de9d34b"
+   ],
+   "attempts": 0,
+   "created_at": "2026-10-27T04:55:40+00:00",
+   "event_id": "ev_1bacdb2e0f1d",
+   "included_in": null,
+   "last_error": null,
+   "screening": {
+    "categories": [
+     "foreign_policy_geopolitics"
+    ],
+    "decision": "reject",
+    "exam_focus": "none",
+    "exam_hook": "Syria’s restrictions on women in some university courses are mentioned as part of domestic policy debate.",
+    "priority": 1.0,
+    "rationale": "This is foreign domestic policy trivia without enough international significance for selection here.",
+    "story_type": "policy_decision",
+    "topic": null
+   },
+   "screening_attempts": 0,
+   "status": "rejected",
+   "updated_at": "2026-10-27T04:55:40+00:00"
+  },
   "ev_1c152ac9d559": {
    "analysis": null,
    "article_ids": [
@@ -5179,6 +6430,104 @@
    "status": "rejected",
    "updated_at": "2026-10-25T03:13:13+00:00"
   },
+  "ev_1f8217a3831a": {
+   "analysed_at": "2026-10-27T04:55:40+00:00",
+   "analysis": {
+    "analysed_article_id": "a_28cf2b6e0f7512d3",
+    "attributed_claims": [
+     {
+      "attributed_to": "a 35-year-old woman, the wife of a man who was recruited from the Caribbean",
+      "claim": "নারীটি বলেন, তাকে কনট্রাক্টে সই করতে চাপ দেওয়া হয়েছিল।",
+      "evidence": "“He was totally pressured and had no choice.”"
+     }
+    ],
+    "background_context": "জাতিসংঘের মানবাধিকার ব্যবস্থায় এ ধরনের তদন্ত কমিশন যুদ্ধ ও মানবাধিকার লঙ্ঘনের বিষয়ে তথ্য সংগ্রহ ও প্রতিবেদন দেয়। এ ধরনের প্রতিবেদন আন্তর্জাতিক জনমত, কূটনীতি এবং সম্ভাব্য জবাবদিহি প্রক্রিয়ায় গুরুত্ব পায়।",
+    "categories": [
+     "international_affairs",
+     "foreign_policy_geopolitics"
+    ],
+    "causes_effects": "প্রতিবেদন অনুযায়ী শীতকালে জ্বালানি অবকাঠামোয় হামলা বেসামরিকদের জীবনযাত্রা, স্বাস্থ্যসেবা ও আশ্রয়ের ওপর গুরুতর চাপ সৃষ্টি করেছে। একই সঙ্গে পাচার ও জোরপূর্বক নিয়োগ আন্তর্জাতিক মানবাধিকার লঙ্ঘন এবং যুদ্ধবন্দী-সংক্রান্ত জটিলতা বাড়াতে পারে।",
+    "criteria": {
+     "factual_density": 8.0,
+     "novelty": 7.0,
+     "significance": 8.0,
+     "syllabus_relevance": 8.0,
+     "written_potential": 7.0
+    },
+    "exam_focus": "both",
+    "headline_bn": "ইউক্রেনে বেসামরিক ও জ্বালানি অবকাঠামো লক্ষ্য করে রাশিয়ার যুদ্ধাপরাধের অভিযোগ",
+    "institutions": [
+     "UN Human Rights Council",
+     "Independent International Commission of Inquiry on Ukraine",
+     "United Nations",
+     "Ministry of Defence"
+    ],
+    "key_facts": [
+     {
+      "evidence": "“the Russian authorities had committed war crimes and crimes against humanity by attacking civilians and vital energy infrastructure”",
+      "fact": "তদন্ত কমিশন বলেছে রাশিয়ার কর্তৃপক্ষ বেসামরিকদের লক্ষ্য করে যুদ্ধাপরাধ ও মানবতার বিরুদ্ধে অপরাধ করেছে।",
+      "prelims": true
+     },
+     {
+      "evidence": "“attacks on power plants have intensified “once again” across Ukraine”",
+      "fact": "প্রতিবেদন অনুযায়ী বিদ্যুৎকেন্দ্রে হামলা আবারও তীব্র হয়েছে।",
+      "prelims": true
+     },
+     {
+      "evidence": "“The Commission was appointed by the UN Human Rights Council in March 2022”",
+      "fact": "কমিশনটি ২০২২ সালের মার্চে UN Human Rights Council দ্বারা নিয়োগ পায়।",
+      "prelims": true
+     },
+     {
+      "evidence": "“relied on the accounts of 255 persons”",
+      "fact": "শেষ প্রতিবেদনের জন্য কমিশন ২৫৫ জনের অভিজ্ঞতার ওপর নির্ভর করেছে।",
+      "prelims": true
+     },
+     {
+      "evidence": "“recruited men trafficked from 29 countries into the armed forces”",
+      "fact": "প্রতিবেদনে ২৯ দেশের পাচার হওয়া পুরুষদের রুশ সেনাবাহিনীতে নিয়োগের কথা বলা হয়েছে।",
+      "prelims": true
+     },
+     {
+      "evidence": "“the panel’s investigators – Erik Møse, Pablo de Greiff and Vrinda Grover”",
+      "fact": "কমিশনের তিন সদস্যের নাম প্রতিবেদনে উল্লেখ আছে।",
+      "prelims": true
+     }
+    ],
+    "likely_question": "ইউক্রেনবিষয়ক জাতিসংঘ-সমর্থিত তদন্ত প্রতিবেদনে কী কী অভিযোগ আনা হয়েছে? আন্তর্জাতিক মানবাধিকার ও মানবিক আইনের আলোকে এর তাৎপর্য আলোচনা করুন।",
+    "mode": "full",
+    "score": 77.5,
+    "syllabus_label": "জাতিসংঘ ব্যবস্থা ও আন্তর্জাতিক আদালত",
+    "syllabus_topic": "int_un_system",
+    "unsupported_dropped": 2,
+    "what_happened": "জাতিসংঘ মানবাধিকার পরিষদ-নিযুক্ত স্বাধীন তদন্ত কমিশন বলেছে, রাশিয়ার কর্তৃপক্ষ ইউক্রেনে বেসামরিক মানুষ ও গুরুত্বপূর্ণ জ্বালানি অবকাঠামোতে হামলা চালিয়ে যুদ্ধাপরাধ ও মানবতার বিরুদ্ধে অপরাধ করেছে। প্রতিবেদনে শীতকালে বিদ্যুৎকেন্দ্রে হামলা, জোরপূর্বক নিয়োগ, এবং ২৯ দেশের পাচার হওয়া লোকজনকে রুশ বাহিনীতে ব্যবহারের অভিযোগও এসেছে।",
+    "why_it_matters": "এটি জাতিসংঘ ব্যবস্থার অধীনে যুদ্ধাপরাধ তদন্ত, আন্তর্জাতিক মানবাধিকার আইন, এবং যুদ্ধকালীন বেসামরিক সুরক্ষার গুরুত্বপূর্ণ উদাহরণ। BCS-এ UN system, international law ও current affairs থেকে এ ধরনের প্রতিবেদন প্রশ্নের উপাদান হতে পারে।",
+    "written_angle": "এই প্রতিবেদন আন্তর্জাতিক মানবিক আইন, যুদ্ধাপরাধ, এবং সংঘাতে বেসামরিক সুরক্ষার প্রশ্নকে সামনে আনে। জাতিসংঘ-সমর্থিত তদন্ত কীভাবে প্রমাণ সংগ্রহ করে এবং তা আন্তর্জাতিক জবাবদিহিতায় কী ভূমিকা রাখে, সেটিও আলোচ্য।"
+   },
+   "article_ids": [
+    "a_28cf2b6e0f7512d3"
+   ],
+   "attempts": 1,
+   "created_at": "2026-10-27T04:55:40+00:00",
+   "event_id": "ev_1f8217a3831a",
+   "included_in": "2026-10-27",
+   "last_error": null,
+   "screening": {
+    "categories": [
+     "foreign_policy_geopolitics"
+    ],
+    "decision": "select",
+    "exam_focus": "both",
+    "exam_hook": "UN investigators said Russia committed war crimes and crimes against humanity in Ukraine.",
+    "priority": 8.0,
+    "rationale": "A formal UN investigative finding on the Ukraine war is highly exam-relevant.",
+    "story_type": "international_event",
+    "topic": "int_conflicts"
+   },
+   "screening_attempts": 0,
+   "status": "included",
+   "updated_at": "2026-10-27T04:55:40+00:00"
+  },
   "ev_2255d200a75e": {
    "analysis": null,
    "article_ids": [
@@ -5209,6 +6558,32 @@
    "screening_attempts": 0,
    "status": "analysis_rejected",
    "updated_at": "2026-10-26T04:37:47+00:00"
+  },
+  "ev_2395a969344b": {
+   "analysis": null,
+   "article_ids": [
+    "a_e36572c68f370685"
+   ],
+   "attempts": 0,
+   "created_at": "2026-10-27T04:55:40+00:00",
+   "event_id": "ev_2395a969344b",
+   "included_in": null,
+   "last_error": null,
+   "screening": {
+    "categories": [
+     "bangladesh_affairs"
+    ],
+    "decision": "reject",
+    "exam_focus": "none",
+    "exam_hook": "The item discusses employment for youth with disabilities in a roundtable format.",
+    "priority": 0.0,
+    "rationale": "This is advocacy commentary rather than a new policy or official decision.",
+    "story_type": "feature",
+    "topic": null
+   },
+   "screening_attempts": 0,
+   "status": "rejected",
+   "updated_at": "2026-10-27T04:55:40+00:00"
   },
   "ev_23bc96a8e0f7": {
    "analysis": null,
@@ -5357,6 +6732,32 @@
    "status": "included",
    "updated_at": "2026-10-25T03:13:13+00:00"
   },
+  "ev_2472bbe850a2": {
+   "analysis": null,
+   "article_ids": [
+    "a_af84b0bc7217b043"
+   ],
+   "attempts": 1,
+   "created_at": "2026-10-27T04:55:40+00:00",
+   "event_id": "ev_2472bbe850a2",
+   "included_in": null,
+   "last_error": "এটি একটি আন্তর্জাতিক রিপোর্টভিত্তিক সংবাদ, কিন্তু BCS সিলেবাসের নির্দিষ্ট বাংলাদেশ-সম্পর্কিত বা পরীক্ষাযোগ্য মূল টপিকের সঙ্গে সরাসরি মেলে না। বিষয়টি নারীর অধিকার ও সংঘাতের ওপর বৈশ্বিক বিশ্লেষণ; বাংলাদেশি প্রিলিমস/রচনার জন্য সাধারণত কম অগ্রাধিকার পায়।",
+   "screening": {
+    "categories": [
+     "awards_reports_indices"
+    ],
+    "decision": "select",
+    "exam_focus": "both",
+    "exam_hook": "A UN report says women and girls accounted for one in four civilian war deaths last year.",
+    "priority": 8.0,
+    "rationale": "This is a major international report with a strong exam hook and clear statistics.",
+    "story_type": "report_index",
+    "topic": "rep_indices"
+   },
+   "screening_attempts": 0,
+   "status": "analysis_rejected",
+   "updated_at": "2026-10-27T04:55:40+00:00"
+  },
   "ev_26ead982634f": {
    "analysis": null,
    "article_ids": [
@@ -5400,6 +6801,32 @@
    "screening_attempts": 0,
    "status": "rejected",
    "updated_at": "2026-10-24T11:39:11+00:00"
+  },
+  "ev_2c5ee98e06bd": {
+   "analysis": null,
+   "article_ids": [
+    "a_2b1bbd2d3272359f"
+   ],
+   "attempts": 0,
+   "created_at": "2026-10-27T04:55:40+00:00",
+   "event_id": "ev_2c5ee98e06bd",
+   "included_in": null,
+   "last_error": null,
+   "screening": {
+    "categories": [
+     "environment_climate"
+    ],
+    "decision": "reject",
+    "exam_focus": "none",
+    "exam_hook": "Three former officials were fined for hill cutting.",
+    "priority": 1.0,
+    "rationale": "This is an individual enforcement case, not a policy or major environmental decision.",
+    "story_type": "court_case_individual",
+    "topic": "env_pollution_conservation"
+   },
+   "screening_attempts": 0,
+   "status": "rejected",
+   "updated_at": "2026-10-27T04:55:40+00:00"
   },
   "ev_2fa94c4bcf8f": {
    "analysed_at": "2026-10-25T02:30:10+00:00",
@@ -5550,6 +6977,119 @@
    "status": "selected",
    "updated_at": "2026-10-25T03:13:13+00:00"
   },
+  "ev_32c093c6ba71": {
+   "analysed_at": "2026-10-27T04:55:40+00:00",
+   "analysis": {
+    "analysed_article_id": "a_ae4d1ed564a57d5a",
+    "attributed_claims": [
+     {
+      "attributed_to": "Md Anwar Shahid, president of the Bangladesh Malaysia Chamber of Commerce and Industry (BMCCI)",
+      "claim": "এফটিএ হলে NBR-এর tariff revenue কমতে পারে, তবে সম্ভাব্য সুবিধা উপেক্ষা করা যাবে না।",
+      "evidence": "He noted that an FTA with Malaysia could reduce the National Board of Revenue’s tariff revenue but argued that the potential benefits of a trade agreement should not be overlooked."
+     },
+     {
+      "attributed_to": "Md Anwar Shahid, president of the Bangladesh Malaysia Chamber of Commerce and Industry (BMCCI)",
+      "claim": "ম্যানপাওয়ার exports-ও আলোচনায় অন্তর্ভুক্ত করা উচিত।",
+      "evidence": "Anwar also called for including manpower exports in the negotiations"
+     },
+     {
+      "attributed_to": "M Masrur Reaz, chairman and chief executive officer of Policy Exchange of Bangladesh",
+      "claim": "বাংলাদেশের 84 percent রপ্তানি garment sector-এ কেন্দ্রীভূত, এবং একই অনুপাত UK, US ও EU-তে যায়।",
+      "evidence": "He said 84 percent of Bangladesh’s exports were concentrated in the garment sector, while a similar proportion went to just three destinations — the United Kingdom, the United States and the European Union."
+     }
+    ],
+    "background_context": "FTA সাধারণত দুই দেশের মধ্যে শুল্ক ও অশুল্ক বাধা কমিয়ে বাণিজ্য বাড়ানোর একটি চুক্তি। এলডিসি দেশগুলো অনেক সময় বিশেষ বাজারসুবিধা পায়, যা পরে ধীরে ধীরে কমে যেতে পারে।",
+    "categories": [
+     "economy",
+     "foreign_policy_geopolitics"
+    ],
+    "causes_effects": "এলডিসি উত্তরণের কারণে বর্তমান trade preferences কমে যাওয়ার আশঙ্কা থেকে নতুন বাণিজ্য চুক্তির তাগিদ তৈরি হয়েছে। এর ফলে একদিকে বাজারসুবিধা রক্ষার সম্ভাবনা, অন্যদিকে tariff revenue-তে চাপ এবং নতুন খাতে আলোচনার প্রয়োজন দেখা দিচ্ছে।",
+    "criteria": {
+     "factual_density": 7.0,
+     "novelty": 8.0,
+     "significance": 7.0,
+     "syllabus_relevance": 8.0,
+     "written_potential": 7.0
+    },
+    "exam_focus": "both",
+    "headline_bn": "বাংলাদেশ–মালয়েশিয়া এফটিএ আলোচনা শুরু",
+    "institutions": [
+     "Bangladesh",
+     "Malaysia",
+     "Hotel Pan Pacific Sonargaon Dhaka",
+     "Additional Commerce Secretary",
+     "National Board of Revenue",
+     "Export Promotion Bureau",
+     "Bangladesh Bank",
+     "Bangladesh Malaysia Chamber of Commerce and Industry (BMCCI)"
+    ],
+    "key_facts": [
+     {
+      "evidence": "Bangladesh and Malaysia will begin negotiations for a free trade agreement (FTA) in Dhaka today",
+      "fact": "বাংলাদেশ ও মালয়েশিয়া ঢাকায় মুক্ত বাণিজ্য চুক্তি [FTA] নিয়ে আলোচনা শুরু করেছে।",
+      "prelims": true
+     },
+     {
+      "evidence": "The first round of talks aims to advance an agreement by next year",
+      "fact": "আলোচনার লক্ষ্য আগামী বছরের মধ্যে একটি চুক্তি এগিয়ে নেওয়া।",
+      "prelims": true
+     },
+     {
+      "evidence": "Additional Commerce Secretary Khadiza Nazneen will lead the Bangladesh delegation at the meeting",
+      "fact": "বাংলাদেশের পক্ষ থেকে Additional Commerce Secretary Khadiza Nazneen নেতৃত্ব দেবেন।",
+      "prelims": true
+     },
+     {
+      "evidence": "at Hotel Pan Pacific Sonargaon Dhaka",
+      "fact": "মিটিংটি Hotel Pan Pacific Sonargaon Dhaka-তে অনুষ্ঠিত হচ্ছে।",
+      "prelims": true
+     },
+     {
+      "evidence": "In fiscal year 2024-25, Bangladesh exported goods worth $282 million to Malaysia and imported goods worth $2.29 billion",
+      "fact": "FY 2024-25-এ বাংলাদেশ মালয়েশিয়ায় $282 million পণ্য রপ্তানি করেছে এবং $2.29 billion পণ্য আমদানি করেছে।",
+      "prelims": true
+     },
+     {
+      "evidence": "Bangladesh also signed a preferential trade agreement (PTA) with Bhutan in December 2020 ... The agreement is now in operation.",
+      "fact": "বাংলাদেশ ভুটানের সঙ্গে PTA করেছে, যা এখন কার্যকর আছে।",
+      "prelims": true
+     }
+    ],
+    "likely_question": "এলডিসি উত্তরণের পর বাজার সুবিধা ধরে রাখতে বাংলাদেশ কেন মালয়েশিয়ার সঙ্গে এফটিএ করতে চাইছে? সংক্ষেপে আলোচনা করো।",
+    "mode": "full",
+    "score": 74.0,
+    "syllabus_label": "বাণিজ্য, শিল্পনীতি, পোশাক খাত ও এলডিসি উত্তরণ",
+    "syllabus_topic": "bd_trade_industry",
+    "unsupported_dropped": 0,
+    "what_happened": "বাংলাদেশ ও মালয়েশিয়া ঢাকায় মুক্ত বাণিজ্য চুক্তি [FTA] নিয়ে আলোচনা শুরু করেছে। এলডিসি থেকে উত্তরণের পর যে বাণিজ্যিক সুবিধা কমে যাবে, তা মোকাবিলায় নতুন বাজার সুবিধা নিশ্চিত করাই আলোচনার মূল লক্ষ্য।",
+    "why_it_matters": "এটি বাণিজ্যনীতি, রপ্তানি বৈচিত্র্য এবং এলডিসি উত্তরণ-পরবর্তী প্রস্তুতির সঙ্গে সরাসরি যুক্ত। বিসিএস প্রিলিমসে FTA, EPA, CEPA, PTA এবং বাণিজ্য ঘাটতি সম্পর্কিত তথ্য থেকে প্রশ্ন আসতে পারে; লিখিত পরীক্ষায় বাংলাদেশের বাজার কৌশল নিয়ে বিশ্লেষণ করা যায়।",
+    "written_angle": "বাংলাদেশের এলডিসি উত্তরণের পর শুল্ক-সুবিধা হ্রাস পেতে পারে, তাই দ্বিপক্ষীয় ও আঞ্চলিক FTA/FTA-সদৃশ চুক্তি রপ্তানি টিকিয়ে রাখার কৌশল হিসেবে গুরুত্বপূর্ণ। লিখিত উত্তরে বাজার-সুরক্ষা, রপ্তানি বৈচিত্র্য, এবং ASEAN-এর মতো বাজারে প্রবেশের সুযোগ নিয়ে আলোচনা করা যায়।"
+   },
+   "article_ids": [
+    "a_ae4d1ed564a57d5a"
+   ],
+   "attempts": 1,
+   "created_at": "2026-10-27T04:55:40+00:00",
+   "event_id": "ev_32c093c6ba71",
+   "included_in": "2026-10-27",
+   "last_error": null,
+   "screening": {
+    "categories": [
+     "foreign_policy_geopolitics",
+     "economy"
+    ],
+    "decision": "select",
+    "exam_focus": "both",
+    "exam_hook": "Bangladesh and Malaysia begin FTA negotiations in Dhaka after LDC graduation concerns.",
+    "priority": 9.0,
+    "rationale": "A bilateral trade negotiation with LDC-graduation context is a strong exam topic.",
+    "story_type": "diplomacy",
+    "topic": "fp_bilateral"
+   },
+   "screening_attempts": 0,
+   "status": "included",
+   "updated_at": "2026-10-27T04:55:40+00:00"
+  },
   "ev_32e536989d7e": {
    "analysis": null,
    "article_ids": [
@@ -5575,6 +7115,115 @@
    "screening_attempts": 0,
    "status": "rejected",
    "updated_at": "2026-10-25T03:13:13+00:00"
+  },
+  "ev_3454eb8f8fed": {
+   "analysed_at": "2026-10-27T04:55:40+00:00",
+   "analysis": {
+    "analysed_article_id": "a_ba48b52409376174",
+    "attributed_claims": [
+     {
+      "attributed_to": "সরকার/Finance Division proposal",
+      "claim": "দীর্ঘস্থায়ী মধ্যপ্রাচ্য অস্থিরতা, ক্রমবর্ধমান জ্বালানি খরচ এবং বৈদেশিক মুদ্রার রিজার্ভের ওপর চাপ সামলাতে এই সহায়তা দরকার।",
+      "evidence": "to help manage the economic fallout from prolonged unrest in the Middle East, as rising energy costs put pressure on public finances and foreign exchange reserves."
+     },
+     {
+      "attributed_to": "Finance Division proposal",
+      "claim": "জ্বালানি খাতের কাঠামোগত দুর্বলতা মোকাবিলা এবং ভর্তুকির আর্থিক বোঝা কমানো এই সহায়তার উদ্দেশ্য।",
+      "evidence": "The proposed financing aims to help Bangladesh withstand external energy shocks and address structural weaknesses in the sector"
+     },
+     {
+      "attributed_to": "proposal",
+      "claim": "বাজেট ঘাটতি, commodity-price volatility, foreign exchange pressure এবং exchange-rate instability প্রধান ঝুঁকি।",
+      "evidence": "The proposal identifies widening budget deficits, commodity-price volatility, foreign exchange pressure and exchange-rate instability as key risks the programme would seek to address."
+     }
+    ],
+    "background_context": "Policy-based budget support সাধারণত নির্দিষ্ট সংস্কার বাস্তবায়নের বিনিময়ে দেওয়া হয়। উন্নয়ন সহযোগীরা এমন সহায়তাকে fiscal management ও sector reform-এর সঙ্গে যুক্ত করে দেখে।",
+    "categories": [
+     "economy",
+     "bangladesh_affairs"
+    ],
+    "causes_effects": "মধ্যপ্রাচ্যের অস্থিরতা ও জ্বালানি আমদানি-নির্ভরতা মিলিয়ে public finance ও foreign exchange reserve-এর ওপর চাপ তৈরি হয়েছে। প্রস্তাবিত loan ও reform package-এর মাধ্যমে জ্বালানি খাতের আর্থিক স্থিতি, policy reform এবং debt reporting উন্নত করার লক্ষ্য নেওয়া হয়েছে।",
+    "criteria": {
+     "factual_density": 8.0,
+     "novelty": 8.0,
+     "significance": 7.0,
+     "syllabus_relevance": 8.0,
+     "written_potential": 8.0
+    },
+    "exam_focus": "both",
+    "headline_bn": "দক্ষিণ কোরিয়ার কাছে ১ বিলিয়ন ডলার বাজেট সহায়তা চাইছে সরকার",
+    "institutions": [
+     "Finance Division",
+     "Economic Development Cooperation Fund (EDCF)",
+     "KEXIM",
+     "SK Gas",
+     "Korea International Cooperation Agency (KOICA)"
+    ],
+    "key_facts": [
+     {
+      "evidence": "The government is looking to secure $1 billion in budget support from South Korea",
+      "fact": "সরকার দক্ষিণ কোরিয়ার কাছে ১ বিলিয়ন ডলার বাজেট সহায়তা চাইছে।",
+      "prelims": true
+     },
+     {
+      "evidence": "The loan is expected to be sought for the ongoing fiscal year 2026-27",
+      "fact": "সহায়তাটি ২০২৬-২৭ অর্থবছরের জন্য চাওয়া হবে।",
+      "prelims": true
+     },
+     {
+      "evidence": "under a programme-based policy loan financed through Korea’s Economic Development Cooperation Fund (EDCF)",
+      "fact": "এটি Korea’s Economic Development Cooperation Fund (EDCF) থেকে programme-based policy loan হিসেবে হবে।",
+      "prelims": true
+     },
+     {
+      "evidence": "a high-level government delegation’s visit to South Korea from October 31 to November 7",
+      "fact": "উচ্চপর্যায়ের সরকারি প্রতিনিধিদলের দক্ষিণ কোরিয়া সফর ৩১ অক্টোবর থেকে ৭ নভেম্বর পর্যন্ত।",
+      "prelims": true
+     },
+     {
+      "evidence": "Finance and Planning Minister Amir Khosru Mahmud Chowdhury is scheduled to lead the delegation.",
+      "fact": "Finance and Planning Minister Amir Khosru Mahmud Chowdhury প্রতিনিধিদলের নেতৃত্ব দেবেন।",
+      "prelims": true
+     },
+     {
+      "evidence": "the loan would support three broad reform areas -- adopting a renewable energy policy, enabling government non-bank financial institutions to invest in alternative energy, and improving the financial management of state-owned energy companies.",
+      "fact": "প্রস্তাবিত তিনটি সংস্কার ক্ষেত্র হলো নবায়নযোগ্য জ্বালানি নীতি, non-bank financial institutions-এর বিকল্প জ্বালানিতে বিনিয়োগ, এবং রাষ্ট্রায়ত্ত জ্বালানি কোম্পানির আর্থিক ব্যবস্থাপনা উন্নয়ন।",
+      "prelims": true
+     }
+    ],
+    "likely_question": "বাংলাদেশ সরকার দক্ষিণ কোরিয়ার কাছে কেন ১ বিলিয়ন ডলার বাজেট সহায়তা চাইছে? এ ধরনের policy-based loan-এর লক্ষ্য ও সম্ভাব্য প্রভাব আলোচনা কর।",
+    "mode": "full",
+    "score": 77.5,
+    "syllabus_label": "বাজেট, রাজস্ব, এডিপি ও সরকারি ঋণ",
+    "syllabus_topic": "bd_budget_fiscal",
+    "unsupported_dropped": 0,
+    "what_happened": "সরকার দক্ষিণ কোরিয়ার কাছ থেকে ১ বিলিয়ন ডলার বাজেট সহায়তা নিতে চাচ্ছে, যাতে মধ্যপ্রাচ্যে দীর্ঘস্থায়ী অস্থিরতার কারণে সৃষ্ট জ্বালানি-সংকট ও অর্থনৈতিক চাপ সামাল দেওয়া যায়। এটি ২০২৬-২৭ অর্থবছরের জন্য Economic Development Cooperation Fund (EDCF) থেকে programme-based policy loan আকারে চাওয়া হবে। প্রস্তাবটি উচ্চপর্যায়ের বাংলাদেশি প্রতিনিধিদলের দক্ষিণ কোরিয়া সফরের আগে প্রস্তুত করা হয়েছে। প্রস্তাবিত সহায়তায় নবায়নযোগ্য জ্বালানি নীতি, সরকারি non-bank financial institutions-এর বিকল্প জ্বালানিতে বিনিয়োগ সক্ষমতা, এবং রাষ্ট্রায়ত্ত জ্বালানি কোম্পানির আর্থিক ব্যবস্থাপনা উন্নয়ন অন্তর্ভুক্ত।",
+    "why_it_matters": "এটি বাজেট সহায়তা, সরকারি ঋণ, জ্বালানি নিরাপত্তা এবং সামষ্টিক অর্থনীতির সঙ্গে সরাসরি যুক্ত—তাই BCS-এর জন্য গুরুত্বপূর্ণ। লিখিত পরীক্ষায় fiscal pressure, energy shock, policy reform এবং debt management—এই চারটি দিক থেকে প্রশ্ন আসতে পারে।",
+    "written_angle": "লিখিত পরীক্ষায় এই খবরকে বাংলাদেশের জ্বালানি আমদানি-নির্ভরতা, বাজেট ঘাটতি, এবং policy-based external financing-এর প্রেক্ষাপটে বিশ্লেষণ করা যেতে পারে। জ্বালানি মূল্যঝুঁকি কমাতে রাজস্ব শৃঙ্খলা, ঋণ ব্যবস্থাপনা ও খাত সংস্কারের মধ্যে সমন্বয় কেন জরুরি—এটি প্রশ্নের কেন্দ্র হতে পারে।"
+   },
+   "article_ids": [
+    "a_ba48b52409376174"
+   ],
+   "attempts": 1,
+   "created_at": "2026-10-27T04:55:40+00:00",
+   "event_id": "ev_3454eb8f8fed",
+   "included_in": "2026-10-27",
+   "last_error": null,
+   "screening": {
+    "categories": [
+     "economy"
+    ],
+    "decision": "select",
+    "exam_focus": "both",
+    "exam_hook": "Bangladesh seeks $1 billion in Korean budget support amid energy shocks and pressure on reserves.",
+    "priority": 8.0,
+    "rationale": "Budget support and external financing needs are highly exam-relevant fiscal facts.",
+    "story_type": "policy_decision",
+    "topic": "bd_budget_fiscal"
+   },
+   "screening_attempts": 0,
+   "status": "included",
+   "updated_at": "2026-10-27T04:55:40+00:00"
   },
   "ev_346eb0a2a517": {
    "analysed_at": "2026-10-25T02:30:10+00:00",
@@ -5689,6 +7338,33 @@
    "status": "rejected",
    "updated_at": "2026-10-24T13:40:25+00:00"
   },
+  "ev_388f24deeb7f": {
+   "analysis": null,
+   "article_ids": [
+    "a_1d7127ceff38cf32"
+   ],
+   "attempts": 1,
+   "created_at": "2026-10-27T04:55:40+00:00",
+   "event_id": "ev_388f24deeb7f",
+   "included_in": null,
+   "last_error": "এটি যুক্তরাষ্ট্র–কানাডা বাণিজ্য ও শুল্ক নিয়ে বিদেশি রাজনৈতিক-অর্থনৈতিক সংবাদ। বাংলাদেশের সিলেবাসের নির্দিষ্ট ও প্রাসঙ্গিক টপিকে সরাসরি মেলে না; ফলে BCS প্রস্তুতির জন্য অগ্রাধিকারযোগ্য নয়।",
+   "screening": {
+    "categories": [
+     "foreign_policy_geopolitics",
+     "economy"
+    ],
+    "decision": "select",
+    "exam_focus": "both",
+    "exam_hook": "US and Canada are negotiating to ease steel and auto tariffs under Section 232 duties.",
+    "priority": 7.0,
+    "rationale": "Tariff talks between major economies are an exam-relevant trade policy development.",
+    "story_type": "diplomacy",
+    "topic": "int_global_economy"
+   },
+   "screening_attempts": 0,
+   "status": "analysis_rejected",
+   "updated_at": "2026-10-27T04:55:40+00:00"
+  },
   "ev_3907a3fc2a41": {
    "analysis": null,
    "article_ids": [
@@ -5714,6 +7390,34 @@
    "screening_attempts": 0,
    "status": "rejected",
    "updated_at": "2026-10-25T03:13:13+00:00"
+  },
+  "ev_390dbe5e283e": {
+   "analysis": null,
+   "article_ids": [
+    "a_2f766bf0f9170937",
+    "a_7132b97a7a635a7c",
+    "a_a3a6a30c3e8ad179"
+   ],
+   "attempts": 0,
+   "created_at": "2026-10-27T04:55:40+00:00",
+   "event_id": "ev_390dbe5e283e",
+   "included_in": null,
+   "last_error": null,
+   "screening": {
+    "categories": [
+     "constitution_governance"
+    ],
+    "decision": "reject",
+    "exam_focus": "none",
+    "exam_hook": "A commentary invokes Article 32 on life and liberty while reacting to police ‘crossfire’ remarks.",
+    "priority": 1.0,
+    "rationale": "This is a commentary piece using constitutional language, not a new legal or judicial development.",
+    "story_type": "opinion",
+    "topic": "bd_judiciary"
+   },
+   "screening_attempts": 0,
+   "status": "rejected",
+   "updated_at": "2026-10-27T04:55:40+00:00"
   },
   "ev_3adbd1a78b99": {
    "analysis": null,
@@ -5763,6 +7467,33 @@
    "screening_attempts": 0,
    "status": "rejected",
    "updated_at": "2026-10-24T13:40:25+00:00"
+  },
+  "ev_3c44c802233a": {
+   "analysis": null,
+   "article_ids": [
+    "a_13e30bed1dc588aa"
+   ],
+   "attempts": 0,
+   "created_at": "2026-10-27T04:55:40+00:00",
+   "event_id": "ev_3c44c802233a",
+   "included_in": null,
+   "last_error": null,
+   "screening": {
+    "categories": [
+     "bangladesh_affairs"
+    ],
+    "decision": "reject",
+    "exam_focus": "written",
+    "exam_hook": "Biman is moving ahead with consultancy bids for a 35-plane fleet expansion.",
+    "forced_reject": "weak maybe (priority 5)",
+    "priority": 5.0,
+    "rationale": "This is a transport-sector development plan, but it is operational and less substantial than major project approvals.",
+    "story_type": "development_project",
+    "topic": "bd_infrastructure"
+   },
+   "screening_attempts": 0,
+   "status": "rejected",
+   "updated_at": "2026-10-27T04:55:40+00:00"
   },
   "ev_3d64b563a8b4": {
    "analysed_at": "2026-10-24T13:40:25+00:00",
@@ -6299,7 +8030,8 @@
    "analysis": null,
    "article_ids": [
     "a_c0f8e7e550cbe7e4",
-    "a_2df8fbf29314b9a2"
+    "a_2df8fbf29314b9a2",
+    "a_5cf9e949b640f48d"
    ],
    "attempts": 0,
    "created_at": "2026-10-25T03:13:13+00:00",
@@ -6320,7 +8052,7 @@
    },
    "screening_attempts": 0,
    "status": "rejected",
-   "updated_at": "2026-10-26T04:37:47+00:00"
+   "updated_at": "2026-10-27T04:55:40+00:00"
   },
   "ev_4b0da8525ea3": {
    "analysis": null,
@@ -6623,6 +8355,60 @@
    "status": "rejected",
    "updated_at": "2026-10-25T03:13:13+00:00"
   },
+  "ev_5356fbad9796": {
+   "analysis": null,
+   "article_ids": [
+    "a_b96453f8de5a4bb5",
+    "a_c59ef825a8b71403",
+    "a_d243bc3f4d175d03"
+   ],
+   "attempts": 0,
+   "created_at": "2026-10-27T04:55:40+00:00",
+   "event_id": "ev_5356fbad9796",
+   "included_in": null,
+   "last_error": null,
+   "screening": {
+    "categories": [
+     "foreign_policy_geopolitics"
+    ],
+    "decision": "reject",
+    "exam_focus": "none",
+    "exam_hook": "The article gives Israeli election arithmetic and voting details without a broader substantive policy or international development.",
+    "priority": 1.0,
+    "rationale": "This is mainly election-context reporting and does not fit a high-value syllabus topic clearly enough.",
+    "story_type": "foreign_domestic_minor",
+    "topic": null
+   },
+   "screening_attempts": 0,
+   "status": "rejected",
+   "updated_at": "2026-10-27T04:55:40+00:00"
+  },
+  "ev_5378c83f498f": {
+   "analysis": null,
+   "article_ids": [
+    "a_6f51571f05eb31c3"
+   ],
+   "attempts": 0,
+   "created_at": "2026-10-27T04:55:40+00:00",
+   "event_id": "ev_5378c83f498f",
+   "included_in": null,
+   "last_error": null,
+   "screening": {
+    "categories": [
+     "economy"
+    ],
+    "decision": "reject",
+    "exam_focus": "none",
+    "exam_hook": "The item explains income tax return timing and penalties.",
+    "priority": 0.0,
+    "rationale": "This is a consumer-style explainer rather than a new policy or official decision.",
+    "story_type": "feature",
+    "topic": null
+   },
+   "screening_attempts": 0,
+   "status": "rejected",
+   "updated_at": "2026-10-27T04:55:40+00:00"
+  },
   "ev_5413b92d12de": {
    "analysis": null,
    "article_ids": [
@@ -6646,6 +8432,32 @@
    "screening_attempts": 0,
    "status": "failed",
    "updated_at": "2026-10-24T13:40:25+00:00"
+  },
+  "ev_56e059d59081": {
+   "analysis": null,
+   "article_ids": [
+    "a_57d44e5676da964d"
+   ],
+   "attempts": 0,
+   "created_at": "2026-10-27T04:55:40+00:00",
+   "event_id": "ev_56e059d59081",
+   "included_in": null,
+   "last_error": null,
+   "screening": {
+    "categories": [
+     "bangladesh_affairs"
+    ],
+    "decision": "reject",
+    "exam_focus": "none",
+    "exam_hook": "The story questions why abuse in Qawmi madrasas continues.",
+    "priority": 1.0,
+    "rationale": "This is a commentary/feature-style piece without a concrete policy decision.",
+    "story_type": "feature",
+    "topic": null
+   },
+   "screening_attempts": 0,
+   "status": "rejected",
+   "updated_at": "2026-10-27T04:55:40+00:00"
   },
   "ev_58e8c29fd7cf": {
    "analysed_at": "2026-10-25T03:13:13+00:00",
@@ -6768,6 +8580,58 @@
    "status": "rejected",
    "updated_at": "2026-10-25T03:13:13+00:00"
   },
+  "ev_5962b9e08e92": {
+   "analysis": null,
+   "article_ids": [
+    "a_0a0acc62b2005d82"
+   ],
+   "attempts": 0,
+   "created_at": "2026-10-27T04:55:40+00:00",
+   "event_id": "ev_5962b9e08e92",
+   "included_in": null,
+   "last_error": null,
+   "screening": {
+    "categories": [
+     "foreign_policy_geopolitics"
+    ],
+    "decision": "reject",
+    "exam_focus": "none",
+    "exam_hook": "Trump’s remarks about Norway over the Nobel Prize are reported as a campaign-rally outburst.",
+    "priority": 0.0,
+    "rationale": "This is low-value political theatrics without syllabus significance.",
+    "story_type": "foreign_domestic_minor",
+    "topic": null
+   },
+   "screening_attempts": 0,
+   "status": "rejected",
+   "updated_at": "2026-10-27T04:55:40+00:00"
+  },
+  "ev_59e364aca2c0": {
+   "analysis": null,
+   "article_ids": [
+    "a_c32655dec802dd4e"
+   ],
+   "attempts": 1,
+   "created_at": "2026-10-27T04:55:40+00:00",
+   "event_id": "ev_59e364aca2c0",
+   "included_in": null,
+   "last_error": "Syllabus relevance 6 below 7",
+   "screening": {
+    "categories": [
+     "science_technology"
+    ],
+    "decision": "select",
+    "exam_focus": "both",
+    "exam_hook": "A first study led by ICDDR,B finds only 27 percent of children developed antibodies after measles vaccination.",
+    "priority": 8.0,
+    "rationale": "This is a substantive public-health research finding with clear factual content.",
+    "story_type": "science_technology",
+    "topic": "sci_health"
+   },
+   "screening_attempts": 0,
+   "status": "analysis_rejected",
+   "updated_at": "2026-10-27T04:55:40+00:00"
+  },
   "ev_5a1547fe2120": {
    "analysed_at": "2026-10-26T04:37:47+00:00",
    "analysis": {
@@ -6876,6 +8740,113 @@
    "screening_attempts": 0,
    "status": "included",
    "updated_at": "2026-10-26T04:37:47+00:00"
+  },
+  "ev_5c8be27a1148": {
+   "analysed_at": "2026-10-27T04:55:40+00:00",
+   "analysis": {
+    "analysed_article_id": "a_49c5286b5c775675",
+    "attributed_claims": [
+     {
+      "attributed_to": "article narrative",
+      "claim": "Syed Abu Naser Bukhtear Ahmed ছিলেন রাষ্ট্রায়ত্ত ব্যাংকে নেতৃত্ব দেওয়া সর্বশেষ বেসরকারি খাতের নির্বাহী, 2004 সালে।",
+      "evidence": "\"Syed Abu Naser Bukhtear Ahmed... was the last private-sector executive appointed to lead a state-owned bank, in 2004\""
+     },
+     {
+      "attributed_to": "article narrative",
+      "claim": "নতুন তিন নিয়োগপ্রাপ্ত তিন বছর মেয়াদে চুক্তিভিত্তিকভাবে দায়িত্ব পালন করবেন।",
+      "evidence": "\"The three other appointees will serve three-year terms on a contractual basis.\""
+     },
+     {
+      "attributed_to": "article narrative",
+      "claim": "বিশেষ দক্ষতা, পেশাগত যোগ্যতা, নেতৃত্বগুণ ও সুনাম থাকলে এমডি/সিইও-র ঠিক আগের পদে দুই বছরের অভিজ্ঞতার শর্ত শিথিল করা যাবে।",
+      "evidence": "\"the requirement for two years of experience... may be waived\""
+     }
+    ],
+    "background_context": "রাষ্ট্রায়ত্ত ব্যাংকগুলো সরকারের আর্থিক নীতির অংশ হিসেবে গুরুত্বপূর্ণ ভূমিকা রাখে। এসব ব্যাংকের এমডি ও সিইও নিয়োগ সাধারণত প্রশাসনিক সিদ্ধান্ত, নীতিমালা ও ব্যাংকিং অভিজ্ঞতার সমন্বয়ে হয়ে থাকে।",
+    "categories": [
+     "economy",
+     "constitution_governance"
+    ],
+    "causes_effects": "প্রশ্নে উল্লিখিত নিয়োগগুলো পূর্বের বাতিলকরণ ও এরপর নীতিমালা সংশোধনের ফল। এর সম্ভাব্য প্রভাব হলো রাষ্ট্রায়ত্ত ব্যাংকের শীর্ষ ব্যবস্থাপনায় পেশাগত অভিজ্ঞতার ভিত্তিতে নিয়োগের ধারা জোরদার হওয়া এবং ভবিষ্যৎ নিয়োগে নতুন যোগ্যতার মানদণ্ড অনুসরণ করা।",
+    "criteria": {
+     "factual_density": 7.0,
+     "novelty": 8.0,
+     "significance": 6.0,
+     "syllabus_relevance": 8.0,
+     "written_potential": 6.0
+    },
+    "exam_focus": "both",
+    "headline_bn": "রাষ্ট্রায়ত্ত ব্যাংকে বেসরকারি খাতের এমডি নিয়োগ",
+    "institutions": [
+     "Financial Institutions Division (FID)",
+     "Ministry of Finance",
+     "Agrani Bank",
+     "Janata Bank",
+     "BASIC Bank",
+     "Sonali Bank",
+     "Rupali Bank",
+     "BDBL"
+    ],
+    "key_facts": [
+     {
+      "evidence": "\"the government has appointed private-sector executives to lead Janata and Agrani banks for the first time in 20 years\"",
+      "fact": "জনতা ও আগ্রণী ব্যাংকে প্রথমবারের মতো ২০ বছর পর বেসরকারি খাতের নির্বাহী এমডি হয়েছেন।",
+      "prelims": true
+     },
+     {
+      "evidence": "\"In four separate letters issued yesterday, the Financial Institutions Division (FID) of the Ministry of Finance appointed managing directors (MDs) to Agrani, Janata and BASIC banks and reinstated the incumbent head of Sonali Bank.\"",
+      "fact": "ফিনান্সিয়াল ইনস্টিটিউশনস ডিভিশন আগ্রণী, জনতা, BASIC ও সোনালী ব্যাংক নিয়ে চারটি আলাদা চিঠি জারি করে।",
+      "prelims": true
+     },
+     {
+      "evidence": "\"Md Mahbub Alam... has been appointed MD of Janata Bank\"",
+      "fact": "Md Mahbub Alam জনতা ব্যাংকের এমডি হয়েছেন।",
+      "prelims": true
+     },
+     {
+      "evidence": "\"Noor Mohammed... will lead Agrani Bank.\"",
+      "fact": "Noor Mohammed আগ্রণী ব্যাংকের এমডি হয়েছেন।",
+      "prelims": true
+     },
+     {
+      "evidence": "\"The FID has also appointed Md Nurul Huda... as MD of BASIC Bank.\"",
+      "fact": "Md Nurul Huda BASIC ব্যাংকের এমডি হয়েছেন।",
+      "prelims": true
+     }
+    ],
+    "likely_question": "রাষ্ট্রায়ত্ত ব্যাংকের এমডি ও সিইও নিয়োগে যোগ্যতার শর্ত শিথিল করার পর কী ধরনের পরিবর্তন এসেছে? আলোচ্য প্রেক্ষাপটে বাংলাদেশ ব্যাংক/অর্থ মন্ত্রণালয়ের নীতিগত পদক্ষেপ ব্যাখ্যা করুন।",
+    "mode": "full",
+    "score": 70.0,
+    "syllabus_label": "বাংলাদেশ ব্যাংক, মুদ্রানীতি ও আর্থিক খাত",
+    "syllabus_topic": "bd_banking_monetary",
+    "unsupported_dropped": 2,
+    "what_happened": "সরকার সম্প্রতি যোগ্যতার মানদণ্ড শিথিল করার পর রাষ্ট্রায়ত্ত ব্যাংকের শীর্ষ পদে বেসরকারি খাতের নির্বাহীদের নিয়োগ দিয়েছে। ফিনান্সিয়াল ইনস্টিটিউশনস ডিভিশন চারটি আলাদা চিঠিতে আগ্রণী, জনতা, BASIC ও সোনালী ব্যাংকের এমডি নিয়োগ ও পুনর্বহালের সিদ্ধান্ত দেয়।",
+    "why_it_matters": "এটি রাষ্ট্রায়ত্ত ব্যাংক ব্যবস্থাপনা, নিয়োগনীতি এবং আর্থিক খাতের শাসনব্যবস্থার সঙ্গে সরাসরি সম্পর্কিত। ব্যাংকিং খাতে নীতিমালা পরিবর্তন ও শীর্ষ ব্যবস্থাপনা নিয়োগ থেকে পরীক্ষায় MCQ ও লিখিত—দুই ধরনের প্রশ্নই হতে পারে।",
+    "written_angle": "রাষ্ট্রায়ত্ত ব্যাংকের শীর্ষ নিয়োগে যোগ্যতার মানদণ্ড শিথিল করা ও বেসরকারি খাতের অভিজ্ঞদের অন্তর্ভুক্তি ব্যাংকিং খাতে প্রশাসনিক দক্ষতা, জবাবদিহি ও পরিচালনাগত সংস্কারের প্রশ্ন তুলতে পারে। একই সঙ্গে এটি রাষ্ট্রায়ত্ত আর্থিক প্রতিষ্ঠানের মানবসম্পদ নীতি ও নিয়োগ কাঠামো পুনর্বিন্যাসের একটি গুরুত্বপূর্ণ উদাহরণ।"
+   },
+   "article_ids": [
+    "a_49c5286b5c775675"
+   ],
+   "attempts": 1,
+   "created_at": "2026-10-27T04:55:40+00:00",
+   "event_id": "ev_5c8be27a1148",
+   "included_in": "2026-10-27",
+   "last_error": null,
+   "screening": {
+    "categories": [
+     "bangladesh_affairs"
+    ],
+    "decision": "select",
+    "exam_focus": "both",
+    "exam_hook": "Private-sector executives were appointed to lead Janata and Agrani banks for the first time in 20 years.",
+    "priority": 8.0,
+    "rationale": "A notable appointment and first-time change in state bank leadership is durable and exam-relevant.",
+    "story_type": "award_appointment",
+    "topic": "rep_appointments_firsts"
+   },
+   "screening_attempts": 0,
+   "status": "included",
+   "updated_at": "2026-10-27T04:55:40+00:00"
   },
   "ev_5cf284478842": {
    "analysis": null,
@@ -7230,6 +9201,33 @@
    "status": "rejected",
    "updated_at": "2026-10-25T03:13:13+00:00"
   },
+  "ev_6c0d29c8c798": {
+   "analysis": null,
+   "article_ids": [
+    "a_f44a6259c5189911"
+   ],
+   "attempts": 0,
+   "created_at": "2026-10-27T04:55:40+00:00",
+   "event_id": "ev_6c0d29c8c798",
+   "included_in": null,
+   "last_error": null,
+   "screening": {
+    "categories": [
+     "foreign_policy_geopolitics"
+    ],
+    "decision": "reject",
+    "exam_focus": "both",
+    "exam_hook": "Brazil’s president won a fourth term in a runoff election, extending left-wing rule.",
+    "forced_reject": "story type other_low_value",
+    "priority": 7.0,
+    "rationale": "A major-country election result is a clear exam-worthy development.",
+    "story_type": "other_low_value",
+    "topic": "int_leadership_elections"
+   },
+   "screening_attempts": 0,
+   "status": "rejected",
+   "updated_at": "2026-10-27T04:55:40+00:00"
+  },
   "ev_6e21e4b6bb83": {
    "analysed_at": "2026-10-24T11:39:11+00:00",
    "analysis": {
@@ -7425,6 +9423,99 @@
    "status": "included",
    "updated_at": "2026-10-25T02:30:10+00:00"
   },
+  "ev_70c8a519bb93": {
+   "analysed_at": "2026-10-27T04:55:40+00:00",
+   "analysis": {
+    "analysed_article_id": "a_7167aff6d4adc8ba",
+    "attributed_claims": [],
+    "background_context": "ইআরডি বিদেশি সহায়তা, ঋণ ও উন্নয়ন অর্থায়ন সমন্বয়ের দায়িত্বে থাকে। উন্নয়নশীল দেশগুলো সাধারণত অবকাঠামো ও বাজেট সহায়তায় বহুপাক্ষিক ও দ্বিপাক্ষিক উৎসের ওপর নির্ভর করে।",
+    "categories": [
+     "economy"
+    ],
+    "causes_effects": "সূত্রে বলা হয়েছে, বেশির ভাগ ঋণদাতা এই সময়ে কোনো নতুন অর্থায়ন দেয়নি; শুধু IsDB এবং Japan উল্লেখযোগ্য প্রতিশ্রুতি দিয়েছে। ফলে মোট প্রবাহ কমলেও পরিশোধের চাপ বেড়েছে, যা অর্থায়ন ব্যবস্থাপনায় সতর্কতার প্রয়োজন নির্দেশ করে।",
+    "criteria": {
+     "factual_density": 7.0,
+     "novelty": 8.0,
+     "significance": 6.0,
+     "syllabus_relevance": 8.0,
+     "written_potential": 6.0
+    },
+    "exam_focus": "both",
+    "headline_bn": "জুলাই-সেপ্টেম্বরে বিদেশি ঋণ ছাড় ৪২% কমেছে",
+    "institutions": [
+     "Economic Relations Division (ERD)",
+     "Islamic Development Bank (IsDB)",
+     "Eastern Refinery Limited",
+     "International Development Association (IDA)",
+     "World Bank Group",
+     "Asian Development Bank"
+    ],
+    "key_facts": [
+     {
+      "evidence": "Bangladesh received about half of the $1.27 billion in foreign loan commitments in the first quarter of the 2026-27 financial year",
+      "fact": "২০২৬-২৭ অর্থবছরের প্রথম প্রান্তিকে বিদেশি ঋণ কমেছে এবং প্রাপ্তি ছিল প্রায় অর্ধেক।",
+      "prelims": true
+     },
+     {
+      "evidence": "Bilateral and multilateral lenders disbursed $662 million in July-September of the current fiscal year.",
+      "fact": "জুলাই-সেপ্টেম্বরে বিদেশি ঋণ ছাড় ছিল $662 million।",
+      "prelims": true
+     },
+     {
+      "evidence": "This was 42 percent lower than the $1.14 billion received during the same period a year earlier.",
+      "fact": "এটি আগের বছরের একই সময়ের তুলনায় ৪২ percent কম।",
+      "prelims": true
+     },
+     {
+      "evidence": "the government signed a $1 billion financing agreement with the IsDB to modernise and expand Eastern Refinery Limited",
+      "fact": "ইসলামিক ডেভেলপমেন্ট ব্যাংক $1 billion financing agreement স্বাক্ষর করেছে।",
+      "prelims": true
+     },
+     {
+      "evidence": "Japan was the only other financier to commit funds, pledging $3.5 million during July-September.",
+      "fact": "জাপান জুলাই-সেপ্টেম্বরে $3.5 million প্রতিশ্রুতি দিয়েছে।",
+      "prelims": true
+     },
+     {
+      "evidence": "loan repayments rose 5.6 percent year on year to $1.35 billion in July-September of this fiscal year.",
+      "fact": "ঋণ পরিশোধ বেড়ে $1.35 billion হয়েছে।",
+      "prelims": true
+     }
+    ],
+    "likely_question": "২০২৬-২৭ অর্থবছরের প্রথম প্রান্তিকে বিদেশি ঋণ ছাড় ও পরিশোধের প্রবণতা ব্যাখ্যা করুন। ERD-এর সর্বশেষ তথ্যের আলোকে বাংলাদেশের বৈদেশিক অর্থায়নের অবস্থা আলোচনা করুন।",
+    "mode": "full",
+    "score": 70.0,
+    "syllabus_label": "সামষ্টিক অর্থনীতি: জিডিপি, মূল্যস্ফীতি, রিজার্ভ, রেমিট্যান্স",
+    "syllabus_topic": "bd_macro_data",
+    "unsupported_dropped": 0,
+    "what_happened": "ইআরডি-এর প্রাথমিক তথ্য অনুযায়ী ২০২৬-২৭ অর্থবছরের জুলাই-সেপ্টেম্বরে বাংলাদেশ বিদেশি ঋণ কম পেয়েছে। এই সময়ে ঋণ ছাড় ছিল $662 million, যা আগের বছরের একই সময়ের তুলনায় ৪২ শতাংশ কম। একই সঙ্গে ঋণ পরিশোধও বেড়ে $1.35 billion হয়েছে।",
+    "why_it_matters": "এটি বৈদেশিক অর্থায়ন, ঋণ ছাড় এবং পরিশোধের চাপ সম্পর্কে পরীক্ষার জন্য গুরুত্বপূর্ণ সামষ্টিক অর্থনৈতিক তথ্য। বাজেট, বৈদেশিক উৎসনির্ভরতা এবং ঋণ ব্যবস্থাপনা নিয়ে প্রশ্নে এ ধরনের তথ্য সরাসরি ব্যবহার করা যায়।",
+    "written_angle": "বিদেশি ঋণ ছাড় কমা এবং ঋণ পরিশোধ বাড়া একসঙ্গে চললে বৈদেশিক অর্থায়নের ওপর চাপ বাড়ে। এতে উন্নয়ন প্রকল্পের অর্থায়ন, বৈদেশিক মুদ্রা ব্যবস্থাপনা এবং ঋণ-টেকসইতার প্রশ্ন সামনে আসে।"
+   },
+   "article_ids": [
+    "a_7167aff6d4adc8ba"
+   ],
+   "attempts": 1,
+   "created_at": "2026-10-27T04:55:40+00:00",
+   "event_id": "ev_70c8a519bb93",
+   "included_in": "2026-10-27",
+   "last_error": null,
+   "screening": {
+    "categories": [
+     "economy"
+    ],
+    "decision": "select",
+    "exam_focus": "both",
+    "exam_hook": "Foreign loan disbursements fell 42 percent in July-September, according to ERD provisional data.",
+    "priority": 8.0,
+    "rationale": "Official external-finance data is exam-relevant and durable.",
+    "story_type": "economic_data",
+    "topic": "bd_macro_data"
+   },
+   "screening_attempts": 0,
+   "status": "included",
+   "updated_at": "2026-10-27T04:55:40+00:00"
+  },
   "ev_71a80b15800e": {
    "analysis": null,
    "article_ids": [
@@ -7581,6 +9672,32 @@
    "status": "rejected",
    "updated_at": "2026-10-24T13:40:25+00:00"
   },
+  "ev_7486de9406c1": {
+   "analysis": null,
+   "article_ids": [
+    "a_c302a8b8a2393709"
+   ],
+   "attempts": 0,
+   "created_at": "2026-10-27T04:55:40+00:00",
+   "event_id": "ev_7486de9406c1",
+   "included_in": null,
+   "last_error": null,
+   "screening": {
+    "categories": [
+     "foreign_policy_geopolitics"
+    ],
+    "decision": "select",
+    "exam_focus": "both",
+    "exam_hook": "A Saudi-led coalition struck Houthi missile sites in Yemen amid renewed attacks on Riyadh.",
+    "priority": 7.0,
+    "rationale": "This is a substantive development in the Yemen conflict with clear international significance.",
+    "story_type": "international_event",
+    "topic": "int_conflicts"
+   },
+   "screening_attempts": 0,
+   "status": "selected",
+   "updated_at": "2026-10-27T04:55:40+00:00"
+  },
   "ev_751e0e81f251": {
    "analysis": null,
    "article_ids": [
@@ -7606,6 +9723,114 @@
    "screening_attempts": 0,
    "status": "analysis_rejected",
    "updated_at": "2026-10-26T04:37:47+00:00"
+  },
+  "ev_776ed094b44c": {
+   "analysed_at": "2026-10-27T04:55:40+00:00",
+   "analysis": {
+    "analysed_article_id": "a_77a20b87ee1fab3c",
+    "attributed_claims": [
+     {
+      "attributed_to": "সাবেক রাষ্ট্রদূত মাহফুজুর রহমান",
+      "claim": "জাপানের সঙ্গে সম্পর্ক কৌশলগত সহযোগিতায় উন্নতি হবে এবং এটি ফ্রি এন্ড ওপেন ইন্দো-প্যাসিফিক স্ট্রাটেজির অংশ।",
+      "evidence": "\"মাহফুজুর রহমান বলছেন, \"জাপান পরিষ্কার করেই বলেছে যে তারেক রহমানের এই সফরের মধ্য দিয়ে দুই দেশের সম্পর্ক কৌশলগত সহযোগিতায় উন্নতি হবে। আর এটা হবে ফ্রি এন্ড ওপেন ইন্দো-প্যাসিফিক স্ট্রাটেজির অংশ\"\""
+     },
+     {
+      "attributed_to": "অর্থনীতিবিদ ড. মুস্তাফিজুর রহমান",
+      "claim": "বাংলাদেশ জাপানি বিনিয়োগ চাইছে, কিন্তু জাপানি ঋণে সুদের হার ক্রমশ বাড়ছে; তবু বিনিয়োগ আসার মতো ইতিবাচক পরিবেশ আছে।",
+      "evidence": "\"বাংলাদেশ বিনিয়োগ চাইছে কিন্তু জাপানি ঋণে সুদের হার ক্রমশ বাড়ছে\" এবং \"তার পরেও জাপানি বিনিয়োগ আসার মতো ইতিবাচক পরিবেশ ও আবহ এখন আছে\""
+     }
+    ],
+    "background_context": "জাপান দীর্ঘদিন ধরে বাংলাদেশের উন্নয়ন সহযোগী। ভারত-প্রশান্ত মহাসাগরীয় অঞ্চলে জাপানের নীতি এবং বাংলাদেশের নিজস্ব ইন্দো-প্যাসিফিক রূপরেখা সাম্প্রতিক কূটনৈতিক আলোচনায় গুরুত্বপূর্ণ হয়ে উঠেছে।",
+    "categories": [
+     "foreign_policy_geopolitics",
+     "economy"
+    ],
+    "causes_effects": "প্রতিবেদন অনুযায়ী জাপান বাংলাদেশকে কেন্দ্র করে আঞ্চলিক বিনিয়োগ ও কৌশলগত পরিকল্পনা এগিয়ে নিতে চায়। এর ফলে সম্ভাব্য বিনিয়োগ, শুল্ক সুবিধা, অবকাঠামো উন্নয়ন এবং দক্ষ মানবসম্পদ গঠনের সুযোগ তৈরি হতে পারে; তবে ঋণের সুদের হার বৃদ্ধি ও শর্তারোপ নিয়ে উদ্বেগও আছে।",
+    "criteria": {
+     "factual_density": 8.0,
+     "novelty": 8.0,
+     "significance": 7.0,
+     "syllabus_relevance": 8.0,
+     "written_potential": 8.0
+    },
+    "exam_focus": "both",
+    "headline_bn": "জাপান সফরে বাংলাদেশ-জাপান বিনিয়োগ ও কৌশলগত অংশীদারিত্বের আলোচনা",
+    "institutions": [
+     "জাপানের পররাষ্ট্র মন্ত্রণালয়",
+     "বাংলাদেশ-জাপান অর্থনৈতিক অংশীদারত্ব চুক্তি (ইপিএ)",
+     "মুক্ত ও অবাধ ভারত-প্রশান্ত মহাসাগরীয় (এফওআইপি)"
+    ],
+    "key_facts": [
+     {
+      "evidence": "\"সফরের দ্বিতীয় দিনে মঙ্গলবার তিনি টোকিওতে দেশটির প্রধানমন্ত্রী সানায়ে তাকাইচির সাথে আনুষ্ঠানিক বৈঠক করবেন\"",
+      "fact": "সফরের দ্বিতীয় দিনে মঙ্গলবার তিনি টোকিওতে দেশটির প্রধানমন্ত্রী সানায়ে তাকাইচির সাথে আনুষ্ঠানিক বৈঠক করবেন।",
+      "prelims": true
+     },
+     {
+      "evidence": "\"বাংলাদেশের বেসরকারি খাতের জন্য জাপানের আগামী পাঁচ বছরে প্রায় সাড়ে ছয় বিলিয়ন ডলারের বিনিয়োগের ঘোষণা আসতে পারে\"",
+      "fact": "জাপানের সংবাদ মাধ্যমে ইঙ্গিত আছে যে বাংলাদেশের বেসরকারি খাতের জন্য আগামী পাঁচ বছরে প্রায় সাড়ে ছয় বিলিয়ন ডলারের বিনিয়োগের ঘোষণা আসতে পারে।",
+      "prelims": true
+     },
+     {
+      "evidence": "\"সব মিলিয়ে প্রায় ১৪ বিলিয়ন ডলারের বিনিয়োগ চুক্তি ও সমঝোতার আশা করা হচ্ছে\"",
+      "fact": "বাংলাদেশের দিক থেকে সব মিলিয়ে প্রায় ১৪ বিলিয়ন ডলারের বিনিয়োগ চুক্তি ও সমঝোতার আশা করা হচ্ছে।",
+      "prelims": true
+     },
+     {
+      "evidence": "\"'মুক্ত ও অবাধ ভারত-প্রশান্ত মহাসাগরীয় (এফওআইপি)' উদ্যোগ বাস্তবায়নের লক্ষ্যে দুই দেশের মধ্যে সমন্বয় আরও বাড়বে\"",
+      "fact": "জাপানের পররাষ্ট্র মন্ত্রণালয়ের বিবৃতিতে দুই দেশের মধ্যে 'মুক্ত ও অবাধ ভারত-প্রশান্ত মহাসাগরীয়' উদ্যোগ বাস্তবায়নে সমন্বয় বাড়ানোর কথা বলা হয়েছে।",
+      "prelims": true
+     },
+     {
+      "evidence": "\"কৃষি, মৎস্য, মানবসম্পদ উন্নয়ন, দক্ষতা বৃদ্ধি, বেসামরিক বিমান চলাচল, বাণিজ্য, পরিবেশ সংরক্ষণ এবং স্থানীয় সরকার ব্যবস্থার আধুনিকায়ন\"",
+      "fact": "সফরকালে কৃষি, মৎস্য, মানবসম্পদ উন্নয়ন, দক্ষতা বৃদ্ধি, বেসামরিক বিমান চলাচল, বাণিজ্য, পরিবেশ সংরক্ষণ এবং স্থানীয় সরকার ব্যবস্থার আধুনিকায়ন বিষয়ে সমঝোতা বা ঘোষণা আসতে পারে।",
+      "prelims": true
+     },
+     {
+      "evidence": "\"বাংলাদেশ-জাপান অর্থনৈতিক অংশীদারত্ব চুক্তি (ইপিএ)\" এবং \"প্রায় ৭ হাজার ৩৭৯টি বাংলাদেশি পণ্য জাপানের বাজারে শতভাগ শুল্কমুক্ত সুবিধা পাওয়ার কথা\"",
+      "fact": "বাংলাদেশ-জাপান অর্থনৈতিক অংশীদারত্ব চুক্তি (ইপিএ) ফেব্রুয়ারিতে সই হয়েছে এবং প্রতিবেদনে বলা হয়েছে প্রায় ৭ হাজার ৩৭৯টি বাংলাদেশি পণ্য জাপানে শতভাগ শুল্কমুক্ত সুবিধা পাবে।",
+      "prelims": true
+     }
+    ],
+    "likely_question": "বাংলাদেশ-জাপান দ্বিপক্ষীয় সম্পর্ক, এফওআইপি এবং সম্ভাব্য বিনিয়োগ-সমঝোতার আলোকে এই সফরের গুরুত্ব আলোচনা করুন।",
+    "mode": "full",
+    "score": 77.5,
+    "syllabus_label": "বাংলাদেশের দ্বিপক্ষীয় সম্পর্ক, সফর ও চুক্তি",
+    "syllabus_topic": "fp_bilateral",
+    "unsupported_dropped": 0,
+    "what_happened": "তারেক রহমানের জাপান সফরে টোকিওতে জাপানের প্রধানমন্ত্রী সানায়ে তাকাইচির সঙ্গে আনুষ্ঠানিক বৈঠকের কথা বলা হয়েছে। সফর শেষে দুই দেশের যৌথ ঘোষণায় প্রায় সাড়ে ছয় বিলিয়ন ডলারের বিনিয়োগ এবং মোট প্রায় ১৪ বিলিয়ন ডলারের বিনিয়োগ চুক্তি ও সমঝোতার আশা করা হচ্ছে বলে প্রতিবেদনে উল্লেখ আছে।",
+    "why_it_matters": "এটি বাংলাদেশ-জাপান দ্বিপক্ষীয় সম্পর্ক, বিনিয়োগ, বাণিজ্য এবং আঞ্চলিক ভূরাজনীতির সঙ্গে সরাসরি যুক্ত। BCS-এর পররাষ্ট্রনীতি, অর্থনীতি ও উন্নয়ন সহযোগিতা অংশে এ ধরনের বিষয় থেকে প্রশ্ন করা যেতে পারে।",
+    "written_angle": "এই সফরকে শুধু দ্বিপক্ষীয় বিনিয়োগ আলোচনা হিসেবে না দেখে ভূরাজনৈতিক প্রেক্ষাপটেও বিশ্লেষণ করা যায়। বিশেষ করে এফওআইপি, জাপানের আঞ্চলিক কৌশল, এবং বাংলাদেশের অবকাঠামো ও রপ্তানি স্বার্থ কীভাবে একত্রে কাজ করছে, তা লিখিত উত্তরে ব্যাখ্যা করা যেতে পারে।"
+   },
+   "article_ids": [
+    "a_69dd9a1e2e21e526",
+    "a_77a20b87ee1fab3c",
+    "a_99bf24356f5c73ee",
+    "a_b7c41e1d32e18017",
+    "a_d14ae999d8fc35bf",
+    "a_ecd1267dcb68263c"
+   ],
+   "attempts": 1,
+   "created_at": "2026-10-27T04:55:40+00:00",
+   "event_id": "ev_776ed094b44c",
+   "included_in": "2026-10-27",
+   "last_error": null,
+   "screening": {
+    "categories": [
+     "foreign_policy_geopolitics",
+     "constitution_governance"
+    ],
+    "decision": "select",
+    "exam_focus": "both",
+    "exam_hook": "Bangladesh-Japan bilateral summit in Tokyo focuses on trade, investment and strategic cooperation.",
+    "priority": 9.0,
+    "rationale": "This is a substantive bilateral summit with durable facts and policy relevance.",
+    "story_type": "diplomacy",
+    "topic": "fp_bilateral"
+   },
+   "screening_attempts": 0,
+   "status": "included",
+   "updated_at": "2026-10-27T04:55:40+00:00"
   },
   "ev_7947c7e014b5": {
    "analysis": null,
@@ -8312,6 +10537,32 @@
    "status": "included",
    "updated_at": "2026-10-24T11:39:11+00:00"
   },
+  "ev_896b59a958dc": {
+   "analysis": null,
+   "article_ids": [
+    "a_672135264bee9f49"
+   ],
+   "attempts": 0,
+   "created_at": "2026-10-27T04:55:40+00:00",
+   "event_id": "ev_896b59a958dc",
+   "included_in": null,
+   "last_error": null,
+   "screening": {
+    "categories": [
+     "foreign_policy_geopolitics"
+    ],
+    "decision": "reject",
+    "exam_focus": "none",
+    "exam_hook": "The story highlights Bangladeshi migrants facing death sentences in Saudi Arabia.",
+    "priority": 1.0,
+    "rationale": "This is a rights-focused human-interest piece without a clear policy-level development.",
+    "story_type": "human_interest",
+    "topic": null
+   },
+   "screening_attempts": 0,
+   "status": "rejected",
+   "updated_at": "2026-10-27T04:55:40+00:00"
+  },
   "ev_8b7bea9389b9": {
    "analysis": null,
    "article_ids": [
@@ -8676,6 +10927,32 @@
    "status": "rejected",
    "updated_at": "2026-10-25T03:13:13+00:00"
   },
+  "ev_98d65219a6eb": {
+   "analysis": null,
+   "article_ids": [
+    "a_987a56fa52045345"
+   ],
+   "attempts": 0,
+   "created_at": "2026-10-27T04:55:40+00:00",
+   "event_id": "ev_98d65219a6eb",
+   "included_in": null,
+   "last_error": null,
+   "screening": {
+    "categories": [
+     "foreign_policy_geopolitics"
+    ],
+    "decision": "reject",
+    "exam_focus": "none",
+    "exam_hook": "The story describes elephants trapped near the India-Bangladesh border and mentions diplomatic concern.",
+    "priority": 1.0,
+    "rationale": "Although cross-border, it is mainly a wildlife-border problem and not a clean policy development for the syllabus.",
+    "story_type": "diplomacy",
+    "topic": "env_rivers_water"
+   },
+   "screening_attempts": 0,
+   "status": "rejected",
+   "updated_at": "2026-10-27T04:55:40+00:00"
+  },
   "ev_9973cc6cd3e9": {
    "analysis": null,
    "article_ids": [
@@ -8727,6 +11004,32 @@
    "screening_attempts": 0,
    "status": "rejected",
    "updated_at": "2026-10-25T03:13:13+00:00"
+  },
+  "ev_9b9a53ffa70b": {
+   "analysis": null,
+   "article_ids": [
+    "a_e58676b925ba43de"
+   ],
+   "attempts": 0,
+   "created_at": "2026-10-27T04:55:40+00:00",
+   "event_id": "ev_9b9a53ffa70b",
+   "included_in": null,
+   "last_error": null,
+   "screening": {
+    "categories": [
+     "bangladesh_affairs"
+    ],
+    "decision": "reject",
+    "exam_focus": "none",
+    "exam_hook": "The piece criticises student union controversies at five universities.",
+    "priority": 0.0,
+    "rationale": "It is a general feature without a new policy or institutional decision.",
+    "story_type": "feature",
+    "topic": null
+   },
+   "screening_attempts": 0,
+   "status": "rejected",
+   "updated_at": "2026-10-27T04:55:40+00:00"
   },
   "ev_9d47db446624": {
    "analysis": null,
@@ -8823,6 +11126,84 @@
    "screening_attempts": 0,
    "status": "selected",
    "updated_at": "2026-10-26T04:37:47+00:00"
+  },
+  "ev_a487bfb454f6": {
+   "analysis": null,
+   "article_ids": [
+    "a_e3121b40dcfaec35"
+   ],
+   "attempts": 0,
+   "created_at": "2026-10-27T04:55:40+00:00",
+   "event_id": "ev_a487bfb454f6",
+   "included_in": null,
+   "last_error": null,
+   "screening": {
+    "categories": [
+     "economy"
+    ],
+    "decision": "reject",
+    "exam_focus": "none",
+    "exam_hook": "A telecom company’s nine-month business figure is reported without broader sector or policy significance.",
+    "priority": 0.0,
+    "rationale": "This is a single-firm commercial result and does not meet the selection test.",
+    "story_type": "corporate_commercial",
+    "topic": null
+   },
+   "screening_attempts": 0,
+   "status": "rejected",
+   "updated_at": "2026-10-27T04:55:40+00:00"
+  },
+  "ev_a5855d3953eb": {
+   "analysis": null,
+   "article_ids": [
+    "a_25b28e42ff00fb53"
+   ],
+   "attempts": 1,
+   "created_at": "2026-10-27T04:55:40+00:00",
+   "event_id": "ev_a5855d3953eb",
+   "included_in": null,
+   "last_error": "এটি মধ্যপ্রাচ্যের সংঘাত ও মানবাধিকার-সংক্রান্ত আন্তর্জাতিক সংবাদ। BCS সিলেবাসের নির্দিষ্ট টপিকের সঙ্গে এটি সরাসরি ও স্পষ্টভাবে মেলে না, এবং এটি বাংলাদেশের প্রেক্ষিতে অধ্যয়ন-অগ্রাধিকারযোগ্য নয়।",
+   "screening": {
+    "categories": [
+     "foreign_policy_geopolitics"
+    ],
+    "decision": "select",
+    "exam_focus": "both",
+    "exam_hook": "The UN rights chief warned that the Hebron crackdown in the West Bank could amount to ethnic cleansing.",
+    "priority": 8.0,
+    "rationale": "This is a major UN statement on the Palestine-Israel conflict with durable significance.",
+    "story_type": "international_event",
+    "topic": "int_un_system"
+   },
+   "screening_attempts": 0,
+   "status": "analysis_rejected",
+   "updated_at": "2026-10-27T04:55:40+00:00"
+  },
+  "ev_a95657f1035d": {
+   "analysis": null,
+   "article_ids": [
+    "a_1b6343cbc74f98b2"
+   ],
+   "attempts": 0,
+   "created_at": "2026-10-27T04:55:40+00:00",
+   "event_id": "ev_a95657f1035d",
+   "included_in": null,
+   "last_error": null,
+   "screening": {
+    "categories": [
+     "bangladesh_affairs"
+    ],
+    "decision": "reject",
+    "exam_focus": "none",
+    "exam_hook": "Police stopped a protest over attacks on bauls and detained a participant.",
+    "priority": 0.0,
+    "rationale": "This is a protest/political rights story and does not meet the selection test.",
+    "story_type": "party_politics",
+    "topic": null
+   },
+   "screening_attempts": 0,
+   "status": "rejected",
+   "updated_at": "2026-10-27T04:55:40+00:00"
   },
   "ev_a9c7e4052c89": {
    "analysis": null,
@@ -9186,6 +11567,33 @@
    "status": "rejected",
    "updated_at": "2026-10-25T02:30:10+00:00"
   },
+  "ev_baff426ea584": {
+   "analysis": null,
+   "article_ids": [
+    "a_7e5140b0d937cdc8"
+   ],
+   "attempts": 0,
+   "created_at": "2026-10-27T04:55:40+00:00",
+   "event_id": "ev_baff426ea584",
+   "included_in": null,
+   "last_error": null,
+   "screening": {
+    "categories": [
+     "science_technology"
+    ],
+    "decision": "reject",
+    "exam_focus": "written",
+    "exam_hook": "AI-generated actors are spreading into commercial uses in China, raising job concerns.",
+    "forced_reject": "weak maybe (priority 5)",
+    "priority": 5.0,
+    "rationale": "The AI labour impact is relevant, but the story is foreign and more trend-based than policy-focused.",
+    "story_type": "science_technology",
+    "topic": "sci_tech_ai"
+   },
+   "screening_attempts": 0,
+   "status": "rejected",
+   "updated_at": "2026-10-27T04:55:40+00:00"
+  },
   "ev_bb1c0d5559d3": {
    "analysis": null,
    "article_ids": [
@@ -9208,6 +11616,105 @@
    "screening_attempts": 0,
    "status": "rejected",
    "updated_at": "2026-10-24T13:40:25+00:00"
+  },
+  "ev_bc4d3241014b": {
+   "analysed_at": "2026-10-27T04:55:40+00:00",
+   "analysis": {
+    "analysed_article_id": "a_0cdb0d30c942f003",
+    "attributed_claims": [
+     {
+      "attributed_to": "Meteorologist Abdul Hamid Mia of the BMD",
+      "claim": "বাংলাদেশে এর উল্লেখযোগ্য প্রভাব হওয়ার কথা নয়।",
+      "evidence": "“Cyclone Arnab was not expected to have a significant impact on Bangladesh.”"
+     },
+     {
+      "attributed_to": "Meteorologist Abdul Hamid Mia of the BMD",
+      "claim": "উপকূলীয় এলাকায় হালকা বৃষ্টি হতে পারে, তবে ভারী বৃষ্টির সম্ভাবনা কম।",
+      "evidence": "“Coastal areas may experience light rain tomorrow and the following day, but the likelihood of heavy rainfall is low”"
+     }
+    ],
+    "background_context": "বঙ্গোপসাগরে সৃষ্ট ঘূর্ণিঝড়গুলো উপকূলীয় দেশগুলোর জন্য নিয়মিত দুর্যোগঝুঁকি তৈরি করে। আবহাওয়া সংস্থা সাধারণত বন্দর সংকেত, ট্রলার চলাচল নির্দেশনা এবং সম্ভাব্য বৃষ্টির পূর্বাভাস দিয়ে থাকে।",
+    "categories": [
+     "environment_climate"
+    ],
+    "causes_effects": "বঙ্গোপসাগরের নিম্নচাপ ঘনীভূত হয়ে ঘূর্ণিঝড়ে রূপ নিয়েছে। এর ফলে সমুদ্রবন্দরগুলোতে সতর্ক সংকেত জারি করা হয়েছে এবং নৌযান চলাচলে সতর্কতা বাড়ানো হয়েছে; তবে প্রতিবেদনে বলা হয়েছে বাংলাদেশে বড় ধরনের প্রভাবের আশঙ্কা কম।",
+    "criteria": {
+     "factual_density": 8.0,
+     "novelty": 8.0,
+     "significance": 6.0,
+     "syllabus_relevance": 8.0,
+     "written_potential": 6.0
+    },
+    "exam_focus": "both",
+    "headline_bn": "বে-অফ বেঙ্গলে ঘূর্ণিঝড় আরনব, ভারতের অন্ধ্র উপকূলের দিকে অগ্রসর",
+    "institutions": [
+     "Bangladesh Meteorological Department",
+     "World Meteorological Organisation",
+     "Chattogram port",
+     "Cox’s Bazar port",
+     "Mongla port",
+     "Payra port"
+    ],
+    "key_facts": [
+     {
+      "evidence": "“A deep depression over the Bay of Bengal has intensified into a cyclone named Arnab”",
+      "fact": "গভীর নিম্নচাপটি ‘আরনব’ নামের ঘূর্ণিঝড়ে পরিণত হয়েছে।",
+      "prelims": true
+     },
+     {
+      "evidence": "“crossing India's Andhra Pradesh coast as a very severe cyclonic storm on Wednesday.”",
+      "fact": "এটি বুধবার ভারতের অন্ধ্রপ্রদেশ উপকূল অতিক্রম করতে পারে।",
+      "prelims": true
+     },
+     {
+      "evidence": "“At 6:00am today, the cyclone was located 820 kilometres southwest of Chattogram port”",
+      "fact": "আজ সকাল ৬টায় ঘূর্ণিঝড়টি চট্টগ্রাম সমুদ্রবন্দর থেকে 820 কিলোমিটার দক্ষিণ-পশ্চিমে ছিল।",
+      "prelims": true
+     },
+     {
+      "evidence": "“asked the maritime ports of Chattogram, Cox’s Bazar, Mongla and Payra to lower distant warning signal No 1 and hoist distant warning signal No 2.”",
+      "fact": "চট্টগ্রাম, কক্সবাজার, মোংলা ও পায়রা বন্দরে দূরবর্তী সতর্ক সংকেত নং ২ তুলতে বলা হয়েছে।",
+      "prelims": true
+     },
+     {
+      "evidence": "“Cyclones are classified into five categories” and “a very severe cyclonic storm has winds of 118 to 165 kilometres per hour.”",
+      "fact": "ঘূর্ণিঝড়ের পাঁচটি শ্রেণি আছে এবং ‘very severe cyclonic storm’ এর বায়ুর গতি 118 to 165 kilometres per hour।",
+      "prelims": true
+     }
+    ],
+    "likely_question": "ঘূর্ণিঝড়ের শ্রেণিবিভাগ, সতর্ক সংকেত এবং বঙ্গোপসাগরে নামকরণের প্রক্রিয়া ব্যাখ্যা করুন।",
+    "mode": "full",
+    "score": 72.0,
+    "syllabus_label": "প্রাকৃতিক দুর্যোগ ও দুর্যোগ ব্যবস্থাপনা",
+    "syllabus_topic": "env_disaster",
+    "unsupported_dropped": 1,
+    "what_happened": "বঙ্গোপসাগরের একটি গভীর নিম্নচাপ ঘূর্ণিঝড় ‘আরনব’-এ পরিণত হয়েছে এবং এটি বুধবার ভারতের অন্ধ্রপ্রদেশ উপকূল অতিক্রম করতে পারে বলে পূর্বাভাস দেওয়া হয়েছে। বাংলাদেশে এর বড় প্রভাবের আশঙ্কা কম বলা হলেও চারটি সমুদ্রবন্দরে দূরবর্তী সতর্ক সংকেত নং ২ দেখাতে বলা হয়েছে এবং উত্তর বঙ্গোপসাগরের মাছধরা নৌকা ও ট্রলারকে সতর্ক থাকতে বলা হয়েছে।",
+    "why_it_matters": "এটি দুর্যোগ ব্যবস্থাপনা, উপকূলীয় সতর্কতা এবং ঘূর্ণিঝড় শ্রেণিবিভাগ—এই সব বিষয়ের সঙ্গে সরাসরি সম্পর্কিত। বিসিএসে সমুদ্রবন্দর সংকেত, আবহাওয়া সতর্কতা এবং ঘূর্ণিঝড়ের নামকরণ সম্পর্কে প্রশ্ন আসতে পারে।",
+    "written_angle": "ঘূর্ণিঝড় পূর্বাভাস, উপকূলীয় সতর্কতা এবং আঞ্চলিক সমন্বয়ের দিক থেকে এ ধরনের ঘটনা দুর্যোগ ব্যবস্থাপনার একটি গুরুত্বপূর্ণ উদাহরণ। ঘূর্ণিঝড়ের শ্রেণিবিভাগ ও নামকরণ পদ্ধতি প্রশাসনিক প্রস্তুতি ও জনসচেতনতার জন্যও প্রাসঙ্গিক।"
+   },
+   "article_ids": [
+    "a_0cdb0d30c942f003"
+   ],
+   "attempts": 1,
+   "created_at": "2026-10-27T04:55:40+00:00",
+   "event_id": "ev_bc4d3241014b",
+   "included_in": "2026-10-27",
+   "last_error": null,
+   "screening": {
+    "categories": [
+     "environment_climate"
+    ],
+    "decision": "select",
+    "exam_focus": "both",
+    "exam_hook": "Cyclone Arnab formed over the Bay of Bengal and Bangladesh ports were told to hoist signal No 2.",
+    "priority": 8.0,
+    "rationale": "A named cyclone and port warning are substantive disaster-preparedness facts.",
+    "story_type": "environment_disaster",
+    "topic": "env_disaster"
+   },
+   "screening_attempts": 0,
+   "status": "included",
+   "updated_at": "2026-10-27T04:55:40+00:00"
   },
   "ev_c1c93fde4ef5": {
    "analysed_at": "2026-10-24T11:39:11+00:00",
@@ -9373,6 +11880,58 @@
    "screening_attempts": 0,
    "status": "rejected",
    "updated_at": "2026-10-26T04:37:47+00:00"
+  },
+  "ev_c7859ab1a9fa": {
+   "analysis": null,
+   "article_ids": [
+    "a_842f8a2545e44241"
+   ],
+   "attempts": 0,
+   "created_at": "2026-10-27T04:55:40+00:00",
+   "event_id": "ev_c7859ab1a9fa",
+   "included_in": null,
+   "last_error": null,
+   "screening": {
+    "categories": [
+     "economy"
+    ],
+    "decision": "reject",
+    "exam_focus": "none",
+    "exam_hook": "A workplace feature follows a merchandiser’s phone usage in the garment sector.",
+    "priority": 0.0,
+    "rationale": "This is a human-interest workplace piece with low exam utility.",
+    "story_type": "feature",
+    "topic": null
+   },
+   "screening_attempts": 0,
+   "status": "rejected",
+   "updated_at": "2026-10-27T04:55:40+00:00"
+  },
+  "ev_c78dad89bb0a": {
+   "analysis": null,
+   "article_ids": [
+    "a_658758eef39be361"
+   ],
+   "attempts": 0,
+   "created_at": "2026-10-27T04:55:40+00:00",
+   "event_id": "ev_c78dad89bb0a",
+   "included_in": null,
+   "last_error": null,
+   "screening": {
+    "categories": [
+     "economy"
+    ],
+    "decision": "reject",
+    "exam_focus": "none",
+    "exam_hook": "The article speculates on Bangladesh’s exposure to a Saudi crisis and remittance effects.",
+    "priority": 0.0,
+    "rationale": "It is an analytical feature, not a concrete new policy or data release.",
+    "story_type": "feature",
+    "topic": null
+   },
+   "screening_attempts": 0,
+   "status": "rejected",
+   "updated_at": "2026-10-27T04:55:40+00:00"
   },
   "ev_c8ee92f47955": {
    "analysis": null,
@@ -9570,6 +12129,32 @@
    "screening_attempts": 0,
    "status": "rejected",
    "updated_at": "2026-10-24T11:39:11+00:00"
+  },
+  "ev_d27daeae4350": {
+   "analysis": null,
+   "article_ids": [
+    "a_6060488eec70b7a5"
+   ],
+   "attempts": 0,
+   "created_at": "2026-10-27T04:55:40+00:00",
+   "event_id": "ev_d27daeae4350",
+   "included_in": null,
+   "last_error": null,
+   "screening": {
+    "categories": [
+     "environment_climate"
+    ],
+    "decision": "reject",
+    "exam_focus": "none",
+    "exam_hook": "Authorities demolished an illegal resort in Cox’s Bazar.",
+    "priority": 0.0,
+    "rationale": "This is a local enforcement drive without broader policy significance.",
+    "story_type": "local_admin",
+    "topic": null
+   },
+   "screening_attempts": 0,
+   "status": "rejected",
+   "updated_at": "2026-10-27T04:55:40+00:00"
   },
   "ev_d5f20da941e3": {
    "analysis": null,
@@ -9887,6 +12472,84 @@
    "status": "rejected",
    "updated_at": "2026-10-24T13:40:25+00:00"
   },
+  "ev_db86469f3bbc": {
+   "analysis": null,
+   "article_ids": [
+    "a_e804efb13a54cd5f"
+   ],
+   "attempts": 0,
+   "created_at": "2026-10-27T04:55:40+00:00",
+   "event_id": "ev_db86469f3bbc",
+   "included_in": null,
+   "last_error": null,
+   "screening": {
+    "categories": [
+     "science_technology"
+    ],
+    "decision": "reject",
+    "exam_focus": "none",
+    "exam_hook": "The government service portal went offline for maintenance.",
+    "priority": 1.0,
+    "rationale": "This is an operational outage, not a durable digital-policy development.",
+    "story_type": "local_admin",
+    "topic": "bd_ict_digital"
+   },
+   "screening_attempts": 0,
+   "status": "rejected",
+   "updated_at": "2026-10-27T04:55:40+00:00"
+  },
+  "ev_dbf1861f188f": {
+   "analysis": null,
+   "article_ids": [
+    "a_0585ad055e3c044d"
+   ],
+   "attempts": 0,
+   "created_at": "2026-10-27T04:55:40+00:00",
+   "event_id": "ev_dbf1861f188f",
+   "included_in": null,
+   "last_error": null,
+   "screening": {
+    "categories": [
+     "awards_reports_indices"
+    ],
+    "decision": "select",
+    "exam_focus": "both",
+    "exam_hook": "WHO and UN officials condemned the killing of a nurse during Ebola response in DR Congo.",
+    "priority": 7.0,
+    "rationale": "This is a substantive UN-health response to an epidemic situation with clear international relevance.",
+    "story_type": "public_health",
+    "topic": "int_un_system"
+   },
+   "screening_attempts": 0,
+   "status": "selected",
+   "updated_at": "2026-10-27T04:55:40+00:00"
+  },
+  "ev_dc147d3c8205": {
+   "analysis": null,
+   "article_ids": [
+    "a_d50cccf3d691e20a"
+   ],
+   "attempts": 0,
+   "created_at": "2026-10-27T04:55:40+00:00",
+   "event_id": "ev_dc147d3c8205",
+   "included_in": null,
+   "last_error": null,
+   "screening": {
+    "categories": [
+     "science_technology"
+    ],
+    "decision": "reject",
+    "exam_focus": "none",
+    "exam_hook": "Microsoft’s employee buyouts are a company cost-cutting move rather than a public policy or exam topic.",
+    "priority": 0.0,
+    "rationale": "A single-company workforce decision has low BCS relevance.",
+    "story_type": "corporate_commercial",
+    "topic": null
+   },
+   "screening_attempts": 0,
+   "status": "rejected",
+   "updated_at": "2026-10-27T04:55:40+00:00"
+  },
   "ev_dca81bf1247b": {
    "analysis": null,
    "article_ids": [
@@ -9938,6 +12601,33 @@
    "screening_attempts": 0,
    "status": "rejected",
    "updated_at": "2026-10-26T04:37:47+00:00"
+  },
+  "ev_ddb066776e44": {
+   "analysis": null,
+   "article_ids": [
+    "a_4cc9e586b1af3555"
+   ],
+   "attempts": 0,
+   "created_at": "2026-10-27T04:55:40+00:00",
+   "event_id": "ev_ddb066776e44",
+   "included_in": null,
+   "last_error": null,
+   "screening": {
+    "categories": [
+     "bangladesh_affairs"
+    ],
+    "decision": "reject",
+    "exam_focus": "both",
+    "exam_hook": "Health ministry development spending remained below 2 percent in the first quarter despite a doubled allocation.",
+    "forced_reject": "weak maybe (priority 6)",
+    "priority": 6.0,
+    "rationale": "This is a useful fiscal-implementation fact, though narrower than top-tier budget coverage.",
+    "story_type": "economic_data",
+    "topic": "bd_social_sector"
+   },
+   "screening_attempts": 0,
+   "status": "rejected",
+   "updated_at": "2026-10-27T04:55:40+00:00"
   },
   "ev_ded5708c7790": {
    "analysed_at": "2026-10-26T04:37:47+00:00",
@@ -10425,6 +13115,114 @@
    "status": "rejected",
    "updated_at": "2026-10-24T13:40:25+00:00"
   },
+  "ev_e779833028c9": {
+   "analysed_at": "2026-10-27T04:55:40+00:00",
+   "analysis": {
+    "analysed_article_id": "a_c123d1020fba4e47",
+    "attributed_claims": [
+     {
+      "attributed_to": "finance ministry officials involved with the proceedings",
+      "claim": "সার্বভৌম বন্ড ইস্যুর অনুমোদন দিয়েছেন প্রধানমন্ত্রী তারেক রহমান।",
+      "evidence": "“Prime Minister Tarique Rahman gave approval earlier this month”"
+     },
+     {
+      "attributed_to": "the development comes as part of broader institutional reforms",
+      "claim": "সরকারের লক্ষ্য ঋণনির্ভরতা কমিয়ে equity-based foreign direct investment বাড়ানো।",
+      "evidence": "“The move comes as part of broader institutional reforms to reduce reliance on debt financing and boost equity-based foreign direct investment.”"
+     },
+     {
+      "attributed_to": "finance ministry proposal",
+      "claim": "public debt management আরও efficient, cost-effective and sustainable করা হচ্ছে।",
+      "evidence": "“said the finance ministry proposal.”"
+     }
+    ],
+    "background_context": "সার্বভৌম বন্ড হলো সরকারের পক্ষ থেকে আন্তর্জাতিক বাজারে ঋণ তোলার একটি মাধ্যম। এটি সাধারণত দেশের ঋণযোগ্যতা, মুদ্রানীতি এবং বৈদেশিক বিনিয়োগ পরিবেশের সঙ্গে সম্পর্কিত।",
+    "categories": [
+     "economy"
+    ],
+    "causes_effects": "প্রস্তাবিত পদক্ষেপের কারণ হিসেবে ঋণনির্ভরতা কমানো, অর্থায়নের উৎস বাড়ানো এবং পুনঃঅর্থায়ন ঝুঁকি কমানোর কথা বলা হয়েছে। সম্ভাব্য প্রভাব হলো দীর্ঘমেয়াদি অর্থায়নের ভিত্তি তৈরি, তবে বাজারে গ্রহণযোগ্যতা ও শর্ত নির্ধারণে আন্তর্জাতিক বিনিয়োগকারীদের আস্থা জরুরি হবে।",
+    "criteria": {
+     "factual_density": 7.0,
+     "novelty": 8.0,
+     "significance": 7.0,
+     "syllabus_relevance": 8.0,
+     "written_potential": 7.0
+    },
+    "exam_focus": "both",
+    "headline_bn": "সার্বভৌম বন্ড প্রচারে বিদেশে রোডশো করবে সরকার",
+    "institutions": [
+     "Cabinet Committee on Economic Affairs",
+     "Finance Ministry",
+     "JP Morgan",
+     "Bridgeworks International",
+     "Asian Development Bank"
+    ],
+    "key_facts": [
+     {
+      "evidence": "“The government will hold roadshows in London, New York and Hong Kong”",
+      "fact": "সরকার লন্ডন, নিউইয়র্ক ও হংকংয়ে রোডশো করবে।",
+      "prelims": true
+     },
+     {
+      "evidence": "“issuance of sovereign bond of less than $1 billion”",
+      "fact": "সার্বভৌম বন্ডের পরিমাণ হবে ১ বিলিয়ন ডলারের কম।",
+      "prelims": true
+     },
+     {
+      "evidence": "“Since Bangladesh is issuing sovereign bonds for the first time”",
+      "fact": "বাংলাদেশ প্রথমবারের মতো সার্বভৌম বন্ড ইস্যু করছে।",
+      "prelims": true
+     },
+     {
+      "evidence": "“American investment bank JP Morgan and Hong Kong-based consultancy firm Bridgeworks International will be commissioned”",
+      "fact": "JP Morgan ও Bridgeworks International বন্ড ইস্যুতে কারিগরি সহায়তা দেবে।",
+      "prelims": true
+     },
+     {
+      "evidence": "“The Cabinet Committee on Economic Affairs... approved in-principle two separate proposals”",
+      "fact": "ক্যাবিনেট কমিটি অন ইকোনমিক অ্যাফেয়ার্স নীতিগতভাবে দুইটি প্রস্তাব অনুমোদন করেছে।",
+      "prelims": true
+     },
+     {
+      "evidence": "“exploring Japanese yen-denominated Samurai Bonds and Chinese yuan-denominated Panda Bonds”",
+      "fact": "সরকার মুনাফাভিত্তিক বন্ডের পাশাপাশি Samurai Bonds ও Panda Bonds-ও বিবেচনা করছে।",
+      "prelims": true
+     }
+    ],
+    "likely_question": "সার্বভৌম বন্ড ইস্যু করার ক্ষেত্রে সরকারের উদ্দেশ্য, সম্ভাব্য সুবিধা ও সংশ্লিষ্ট প্রাতিষ্ঠানিক পদক্ষেপগুলো আলোচনা করুন।",
+    "mode": "full",
+    "score": 74.0,
+    "syllabus_label": "বাজেট, রাজস্ব, এডিপি ও সরকারি ঋণ",
+    "syllabus_topic": "bd_budget_fiscal",
+    "unsupported_dropped": 0,
+    "what_happened": "সরকার সার্বভৌম বন্ড ইস্যুর প্রস্তুতি হিসেবে লন্ডন, নিউইয়র্ক ও হংকংয়ে রোডশো করবে। প্রথমবারের মতো এ ধরনের বন্ড ইস্যুর উদ্যোগে JP Morgan এবং Bridgeworks International-কে সহায়তাকারী হিসেবে নিয়োগের প্রক্রিয়া চলছে।",
+    "why_it_matters": "এটি সরকারি ঋণ ব্যবস্থাপনা, আন্তর্জাতিক মূলধন বাজারে প্রবেশ এবং অর্থায়ন উৎস বৈচিত্র্যকরণের সঙ্গে সরাসরি যুক্ত। বিসিএস প্রিলিমস ও লিখিত উভয় পরীক্ষার জন্য বিষয়টি গুরুত্বপূর্ণ, কারণ এতে ঋণ, বন্ড, রেটিং, এবং অর্থনৈতিক সংস্কারের ধারণা আসে।",
+    "written_angle": "বাংলাদেশের প্রথম সার্বভৌম বন্ড ইস্যু করলে অর্থায়নের উৎস বৈচিত্র্য পেতে পারে, কিন্তু আন্তর্জাতিক বাজারে স্বচ্ছতা, ক্রেডিট রেটিং, সুদের হার এবং ঋণঝুঁকি ব্যবস্থাপনা অত্যন্ত গুরুত্বপূর্ণ হয়ে ওঠে। এ কারণে বন্ড ইস্যু শুধু অর্থায়নের প্রশ্ন নয়, বরং মধ্যমেয়াদি ঋণ কৌশল ও প্রাতিষ্ঠানিক সংস্কারের বিষয়ও।"
+   },
+   "article_ids": [
+    "a_c123d1020fba4e47"
+   ],
+   "attempts": 1,
+   "created_at": "2026-10-27T04:55:40+00:00",
+   "event_id": "ev_e779833028c9",
+   "included_in": null,
+   "last_error": null,
+   "screening": {
+    "categories": [
+     "economy"
+    ],
+    "decision": "select",
+    "exam_focus": "both",
+    "exam_hook": "The government plans sovereign bond roadshows in Hong Kong, New York and London before issuing the bond.",
+    "priority": 8.0,
+    "rationale": "Sovereign bond preparation is a durable fiscal-financing development with exam value.",
+    "story_type": "economic_data",
+    "topic": "bd_budget_fiscal"
+   },
+   "screening_attempts": 0,
+   "status": "analysed",
+   "updated_at": "2026-10-27T04:55:40+00:00"
+  },
   "ev_eb0135d00881": {
    "analysis": null,
    "article_ids": [
@@ -10517,6 +13315,32 @@
    "screening_attempts": 0,
    "status": "rejected",
    "updated_at": "2026-10-24T11:39:11+00:00"
+  },
+  "ev_ed5446f141b5": {
+   "analysis": null,
+   "article_ids": [
+    "a_111c821cdd63f735"
+   ],
+   "attempts": 0,
+   "created_at": "2026-10-27T04:55:40+00:00",
+   "event_id": "ev_ed5446f141b5",
+   "included_in": null,
+   "last_error": null,
+   "screening": {
+    "categories": [
+     "foreign_policy_geopolitics"
+    ],
+    "decision": "reject",
+    "exam_focus": "none",
+    "exam_hook": "The article explains how student protests weakened Serbia’s leader over time.",
+    "priority": 0.0,
+    "rationale": "This is foreign domestic political analysis without direct syllabus relevance.",
+    "story_type": "foreign_domestic_minor",
+    "topic": null
+   },
+   "screening_attempts": 0,
+   "status": "rejected",
+   "updated_at": "2026-10-27T04:55:40+00:00"
   },
   "ev_eff58995486a": {
    "analysed_at": "2026-10-25T02:30:10+00:00",
@@ -10997,6 +13821,33 @@
    "status": "included",
    "updated_at": "2026-10-25T02:30:10+00:00"
   },
+  "ev_ff3081ebf545": {
+   "analysis": null,
+   "article_ids": [
+    "a_e3d686be3b9fb807"
+   ],
+   "attempts": 0,
+   "created_at": "2026-10-27T04:55:40+00:00",
+   "event_id": "ev_ff3081ebf545",
+   "included_in": null,
+   "last_error": null,
+   "screening": {
+    "categories": [
+     "bangladesh_affairs"
+    ],
+    "decision": "reject",
+    "exam_focus": "written",
+    "exam_hook": "A parliamentary committee seeks a probe into alleged irregularities in fertiliser dealer appointments.",
+    "forced_reject": "weak maybe (priority 5)",
+    "priority": 5.0,
+    "rationale": "It involves parliamentary scrutiny of an agriculture-related administrative process, but the story is still probe-oriented and weaker than a firm policy decision.",
+    "story_type": "policy_decision",
+    "topic": "bd_agriculture_food"
+   },
+   "screening_attempts": 0,
+   "status": "rejected",
+   "updated_at": "2026-10-27T04:55:40+00:00"
+  },
   "ev_ff5008289b42": {
    "analysis": null,
    "article_ids": [
@@ -11021,7 +13872,7 @@
    "updated_at": "2026-10-24T13:40:25+00:00"
   }
  },
- "last_successful_edition": "2026-10-26",
+ "last_successful_edition": "2026-10-27",
  "notes": [],
  "runs": [
   {
@@ -11426,15 +14277,46 @@
    "run_id": "e19f4afa7c",
    "started_at": "2026-10-26T08:14:09+00:00",
    "stories": 5
+  },
+  {
+   "dry_run": false,
+   "edition_date": "2026-10-27",
+   "errors": [],
+   "estimated_cost_usd": 0.1399,
+   "finished_at": "2026-10-27T04:58:55+00:00",
+   "llm_calls": 14,
+   "llm_usage": {
+    "gemini": {
+     "calls_incl_retries": 0,
+     "input_tokens": 0,
+     "output_tokens": 0,
+     "requests": 0
+    },
+    "openai": {
+     "calls_incl_retries": 14,
+     "input_tokens": 60505,
+     "output_tokens": 21009,
+     "requests": 14
+    }
+   },
+   "manual": false,
+   "mcqs": 3,
+   "outcome": "delivered",
+   "partial": false,
+   "prefiltered": 31,
+   "providers_disabled": {},
+   "run_id": "9c7a1ebb8c",
+   "started_at": "2026-10-27T04:55:40+00:00",
+   "stories": 7
   }
  ],
  "schema_version": 2,
  "source_health": {
   "bbc_bangla": {
    "consecutive_failures": 0,
-   "last_attempt": "2026-10-26T04:37:47+00:00",
+   "last_attempt": "2026-10-27T04:55:40+00:00",
    "last_item_count": 14,
-   "last_success": "2026-10-26T04:37:47+00:00",
+   "last_success": "2026-10-27T04:55:40+00:00",
    "last_warnings": []
   },
   "dailystar": {
@@ -11446,30 +14328,30 @@
   },
   "dailystar_bangladesh": {
    "consecutive_failures": 0,
-   "last_attempt": "2026-10-26T04:37:47+00:00",
+   "last_attempt": "2026-10-27T04:55:40+00:00",
    "last_item_count": 10,
-   "last_success": "2026-10-26T04:37:47+00:00",
+   "last_success": "2026-10-27T04:55:40+00:00",
    "last_warnings": []
   },
   "dailystar_business": {
    "consecutive_failures": 0,
-   "last_attempt": "2026-10-26T04:37:47+00:00",
+   "last_attempt": "2026-10-27T04:55:40+00:00",
    "last_item_count": 10,
-   "last_success": "2026-10-26T04:37:47+00:00",
+   "last_success": "2026-10-27T04:55:40+00:00",
    "last_warnings": []
   },
   "dailystar_environment": {
    "consecutive_failures": 0,
-   "last_attempt": "2026-10-26T04:37:47+00:00",
+   "last_attempt": "2026-10-27T04:55:40+00:00",
    "last_item_count": 10,
-   "last_success": "2026-10-26T04:37:47+00:00",
+   "last_success": "2026-10-27T04:55:40+00:00",
    "last_warnings": []
   },
   "dailystar_world": {
    "consecutive_failures": 0,
-   "last_attempt": "2026-10-26T04:37:47+00:00",
+   "last_attempt": "2026-10-27T04:55:40+00:00",
    "last_item_count": 10,
-   "last_success": "2026-10-26T04:37:47+00:00",
+   "last_success": "2026-10-27T04:55:40+00:00",
    "last_warnings": []
   },
   "dhakatribune": {
@@ -11486,16 +14368,16 @@
   },
   "prothomalo": {
    "consecutive_failures": 0,
-   "last_attempt": "2026-10-26T04:37:47+00:00",
+   "last_attempt": "2026-10-27T04:55:40+00:00",
    "last_item_count": 40,
-   "last_success": "2026-10-26T04:37:47+00:00",
+   "last_success": "2026-10-27T04:55:40+00:00",
    "last_warnings": []
   },
   "un_news_all": {
    "consecutive_failures": 0,
-   "last_attempt": "2026-10-26T04:37:47+00:00",
+   "last_attempt": "2026-10-27T04:55:40+00:00",
    "last_item_count": 30,
-   "last_success": "2026-10-26T04:37:47+00:00",
+   "last_success": "2026-10-27T04:55:40+00:00",
    "last_warnings": []
   }
  },
@@ -11547,7 +14429,7 @@
   }
  },
  "telegram": {
-  "last_update_id": 894171905
+  "last_update_id": 894171906
  },
- "updated_at": "2026-10-26T08:14:10+00:00"
+ "updated_at": "2026-10-27T04:58:55+00:00"
 }
