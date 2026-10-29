@@ -20754,6 +20754,37 @@
    "run_id": "2e2d7fab84",
    "started_at": "2026-10-29T07:57:35+00:00",
    "stories": 5
+  },
+  {
+   "dry_run": false,
+   "edition_date": "2026-10-29",
+   "errors": [],
+   "estimated_cost_usd": 0.0,
+   "finished_at": "2026-10-29T08:30:38+00:00",
+   "llm_calls": 0,
+   "llm_usage": {
+    "gemini": {
+     "calls_incl_retries": 0,
+     "input_tokens": 0,
+     "output_tokens": 0,
+     "requests": 0
+    },
+    "openai": {
+     "calls_incl_retries": 0,
+     "input_tokens": 0,
+     "output_tokens": 0,
+     "requests": 0
+    }
+   },
+   "manual": false,
+   "mcqs": 0,
+   "outcome": "already_delivered",
+   "partial": false,
+   "prefiltered": 0,
+   "providers_disabled": {},
+   "run_id": "a878715e93",
+   "started_at": "2026-10-29T08:30:38+00:00",
+   "stories": 5
   }
  ],
  "schema_version": 2,
@@ -20877,5 +20908,5 @@
  "telegram": {
   "last_update_id": 894171906
  },
- "updated_at": "2026-10-29T07:57:36+00:00"
+ "updated_at": "2026-10-29T08:30:38+00:00"
 }
