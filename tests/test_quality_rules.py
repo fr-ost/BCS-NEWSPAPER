@@ -294,3 +294,19 @@ def test_one_verified_gk_question_is_always_kept_when_valid():
     ]
     out = validate_mcqs({"questions": raw}, facts, 3)
     assert [q["fact_id"] for q in out.questions] == ["f1", "f2", "f4"]  # model order kept, GK guaranteed
+
+
+def test_answer_position_is_not_always_the_first_option():
+    from app.questions import arrange_options
+
+    numeric = arrange_options({"question": "q?", "options": ["২০.৭ বিলিয়ন ডলার", "১৭.৭ বিলিয়ন ডলার", "২৪.৭ বিলিয়ন ডলার", "২২.৭ বিলিয়ন ডলার"], "answer_index": 0})
+    assert numeric["options"] == ["১৭.৭ বিলিয়ন ডলার", "২০.৭ বিলিয়ন ডলার", "২২.৭ বিলিয়ন ডলার", "২৪.৭ বিলিয়ন ডলার"]
+    assert numeric["answer_index"] == 1
+    positions = set()
+    for i in range(12):
+        q = arrange_options({"question": f"প্রশ্ন {i}?", "options": ["কিনশাসা", "ব্রাজাভিল", "কাম্পালা", "লুসাকা"], "answer_index": 0})
+        assert q["options"][q["answer_index"]] == "কিনশাসা" and sorted(q["options"]) == sorted(["কিনশাসা", "ব্রাজাভিল", "কাম্পালা", "লুসাকা"])
+        positions.add(q["answer_index"])
+    assert len(positions) >= 3  # spread over the options
+    again = arrange_options({"question": "প্রশ্ন 0?", "options": ["কিনশাসা", "ব্রাজাভিল", "কাম্পালা", "লুসাকা"], "answer_index": 0})
+    assert again["options"] == arrange_options({"question": "প্রশ্ন 0?", "options": ["কিনশাসা", "ব্রাজাভিল", "কাম্পালা", "লুসাকা"], "answer_index": 0})["options"]
