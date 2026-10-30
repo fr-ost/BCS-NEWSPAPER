@@ -253,6 +253,9 @@ def test_fact_pool_interleaves_stories_and_includes_verified_gk():
     s2["analysis"]["static_gk"] = [{"statement": "জিকে বিবৃতি ১৯৭২", "question": "?", "answer": "১৯৭২", "answer_en": "1972", "kind": "year"}]
     pool = build_fact_pool([s1, s2])
     assert [(p["event_id"], p["basis"]) for p in pool] == [("e1", "article"), ("e2", "article"), ("e1", "article"), ("e2", "gk")]
+    s2["analysis"]["key_facts"].append({"fact": "তথ্য চার ৪০০০", "evidence": "x", "prelims": True})
+    pool = build_fact_pool([s2])
+    assert [p["basis"] for p in pool] == ["article", "gk", "article"]  # GK is not pushed past the cap
 
 
 def test_news_figure_questions_are_limited_while_alternatives_exist():
@@ -274,3 +277,20 @@ def test_news_figure_questions_are_limited_while_alternatives_exist():
     # A thin day with only figures still gets its questions.
     thin = validate_mcqs({"questions": raw[:2]}, facts, 3)
     assert [q["fact_id"] for q in thin.questions] == ["f1", "f2"]
+
+
+def test_one_verified_gk_question_is_always_kept_when_valid():
+    def fact(fid, eid, text, basis="article"):
+        return {"fact_id": fid, "story": eid, "fact": text, "evidence": text, "basis": basis, "subject": "economy",
+                "event_id": eid, "url": "https://example.com/" + eid, "source_name": "X"}
+
+    facts = [fact("f1", "e1", "ছয় বছর মেয়াদ"), fact("f2", "e2", "সদর দপ্তর ঢাকা"), fact("f3", "e3", "বন্দর চট্টগ্রাম"),
+             fact("f4", "e4", "ডব্লিউএমও প্রতিষ্ঠিত ১৯৫০ সালে", "gk")]
+    raw = [
+        mcq("f1", ("ছয় বছর", "পাঁচ বছর", "সাত বছর", "আট বছর"), 0, "পরিচালকদের টানা মেয়াদ কত বছর?"),
+        mcq("f2", ("ঢাকা", "খুলনা", "রাজশাহী", "সিলেট"), 0, "সংস্থাটির সদর দপ্তর কোথায়?"),
+        mcq("f3", ("চট্টগ্রাম", "মোংলা", "পায়রা", "মাতারবাড়ী"), 0, "দেশের প্রধান সমুদ্রবন্দর কোনটি?"),
+        mcq("f4", ("১৯৫০", "১৯৪৫", "১৯৬০", "১৯৭২"), 0, "বিশ্ব আবহাওয়া সংস্থা কোন সালে প্রতিষ্ঠিত হয়?"),
+    ]
+    out = validate_mcqs({"questions": raw}, facts, 3)
+    assert [q["fact_id"] for q in out.questions] == ["f1", "f2", "f4"]  # model order kept, GK guaranteed

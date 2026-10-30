@@ -14,11 +14,11 @@ from .util import extract_numbers, normalize_digits, normalize_text
 
 log = logging.getLogger(__name__)
 
-MAX_FACTS_FOR_MCQ = 24
+MAX_FACTS_FOR_MCQ = 30
 ARTICLE_FACTS_PER_STORY = 3
 GK_FACTS_PER_STORY = 2
 # Ask for more candidates than needed; code keeps the best valid ones.
-CANDIDATE_FACTOR = 2
+CANDIDATE_FACTOR = 3
 # Questions from verified static GK (not the article) per edition.
 MAX_GK_QUESTIONS = 2
 # Bare-figure questions from the news (an amount, a count) per edition: BPSC
@@ -68,9 +68,14 @@ def build_fact_pool(stories: list[dict]) -> list[dict]:
         others = [f for f in note["key_facts"] if not f.get("prelims")]
         article = (prelims + others)[:ARTICLE_FACTS_PER_STORY]
         gk = (note.get("static_gk") or [])[:GK_FACTS_PER_STORY]
-        ordered = [(f["fact"], f["evidence"], "article") for f in article if f.get("prelims")]
-        ordered += [(g["statement"], g["statement"], "gk") for g in gk]
-        ordered += [(f["fact"], f["evidence"], "article") for f in article if not f.get("prelims")]
+        # Alternate the story's best article facts with its verified GK, so the
+        # pool (capped at MAX_FACTS_FOR_MCQ) always offers both kinds.
+        firsts = [(f["fact"], f["evidence"], "article") for f in article if f.get("prelims")]
+        firsts += [(f["fact"], f["evidence"], "article") for f in article if not f.get("prelims")]
+        background = [(g["statement"], g["statement"], "gk") for g in gk]
+        ordered = []
+        for i in range(max(len(firsts), len(background))):
+            ordered += firsts[i : i + 1] + background[i : i + 1]
         per_story.append([{"story_ref": story, "fact": f, "evidence": e, "basis": b} for f, e, b in ordered])
     pool: list[dict] = []
     depth = 0
@@ -217,6 +222,11 @@ def validate_mcqs(raw: object, facts: list[dict], count: int) -> McqOutcome:
                 chosen.append(c)
                 skipped.pop(i, None)
 
+    # BPSC prelims is mostly durable GK: one verified-GK question goes in first
+    # whenever the model wrote a valid one, wherever it ranked it.
+    first_gk = next((c for c in valid if c["basis"] == "gk"), None)
+    if first_gk is not None and count > 0:
+        chosen.append(first_gk)
     pick(limit_figures=True)
     pick(limit_figures=False)  # a thin day: rather a second figure question than none
     out.rejected += len(skipped)
