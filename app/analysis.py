@@ -15,7 +15,10 @@ from .util import extract_numbers, parse_iso
 log = logging.getLogger(__name__)
 
 MAX_FACTS = 6
-MAX_CLAIMS = 3
+MAX_CLAIMS = 2
+MAX_PRELIMS = 3
+MAX_WRITTEN_POINTS = 3
+FACT_KINDS = {"number", "name", "date", "place", "institution", "rank", "law_policy", "other"}
 
 
 class AnalysisRejected(Exception):
@@ -45,6 +48,7 @@ def validate_analysis(
     weights: dict[str, float],
     profile=None,
     min_syllabus_relevance: float = 0,
+    followup: dict | None = None,
 ) -> dict:
     """Validate and ground a model analysis. Returns a note dict.
 
@@ -83,7 +87,10 @@ def validate_analysis(
         fact = clean_model_text(item.get("fact"), 300)
         evidence = clean_model_text(item.get("evidence"), 500)
         if verify_fact(fact, evidence, source_text):
-            facts.append({"fact": fact, "evidence": evidence, "prelims": item.get("prelims") is True})
+            kind = item.get("kind") if item.get("kind") in FACT_KINDS else "other"
+            # Only the first few flagged facts make the "memorise for prelims" list.
+            prelims = item.get("prelims") is True and sum(f["prelims"] for f in facts) < MAX_PRELIMS
+            facts.append({"fact": fact, "evidence": evidence, "kind": kind, "prelims": prelims})
         else:
             dropped += 1
         if len(facts) >= MAX_FACTS:
@@ -104,10 +111,19 @@ def validate_analysis(
             break
 
     sections = {}
-    for key, limit in (("what_happened", 700), ("why_it_matters", 500), ("written_angle", 500), ("causes_effects", 600), ("background_context", 400)):
+    for key, limit in (("what_happened", 700), ("why_it_matters", 500), ("whats_new", 300), ("background_context", 400)):
         text, n = filter_unsupported_sentences(clean_model_text(raw.get(key), limit), allowed)
         sections[key] = text
         dropped += n
+    if not followup:
+        sections["whats_new"] = ""
+    points = []
+    raw_points = raw.get("written_points") if isinstance(raw.get("written_points"), list) else []
+    for point in raw_points[: MAX_WRITTEN_POINTS * 2]:
+        text, n = filter_unsupported_sentences(clean_model_text(point, 260), allowed)
+        dropped += n
+        if text and len(points) < MAX_WRITTEN_POINTS:
+            points.append(text)
 
     if not facts:
         raise AnalysisRejected("No key fact could be verified against the source text")
@@ -118,7 +134,11 @@ def validate_analysis(
     if topic is not None:
         categories.insert(0, profile.topics[topic].subject)  # the topic's subject is authoritative
     categories = list(dict.fromkeys(categories))[:2]
-    focus = raw.get("exam_focus") if raw.get("exam_focus") in ("prelims", "written", "both") else "prelims"
+    # Derived, not asked: memorisable facts make it prelims material; a real
+    # written-exam angle (by the calibrated score) makes it written material.
+    has_prelims = any(f["prelims"] for f in facts)
+    written = criteria["written_potential"] >= 7 and bool(points)
+    focus = "both" if has_prelims and written else "written" if written else "prelims"
     institutions = [clean_model_text(x, 120) for x in (raw.get("institutions") or []) if isinstance(x, str)][:8]
 
     return {
@@ -129,6 +149,7 @@ def validate_analysis(
         "exam_focus": focus,
         "key_facts": facts,
         "attributed_claims": claims,
+        "written_points": points,
         "institutions": [i for i in institutions if i],
         "criteria": criteria,
         "score": weighted_score(criteria, weights),
@@ -146,15 +167,20 @@ def analyse(
     weights: dict[str, float],
     profile=None,
     min_syllabus_relevance: float = 0,
+    followup: dict | None = None,
 ) -> dict:
+    """``followup``: an earlier, already-sent story this one follows up
+    (date, headline, new_development from screening)."""
     request = LLMRequest(
         task="analysis",
         system=ANALYSIS_SYSTEM,
-        prompt=analysis_prompt(headline, source_name, published_at, inp.mode, inp.text, profile),
+        prompt=analysis_prompt(headline, source_name, published_at, inp.mode, inp.text, profile, followup),
         payload={"headline": headline, "source": source_name, "mode": inp.mode, "text": inp.text, "published": published_at},
     )
     raw = client.generate_json(request)
-    note = validate_analysis(raw, inp.text, headline, published_at, weights, profile, min_syllabus_relevance)
+    note = validate_analysis(raw, inp.text, headline, published_at, weights, profile, min_syllabus_relevance, followup)
     note["mode"] = inp.mode
     note["analysed_article_id"] = inp.article_id
+    if followup:
+        note["followup_of"] = {k: followup.get(k) for k in ("event_id", "date", "headline")}
     return note

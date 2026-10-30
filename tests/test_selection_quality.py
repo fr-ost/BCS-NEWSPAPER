@@ -141,7 +141,8 @@ def test_rendered_story_shows_syllabus_and_question(make_pipeline):
     tg = FakeTelegram()
     make_pipeline(telegram=tg).run(now=NOW)
     text = "\n".join(tg.sent)
-    assert "🎯 সিলেবাস:" in text and "📝 সম্ভাব্য প্রশ্ন:" in text
+    assert "🎯 সিলেবাস:" in text and "📝 সম্ভাব্য লিখিত প্রশ্ন:" in text
+    assert "<b>আজকের শিরোনাম</b>" in text and "📚 প্রাসঙ্গিক সাধারণ জ্ঞান" in text and "✍️ লিখিত উত্তরের পয়েন্ট" in text
 
 
 def test_old_rule_items_are_rescreened_and_old_analyses_ignored(make_pipeline, settings):

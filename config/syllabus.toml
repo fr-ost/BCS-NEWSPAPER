@@ -241,7 +241,7 @@ rejected_types = [
   "opinion", "feature", "crime_accident", "local_admin", "party_politics",
   "court_case_individual", "foreign_domestic_minor", "sports_entertainment",
   "lifestyle", "religion_culture_local", "human_interest", "corporate_commercial",
-  "other_low_value",
+  "market_price_update", "speculation", "other_low_value",
 ]
 
 # Shown to the model as calibration examples (real items from earlier runs).
@@ -258,6 +258,13 @@ bad_examples = [
   "A private bank offers loan transfers at 9 percent interest (single company's commercial offer)",
   "Regulator wants to move its head office to another building (office logistics)",
   "Foreign airport resumes flights after closure (operational update, no policy)",
+  "Another round of LPG price hike likely (speculation: nothing decided yet)",
+  "Dollar nears Tk 124 in the inter-bank market (daily market rate)",
+  "Gold price rises for two days in a row (market price update)",
+  "Sufficient supplies in the pipeline ahead of Ramadan (routine supply update)",
+  "Central bank lets one bank raise a single investor's stake cap (one bank's waiver)",
+  "Technical glitch delays the PM's flight home (travel incident)",
+  "Putin calls a tech billionaire a 'real genius' (celebrity remark)",
 ]
 good_examples = [
   "PM's state visit to Japan: agreements, investment and cooperation (bilateral relations)",
@@ -269,4 +276,10 @@ good_examples = [
   "Cabinet approves draft amendment to the Labour Act (law, written + prelims)",
   "COP31: Bangladesh and LDCs demand grant-based climate finance (climate diplomacy)",
   "Government renames a national institution or programme (prelims fact: new official name)",
+  "Brazil's president re-elected / a new prime minister in a major country (leadership change)",
+  "UNODC: Afghanistan's opium production jumps fivefold (UN report with global figures)",
+  "Bangladesh secures a three-year deferment of LDC graduation (UN decision; prelims + written)",
+  "Rooppur nuclear plant unit-1 cleared to generate power (mega-project milestone)",
+  "WMO bulletin: greenhouse gas concentrations hit a record (UN agency flagship report)",
+  "NBR revenue shortfall in the first quarter (official fiscal data)",
 ]

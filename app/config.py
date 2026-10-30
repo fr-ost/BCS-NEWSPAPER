@@ -52,6 +52,21 @@ class EditionConfig:
 
 
 @dataclass(frozen=True)
+class ScheduleConfig:
+    """Scheduled-tick gate (see app/schedule_gate.py). Times are edition.timezone."""
+
+    # Ticks earlier than this do nothing: the morning's news isn't in yet.
+    prepare_from: str = "05:00"
+    # A tick that finds the edition built this close to delivery_time waits in
+    # the job and sends it on time instead of relying on a later tick.
+    max_wait_minutes: int = 20
+    # A scheduled edition still unsent at this time is skipped for the day.
+    deliver_until: str = "22:00"
+    # Stop starting scheduled runs for the day after this many (failed) runs.
+    max_runs_per_day: int = 5
+
+
+@dataclass(frozen=True)
 class CollectionConfig:
     max_items_per_source: int = 40
     max_feed_bytes: int = 3_000_000
@@ -161,6 +176,7 @@ class Secrets:
 @dataclass(frozen=True)
 class Settings:
     edition: EditionConfig
+    schedule: ScheduleConfig
     collection: CollectionConfig
     extraction: ExtractionConfig
     selection: SelectionConfig
@@ -267,6 +283,14 @@ def load_settings(config_dir: Path | None = None, env: dict[str, str] | None = N
         raise ConfigError("edition.mcq_count must be >= 0")
     if not re.fullmatch(r"([01]\d|2[0-3]):[0-5]\d", edition.delivery_time):
         raise ConfigError("edition.delivery_time must be HH:MM (24-hour)")
+    schedule = _section(ScheduleConfig, data, "schedule")
+    for name in ("prepare_from", "deliver_until"):
+        if not re.fullmatch(r"([01]\d|2[0-3]):[0-5]\d", getattr(schedule, name)):
+            raise ConfigError(f"schedule.{name} must be HH:MM (24-hour)")
+    if not schedule.prepare_from < edition.delivery_time < schedule.deliver_until:
+        raise ConfigError("Need schedule.prepare_from < edition.delivery_time < schedule.deliver_until")
+    if not (0 <= schedule.max_wait_minutes <= 30) or schedule.max_runs_per_day < 1:
+        raise ConfigError("schedule.max_wait_minutes must be 0-30 and schedule.max_runs_per_day >= 1")
     invite = env.get("BOT_INVITE_CODE", "").strip()
     if invite and not re.fullmatch(r"[A-Za-z0-9_-]{8,64}", invite):
         raise ConfigError("BOT_INVITE_CODE must be 8-64 characters of A-Z, a-z, 0-9, _ or - (Telegram start-link rules)")
@@ -277,6 +301,7 @@ def load_settings(config_dir: Path | None = None, env: dict[str, str] | None = N
 
     return Settings(
         edition=edition,
+        schedule=schedule,
         collection=_section(CollectionConfig, data, "collection"),
         extraction=_section(ExtractionConfig, data, "extraction"),
         selection=_section(SelectionConfig, data, "selection"),

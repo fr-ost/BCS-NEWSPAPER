@@ -63,7 +63,9 @@ def test_duplicate_reports_become_one_story_with_both_links(make_pipeline):
     tg = FakeTelegram()
     make_pipeline(telegram=tg).run(now=NOW)
     text = "\n".join(tg.sent)
-    assert text.count("Cabinet approves draft amendment") == 1
+    lines = text.splitlines()
+    assert sum(1 for line in lines if line[3:4] in "১২৩" and line.startswith("<b>") and "Cabinet approves draft amendment" in line) == 1  # one story
+    assert sum(1 for line in lines if line[:1] in "১২৩" and "Cabinet approves draft amendment" in line) == 1  # one index line
     assert ">The Daily Star</a> | <a" in text and ">Dhaka Tribune</a>" in text
 
 
