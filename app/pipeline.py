@@ -30,7 +30,8 @@ from urllib.parse import urlsplit
 from .analysis import AnalysisInput, AnalysisRejected, analyse
 from .collector import FeedItem, SourceReport, collect, load_fixture_items
 from .config import Settings
-from .deduplicator import assign_events, merge_groups
+from .deduplicator import assign_events, distinctive_numbers, merge_groups, same_story
+from .enrichment import enrich_static_gk
 from .extractor import FULL, Extraction, choose_analysis_input
 from .llm import (
     FallbackClient,
@@ -58,6 +59,10 @@ DECISION_RANK = {"select": 2, "maybe": 1, "reject": 0}
 MAX_SCREENING_ATTEMPTS = 3
 MAX_LINKS_PER_STORY = 4
 SOURCE_FAILURE_ALERT = 3
+# Stories delivered within this many days are shown to screening so repeats
+# of them are rejected (genuine follow-ups with a new development are kept).
+RECENT_DAYS = 7
+MAX_RECENT = 60
 
 ArticleFetcher = Callable[[str], Extraction]
 PdfBuilder = Callable[[str], bytes]  # HTML -> PDF bytes
@@ -181,6 +186,7 @@ class Pipeline:
             result.llm_usage = self.llm.usage()
             result.estimated_cost_usd = self._estimated_cost(result.llm_usage)
             run_record.update(
+                edition_date=result.edition_date,  # a manual run's own key (<date>-mN)
                 llm_usage=result.llm_usage,
                 estimated_cost_usd=result.estimated_cost_usd,
                 providers_disabled=dict(getattr(self.llm, "disabled", {})),
@@ -270,6 +276,8 @@ class Pipeline:
         self._analyse(now)
         self._save()
         stories = self._select(now)
+        self._enrich(stories)
+        self._save()
         self._log_selection(stories)
         mcqs, mcq_problem = self._questions(stories)
 
@@ -462,9 +470,12 @@ class Pipeline:
                     "published_at": primary.get("published_at"),
                 }
             )
+        recent = [{k: r[k] for k in ("event_id", "date", "headline", "title")} for r in self._recent_sent(now)]
         outcome = None
         try:
-            outcome = screen_events(self.llm, payload, self.s.screening.batch_size, self.profile, self.s.selection.maybe_min_priority)
+            outcome = screen_events(
+                self.llm, payload, self.s.screening.batch_size, self.profile, self.s.selection.maybe_min_priority, recent=recent
+            )
         except QuotaExhaustedError as exc:
             self.llm_stop_reason = "quota"
             self._error(f"Screening stopped: {exc}")
@@ -497,6 +508,34 @@ class Pipeline:
             reason = dec.get("forced_reject") or dec["decision"]
             self.screen_stats[reason] = self.screen_stats.get(reason, 0) + 1
             ev["updated_at"] = iso(now)
+
+    def _recent_sent(self, now: datetime) -> list[dict]:
+        """Stories delivered in the last RECENT_DAYS days, newest first."""
+        tz = get_tz(self.s.edition.timezone)
+        cutoff = (now.astimezone(tz).date() - timedelta(days=RECENT_DAYS)).isoformat()
+        out: list[dict] = []
+        editions = sorted(self.state["editions"].values(), key=lambda e: e.get("delivered_at") or "", reverse=True)
+        for ed in editions:
+            day = ed.get("edition_date") or ed["date"][:10]
+            if ed.get("status") != "delivered" or day < cutoff:
+                continue
+            for eid in ed.get("story_event_ids") or []:
+                ev = self.state["events"].get(eid)
+                note = (ev or {}).get("analysis") or {}
+                if not note.get("headline_bn"):
+                    continue
+                arts = self._articles_of(ev)
+                out.append(
+                    {
+                        "event_id": eid,
+                        "date": day,
+                        "headline": note["headline_bn"],
+                        "title": arts[0]["title"] if arts else "",
+                        "topic": note.get("syllabus_topic"),
+                        "numbers": distinctive_numbers([f["fact"] for f in note.get("key_facts", [])] + [note.get("what_happened", "")]),
+                    }
+                )
+        return out[:MAX_RECENT]
 
     @staticmethod
     def _legacy_screening(ev: dict) -> bool:
@@ -536,7 +575,8 @@ class Pipeline:
             ev for ev in self.state["events"].values()
             if ev["status"] in ("selected", "maybe") and ev.get("attempts", 0) < maxa and self._fresh(self._event_time(ev), now)
         ]
-        pending.sort(key=lambda ev: (ev["status"] != "selected", -(ev.get("screening") or {}).get("priority", 0), ev["event_id"]))
+        # Highest expected exam value first; at equal priority, "select" before "maybe".
+        pending.sort(key=lambda ev: (-(ev.get("screening") or {}).get("priority", 0), ev["status"] != "selected", ev["event_id"]))
         return pending
 
     def _unprocessed_count(self, now: datetime) -> int:
@@ -579,10 +619,12 @@ class Pipeline:
                 continue
             art = self.state["articles"][inp.article_id]
             ev["attempts"] = ev.get("attempts", 0) + 1
+            screening = ev.get("screening") or {}
+            followup = {**screening["followup_of"], "new_development": screening.get("new_development", "")} if screening.get("followup_of") else None
             try:
                 note = analyse(
                     self.llm, inp, art["title"], art["source_name"], art.get("published_at"), self.s.weights,
-                    self.profile, self.s.selection.min_syllabus_relevance,
+                    self.profile, self.s.selection.min_syllabus_relevance, followup=followup,
                 )
                 if note.get("syllabus_topic"):
                     note["syllabus_label"] = self.profile.topics[note["syllabus_topic"]].label
@@ -645,13 +687,54 @@ class Pipeline:
         }
 
     def _select(self, now: datetime) -> list[dict]:
-        stories = [
-            self._story_for_event(ev)
-            for ev in self.state["events"].values()
-            if ev["status"] == "analysed" and ev.get("analysis") and self._articles_of(ev) and self._fresh(self._event_time(ev), now)
-            and ev["analysis"].get("syllabus_topic")  # analyses made before the syllabus calibration are ignored
-        ]
+        recent = self._recent_sent(now)
+        stories = []
+        for ev in self.state["events"].values():
+            if not (
+                ev["status"] == "analysed" and ev.get("analysis") and self._articles_of(ev) and self._fresh(self._event_time(ev), now)
+                and ev["analysis"].get("syllabus_topic")  # analyses made before the syllabus calibration are ignored
+            ):
+                continue
+            earlier = self._repeat_of_sent(ev, recent)
+            if earlier:
+                ev["status"] = "analysis_rejected"
+                ev["last_error"] = f"Repeat of a story already sent on {earlier['date']}: {earlier['headline'][:80]}"
+                log.info("Skipping repeat: %s (sent %s)", ev["analysis"]["headline_bn"][:80], earlier["date"])
+                continue
+            stories.append(self._story_for_event(ev))
         return rank_stories(stories, self.s.edition.min_story_score, self.s.edition.max_stories, self.s.selection.max_stories_per_topic)
+
+    @staticmethod
+    def _repeat_of_sent(ev: dict, recent: list[dict]) -> dict | None:
+        """Safety net behind the screening model: same syllabus topic and the
+        same distinctive figures as a story already sent. Accepted follow-ups
+        (screening named a new development) are never blocked."""
+        if (ev.get("screening") or {}).get("followup_of"):
+            return None
+        note = ev["analysis"]
+        numbers = distinctive_numbers([f["fact"] for f in note.get("key_facts", [])] + [note.get("what_happened", "")])
+        for r in recent:
+            if r["event_id"] != ev["event_id"] and r["topic"] == note.get("syllabus_topic") and same_story(numbers, note["headline_bn"], r["numbers"], r["headline"]):
+                return r
+        return None
+
+    # ------------------------------------------------------------------ Stage F2
+    def _enrich(self, stories: list[dict]) -> None:
+        """Related static GK for the stories being sent (optional extra: two
+        calls, the second a blind check). Never blocks or delays the edition."""
+        todo = [st for st in stories if "static_gk" not in st["analysis"]]
+        if not todo or self.llm_stop_reason or self.llm.quota_exhausted:
+            return
+        if getattr(self.llm, "remaining_calls", 3) < 3:  # keep one call for the MCQs
+            log.info("Static GK skipped: model call budget nearly used")
+            return
+        try:
+            outcome = enrich_static_gk(self.llm, todo)
+        except LLMError as exc:
+            self._error(f"Static GK skipped: {exc}")
+            return
+        for st in todo:
+            st["analysis"]["static_gk"] = outcome.items.get(st["event_id"], [])
 
     # ------------------------------------------------------------------ Stage G
     def _questions(self, stories: list[dict]) -> tuple[list[dict], str | None]:

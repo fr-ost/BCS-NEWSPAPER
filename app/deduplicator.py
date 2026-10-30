@@ -11,7 +11,7 @@ from __future__ import annotations
 
 from collections.abc import Iterable
 
-from .util import jaccard, normalize_text, short_hash, tokens
+from .util import extract_numbers, jaccard, normalize_text, short_hash, tokens
 
 TITLE_SIMILARITY = 0.6
 MIN_TOKENS = 4
@@ -122,3 +122,25 @@ def merge_groups(groups: dict[str, list[str]], merges: list[tuple[str, str]]) ->
             members.extend(groups[eid])
         merged[min(eids)] = sorted(set(members))
     return merged
+
+
+def distinctive_numbers(texts: Iterable[str]) -> set[str]:
+    """Numbers specific enough to identify a story (figures like 41879 or
+    3.89), not small counts, days or years."""
+    out = set()
+    for text in texts:
+        for n in extract_numbers(text or ""):
+            if "." in n:
+                if len(n.replace(".", "").lstrip("0")) >= 2:
+                    out.add(n)
+            elif len(n.lstrip("0")) >= 3 and not (len(n) == 4 and 1900 <= int(n) <= 2100):
+                out.add(n)
+    return out
+
+
+def same_story(a_numbers: set[str], a_title: str, b_numbers: set[str], b_title: str) -> bool:
+    """Deterministic repeat check for two notes on the same syllabus topic."""
+    shared = a_numbers & b_numbers
+    if len(shared) >= 2:
+        return True
+    return bool(shared) and jaccard(title_signature(a_title), title_signature(b_title)) >= 0.3

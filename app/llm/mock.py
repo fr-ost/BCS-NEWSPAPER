@@ -72,7 +72,7 @@ class MockProvider(LLMProvider):
     def _analysis(self, payload: dict) -> dict:
         sents = _sentences(payload.get("text", ""))
         with_numbers = [s for s in sents if re.search(r"\d", s)] or sents
-        facts = [{"fact": f"[মক] {s}", "evidence": s, "prelims": True} for s in with_numbers[:3]]
+        facts = [{"fact": f"[মক] {s}", "evidence": s, "kind": "number", "prelims": True} for s in with_numbers[:3]]
         return {
             "relevant": bool(facts),
             "rejection_reason": "" if facts else "[মক] পর্যাপ্ত তথ্য নেই",
@@ -85,8 +85,7 @@ class MockProvider(LLMProvider):
             "why_it_matters": "[মক] এটি অফলাইন পরীক্ষার নমুনা লেখা, প্রকৃত বিশ্লেষণ নয়।",
             "key_facts": facts,
             "attributed_claims": [],
-            "written_angle": "[মক] লিখিত পরীক্ষার নমুনা দৃষ্টিকোণ।",
-            "causes_effects": "",
+            "written_points": ["[মক] লিখিত উত্তরের নমুনা পয়েন্ট এক।", "[মক] লিখিত উত্তরের নমুনা পয়েন্ট দুই।"],
             "background_context": "",
             "institutions": [],
             "scores": {"syllabus_relevance": 7, "significance": 7, "factual_density": 6, "written_potential": 6, "novelty": 6},
@@ -110,7 +109,7 @@ class MockProvider(LLMProvider):
             options[0], options[idx] = options[idx], options[0]
             questions.append(
                 {
-                    "question": f"[মক] {fact['fact_id']}: প্রতিবেদনে উল্লিখিত সংখ্যাটি কোনটি? ({fact.get('story', '')[:60]})",
+                    "question": f"[মক] {fact['fact_id']}: নমুনা প্রশ্ন, সঠিক সংখ্যাটি কোনটি? ({fact.get('story', '')[:60]})",
                     "options": options,
                     "answer_index": idx,
                     "explanation": f"[মক] সূত্র: {fact.get('evidence', '')[:150]}",
@@ -121,6 +120,24 @@ class MockProvider(LLMProvider):
             if len(questions) >= payload.get("count", 3):
                 break
         return {"questions": questions}
+
+
+    def _static_gk(self, payload: dict) -> dict:
+        items = [
+            {
+                "story": st["id"],
+                "statement": f"[মক] নমুনা সাধারণ জ্ঞান ({st['id']}): প্রতিষ্ঠার সাল ১৯৭২।",
+                "question": "[মক] নমুনা প্রশ্ন: প্রতিষ্ঠার সাল কোনটি?",
+                "answer": "১৯৭২",
+                "answer_en": "1972",
+                "kind": "year",
+            }
+            for st in payload.get("stories", [])
+        ]
+        return {"items": items}
+
+    def _static_gk_check(self, payload: dict) -> dict:
+        return {"answers": [{"id": q["id"], "answer_en": "1972", "sure": True} for q in payload.get("questions", [])]}
 
 
 class ScriptedProvider(LLMProvider):

@@ -46,18 +46,23 @@ Expected cost: roughly **US$2–8 per month (≈ ৳250–1,000)** of prepaid Op
 ```
 📰 বিসিএস দৈনিক ব্রিফিং — ২৩ অক্টোবর ২০২৬
 📚 ৬টি খবর · ⏱ পড়তে প্রায় ১০ মিনিট
+আজকের শিরোনাম                     ← index of the day's headlines
+১. … ২. … ৩. …
 
-১. <headline in Bengali>
+১. <headline stating the core fact, in Bengali>
 🏷 অর্থনীতি | প্রিলি + লিখিত | স্কোর ৭৪/১০০
-📰 Dhaka Tribune, The Daily Star · ২২ অক্টোবর ২০২৬
+📰 The Daily Star, প্রথম আলো · ২২ অক্টোবর ২০২৬
+🎯 সিলেবাস: বাজেট, রাজস্ব, এডিপি ও সরকারি ঋণ
 কী ঘটেছে: …                       ← summary grounded in the article
-বিসিএস-এ কেন গুরুত্বপূর্ণ: …
-গুরুত্বপূর্ণ তথ্য (প্রতিবেদন থেকে): • …     ← each fact matched to a quote in the article
-📌 প্রিলির জন্য মনে রাখুন: • …
+🆕 নতুন কী: … (আগের খবর: …)          ← only for a follow-up of an earlier story
+📌 প্রিলির জন্য মনে রাখুন (প্রতিবেদন থেকে): • … (at most 3)  ← each fact matched to a quote in the article
+আরও তথ্য (প্রতিবেদন থেকে): • …
 উদ্ধৃত দাবি (যাচাইকৃত তথ্য নয়): • X: …
-✍️ লিখিত পরীক্ষার দৃষ্টিকোণ (AI বিশ্লেষণ): …  ← clearly labelled analysis
-পটভূমি (প্রতিবেদনের বাইরের সাধারণ প্রেক্ষাপট): …
-🔗 Dhaka Tribune | The Daily Star
+বিসিএস-এ কেন গুরুত্বপূর্ণ: …
+✍️ লিখিত উত্তরের পয়েন্ট (AI বিশ্লেষণ): • … • …   ← clearly labelled analysis
+📚 প্রাসঙ্গিক সাধারণ জ্ঞান (প্রতিবেদনের বাইরের তথ্য; AI দুইবার আলাদাভাবে মিলিয়ে দেখেছে …): • …
+📝 সম্ভাব্য লিখিত প্রশ্ন: …
+🔗 The Daily Star | প্রথম আলো
 🏛 দাপ্তরিক সূত্রে যাচাই: Bangladesh Bank
 
 … more stories …
@@ -67,7 +72,7 @@ Expected cost: roughly **US$2–8 per month (≈ ৳250–1,000)** of prepaid Op
 ✅ উত্তর ও ব্যাখ্যা (ট্যাপ করে দেখুন)  ← answers hidden behind Telegram spoilers
 ```
 
-After the text messages, each subscriber also receives `BCS-Briefing-<date>.pdf`: the same edition laid out for A4 (good for printing or saving), with the MCQ answers on the last page.
+After the text messages, each subscriber also receives `BCS-Briefing-<date>.pdf`: the same edition laid out for A4 (good for printing or saving), with the must-remember facts and related GK highlighted, the MCQ answers on a separate page, and a one-page **revision sheet** (every 📌 fact and 📚 GK item of the day) at the end.
 
 Run `python -m app run --offline` to render a full sample edition (text and, if Chrome/Chromium is installed, the PDF) from bundled fictional data. No API keys are needed.
 
@@ -99,7 +104,7 @@ Run `python -m app run --offline` to render a full sample edition (text and, if 
 ## Architecture and data flow
 
 ```
-        ┌──── GitHub Actions: prepare 06:13, deliver 08:00 Dhaka (+ backups) ───┐
+        ┌──── GitHub Actions: 30-min ticks → gate → build ≥05:00, send at 08:00 ─┐
         │                                                                       │
  RSS ──▶│ A. collector.py   fetch feeds (robots.txt, timeouts, size caps)       │
  feeds  │        │          normalise URLs, parse dates safely                  │
@@ -127,7 +132,7 @@ Run `python -m app run --offline` to render a full sample edition (text and, if 
         git commit state/state.json → your repository (memory between runs)
 ```
 
-Typical model usage per day: 1 screening + up to 9 analyses + 1 MCQ call ≈ **11 requests** (~70k input / ~25–45k output tokens), hard-capped at **16 per provider per run** including retries (`llm.max_calls_per_run`).
+Typical model usage per day: 2 screening calls + up to 14 analyses + 2 static-GK calls (proposal and blind check) + 1 MCQ call ≈ **19 requests**, hard-capped at **30 per provider per run** including retries (`llm.max_calls_per_run`).
 
 ### Project layout
 
@@ -262,35 +267,43 @@ After `verify-sources`, edit `config/sources.toml`: set `enabled = false` for an
 
 ### Step 7: Let the schedule run
 
-**How the 08:00 delivery works.** GitHub's built-in timer is unreliable: scheduled runs usually start 10–60+ minutes late (worst at the top of the hour) and are sometimes skipped. So the daily run is split in two (times are Dhaka, UTC+6, no DST; GitHub cron is UTC):
+**How the 08:00 delivery works.** GitHub's built-in timer is unreliable. On this repository, scheduled runs have started **4–6 hours late every day** (a run set for 08:00 started at 11:00–13:00), by a different amount each day, so a fixed run time can't hit 08:00. The workflow therefore fires a cheap **tick every 30 minutes**, from 00:07 to 08:37 Dhaka nominal time (18 cron lines, 18:07–02:37 UTC). Each tick starts hours late, and that's fine.
 
-| Cron (UTC) | Dhaka | Phase | What it does |
-|---|---|---|---|
-| `13 0 * * *` | 06:13 | prepare | Collect, analyse, build the text and PDF, **hold until 08:00** |
-| `43 0 * * *` | 06:43 | prepare (backup) | Same, if the first didn't run; no-op if already prepared |
-| `0 2 * * *` | 08:00 | deliver | Send the held edition (about 1 minute of work) |
-| `20 2 * * *` | 08:20 | deliver (backup) | No-op if already sent |
-| `50 2 * * *` | 08:50 | deliver (last backup) | No-op if sent; otherwise builds and sends. Subscribers get a failure notice only if this last attempt fails |
+Each tick first runs a tiny **gate** (`app/schedule_gate.py`). It takes a few seconds, needs no `pip install`, and reads the saved state and the Dhaka clock:
 
-The scheduled edition is sent **at most once per day**, so the extra triggers never cause duplicates. If a prepare run starts after 08:00, it sends straight away.
+| Dhaka time when the tick actually starts | Today's edition | What happens |
+|---|---|---|
+| before 05:00 | — | nothing (tonight's news isn't in yet) |
+| 05:00–08:00 | not built | **build** it (collect, analyse, text + PDF) and **hold** it |
+| 05:00–08:00 | built, 08:00 more than 20 min away | nothing |
+| 07:40–08:00 | built (or built now) | the job **waits** and sends at **08:00** sharp |
+| 08:00–22:00 | built, or not yet built | **send** (building first if needed) |
+| any | already sent, or 5 scheduled runs already today | nothing |
 
-With GitHub alone, the briefing typically arrives between 08:00 and 08:30, because GitHub may still start the 08:00 delivery late. **For delivery at exactly 08:00, add the free external trigger below.**
+- Ticks with nothing to do stop after the gate: no Python setup, no state commit, one billed Actions minute.
+- The edition is still sent **at most once per day**. The briefing job always reads the latest saved state (not the commit it was queued with), so a late or queued run can't send it twice.
+- A persistent failure stops after `schedule.max_runs_per_day` (5) runs instead of retrying every tick. Subscribers get a crash notice only on the day's last chance (or once it's 2+ hours past 08:00).
+- The gate writes a notice on every tick, e.g. `RUN: deliver the held edition [tick '7 21 * * *' started 02:11 UTC (08:11 local), 5 h 04 min after it was due]`, and runs record their lag in `state.json` (`schedule.days`). That's how to see how late GitHub is.
+- Times and limits live in `config/settings.toml` under `[schedule]`.
+- **Actions minutes:** about 18 gate minutes plus ~8–25 minutes of real work a day, ≈ 800–1,300 of the 2,000 free minutes a month for a private repository.
+
+With GitHub alone the briefing arrives at 08:00 when a tick lands shortly before 08:00, otherwise at the first tick after 08:00 (usually by 08:30–09:00). **For 08:00 every single day, add the free external trigger below.** Manual and API-started runs are not delayed the way scheduled ones are.
 
 If you sent a manual edition before the scheduled one and nothing new has appeared since, the scheduled run doesn't message anyone.
 
 ### Exact 08:00 delivery with a free external trigger (recommended)
 
-[cron-job.org](https://cron-job.org) is free and fires on the minute. It calls GitHub's API to start the workflow in `deliver` mode, which only sends the prepared edition, so it finishes in about a minute.
+[cron-job.org](https://cron-job.org) is free and fires on the minute. It calls GitHub's API to start the workflow in `deliver` mode. That run builds the edition if no tick has yet, waits until 08:00 if it is a little early, and sends it.
 
 1. **Create a GitHub token that can only start this workflow.**
    - GitHub → your avatar → **Settings → Developer settings → Personal access tokens → Fine-grained tokens → Generate new token**.
    - Name: `bcs-08-trigger`. Expiration: 1 year (set a reminder to renew).
-   - **Repository access → Only select repositories → `fr-ost/bcs-newspaper`**.
+   - **Repository access → Only select repositories → `fr-ost/NEWSPAPER-ANALYZER`** (your repository).
    - **Permissions → Repository permissions → Actions: Read and write**. Leave everything else as "No access".
    - Generate, then copy the token (starts with `github_pat_`).
 2. **Create the timer at cron-job.org.** Sign up (free), then **Create cronjob**:
-   - **URL:** `https://api.github.com/repos/fr-ost/bcs-newspaper/actions/workflows/daily-briefing.yml/dispatches`
-   - **Schedule:** every day at **07:59**, time zone **Asia/Dhaka**. GitHub needs about a minute to start a runner, so messages arrive at about 08:00–08:01.
+   - **URL:** `https://api.github.com/repos/fr-ost/NEWSPAPER-ANALYZER/actions/workflows/daily-briefing.yml/dispatches` (use your repository's current name; if you rename it, update this URL)
+   - **Schedule:** every day at **07:45**, time zone **Asia/Dhaka**. If the edition is already built, the run waits and sends it at 08:00; if not, it builds it (about 5 minutes) and sends it right after 08:00.
    - **Advanced → Request method:** `POST`.
    - **Headers:**
      - `Authorization`: `Bearer github_pat_…your token…`
@@ -298,11 +311,11 @@ If you sent a manual edition before the scheduled one and nothing new has appear
      - `X-GitHub-Api-Version`: `2022-11-28`
    - **Request body:** `{"ref":"main","inputs":{"mode":"deliver"}}`
    - Save, then use **Test run**. GitHub returns **204 No Content** when it works, and a `deliver` run appears in the Actions tab. That run does nothing if today's edition is already sent, so testing is safe.
-3. The GitHub schedules stay as backups. If cron-job.org is ever down, the 08:00/08:20/08:50 GitHub triggers still send the edition.
+3. The GitHub ticks stay as backups. If cron-job.org is ever down, the next tick still sends the edition.
 
 The token can only start or read workflow runs in this one repository; it can't read your code or secrets. If it leaks, delete it under Developer settings and make a new one.
 
-GitHub doesn't guarantee the minute: scheduled runs often start several minutes late, sometimes much later at busy times, and occasionally get skipped. If one is skipped, run `live` manually. A re-run of the *scheduled* job never sends a duplicate; *manual* runs send extra editions with only new stories.
+GitHub doesn't guarantee when scheduled runs start; here they start hours late. If you need the briefing right now, run `live` manually. A re-run of the *scheduled* job never sends a duplicate; *manual* runs send extra editions with only new stories.
 
 ### Setup checklist
 
@@ -374,7 +387,8 @@ Avoid running `python -m app run`, `subscribers` or `test-telegram` locally *and
 | Command | Effect |
 |---|---|
 | `python -m app run` | Register new subscribers, build today's edition and deliver it (text + PDF) to all of them. No-op if today's edition was already delivered. Skips building (no model calls, no cost) when nobody has subscribed. |
-| `python -m app run --hold` | Prepare today's edition and hold it until `edition.delivery_time` (08:00); a later run sends it. Used by the early scheduled runs. |
+| `python -m app run --hold` | Prepare today's edition and hold it until `edition.delivery_time` (08:00); a later run sends it. If 08:00 is at most `schedule.max_wait_minutes` (20) away it waits and sends on time; after 08:00 it sends at once. Used by scheduled ticks and the `deliver` mode. |
+| `python3 -m app.schedule_gate check` | What a scheduled tick would do now (standard library only; reads `state/state.json`). Add `--now 2026-10-31T01:45:00+00:00` to try another time. |
 | `python -m app run --manual` | Extra edition with whatever is new since the last one; can run any number of times (the workflow's manual `live` uses this). |
 | `python -m app run --no-pdf` | Don't create or send the PDF. |
 | `python -m app run --dry-run` | Real feeds + real model, **never sends**. Uses `output/dry-run-state.json` (fresh each time), so production state is untouched. |
@@ -426,14 +440,16 @@ Selection was recalibrated after reviewing real editions, which had included opi
 
 1. **Section/title pre-filter, before any AI call** (`[filters]` in `config/settings.toml`). It drops URL sections such as `/sports/`, `/entertainment/`, `/lifestyle/`, `/opinion/`, `/religion/`, `/bangladesh/district/`, `/bangladesh/crime/` and `/video/`, plus junk titles ("আজ টিভিতে", horoscopes). This removes about 30–40% of items at no cost.
 2. **Screening against the syllabus profile** (`config/syllabus.toml`). The model must give a **story type** and one of **42 syllabus topics**, built from the BPSC preliminary syllabus and written papers 005, 007 and 010 (constitution, budget, monetary policy, bilateral relations, Rohingya, climate diplomacy, UN system, conflicts, awards, indices…).
-   - Code rejects opinion, feature, crime/accident, local admin, party politics, individual court cases, corporate/commercial news, foreign domestic trivia, sports, entertainment and lifestyle, whatever the model decided.
+   - Code rejects opinion, feature, crime/accident, local admin, party politics, individual court cases, corporate/commercial news, **daily market prices and rates**, **speculation** ("may rise", undecided demands), foreign domestic trivia, sports, entertainment and lifestyle, whatever the model decided.
    - An item with no valid syllabus topic is rejected.
    - "Maybe" items are dropped unless their priority is at least 7.
+   - The prompt spells out what deserves priority 9–10 / 7–8 / 5–6 (e.g. a new head of government in a major country or a UN decision about Bangladesh is 9–10; official national statistics or a flagship UN report is 7–8). Analysis capacity (14 a run) goes to the highest priority first.
+   - **No repeats.** Screening also sees the headlines sent in the last 7 days. A candidate about the same event, report or data release is rejected unless it carries a genuine new development (a decision, an agreement, new official figures); such a follow-up gets a **🆕 নতুন কী** line. A second, deterministic check (same syllabus topic and the same distinctive figures as a story already sent) catches what the model misses.
 3. **Full analysis with calibrated scoring.** The prompt defines what each score level means (most news is 3–6; 9–10 only for must-know items). A story needs **syllabus relevance ≥ 7** and a valid syllabus topic.
 4. **Ranking:** total score **≥ 65**, at most **one story per syllabus topic** (so two shipbreaking stories can't both get in), and 8 at most.
 5. **No padding:** if only 2 stories pass, the edition has 2.
 
-Each story shows its **🎯 syllabus topic** and a **📝 likely exam question**. Every run logs a *selection report* (pre-filtered count, screening outcomes by reason, analysis rejections, selected stories with topic and score). See it under the run's "Run (…)" step in the Actions tab.
+Each story shows its **🎯 syllabus topic**, at most three **📌 must-remember facts** for prelims (chosen for durable exam value, not every number), **✍️ written-answer points** and a BPSC-style **📝 written question**. The exam-focus label (প্রিলি / লিখিত / প্রিলি + লিখিত) is derived in code from those, not guessed. Every run logs a *selection report* (pre-filtered count, screening outcomes by reason, analysis rejections, selected stories with topic and score). See it under the run's "Run (…)" step in the Actions tab.
 
 **Tuning:**
 - Too strict or too loose? Adjust `selection.min_syllabus_relevance`, `edition.min_story_score` and `selection.maybe_min_priority` in `config/settings.toml`.
@@ -448,9 +464,10 @@ The model writes the notes, but deterministic code decides what you see:
 - **Numbers are checked.** Every number in a fact must appear in its quote. Any sentence in the summary, analysis or background that contains a number not present in the article is removed. (Bengali and English digits are normalised before comparison.)
 - **Claims are separated from facts.** "X said …" goes under *উদ্ধৃত দাবি (যাচাইকৃত তথ্য নয়)*.
 - **Analysis is labelled** *(AI বিশ্লেষণ)*; background is labelled *(প্রতিবেদনের বাইরের সাধারণ প্রেক্ষাপট)* and may not contain figures.
+- **Related static GK (📚 প্রাসঙ্গিক সাধারণ জ্ঞান) is checked twice.** These are textbook facts that are *not* in the article: which amendment introduced a system, when an organisation was founded, where it is headquartered. The model proposes at most three per story, each with a question and a short answer. A **second, blind call** answers the questions without seeing those answers, and code keeps an item only if both agree (numbers exactly, names by their words) and the checker is sure. Hedged statements, current office-holders, changing statistics and anything restating the article's own figures are dropped. The section is labelled as outside the article. An empty section is preferred to a wrong fact.
 - **Excerpt-only stories are marked** ⚠️ and analysed only from the excerpt.
 - A story with **no verifiable fact is excluded**, not padded.
-- **MCQs** must cite a verified fact; the correct option's numbers must appear in that fact. Each needs exactly 4 distinct options, a valid answer index, no duplicate question and no reused fact. Fewer than 3 valid MCQs → fewer are sent, with a note.
+- **MCQs** must cite a verified fact (an article fact, or a twice-checked GK item for at most two of the three); the correct option's numbers must appear in that fact. The model writes six candidates and code keeps the best three. Each needs exactly 4 distinct options **of the same kind and unit** (no "crore" option in a percentage question, no bare number among names, no "all of the above"), must stand alone (no "প্রতিবেদন অনুযায়ী"), must not give the answer away, and at most one question per story. Fewer than 3 valid MCQs → fewer are sent, with a note.
 - **Screening ids are validated.** The model can only reference candidate ids we supplied; unknown ids are ignored.
 - **Neutrality.** Prompts require political neutrality and forbid inferring motives.
 
@@ -534,7 +551,7 @@ To **reset** everything: delete `state/state.json` and commit. The next run star
 
 ## Cost and free-tier limits
 
-Daily usage: about 11 model requests ≈ **70k input + 25–45k output tokens** (Bengali output, plus hidden "reasoning" tokens on newer models, which are billed as output). The edition is built once, so the number of subscribers doesn't change the AI cost.
+Daily usage: about 19 model requests ≈ **75–90k input + 20–35k output tokens** (Bengali output, plus hidden "reasoning" tokens on newer models, which are billed as output). A real-model dry run on 2026-10-31 used 19 requests, 76k input and 20k output tokens: about **$0.15**. The edition is built once, so the number of subscribers doesn't change the AI cost.
 
 | Model (primary) | Price per 1M tokens (in / out)* | Per day | Per month |
 |---|---|---|---|
@@ -548,13 +565,13 @@ Daily usage: about 11 model requests ≈ **70k input + 25–45k output tokens** 
 
 **How spending is bounded:**
 - OpenAI is prepaid. With auto-recharge off, spend can never exceed the credit you added.
-- Each provider is capped at `llm.max_calls_per_run` (16) requests per run, retries included.
+- Each provider is capped at `llm.max_calls_per_run` (30) requests per run, retries included.
 - When OpenAI credit runs out, the run continues on Gemini's free tier. Gemini free-tier projects without billing just refuse requests over quota (HTTP 429), and the app makes a partial edition. Nothing upgrades to a paid plan automatically.
 - To go back to **৳0**, remove the `OPENAI_API_KEY` secret (or set `provider = "gemini"`); the app then runs on Gemini only.
 
 | Service | What's used | Free allowance (verify yourself) |
 |---|---|---|
-| GitHub Actions (private repo, GitHub Free) | ~3–6 min/day → 100–200 min/month | 2,000 min/month; 500 MB artifact storage |
+| GitHub Actions (private repo, GitHub Free) | ~18 one-minute gate ticks + ~8–25 min of real work a day → ~800–1,300 min/month | 2,000 min/month; 500 MB artifact storage |
 | Gemini Developer API (Free tier) | only on fallback days | Per-model RPM/RPD limits per project; resets at midnight Pacific time |
 | Telegram Bot API | ~4 messages × subscribers per day, plus replies | Free (rate limits: ~1 msg/s per chat, handled automatically) |
 | News feeds | a few HTTP requests/day | Free; subject to each publisher's terms |
@@ -585,7 +602,7 @@ Short per-minute rate limits are waited out and retried on OpenAI first. If Open
 ## Disabling the schedule
 
 - **Pause:** Actions → *Daily BCS briefing* → **⋯** (top right) → **Disable workflow**. Re-enable the same way.
-- **Remove the schedule but keep manual runs:** delete the two `schedule:` / `- cron:` lines in `.github/workflows/daily-briefing.yml`.
+- **Remove the schedule but keep manual runs:** delete the `schedule:` block (the `schedule:` line and all its `- cron:` lines) in `.github/workflows/daily-briefing.yml`.
 - **Stop completely:** delete the workflow file, and optionally revoke the OpenAI and Gemini keys and the bot (BotFather → `/revoke`).
 
 Note: GitHub automatically disables schedules in **public** repositories after 60 days without activity. The daily state commit counts as activity.

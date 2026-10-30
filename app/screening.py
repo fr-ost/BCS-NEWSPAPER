@@ -48,10 +48,29 @@ def build_candidates(events: list[dict]) -> tuple[list[dict], dict[str, str]]:
     return candidates, id_map
 
 
-def validate_screening(raw: object, id_map: dict[str, str], profile=None, maybe_min_priority: float = 7) -> ScreeningOutcome:
+def build_recent(recent: list[dict]) -> tuple[list[dict], dict[str, dict]]:
+    """Short ids (r1, r2, ...) for stories already sent; see ``validate_screening``."""
+    shown, rmap = [], {}
+    for i, r in enumerate(recent, start=1):
+        rid = f"r{i}"
+        rmap[rid] = r
+        shown.append({"id": rid, "sent": r.get("date", ""), "headline": r.get("headline", ""), "title": r.get("title", "")})
+    return shown, rmap
+
+
+def validate_screening(
+    raw: object,
+    id_map: dict[str, str],
+    profile=None,
+    maybe_min_priority: float = 7,
+    recent_map: dict[str, dict] | None = None,
+) -> ScreeningOutcome:
     """Validate model output. With a syllabus ``profile``, code enforces the
     selection policy: rejected story types, missing/unknown syllabus topics and
-    low-priority "maybe" items are rejected whatever the model decided."""
+    low-priority "maybe" items are rejected whatever the model decided.
+    With ``recent_map`` (already-sent stories by short id), a candidate the
+    model marks as a repeat of one of them is rejected unless it names a new
+    development; a genuine follow-up records what it follows up."""
     if isinstance(raw, list):
         raw = {"results": raw}
     if not isinstance(raw, dict) or not isinstance(raw.get("results"), list):
@@ -89,7 +108,13 @@ def validate_screening(raw: object, id_map: dict[str, str], profile=None, maybe_
             topic = item.get("topic") if item.get("topic") in profile.topics else None
             record.update(story_type=story_type, topic=topic, exam_hook=clean_model_text(item.get("exam_hook"), 200))
             forced = None
-            if story_type in profile.rejected_types:
+            repeat = (recent_map or {}).get(item.get("repeat_of")) if isinstance(item.get("repeat_of"), str) else None
+            new_dev = clean_model_text(item.get("new_development"), 200)
+            if repeat is not None and new_dev:
+                record.update(followup_of={k: repeat.get(k) for k in ("event_id", "date", "headline")}, new_development=new_dev)
+            if repeat is not None and not new_dev:
+                forced = f"repeat of a story sent on {repeat.get('date', '?')}"
+            elif story_type in profile.rejected_types:
                 forced = f"story type {story_type}"
             elif topic is None:
                 forced = "no syllabus topic"
@@ -106,23 +131,34 @@ def validate_screening(raw: object, id_map: dict[str, str], profile=None, maybe_
     return out
 
 
-def screen_events(client: LLMClient, events: list[dict], batch_size: int, profile=None, maybe_min_priority: float = 7) -> ScreeningOutcome:
+def screen_events(
+    client: LLMClient,
+    events: list[dict],
+    batch_size: int,
+    profile=None,
+    maybe_min_priority: float = 7,
+    recent: list[dict] | None = None,
+) -> ScreeningOutcome:
     """Screen events in batches. Quota errors propagate after earlier batches
-    are merged into the returned outcome via the ``partial`` attribute."""
+    are merged into the returned outcome via the ``partial`` attribute.
+
+    ``recent``: stories already sent (dicts with event_id, date, headline,
+    title) so the model can flag repeats; see ``validate_screening``."""
     total = ScreeningOutcome()
+    shown_recent, recent_map = build_recent(recent or [])
     for start in range(0, len(events), batch_size):
         batch = events[start : start + batch_size]
         candidates, id_map = build_candidates(batch)
         request = LLMRequest(
             task="screening",
             system=SCREENING_SYSTEM,
-            prompt=screening_prompt(candidates, profile),
-            payload={"candidates": candidates},
+            prompt=screening_prompt(candidates, profile, shown_recent),
+            payload={"candidates": candidates, "recent": shown_recent},
             max_output_tokens=8192,
         )
         try:
             raw = client.generate_json(request)
-            outcome = validate_screening(raw, id_map, profile, maybe_min_priority)
+            outcome = validate_screening(raw, id_map, profile, maybe_min_priority, recent_map)
         except Exception as exc:
             exc.partial = total  # type: ignore[attr-defined]
             raise

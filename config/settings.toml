@@ -16,6 +16,19 @@ freshness_hours = 36
 # Number of MCQs in a complete edition.
 mcq_count = 3
 
+[schedule]
+# GitHub starts scheduled workflows late (here 4-6 hours, varying), so the
+# workflow fires a cheap "tick" every 30 minutes through the night and this
+# gate decides what each tick does (app/schedule_gate.py). Local times.
+# Ticks before this time do nothing (the morning's news isn't in yet).
+prepare_from = "05:00"
+# A tick landing this close to delivery_time waits and sends on time.
+max_wait_minutes = 20
+# If today's edition still hasn't gone out by this time, skip it.
+deliver_until = "22:00"
+# A persistent failure stops after this many scheduled runs in a day.
+max_runs_per_day = 5
+
 [collection]
 max_items_per_source = 40
 # Hard caps to protect against huge/malicious responses.
@@ -63,14 +76,14 @@ exclude_title_patterns = [
 ]
 
 [screening]
-# Max candidate events sent to the screening call per run.
-max_candidates = 60
-# Candidates per screening request (one request handles this many).
-batch_size = 60
+# Max candidate events screened per run (a day brings ~70 new ones).
+max_candidates = 80
+# Candidates per screening request (smaller batches are judged more carefully).
+batch_size = 40
 
 [analysis]
 # Maximum full-article analyses per run (each is one model call).
-max_analyses_per_run = 12
+max_analyses_per_run = 14
 # A story that fails analysis this many times is abandoned.
 max_attempts_per_story = 3
 
@@ -114,9 +127,10 @@ ollama_base_url = "http://localhost:11434"
 temperature = 0.2
 max_output_tokens = 8192
 request_timeout_seconds = 120
-# Budget per provider across the whole run, including retries. Caps OpenAI
-# spend and keeps Gemini well inside free-tier daily request quotas.
-max_calls_per_run = 20
+# Budget per provider across the whole run, including retries: screening (2),
+# analyses (14), static GK + its check (2), MCQs (1) and some retries. Caps
+# OpenAI spend and keeps Gemini well inside free-tier daily request quotas.
+max_calls_per_run = 30
 # Spacing between Gemini/Ollama calls (free-tier per-minute limits).
 min_seconds_between_calls = 6.0
 max_retries = 3

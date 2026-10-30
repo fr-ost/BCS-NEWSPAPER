@@ -2,19 +2,36 @@ name: Daily BCS briefing
 
 on:
   schedule:
-    # GitHub cron is always UTC; Asia/Dhaka is UTC+6 with no DST.
-    # GitHub starts scheduled runs late (often 10-60+ min, worst at :00) and
-    # sometimes drops them, so the work is split:
-    #   PREPARE (early): collect, analyse, build text + PDF, hold until 08:00.
-    #   DELIVER (08:00 + backups): send the held edition. Takes ~1 minute.
-    # The scheduled edition is sent at most once per day, so extra triggers are
-    # harmless no-ops. For delivery at exactly 08:00 also set up the free
-    # external trigger described in the README ("deliver" mode at 07:59).
-    - cron: "13 0 * * *"   # 06:13 Dhaka  prepare
-    - cron: "43 0 * * *"   # 06:43 Dhaka  prepare (backup)
-    - cron: "0 2 * * *"    # 08:00 Dhaka  deliver
-    - cron: "20 2 * * *"   # 08:20 Dhaka  deliver (backup)
-    - cron: "50 2 * * *"   # 08:50 Dhaka  deliver (last backup; builds + sends if nothing was prepared)
+    # GitHub cron is UTC (Asia/Dhaka = UTC+6, no DST). GitHub starts scheduled
+    # runs late: on this repository 4-6 hours late, by a different amount each
+    # day, so fixed run times can't hit 08:00. Instead the workflow fires a
+    # cheap "tick" every 30 minutes through the night and morning. Each tick
+    # runs a gate (app/schedule_gate.py, seconds) that reads the saved state
+    # and the Dhaka clock: it builds today's edition once a tick lands after
+    # 05:00, holds it, and releases it at 08:00 (a tick landing shortly before
+    # 08:00 waits in the job and sends on time). Ticks with nothing to do stop
+    # after the gate. The comments show each tick's nominal time; it usually
+    # starts hours later. The edition is still sent at most once a day.
+    # For an exact 08:00, also add the free external trigger in the README
+    # ("deliver" mode at 07:58): manual/API runs are not delayed.
+    - cron: "7 18 * * *"   # 00:07 Dhaka
+    - cron: "37 18 * * *"   # 00:37 Dhaka
+    - cron: "7 19 * * *"   # 01:07 Dhaka
+    - cron: "37 19 * * *"   # 01:37 Dhaka
+    - cron: "7 20 * * *"   # 02:07 Dhaka
+    - cron: "37 20 * * *"   # 02:37 Dhaka
+    - cron: "7 21 * * *"   # 03:07 Dhaka
+    - cron: "37 21 * * *"   # 03:37 Dhaka
+    - cron: "7 22 * * *"   # 04:07 Dhaka
+    - cron: "37 22 * * *"   # 04:37 Dhaka
+    - cron: "7 23 * * *"   # 05:07 Dhaka
+    - cron: "37 23 * * *"   # 05:37 Dhaka
+    - cron: "7 0 * * *"   # 06:07 Dhaka
+    - cron: "37 0 * * *"   # 06:37 Dhaka
+    - cron: "7 1 * * *"   # 07:07 Dhaka
+    - cron: "37 1 * * *"   # 07:37 Dhaka
+    - cron: "7 2 * * *"   # 08:07 Dhaka
+    - cron: "37 2 * * *"   # 08:37 Dhaka
   workflow_dispatch:
     inputs:
       mode:
@@ -25,7 +42,7 @@ on:
           - offline         # sample data + mock model: no API calls at all
           - dry-run         # real feeds + real model (OpenAI, Gemini fallback), no Telegram, state untouched
           - live            # send now: an extra edition with anything new (any number of times a day)
-          - deliver         # send today's scheduled edition if not sent yet (for an external 08:00 trigger)
+          - deliver         # today's scheduled edition: sent at 08:00 (waits if <=20 min early), at once if later
           - subscribers     # register new /start and /stop now, list subscribers
           - test-telegram   # register new subscribers, send each a test message
           - verify-sources  # check every configured feed live
@@ -37,20 +54,48 @@ on:
 permissions:
   contents: write
 
-# Never let two runs touch state at the same time. Queued runs wait.
-concurrency:
-  group: bcs-briefing-state
-  cancel-in-progress: false
-
 jobs:
-  briefing:
+  gate:
+    # Scheduled ticks only. Seconds long; decides whether the briefing job runs.
+    if: github.event_name == 'schedule'
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 5
+    permissions:
+      contents: read
+    outputs:
+      run: ${{ steps.gate.outputs.run }}
+      notify: ${{ steps.gate.outputs.notify }}
+      lag_minutes: ${{ steps.gate.outputs.lag_minutes }}
+    steps:
+      - name: Check out the latest saved state
+        uses: actions/checkout@v5
+        with:
+          # The branch tip, not the commit this (possibly hours-late) tick was queued at.
+          ref: ${{ github.ref }}
+      - name: Decide what this tick does
+        id: gate
+        env:
+          TICK_CRON: ${{ github.event.schedule }}
+        # System Python, standard library only: no setup or pip install needed.
+        run: python3 -m app.schedule_gate check
+
+  briefing:
+    needs: gate
+    if: ${{ !cancelled() && (github.event_name != 'schedule' || needs.gate.outputs.run == 'true') }}
+    runs-on: ubuntu-latest
+    # Building takes ~5 min; a run that lands just before 08:00 may wait up to
+    # schedule.max_wait_minutes (20) before sending.
+    timeout-minutes: 45
+    # Never let two runs touch state at the same time. Queued runs wait.
+    concurrency:
+      group: bcs-briefing-state
+      cancel-in-progress: false
     env:
-      # Scheduled runs: "prepare" early, "deliver" at/after 08:00.
-      MODE: ${{ github.event_name == 'schedule' && ((github.event.schedule == '13 0 * * *' || github.event.schedule == '43 0 * * *') && 'prepare' || 'deliver') || inputs.mode }}
-      # Crash notices to subscribers only after the last automatic chance (or a manual/external run).
-      NOTIFY_ON_FAILURE: ${{ github.event_name != 'schedule' || github.event.schedule == '50 2 * * *' }}
+      MODE: ${{ github.event_name == 'schedule' && 'scheduled' || inputs.mode }}
+      # Crash notices to subscribers: scheduled runs only on the day's last chance
+      # (decided by the gate); manual/external runs always.
+      NOTIFY_ON_FAILURE: ${{ github.event_name != 'schedule' || needs.gate.outputs.notify == 'true' }}
+      PIPELINE_MODES: " scheduled deliver live dry-run offline "
       PYTHONUNBUFFERED: "1"
     steps:
       - name: Warn if repository is public
@@ -67,6 +112,10 @@ jobs:
 
       - name: Check out repository (includes saved state)
         uses: actions/checkout@v5
+        with:
+          # Always the latest commit: a run that waited in the queue must see the
+          # state saved by the run before it, or it could send an edition twice.
+          ref: ${{ github.ref }}
 
       - name: Set up Python
         uses: actions/setup-python@v6
@@ -79,7 +128,7 @@ jobs:
         run: pip install -r requirements.txt -r requirements-dev.txt
 
       - name: Install Bengali fonts for the PDF
-        if: env.MODE == 'prepare' || env.MODE == 'deliver' || env.MODE == 'live' || env.MODE == 'dry-run' || env.MODE == 'offline'
+        if: contains(env.PIPELINE_MODES, format(' {0} ', env.MODE))
         # Best effort: without it the PDF may lack Bengali glyphs, but text messages are unaffected.
         continue-on-error: true
         timeout-minutes: 5
@@ -89,8 +138,8 @@ jobs:
           fc-list | grep -i -c bengali || true
 
       - name: Unit tests (fully mocked, no API calls)
-        if: env.MODE == 'prepare' || env.MODE == 'deliver' || env.MODE == 'live' || env.MODE == 'dry-run' || env.MODE == 'offline'
-        run: python -m pytest
+        if: contains(env.PIPELINE_MODES, format(' {0} ', env.MODE))
+        run: python -m pytest -q
 
       - name: Run (${{ env.MODE }})
         env:
@@ -104,8 +153,8 @@ jobs:
           GEMINI_MODEL: ${{ vars.GEMINI_MODEL }}
         run: |
           case "$MODE" in
-            prepare)        python -m app run --hold ;;   # build early, release at 08:00
-            deliver)        python -m app run ;;          # send the held edition (or build + send)
+            scheduled)      python -m app run --hold ;;   # tick: build + hold, or send at/after 08:00
+            deliver)        python -m app run --hold ;;   # same, on demand (external 07:58 trigger)
             live)           python -m app run --manual ;; # manual: extra edition with anything new
             dry-run)        python -m app run --dry-run ;;
             offline)        python -m app run --offline ;;
@@ -117,8 +166,30 @@ jobs:
             *) echo "::error::Unknown mode '$MODE'"; exit 3 ;;
           esac
 
+      - name: Show the dry-run edition
+        # Dry runs never send anything; print what would have been sent.
+        if: always() && (env.MODE == 'dry-run' || env.MODE == 'offline')
+        run: cat output/edition-*-dry-run.txt 2>/dev/null || echo "No edition text was written."
+
+      - name: Notify Telegram about a failed run
+        id: notify
+        if: failure() && env.NOTIFY_ON_FAILURE == 'true' && (env.MODE == 'scheduled' || env.MODE == 'deliver' || env.MODE == 'live')
+        env:
+          TELE_BOT_TOKEN: ${{ secrets.TELE_BOT_TOKEN }}
+        run: python -m app notify-failure
+
+      - name: Count this run for the schedule gate
+        # Even when an earlier step failed, so a persistent failure stops after
+        # schedule.max_runs_per_day runs instead of retrying every tick.
+        if: always() && env.MODE == 'scheduled'
+        run: >
+          python3 -m app.schedule_gate record
+          --job-status "${{ job.status }}"
+          --crash-notified "${{ steps.notify.outcome == 'success' }}"
+          --lag-minutes "${{ needs.gate.outputs.lag_minutes }}"
+
       - name: Commit and push state
-        if: always() && (env.MODE == 'prepare' || env.MODE == 'deliver' || env.MODE == 'live' || env.MODE == 'subscribers' || env.MODE == 'test-telegram')
+        if: always() && (env.MODE == 'scheduled' || env.MODE == 'deliver' || env.MODE == 'live' || env.MODE == 'subscribers' || env.MODE == 'test-telegram')
         run: |
           if [ ! -f state/state.json ]; then
             echo "No state file was produced; nothing to commit."
@@ -148,12 +219,6 @@ jobs:
           done
           echo "::error::Could not push state after 3 attempts. The state from this run is in the workflow artifact."
           exit 1
-
-      - name: Notify Telegram about a failed run
-        if: failure() && env.NOTIFY_ON_FAILURE == 'true' && (env.MODE == 'deliver' || env.MODE == 'live')
-        env:
-          TELE_BOT_TOKEN: ${{ secrets.TELE_BOT_TOKEN }}
-        run: python -m app notify-failure
 
       - name: Upload edition and diagnostics
         if: always()

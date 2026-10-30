@@ -2,8 +2,10 @@
 
 Commands:
   run              Build today's edition and deliver it to Telegram.
-  run --hold       Prepare today's edition early and hold it until
-                   edition.delivery_time (08:00); a later run sends it.
+  run --hold       Prepare today's edition and hold it until
+                   edition.delivery_time (08:00); a later run sends it. If the
+                   release is at most schedule.max_wait_minutes away, wait and
+                   send it now. After the release time it sends at once.
   run --manual     Extra edition with whatever is new since the last one
                    (used by manual "live" runs; can be run any number of times).
   run --dry-run    Build with real feeds and the real model, but never send.
@@ -24,6 +26,7 @@ import argparse
 import json
 import logging
 import sys
+import time
 from datetime import date
 from pathlib import Path
 from urllib.parse import urlsplit
@@ -46,6 +49,7 @@ RESULT_FILE = "run-result.json"
 EXIT_OK, EXIT_FAILED, EXIT_REPORTED_FAILURE, EXIT_CONFIG = 0, 1, 2, 3
 
 log = logging.getLogger("app")
+_sleep = time.sleep  # replaced in tests
 
 
 class RedactingFilter(logging.Filter):
@@ -179,18 +183,23 @@ def cmd_run(settings: Settings, args) -> int:
         def article_fetcher(url: str) -> Extraction:
             return extract_article(fetcher, url, settings.collection.max_article_bytes, x.min_article_chars, x.max_article_chars)
 
-    pipeline = Pipeline(
-        settings,
-        sources,
-        store,
-        llm,
-        article_fetcher,
-        feed_fetcher=feed_fetcher,
-        telegram=telegram,
-        dry_run=dry_run,
-        offline_feed_dir=feed_dir,
-        pdf_builder=None if args.no_pdf else make_pdf_builder(),
-    )
+    pdf_builder = None if args.no_pdf else make_pdf_builder()
+
+    def make_pipeline(client) -> Pipeline:
+        return Pipeline(
+            settings,
+            sources,
+            store,
+            client,
+            article_fetcher,
+            feed_fetcher=feed_fetcher,
+            telegram=telegram,
+            dry_run=dry_run,
+            offline_feed_dir=feed_dir,
+            pdf_builder=pdf_builder,
+        )
+
+    pipeline = make_pipeline(llm)
     edition_date = date.fromisoformat(args.date) if args.date else None
     now = utcnow()
     if offline and edition_date is None:
@@ -200,6 +209,15 @@ def cmd_run(settings: Settings, args) -> int:
         now = datetime(2026, 10, 23, 2, 0, tzinfo=timezone.utc)
     hold_until = release_time(settings, now) if args.hold else None
     result = pipeline.run(now=now, edition_date=edition_date, manual=args.manual, hold_until=hold_until)
+    if result.outcome == "prepared" and hold_until is not None:
+        # A tick that lands shortly before the release time waits here and sends
+        # on time rather than relying on another (late) tick after it.
+        wait = (hold_until - utcnow()).total_seconds()
+        if 0 < wait <= settings.schedule.max_wait_minutes * 60:
+            log.info("Edition ready; waiting %d s to release it at %s", wait, hold_until.isoformat(timespec="minutes"))
+            _sleep(wait + 1)
+            # A fresh pipeline so this run's record and cost exclude the build above.
+            result = make_pipeline(build_llm(settings, provider_name)).run(now=utcnow(), edition_date=edition_date, hold_until=hold_until)
     payload = {
         "outcome": result.outcome,
         "edition_date": result.edition_date,
