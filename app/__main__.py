@@ -362,6 +362,8 @@ def cmd_status(settings: Settings, args) -> int:
             for d, e in sorted(state["editions"].items())[-5:]
         },
         "source_health": state["source_health"],
+        # Scheduled runs per day and how late GitHub started them (minutes).
+        "schedule_days": dict(sorted(((state.get("schedule") or {}).get("days") or {}).items())[-5:]),
         "active_subscribers": [s["name"] for s in active_subscribers(state)],
         "last_run": state["runs"][-1] if state["runs"] else None,
     }
