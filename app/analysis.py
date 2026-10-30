@@ -10,7 +10,7 @@ from .grounding import clean_model_text, filter_unsupported_sentences, verify_fa
 from .llm import InvalidResponseError, LLMClient, LLMRequest
 from .prompts import ANALYSIS_SYSTEM, analysis_prompt
 from .scoring import ScoreError, validate_criteria, weighted_score
-from .util import extract_numbers, parse_iso
+from .util import extract_numbers, one_of, parse_iso
 
 log = logging.getLogger(__name__)
 
@@ -67,7 +67,7 @@ def validate_analysis(
         raise InvalidResponseError(f"Invalid scores: {exc}") from exc
     topic = None
     if profile is not None:
-        topic = raw.get("syllabus_topic") if raw.get("syllabus_topic") in profile.topics else None
+        topic = raw.get("syllabus_topic") if one_of(raw.get("syllabus_topic"), profile.topics) else None
         if topic is None:
             raise AnalysisRejected("No BCS syllabus topic fits this item")
     if criteria["syllabus_relevance"] < min_syllabus_relevance:
@@ -87,7 +87,7 @@ def validate_analysis(
         fact = clean_model_text(item.get("fact"), 300)
         evidence = clean_model_text(item.get("evidence"), 500)
         if verify_fact(fact, evidence, source_text):
-            kind = item.get("kind") if item.get("kind") in FACT_KINDS else "other"
+            kind = item.get("kind") if one_of(item.get("kind"), FACT_KINDS) else "other"
             # Only the first few flagged facts make the "memorise for prelims" list.
             prelims = item.get("prelims") is True and sum(f["prelims"] for f in facts) < MAX_PRELIMS
             facts.append({"fact": fact, "evidence": evidence, "kind": kind, "prelims": prelims})

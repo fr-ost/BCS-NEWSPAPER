@@ -115,10 +115,35 @@ def tokens(text: str) -> list[str]:
     return _WORD_RE.findall(normalize_text(text))
 
 
+def one_of(value: object, allowed) -> bool:
+    """``value in allowed`` for untrusted model output (a list or dict would
+    otherwise raise TypeError against a set or dict)."""
+    return isinstance(value, str) and value in allowed
+
+
+_BN_LAKH_THOUSAND = re.compile(r"(\d+)\s*লাখ\s*(\d+)\s*হাজার(?:\s*(\d+)(?![\d.,]))?")
+_BN_LAKH = re.compile(r"(\d+)\s*লাখ(?:\s*(\d+)(?![\d.,]))?")
+_BN_THOUSAND = re.compile(r"(\d+)\s*হাজার(?:\s*(\d+)(?![\d.,]))?")
+_BN_DECIMAL = re.compile(r"(\d+)\s*দশমিক\s*(\d+)")
+
+
+def fold_number_words(text: str) -> str:
+    """Bengali place-value words to digits: '৪১ হাজার ৮৭৯' -> '41879',
+    '১ লাখ ৩৪ হাজার ৩৯৬' -> '134396', '৩৩৯ দশমিক ১' -> '339.1', so the same
+    figure written either way compares equal."""
+    text = normalize_digits(text or "")
+    text = _BN_DECIMAL.sub(lambda m: f"{m.group(1)}.{m.group(2)}", text)
+    text = _BN_LAKH_THOUSAND.sub(lambda m: str(int(m.group(1)) * 100_000 + int(m.group(2)) * 1000 + int(m.group(3) or 0)), text)
+    text = _BN_LAKH.sub(lambda m: str(int(m.group(1)) * 100_000 + int(m.group(2) or 0)), text)
+    text = _BN_THOUSAND.sub(lambda m: str(int(m.group(1)) * 1000 + int(m.group(2) or 0)), text)
+    return text
+
+
 def extract_numbers(text: str) -> set[str]:
-    """Numbers in ``text`` with separators removed (``1,250.5`` -> ``1250.5``)."""
+    """Numbers in ``text`` with separators removed (``1,250.5`` -> ``1250.5``;
+    Bengali place-value words folded first, see ``fold_number_words``)."""
     found = set()
-    for raw in _NUMBER_RE.findall(normalize_digits(text or "")):
+    for raw in _NUMBER_RE.findall(fold_number_words(text or "")):
         # Treat commas as thousands separators; keep decimal points.
         cleaned = raw.replace(",", "")
         cleaned = cleaned.rstrip(".")

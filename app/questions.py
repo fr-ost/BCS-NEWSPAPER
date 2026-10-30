@@ -2,7 +2,9 @@
 
 from __future__ import annotations
 
+import hashlib
 import logging
+import random
 import re
 from dataclasses import dataclass, field
 
@@ -10,7 +12,7 @@ from .config import SUBJECTS
 from .grounding import clean_model_text
 from .llm import InvalidResponseError, LLMClient, LLMRequest
 from .prompts import MCQ_SYSTEM, mcq_prompt
-from .util import extract_numbers, normalize_digits, normalize_text
+from .util import extract_numbers, normalize_digits, normalize_text, one_of
 
 log = logging.getLogger(__name__)
 
@@ -166,7 +168,7 @@ def _check_candidate(item: object, by_id: dict[str, dict]) -> tuple[dict | None,
         "options": options,
         "answer_index": idx,
         "explanation": clean_model_text(item.get("explanation"), 300),
-        "subject": item.get("subject") if item.get("subject") in SUBJECTS else fact["subject"],
+        "subject": item.get("subject") if one_of(item.get("subject"), SUBJECTS) else fact["subject"],
         "fact_id": fact["fact_id"],
         "basis": basis,
         "source_event_id": fact["event_id"],
@@ -233,8 +235,28 @@ def validate_mcqs(raw: object, facts: list[dict], count: int) -> McqOutcome:
     out.reasons.extend(skipped.values())
     order = {id(c): i for i, c in enumerate(valid)}
     chosen.sort(key=lambda c: order[id(c)])
-    out.questions = [{k: v for k, v in c.items() if not k.startswith("_")} for c in chosen]
+    out.questions = [arrange_options({k: v for k, v in c.items() if not k.startswith("_")}) for c in chosen]
     return out
+
+
+def _first_number(text: str) -> float:
+    found = re.findall(r"\d+(?:\.\d+)?", normalize_digits(text).replace(",", ""))
+    return float(found[0]) if found else 0.0
+
+
+def arrange_options(q: dict) -> dict:
+    """Models tend to put the right answer first. Numeric options go in
+    ascending order, as in printed papers; others get a stable shuffle
+    seeded by the question, so a re-render never moves the answer."""
+    options, correct = q["options"], q["options"][q["answer_index"]]
+    if all(_has_digit(o) for o in options):
+        arranged = sorted(options, key=_first_number)
+    else:
+        arranged = list(options)
+        random.Random(int(hashlib.sha256(q["question"].encode("utf-8")).hexdigest()[:12], 16)).shuffle(arranged)
+    q["options"] = arranged
+    q["answer_index"] = arranged.index(correct)
+    return q
 
 
 def generate_mcqs(client: LLMClient, stories: list[dict], count: int) -> McqOutcome:

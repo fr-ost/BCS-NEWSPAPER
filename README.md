@@ -275,19 +275,19 @@ Each tick first runs a tiny **gate** (`app/schedule_gate.py`). It takes a few se
 |---|---|---|
 | before 05:00 | — | nothing (tonight's news isn't in yet) |
 | 05:00–08:00 | not built | **build** it (collect, analyse, text + PDF) and **hold** it |
-| 05:00–08:00 | built, 08:00 more than 20 min away | nothing |
-| 07:40–08:00 | built (or built now) | the job **waits** and sends at **08:00** sharp |
+| 05:00–08:00 | built, 08:00 more than 30 min away | nothing |
+| 07:30–08:00 | built (or built now) | the job **waits** and sends at **08:00** sharp |
 | 08:00–22:00 | built, or not yet built | **send** (building first if needed) |
-| any | already sent, or 5 scheduled runs already today | nothing |
+| any | already sent, or 5 failed runs already today | nothing |
 
 - Ticks with nothing to do stop after the gate: no Python setup, no state commit, one billed Actions minute.
 - The edition is still sent **at most once per day**. The briefing job always reads the latest saved state (not the commit it was queued with), so a late or queued run can't send it twice.
-- A persistent failure stops after `schedule.max_runs_per_day` (5) runs instead of retrying every tick. Subscribers get a crash notice only on the day's last chance (or once it's 2+ hours past 08:00).
+- A persistent failure stops after `schedule.max_runs_per_day` (5) failed runs instead of retrying every tick; a built edition gets twice that many tries to go out. Subscribers get a crash notice only on the day's last chance (or once it's 2+ hours past 08:00).
 - The gate writes a notice on every tick, e.g. `RUN: deliver the held edition [tick '7 21 * * *' started 02:11 UTC (08:11 local), 5 h 04 min after it was due]`, and runs record their lag in `state.json` (`schedule.days`). That's how to see how late GitHub is.
 - Times and limits live in `config/settings.toml` under `[schedule]`.
-- **Actions minutes:** about 18 gate minutes plus ~8–25 minutes of real work a day, ≈ 800–1,300 of the 2,000 free minutes a month for a private repository.
+- **Actions minutes:** about 18 gate minutes plus ~10–35 minutes of real work and waiting a day, ≈ 850–1,600 of the 2,000 free minutes a month for a private repository.
 
-With GitHub alone the briefing arrives at 08:00 when a tick lands shortly before 08:00, otherwise at the first tick after 08:00 (usually by 08:30–09:00). **For 08:00 every single day, add the free external trigger below.** Manual and API-started runs are not delayed the way scheduled ones are.
+With GitHub alone the briefing arrives at 08:00 whenever a tick lands in the half hour before 08:00 (with ticks every 30 minutes, normally every day), otherwise at the first tick after 08:00. **For 08:00 every single day, add the free external trigger below.** Manual and API-started runs are not delayed the way scheduled ones are.
 
 If you sent a manual edition before the scheduled one and nothing new has appeared since, the scheduled run doesn't message anyone.
 
@@ -303,7 +303,7 @@ If you sent a manual edition before the scheduled one and nothing new has appear
    - Generate, then copy the token (starts with `github_pat_`).
 2. **Create the timer at cron-job.org.** Sign up (free), then **Create cronjob**:
    - **URL:** `https://api.github.com/repos/fr-ost/NEWSPAPER-ANALYZER/actions/workflows/daily-briefing.yml/dispatches` (use your repository's current name; if you rename it, update this URL)
-   - **Schedule:** every day at **07:45**, time zone **Asia/Dhaka**. If the edition is already built, the run waits and sends it at 08:00; if not, it builds it (about 5 minutes) and sends it right after 08:00.
+   - **Schedule:** every day at **07:45**, time zone **Asia/Dhaka**. If the edition is already built, the run waits and sends it at 08:00; if not, it builds it (3–5 minutes), then waits and sends it at 08:00.
    - **Advanced → Request method:** `POST`.
    - **Headers:**
      - `Authorization`: `Bearer github_pat_…your token…`
@@ -387,7 +387,7 @@ Avoid running `python -m app run`, `subscribers` or `test-telegram` locally *and
 | Command | Effect |
 |---|---|
 | `python -m app run` | Register new subscribers, build today's edition and deliver it (text + PDF) to all of them. No-op if today's edition was already delivered. Skips building (no model calls, no cost) when nobody has subscribed. |
-| `python -m app run --hold` | Prepare today's edition and hold it until `edition.delivery_time` (08:00); a later run sends it. If 08:00 is at most `schedule.max_wait_minutes` (20) away it waits and sends on time; after 08:00 it sends at once. Used by scheduled ticks and the `deliver` mode. |
+| `python -m app run --hold` | Prepare today's edition and hold it until `edition.delivery_time` (08:00); a later run sends it. If 08:00 is at most `schedule.max_wait_minutes` (30) away it waits and sends on time; after 08:00 it sends at once. Used by scheduled ticks and the `deliver` mode. |
 | `python3 -m app.schedule_gate check` | What a scheduled tick would do now (standard library only; reads `state/state.json`). Add `--now 2026-10-31T01:45:00+00:00` to try another time. |
 | `python -m app run --manual` | Extra edition with whatever is new since the last one; can run any number of times (the workflow's manual `live` uses this). |
 | `python -m app run --no-pdf` | Don't create or send the PDF. |

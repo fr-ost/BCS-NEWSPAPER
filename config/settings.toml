@@ -22,11 +22,12 @@ mcq_count = 3
 # gate decides what each tick does (app/schedule_gate.py). Local times.
 # Ticks before this time do nothing (the morning's news isn't in yet).
 prepare_from = "05:00"
-# A tick landing this close to delivery_time waits and sends on time.
-max_wait_minutes = 20
+# A tick landing this close to delivery_time waits and sends on time. Matches
+# the 30-minute tick spacing, so some tick always lands inside the window.
+max_wait_minutes = 30
 # If today's edition still hasn't gone out by this time, skip it.
 deliver_until = "22:00"
-# A persistent failure stops after this many scheduled runs in a day.
+# A persistent failure stops after this many failed runs in a day.
 max_runs_per_day = 5
 
 [collection]

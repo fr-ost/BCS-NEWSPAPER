@@ -42,7 +42,7 @@ on:
           - offline         # sample data + mock model: no API calls at all
           - dry-run         # real feeds + real model (OpenAI, Gemini fallback), no Telegram, state untouched
           - live            # send now: an extra edition with anything new (any number of times a day)
-          - deliver         # today's scheduled edition: sent at 08:00 (waits if <=20 min early), at once if later
+          - deliver         # today's scheduled edition: sent at 08:00 (waits if <=30 min early), at once if later
           - subscribers     # register new /start and /stop now, list subscribers
           - test-telegram   # register new subscribers, send each a test message
           - verify-sources  # check every configured feed live
@@ -83,8 +83,8 @@ jobs:
     needs: gate
     if: ${{ !cancelled() && (github.event_name != 'schedule' || needs.gate.outputs.run == 'true') }}
     runs-on: ubuntu-latest
-    # Building takes ~5 min; a run that lands just before 08:00 may wait up to
-    # schedule.max_wait_minutes (20) before sending.
+    # Building takes ~3-5 min; a run that lands just before 08:00 may wait up to
+    # schedule.max_wait_minutes (30) before sending.
     timeout-minutes: 45
     # Never let two runs touch state at the same time. Queued runs wait.
     concurrency:
@@ -180,8 +180,8 @@ jobs:
 
       - name: Count this run for the schedule gate
         # Even when an earlier step failed, so a persistent failure stops after
-        # schedule.max_runs_per_day runs instead of retrying every tick.
-        if: always() && env.MODE == 'scheduled'
+        # schedule.max_runs_per_day failed runs instead of retrying every tick.
+        if: always() && (env.MODE == 'scheduled' || env.MODE == 'deliver')
         run: >
           python3 -m app.schedule_gate record
           --job-status "${{ job.status }}"

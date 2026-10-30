@@ -59,10 +59,10 @@ class ScheduleConfig:
     prepare_from: str = "05:00"
     # A tick that finds the edition built this close to delivery_time waits in
     # the job and sends it on time instead of relying on a later tick.
-    max_wait_minutes: int = 20
+    max_wait_minutes: int = 30
     # A scheduled edition still unsent at this time is skipped for the day.
     deliver_until: str = "22:00"
-    # Stop starting scheduled runs for the day after this many (failed) runs.
+    # Stop starting scheduled runs for the day after this many failed runs.
     max_runs_per_day: int = 5
 
 
