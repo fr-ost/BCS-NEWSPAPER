@@ -18,12 +18,12 @@ def dhaka(hh: int, mm: int = 0, day: int = 31) -> datetime:
     return datetime(2026, 10, day, hh, mm, tzinfo=UTC) - timedelta(hours=6)
 
 
-def state_with(edition: dict | None = None, runs: int = 0, crash_notified: bool = False, key: str = "2026-10-31") -> dict:
+def state_with(edition: dict | None = None, failed: int = 0, crash_notified: bool = False, key: str = "2026-10-31") -> dict:
     state = {"schema_version": 2, "editions": {}, "schedule": {"days": {}}}
     if edition is not None:
         state["editions"][key] = {"date": key, **edition}
-    if runs or crash_notified:
-        state["schedule"]["days"][key] = {"runs": runs, "crash_notified": crash_notified}
+    if failed or crash_notified:
+        state["schedule"]["days"][key] = {"runs": failed + 1, "failed_runs": failed, "crash_notified": crash_notified}
     return state
 
 
@@ -37,7 +37,8 @@ READY = {"status": "ready", "chunks": [{"index": 0, "text": "x"}]}
         (dhaka(4, 59), None, False),
         (dhaka(5, 7), None, True),  # prepare and hold
         (dhaka(6, 37), READY, False),  # built, release 83 min away: nothing to do
-        (dhaka(7, 41), READY, True),  # built, release 19 min away: wait and send on time
+        (dhaka(7, 25), READY, False),  # built, release 35 min away: nothing to do
+        (dhaka(7, 31), READY, True),  # built, release 29 min away: wait and send on time
         (dhaka(7, 41), None, True),  # not built yet: build now (sends at 08:00 if done in time)
         (dhaka(8, 7), READY, True),  # deliver
         (dhaka(8, 7), None, True),  # nothing prepared: build and send
@@ -53,19 +54,22 @@ def test_decision_table(settings, when, edition, expected):
     assert d.run is expected, d.reason
 
 
-def test_runs_are_capped_per_day(settings):
-    assert decide(state_with(None, runs=4), dhaka(9), settings).run is True
-    d = decide(state_with(None, runs=5), dhaka(9), settings)
-    assert d.run is False and "5 scheduled runs" in d.reason
+def test_failed_runs_are_capped_per_day(settings):
+    assert decide(state_with(None, failed=4), dhaka(9), settings).run is True
+    d = decide(state_with(None, failed=5), dhaka(9), settings)
+    assert d.run is False and "5 failed runs" in d.reason
     # A new day starts a fresh count.
-    assert decide(state_with(None, runs=5, key="2026-10-30"), dhaka(9), settings).run is True
+    assert decide(state_with(None, failed=5, key="2026-10-30"), dhaka(9), settings).run is True
+    # A built edition is never stranded by the build limit: it gets more tries to go out.
+    assert decide(state_with(READY, failed=5), dhaka(9), settings).run is True
+    assert decide(state_with(READY, failed=10), dhaka(9), settings).run is False
 
 
 def test_crash_notice_only_on_the_last_chance(settings):
     assert decide(state_with(None), dhaka(8, 7), settings).notify_on_failure is False
-    assert decide(state_with(None, runs=4), dhaka(8, 7), settings).notify_on_failure is True  # 5th = last run
-    assert decide(state_with(None, runs=1), dhaka(10, 30), settings).notify_on_failure is True  # 2h+ late
-    assert decide(state_with(None, runs=4, crash_notified=True), dhaka(8, 7), settings).notify_on_failure is False
+    assert decide(state_with(None, failed=4), dhaka(8, 7), settings).notify_on_failure is True  # 5th = last chance
+    assert decide(state_with(None, failed=1), dhaka(10, 30), settings).notify_on_failure is True  # 2h+ late
+    assert decide(state_with(None, failed=4, crash_notified=True), dhaka(8, 7), settings).notify_on_failure is False
 
 
 def test_missing_or_garbage_state_fails_open_inside_the_window(settings):
@@ -104,10 +108,10 @@ def test_record_counts_runs_and_keeps_state_valid(settings):
     settings.state_path.write_text(json.dumps({**state_with(READY), "articles": {}, "events": {}}), encoding="utf-8")
     record(settings, dhaka(8, 9), "failure", False, 301)
     msg = record(settings, dhaka(8, 40), "success", True, 290)
-    assert "run 2 of 5" in msg
+    assert "run 2 today recorded (success; 1 failed of 5 allowed)" in msg
     data = json.loads(settings.state_path.read_text(encoding="utf-8"))
     day = data["schedule"]["days"]["2026-10-31"]
-    assert day["runs"] == 2 and day["crash_notified"] is True and day["lag_minutes"] == [301, 290]
+    assert day["runs"] == 2 and day["failed_runs"] == 1 and day["crash_notified"] is True and day["lag_minutes"] == [301, 290]
     assert data["editions"]["2026-10-31"]["status"] == "ready"  # nothing else touched
 
 
@@ -177,3 +181,31 @@ def _offline_env(monkeypatch, tmp_path):
 
     monkeypatch.setattr(pipeline_mod, "collect", lambda sources, fetcher, now, max_items, max_bytes: load_fixture_items(sources, SAMPLE_DIR / "feeds", now, max_items))
     monkeypatch.setattr(cli, "extract_article", lambda fetcher, url, *a: offline_article_fetcher(cli.load_settings(), SAMPLE_DIR / "articles")(url))
+
+
+def test_hold_that_expired_while_building_sends_now(monkeypatch, tmp_path):
+    """The release time passes between the pipeline's check and the wait: send, don't exit."""
+    clock = {"now": dhaka(7, 59, day=23)}
+
+    def fake_sleep(seconds):
+        assert seconds <= 1.5
+        clock["now"] += timedelta(seconds=seconds)
+
+    import app.pipeline as pipeline_mod
+
+    real_run = pipeline_mod.Pipeline.run
+
+    def slow_run(self, *args, **kwargs):
+        result = real_run(self, *args, **kwargs)
+        clock["now"] += timedelta(minutes=2)  # building took two minutes
+        return result
+
+    monkeypatch.setattr(pipeline_mod.Pipeline, "run", slow_run)
+    monkeypatch.setattr(cli, "utcnow", lambda: clock["now"])
+    monkeypatch.setattr(cli, "_sleep", fake_sleep)
+    tg = FakeTelegram()
+    monkeypatch.setattr(cli, "make_telegram", lambda settings: tg)
+    monkeypatch.setattr(cli, "make_fetcher", lambda settings: None)
+    _offline_env(monkeypatch, tmp_path)
+    assert cli.main(["run", "--hold", "--no-pdf"]) == 0
+    assert json.loads((tmp_path / "out" / "run-result.json").read_text())["outcome"] == "delivered" and tg.sent

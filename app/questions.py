@@ -12,7 +12,7 @@ from .config import SUBJECTS
 from .grounding import clean_model_text
 from .llm import InvalidResponseError, LLMClient, LLMRequest
 from .prompts import MCQ_SYSTEM, mcq_prompt
-from .util import extract_numbers, normalize_digits, normalize_text
+from .util import extract_numbers, normalize_digits, normalize_text, one_of
 
 log = logging.getLogger(__name__)
 
@@ -168,7 +168,7 @@ def _check_candidate(item: object, by_id: dict[str, dict]) -> tuple[dict | None,
         "options": options,
         "answer_index": idx,
         "explanation": clean_model_text(item.get("explanation"), 300),
-        "subject": item.get("subject") if item.get("subject") in SUBJECTS else fact["subject"],
+        "subject": item.get("subject") if one_of(item.get("subject"), SUBJECTS) else fact["subject"],
         "fact_id": fact["fact_id"],
         "basis": basis,
         "source_event_id": fact["event_id"],

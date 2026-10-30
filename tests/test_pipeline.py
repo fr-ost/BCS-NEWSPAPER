@@ -182,17 +182,17 @@ def test_failed_story_retries_are_limited(make_pipeline, settings):
     assert "analysis" not in prov.tasks
 
 
-def test_state_is_checkpointed_even_when_run_crashes(make_pipeline, settings):
-    class Boom(Programmable):
-        def generate_raw(self, request):
-            if request.task == "mcq":
-                raise RuntimeError("unexpected bug")
-            return super().generate_raw(request)
-
+def test_state_is_checkpointed_even_when_run_crashes(make_pipeline, settings, monkeypatch):
     import pytest
 
+    import app.pipeline as pipeline_mod
+
+    def boom(*args, **kwargs):
+        raise RuntimeError("unexpected bug")
+
+    monkeypatch.setattr(pipeline_mod, "render_edition", boom)  # a crash after the analyses
     with pytest.raises(RuntimeError):
-        make_pipeline(provider=Boom(), telegram=FakeTelegram()).run(now=NOW)
+        make_pipeline(provider=Programmable(), telegram=FakeTelegram()).run(now=NOW)
     state = load_state(settings)
     assert sum(1 for ev in state["events"].values() if ev["status"] == "analysed") == 3
     assert state["runs"][-1]["outcome"] == "failed"

@@ -641,11 +641,11 @@ class Pipeline:
                 self.llm_stop_reason = f"permanent: {exc}"
                 self._error(f"Analysis stopped: {exc}")
                 break
-            except LLMError as exc:  # invalid output or exhausted transient retries
+            except Exception as exc:  # invalid output, exhausted retries, or a reply our checks didn't expect
                 ev["last_error"] = self.s.secrets.redact(f"{type(exc).__name__}: {exc}")[:300]
                 if ev["attempts"] >= self.s.analysis.max_attempts_per_story:
                     ev["status"] = "failed"
-                self._error(f"Analysis of {ev['event_id']} failed: {exc}")
+                self._error(f"Analysis of {ev['event_id']} failed: {type(exc).__name__}: {exc}")
             else:
                 ev["analysis"] = note
                 ev["status"] = "analysed"
@@ -730,8 +730,8 @@ class Pipeline:
             return
         try:
             outcome = enrich_static_gk(self.llm, todo)
-        except LLMError as exc:
-            self._error(f"Static GK skipped: {exc}")
+        except Exception as exc:  # an optional section must never cost the edition
+            self._error(f"Static GK skipped: {type(exc).__name__}: {exc}")
             return
         for st in todo:
             st["analysis"]["static_gk"] = outcome.items.get(st["event_id"], [])
@@ -749,8 +749,8 @@ class Pipeline:
             self.llm_stop_reason = "quota"
             self._error(f"MCQ generation stopped: {exc}")
             return [], "AI কোটা শেষ হওয়ায় MCQ তৈরি করা যায়নি।"
-        except LLMError as exc:
-            self._error(f"MCQ generation failed: {exc}")
+        except Exception as exc:  # LLMError, or a reply our checks didn't expect
+            self._error(f"MCQ generation failed: {type(exc).__name__}: {exc}")
             return [], "MCQ তৈরিতে ত্রুটি হয়েছে।"
         return outcome.questions, None
 

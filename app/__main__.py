@@ -213,9 +213,10 @@ def cmd_run(settings: Settings, args) -> int:
         # A tick that lands shortly before the release time waits here and sends
         # on time rather than relying on another (late) tick after it.
         wait = (hold_until - utcnow()).total_seconds()
-        if 0 < wait <= settings.schedule.max_wait_minutes * 60:
-            log.info("Edition ready; waiting %d s to release it at %s", wait, hold_until.isoformat(timespec="minutes"))
-            _sleep(wait + 1)
+        if wait <= settings.schedule.max_wait_minutes * 60:  # also when 08:00 passed while building
+            if wait > 0:
+                log.info("Edition ready; waiting %d s to release it at %s", wait, hold_until.isoformat(timespec="minutes"))
+            _sleep(max(wait, 0) + 1)
             # A fresh pipeline so this run's record and cost exclude the build above.
             result = make_pipeline(build_llm(settings, provider_name)).run(now=utcnow(), edition_date=edition_date, hold_until=hold_until)
     payload = {

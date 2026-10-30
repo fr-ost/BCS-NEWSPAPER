@@ -18,9 +18,10 @@ The briefing job is idempotent (it re-reads the latest state and never sends
 an edition twice), so an unnecessary "yes" costs a minute, never a duplicate.
 If anything here goes wrong, the gate says yes and lets the app decide.
 
-``record`` runs at the end of every gated job, even a failed one, and counts
-the day's runs, so a persistent failure stops after
-``schedule.max_runs_per_day`` runs instead of retrying every 30 minutes.
+``record`` runs at the end of every gated (and ``deliver``) job, even a failed
+one, and counts the day's runs and failures, so a persistent failure stops
+after ``schedule.max_runs_per_day`` failed runs instead of retrying every 30
+minutes. A built edition is never stranded by that limit.
 """
 
 from __future__ import annotations
@@ -82,8 +83,8 @@ def decide(state: dict | None, now: datetime, settings: Settings) -> Decision:
     edition = editions.get(key) if isinstance(editions.get(key), dict) else {}
     status = edition.get("status")
     log = day_log(state, key)
-    runs = _int(log.get("runs"))
-    notify = not log.get("crash_notified") and (runs + 1 >= cfg.max_runs_per_day or late)
+    failed = _int(log.get("failed_runs"))
+    notify = not log.get("crash_notified") and (failed + 1 >= cfg.max_runs_per_day or late)
 
     if status == "delivered":
         return Decision(False, f"today's edition ({key}) was already delivered")
@@ -91,9 +92,11 @@ def decide(state: dict | None, now: datetime, settings: Settings) -> Decision:
         return Decision(False, f"too early: today's edition is built from {cfg.prepare_from}")
     if local >= until:
         return Decision(False, f"too late: an unsent edition is skipped after {cfg.deliver_until}")
-    if runs >= cfg.max_runs_per_day:
-        return Decision(False, f"already {runs} scheduled runs today (limit {cfg.max_runs_per_day}); see the last run's log")
     built = status in ("ready", "delivering") and bool(edition.get("chunks"))
+    # Stop retrying a failing build; a built edition gets twice as many tries
+    # to go out (e.g. Telegram briefly down) before the day is given up.
+    if failed >= cfg.max_runs_per_day * (2 if built else 1):
+        return Decision(False, f"{failed} failed runs today (limit {cfg.max_runs_per_day}); see the last run's log")
     if local < release:
         if not built:
             return Decision(True, f"prepare: build today's edition now and hold it until {settings.edition.delivery_time}", notify)
@@ -143,6 +146,8 @@ def record(settings: Settings, now: datetime, job_status: str, crash_notified: b
     days = sched.get("days") if isinstance(sched.get("days"), dict) else {}
     entry = days.get(key) if isinstance(days.get(key), dict) else {}
     entry["runs"] = _int(entry.get("runs")) + 1
+    if job_status != "success":
+        entry["failed_runs"] = _int(entry.get("failed_runs")) + 1
     entry["last_run_at"] = iso(now)
     entry["last_job_status"] = (job_status or "unknown")[:20]
     if lag_minutes is not None:
@@ -154,7 +159,7 @@ def record(settings: Settings, now: datetime, job_status: str, crash_notified: b
     sched["days"] = {k: v for k, v in days.items() if k >= cutoff}
     state["schedule"] = sched
     StateStore(path).save(state)
-    return f"run {entry['runs']} of {settings.schedule.max_runs_per_day} today recorded ({entry['last_job_status']})"
+    return f"run {entry['runs']} today recorded ({entry['last_job_status']}; {_int(entry.get('failed_runs'))} failed of {settings.schedule.max_runs_per_day} allowed)"
 
 
 def _fmt(delta: timedelta) -> str:

@@ -26,7 +26,7 @@ from .deduplicator import distinctive_numbers
 from .grounding import clean_model_text
 from .llm import InvalidResponseError, LLMClient, LLMRequest
 from .prompts import GK_SYSTEM, GK_VERIFY_SYSTEM, gk_prompt, gk_verify_prompt
-from .util import extract_numbers, normalize_text
+from .util import extract_numbers, normalize_text, one_of
 
 log = logging.getLogger(__name__)
 
@@ -80,7 +80,7 @@ def validate_gk(raw: object, smap: dict[str, dict]) -> tuple[list[dict], list[st
     for item in raw["items"]:
         if len(kept) >= MAX_ITEMS:
             break
-        if not isinstance(item, dict) or item.get("story") not in smap:
+        if not isinstance(item, dict) or not one_of(item.get("story"), smap):
             reasons.append("unknown story")
             continue
         sid = item["story"]
@@ -88,7 +88,7 @@ def validate_gk(raw: object, smap: dict[str, dict]) -> tuple[list[dict], list[st
         question = clean_model_text(item.get("question"), 220)
         answer = clean_model_text(item.get("answer"), 80)
         answer_en = clean_model_text(item.get("answer_en"), 80)
-        kind = item.get("kind") if item.get("kind") in KINDS else "other"
+        kind = item.get("kind") if one_of(item.get("kind"), KINDS) else "other"
         if not (statement and question and answer and answer_en):
             reasons.append("incomplete item")
             continue
@@ -131,7 +131,12 @@ def answers_agree(claimed_en: str, claimed_bn: str, independent: str) -> bool:
     a, b = _latin_tokens(claimed_en), _latin_tokens(independent)
     if not a or not b:
         return normalize_text(claimed_bn) == normalize_text(independent)
-    return a <= b or b <= a or len(a & b) / len(a | b) >= 0.5
+    if a == b:
+        return True
+    # One-word answers (a city, a person's surname) may come back qualified
+    # ("Geneva, Switzerland"). Multi-word names must match exactly: one word
+    # tells ICC from ICJ and WHO from WMO.
+    return len(a) == 1 and a <= b
 
 
 def verify_gk(raw: object, items: list[dict]) -> tuple[list[dict], list[str]]:

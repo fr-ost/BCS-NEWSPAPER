@@ -180,6 +180,10 @@ def test_gk_shape_rules():
     ("Geneva", "জেনেভা", "Geneva, Switzerland", True),
     ("Geneva", "জেনেভা", "New York", False),
     ("Rosatom", "রোসাটম", "rosatom", True),
+    ("International Criminal Court", "আইসিসি", "International Court of Justice", False),
+    ("World Health Organization", "ডব্লিউএইচও", "World Meteorological Organization", False),
+    ("United Nations", "জাতিসংঘ", "United Nations Development Programme", False),
+    ("World Meteorological Organization", "ডব্লিউএমও", "world meteorological organization", True),
 ])
 def test_blind_answers_must_agree(claimed_en, claimed_bn, got, agree):
     assert answers_agree(claimed_en, claimed_bn, got) is agree
@@ -310,3 +314,47 @@ def test_answer_position_is_not_always_the_first_option():
     assert len(positions) >= 3  # spread over the options
     again = arrange_options({"question": "প্রশ্ন 0?", "options": ["কিনশাসা", "ব্রাজাভিল", "কাম্পালা", "লুসাকা"], "answer_index": 0})
     assert again["options"] == arrange_options({"question": "প্রশ্ন 0?", "options": ["কিনশাসা", "ব্রাজাভিল", "কাম্পালা", "লুসাকা"], "answer_index": 0})["options"]
+
+
+def test_bengali_number_words_match_digits():
+    from app.util import extract_numbers
+
+    assert extract_numbers("৪১ হাজার ৮৭৯ কোটি টাকা") == extract_numbers("Tk 41,879 crore") == {"41879"}
+    assert extract_numbers("১ লাখ ৩৪ হাজার ৩৯৬") == {"134396"} and extract_numbers("৩৩৯ দশমিক ১") == {"339.1"}
+    # The NBR shortfall written both ways is now recognised as the same story.
+    a = distinctive_numbers(["রাজস্ব ঘাটতি ৪১ হাজার ৮৭৯ কোটি টাকা", "লক্ষ্য ১ লাখ ৩৪ হাজার ৩৯৬ কোটি"])
+    b = distinctive_numbers(["ঘাটতি ৪১,৮৭৯ কোটি টাকা", "লক্ষ্য ১,৩৪,৩৯৬ কোটি টাকা"])
+    assert {"41879", "134396"} <= a & b
+
+
+def test_malformed_model_values_never_crash(profile, settings):
+    """Lists/dicts where strings are expected must be rejected, not raise TypeError."""
+    smap = {"s1": story()}
+    kept, _ = validate_gk({"items": [gk(story=["s1", "s2"]), gk(story={"id": "s1"}), gk(kind=["year"])]}, smap)
+    assert [k["kind"] for k in kept] == ["other"]
+    note = validate_analysis(note_raw(key_facts=[{"fact": "নীতি সুদহার 10 percent", "evidence": "raised the policy rate to 10 percent", "kind": ["number"], "prelims": True}]),
+                             SOURCE, "h", None, WEIGHTS, profile, 7)
+    assert note["key_facts"][0]["kind"] == "other"
+    from app.analysis import AnalysisRejected
+
+    with pytest.raises(AnalysisRejected):
+        validate_analysis(note_raw(syllabus_topic=["bd_banking_monetary"]), SOURCE, "h", None, WEIGHTS, profile, 7)
+    out = validate_screening({"results": [screen_item("c1", decision=["select"]), screen_item("c2", topic=["x"], exam_focus={"a": 1}, story_type=["policy_decision"])]},
+                             {"c1": "e1", "c2": "e2"}, profile)
+    assert out.invalid_items == 1 and out.decisions["e2"]["decision"] == "reject"
+    q = validate_mcqs({"questions": [{**mcq(), "subject": ["economy"]}]}, FACTS, 3)
+    assert q.questions and q.questions[0]["subject"] == "economy"
+
+
+def test_a_crashing_optional_step_never_costs_the_edition(make_pipeline, monkeypatch):
+    import app.pipeline as pipeline_mod
+
+    def boom(*a, **k):
+        raise TypeError("unhashable type: 'list'")
+
+    monkeypatch.setattr(pipeline_mod, "enrich_static_gk", boom)
+    monkeypatch.setattr(pipeline_mod, "generate_mcqs", boom)
+    tg = FakeTelegram()
+    r = make_pipeline(telegram=tg).run(now=NOW)
+    assert r.outcome == "delivered" and r.stories == 3 and tg.sent
+    assert any("Static GK skipped" in e for e in r.errors) and any("MCQ generation failed" in e for e in r.errors)

@@ -14,6 +14,7 @@ from .config import SUBJECTS
 from .grounding import clean_model_text
 from .llm import InvalidResponseError, LLMClient, LLMRequest
 from .prompts import SCREENING_SYSTEM, screening_prompt
+from .util import one_of
 
 log = logging.getLogger(__name__)
 
@@ -86,7 +87,7 @@ def validate_screening(
             out.invalid_items += 1
             continue
         decision = item.get("decision")
-        if decision not in DECISIONS:
+        if not one_of(decision, DECISIONS):
             out.invalid_items += 1
             continue
         seen.add(cid)
@@ -94,7 +95,7 @@ def validate_screening(
         priority = item.get("priority")
         if isinstance(priority, bool) or not isinstance(priority, (int, float)):
             priority = 5
-        focus = item.get("exam_focus") if item.get("exam_focus") in EXAM_FOCUS else "none"
+        focus = item.get("exam_focus") if one_of(item.get("exam_focus"), EXAM_FOCUS) else "none"
         priority = max(0.0, min(10.0, float(priority)))
         record = {
             "decision": decision,
@@ -104,8 +105,8 @@ def validate_screening(
             "priority": priority,
         }
         if profile is not None:
-            story_type = item.get("story_type") if item.get("story_type") in profile.story_types else "other_low_value"
-            topic = item.get("topic") if item.get("topic") in profile.topics else None
+            story_type = item.get("story_type") if one_of(item.get("story_type"), profile.story_types) else "other_low_value"
+            topic = item.get("topic") if one_of(item.get("topic"), profile.topics) else None
             record.update(story_type=story_type, topic=topic, exam_hook=clean_model_text(item.get("exam_hook"), 200))
             forced = None
             repeat = (recent_map or {}).get(item.get("repeat_of")) if isinstance(item.get("repeat_of"), str) else None
