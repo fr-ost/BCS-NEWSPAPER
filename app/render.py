@@ -29,6 +29,13 @@ FOOTER = (
 )
 
 
+def _mcq_source(q: dict) -> str:
+    """Where an MCQ's answer comes from: the article, or checked background GK."""
+    if q.get("basis") == "gk":
+        return f"📚 সাধারণ জ্ঞান (প্রতিবেদনের বাইরে) · প্রসঙ্গ: {link(q['source_url'], q['source_name'])}"
+    return f"সূত্র: {link(q['source_url'], q['source_name'])}"
+
+
 def _is_date(value) -> bool:
     try:
         date.fromisoformat(value)
@@ -166,7 +173,7 @@ def render_edition(
             if q.get("explanation"):
                 a_lines.append(f"   <tg-spoiler>{esc(q['explanation'])}</tg-spoiler>")
             subject = SUBJECTS.get(q["subject"], "")
-            a_lines.append(f"   🏷 {esc(subject)} · সূত্র: {link(q['source_url'], q['source_name'])}")
+            a_lines.append(f"   🏷 {esc(subject)} · {_mcq_source(q)}")
         mcq_sections.append("\n".join(a_lines))
 
     minutes = estimate_minutes(story_sections + mcq_sections)
@@ -371,7 +378,7 @@ def render_pdf_html(
             expl = f"<br>{esc(q['explanation'])}" if q.get("explanation") else ""
             subject = SUBJECTS.get(q["subject"], "")
             body.append(f'<div class="answer"><b>{bn_num(i)}. {esc(ans)}</b>{expl}'
-                        f'<div class="sources">🏷 {esc(subject)} · সূত্র: {link(q["source_url"], q["source_name"])}</div></div>')
+                        f'<div class="sources">🏷 {esc(subject)} · {_mcq_source(q)}</div></div>')
         body.append("</div>")
     body.append(_pdf_revision(stories))
     body.append(f'<div class="footer">{esc(FOOTER)}</div>')

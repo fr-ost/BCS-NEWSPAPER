@@ -241,7 +241,11 @@ class FallbackClient:
 
     @property
     def remaining_calls(self) -> int:
-        return sum(c.remaining_calls for c in self.chain if c.provider.name not in self.disabled)
+        """Calls left on the provider that would serve the next request."""
+        for c in self.chain:
+            if c.provider.name not in self.disabled:
+                return c.remaining_calls
+        return 0
 
     def usage(self) -> dict:
         return {c.provider.name: {**c.provider.usage, "calls_incl_retries": c.calls_made} for c in self.chain}

@@ -387,7 +387,8 @@ Avoid running `python -m app run`, `subscribers` or `test-telegram` locally *and
 | Command | Effect |
 |---|---|
 | `python -m app run` | Register new subscribers, build today's edition and deliver it (text + PDF) to all of them. No-op if today's edition was already delivered. Skips building (no model calls, no cost) when nobody has subscribed. |
-| `python -m app run --hold` | Prepare today's edition and hold it until `edition.delivery_time` (08:00); a later run sends it. Used by the early scheduled runs. |
+| `python -m app run --hold` | Prepare today's edition and hold it until `edition.delivery_time` (08:00); a later run sends it. If 08:00 is at most `schedule.max_wait_minutes` (20) away it waits and sends on time; after 08:00 it sends at once. Used by scheduled ticks and the `deliver` mode. |
+| `python3 -m app.schedule_gate check` | What a scheduled tick would do now (standard library only; reads `state/state.json`). Add `--now 2026-10-31T01:45:00+00:00` to try another time. |
 | `python -m app run --manual` | Extra edition with whatever is new since the last one; can run any number of times (the workflow's manual `live` uses this). |
 | `python -m app run --no-pdf` | Don't create or send the PDF. |
 | `python -m app run --dry-run` | Real feeds + real model, **never sends**. Uses `output/dry-run-state.json` (fresh each time), so production state is untouched. |
@@ -550,7 +551,7 @@ To **reset** everything: delete `state/state.json` and commit. The next run star
 
 ## Cost and free-tier limits
 
-Daily usage: about 11 model requests ≈ **70k input + 25–45k output tokens** (Bengali output, plus hidden "reasoning" tokens on newer models, which are billed as output). The edition is built once, so the number of subscribers doesn't change the AI cost.
+Daily usage: about 19 model requests ≈ **75–90k input + 20–35k output tokens** (Bengali output, plus hidden "reasoning" tokens on newer models, which are billed as output). A real-model dry run on 2026-10-31 used 19 requests, 76k input and 20k output tokens: about **$0.15**. The edition is built once, so the number of subscribers doesn't change the AI cost.
 
 | Model (primary) | Price per 1M tokens (in / out)* | Per day | Per month |
 |---|---|---|---|
@@ -564,13 +565,13 @@ Daily usage: about 11 model requests ≈ **70k input + 25–45k output tokens** 
 
 **How spending is bounded:**
 - OpenAI is prepaid. With auto-recharge off, spend can never exceed the credit you added.
-- Each provider is capped at `llm.max_calls_per_run` (16) requests per run, retries included.
+- Each provider is capped at `llm.max_calls_per_run` (30) requests per run, retries included.
 - When OpenAI credit runs out, the run continues on Gemini's free tier. Gemini free-tier projects without billing just refuse requests over quota (HTTP 429), and the app makes a partial edition. Nothing upgrades to a paid plan automatically.
 - To go back to **৳0**, remove the `OPENAI_API_KEY` secret (or set `provider = "gemini"`); the app then runs on Gemini only.
 
 | Service | What's used | Free allowance (verify yourself) |
 |---|---|---|
-| GitHub Actions (private repo, GitHub Free) | ~3–6 min/day → 100–200 min/month | 2,000 min/month; 500 MB artifact storage |
+| GitHub Actions (private repo, GitHub Free) | ~18 one-minute gate ticks + ~8–25 min of real work a day → ~800–1,300 min/month | 2,000 min/month; 500 MB artifact storage |
 | Gemini Developer API (Free tier) | only on fallback days | Per-model RPM/RPD limits per project; resets at midnight Pacific time |
 | Telegram Bot API | ~4 messages × subscribers per day, plus replies | Free (rate limits: ~1 msg/s per chat, handled automatically) |
 | News feeds | a few HTTP requests/day | Free; subject to each publisher's terms |
@@ -601,7 +602,7 @@ Short per-minute rate limits are waited out and retried on OpenAI first. If Open
 ## Disabling the schedule
 
 - **Pause:** Actions → *Daily BCS briefing* → **⋯** (top right) → **Disable workflow**. Re-enable the same way.
-- **Remove the schedule but keep manual runs:** delete the two `schedule:` / `- cron:` lines in `.github/workflows/daily-briefing.yml`.
+- **Remove the schedule but keep manual runs:** delete the `schedule:` block (the `schedule:` line and all its `- cron:` lines) in `.github/workflows/daily-briefing.yml`.
 - **Stop completely:** delete the workflow file, and optionally revoke the OpenAI and Gemini keys and the bot (BotFather → `/revoke`).
 
 Note: GitHub automatically disables schedules in **public** repositories after 60 days without activity. The daily state commit counts as activity.
