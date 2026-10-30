@@ -136,7 +136,10 @@ deserves study time; then extract only what an examiner could ask, grounded in t
 RELEVANCE: set relevant=false for commentary/opinion, features, individual incidents or crimes, local administration,
 party politics, one company's commercial news, routine market prices or exchange rates, speculation about what may
 happen ("may rise", "likely", demands not yet decided), foreign domestic trivia, sports/entertainment/lifestyle, or
-anything that does not map clearly to one syllabus topic.
+anything that does not map clearly to one syllabus topic. International affairs ARE syllabus material (paper 007): a UN
+or agency report with global figures, a major election or change of government, a summit decision, a major conflict
+development or a named disaster abroad is relevant even when Bangladesh is not mentioned; digests of several unrelated
+items ("World News in Brief") are not.
 
 SCORING (strict and calibrated; most news is 3-6, reserve 9-10 for must-know items):
 - syllabus_relevance: 9-10 directly matches a syllabus item and an MCQ/written question can be set from it (constitutional
@@ -158,7 +161,8 @@ WHAT TO EXTRACT:
   which country or organisation, a headline national or global indicator (growth, inflation, budget size, reserves,
   an index rank), a first-ever or record, the name/number of a law, treaty, project or amendment, the date or place of a
   major event. Not one-off amounts (one month's collection, a contract value) unless it is the story's headline figure.
-- attributed_claims: at most 2, only claims central to the main event, each with who made it.
+- attributed_claims: at most 2, only claims central to the main event. "claim" is the claim itself in Bengali; put the
+  speaker only in "attributed_to" (name and post, short), never repeat it inside "claim".
 - why_it_matters: 1-2 specific sentences naming the syllabus area and what an examiner could ask. Never generic
   ("এটি বিসিএস-এর জন্য গুরুত্বপূর্ণ").
 - written_points: 2-3 short points a candidate could use in a written answer (significance, causes, effects,
@@ -169,6 +173,8 @@ WHAT TO EXTRACT:
 GROUNDING RULES:
 - Use ONLY facts stated in the provided source text. Never invent statistics, dates, quotations, treaty details or institutional positions.
 - Copy every number exactly as written in the source (same figure and unit; do not convert currencies or units, do not round).
+  Write the unit words in Bengali (percent → শতাংশ, tonnes → টন, days → দিন, crore → কোটি, billion → বিলিয়ন,
+  Tk → টাকা, $ → ডলার), e.g. "$20.7 billion" → "২০.৭ বিলিয়ন ডলার"; the value itself never changes.
 - Every key fact MUST include "evidence": a short verbatim quote copied character-for-character from the source text that supports it.
 - Claims made by a person or party go in attributed_claims with who made them, not in key_facts.
 - why_it_matters, written_points and whats_new are your analysis: base them on the source; do not add new figures.
@@ -251,8 +257,12 @@ RULES:
 - Exactly four options of the same kind as the answer: all years, all percentages, all countries, all organisations,
   all with the same unit. Distractors must be plausible (nearby figures, related organisations or places) yet clearly
   wrong according to the fact. Keep options similar in length. No "সবগুলো" / "কোনোটিই নয়". Exactly one correct option.
-- Facts with basis "gk" are verified background knowledge, not news: you may use them, but include at least one
-  question on the news itself. At most one question per story unless there are fewer stories than questions.
+- Mix the kinds of question the way BPSC does. Facts with basis "gk" are verified background knowledge (years,
+  founding, headquarters, amendments, capitals): write at least two candidates from them when they exist. From the news
+  facts prefer who/which/where questions (a name, organisation, place, rank, law or project). At most one candidate may
+  ask for a bare figure from the news (an amount, a count, a percentage), and only if it is the story's headline
+  indicator; never ask for a casualty count or a single report's estimate.
+- At most one question per story unless there are fewer stories than questions.
 - Copy numbers exactly as they appear in the fact.
 - Order questions from best to weakest. Return fewer if fewer good questions are possible; never invent facts.
 - explanation: one short Bengali sentence stating the fact behind the answer.

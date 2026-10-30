@@ -102,6 +102,8 @@ def validate_analysis(
             continue
         claim = clean_model_text(item.get("claim"), 300)
         who = clean_model_text(item.get("attributed_to"), 100)
+        if who and claim.startswith(who):  # "X: X said ..." reads badly; the speaker is shown separately
+            claim = claim[len(who):].lstrip(" :,-—").strip()
         evidence = clean_model_text(item.get("evidence"), 500)
         if who and verify_fact(claim, evidence, source_text):
             claims.append({"claim": claim, "attributed_to": who, "evidence": evidence})

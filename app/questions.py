@@ -21,6 +21,9 @@ GK_FACTS_PER_STORY = 2
 CANDIDATE_FACTOR = 2
 # Questions from verified static GK (not the article) per edition.
 MAX_GK_QUESTIONS = 2
+# Bare-figure questions from the news (an amount, a count) per edition: BPSC
+# asks some, but a quiz of three "how much" questions tests nothing durable.
+MAX_NEWS_FIGURE_QUESTIONS = 1
 
 # Units/kinds that every option must share with the correct answer.
 _UNITS = {
@@ -121,98 +124,106 @@ def option_problem(options: list[str], idx: int) -> str | None:
     return None
 
 
+def _check_candidate(item: object, by_id: dict[str, dict]) -> tuple[dict | None, str | None]:
+    """One candidate on its own: structure, wording, options, grounding."""
+    if not isinstance(item, dict):
+        return None, "not an object"
+    question = clean_model_text(item.get("question"), 300)
+    options = item.get("options")
+    idx = item.get("answer_index")
+    fact = by_id.get(item.get("fact_id")) if isinstance(item.get("fact_id"), str) else None
+    if not question:
+        return None, "empty question"
+    if not isinstance(options, list) or len(options) != 4 or not all(isinstance(o, str) for o in options):
+        return None, "options must be exactly four strings"
+    options = [clean_model_text(o, 150) for o in options]
+    if any(not o for o in options) or len({normalize_text(o) for o in options}) != 4:
+        return None, "options empty or duplicated"
+    if isinstance(idx, bool) or not isinstance(idx, int) or not 0 <= idx <= 3:
+        return None, "answer_index out of range"
+    if fact is None:
+        return None, "unknown fact_id"
+    if _BANNED_QUESTION.search(question):
+        return None, "question leans on 'the report/news' instead of standing alone"
+    key = normalize_text(question)
+    answer_key = normalize_text(options[idx])
+    if len(answer_key) >= 3 and not _PURE_NUMBER.fullmatch(answer_key) and answer_key in key:
+        return None, "question gives the answer away"
+    problem = option_problem(options, idx)
+    if problem:
+        return None, problem
+    supported_numbers = extract_numbers(fact["fact"]) | extract_numbers(fact["evidence"])
+    if not extract_numbers(options[idx]) <= supported_numbers:
+        return None, "correct answer contains numbers not in the supporting fact"
+    basis = fact.get("basis", "article")
+    return {
+        "question": question,
+        "options": options,
+        "answer_index": idx,
+        "explanation": clean_model_text(item.get("explanation"), 300),
+        "subject": item.get("subject") if item.get("subject") in SUBJECTS else fact["subject"],
+        "fact_id": fact["fact_id"],
+        "basis": basis,
+        "source_event_id": fact["event_id"],
+        "source_url": fact["url"],
+        "source_name": fact["source_name"],
+        "source_story": fact["story"],
+        "_key": key,
+        "_figure": basis == "article" and _has_digit(options[idx]) and "ordinal" not in _units(options[idx]),
+    }, None
+
+
 def validate_mcqs(raw: object, facts: list[dict], count: int) -> McqOutcome:
+    """Check every candidate, then pick up to ``count`` in the model's order:
+    one fact and one question each, at most one per story (unless there are
+    fewer stories than questions), at most MAX_GK_QUESTIONS from static GK and,
+    while other good candidates exist, at most MAX_NEWS_FIGURE_QUESTIONS that
+    ask for a bare figure from the news."""
     if isinstance(raw, list):
         raw = {"questions": raw}
     if not isinstance(raw, dict) or not isinstance(raw.get("questions"), list):
         raise InvalidResponseError("MCQ response lacks a 'questions' list")
     by_id = {f["fact_id"]: f for f in facts}
     out = McqOutcome()
-    used_facts: set[str] = set()
-    seen_questions: set[str] = set()
-    per_story: dict[str, int] = {}
-    stories = {f["event_id"] for f in facts}
-    story_cap = 1 if len(stories) >= count else 2
-    gk_used = 0
-
-    def reject(reason: str) -> None:
-        out.rejected += 1
-        out.reasons.append(reason)
-
+    valid = []
     for item in raw["questions"]:
-        if len(out.questions) >= count:
-            break
-        if not isinstance(item, dict):
-            reject("not an object")
-            continue
-        question = clean_model_text(item.get("question"), 300)
-        options = item.get("options")
-        idx = item.get("answer_index")
-        fact = by_id.get(item.get("fact_id")) if isinstance(item.get("fact_id"), str) else None
-        if not question:
-            reject("empty question")
-            continue
-        if not isinstance(options, list) or len(options) != 4 or not all(isinstance(o, str) for o in options):
-            reject("options must be exactly four strings")
-            continue
-        options = [clean_model_text(o, 150) for o in options]
-        if any(not o for o in options) or len({normalize_text(o) for o in options}) != 4:
-            reject("options empty or duplicated")
-            continue
-        if isinstance(idx, bool) or not isinstance(idx, int) or not 0 <= idx <= 3:
-            reject("answer_index out of range")
-            continue
-        if fact is None:
-            reject("unknown fact_id")
-            continue
-        if fact["fact_id"] in used_facts:
-            reject("fact already used")
-            continue
-        key = normalize_text(question)
-        if key in seen_questions:
-            reject("duplicate question")
-            continue
-        if _BANNED_QUESTION.search(question):
-            reject("question leans on 'the report/news' instead of standing alone")
-            continue
-        answer_key = normalize_text(options[idx])
-        if len(answer_key) >= 3 and not _PURE_NUMBER.fullmatch(answer_key) and answer_key in key:
-            reject("question gives the answer away")
-            continue
-        problem = option_problem(options, idx)
-        if problem:
-            reject(problem)
-            continue
-        supported_numbers = extract_numbers(fact["fact"]) | extract_numbers(fact["evidence"])
-        if not extract_numbers(options[idx]) <= supported_numbers:
-            reject("correct answer contains numbers not in the supporting fact")
-            continue
-        if per_story.get(fact["event_id"], 0) >= story_cap:
-            reject("story already has a question")
-            continue
-        if fact.get("basis") == "gk" and gk_used >= MAX_GK_QUESTIONS:
-            reject("enough background-knowledge questions")
-            continue
-        subject = item.get("subject") if item.get("subject") in SUBJECTS else fact["subject"]
-        used_facts.add(fact["fact_id"])
-        seen_questions.add(key)
-        per_story[fact["event_id"]] = per_story.get(fact["event_id"], 0) + 1
-        gk_used += fact.get("basis") == "gk"
-        out.questions.append(
-            {
-                "question": question,
-                "options": options,
-                "answer_index": idx,
-                "explanation": clean_model_text(item.get("explanation"), 300),
-                "subject": subject,
-                "fact_id": fact["fact_id"],
-                "basis": fact.get("basis", "article"),
-                "source_event_id": fact["event_id"],
-                "source_url": fact["url"],
-                "source_name": fact["source_name"],
-                "source_story": fact["story"],
-            }
-        )
+        candidate, reason = _check_candidate(item, by_id)
+        if candidate is None:
+            out.rejected += 1
+            out.reasons.append(reason)
+        else:
+            valid.append(candidate)
+    story_cap = 1 if len({f["event_id"] for f in facts}) >= count else 2
+    chosen: list[dict] = []
+    skipped: dict[int, str] = {}
+
+    def pick(limit_figures: bool) -> None:
+        for i, c in enumerate(valid):
+            if len(chosen) >= count:
+                return
+            if any(c is x for x in chosen):
+                continue
+            if any(x["fact_id"] == c["fact_id"] for x in chosen):
+                skipped[i] = "fact already used"
+            elif any(x["_key"] == c["_key"] for x in chosen):
+                skipped[i] = "duplicate question"
+            elif sum(x["source_event_id"] == c["source_event_id"] for x in chosen) >= story_cap:
+                skipped[i] = "story already has a question"
+            elif c["basis"] == "gk" and sum(x["basis"] == "gk" for x in chosen) >= MAX_GK_QUESTIONS:
+                skipped[i] = "enough background-knowledge questions"
+            elif limit_figures and c["_figure"] and sum(x["_figure"] for x in chosen) >= MAX_NEWS_FIGURE_QUESTIONS:
+                skipped[i] = "enough 'how much' questions from the news"
+            else:
+                chosen.append(c)
+                skipped.pop(i, None)
+
+    pick(limit_figures=True)
+    pick(limit_figures=False)  # a thin day: rather a second figure question than none
+    out.rejected += len(skipped)
+    out.reasons.extend(skipped.values())
+    order = {id(c): i for i, c in enumerate(valid)}
+    chosen.sort(key=lambda c: order[id(c)])
+    out.questions = [{k: v for k, v in c.items() if not k.startswith("_")} for c in chosen]
     return out
 
 

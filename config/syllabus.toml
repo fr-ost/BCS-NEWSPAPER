@@ -186,6 +186,11 @@ label = "আন্তর্জাতিক চুক্তি, সম্মে�
 subject = "international_affairs"
 hint = "treaties, conventions, summits, declarations and who hosts/chairs them"
 
+[topic.int_global_issues]
+label = "বৈশ্বিক সমস্যা: শরণার্থী, মানবাধিকার, মাদক ও ক্ষুধা"
+subject = "international_affairs"
+hint = "UN/agency reports and decisions with global figures on refugees, displacement, human rights, drug production and trafficking, hunger (not single incidents or news digests)"
+
 [topic.int_security_nuclear]
 label = "পারমাণবিক কর্মসূচি, অস্ত্র নিয়ন্ত্রণ ও নিরাপত্তা"
 subject = "foreign_policy_geopolitics"
