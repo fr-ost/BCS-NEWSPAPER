@@ -23023,37 +23023,6 @@
    "dry_run": false,
    "edition_date": "2026-10-24",
    "errors": [
-    "No subscribers yet: share the bot's invite link and have people press Start"
-   ],
-   "estimated_cost_usd": 0.0,
-   "finished_at": "2026-10-24T11:17:34+00:00",
-   "llm_calls": 0,
-   "llm_usage": {
-    "gemini": {
-     "calls_incl_retries": 0,
-     "input_tokens": 0,
-     "output_tokens": 0,
-     "requests": 0
-    },
-    "openai": {
-     "calls_incl_retries": 0,
-     "input_tokens": 0,
-     "output_tokens": 0,
-     "requests": 0
-    }
-   },
-   "mcqs": 0,
-   "outcome": "no_subscribers",
-   "partial": false,
-   "providers_disabled": {},
-   "run_id": "483d68df27",
-   "started_at": "2026-10-24T11:17:30+00:00",
-   "stories": 0
-  },
-  {
-   "dry_run": false,
-   "edition_date": "2026-10-24",
-   "errors": [
     "Source dhakatribune failed: robots.txt disallows https://www.dhakatribune.com/feed/",
     "Source dhakatribune_business failed: robots.txt disallows https://www.dhakatribune.com/feed/business"
    ],
@@ -23948,6 +23917,37 @@
    "run_id": "5dca8d6e30",
    "started_at": "2026-10-30T06:24:19+00:00",
    "stories": 7
+  },
+  {
+   "dry_run": false,
+   "edition_date": "2026-10-30",
+   "errors": [],
+   "estimated_cost_usd": 0.0,
+   "finished_at": "2026-10-30T07:59:04+00:00",
+   "llm_calls": 0,
+   "llm_usage": {
+    "gemini": {
+     "calls_incl_retries": 0,
+     "input_tokens": 0,
+     "output_tokens": 0,
+     "requests": 0
+    },
+    "openai": {
+     "calls_incl_retries": 0,
+     "input_tokens": 0,
+     "output_tokens": 0,
+     "requests": 0
+    }
+   },
+   "manual": false,
+   "mcqs": 0,
+   "outcome": "already_delivered",
+   "partial": false,
+   "prefiltered": 0,
+   "providers_disabled": {},
+   "run_id": "53f4846737",
+   "started_at": "2026-10-30T07:59:04+00:00",
+   "stories": 7
   }
  ],
  "schema_version": 2,
@@ -24071,5 +24071,5 @@
  "telegram": {
   "last_update_id": 894171906
  },
- "updated_at": "2026-10-30T06:24:20+00:00"
+ "updated_at": "2026-10-30T07:59:04+00:00"
 }
