@@ -48,6 +48,22 @@
    "title": "আজ টিভিতে যা দেখবেন (২৫ অক্টোবর ২০২৬)",
    "url": "https://www.prothomalo.com/sports/ajh9d32wuo"
   },
+  "a_02c44b6515a4aa19": {
+   "canonical_url": "https://thedailystar.net/news/environment/natural-disaster/news/fishing-trip-ends-tragedy-lightning-kills-six-pabna-4311396",
+   "content_hash": "eefb2e90a11ee5b1",
+   "date_status": "ok",
+   "event_id": "ev_4458887c99c8",
+   "excerpt": "Three children among the dead",
+   "extraction": null,
+   "id": "a_02c44b6515a4aa19",
+   "language": "en",
+   "published_at": "2026-10-30T14:17:02+00:00",
+   "retrieved_at": "2026-10-31T02:18:19+00:00",
+   "source_id": "dailystar_environment",
+   "source_name": "The Daily Star — Environment",
+   "title": "Fishing trip ends in tragedy as lightning kills six in Pabna",
+   "url": "https://www.thedailystar.net/news/environment/natural-disaster/news/fishing-trip-ends-tragedy-lightning-kills-six-pabna-4311396"
+  },
   "a_02c8c45354e9fb8f": {
    "canonical_url": "https://prothomalo.com/bangladesh/district/4d4ih7sxz4",
    "content_hash": "93a5b5e1c93fabf8",
@@ -95,6 +111,22 @@
    "source_name": "UN News — All",
    "title": "Protecting the storytellers: Women journalists on the frontline of conflict",
    "url": "https://news.un.org/feed/view/en/story/2026/10/1168691"
+  },
+  "a_036364402889738e": {
+   "canonical_url": "https://thedailystar.net/news/bangladesh/news/dengue-toll-hits-418-third-highest-2000-4311621",
+   "content_hash": "83eea1b5369e771f",
+   "date_status": "ok",
+   "event_id": "ev_6792e37e18fa",
+   "excerpt": "Three more dengue-related deaths were reported yesterday, bringing this year’s death toll to 418, the third-highest annual toll since Bangladesh recorded its first outbreak in 2000.",
+   "extraction": null,
+   "id": "a_036364402889738e",
+   "language": "en",
+   "published_at": "2026-10-30T18:00:00+00:00",
+   "retrieved_at": "2026-10-31T02:18:19+00:00",
+   "source_id": "dailystar_bangladesh",
+   "source_name": "The Daily Star — Bangladesh",
+   "title": "Dengue toll hits 418, third-highest since 2000",
+   "url": "https://www.thedailystar.net/news/bangladesh/news/dengue-toll-hits-418-third-highest-2000-4311621"
   },
   "a_03d8e619f3e8c21c": {
    "canonical_url": "https://prothomalo.com/religion/k0onzvtr4q",
@@ -216,6 +248,46 @@
    "title": "Bank Asia to set up Hong Kong subsidiary",
    "url": "https://www.thedailystar.net/business/economy/news/bank-asia-set-hong-kong-subsidiary-4310881"
   },
+  "a_07e6a9b89d0e0264": {
+   "canonical_url": "https://news.un.org/feed/view/en/story/2026/10/1168708",
+   "content_hash": "c04e2842fe4f9de8",
+   "date_status": "ok",
+   "event_id": "ev_84a56367f76d",
+   "excerpt": "More than 28 million people in the Democratic Republic of the Congo (DRC) are not getting enough to eat and the number is expected to tick up in the coming months, according to the latest alert from the IPC global food security monitor.",
+   "extraction": {
+    "chars": 2763,
+    "reason": "",
+    "status": "ok"
+   },
+   "id": "a_07e6a9b89d0e0264",
+   "language": "en",
+   "published_at": "2026-10-30T12:00:00+00:00",
+   "retrieved_at": "2026-10-31T02:18:19+00:00",
+   "source_id": "un_news_all",
+   "source_name": "UN News — All",
+   "title": "DR Congo: Hunger deepens for millions amid conflict, Ebola and climate shocks",
+   "url": "https://news.un.org/feed/view/en/story/2026/10/1168708"
+  },
+  "a_083611412d49721a": {
+   "canonical_url": "https://thedailystar.net/news/bangladesh/news/govt-recruit-one-lakh-health-workers-3yrs-4311606",
+   "content_hash": "e114f263f055e7f3",
+   "date_status": "ok",
+   "event_id": "ev_35e84a3118b0",
+   "excerpt": "In a major push to expand grassroots healthcare, the government plans to create nearly 1 lakh health worker posts over the next three years, bringing three categories of field-level caregivers under a unified system.",
+   "extraction": {
+    "chars": 7895,
+    "reason": "",
+    "status": "ok"
+   },
+   "id": "a_083611412d49721a",
+   "language": "en",
+   "published_at": "2026-10-30T18:00:00+00:00",
+   "retrieved_at": "2026-10-31T02:18:19+00:00",
+   "source_id": "dailystar_bangladesh",
+   "source_name": "The Daily Star — Bangladesh",
+   "title": "Govt to recruit one lakh health workers in 3yrs",
+   "url": "https://www.thedailystar.net/news/bangladesh/news/govt-recruit-one-lakh-health-workers-3yrs-4311606"
+  },
   "a_08c86eb06fc42fc6": {
    "canonical_url": "https://thedailystar.net/news/bangladesh/news/community-clinics-be-renamed-4306801",
    "content_hash": "d4750ac8db77746c",
@@ -251,6 +323,22 @@
    "source_name": "The Daily Star — World",
    "title": "Trump blasts Norway over Nobel Peace Prize snub",
    "url": "https://www.thedailystar.net/news/world/united-states/news/trump-blasts-norway-over-nobel-peace-prize-snub-4308441"
+  },
+  "a_0adb00a594893cd4": {
+   "canonical_url": "https://thedailystar.net/news/world/europe/news/halloween-protests-french-minister-warns-very-high-violence-risk-4311666",
+   "content_hash": "c6d8176cff119e82",
+   "date_status": "ok",
+   "event_id": "ev_f39a77d9747d",
+   "excerpt": "France’s interior minister on Thursday evening warned of a “very high risk of public disorder” and announced the deployment of around 70,000 police officers for a new wave of protests this weekend.",
+   "extraction": null,
+   "id": "a_0adb00a594893cd4",
+   "language": "en",
+   "published_at": "2026-10-30T18:00:00+00:00",
+   "retrieved_at": "2026-10-31T02:18:19+00:00",
+   "source_id": "dailystar_world",
+   "source_name": "The Daily Star — World",
+   "title": "Halloween protests: French minister warns of ‘very high’ violence risk",
+   "url": "https://www.thedailystar.net/news/world/europe/news/halloween-protests-french-minister-warns-very-high-violence-risk-4311666"
   },
   "a_0bb0660e741840c1": {
    "canonical_url": "https://thedailystar.net/business/news/bangladesh-secures-three-year-ldc-graduation-deferment-4311036",
@@ -504,6 +592,26 @@
    "title": "Plan for 35 new planes: Biman gives consultants just 8 days to bid",
    "url": "https://www.thedailystar.net/news/bangladesh/news/plan-35-new-planes-biman-gives-consultants-just-8-days-bid-4308391"
   },
+  "a_15652edba6d4e2f1": {
+   "canonical_url": "https://thedailystar.net/news/world/news/9m-refugees-need-extra-help-un-4311561",
+   "content_hash": "1102829d327b0521",
+   "date_status": "ok",
+   "event_id": "ev_0bedb3b772e6",
+   "excerpt": "The UN refugee agency yesterday said nine million people would need extra help to get through the coming winter in Ukraine, Syria, Lebanon and Afghanistan.",
+   "extraction": {
+    "chars": 1516,
+    "reason": "",
+    "status": "ok"
+   },
+   "id": "a_15652edba6d4e2f1",
+   "language": "en",
+   "published_at": "2026-10-30T18:00:00+00:00",
+   "retrieved_at": "2026-10-31T02:18:19+00:00",
+   "source_id": "dailystar_world",
+   "source_name": "The Daily Star — World",
+   "title": "9m refugees need extra help: UN",
+   "url": "https://www.thedailystar.net/news/world/news/9m-refugees-need-extra-help-un-4311561"
+  },
   "a_158a88a65033f7d4": {
    "canonical_url": "https://prothomalo.com/bangladesh/district/3aqr3iijem",
    "content_hash": "e036ac827e44af07",
@@ -592,6 +700,22 @@
    "title": "Afghanistan opium production jumps fivefold as farmers find ways round Taliban ban",
    "url": "https://news.un.org/feed/view/en/story/2026/10/1168697"
   },
+  "a_19f54197fc5b56b3": {
+   "canonical_url": "https://bigganchinta.com/cause/vy0q69n6ch",
+   "content_hash": "4fe1fd5b361985f5",
+   "date_status": "ok",
+   "event_id": "ev_ac46f93a1186",
+   "excerpt": "",
+   "extraction": null,
+   "id": "a_19f54197fc5b56b3",
+   "language": "bn",
+   "published_at": "2026-10-31T01:00:00+00:00",
+   "retrieved_at": "2026-10-31T02:18:19+00:00",
+   "source_id": "prothomalo",
+   "source_name": "Prothom Alo (প্রথম আলো)",
+   "title": "ব্যাথা পেলে বরফ দেব না গরম সেঁক",
+   "url": "https://www.bigganchinta.com/cause/vy0q69n6ch"
+  },
   "a_1a5798ce5fa5ad49": {
    "canonical_url": "https://prothomalo.com/world/middle-east/1o3rq9pezv",
    "content_hash": "747d40e1b65bedae",
@@ -644,6 +768,22 @@
    "title": "Cops foil protest against attacks on bauls over ‘Joy Bangla’ slogan",
    "url": "https://www.thedailystar.net/news/bangladesh/news/cops-foil-protest-against-attacks-bauls-over-joy-bangla-slogan-4308446"
   },
+  "a_1bdcda35d0086986": {
+   "canonical_url": "https://bbc.com/bengali/articles/c5vgjz9ez11lo?at_campaign=rss&at_medium=RSS",
+   "content_hash": "f5efc52247decf56",
+   "date_status": "ok",
+   "event_id": "ev_048d3f63d210",
+   "excerpt": "বাংলাদেশ বিমানবাহিনীর সাবেক ফ্লাইট লেফটেন্যান্ট তাহসিফ সাউরির মৃত্যুর তদন্তে নানা প্রশ্ন সামনে আসছে। এই ঘটনায় একজনকে হেফাজতে নিয়ে জিজ্ঞাসাবাদ করছে পুলিশ। তুরাগ নদের ওই এলাকায় তারা কেন গিয়েছিল সেই প্রশ্নেরও উত্তর খুঁজছে আইনশৃঙ্খলা বাহিনী।",
+   "extraction": null,
+   "id": "a_1bdcda35d0086986",
+   "language": "bn",
+   "published_at": "2026-10-30T11:06:54+00:00",
+   "retrieved_at": "2026-10-31T02:18:19+00:00",
+   "source_id": "bbc_bangla",
+   "source_name": "BBC News বাংলা",
+   "title": "বিমানবাহিনীর সাবেক কর্মকর্তার মৃত্যু রহস্য: যেসব বিষয় তদন্ত করছে পুলিশ",
+   "url": "https://www.bbc.com/bengali/articles/c5vgjz9ez11lo?at_medium=RSS&at_campaign=rss"
+  },
   "a_1cdef871ea21015c": {
    "canonical_url": "https://prothomalo.com/world/india/0ki4cxwm2d",
    "content_hash": "43488c3f33fb306d",
@@ -679,6 +819,22 @@
    "source_name": "Prothom Alo (প্রথম আলো)",
    "title": "ইসরায়েলে সংখ্যাগরিষ্ঠতা পাচ্ছে না কেউ, এখন কী হবে, প্রধানমন্ত্রী কে হবেন",
    "url": "https://www.prothomalo.com/world/middle-east/5qsk6wsy4l"
+  },
+  "a_1d49d57096a29226": {
+   "canonical_url": "https://bbc.com/bengali/articles/cr5yn72jwe7jo?at_campaign=rss&at_medium=RSS",
+   "content_hash": "7ad6174723c08655",
+   "date_status": "ok",
+   "event_id": "ev_eb230a3644a4",
+   "excerpt": "তেসরা নভেম্বর মার্কিন ভোটাররা ভোটকেন্দ্রে যাবেন, যে নির্বাচন ডোনাল্ড ট্রাম্পের প্রেসিডেন্ট পদের ওপর বড় ধরনের প্রভাব ফেলতে পারে।",
+   "extraction": null,
+   "id": "a_1d49d57096a29226",
+   "language": "bn",
+   "published_at": "2026-10-30T12:48:17+00:00",
+   "retrieved_at": "2026-10-31T02:18:19+00:00",
+   "source_id": "bbc_bangla",
+   "source_name": "BBC News বাংলা",
+   "title": "যুক্তরাষ্ট্রের মধ্যবর্তী নির্বাচন কী?",
+   "url": "https://www.bbc.com/bengali/articles/cr5yn72jwe7jo?at_medium=RSS&at_campaign=rss"
   },
   "a_1d7127ceff38cf32": {
    "canonical_url": "https://thedailystar.net/news/world/news/us-canada-working-deal-ease-steel-auto-tariffs-sources-say-4308516",
@@ -719,6 +875,22 @@
    "source_name": "The Daily Star — Business",
    "title": "Gas crisis slows machinery imports",
    "url": "https://www.thedailystar.net/business/economy/news/gas-crisis-slows-machinery-imports-4309151"
+  },
+  "a_1dfe6fe3d77f19fa": {
+   "canonical_url": "https://thedailystar.net/business/agriculture/news/jhum-harvest-begins-amid-fears-poor-yields-4311691",
+   "content_hash": "71a1ac7b9a7e92de",
+   "date_status": "ok",
+   "event_id": "ev_2d43fb119b7e",
+   "excerpt": "Farmers from indigenous communities across Rangamati have begun harvesting their jhum crops amid concerns over declining yields, which threaten their year-round food supply.",
+   "extraction": null,
+   "id": "a_1dfe6fe3d77f19fa",
+   "language": "en",
+   "published_at": "2026-10-30T18:00:00+00:00",
+   "retrieved_at": "2026-10-31T02:18:19+00:00",
+   "source_id": "dailystar_business",
+   "source_name": "The Daily Star — Business",
+   "title": "Jhum harvest begins amid fears of poor yields",
+   "url": "https://www.thedailystar.net/business/agriculture/news/jhum-harvest-begins-amid-fears-poor-yields-4311691"
   },
   "a_1e4362954edcc238": {
    "canonical_url": "https://prothomalo.com/bangladesh/p639yhxvrh",
@@ -1104,6 +1276,22 @@
    "title": "প্যারিসের কাছে প্রাণঘাতী গুলির ঘটনাকে 'বর্ণবাদী সন্ত্রাসী হামলা' বললেন ম্যাক্রঁ",
    "url": "https://www.bbc.com/bengali/articles/cm20vg3p6lzvo?at_medium=RSS&at_campaign=rss"
   },
+  "a_2c42536034d9b008": {
+   "canonical_url": "https://news.un.org/feed/view/en/story/2026/10/1168706",
+   "content_hash": "8b8f76326797cadf",
+   "date_status": "ok",
+   "event_id": "ev_c8c3e1b80b1d",
+   "excerpt": "More than 280,000 people have now been displaced by fighting in Yemen and many vulnerable people are unable to access lifesaving relief because it is too dangerous to do so, the UN refugee agency (UNHCR) said on Friday.",
+   "extraction": null,
+   "id": "a_2c42536034d9b008",
+   "language": "en",
+   "published_at": "2026-10-30T12:00:00+00:00",
+   "retrieved_at": "2026-10-31T02:18:19+00:00",
+   "source_id": "un_news_all",
+   "source_name": "UN News — All",
+   "title": "Yemen war makes reaching assistance too dangerous for many",
+   "url": "https://news.un.org/feed/view/en/story/2026/10/1168706"
+  },
   "a_2df8fbf29314b9a2": {
    "canonical_url": "https://prothomalo.com/bangladesh/3jaxo1i2p9",
    "content_hash": "371dc2890bf6cbac",
@@ -1167,6 +1355,22 @@
    "source_name": "BBC News বাংলা",
    "title": "'ক্রসফায়ার' নিয়ে আইজিপির মন্তব্যের পর কেন 'ব্যাখ্যা' দিতে হলো পুলিশকে?",
    "url": "https://www.bbc.com/bengali/articles/cmx2wr592pzko?at_medium=RSS&at_campaign=rss"
+  },
+  "a_2feb4fed889c1658": {
+   "canonical_url": "https://thedailystar.net/news/world/middle-east/news/houthi-drone-downed-makkah-region-4311641",
+   "content_hash": "57331104d54e38b0",
+   "date_status": "ok",
+   "event_id": "ev_f14344de90d5",
+   "excerpt": "The Saudi-led coalition said yesterday it intercepted and destroyed a drone fired by Yemen’s Houthis in the Makkah region, with the group later denying it targeted Islam’s holiest city.",
+   "extraction": null,
+   "id": "a_2feb4fed889c1658",
+   "language": "en",
+   "published_at": "2026-10-30T18:00:00+00:00",
+   "retrieved_at": "2026-10-31T02:18:19+00:00",
+   "source_id": "dailystar_world",
+   "source_name": "The Daily Star — World",
+   "title": "Houthi drone downed in Makkah region",
+   "url": "https://www.thedailystar.net/news/world/middle-east/news/houthi-drone-downed-makkah-region-4311641"
   },
   "a_30905f6b2900c01c": {
    "canonical_url": "https://prothomalo.com/education/higher-education/5dp552hmbv",
@@ -1632,6 +1836,38 @@
    "title": "মধ্যবর্তী নির্বাচনের আগে ট্রাম্পের জনসমর্থন বেড়ে দাঁড়িয়েছে ৩২ শতাংশে",
    "url": "https://www.prothomalo.com/world/usa/z2jq8r2da1"
   },
+  "a_42c86e2286208099": {
+   "canonical_url": "https://thedailystar.net/news/bangladesh/news/terrible-toilets-dhaka-bus-terminals-4311676",
+   "content_hash": "af0b2772103a95c7",
+   "date_status": "ok",
+   "event_id": "ev_788574bfe1cc",
+   "excerpt": "Afsana Akter arrived at Mohakhali Inter-District Bus Terminal one recent afternoon to catch a bus to Mymensingh.",
+   "extraction": null,
+   "id": "a_42c86e2286208099",
+   "language": "en",
+   "published_at": "2026-10-30T18:00:00+00:00",
+   "retrieved_at": "2026-10-31T02:18:19+00:00",
+   "source_id": "dailystar_bangladesh",
+   "source_name": "The Daily Star — Bangladesh",
+   "title": "Terrible toilets at Dhaka bus terminals",
+   "url": "https://www.thedailystar.net/news/bangladesh/news/terrible-toilets-dhaka-bus-terminals-4311676"
+  },
+  "a_436a57bb58fa01c6": {
+   "canonical_url": "https://prothomalo.com/technology/science/pnjv5d9t14",
+   "content_hash": "76349fba898b3d1a",
+   "date_status": "ok",
+   "event_id": "ev_b4d9146ca9f9",
+   "excerpt": "",
+   "extraction": null,
+   "id": "a_436a57bb58fa01c6",
+   "language": "bn",
+   "published_at": "2026-10-31T02:00:00+00:00",
+   "retrieved_at": "2026-10-31T02:18:19+00:00",
+   "source_id": "prothomalo",
+   "source_name": "Prothom Alo (প্রথম আলো)",
+   "title": "প্রতি ২৬ সেকেন্ডে কেন কেঁপে উঠছে পৃথিবী",
+   "url": "https://www.prothomalo.com/technology/science/pnjv5d9t14"
+  },
   "a_44dcc55eedd98cb8": {
    "canonical_url": "https://thedailystar.net/business/economy/news/rmg-wage-board-gazette-be-published-soon-minister-4309136",
    "content_hash": "4de4091de1b1e47c",
@@ -1739,6 +1975,22 @@
    "source_name": "Prothom Alo (প্রথম আলো)",
    "title": "প্রধানমন্ত্রীর সফরে বিনিয়োগ ও অর্থনৈতিক সহযোগিতায় নতুন গতির আশা টোকিওর",
    "url": "https://www.prothomalo.com/bangladesh/ob9uxo0iek"
+  },
+  "a_481208922520e7e9": {
+   "canonical_url": "https://thedailystar.net/business/economy/aviation/news/biman-forms-probe-committee-over-technical-fault-pms-flight-4311336",
+   "content_hash": "51ee141d7c61df52",
+   "date_status": "ok",
+   "event_id": "ev_b77c245531f4",
+   "excerpt": "Flight BG377 encountered a technical problem at Japan’s Narita International Airport on October 29, delaying its departure for Dhaka",
+   "extraction": null,
+   "id": "a_481208922520e7e9",
+   "language": "en",
+   "published_at": "2026-10-30T12:07:11+00:00",
+   "retrieved_at": "2026-10-31T02:18:19+00:00",
+   "source_id": "dailystar_business",
+   "source_name": "The Daily Star — Business",
+   "title": "Biman forms probe committee over technical fault on PM’s flight",
+   "url": "https://www.thedailystar.net/business/economy/aviation/news/biman-forms-probe-committee-over-technical-fault-pms-flight-4311336"
   },
   "a_48a4599bb1ca5d4a": {
    "canonical_url": "https://thedailystar.net/news/bangladesh/diplomacy/news/first-round-bangladesh-malaysia-fta-talks-oct-27-4307271",
@@ -2072,6 +2324,22 @@
    "title": "Japanese firms warming up to Bangladesh",
    "url": "https://www.thedailystar.net/business/economy/news/japanese-firms-warming-bangladesh-4307316"
   },
+  "a_52c26d19dc77d031": {
+   "canonical_url": "https://thedailystar.net/news/bangladesh/news/falling-veggie-prices-bring-relief-buyers-4311586",
+   "content_hash": "6f47533747d0c8b7",
+   "date_status": "ok",
+   "event_id": "ev_ee0fb58e03de",
+   "excerpt": "Prices of most vegetables have fallen in Dhaka kitchen markets as supplies of early-winter produce have increased. Over the past two weeks, prices of some vegetables have dropped by more than half.",
+   "extraction": null,
+   "id": "a_52c26d19dc77d031",
+   "language": "en",
+   "published_at": "2026-10-30T18:00:00+00:00",
+   "retrieved_at": "2026-10-31T02:18:19+00:00",
+   "source_id": "dailystar_bangladesh",
+   "source_name": "The Daily Star — Bangladesh",
+   "title": "Falling veggie prices bring relief to buyers",
+   "url": "https://www.thedailystar.net/news/bangladesh/news/falling-veggie-prices-bring-relief-buyers-4311586"
+  },
   "a_54248617eb9e2da6": {
    "canonical_url": "https://thedailystar.net/health/news/india-cuts-prices-hundreds-cancer-medicines-some-over-90-4310741",
    "content_hash": "a350942fbfbbdd60",
@@ -2087,6 +2355,22 @@
    "source_name": "The Daily Star — World",
    "title": "India cuts prices of hundreds of cancer medicines, some by over 90%",
    "url": "https://www.thedailystar.net/health/news/india-cuts-prices-hundreds-cancer-medicines-some-over-90-4310741"
+  },
+  "a_54b6fb98e8a86acc": {
+   "canonical_url": "https://prothomalo.com/world/india/nthb4c72il",
+   "content_hash": "45e59b6579131b03",
+   "date_status": "ok",
+   "event_id": "ev_8e0149a9d4f3",
+   "excerpt": "অনেক বিশ্লেষকের ধারণা, মধ্যবর্তী নির্বাচনে ট্রাম্পের দল আসন হারিয়ে তাঁর ক্ষমতা ও প্রভাব কিছুটা কমে এলে মোদি সরকার বরং স্বস্তি পেতে পারে।",
+   "extraction": null,
+   "id": "a_54b6fb98e8a86acc",
+   "language": "bn",
+   "published_at": "2026-10-31T02:00:00+00:00",
+   "retrieved_at": "2026-10-31T02:18:19+00:00",
+   "source_id": "prothomalo",
+   "source_name": "Prothom Alo (প্রথম আলো)",
+   "title": "‘আব কি বার, ট্রাম্প সরকার’ থেকে অবিশ্বাস—মোদির ভারত কেন ট্রাম্পের দিক থেকে মুখ ফিরিয়ে নিচ্ছে",
+   "url": "https://www.prothomalo.com/world/india/nthb4c72il"
   },
   "a_550bbc6da906a492": {
    "canonical_url": "https://news.un.org/feed/view/en/story/2026/10/1168687",
@@ -2179,6 +2463,22 @@
    "source_name": "The Daily Star — Bangladesh",
    "title": "Malaysia-bound workers may leave from early Nov",
    "url": "https://www.thedailystar.net/news/bangladesh/news/malaysia-bound-workers-may-leave-early-nov-4310326"
+  },
+  "a_5642ab9d6a947de8": {
+   "canonical_url": "https://prothomalo.com/world/asia/nl3agybg94",
+   "content_hash": "70ddd0668d1a8bc7",
+   "date_status": "ok",
+   "event_id": "ev_f8cbd23e8484",
+   "excerpt": "ইসরায়েলের নতুন পার্লামেন্ট শুরু হবে আগামী ১০ নভেম্বর। সরকার গঠন নিয়ে আলোচনা চললেও সেই দিনই নির্বাচিত সদস্যদের শপথ নিতে হবে।",
+   "extraction": null,
+   "id": "a_5642ab9d6a947de8",
+   "language": "bn",
+   "published_at": "2026-10-30T23:14:56+00:00",
+   "retrieved_at": "2026-10-31T02:18:19+00:00",
+   "source_id": "prothomalo",
+   "source_name": "Prothom Alo (প্রথম আলো)",
+   "title": "পার্লামেন্টে প্রথম দিনই স্পিকারকে হটাতে একমত আরব দলসহ নেতানিয়াহু বিরোধীরা",
+   "url": "https://www.prothomalo.com/world/asia/nl3agybg94"
   },
   "a_5679c036a11ff8d8": {
    "canonical_url": "https://bbc.co.uk/bengali/live/ckr5ylz8n6npt?at_campaign=rss&at_medium=RSS",
@@ -2279,6 +2579,22 @@
    "source_name": "The Daily Star — Bangladesh",
    "title": "Bangladeshis Executed in KSA: Jeddah mission thought they’re serving time",
    "url": "https://www.thedailystar.net/news/bangladesh/diplomacy/news/bangladeshis-executed-ksa-jeddah-mission-thought-theyre-serving-time-4307491"
+  },
+  "a_58d4b9ff651f3cd8": {
+   "canonical_url": "https://thedailystar.net/news/world/news/trump-opened-floodgate-freedom-venezuela-says-machado-4311546",
+   "content_hash": "ba669bf1faa51208",
+   "date_status": "ok",
+   "event_id": "ev_28713bc2b422",
+   "excerpt": "Venezuelan opposition leader Maria Corina Machado on Thursday thanked the government of US President Donald Trump for opening the “floodgate to freedom” by capturing president Nicolas Maduro in January.",
+   "extraction": null,
+   "id": "a_58d4b9ff651f3cd8",
+   "language": "en",
+   "published_at": "2026-10-30T18:00:00+00:00",
+   "retrieved_at": "2026-10-31T02:18:19+00:00",
+   "source_id": "dailystar_world",
+   "source_name": "The Daily Star — World",
+   "title": "Trump opened ‘floodgate to freedom’ for Venezuela - Says Machado",
+   "url": "https://www.thedailystar.net/news/world/news/trump-opened-floodgate-freedom-venezuela-says-machado-4311546"
   },
   "a_59b8800db0fdc946": {
    "canonical_url": "https://thedailystar.net/news/bangladesh/news/tarique-vows-address-japanese-firms-concerns-4310286",
@@ -2431,6 +2747,22 @@
    "source_name": "Prothom Alo (প্রথম আলো)",
    "title": "সকালেই পড়ুন আলোচিত ৫ খবর",
    "url": "https://www.prothomalo.com/bangladesh/zonzjmklra"
+  },
+  "a_5d40359764cf4e67": {
+   "canonical_url": "https://bbc.com/bengali/articles/c64g148l4e00o?at_campaign=rss&at_medium=RSS",
+   "content_hash": "b8f3b8b33c8da229",
+   "date_status": "ok",
+   "event_id": "ev_350d0fc798f4",
+   "excerpt": "সামগ্রিক ভোটদানের হার ২০২০ সালকে ছাড়িয়ে যাওয়ার পথে রয়েছে বলে মনে হচ্ছে, এমনকি সম্ভবত ২০১৮ সালকেও ছাড়িয়ে যাবে, যা মধ্যবর্তী নির্বাচনে ১৯১৪ সালের সামগ্রিক ভোটদানের হারের রেকর্ড ভেঙেছিল।",
+   "extraction": null,
+   "id": "a_5d40359764cf4e67",
+   "language": "bn",
+   "published_at": "2026-10-30T13:11:08+00:00",
+   "retrieved_at": "2026-10-31T02:18:19+00:00",
+   "source_id": "bbc_bangla",
+   "source_name": "BBC News বাংলা",
+   "title": "যুক্তরাষ্ট্রে মধ্যবর্তী নির্বাচনে আগাম ভোটের রেকর্ড ভাঙতে পারে",
+   "url": "https://www.bbc.com/bengali/articles/c64g148l4e00o?at_medium=RSS&at_campaign=rss"
   },
   "a_5dd3b6fb7b81626f": {
    "canonical_url": "https://prothomalo.com/world/middle-east/58dscj72oo",
@@ -2650,11 +2982,15 @@
   },
   "a_6898b0a4f4d53b87": {
    "canonical_url": "https://thedailystar.net/news/bangladesh/news/over-45-women-face-tech-facilitated-violence-study-4311101",
-   "content_hash": "52f15fd8a6930414",
+   "content_hash": "235ba5bffc07c627",
    "date_status": "ok",
    "event_id": "ev_b13cb7362d50",
    "excerpt": "Around 45.5 percent of women surveyed faced technology-facilitated gender-based violence (TFGBV), with 34.2 percent experiencing two or more overlapping forms of abuse and 14.8 percent reporting three or more, according to a study launched yesterday.",
-   "extraction": null,
+   "extraction": {
+    "chars": 5186,
+    "reason": "",
+    "status": "ok"
+   },
    "id": "a_6898b0a4f4d53b87",
    "language": "en",
    "published_at": "2026-10-29T18:00:00+00:00",
@@ -2711,6 +3047,22 @@
    "source_name": "The Daily Star — Business",
    "title": "Educated unemployment and the hidden realities of the labour market",
    "url": "https://www.thedailystar.net/business/news/educated-unemployment-and-the-hidden-realities-the-labour-market-4309531"
+  },
+  "a_6b7e4b2616184846": {
+   "canonical_url": "https://thedailystar.net/news/world/united-states/news/surging-costs-living-top-us-voter-concerns-4311541",
+   "content_hash": "6575fca451379cca",
+   "date_status": "ok",
+   "event_id": "ev_54a627db27a1",
+   "excerpt": "Soaring prices for gas, medicine and other cost of living essentials are preoccupying Americans as they start to cast their ballots ahead of next week’s midterm elections.",
+   "extraction": null,
+   "id": "a_6b7e4b2616184846",
+   "language": "en",
+   "published_at": "2026-10-30T18:00:00+00:00",
+   "retrieved_at": "2026-10-31T02:18:19+00:00",
+   "source_id": "dailystar_world",
+   "source_name": "The Daily Star — World",
+   "title": "Surging costs of living top US voter concerns",
+   "url": "https://www.thedailystar.net/news/world/united-states/news/surging-costs-living-top-us-voter-concerns-4311541"
   },
   "a_6ba48de46c90cd2b": {
    "canonical_url": "https://bbc.com/bengali/articles/cme3xejj0lzgo?at_campaign=rss&at_medium=RSS",
@@ -2778,11 +3130,15 @@
   },
   "a_6f125b9c611d2e82": {
    "canonical_url": "https://thedailystar.net/news/bangladesh/news/berc-public-hearing-lpg-selling-above-fixed-price-yet-fresh-hike-sought-4311096",
-   "content_hash": "a064ecfa50f6a6ef",
+   "content_hash": "18d4be01f307c48d",
    "date_status": "ok",
    "event_id": "ev_74e296d87300",
    "excerpt": "A technical committee of BERC has proposed raising the price of a 12kg liquefied petroleum gas (LPG) cylinder by 7.6 percent to Tk 1,976, following a review of the margins for bottlers, distributors and retailers.",
-   "extraction": null,
+   "extraction": {
+    "chars": 5604,
+    "reason": "",
+    "status": "ok"
+   },
    "id": "a_6f125b9c611d2e82",
    "language": "en",
    "published_at": "2026-10-29T18:00:00+00:00",
@@ -2840,6 +3196,22 @@
    "title": "'যৌন হয়রানি, ধর্মান্তরের চাপ', আতঙ্কে পশ্চিমবঙ্গের খ্রিস্টানরা",
    "url": "https://www.bbc.com/bengali/articles/cqkgj2kpmz44o?at_medium=RSS&at_campaign=rss"
   },
+  "a_704f1b2758c0d3e3": {
+   "canonical_url": "https://news.un.org/feed/view/en/story/2026/10/1168707",
+   "content_hash": "080df06d74bde2af",
+   "date_status": "ok",
+   "event_id": "ev_0c2d89e9654d",
+   "excerpt": "Israeli forces continue to push Palestinians into ever-smaller areas of the Gaza Strip while destroying civilian infrastructure and attacking displacement sites, the UN human rights office, OHCHR, warned on Friday amid concerns of ethnic cleansing.",
+   "extraction": null,
+   "id": "a_704f1b2758c0d3e3",
+   "language": "en",
+   "published_at": "2026-10-30T12:00:00+00:00",
+   "retrieved_at": "2026-10-31T02:18:19+00:00",
+   "source_id": "un_news_all",
+   "source_name": "UN News — All",
+   "title": "UN rights office warns of deepening displacement ‘nightmare’ in Gaza",
+   "url": "https://news.un.org/feed/view/en/story/2026/10/1168707"
+  },
   "a_704fb47f3318f06c": {
    "canonical_url": "https://thedailystar.net/business/economy/news/imported-items-contribution-inflation-rises-bb-4310871",
    "content_hash": "74b72b5bde941e98",
@@ -2895,6 +3267,22 @@
    "source_name": "The Daily Star — Business",
    "title": "Foreign loan disbursements fall 42% in Jul-Sept",
    "url": "https://www.thedailystar.net/business/economy/news/foreign-loan-disbursements-fall-42-jul-sept-4308141"
+  },
+  "a_71698034b1eea678": {
+   "canonical_url": "https://bbc.com/bengali/articles/cm4g15n49vyvo?at_campaign=rss&at_medium=RSS",
+   "content_hash": "e15b75c610716b10",
+   "date_status": "ok",
+   "event_id": "ev_26feaf630ace",
+   "excerpt": "বাংলাদেশের পার্বত্য অঞ্চলে অন্যতম একটি পর্যটন স্পট সাজেকে অস্থিরতা দীর্ঘস্থায়ী হতে পারে। সরেজমিনে খাগড়াছড়ি ঘুরে পাহাড়ের আন্দোলনকারী, ব্যবসায়ী জনপ্রতিনিধি এবং পাহাড়ি নেতাদের সঙ্গে কথা বলে এমন ধারণা পাওয়া গেছে।",
+   "extraction": null,
+   "id": "a_71698034b1eea678",
+   "language": "bn",
+   "published_at": "2026-10-30T08:32:38+00:00",
+   "retrieved_at": "2026-10-31T02:18:19+00:00",
+   "source_id": "bbc_bangla",
+   "source_name": "BBC News বাংলা",
+   "title": "সাজেকে অবরোধ, অস্থিরতার নেপথ্যে কী?",
+   "url": "https://www.bbc.com/bengali/articles/cm4g15n49vyvo?at_medium=RSS&at_campaign=rss"
   },
   "a_7169a1de04484f1d": {
    "canonical_url": "https://thedailystar.net/business/economy/news/prime-bank-partners-le-dor-offer-benefits-priority-banking-customers-4306546",
@@ -3348,6 +3736,22 @@
    "title": "The merchandiser’s vulnerable phone",
    "url": "https://www.thedailystar.net/business/column/news/the-merchandisers-vulnerable-phone-4308121"
   },
+  "a_8437e70f94b95407": {
+   "canonical_url": "https://thedailystar.net/news/bangladesh/news/biman-forms-probe-body-pms-flight-4311626",
+   "content_hash": "1e3f216f5a564e72",
+   "date_status": "ok",
+   "event_id": "ev_b77c245531f4",
+   "excerpt": "Biman Bangladesh Airlines has formed an investigation committee to determine the cause of the technical fault that delayed a flight carrying Prime Minister Tarique Rahman and his entourage home from Japan on October 29.",
+   "extraction": null,
+   "id": "a_8437e70f94b95407",
+   "language": "en",
+   "published_at": "2026-10-30T18:00:00+00:00",
+   "retrieved_at": "2026-10-31T02:18:19+00:00",
+   "source_id": "dailystar_bangladesh",
+   "source_name": "The Daily Star — Bangladesh",
+   "title": "Biman forms probe body on PM’s flight",
+   "url": "https://www.thedailystar.net/news/bangladesh/news/biman-forms-probe-body-pms-flight-4311626"
+  },
   "a_849f4c06be9cf64f": {
    "canonical_url": "https://thedailystar.net/news/bangladesh/diplomacy/news/japan-invest-635b-create-2-lakh-jobs-5yrs-4309386",
    "content_hash": "07926aaa51215d45",
@@ -3584,6 +3988,22 @@
    "title": "মিসরের প্রাচীন পিরামিডের পাশে দৌড় প্রতিযোগিতা",
    "url": "https://www.prothomalo.com/video/international/i7eidvzpxc"
   },
+  "a_8b86ad7a5fd66687": {
+   "canonical_url": "https://bbc.com/bengali/articles/ckq6npg02pvgo?at_campaign=rss&at_medium=RSS",
+   "content_hash": "528a0f455f8ef8f0",
+   "date_status": "ok",
+   "event_id": "ev_a33b813e3789",
+   "excerpt": "প্যাট্রিক স্টুয়ার্টের মৃত্যুতে তার প্রতি শ্রদ্ধা নিবেদন করে তাকে \"প্রজন্মের সবচেয়ে সম্মানিত ও প্রিয় অভিনেতা\" বলে অভিহিত করেছেন স্যার ইয়ান ম্যাকেলান।",
+   "extraction": null,
+   "id": "a_8b86ad7a5fd66687",
+   "language": "bn",
+   "published_at": "2026-10-30T05:43:53+00:00",
+   "retrieved_at": "2026-10-31T02:18:19+00:00",
+   "source_id": "bbc_bangla",
+   "source_name": "BBC News বাংলা",
+   "title": "কিংবদন্তি অভিনেতা স্যার প্যাট্রিক স্টুয়ার্টের মৃত্যু",
+   "url": "https://www.bbc.com/bengali/articles/ckq6npg02pvgo?at_medium=RSS&at_campaign=rss"
+  },
   "a_8bb5d252cba84fd2": {
    "canonical_url": "https://bbc.com/bengali/articles/c6kgqn0ndqw5o?at_campaign=rss&at_medium=RSS",
    "content_hash": "bef76e9568ac2244",
@@ -3814,11 +4234,15 @@
   },
   "a_90be790588663fe2": {
    "canonical_url": "https://thedailystar.net/news/world/asia/news/north-korea-fires-unknown-projectile-east-sea-seoul-4311046",
-   "content_hash": "e6d29ba4eefd4359",
+   "content_hash": "0fc860dceccdd919",
    "date_status": "ok",
    "event_id": "ev_d5ba7fbd1dff",
    "excerpt": "North Korea fired an unknown projectile off its east coast yesterday, Seoul’s defence ministry said, less than a week after South Korea proposed talks over a growing border row.",
-   "extraction": null,
+   "extraction": {
+    "chars": 2241,
+    "reason": "",
+    "status": "ok"
+   },
    "id": "a_90be790588663fe2",
    "language": "en",
    "published_at": "2026-10-29T18:00:00+00:00",
@@ -3896,6 +4320,22 @@
    "title": "Tk 87cr climate-smart urban project on cards",
    "url": "https://www.thedailystar.net/news/environment/news/tk-87cr-climate-smart-urban-project-cards-4306431"
   },
+  "a_932e7eca73184624": {
+   "canonical_url": "https://thedailystar.net/news/world/news/ukraine-resumes-attacks-russian-oil-refineries-4311506",
+   "content_hash": "3a8ea21230671470",
+   "date_status": "ok",
+   "event_id": "ev_425fca714fe9",
+   "excerpt": "Ukraine resumed strikes on Russian oil refineries after a pause with the overnight attack on facilities in Samara region, Russia’s Deputy Prime Minister Alexander Novak said yesterday.",
+   "extraction": null,
+   "id": "a_932e7eca73184624",
+   "language": "en",
+   "published_at": "2026-10-30T18:00:00+00:00",
+   "retrieved_at": "2026-10-31T02:18:19+00:00",
+   "source_id": "dailystar_world",
+   "source_name": "The Daily Star — World",
+   "title": "Ukraine resumes attacks on Russian oil refineries",
+   "url": "https://www.thedailystar.net/news/world/news/ukraine-resumes-attacks-russian-oil-refineries-4311506"
+  },
   "a_93fd626fd474c6a4": {
    "canonical_url": "https://thedailystar.net/news/bangladesh/news/islamic-leaders-want-peaceful-ijtema-4306731",
    "content_hash": "88d1215e78532859",
@@ -3959,6 +4399,22 @@
    "source_name": "Prothom Alo (প্রথম আলো)",
    "title": "তিলকের ঝড়ে শেষ ১৮ বলে ৪৬ রান তুলে জিতল ভারত",
    "url": "https://www.prothomalo.com/sports/cricket/0gcruux7et"
+  },
+  "a_960778251ffd27a0": {
+   "canonical_url": "https://thedailystar.net/news/bangladesh/news/food-preservation-tech-cut-post-harvest-losses-4311636",
+   "content_hash": "10b0a7a6295dabb5",
+   "date_status": "ok",
+   "event_id": "ev_8dd87ac65247",
+   "excerpt": "Farmers may soon be able to reduce post-harvest losses and extend the shelf life of agricultural produce through a radiation-based food preservation centre set up at the Bangladesh Institute of Nuclear Agriculture (BINA) Regional Research Station in Gazipur.",
+   "extraction": null,
+   "id": "a_960778251ffd27a0",
+   "language": "en",
+   "published_at": "2026-10-30T18:00:00+00:00",
+   "retrieved_at": "2026-10-31T02:18:19+00:00",
+   "source_id": "dailystar_bangladesh",
+   "source_name": "The Daily Star — Bangladesh",
+   "title": "Food preservation tech to cut post-harvest losses",
+   "url": "https://www.thedailystar.net/news/bangladesh/news/food-preservation-tech-cut-post-harvest-losses-4311636"
   },
   "a_96ce80987cbc8ec1": {
    "canonical_url": "https://thedailystar.net/news/bangladesh/news/tahmima-anams-good-books-set-tv-adaptation-4311141",
@@ -4344,6 +4800,22 @@
    "title": "How to build a balanced investment portfolio",
    "url": "https://www.thedailystar.net/business/economy/news/how-build-balanced-investment-portfolio-4310891"
   },
+  "a_9ef604b31fcb1e18": {
+   "canonical_url": "https://thedailystar.net/business/industries/tourism/news/sajek-road-blockade-be-relaxed-one-day-november-1-4311421",
+   "content_hash": "c29c2914549685c9",
+   "date_status": "ok",
+   "event_id": "ev_3184ba9cc2ee",
+   "excerpt": "Two protesting organisations announce one-day relaxation but say indefinite blockade will continue afterwards",
+   "extraction": null,
+   "id": "a_9ef604b31fcb1e18",
+   "language": "en",
+   "published_at": "2026-10-30T15:05:32+00:00",
+   "retrieved_at": "2026-10-31T02:18:19+00:00",
+   "source_id": "dailystar_business",
+   "source_name": "The Daily Star — Business",
+   "title": "Sajek road blockade to be relaxed for one day on November 1",
+   "url": "https://www.thedailystar.net/business/industries/tourism/news/sajek-road-blockade-be-relaxed-one-day-november-1-4311421"
+  },
   "a_9fec69f01689eaad": {
    "canonical_url": "https://thedailystar.net/news/bangladesh/news/govt-bets-tk-2320cr-jute-revival-4311086",
    "content_hash": "7b728d0dc24cd07c",
@@ -4512,6 +4984,22 @@
    "title": "আসিফের গাড়িতে গুলি, সিসিটিভিতে যে দৃশ্য দেখা গেলো",
    "url": "https://www.prothomalo.com/video/bangladesh/hn5acp3edj"
   },
+  "a_a826298a7b9418f4": {
+   "canonical_url": "https://thedailystar.net/news/world/news/kremlin-pressure-independent-russian-newspaper-novaya-gazeta-shuts-4311566",
+   "content_hash": "5ed30c488f3c6cdc",
+   "date_status": "ok",
+   "event_id": "ev_5c8c588527b5",
+   "excerpt": "Russia’s flagship independent newspaper Novaya Gazeta yesterday announced it was closing, saying it had been “killed” by state pressure after years of repression targeting its journalists whose reporting was critical of the Kremlin and its Ukraine war.",
+   "extraction": null,
+   "id": "a_a826298a7b9418f4",
+   "language": "en",
+   "published_at": "2026-10-30T18:00:00+00:00",
+   "retrieved_at": "2026-10-31T02:18:19+00:00",
+   "source_id": "dailystar_world",
+   "source_name": "The Daily Star — World",
+   "title": "Kremlin pressure: Independent Russian newspaper Novaya Gazeta shuts",
+   "url": "https://www.thedailystar.net/news/world/news/kremlin-pressure-independent-russian-newspaper-novaya-gazeta-shuts-4311566"
+  },
   "a_a8ec2e637b5d24eb": {
    "canonical_url": "https://thedailystar.net/news/world/india/news/india-evacuates-tens-thousands-cyclone-arnab-makes-landfall-4309461",
    "content_hash": "dc013967944e395b",
@@ -4527,6 +5015,22 @@
    "source_name": "The Daily Star — World",
    "title": "India evacuates tens of thousands as Cyclone Arnab makes landfall",
    "url": "https://www.thedailystar.net/news/world/india/news/india-evacuates-tens-thousands-cyclone-arnab-makes-landfall-4309461"
+  },
+  "a_aa019461e096ab45": {
+   "canonical_url": "https://thedailystar.net/news/world/news/bhutan-glacial-lake-outburst-triggers-flood-4311556",
+   "content_hash": "96f3ec752e80ea72",
+   "date_status": "ok",
+   "event_id": "ev_ec3149580197",
+   "excerpt": "A flood caused by the Shintaphu glacial lake bursting its banks has washed away infrastructure at the Gasa Tshachu natural hot springs in Bhutan, media reports said yesterday.",
+   "extraction": null,
+   "id": "a_aa019461e096ab45",
+   "language": "en",
+   "published_at": "2026-10-30T18:00:00+00:00",
+   "retrieved_at": "2026-10-31T02:18:19+00:00",
+   "source_id": "dailystar_world",
+   "source_name": "The Daily Star — World",
+   "title": "Bhutan glacial lake outburst triggers flood",
+   "url": "https://www.thedailystar.net/news/world/news/bhutan-glacial-lake-outburst-triggers-flood-4311556"
   },
   "a_ab0021f42b0e0daa": {
    "canonical_url": "https://prothomalo.com/world/europe/u68cbg6axs",
@@ -4819,6 +5323,26 @@
    "source_name": "The Daily Star — Business",
    "title": "Country’s only DAP fertiliser plant remains shut for 4 months",
    "url": "https://www.thedailystar.net/business/economy/news/countrys-only-dap-fertiliser-plant-remains-shut-4-months-4307311"
+  },
+  "a_b7a1ef7db2830430": {
+   "canonical_url": "https://thedailystar.net/news/bangladesh/news/measles-toll-rises-1251-2-more-die-4311651",
+   "content_hash": "d25a8c4f41aa79ee",
+   "date_status": "ok",
+   "event_id": "ev_e92b3c34faf0",
+   "excerpt": "Two patients died with measles-like symptoms in 24 hours, till 8:00am yesterday, bringing the country’s combined tally of confirmed and suspected measles-related deaths to 1,251 this year.",
+   "extraction": {
+    "chars": 1724,
+    "reason": "",
+    "status": "ok"
+   },
+   "id": "a_b7a1ef7db2830430",
+   "language": "en",
+   "published_at": "2026-10-30T18:00:00+00:00",
+   "retrieved_at": "2026-10-31T02:18:19+00:00",
+   "source_id": "dailystar_bangladesh",
+   "source_name": "The Daily Star — Bangladesh",
+   "title": "Measles toll rises to 1,251 as 2 more die",
+   "url": "https://www.thedailystar.net/news/bangladesh/news/measles-toll-rises-1251-2-more-die-4311651"
   },
   "a_b7c41e1d32e18017": {
    "canonical_url": "https://thedailystar.net/news/bangladesh/diplomacy/news/tarique-takaichi-begin-bilateral-summit-tokyo-4308526",
@@ -5556,6 +6080,22 @@
    "title": "Schools up, pupils down",
    "url": "https://www.thedailystar.net/news/bangladesh/news/schools-pupils-down-4307476"
   },
+  "a_c9e155394d81aad6": {
+   "canonical_url": "https://thedailystar.net/news/world/asia/news/binance-hit-largest-known-63b-crypto-hack-4311661",
+   "content_hash": "f0c848fd41488c8b",
+   "date_status": "ok",
+   "event_id": "ev_d9b4dd6b1a78",
+   "excerpt": "Hackers stole $6.3 billion from Binance, the world’s biggest cryptocurrency exchange, in a record theft that analysts pinned on North Korea and said could shake faith in digital assets.",
+   "extraction": null,
+   "id": "a_c9e155394d81aad6",
+   "language": "en",
+   "published_at": "2026-10-30T18:00:00+00:00",
+   "retrieved_at": "2026-10-31T02:18:19+00:00",
+   "source_id": "dailystar_world",
+   "source_name": "The Daily Star — World",
+   "title": "Binance hit by largest-known $6.3b crypto hack",
+   "url": "https://www.thedailystar.net/news/world/asia/news/binance-hit-largest-known-63b-crypto-hack-4311661"
+  },
   "a_ca6aaede3d19a860": {
    "canonical_url": "https://prothomalo.com/bangladesh/district/xovb7kygzk",
    "content_hash": "acc21a53faf4525c",
@@ -5691,6 +6231,22 @@
    "source_name": "Prothom Alo (প্রথম আলো)",
    "title": "তৃণমূল ছেড়ে বিজেপির ‘কথামতো’ চলার পুরস্কার পেলেন ইউসুফ পাঠান",
    "url": "https://www.prothomalo.com/world/india/3sswr2w925"
+  },
+  "a_cda984fd3145ada6": {
+   "canonical_url": "https://news.un.org/feed/view/en/story/2026/10/1168712",
+   "content_hash": "82b01665430b5a0a",
+   "date_status": "ok",
+   "event_id": "ev_a34f55d60a69",
+   "excerpt": "Each day the ceasefire in Oleshky holds means hope for civilians in the city, the UN’s top humanitarian official said, stressing that those wishing to leave must be able to do so safely and voluntarily.",
+   "extraction": null,
+   "id": "a_cda984fd3145ada6",
+   "language": "en",
+   "published_at": "2026-10-30T12:00:00+00:00",
+   "retrieved_at": "2026-10-31T02:18:19+00:00",
+   "source_id": "un_news_all",
+   "source_name": "UN News — All",
+   "title": "Ukraine: Oleshky ceasefire offers ‘hope’ for civilians as attacks on aid vehicles continue",
+   "url": "https://news.un.org/feed/view/en/story/2026/10/1168712"
   },
   "a_ce50ea849bceb872": {
    "canonical_url": "https://thedailystar.net/news/environment/wildlife/news/the-concrete-jungle-4311131",
@@ -5859,6 +6415,22 @@
    "source_name": "BBC News বাংলা",
    "title": "ইসরায়েলের নির্বাচনে নেতানিয়াহুর প্রধান প্রতিদ্বন্দ্বী গাদি আইজেনকোট কে?",
    "url": "https://www.bbc.com/bengali/articles/c6pwg0v1wg80o?at_medium=RSS&at_campaign=rss"
+  },
+  "a_d22d1e164782f671": {
+   "canonical_url": "https://thedailystar.net/business/global-economy/south-asia/news/over-12-lakh-register-bhutans-historic-108-chortens-event-4311456",
+   "content_hash": "3a80864c4bbea011",
+   "date_status": "ok",
+   "event_id": "ev_c6da2b035206",
+   "excerpt": "Four-day gathering begins Nov 1 at Gelephu Mindfulness City; governor outlines judicial and investment progress",
+   "extraction": null,
+   "id": "a_d22d1e164782f671",
+   "language": "en",
+   "published_at": "2026-10-30T16:28:12+00:00",
+   "retrieved_at": "2026-10-31T02:18:19+00:00",
+   "source_id": "dailystar_business",
+   "source_name": "The Daily Star — Business",
+   "title": "Over 1.2 lakh register for Bhutan’s historic 108 chortens event",
+   "url": "https://www.thedailystar.net/business/global-economy/south-asia/news/over-12-lakh-register-bhutans-historic-108-chortens-event-4311456"
   },
   "a_d243bc3f4d175d03": {
    "canonical_url": "https://prothomalo.com/world/middle-east/aky04rpw0o",
@@ -6180,6 +6752,22 @@
    "title": "Obama blasts Trump’s ‘chaos, cruelty’",
    "url": "https://www.thedailystar.net/news/world/united-states/news/obama-blasts-trumps-chaos-cruelty-4307431"
   },
+  "a_da3c286223497d70": {
+   "canonical_url": "https://bbc.com/bengali/articles/cwj3474djk12o?at_campaign=rss&at_medium=RSS",
+   "content_hash": "488054d640281a85",
+   "date_status": "ok",
+   "event_id": "ev_4ae34fc5ded3",
+   "excerpt": "শুধু গোয়েন্দা তথ্য কিংবা সরকার পতনের চেষ্টা নয়, তৃতীয় আরেকটি কারণেও জামায়াত-আওয়ামীলীগ আঁতাতের ষড়যন্ত্র দেখছে বিএনপি। সেটা হচ্ছে, জুলাই সনদ এবং সংবিধান নিয়ে ‘অচলাবস্থা তৈরির চেষ্টা’।",
+   "extraction": null,
+   "id": "a_da3c286223497d70",
+   "language": "bn",
+   "published_at": "2026-10-31T01:51:45+00:00",
+   "retrieved_at": "2026-10-31T02:18:19+00:00",
+   "source_id": "bbc_bangla",
+   "source_name": "BBC News বাংলা",
+   "title": "আওয়ামী লীগের সঙ্গে 'আঁতাত' নিয়ে বিএনপি-জামায়াতের পাল্টাপাল্টি সন্দেহ, নেপথ্যে কী?",
+   "url": "https://www.bbc.com/bengali/articles/cwj3474djk12o?at_medium=RSS&at_campaign=rss"
+  },
   "a_da72d5213f42c766": {
    "canonical_url": "https://haal.fashion/celeb/look/x6q8ahkc9o",
    "content_hash": "1d68557f44dcf492",
@@ -6211,6 +6799,26 @@
    "source_name": "Prothom Alo (প্রথম আলো)",
    "title": "হানিফসহ চার আসামির বিরুদ্ধে করা মামলার রায় আজ",
    "url": "https://www.prothomalo.com/bangladesh/jockkxb1no"
+  },
+  "a_dba9b47b481f1aab": {
+   "canonical_url": "https://thedailystar.net/news/world/middle-east/news/israeli-elections-stage-set-tough-coalition-dialogue-4311646",
+   "content_hash": "6db875e67c67687e",
+   "date_status": "ok",
+   "event_id": "ev_205014fc928b",
+   "excerpt": "Prime Minister Benjamin Netanyahu’s camp finished ahead of the opposition but remained well short of a majority, final results from Israel’s general election showed yesterday, setting the stage for tough coalition talks or potentially another vote.",
+   "extraction": {
+    "chars": 2990,
+    "reason": "",
+    "status": "ok"
+   },
+   "id": "a_dba9b47b481f1aab",
+   "language": "en",
+   "published_at": "2026-10-30T18:00:00+00:00",
+   "retrieved_at": "2026-10-31T02:18:19+00:00",
+   "source_id": "dailystar_world",
+   "source_name": "The Daily Star — World",
+   "title": "Israeli elections: Stage set for tough coalition dialogue",
+   "url": "https://www.thedailystar.net/news/world/middle-east/news/israeli-elections-stage-set-tough-coalition-dialogue-4311646"
   },
   "a_dbaa36e908891427": {
    "canonical_url": "https://thedailystar.net/news/world/news/trump-obama-trade-barbs-campaign-trail-4310971",
@@ -6840,6 +7448,22 @@
    "title": "Trump lifts some Canada tariffs ahead of midterms",
    "url": "https://www.thedailystar.net/business/global-economy/news/trump-lifts-some-canada-tariffs-ahead-midterms-4306571"
   },
+  "a_f0814201b932e0ba": {
+   "canonical_url": "https://thedailystar.net/news/bangladesh/news/attacks-minorities-rise-when-democracy-falters-minister-4311616",
+   "content_hash": "2183d713bb74138d",
+   "date_status": "ok",
+   "event_id": "ev_83d856b2f6f0",
+   "excerpt": "Attacks on religious and ethnic communities in Bangladesh have often followed setbacks to democracy, underscoring the need for an inclusive state where people of all faiths and backgrounds can live without fear, Liberation War Affairs Minister Ahmed Azam Khan said yesterday.",
+   "extraction": null,
+   "id": "a_f0814201b932e0ba",
+   "language": "en",
+   "published_at": "2026-10-30T18:00:00+00:00",
+   "retrieved_at": "2026-10-31T02:18:19+00:00",
+   "source_id": "dailystar_bangladesh",
+   "source_name": "The Daily Star — Bangladesh",
+   "title": "Attacks on minorities rise when democracy falters: minister",
+   "url": "https://www.thedailystar.net/news/bangladesh/news/attacks-minorities-rise-when-democracy-falters-minister-4311616"
+  },
   "a_f082a1ee1755eac8": {
    "canonical_url": "https://thedailystar.net/news/world/middle-east/news/saudi-oil-sites-aden-base-attacked-after-deadly-strikes-say-houthis-4306701",
    "content_hash": "cb249a66673a69cd",
@@ -6972,6 +7596,22 @@
    "title": "‘Brazil is no one’s backyard’",
    "url": "https://www.thedailystar.net/news/world/news/brazil-no-ones-backyard-4308421"
   },
+  "a_f4c45ead35ae2fb4": {
+   "canonical_url": "https://thedailystar.net/news/politics/news/jamaat-eyes-advisory-council-beyond-party-ranks-4311631",
+   "content_hash": "f512782562c24aa8",
+   "date_status": "ok",
+   "event_id": "ev_b1f51bc79af4",
+   "excerpt": "Jamaat-e-Islami is planning to form an advisory council comprising experts and intellectuals from outside the party to help shape its policies and decisions.",
+   "extraction": null,
+   "id": "a_f4c45ead35ae2fb4",
+   "language": "en",
+   "published_at": "2026-10-30T18:00:00+00:00",
+   "retrieved_at": "2026-10-31T02:18:19+00:00",
+   "source_id": "dailystar_bangladesh",
+   "source_name": "The Daily Star — Bangladesh",
+   "title": "Jamaat eyes advisory council beyond party ranks",
+   "url": "https://www.thedailystar.net/news/politics/news/jamaat-eyes-advisory-council-beyond-party-ranks-4311631"
+  },
   "a_f5841374c21a2b05": {
    "canonical_url": "https://thedailystar.net/business/economy/news/economic-zones-built-end-land-gas-woes-are-stuck-both-4310896",
    "content_hash": "4e3224f0abf6643e",
@@ -7051,6 +7691,26 @@
    "source_name": "Prothom Alo (প্রথম আলো)",
    "title": "খাওয়ার সময় অস্বাভাবিক ঘাম হয় কেন?",
    "url": "https://www.prothomalo.com/lifestyle/health/nrezc9j9m7"
+  },
+  "a_fce6834aa3094b6a": {
+   "canonical_url": "https://news.un.org/feed/view/en/story/2026/10/1168713",
+   "content_hash": "bac56fe598b95193",
+   "date_status": "ok",
+   "event_id": "ev_27470c9925a6",
+   "excerpt": "More than 300,000 people displaced since early March remain internally displaced in Lebanon, where the humanitarian crisis is “far from over,” according to the UN’s aid coordination office (OCHA).",
+   "extraction": {
+    "chars": 4925,
+    "reason": "",
+    "status": "ok"
+   },
+   "id": "a_fce6834aa3094b6a",
+   "language": "en",
+   "published_at": "2026-10-30T12:00:00+00:00",
+   "retrieved_at": "2026-10-31T02:18:19+00:00",
+   "source_id": "un_news_all",
+   "source_name": "UN News — All",
+   "title": "World News in Brief: 300,000 displaced in Lebanon, Türk ‘deeply concerned’ over Novaya Gazeta closure, $50 million refugee appeal, World Cities Day",
+   "url": "https://news.un.org/feed/view/en/story/2026/10/1168713"
   },
   "a_ff762826091a1179": {
    "canonical_url": "https://thedailystar.net/news/world/middle-east/news/us-drone-downed-over-port-city-bandar-abbas-4307441",
@@ -8861,6 +9521,227 @@
     "ev_85e447789418"
    ],
    "unprocessed_candidates": 12
+  },
+  "2026-10-31": {
+   "attempts": 1,
+   "chunks": [
+    {
+     "attempts": 0,
+     "index": 0,
+     "message_id": null,
+     "sha": "64cc156305b421a5",
+     "status": "pending"
+    },
+    {
+     "attempts": 0,
+     "index": 1,
+     "message_id": null,
+     "sha": "441ede9d3e19fb17",
+     "status": "pending"
+    },
+    {
+     "attempts": 0,
+     "index": 2,
+     "message_id": null,
+     "sha": "1cd72338a2cfc46d",
+     "status": "pending"
+    },
+    {
+     "attempts": 0,
+     "index": 3,
+     "message_id": null,
+     "sha": "33973221b1ce0947",
+     "status": "pending"
+    },
+    {
+     "attempts": 0,
+     "index": 4,
+     "message_id": null,
+     "sha": "dc13976ced18e914",
+     "status": "pending"
+    },
+    {
+     "attempts": 0,
+     "index": 5,
+     "message_id": null,
+     "sha": "cb1e5dc1b9749af3",
+     "status": "pending"
+    },
+    {
+     "attempts": 0,
+     "index": 6,
+     "message_id": null,
+     "sha": "b505a679124a99e1",
+     "status": "pending"
+    },
+    {
+     "attempts": 0,
+     "index": 7,
+     "message_id": null,
+     "sha": "170c39d826d1fb56",
+     "status": "pending"
+    },
+    {
+     "attempts": 0,
+     "index": 8,
+     "message_id": null,
+     "sha": "742b7ddf40ee3995",
+     "status": "pending"
+    }
+   ],
+   "created_at": "2026-10-31T02:18:19+00:00",
+   "date": "2026-10-31",
+   "delivered_at": "2026-10-31T02:20:39+00:00",
+   "deliveries": {
+    "1033339929": {
+     "attempts": 1,
+     "delivered_at": "2026-10-31T02:20:17+00:00",
+     "pdf_message_id": 325,
+     "sent": {
+      "0": 316,
+      "1": 317,
+      "2": 318,
+      "3": 319,
+      "4": 320,
+      "5": 321,
+      "6": 322,
+      "7": 323,
+      "8": 324
+     },
+     "status": "done"
+    },
+    "1433480564": {
+     "attempts": 1,
+     "delivered_at": "2026-10-31T02:20:39+00:00",
+     "pdf_message_id": 345,
+     "sent": {
+      "0": 336,
+      "1": 337,
+      "2": 338,
+      "3": 339,
+      "4": 340,
+      "5": 341,
+      "6": 342,
+      "7": 343,
+      "8": 344
+     },
+     "status": "done"
+    },
+    "1679140572": {
+     "attempts": 1,
+     "delivered_at": "2026-10-31T02:20:05+00:00",
+     "pdf_message_id": 315,
+     "sent": {
+      "0": 306,
+      "1": 307,
+      "2": 308,
+      "3": 309,
+      "4": 310,
+      "5": 311,
+      "6": 312,
+      "7": 313,
+      "8": 314
+     },
+     "status": "done"
+    },
+    "7872342619": {
+     "attempts": 1,
+     "delivered_at": "2026-10-31T02:20:28+00:00",
+     "pdf_message_id": 335,
+     "sent": {
+      "0": 326,
+      "1": 327,
+      "2": 328,
+      "3": 329,
+      "4": 330,
+      "5": 331,
+      "6": 332,
+      "7": 333,
+      "8": 334
+     },
+     "status": "done"
+    }
+   },
+   "dry_run": false,
+   "edition_date": "2026-10-31",
+   "failure_notified": false,
+   "manual": false,
+   "mcqs": [
+    {
+     "answer_index": 2,
+     "basis": "article",
+     "explanation": "প্রদত্ত তথ্যে বছরে আনুমানিক $20.7 billion ক্ষতির কথা বলা হয়েছে।",
+     "fact_id": "f1",
+     "options": [
+      "$17.4 billion",
+      "$19.3 billion",
+      "$20.7 billion",
+      "$22.9 billion"
+     ],
+     "question": "জলবায়ু-সংবেদনশীল স্বাস্থ্যঝুঁকি নিয়ে বাংলাদেশের গবেষণা প্রতিবেদনে বছরে আনুমানিক কত ক্ষতির কথা বলা হয়েছে?",
+     "source_event_id": "ev_e2783d10abdb",
+     "source_name": "The Daily Star — Environment",
+     "source_story": "জলবায়ু-সংবেদনশীল স্বাস্থ্যঝুঁকিতে বছরে ২০.৭ বিলিয়ন ডলার ক্ষতি",
+     "source_url": "https://www.thedailystar.net/news/environment/news/bangladesh-loses-207b-annually-climate-sensitive-health-risks-study-4310776",
+     "subject": "environment_climate"
+    },
+    {
+     "answer_index": 2,
+     "basis": "article",
+     "explanation": "সমীক্ষায় অংশ নেওয়া নারীদের ৪৫.৫ শতাংশ TFGBV-এর শিকার হয়েছেন।",
+     "fact_id": "f2",
+     "options": [
+      "38.5 শতাংশ",
+      "41.5 শতাংশ",
+      "45.5 শতাংশ",
+      "52.5 শতাংশ"
+     ],
+     "question": "বাংলাদেশে প্রযুক্তিফ্যাসিলিটেড জেন্ডার-ভিত্তিক সহিংসতা নিয়ে সমীক্ষায় অংশ নেওয়া নারীদের কত শতাংশ এই সহিংসতার শিকার হয়েছেন?",
+     "source_event_id": "ev_b13cb7362d50",
+     "source_name": "The Daily Star — Bangladesh",
+     "source_story": "প্রযুক্তিনির্ভর নারীবিরোধী সহিংসতা নিয়ে নতুন সমীক্ষা",
+     "source_url": "https://www.thedailystar.net/news/bangladesh/news/over-45-women-face-tech-facilitated-violence-study-4311101",
+     "subject": "bangladesh_affairs"
+    },
+    {
+     "answer_index": 1,
+     "basis": "article",
+     "explanation": "প্রদত্ত তথ্যে পূর্ব উপকূলের বাইরে প্রক্ষেপণ নিক্ষেপের কথা বলা হয়েছে।",
+     "fact_id": "f8",
+     "options": [
+      "দক্ষিণ উপকূলের বাইরে",
+      "পূর্ব উপকূলের বাইরে",
+      "উত্তর উপকূলের বাইরে",
+      "পশ্চিম উপকূলের বাইরে"
+     ],
+     "question": "উত্তর কোরিয়া কোথার বাইরে একটি অজ্ঞাত প্রক্ষেপণ নিক্ষেপ করেছে?",
+     "source_event_id": "ev_d5ba7fbd1dff",
+     "source_name": "The Daily Star — World",
+     "source_story": "উত্তর কোরিয়া পূর্ব সাগরে অজ্ঞাত প্রক্ষেপণ নিক্ষেপ করেছে: সিউল",
+     "source_url": "https://www.thedailystar.net/news/world/asia/news/north-korea-fires-unknown-projectile-east-sea-seoul-4311046",
+     "subject": "foreign_policy_geopolitics"
+    }
+   ],
+   "partial": false,
+   "partial_reasons": [],
+   "pdf": {
+    "bytes": 432377,
+    "file": "edition-2026-10-31.pdf",
+    "sha": "851130e43d9ef0b5"
+   },
+   "recipients": 4,
+   "status": "delivered",
+   "story_event_ids": [
+    "ev_e2783d10abdb",
+    "ev_b13cb7362d50",
+    "ev_27470c9925a6",
+    "ev_205014fc928b",
+    "ev_35e84a3118b0",
+    "ev_ba4d8bf78c1b",
+    "ev_74e296d87300",
+    "ev_d5ba7fbd1dff"
+   ],
+   "unprocessed_candidates": 0
   }
  },
  "events": {
@@ -9291,6 +10172,32 @@
    "screening_attempts": 0,
    "status": "included",
    "updated_at": "2026-10-24T11:39:11+00:00"
+  },
+  "ev_048d3f63d210": {
+   "analysis": null,
+   "article_ids": [
+    "a_1bdcda35d0086986"
+   ],
+   "attempts": 0,
+   "created_at": "2026-10-31T02:18:19+00:00",
+   "event_id": "ev_048d3f63d210",
+   "included_in": null,
+   "last_error": null,
+   "screening": {
+    "categories": [
+     "bangladesh_affairs"
+    ],
+    "decision": "reject",
+    "exam_focus": "none",
+    "exam_hook": "",
+    "priority": 0.0,
+    "rationale": "An investigation into one individual’s death is a case-specific incident, not a policy development.",
+    "story_type": "court_case_individual",
+    "topic": null
+   },
+   "screening_attempts": 0,
+   "status": "rejected",
+   "updated_at": "2026-10-31T02:18:19+00:00"
   },
   "ev_050e26cb11bd": {
    "analysed_at": "2026-10-28T05:30:11+00:00",
@@ -9832,6 +10739,98 @@
    "status": "rejected",
    "updated_at": "2026-10-29T05:39:15+00:00"
   },
+  "ev_0bedb3b772e6": {
+   "analysed_at": "2026-10-31T02:18:19+00:00",
+   "analysis": {
+    "analysed_article_id": "a_15652edba6d4e2f1",
+    "attributed_claims": [
+     {
+      "attributed_to": "Dominique Hyde, external relations director, UNHCR",
+      "claim": "সম্পদ অল্প এবং ব্যয় দ্রুত বাড়ছে, যখন উত্তরের গোলার্ধে শীত এগিয়ে আসছে।",
+      "evidence": "“Resources are scarce and costs are spiralling just as winter looms in the northern hemisphere,” said Dominique Hyde, the agency’s external relations director."
+     },
+     {
+      "attributed_to": "Dominique Hyde, external relations director, UNHCR",
+      "claim": "এই নাজুক দেশগুলোতে লাখো মানুষ ঠান্ডা থেকে যথেষ্ট সুরক্ষা না পাওয়ার ঝুঁকিতে আছে।",
+      "evidence": "“Millions in these fragile countries risk facing ....enough protection from cold.”"
+     }
+    ],
+    "background_context": "UNHCR হলো জাতিসংঘের শরণার্থী বিষয়ক সংস্থা, যা বাস্তুচ্যুত মানুষের সুরক্ষা ও সহায়তায় কাজ করে।",
+    "categories": [
+     "international_affairs"
+    ],
+    "criteria": {
+     "factual_density": 6.0,
+     "novelty": 6.0,
+     "significance": 6.0,
+     "syllabus_relevance": 7.0,
+     "written_potential": 5.0
+    },
+    "exam_focus": "prelims",
+    "headline_bn": "শীতে ৯ মিলিয়ন শরণার্থীর জন্য অতিরিক্ত সহায়তা চাইল ইউএনএইচসিআর",
+    "institutions": [
+     "UNHCR",
+     "জাতিসংঘ শরণার্থী সংস্থা"
+    ],
+    "key_facts": [
+     {
+      "evidence": "Launching a fundraising appeal, the UNHCR said it hoped to raise at least $50 million for winter support --",
+      "fact": "শীতকালীন সহায়তার জন্য ইউএনএইচসিআর অন্তত ৫০ মিলিয়ন ডলার তুলতে চায়।",
+      "kind": "number",
+      "prelims": true
+     },
+     {
+      "evidence": "$3 million more than it raised last year.",
+      "fact": "এটি গত বছরের তুলনায় ৩ মিলিয়ন ডলার বেশি।",
+      "kind": "number",
+      "prelims": true
+     },
+     {
+      "evidence": "Launching a fundraising appeal, the UNHCR said it hoped to raise at least $50 million for winter support",
+      "fact": "বিষয়টি ইউএনএইচসিআর-এর শীতকালীন সহায়তা আবেদন।",
+      "kind": "institution",
+      "prelims": false
+     }
+    ],
+    "likely_question": "বিশ্বের শরণার্থী সংকটে শীতকালীন সহায়তা, তার মানবিক তাৎপর্য ও আন্তর্জাতিক প্রতিক্রিয়া আলোচনা করুন।",
+    "mode": "full",
+    "score": 61.5,
+    "syllabus_label": "বৈশ্বিক সমস্যা: শরণার্থী, মানবাধিকার, মাদক ও ক্ষুধা",
+    "syllabus_topic": "int_global_issues",
+    "unsupported_dropped": 1,
+    "what_happened": "জাতিসংঘের শরণার্থী সংস্থা ইউএনএইচসিআর জানিয়েছে, ইউক্রেন, সিরিয়া, লেবানন ও আফগানিস্তানে শীত পার করতে ৯ মিলিয়ন মানুষকে অতিরিক্ত সহায়তা লাগবে। সংস্থাটি শীতকালীন সহায়তার জন্য অন্তত ৫০ মিলিয়ন ডলার তহবিল তুলতে চায়, যা গত বছরের চেয়ে ৩ মিলিয়ন ডলার বেশি।",
+    "whats_new": "",
+    "why_it_matters": "এটি আন্তর্জাতিক মানবিক সংকট ও শরণার্থী সুরক্ষার বিষয়, যা বিসিএসের আন্তর্জাতিক বিষয়াবলীতে পড়ে। শীতকালীন ত্রাণ, বাস্তুচ্যুতি এবং জাতিসংঘ সংস্থার ভূমিকা নিয়ে প্রশ্ন আসতে পারে।",
+    "written_points": [
+     "শরণার্থী ও বাস্তুচ্যুত মানুষের জন্য মৌসুমি সহায়তা মানবিক সুরক্ষার গুরুত্বপূর্ণ অংশ।",
+     "শীতের সময় জ্বালানি, গরম কাপড় ও আশ্রয়ের ঘাটতি সংকটকে আরও তীব্র করতে পারে।",
+     "জাতিসংঘ সংস্থার তহবিল সংগ্রহ আন্তর্জাতিক সমন্বয় ও দাতা সহায়তার ওপর নির্ভরশীল।"
+    ]
+   },
+   "article_ids": [
+    "a_15652edba6d4e2f1"
+   ],
+   "attempts": 1,
+   "created_at": "2026-10-31T02:18:19+00:00",
+   "event_id": "ev_0bedb3b772e6",
+   "included_in": null,
+   "last_error": null,
+   "screening": {
+    "categories": [
+     "awards_reports_indices"
+    ],
+    "decision": "select",
+    "exam_focus": "both",
+    "exam_hook": "UNHCR said nine million refugees and displaced people need extra help through winter in several countries.",
+    "priority": 7.0,
+    "rationale": "A UN agency report with a clear global figure, suitable for prelims and written analysis.",
+    "story_type": "report_index",
+    "topic": "int_global_issues"
+   },
+   "screening_attempts": 0,
+   "status": "analysed",
+   "updated_at": "2026-10-31T02:18:19+00:00"
+  },
   "ev_0c1671c36487": {
    "analysis": null,
    "article_ids": [
@@ -9883,6 +10882,33 @@
    "screening_attempts": 0,
    "status": "analysis_rejected",
    "updated_at": "2026-10-26T04:37:47+00:00"
+  },
+  "ev_0c2d89e9654d": {
+   "analysis": null,
+   "article_ids": [
+    "a_704f1b2758c0d3e3"
+   ],
+   "attempts": 0,
+   "created_at": "2026-10-31T02:18:19+00:00",
+   "event_id": "ev_0c2d89e9654d",
+   "included_in": null,
+   "last_error": null,
+   "screening": {
+    "categories": [
+     "foreign_policy_geopolitics"
+    ],
+    "decision": "reject",
+    "exam_focus": "prelims",
+    "exam_hook": "The UN rights office warned of deepening displacement in Gaza amid continuing destruction of civilian infrastructure.",
+    "forced_reject": "weak maybe (priority 6)",
+    "priority": 6.0,
+    "rationale": "Important conflict-related rights reporting, but it is still a developing situation rather than a decisive new event.",
+    "story_type": "international_event",
+    "topic": "int_conflicts"
+   },
+   "screening_attempts": 0,
+   "status": "rejected",
+   "updated_at": "2026-10-31T02:18:19+00:00"
   },
   "ev_0d4a4a5939ab": {
    "analysis": null,
@@ -11154,6 +12180,122 @@
    "status": "included",
    "updated_at": "2026-10-27T04:55:40+00:00"
   },
+  "ev_205014fc928b": {
+   "analysed_at": "2026-10-31T02:18:19+00:00",
+   "analysis": {
+    "analysed_article_id": "a_dba9b47b481f1aab",
+    "attributed_claims": [
+     {
+      "attributed_to": "Netanyahu’s Likud party",
+      "claim": "রামাসংক্রান্ত কেলেঙ্কারি একটি রাজনৈতিক ভূমিকম্প এবং নির্বাচন চুরি হয়েছে।",
+      "evidence": "“The Raamgate scandal is a political earthquake. Israel’s elections have been stolen!”"
+     },
+     {
+      "attributed_to": "Central Elections Committee acting director general Dean Livne",
+      "claim": "ব্যাপক অনিয়মের ধারণা ভিত্তিহীন।",
+      "evidence": "any suggestion of widespread issues was “entirely groundless”."
+     }
+    ],
+    "background_context": "ইসরায়েলে সংসদীয় ব্যবস্থায় সরকার গঠন সাধারণত জোটভিত্তিক হয়।",
+    "categories": [
+     "international_affairs",
+     "foreign_policy_geopolitics"
+    ],
+    "criteria": {
+     "factual_density": 8.0,
+     "novelty": 8.0,
+     "significance": 7.0,
+     "syllabus_relevance": 8.0,
+     "written_potential": 7.0
+    },
+    "exam_focus": "both",
+    "headline_bn": "ইসরায়েলে কোয়ালিশন আলোচনা অনিশ্চিত, কোনো জোটই সংখ্যাগরিষ্ঠ নয়",
+    "institutions": [
+     "Knesset",
+     "Central Elections Committee",
+     "Shin Bet",
+     "Likud",
+     "Raam",
+     "Joint List"
+    ],
+    "key_facts": [
+     {
+      "evidence": "Netanyahu’s coalition of right-wing and far-right parties won 53 of the Knesset’s 120 seats",
+      "fact": "নেতানিয়াহুর জোট ১২০ আসনের নেসেটে ৫৩টি আসন পেয়েছে।",
+      "kind": "number",
+      "prelims": true
+     },
+     {
+      "evidence": "The opposition bloc, led by centrist Gadi Eisenkot, secured 48 seats.",
+      "fact": "বিরোধী জোট ৪৮টি আসন পেয়েছে।",
+      "kind": "number",
+      "prelims": true
+     },
+     {
+      "evidence": "with no single bloc able to reach the 61-seat threshold needed",
+      "fact": "সরকার গঠনের জন্য ৬১ আসনের থ্রেশহোল্ড প্রয়োজন।",
+      "kind": "number",
+      "prelims": true
+     },
+     {
+      "evidence": "with his Likud party remaining the largest faction with 27 seats.",
+      "fact": "নেতানিয়াহুর লিকুদ দল ২৭ আসন নিয়ে বৃহত্তম দল ছিল।",
+      "kind": "number",
+      "prelims": false
+     },
+     {
+      "evidence": "the Arab party groupings Raam and the Joint List, with the two winning a combined 19 seats.",
+      "fact": "রাম ও জয়েন্ট লিস্ট মিলে ১৯টি আসন পেয়েছে।",
+      "kind": "number",
+      "prelims": false
+     },
+     {
+      "evidence": "The results from the Central Elections Committee",
+      "fact": "ফল প্রকাশ করেছে Central Elections Committee।",
+      "kind": "institution",
+      "prelims": false
+     }
+    ],
+    "likely_question": "ইসরায়েলের সর্বশেষ সাধারণ নির্বাচনের ফলাফল কীভাবে সরকার গঠনকে জটিল করেছে, তা আলোচনা করুন।",
+    "mode": "full",
+    "score": 76.0,
+    "static_gk": [],
+    "syllabus_label": "গুরুত্বপূর্ণ দেশের সরকার পরিবর্তন ও জাতীয় নির্বাচন",
+    "syllabus_topic": "int_leadership_elections",
+    "unsupported_dropped": 0,
+    "what_happened": "ইসরায়েলের সাধারণ নির্বাচনের চূড়ান্ত ফলাফলে প্রধানমন্ত্রী বেঞ্জামিন নেতানিয়াহুর জোট এগিয়ে থাকলেও একক সংখ্যাগরিষ্ঠতা পায়নি। ১২০ আসনের নেসেটে তার জোট ৫৩টি এবং বিরোধী জোট ৪৮টি আসন পেয়েছে। ফলে সরকার গঠন নিয়ে কঠিন কোয়ালিশন আলোচনা শুরু হওয়ার কথা, আর আলোচনা ব্যর্থ হলে নতুন নির্বাচনও হতে পারে।",
+    "whats_new": "",
+    "why_it_matters": "এটি আন্তর্জাতিক নির্বাচন ও সরকার গঠন-সংক্রান্ত বিষয়, যা বৈদেশিক রাজনীতি ও ভূ-রাজনীতির অন্তর্ভুক্ত। বিসিএস পরীক্ষায় এ ধরনের ফলাফল থেকে সংসদীয় সংখ্যাগরিষ্ঠতা, কোয়ালিশন রাজনীতি এবং সরকার গঠনের শর্ত নিয়ে প্রশ্ন আসতে পারে।",
+    "written_points": [
+     "সংসদীয় গণতন্ত্রে সরকার গঠনের জন্য নির্দিষ্ট সংখ্যাগরিষ্ঠতা অপরিহার্য; তা না হলে কোয়ালিশন দরকষাকষি জটিল হয়।",
+     "বিভক্ত নির্বাচনী ফলাফল রাজনৈতিক অস্থিতিশীলতা তৈরি করতে পারে এবং পুনর্নির্বাচনের সম্ভাবনা বাড়ায়।",
+     "নির্বাচনী অনিয়মের অভিযোগ, তদন্ত এবং প্রতিষ্ঠানগুলোর প্রতিক্রিয়া নির্বাচনের বৈধতা ও জনআস্থার সঙ্গে সরাসরি যুক্ত।"
+    ]
+   },
+   "article_ids": [
+    "a_dba9b47b481f1aab"
+   ],
+   "attempts": 1,
+   "created_at": "2026-10-31T02:18:19+00:00",
+   "event_id": "ev_205014fc928b",
+   "included_in": "2026-10-31",
+   "last_error": null,
+   "screening": {
+    "categories": [
+     "foreign_policy_geopolitics"
+    ],
+    "decision": "select",
+    "exam_focus": "both",
+    "exam_hook": "Israel’s election final results left Netanyahu short of a majority, setting up coalition talks or another election.",
+    "priority": 7.0,
+    "rationale": "A significant national election outcome in a major regional country with durable exam value.",
+    "story_type": "international_event",
+    "topic": "int_leadership_elections"
+   },
+   "screening_attempts": 0,
+   "status": "included",
+   "updated_at": "2026-10-31T02:18:19+00:00"
+  },
   "ev_2255d200a75e": {
    "analysis": null,
    "article_ids": [
@@ -11460,6 +12602,141 @@
    "status": "rejected",
    "updated_at": "2026-10-24T13:40:25+00:00"
   },
+  "ev_26feaf630ace": {
+   "analysis": null,
+   "article_ids": [
+    "a_71698034b1eea678"
+   ],
+   "attempts": 0,
+   "created_at": "2026-10-31T02:18:19+00:00",
+   "event_id": "ev_26feaf630ace",
+   "included_in": null,
+   "last_error": null,
+   "screening": {
+    "categories": [
+     "bangladesh_affairs"
+    ],
+    "decision": "reject",
+    "exam_focus": "none",
+    "exam_hook": "",
+    "priority": 0.0,
+    "rationale": "This is a local blockade situation analysis, which is explicitly excluded.",
+    "story_type": "local_admin",
+    "topic": null
+   },
+   "screening_attempts": 0,
+   "status": "rejected",
+   "updated_at": "2026-10-31T02:18:19+00:00"
+  },
+  "ev_27470c9925a6": {
+   "analysed_at": "2026-10-31T02:18:19+00:00",
+   "analysis": {
+    "analysed_article_id": "a_fce6834aa3094b6a",
+    "attributed_claims": [
+     {
+      "attributed_to": "UN’s aid coordination office (OCHA)",
+      "claim": "লেবাননের মানবিক সংকট এখনও শেষ হয়নি।",
+      "evidence": "“the humanitarian crisis is “far from over,” according to the UN’s aid coordination office ( OCHA ).”"
+     },
+     {
+      "attributed_to": "UN human rights chief Volker Türk",
+      "claim": "নোভায়া গেজেটা বন্ধের ঘোষণা স্বাধীন গণমাধ্যমের জন্য আরেকটি বিধ্বংসী আঘাত।",
+      "evidence": "“yet another devastating blow for remaining independent media in the Russian Federation”"
+     }
+    ],
+    "background_context": "জাতিসংঘের মানবিক সংস্থা ও নগর উন্নয়ন সংস্থা সাধারণত যুদ্ধ, বাস্তুচ্যুতি এবং আবাসন সংকটের বৈশ্বিক চিত্র তুলে ধরে।",
+    "categories": [
+     "international_affairs"
+    ],
+    "criteria": {
+     "factual_density": 8.0,
+     "novelty": 7.0,
+     "significance": 8.0,
+     "syllabus_relevance": 8.0,
+     "written_potential": 7.0
+    },
+    "exam_focus": "both",
+    "headline_bn": "লেবাননে ৩,০০,০০০-এর বেশি বাস্তুচ্যুত; UNHCR-এর ৫০ মিলিয়ন ডলারের শীতকালীন সহায়তা আবেদন",
+    "institutions": [
+     "OCHA",
+     "UNHCR",
+     "UN-Habitat",
+     "United Nations"
+    ],
+    "key_facts": [
+     {
+      "evidence": "“More than 300,000 people displaced since early March remain internally displaced in Lebanon”",
+      "fact": "লেবাননে মার্চের শুরু থেকে ৩,০০,০০০-এর বেশি মানুষ এখনো অভ্যন্তরীণভাবে বাস্তুচ্যুত আছে।",
+      "kind": "number",
+      "prelims": true
+     },
+     {
+      "evidence": "“up to 3.4 billion people face inadequate housing conditions”",
+      "fact": "বিশ্বজুড়ে ৩.৪ বিলিয়ন মানুষ অপ্রতুল আবাসন পরিস্থিতির মুখে আছে।",
+      "kind": "number",
+      "prelims": true
+     },
+     {
+      "evidence": "“continued Israeli military activity and presence in the south are making it very difficult”",
+      "fact": "লেবাননে বাস্তুচ্যুত মানুষদের প্রত্যাবর্তন সত্ত্বেও দক্ষিণাঞ্চলে চলমান ইসরায়েলি সামরিক কার্যক্রম ও উপস্থিতি পরিস্থিতি জটিল করছে।",
+      "kind": "other",
+      "prelims": false
+     },
+     {
+      "evidence": "“spotlighting regeneration as a key solution”",
+      "fact": "UN-Habitat বলেছে নগর পুনর্জাগরণ [urban regeneration] আবাসন সংকট মোকাবিলার একটি প্রধান সমাধান।",
+      "kind": "law_policy",
+      "prelims": false
+     }
+    ],
+    "likely_question": "লেবাননসহ বিভিন্ন দেশে বাস্তুচ্যুতি, শীতকালীন মানবিক সহায়তা ও নগর আবাসন সংকট বিষয়ে জাতিসংঘের সাম্প্রতিক অবস্থান আলোচনা করুন।",
+    "mode": "full",
+    "score": 77.5,
+    "static_gk": [
+     {
+      "answer": "১৯৫১ শরণার্থী কনভেনশন",
+      "answer_en": "1951 Refugee Convention",
+      "kind": "law",
+      "question": "শরণার্থীদের মর্যাদা বিষয়ে ১৯৫১ সালের কোন আন্তর্জাতিক কনভেনশনটি প্রচলিত?",
+      "statement": "শরণার্থী সুরক্ষার জন্য ১৯৫১ সালের কোন আন্তর্জাতিক সনদটি মূল ভিত্তি?"
+     }
+    ],
+    "syllabus_label": "বৈশ্বিক সমস্যা: শরণার্থী, মানবাধিকার, মাদক ও ক্ষুধা",
+    "syllabus_topic": "int_global_issues",
+    "unsupported_dropped": 1,
+    "what_happened": "জাতিসংঘের তথ্য অনুযায়ী, লেবাননে মার্চের শুরু থেকে বাস্তুচ্যুত ৩,০০,০০০-এর বেশি মানুষ এখনো অভ্যন্তরীণভাবে বাস্তুচ্যুত অবস্থায় আছে। একই সঙ্গে UNHCR আফগানিস্তান, ইউক্রেন, সিরিয়া ও লেবাননে শীত পার করতে ৯ মিলিয়ন মানুষকে সহায়তার জন্য ৫০ মিলিয়ন ডলারের আবেদন জানিয়েছে। আরও জানানো হয়েছে, বিশ্বজুড়ে আবাসন সংকট তীব্র; UN-Habitat বলছে বিশ্ব শহর দিবস উপলক্ষে ৩.৪ বিলিয়ন মানুষ অপ্রতুল আবাসন পরিস্থিতিতে আছে।",
+    "whats_new": "",
+    "why_it_matters": "এটি আন্তর্জাতিক মানবিক সংকট, শরণার্থী ও বাস্তুচ্যুতি এবং জাতিসংঘ সংস্থার প্রতিক্রিয়া—এই তিনটি BCS সিলেবাস ক্ষেত্রের সঙ্গে সরাসরি যুক্ত। এ থেকে বিশ্বব্যাপী সংঘাত-উদ্ভূত বাস্তুচ্যুতি, মানবিক তহবিল, এবং নগর আবাসন সংকট নিয়ে প্রশ্ন আসতে পারে।",
+    "written_points": [
+     "সংঘাত ও সামরিক তৎপরতা কীভাবে অভ্যন্তরীণ বাস্তুচ্যুতি, জীবিকা ও মৌলিক সেবাকে ব্যাহত করে তা ব্যাখ্যা করা যায়।",
+     "মানবিক সহায়তায় জরুরি তহবিল, শীতকালীন প্রস্তুতি এবং প্রত্যাবর্তনকারী জনগোষ্ঠীর পুনর্বাসন গুরুত্বপূর্ণ নীতি-উপায়।",
+     "নগরায়ণ, আবাসন ঘাটতি ও জলবায়ু চাপ মোকাবিলায় নগর পুনর্জাগরণকে দীর্ঘমেয়াদি সমাধান হিসেবে আলোচনা করা যায়।"
+    ]
+   },
+   "article_ids": [
+    "a_fce6834aa3094b6a"
+   ],
+   "attempts": 1,
+   "created_at": "2026-10-31T02:18:19+00:00",
+   "event_id": "ev_27470c9925a6",
+   "included_in": "2026-10-31",
+   "last_error": null,
+   "screening": {
+    "categories": [
+     "awards_reports_indices"
+    ],
+    "decision": "select",
+    "exam_focus": "both",
+    "exam_hook": "UN OCHA said more than 300,000 people remain internally displaced in Lebanon.",
+    "priority": 7.0,
+    "rationale": "A UN humanitarian update with a durable displacement figure worth remembering.",
+    "story_type": "report_index",
+    "topic": "int_global_issues"
+   },
+   "screening_attempts": 0,
+   "status": "included",
+   "updated_at": "2026-10-31T02:18:19+00:00"
+  },
   "ev_279ea0e3a797": {
    "analysis": null,
    "article_ids": [
@@ -11485,6 +12762,32 @@
    "screening_attempts": 0,
    "status": "rejected",
    "updated_at": "2026-10-29T05:39:15+00:00"
+  },
+  "ev_28713bc2b422": {
+   "analysis": null,
+   "article_ids": [
+    "a_58d4b9ff651f3cd8"
+   ],
+   "attempts": 0,
+   "created_at": "2026-10-31T02:18:19+00:00",
+   "event_id": "ev_28713bc2b422",
+   "included_in": null,
+   "last_error": null,
+   "screening": {
+    "categories": [
+     "foreign_policy_geopolitics"
+    ],
+    "decision": "reject",
+    "exam_focus": "none",
+    "exam_hook": "",
+    "priority": 0.0,
+    "rationale": "A partisan foreign political quote without broader syllabus significance.",
+    "story_type": "foreign_domestic_minor",
+    "topic": null
+   },
+   "screening_attempts": 0,
+   "status": "rejected",
+   "updated_at": "2026-10-31T02:18:19+00:00"
   },
   "ev_287b406d7c53": {
    "analysed_at": "2026-10-28T05:30:11+00:00",
@@ -11714,6 +13017,32 @@
    "status": "rejected",
    "updated_at": "2026-10-27T04:55:40+00:00"
   },
+  "ev_2d43fb119b7e": {
+   "analysis": null,
+   "article_ids": [
+    "a_1dfe6fe3d77f19fa"
+   ],
+   "attempts": 0,
+   "created_at": "2026-10-31T02:18:19+00:00",
+   "event_id": "ev_2d43fb119b7e",
+   "included_in": null,
+   "last_error": null,
+   "screening": {
+    "categories": [
+     "bangladesh_affairs"
+    ],
+    "decision": "reject",
+    "exam_focus": "none",
+    "exam_hook": "",
+    "priority": 0.0,
+    "rationale": "Local agricultural hardship in one region without a major policy or national-data angle.",
+    "story_type": "foreign_domestic_minor",
+    "topic": null
+   },
+   "screening_attempts": 0,
+   "status": "rejected",
+   "updated_at": "2026-10-31T02:18:19+00:00"
+  },
   "ev_2ec1abae9acb": {
    "analysed_at": "2026-10-29T05:39:15+00:00",
    "analysis": {
@@ -11908,6 +13237,32 @@
    "screening_attempts": 0,
    "status": "included",
    "updated_at": "2026-10-25T02:30:10+00:00"
+  },
+  "ev_3184ba9cc2ee": {
+   "analysis": null,
+   "article_ids": [
+    "a_9ef604b31fcb1e18"
+   ],
+   "attempts": 0,
+   "created_at": "2026-10-31T02:18:19+00:00",
+   "event_id": "ev_3184ba9cc2ee",
+   "included_in": null,
+   "last_error": null,
+   "screening": {
+    "categories": [
+     "bangladesh_affairs"
+    ],
+    "decision": "reject",
+    "exam_focus": "none",
+    "exam_hook": "",
+    "priority": 0.0,
+    "rationale": "A blockade relaxation notice is a routine local situation update, which is excluded.",
+    "story_type": "local_admin",
+    "topic": null
+   },
+   "screening_attempts": 0,
+   "status": "rejected",
+   "updated_at": "2026-10-31T02:18:19+00:00"
   },
   "ev_31986e8eef3d": {
    "analysed_at": "2026-10-29T05:39:15+00:00",
@@ -12435,6 +13790,132 @@
    "screening_attempts": 0,
    "status": "included",
    "updated_at": "2026-10-25T02:30:10+00:00"
+  },
+  "ev_350d0fc798f4": {
+   "analysis": null,
+   "article_ids": [
+    "a_5d40359764cf4e67"
+   ],
+   "attempts": 0,
+   "created_at": "2026-10-31T02:18:19+00:00",
+   "event_id": "ev_350d0fc798f4",
+   "included_in": null,
+   "last_error": null,
+   "screening": {
+    "categories": [
+     "foreign_policy_geopolitics"
+    ],
+    "decision": "reject",
+    "exam_focus": "none",
+    "exam_hook": "",
+    "priority": 0.0,
+    "rationale": "Minor election process commentary without a substantive new development.",
+    "story_type": "foreign_domestic_minor",
+    "topic": null
+   },
+   "screening_attempts": 0,
+   "status": "rejected",
+   "updated_at": "2026-10-31T02:18:19+00:00"
+  },
+  "ev_35e84a3118b0": {
+   "analysed_at": "2026-10-31T02:18:19+00:00",
+   "analysis": {
+    "analysed_article_id": "a_083611412d49721a",
+    "attributed_claims": [
+     {
+      "attributed_to": "State Minister for Health MA Muhit",
+      "claim": "স্বাস্থ্যকর্মীদের একীভূত করে একক প্রাথমিক স্বাস্থ্যসেবা ক্যাডার গঠন করা হবে।",
+      "evidence": "“Our plan is to bring all these workers under a single primary healthcare cadre."
+     },
+     {
+      "attributed_to": "State Minister for Health MA Muhit",
+      "claim": "এই পরিকল্পনার মাধ্যমে স্বাস্থ্যসেবা মানুষের দোরগোড়ায় পৌঁছে দেওয়া সম্ভব হবে।",
+      "evidence": "“This will help us turn into reality our commitment to bringing healthcare to people’s doorsteps.”"
+     }
+    ],
+    "background_context": "বাংলাদেশে প্রাথমিক স্বাস্থ্যসেবায় মাঠপর্যায়ের কর্মী গুরুত্বপূর্ণ ভূমিকা রাখেন। ইউনিয়ন ও নগর ওয়ার্ডভিত্তিক সেবাব্যবস্থা সাধারণ মানুষের কাছে স্বাস্থ্যসেবা পৌঁছানোর প্রধান মাধ্যমগুলোর একটি।",
+    "categories": [
+     "bangladesh_affairs",
+     "constitution_governance"
+    ],
+    "criteria": {
+     "factual_density": 8.0,
+     "novelty": 8.0,
+     "significance": 7.0,
+     "syllabus_relevance": 8.0,
+     "written_potential": 7.0
+    },
+    "exam_focus": "both",
+    "headline_bn": "সরকার ৩ বছরে ১ লাখ স্বাস্থ্যকর্মী নিয়োগের পরিকল্পনা নিয়েছে",
+    "institutions": [
+     "Directorate General of Health Services (DGHS)",
+     "Directorate General of Family Planning (DGFP)",
+     "Community Clinic Health Support Trust",
+     "Prime Minister’s Office",
+     "Cabinet Division",
+     "Health Services Division (HSD)",
+     "public administration ministry",
+     "Bangladesh Health Assistant Association Central Coordination Council"
+    ],
+    "key_facts": [
+     {
+      "evidence": "proposed health and wellbeing centres at the union level in rural areas and at the ward level in city corporation areas.",
+      "fact": "প্রস্তাবিত একীভূত জনবল ইউনিয়ন পর্যায়ের গ্রামীণ কেন্দ্র এবং সিটি কর্পোরেশনের ওয়ার্ড পর্যায়ের কেন্দ্রের মাধ্যমে কাজ করবে।",
+      "kind": "place",
+      "prelims": true
+     },
+     {
+      "evidence": "proposing the creation of 99,657 posts to support the integration",
+      "fact": "কমিটি ৯৯,৬৫৭টি পদ সৃষ্টির সুপারিশ করেছে।",
+      "kind": "number",
+      "prelims": true
+     },
+     {
+      "evidence": "49,945 in urban areas and 49,712 in rural areas",
+      "fact": "এই সুপারিশে নগর এলাকায় ৪৯,৯৪৫টি এবং গ্রামীণ এলাকায় ৪৯,৭১২টি পদ রাখার কথা বলা হয়েছে।",
+      "kind": "number",
+      "prelims": false
+     }
+    ],
+    "likely_question": "বাংলাদেশে প্রাথমিক স্বাস্থ্যসেবা জোরদার করতে সরকার ঘোষিত স্বাস্থ্যকর্মী একীভূতকরণ ও নিয়োগ পরিকল্পনা আলোচনা করুন।",
+    "mode": "full",
+    "score": 76.0,
+    "static_gk": [],
+    "syllabus_label": "জনসংখ্যা, শিক্ষা, স্বাস্থ্যনীতি, দারিদ্র্য ও সামাজিক সুরক্ষা",
+    "syllabus_topic": "bd_social_sector",
+    "unsupported_dropped": 4,
+    "what_happened": "পরিকল্পনায় গ্রাম ও শহরের তিন ধরনের মাঠপর্যায়ের স্বাস্থ্যকর্মীকে একীভূত করে ইউনিয়ন ও ওয়ার্ডভিত্তিক স্বাস্থ্য ও কল্যাণ কেন্দ্রে কাজ করানোর কথা বলা হয়েছে।",
+    "whats_new": "",
+    "why_it_matters": "এটি স্বাস্থ্যনীতি ও জনসেবা প্রশাসনের বিষয়, যা সামাজিক খাত ও প্রাথমিক স্বাস্থ্যসেবা সংস্কারের সঙ্গে সরাসরি যুক্ত। বিসিএস পরীক্ষায় মাঠপর্যায়ের স্বাস্থ্যসেবা, জনবল কাঠামো, এবং বিকেন্দ্রীভূত সেবাব্যবস্থা নিয়ে প্রশ্ন আসতে পারে।",
+    "written_points": [
+     "প্রাথমিক স্বাস্থ্যসেবা শক্তিশালী করতে জনবল একীভূতকরণ ও নিয়োগ একটি গুরুত্বপূর্ণ প্রশাসনিক সংস্কার।",
+     "একাধিক পৃথক ব্যবস্থার কারণে সেবার পুনরাবৃত্তি ও শূন্যস্থান তৈরি হতে পারে; একক কাঠামোতে সমন্বয় বাড়ার সম্ভাবনা আছে।",
+     "ক্যাডার, গ্রেড, নিয়োগবিধি ও দায়িত্বের ভিন্নতা সমাধান না হলে বাস্তবায়নে জটিলতা দেখা দিতে পারে।"
+    ]
+   },
+   "article_ids": [
+    "a_083611412d49721a"
+   ],
+   "attempts": 1,
+   "created_at": "2026-10-31T02:18:19+00:00",
+   "event_id": "ev_35e84a3118b0",
+   "included_in": "2026-10-31",
+   "last_error": null,
+   "screening": {
+    "categories": [
+     "bangladesh_affairs"
+    ],
+    "decision": "select",
+    "exam_focus": "both",
+    "exam_hook": "The government plans nearly 1 lakh new health worker posts over three years under a unified field-level caregiving system.",
+    "priority": 7.0,
+    "rationale": "A substantive national health workforce policy with clear numbers and exam value.",
+    "story_type": "policy_decision",
+    "topic": "bd_social_sector"
+   },
+   "screening_attempts": 0,
+   "status": "included",
+   "updated_at": "2026-10-31T02:18:19+00:00"
   },
   "ev_369d7f4b3e43": {
    "analysis": null,
@@ -13147,6 +14628,33 @@
    "status": "selected",
    "updated_at": "2026-10-29T05:39:15+00:00"
   },
+  "ev_425fca714fe9": {
+   "analysis": null,
+   "article_ids": [
+    "a_932e7eca73184624"
+   ],
+   "attempts": 0,
+   "created_at": "2026-10-31T02:18:19+00:00",
+   "event_id": "ev_425fca714fe9",
+   "included_in": null,
+   "last_error": null,
+   "screening": {
+    "categories": [
+     "foreign_policy_geopolitics"
+    ],
+    "decision": "reject",
+    "exam_focus": "prelims",
+    "exam_hook": "Ukraine resumed strikes on Russian oil refineries, affecting the war’s energy infrastructure.",
+    "forced_reject": "weak maybe (priority 4)",
+    "priority": 4.0,
+    "rationale": "A continuing war development, but still an operational strike report rather than a durable policy fact.",
+    "story_type": "international_event",
+    "topic": "int_conflicts"
+   },
+   "screening_attempts": 0,
+   "status": "rejected",
+   "updated_at": "2026-10-31T02:18:19+00:00"
+  },
   "ev_4302a286e199": {
    "analysis": null,
    "article_ids": [
@@ -13173,6 +14681,32 @@
    "screening_attempts": 0,
    "status": "analysis_rejected",
    "updated_at": "2026-10-26T04:37:47+00:00"
+  },
+  "ev_4458887c99c8": {
+   "analysis": null,
+   "article_ids": [
+    "a_02c44b6515a4aa19"
+   ],
+   "attempts": 0,
+   "created_at": "2026-10-31T02:18:19+00:00",
+   "event_id": "ev_4458887c99c8",
+   "included_in": null,
+   "last_error": null,
+   "screening": {
+    "categories": [
+     "environment_climate"
+    ],
+    "decision": "reject",
+    "exam_focus": "none",
+    "exam_hook": "",
+    "priority": 0.0,
+    "rationale": "A tragic local lightning incident, but not a major disaster or policy-linked development.",
+    "story_type": "environment_disaster",
+    "topic": "env_disaster"
+   },
+   "screening_attempts": 0,
+   "status": "rejected",
+   "updated_at": "2026-10-31T02:18:19+00:00"
   },
   "ev_44980054f03f": {
    "analysis": null,
@@ -13638,6 +15172,32 @@
    "screening_attempts": 0,
    "status": "analysis_rejected",
    "updated_at": "2026-10-29T05:39:15+00:00"
+  },
+  "ev_4ae34fc5ded3": {
+   "analysis": null,
+   "article_ids": [
+    "a_da3c286223497d70"
+   ],
+   "attempts": 0,
+   "created_at": "2026-10-31T02:18:19+00:00",
+   "event_id": "ev_4ae34fc5ded3",
+   "included_in": null,
+   "last_error": null,
+   "screening": {
+    "categories": [
+     "constitution_governance"
+    ],
+    "decision": "reject",
+    "exam_focus": "none",
+    "exam_hook": "",
+    "priority": 0.0,
+    "rationale": "This is party-level speculation and commentary, which is excluded.",
+    "story_type": "party_politics",
+    "topic": null
+   },
+   "screening_attempts": 0,
+   "status": "rejected",
+   "updated_at": "2026-10-31T02:18:19+00:00"
   },
   "ev_4b04363ea82d": {
    "analysis": null,
@@ -14231,6 +15791,32 @@
    "status": "failed",
    "updated_at": "2026-10-24T13:40:25+00:00"
   },
+  "ev_54a627db27a1": {
+   "analysis": null,
+   "article_ids": [
+    "a_6b7e4b2616184846"
+   ],
+   "attempts": 0,
+   "created_at": "2026-10-31T02:18:19+00:00",
+   "event_id": "ev_54a627db27a1",
+   "included_in": null,
+   "last_error": null,
+   "screening": {
+    "categories": [
+     "foreign_policy_geopolitics"
+    ],
+    "decision": "reject",
+    "exam_focus": "none",
+    "exam_hook": "",
+    "priority": 0.0,
+    "rationale": "Routine US election mood coverage without a substantive new event or decision.",
+    "story_type": "foreign_domestic_minor",
+    "topic": null
+   },
+   "screening_attempts": 0,
+   "status": "rejected",
+   "updated_at": "2026-10-31T02:18:19+00:00"
+  },
   "ev_56e059d59081": {
    "analysis": null,
    "article_ids": [
@@ -14778,6 +16364,33 @@
    "screening_attempts": 0,
    "status": "included",
    "updated_at": "2026-10-27T04:55:40+00:00"
+  },
+  "ev_5c8c588527b5": {
+   "analysis": null,
+   "article_ids": [
+    "a_a826298a7b9418f4"
+   ],
+   "attempts": 0,
+   "created_at": "2026-10-31T02:18:19+00:00",
+   "event_id": "ev_5c8c588527b5",
+   "included_in": null,
+   "last_error": null,
+   "screening": {
+    "categories": [
+     "foreign_policy_geopolitics"
+    ],
+    "decision": "reject",
+    "exam_focus": "prelims",
+    "exam_hook": "Russian independent newspaper Novaya Gazeta announced it was shutting after years of state pressure.",
+    "forced_reject": "weak maybe (priority 5)",
+    "priority": 5.0,
+    "rationale": "A notable press-freedom development, though the story is about Russia’s domestic media space.",
+    "story_type": "international_event",
+    "topic": "int_global_issues"
+   },
+   "screening_attempts": 0,
+   "status": "rejected",
+   "updated_at": "2026-10-31T02:18:19+00:00"
   },
   "ev_5cf284478842": {
    "analysis": null,
@@ -15605,6 +17218,33 @@
    "status": "included",
    "updated_at": "2026-10-25T02:30:10+00:00"
   },
+  "ev_6792e37e18fa": {
+   "analysis": null,
+   "article_ids": [
+    "a_036364402889738e"
+   ],
+   "attempts": 0,
+   "created_at": "2026-10-31T02:18:19+00:00",
+   "event_id": "ev_6792e37e18fa",
+   "included_in": null,
+   "last_error": null,
+   "screening": {
+    "categories": [
+     "science_technology"
+    ],
+    "decision": "reject",
+    "exam_focus": "both",
+    "exam_hook": "Bangladesh’s dengue death toll reached 418, the third-highest annual toll since 2000.",
+    "forced_reject": "repeat of a story sent on 2026-10-28",
+    "priority": 7.0,
+    "rationale": "A major national disease statistic with durable exam relevance.",
+    "story_type": "public_health",
+    "topic": "sci_health"
+   },
+   "screening_attempts": 0,
+   "status": "rejected",
+   "updated_at": "2026-10-31T02:18:19+00:00"
+  },
   "ev_67e81feef533": {
    "analysed_at": "2026-10-29T05:39:15+00:00",
    "analysis": {
@@ -16401,15 +18041,101 @@
    "updated_at": "2026-10-28T05:30:11+00:00"
   },
   "ev_74e296d87300": {
-   "analysis": null,
+   "analysed_at": "2026-10-31T02:18:19+00:00",
+   "analysis": {
+    "analysed_article_id": "a_6f125b9c611d2e82",
+    "attributed_claims": [
+     {
+      "attributed_to": "Khalilur Rahman, adviser, Consumers Association of Bangladesh",
+      "claim": "বাজারে কৃত্রিম সংকট, মজুতদারি ও অতিরিক্ত আদায়ের অভিযোগ আগে তদন্ত করা উচিত এবং দায়ীদের বিরুদ্ধে ব্যবস্থা নিতে হবে।",
+      "evidence": "“We demand that BERC first investigate the artificial shortages, hoarding and overcharging, and take effective action against those responsible,” said Khalilur Rahman"
+     },
+     {
+      "attributed_to": "Abu Sayed Raza, chief marketing officer, Fresh LP Gas",
+      "claim": "বিতরণ চার্জ ১৫০ টাকা না হলে ব্যবসা স্বাভাবিকভাবে চালানো সম্ভব হবে না; প্রস্তাবিত হার যুক্তিসংগত হওয়া দরকার।",
+      "evidence": "“We want to ensure that no distributor or retailer charges more than the fixed regulated rate in future. But the rate should be logical. Without a distribution charge of Tk 150 per cylinder, it would not be possible for them to run a decent business,” said Abu Sayed Raza"
+     }
+    ],
+    "background_context": "বিইআরসি জ্বালানি ও ইউটিলিটি খাতে মূল্যনিয়ন্ত্রণকারী সংস্থা হিসেবে কাজ করে।",
+    "categories": [
+     "economy",
+     "bangladesh_affairs"
+    ],
+    "criteria": {
+     "factual_density": 8.0,
+     "novelty": 7.0,
+     "significance": 6.0,
+     "syllabus_relevance": 8.0,
+     "written_potential": 7.0
+    },
+    "exam_focus": "both",
+    "headline_bn": "এলপিজির ১২ কেজি সিলিন্ডারের দাম বাড়ানোর প্রস্তাব নিয়ে বিইআরসি শুনানি",
+    "institutions": [
+     "BERC",
+     "Consumers Association of Bangladesh",
+     "BIAM auditorium",
+     "Bangladesh Economic Association",
+     "LP Gas Business Cooperative Society",
+     "Directorate of National Consumer Rights Protection",
+     "Bangladesh Bank",
+     "Fresh LP Gas"
+    ],
+    "key_facts": [
+     {
+      "evidence": "A technical committee of BERC has proposed raising the price of a 12kg liquefied petroleum gas (LPG) cylinder by 7.6 percent to Tk 1,976",
+      "fact": "১২ কেজি এলপিজি সিলিন্ডারের দাম ৭.৬ শতাংশ বাড়িয়ে ১,৯৭৬ টাকা করার প্রস্তাব দিয়েছে বিইআরসির একটি কারিগরি কমিটি।",
+      "kind": "law_policy",
+      "prelims": true
+     },
+     {
+      "evidence": "LPG is being sold at Tk 2,200 to Tk 2,400 per cylinder in the market -- well above the fixed price.",
+      "fact": "বাজারে এলপিজি সিলিন্ডার ২,২০০ থেকে ২,৪০০ টাকায় বিক্রি হচ্ছে, যা নির্ধারিত দামের চেয়ে বেশি।",
+      "kind": "number",
+      "prelims": true
+     },
+     {
+      "evidence": "The committee proposed increasing the charge for storage and bottling to Tk 282 per cylinder, a 40.3 percent rise from the existing Tk 201.",
+      "fact": "স্টোরেজ ও বটলিং চার্জ ২৮২ টাকা করার প্রস্তাব দেওয়া হয়েছে, যা বিদ্যমান ২০১ টাকা থেকে ৪০.৩ শতাংশ বেশি।",
+      "kind": "number",
+      "prelims": true
+     },
+     {
+      "evidence": "It also proposed raising the distribution charge by 60 percent to Tk 80 from Tk 50 per cylinder and the retail charge by 55.6 percent to Tk 70 from Tk 45.",
+      "fact": "বিতরণ চার্জ ৫০ টাকা থেকে ৬০ শতাংশ বাড়িয়ে ৮০ টাকা এবং খুচরা চার্জ ৪৫ টাকা থেকে ৫৫.৬ শতাংশ বাড়িয়ে ৭০ টাকা করার প্রস্তাব করা হয়েছে।",
+      "kind": "number",
+      "prelims": false
+     },
+     {
+      "evidence": "“We demand that BERC first investigate the artificial shortages, hoarding and overcharging, and take effective action against those responsible,” said Khalilur Rahman",
+      "fact": "ভোক্তা অধিকার সংগঠনের একজন উপদেষ্টা বলেন, আগে কৃত্রিম সংকট, মজুতদারি ও অতিরিক্ত আদায়ের অভিযোগ তদন্ত করা উচিত।",
+      "kind": "other",
+      "prelims": false
+     }
+    ],
+    "likely_question": "এলপিজির নিয়ন্ত্রিত দাম, বাজারদর ও নিয়ন্ত্রক সংস্থার ভূমিকা আলোকে বাংলাদেশে এলপিজি মূল্য নির্ধারণের চ্যালেঞ্জ আলোচনা করুন।",
+    "mode": "full",
+    "score": 72.5,
+    "static_gk": [],
+    "syllabus_label": "বিদ্যুৎ ও জ্বালানি",
+    "syllabus_topic": "bd_energy_power",
+    "unsupported_dropped": 0,
+    "what_happened": "বিইআরসির একটি কারিগরি কমিটি ১২ কেজি এলপিজি সিলিন্ডারের দাম ৭.৬ শতাংশ বাড়িয়ে ১,৯৭৬ টাকা করার প্রস্তাব দিয়েছে। তবে জনশুনানিতে ভোক্তারা বলেন, বাজারে সিলিন্ডার ২,২০০ থেকে ২,৪০০ টাকায় বিক্রি হচ্ছে, তাই আগে কারসাজি, মজুতদারি ও অতিরিক্ত আদায়ের অভিযোগ খতিয়ে দেখা দরকার।",
+    "whats_new": "",
+    "why_it_matters": "এটি জ্বালানি খাত, মূল্যনিয়ন্ত্রণ এবং নিয়ন্ত্রক সংস্থার জবাবদিহির সঙ্গে সরাসরি সম্পর্কিত। বিসিএস পরীক্ষায় এখান থেকে বিইআরসির ভূমিকা, নিয়ন্ত্রিত দাম বনাম বাজারদাম, এবং ভোক্তা সুরক্ষা নিয়ে প্রশ্ন করা যেতে পারে।",
+    "written_points": [
+     "নিয়ন্ত্রিত দাম নির্ধারণের আগে বাজারে বাস্তব সরবরাহ-শৃঙ্খলা, মজুত ও বিক্রয়ব্যবস্থা যাচাই করা জরুরি।",
+     "ভোক্তা স্বার্থ, ব্যবসার টেকসইতা এবং নিয়ন্ত্রক সংস্থার নজরদারি—এই তিনটির মধ্যে ভারসাম্য রাখতে হবে।",
+     "বিইআরসির মূল্য নির্ধারণে স্বচ্ছ হিসাব, তথ্যভিত্তিক পর্যবেক্ষণ এবং অভিযুক্তদের বিরুদ্ধে কার্যকর পদক্ষেপ প্রয়োজন।"
+    ]
+   },
    "article_ids": [
     "a_6f125b9c611d2e82",
     "a_a2c18ef74339b3f2"
    ],
-   "attempts": 0,
+   "attempts": 1,
    "created_at": "2026-10-30T05:38:04+00:00",
    "event_id": "ev_74e296d87300",
-   "included_in": null,
+   "included_in": "2026-10-31",
    "last_error": null,
    "screening": {
     "categories": [
@@ -16424,8 +18150,8 @@
     "topic": "bd_energy_power"
    },
    "screening_attempts": 0,
-   "status": "selected",
-   "updated_at": "2026-10-30T05:38:04+00:00"
+   "status": "included",
+   "updated_at": "2026-10-31T02:18:19+00:00"
   },
   "ev_751e0e81f251": {
    "analysis": null,
@@ -16560,6 +18286,32 @@
    "screening_attempts": 0,
    "status": "included",
    "updated_at": "2026-10-27T04:55:40+00:00"
+  },
+  "ev_788574bfe1cc": {
+   "analysis": null,
+   "article_ids": [
+    "a_42c86e2286208099"
+   ],
+   "attempts": 0,
+   "created_at": "2026-10-31T02:18:19+00:00",
+   "event_id": "ev_788574bfe1cc",
+   "included_in": null,
+   "last_error": null,
+   "screening": {
+    "categories": [
+     "bangladesh_affairs"
+    ],
+    "decision": "reject",
+    "exam_focus": "none",
+    "exam_hook": "",
+    "priority": 0.0,
+    "rationale": "Human-interest feature on poor toilet conditions, not a policy or official development.",
+    "story_type": "feature",
+    "topic": null
+   },
+   "screening_attempts": 0,
+   "status": "rejected",
+   "updated_at": "2026-10-31T02:18:19+00:00"
   },
   "ev_7947c7e014b5": {
    "analysis": null,
@@ -17397,6 +19149,32 @@
    "status": "rejected",
    "updated_at": "2026-10-24T13:40:25+00:00"
   },
+  "ev_83d856b2f6f0": {
+   "analysis": null,
+   "article_ids": [
+    "a_f0814201b932e0ba"
+   ],
+   "attempts": 0,
+   "created_at": "2026-10-31T02:18:19+00:00",
+   "event_id": "ev_83d856b2f6f0",
+   "included_in": null,
+   "last_error": null,
+   "screening": {
+    "categories": [
+     "constitution_governance"
+    ],
+    "decision": "reject",
+    "exam_focus": "none",
+    "exam_hook": "",
+    "priority": 0.0,
+    "rationale": "It is a ministerial comment and normative argument rather than a new official decision.",
+    "story_type": "opinion",
+    "topic": null
+   },
+   "screening_attempts": 0,
+   "status": "rejected",
+   "updated_at": "2026-10-31T02:18:19+00:00"
+  },
   "ev_846c02267ee0": {
    "analysed_at": "2026-10-25T02:30:10+00:00",
    "analysis": {
@@ -17504,6 +19282,112 @@
    "screening_attempts": 0,
    "status": "included",
    "updated_at": "2026-10-25T02:30:10+00:00"
+  },
+  "ev_84a56367f76d": {
+   "analysed_at": "2026-10-31T02:18:19+00:00",
+   "analysis": {
+    "analysed_article_id": "a_07e6a9b89d0e0264",
+    "attributed_claims": [
+     {
+      "attributed_to": "IPC alert",
+      "claim": "পূর্বাঞ্চলে সংঘাত ও সহিংসতা বাস্তুচ্যুতি ঘটাচ্ছে, জীবিকা ব্যাহত করছে এবং খাদ্য ও বাজারে প্রবেশ সীমিত করছে।",
+      "evidence": "“In eastern DRC, conflict and violence continue to drive displacement, disrupt livelihoods and restrict access to food and markets,” the alert said."
+     },
+     {
+      "attributed_to": "IPC alert",
+      "claim": "বন্যা ও অন্যান্য জলবায়ু ধাক্কা, খাদ্য-জ্বালানি দামের বৃদ্ধি এবং মানবিক সহায়তা কমে যাওয়া ক্ষুধার ঝুঁকি বাড়াচ্ছে।",
+      "evidence": "“A rapidly expanding Ebola outbreak, recurrent disease epidemics, rising food and fuel prices, and the impacts of floods and other climate shocks are compounding vulnerabilities ,” leaving millions of people with only limited means to guard against hunger."
+     }
+    ],
+    "background_context": "IPC হলো খাদ্যনিরাপত্তা মূল্যায়নের একটি আন্তর্জাতিক কাঠামো, যেখানে ধাপভিত্তিক শ্রেণিবিন্যাস করা হয়।",
+    "categories": [
+     "international_affairs",
+     "environment_climate"
+    ],
+    "criteria": {
+     "factual_density": 8.0,
+     "novelty": 8.0,
+     "significance": 7.0,
+     "syllabus_relevance": 7.0,
+     "written_potential": 8.0
+    },
+    "exam_focus": "both",
+    "headline_bn": "ডিআর কঙ্গোতে সংঘাত, ইবোলা ও জলবায়ু ধাক্কায় খাদ্যসংকট আরও গভীর",
+    "institutions": [
+     "IPC",
+     "UN-backed platform",
+     "Democratic Republic of the Congo"
+    ],
+    "key_facts": [
+     {
+      "evidence": "More than 28 million people in the Democratic Republic of the Congo (DRC) are not getting enough to eat",
+      "fact": "ডিআর কঙ্গোতে ২৮ মিলিয়নের বেশি মানুষ পর্যাপ্ত খাদ্য পাচ্ছে না।",
+      "kind": "number",
+      "prelims": true
+     },
+     {
+      "evidence": "Roughly 28.8 million people, or 23 per cent of the population analysed, are forecast to experience high levels of acute food insecurity (IPC Phase 3 or above) through December.",
+      "fact": "২৮.৮ মিলিয়ন মানুষ, বা বিশ্লেষিত জনসংখ্যার ২৩ শতাংশ, ডিসেম্বর পর্যন্ত উচ্চমাত্রার তীব্র খাদ্যনিরাপত্তাহীনতার মুখে পড়বে।",
+      "kind": "number",
+      "prelims": true
+     },
+     {
+      "evidence": "More than 3.6 million people, three per cent, are facing emergency conditions or IPC Phase 4.",
+      "fact": "৩.৬ মিলিয়নের বেশি মানুষ জরুরি পরিস্থিতি বা IPC Phase 4-এ রয়েছে।",
+      "kind": "number",
+      "prelims": true
+     },
+     {
+      "evidence": "The alert c overs the period from September 2026 through next June",
+      "fact": "সেপ্টেম্বর ২০২৬ থেকে আগামী জুন পর্যন্ত সময়কালটি এই সতর্কতা কভার করছে।",
+      "kind": "date",
+      "prelims": false
+     },
+     {
+      "evidence": "North Kivu, South Kivu and Ituri remain the hardest-hit provinces, with 10.4 million people in Phase 3 or above",
+      "fact": "North Kivu, South Kivu ও Ituri প্রদেশে ১০.৪ মিলিয়ন মানুষ Phase 3 বা তার ওপরে রয়েছে।",
+      "kind": "place",
+      "prelims": false
+     }
+    ],
+    "likely_question": "আফ্রিকার ডেমোক্রেটিক রিপাবলিক অব কঙ্গোতে খাদ্যনিরাপত্তা সংকটের কারণ, পরিণতি ও সম্ভাব্য নীতিগত করণীয় আলোচনা করুন।",
+    "mode": "full",
+    "score": 74.5,
+    "syllabus_label": "বৈশ্বিক সমস্যা: শরণার্থী, মানবাধিকার, মাদক ও ক্ষুধা",
+    "syllabus_topic": "int_global_issues",
+    "unsupported_dropped": 0,
+    "what_happened": "UN-সমর্থিত IPC খাদ্যনিরাপত্তা মনিটরের সর্বশেষ সতর্কতায় বলা হয়েছে, ডেমোক্রেটিক রিপাবলিক অব কঙ্গোতে ২৮ মিলিয়নের বেশি মানুষ পর্যাপ্ত খাদ্য পাচ্ছে না। সংঘাত, বাস্তুচ্যুতি, ইবোলা প্রাদুর্ভাব, অর্থনৈতিক ধাক্কা এবং এল নিনো-জনিত প্রভাবের কারণে পরিস্থিতি আরও খারাপ হওয়ার আশঙ্কা রয়েছে।",
+    "whats_new": "",
+    "why_it_matters": "এটি আন্তর্জাতিক বিষয়াবলির অন্তর্ভুক্ত একটি বড় মানবিক সংকট, যেখানে ক্ষুধা, সংঘাত ও জলবায়ু-ঝুঁকি একসঙ্গে কাজ করছে। BCS-এ এ ধরনের প্রশ্নে খাদ্যনিরাপত্তা, বাস্তুচ্যুতি, রোগপ্রাদুর্ভাব ও জলবায়ু ধাক্কার পারস্পরিক সম্পর্ক জিজ্ঞাসা করা হতে পারে।",
+    "written_points": [
+     "সংঘাত, রোগপ্রাদুর্ভাব ও জলবায়ু বিপর্যয় একসঙ্গে খাদ্যনিরাপত্তা সংকটকে তীব্র করে।",
+     "বাস্তুচ্যুতি ও বাজারব্যবস্থার বিঘ্ন খাদ্যপ্রাপ্তি ও জীবিকায় সরাসরি আঘাত করে।",
+     "মানবিক সহায়তা ও জরুরি প্রতিরোধমূলক ব্যবস্থা না বাড়ালে সংকট আরও বিস্তৃত হতে পারে।"
+    ]
+   },
+   "article_ids": [
+    "a_07e6a9b89d0e0264"
+   ],
+   "attempts": 1,
+   "created_at": "2026-10-31T02:18:19+00:00",
+   "event_id": "ev_84a56367f76d",
+   "included_in": null,
+   "last_error": null,
+   "screening": {
+    "categories": [
+     "awards_reports_indices"
+    ],
+    "decision": "select",
+    "exam_focus": "both",
+    "exam_hook": "IPC reported that over 28 million people in the Democratic Republic of the Congo are not getting enough to eat.",
+    "priority": 7.0,
+    "rationale": "A major UN-linked food security figure with clear exam utility.",
+    "story_type": "report_index",
+    "topic": "int_global_issues"
+   },
+   "screening_attempts": 0,
+   "status": "analysed",
+   "updated_at": "2026-10-31T02:18:19+00:00"
   },
   "ev_85e447789418": {
    "analysed_at": "2026-10-30T05:38:04+00:00",
@@ -18058,6 +19942,59 @@
    "screening_attempts": 0,
    "status": "included",
    "updated_at": "2026-10-24T13:40:25+00:00"
+  },
+  "ev_8dd87ac65247": {
+   "analysis": null,
+   "article_ids": [
+    "a_960778251ffd27a0"
+   ],
+   "attempts": 0,
+   "created_at": "2026-10-31T02:18:19+00:00",
+   "event_id": "ev_8dd87ac65247",
+   "included_in": null,
+   "last_error": null,
+   "screening": {
+    "categories": [
+     "science_technology"
+    ],
+    "decision": "reject",
+    "exam_focus": "prelims",
+    "exam_hook": "BINA is setting up a radiation-based food preservation centre to reduce post-harvest losses and extend shelf life.",
+    "forced_reject": "weak maybe (priority 5)",
+    "priority": 5.0,
+    "rationale": "A notable applied-science development, but the news value is sectoral rather than high-priority.",
+    "story_type": "science_technology",
+    "topic": "sci_discovery"
+   },
+   "screening_attempts": 0,
+   "status": "rejected",
+   "updated_at": "2026-10-31T02:18:19+00:00"
+  },
+  "ev_8e0149a9d4f3": {
+   "analysis": null,
+   "article_ids": [
+    "a_54b6fb98e8a86acc"
+   ],
+   "attempts": 0,
+   "created_at": "2026-10-31T02:18:19+00:00",
+   "event_id": "ev_8e0149a9d4f3",
+   "included_in": null,
+   "last_error": null,
+   "screening": {
+    "categories": [
+     "foreign_policy_geopolitics"
+    ],
+    "decision": "reject",
+    "exam_focus": "none",
+    "exam_hook": "",
+    "priority": 0.0,
+    "rationale": "It is an analysis piece about perceptions, not a new decided event or durable fact.",
+    "story_type": "opinion",
+    "topic": null
+   },
+   "screening_attempts": 0,
+   "status": "rejected",
+   "updated_at": "2026-10-31T02:18:19+00:00"
   },
   "ev_8ee962ba7e2d": {
    "analysed_at": "2026-10-24T13:40:25+00:00",
@@ -18850,6 +20787,59 @@
    "status": "selected",
    "updated_at": "2026-10-26T04:37:47+00:00"
   },
+  "ev_a33b813e3789": {
+   "analysis": null,
+   "article_ids": [
+    "a_8b86ad7a5fd66687"
+   ],
+   "attempts": 0,
+   "created_at": "2026-10-31T02:18:19+00:00",
+   "event_id": "ev_a33b813e3789",
+   "included_in": null,
+   "last_error": null,
+   "screening": {
+    "categories": [
+     "awards_reports_indices"
+    ],
+    "decision": "reject",
+    "exam_focus": "none",
+    "exam_hook": "",
+    "priority": 0.0,
+    "rationale": "This is a death obituary of a foreign celebrity, not an exam-worthy award or appointment event.",
+    "story_type": "award_appointment",
+    "topic": null
+   },
+   "screening_attempts": 0,
+   "status": "rejected",
+   "updated_at": "2026-10-31T02:18:19+00:00"
+  },
+  "ev_a34f55d60a69": {
+   "analysis": null,
+   "article_ids": [
+    "a_cda984fd3145ada6"
+   ],
+   "attempts": 0,
+   "created_at": "2026-10-31T02:18:19+00:00",
+   "event_id": "ev_a34f55d60a69",
+   "included_in": null,
+   "last_error": null,
+   "screening": {
+    "categories": [
+     "foreign_policy_geopolitics"
+    ],
+    "decision": "reject",
+    "exam_focus": "prelims",
+    "exam_hook": "In Ukraine, a ceasefire in Oleshky offers civilian relief while attacks on aid vehicles continue.",
+    "forced_reject": "weak maybe (priority 4)",
+    "priority": 4.0,
+    "rationale": "A continuing conflict update with humanitarian angle, but not a durable new decision or report.",
+    "story_type": "international_event",
+    "topic": "int_conflicts"
+   },
+   "screening_attempts": 0,
+   "status": "rejected",
+   "updated_at": "2026-10-31T02:18:19+00:00"
+  },
   "ev_a487bfb454f6": {
    "analysis": null,
    "article_ids": [
@@ -19193,6 +21183,32 @@
    "status": "rejected",
    "updated_at": "2026-10-26T04:37:47+00:00"
   },
+  "ev_ac46f93a1186": {
+   "analysis": null,
+   "article_ids": [
+    "a_19f54197fc5b56b3"
+   ],
+   "attempts": 0,
+   "created_at": "2026-10-31T02:18:19+00:00",
+   "event_id": "ev_ac46f93a1186",
+   "included_in": null,
+   "last_error": null,
+   "screening": {
+    "categories": [
+     "science_technology"
+    ],
+    "decision": "reject",
+    "exam_focus": "none",
+    "exam_hook": "",
+    "priority": 0.0,
+    "rationale": "A health tip/explainer with no policy or official development.",
+    "story_type": "feature",
+    "topic": null
+   },
+   "screening_attempts": 0,
+   "status": "rejected",
+   "updated_at": "2026-10-31T02:18:19+00:00"
+  },
   "ev_aca4487c166a": {
    "analysis": null,
    "article_ids": [
@@ -19356,14 +21372,99 @@
    "updated_at": "2026-10-24T11:39:11+00:00"
   },
   "ev_b13cb7362d50": {
-   "analysis": null,
+   "analysed_at": "2026-10-31T02:18:19+00:00",
+   "analysis": {
+    "analysed_article_id": "a_6898b0a4f4d53b87",
+    "attributed_claims": [
+     {
+      "attributed_to": "Sayema Chowdhury, independent consultant and research team member",
+      "claim": "অনলাইন নির্যাতনের ধরন প্রযুক্তির অগ্রগতির সঙ্গে দ্রুত বদলাচ্ছে এবং তা নারীর অফলাইন জীবনে ছড়িয়ে পড়ে।",
+      "evidence": "“The forms of cyber violence are changing as fast as technology is advancing,” she said, adding that online abuse often spills into women’s offline lives."
+     },
+     {
+      "attributed_to": "Liza Sharmin, additional deputy commissioner, DMP Women Support and Investigation Division",
+      "claim": "ফেক অ্যাকাউন্টের পেছনের অপরাধী শনাক্ত, ডিজিটাল প্রমাণ সংরক্ষণ এবং ফরেনসিক সুবিধা পাওয়া পুলিশের জন্য কঠিন।",
+      "evidence": "police faced challenges in identifying offenders behind fake accounts, preserving digital evidence and accessing forensic facilities."
+     }
+    ],
+    "background_context": "বাংলাদেশে অনলাইন হয়রানি, পরিচয় অপব্যবহার, ইমেজ-ভিত্তিক নির্যাতন এবং প্ল্যাটফর্ম-নির্ভর সুরক্ষা এখন জননীতি আলোচনার অংশ।",
+    "categories": [
+     "bangladesh_affairs",
+     "constitution_governance"
+    ],
+    "criteria": {
+     "factual_density": 8.0,
+     "novelty": 8.0,
+     "significance": 7.0,
+     "syllabus_relevance": 8.0,
+     "written_potential": 8.0
+    },
+    "exam_focus": "both",
+    "headline_bn": "প্রযুক্তিনির্ভর নারীবিরোধী সহিংসতা নিয়ে নতুন সমীক্ষা",
+    "institutions": [
+     "Bangladesh Mahila Parishad",
+     "Digitally Right Limited",
+     "Bangladesh Bureau of Statistics (BBS)",
+     "UNFPA",
+     "Embassy of Sweden",
+     "Dhaka Metropolitan Police",
+     "Cyber Security Act 2026"
+    ],
+    "key_facts": [
+     {
+      "evidence": "Around 45.5 percent of women surveyed faced technology-facilitated gender-based violence (TFGBV)",
+      "fact": "জরিপে অংশ নেওয়া নারীদের ৪৫.৫ শতাংশ প্রযুক্তিফ্যাসিলিটেড জেন্ডার-ভিত্তিক সহিংসতার শিকার হয়েছেন।",
+      "kind": "number",
+      "prelims": true
+     },
+     {
+      "evidence": "2025 data from the Bangladesh Bureau of Statistics (BBS) and UNFPA, which showed that 8.3 percent of women surveyed had experienced TFGBV at some point in their lives.",
+      "fact": "২০২৫ সালের BBS ও UNFPA তথ্য অনুযায়ী, ৮.৩ শতাংশ নারী জীবদ্দশায় কখনও না কখনও TFGBV-এর শিকার হয়েছেন।",
+      "kind": "number",
+      "prelims": true
+     },
+     {
+      "evidence": "conducted from January 7 to 13, surveyed 521 women and girls aged 15 and above",
+      "fact": "সমীক্ষাটি ৭ জানুয়ারি থেকে ১৩ জানুয়ারি পর্যন্ত ৫২১ জন নারী ও কিশোরীকে জরিপ করে।",
+      "kind": "date",
+      "prelims": true
+     },
+     {
+      "evidence": "in Dhaka, Chattogram, Barishal, Rajshahi and Sylhet.",
+      "fact": "সমীক্ষাটি ঢাকা, চট্টগ্রাম, বরিশাল, রাজশাহী ও সিলেটে পরিচালিত হয়।",
+      "kind": "place",
+      "prelims": false
+     },
+     {
+      "evidence": "The study recommended reforming the Cyber Security Act 2026, expanding digital forensic capacity beyond Dhaka ... and requiring digital platforms to provide Bangla-language safety tools",
+      "fact": "সমীক্ষার সুপারিশে Cyber Security Act 2026 সংস্কার, ডিজিটাল ফরেনসিক সক্ষমতা বাড়ানো এবং প্ল্যাটফর্মে বাংলা নিরাপত্তা টুলস বাধ্যতামূলক করার কথা বলা হয়েছে।",
+      "kind": "law_policy",
+      "prelims": false
+     }
+    ],
+    "likely_question": "বাংলাদেশে প্রযুক্তিফ্যাসিলিটেড জেন্ডার-ভিত্তিক সহিংসতা কীভাবে নারী অধিকার, সাইবার নিরাপত্তা ও সুশাসনের প্রশ্নকে সামনে আনে—আলোচনা করুন।",
+    "mode": "full",
+    "score": 77.5,
+    "static_gk": [],
+    "syllabus_label": "নারী উন্নয়ন, শিশু অধিকার ও প্রান্তিক জনগোষ্ঠী",
+    "syllabus_topic": "bd_gender_rights",
+    "unsupported_dropped": 0,
+    "what_happened": "একটি নতুন সমীক্ষায় দেখা গেছে, জরিপে অংশ নেওয়া নারীদের ৪৫.৫ শতাংশ প্রযুক্তিফ্যাসিলিটেড জেন্ডার-ভিত্তিক সহিংসতার শিকার হয়েছেন। সমীক্ষাটি বাংলাদেশে অনলাইন নির্যাতনের ধরন, ভুক্তভোগীর অভিজ্ঞতা, প্ল্যাটফর্মের সাড়া এবং পুলিশের তদন্ত-সক্ষমতার সীমাবদ্ধতা তুলে ধরে।",
+    "whats_new": "",
+    "why_it_matters": "এটি নারী উন্নয়ন, শিশু অধিকার ও ডিজিটাল সুরক্ষা—এই একাধিক সিলেবাস-অধ্যায়ের সঙ্গে সম্পর্কিত। পরীক্ষায় অনলাইন হয়রানি, প্ল্যাটফর্মের দায়, পুলিশের ফরেনসিক সক্ষমতা এবং নীতিগত সংস্কার নিয়ে প্রশ্ন করা যেতে পারে।",
+    "written_points": [
+     "অনলাইন নির্যাতন এখন নারী অধিকার ও ডিজিটাল নিরাপত্তার যৌথ সমস্যা; শুধু প্রযুক্তিগত নয়, সামাজিক ও প্রাতিষ্ঠানিক প্রতিক্রিয়াও দরকার।",
+     "পুলিশি তদন্তে ফরেনসিক সক্ষমতা, প্রমাণ সংরক্ষণ ও প্রশিক্ষণের ঘাটতি ভুক্তভোগীর ন্যায়বিচারকে দুর্বল করতে পারে।",
+     "ডিজিটাল প্ল্যাটফর্মের রিপোর্টিং ব্যবস্থা, বাংলা ভাষার সুরক্ষা টুলস এবং দ্রুত কনটেন্ট অপসারণের ব্যবস্থা জোরদার করা প্রয়োজন।"
+    ]
+   },
    "article_ids": [
     "a_6898b0a4f4d53b87"
    ],
-   "attempts": 0,
+   "attempts": 1,
    "created_at": "2026-10-30T05:38:04+00:00",
    "event_id": "ev_b13cb7362d50",
-   "included_in": null,
+   "included_in": "2026-10-31",
    "last_error": null,
    "screening": {
     "categories": [
@@ -19378,8 +21479,60 @@
     "topic": "bd_gender_rights"
    },
    "screening_attempts": 0,
-   "status": "selected",
-   "updated_at": "2026-10-30T05:38:04+00:00"
+   "status": "included",
+   "updated_at": "2026-10-31T02:18:19+00:00"
+  },
+  "ev_b1f51bc79af4": {
+   "analysis": null,
+   "article_ids": [
+    "a_f4c45ead35ae2fb4"
+   ],
+   "attempts": 0,
+   "created_at": "2026-10-31T02:18:19+00:00",
+   "event_id": "ev_b1f51bc79af4",
+   "included_in": null,
+   "last_error": null,
+   "screening": {
+    "categories": [
+     "constitution_governance"
+    ],
+    "decision": "reject",
+    "exam_focus": "none",
+    "exam_hook": "",
+    "priority": 0.0,
+    "rationale": "Internal party organisation and strategy, not a syllabus-worthy substantive development.",
+    "story_type": "party_politics",
+    "topic": null
+   },
+   "screening_attempts": 0,
+   "status": "rejected",
+   "updated_at": "2026-10-31T02:18:19+00:00"
+  },
+  "ev_b4d9146ca9f9": {
+   "analysis": null,
+   "article_ids": [
+    "a_436a57bb58fa01c6"
+   ],
+   "attempts": 0,
+   "created_at": "2026-10-31T02:18:19+00:00",
+   "event_id": "ev_b4d9146ca9f9",
+   "included_in": null,
+   "last_error": null,
+   "screening": {
+    "categories": [
+     "science_technology"
+    ],
+    "decision": "reject",
+    "exam_focus": "none",
+    "exam_hook": "",
+    "priority": 0.0,
+    "rationale": "Headline is vague and no substantive new fact is provided.",
+    "story_type": "other_low_value",
+    "topic": null
+   },
+   "screening_attempts": 0,
+   "status": "rejected",
+   "updated_at": "2026-10-31T02:18:19+00:00"
   },
   "ev_b59ebb00ae3a": {
    "analysis": null,
@@ -19432,6 +21585,33 @@
    "screening_attempts": 0,
    "status": "selected",
    "updated_at": "2026-10-28T05:30:11+00:00"
+  },
+  "ev_b77c245531f4": {
+   "analysis": null,
+   "article_ids": [
+    "a_481208922520e7e9",
+    "a_8437e70f94b95407"
+   ],
+   "attempts": 0,
+   "created_at": "2026-10-31T02:18:19+00:00",
+   "event_id": "ev_b77c245531f4",
+   "included_in": null,
+   "last_error": null,
+   "screening": {
+    "categories": [
+     "bangladesh_affairs"
+    ],
+    "decision": "reject",
+    "exam_focus": "none",
+    "exam_hook": "",
+    "priority": 0.0,
+    "rationale": "It repeats the flight delay incident, which is excluded as an operational update.",
+    "story_type": "development_project",
+    "topic": null
+   },
+   "screening_attempts": 0,
+   "status": "rejected",
+   "updated_at": "2026-10-31T02:18:19+00:00"
   },
   "ev_b8a33b6a3bab": {
    "analysed_at": "2026-10-26T04:37:47+00:00",
@@ -19664,6 +21844,7 @@
     "likely_question": "বাংলাদেশের পাট খাত পুনরুজ্জীবনে সরকারের প্রস্তাবিত প্রকল্পগুলোর লক্ষ্য, প্রধান সমস্যা ও নীতিগত অগ্রাধিকার আলোচনা করুন।",
     "mode": "full",
     "score": 73.5,
+    "static_gk": [],
     "syllabus_label": "বাণিজ্য, শিল্পনীতি, পোশাক খাত ও এলডিসি উত্তরণ",
     "syllabus_topic": "bd_trade_industry",
     "unsupported_dropped": 0,
@@ -19677,7 +21858,7 @@
    "attempts": 1,
    "created_at": "2026-10-30T05:38:04+00:00",
    "event_id": "ev_ba4d8bf78c1b",
-   "included_in": null,
+   "included_in": "2026-10-31",
    "last_error": null,
    "screening": {
     "categories": [
@@ -19692,7 +21873,7 @@
     "topic": "bd_agriculture_food"
    },
    "screening_attempts": 0,
-   "status": "analysed",
+   "status": "included",
    "updated_at": "2026-10-30T05:38:04+00:00"
   },
   "ev_ba8e5146b682": {
@@ -20083,6 +22264,32 @@
    "status": "rejected",
    "updated_at": "2026-10-26T04:37:47+00:00"
   },
+  "ev_c6da2b035206": {
+   "analysis": null,
+   "article_ids": [
+    "a_d22d1e164782f671"
+   ],
+   "attempts": 0,
+   "created_at": "2026-10-31T02:18:19+00:00",
+   "event_id": "ev_c6da2b035206",
+   "included_in": null,
+   "last_error": null,
+   "screening": {
+    "categories": [
+     "foreign_policy_geopolitics"
+    ],
+    "decision": "reject",
+    "exam_focus": "none",
+    "exam_hook": "",
+    "priority": 0.0,
+    "rationale": "This is event promotion and local progress in Bhutan, not a substantive syllabus item.",
+    "story_type": "other_low_value",
+    "topic": null
+   },
+   "screening_attempts": 0,
+   "status": "rejected",
+   "updated_at": "2026-10-31T02:18:19+00:00"
+  },
   "ev_c7859ab1a9fa": {
    "analysis": null,
    "article_ids": [
@@ -20160,6 +22367,33 @@
    "screening_attempts": 0,
    "status": "rejected",
    "updated_at": "2026-10-28T05:30:11+00:00"
+  },
+  "ev_c8c3e1b80b1d": {
+   "analysis": null,
+   "article_ids": [
+    "a_2c42536034d9b008"
+   ],
+   "attempts": 0,
+   "created_at": "2026-10-31T02:18:19+00:00",
+   "event_id": "ev_c8c3e1b80b1d",
+   "included_in": null,
+   "last_error": null,
+   "screening": {
+    "categories": [
+     "foreign_policy_geopolitics"
+    ],
+    "decision": "reject",
+    "exam_focus": "prelims",
+    "exam_hook": "UNHCR said more than 280,000 people have been displaced by fighting in Yemen.",
+    "forced_reject": "weak maybe (priority 5)",
+    "priority": 5.0,
+    "rationale": "A displacement figure from a UN agency is useful, but the item is still conflict-digest style.",
+    "story_type": "international_event",
+    "topic": "int_global_issues"
+   },
+   "screening_attempts": 0,
+   "status": "rejected",
+   "updated_at": "2026-10-31T02:18:19+00:00"
   },
   "ev_c8ee92f47955": {
    "analysis": null,
@@ -20667,14 +22901,96 @@
    "updated_at": "2026-10-27T04:55:40+00:00"
   },
   "ev_d5ba7fbd1dff": {
-   "analysis": null,
+   "analysed_at": "2026-10-31T02:18:19+00:00",
+   "analysis": {
+    "analysed_article_id": "a_90be790588663fe2",
+    "attributed_claims": [
+     {
+      "attributed_to": "Japan’s defence ministry",
+      "claim": "অজ্ঞাত প্রক্ষেপণটি ব্যালিস্টিক ক্ষেপণাস্ত্র বলে মনে হচ্ছে।",
+      "evidence": "what it said “appears to be a ballistic missile”"
+     },
+     {
+      "attributed_to": "A joint Seoul-UN investigation",
+      "claim": "উত্তর কোরিয়া DMZ-তে ল্যান্ডমাইন স্থাপন করেছিল।",
+      "evidence": "concluded that North Korea had planted the landmines"
+     }
+    ],
+    "background_context": "কোরীয় উপদ্বীপ দীর্ঘদিন ধরেই সামরিক উত্তেজনা, ক্ষেপণাস্ত্র পরীক্ষা এবং কূটনৈতিক টানাপোড়েনের একটি কেন্দ্র।",
+    "categories": [
+     "foreign_policy_geopolitics",
+     "international_affairs"
+    ],
+    "criteria": {
+     "factual_density": 6.0,
+     "novelty": 7.0,
+     "significance": 7.0,
+     "syllabus_relevance": 8.0,
+     "written_potential": 7.0
+    },
+    "exam_focus": "both",
+    "headline_bn": "উত্তর কোরিয়া পূর্ব সাগরে অজ্ঞাত প্রক্ষেপণ নিক্ষেপ করেছে: সিউল",
+    "institutions": [
+     "Seoul’s defence ministry",
+     "Japan’s defence ministry",
+     "Demilitarised Zone (DMZ)",
+     "UN"
+    ],
+    "key_facts": [
+     {
+      "evidence": "North Korea fired an unknown projectile off its east coast yesterday",
+      "fact": "উত্তর কোরিয়া পূর্ব উপকূলের বাইরে একটি অজ্ঞাত প্রক্ষেপণ নিক্ষেপ করেছে।",
+      "kind": "other",
+      "prelims": true
+     },
+     {
+      "evidence": "Japan’s defence ministry separately confirmed the launch of what it said “appears to be a ballistic missile”.",
+      "fact": "জাপানের প্রতিরক্ষা মন্ত্রণালয় এটিকে “appears to be a ballistic missile” বলে জানিয়েছে।",
+      "kind": "institution",
+      "prelims": true
+     },
+     {
+      "evidence": "A joint Seoul-UN investigation earlier this month concluded that North Korea had planted the landmines that exploded in the Demilitarised Zone (DMZ)",
+      "fact": "সিউল-জাতিসংঘ যৌথ তদন্তে বলা হয়েছে, উত্তর কোরিয়া DMZ-তে স্থাপিত ল্যান্ডমাইনের জন্য দায়ী।",
+      "kind": "institution",
+      "prelims": false
+     },
+     {
+      "evidence": "that saw three South Korean soldiers wounded.",
+      "fact": "উত্তর ও দক্ষিণ কোরিয়ার সীমান্তে ল্যান্ডমাইন বিস্ফোরণে তিনজন দক্ষিণ কোরীয় সৈন্য আহত হয়েছিল।",
+      "kind": "number",
+      "prelims": true
+     },
+     {
+      "evidence": "Kim Yo Jong, the powerful sister of North Korean leader Kim Jong Un, has blasted South Korean demands for an apology as “despicable”",
+      "fact": "Kim Yo Jong দক্ষিণ কোরিয়ার ক্ষমা চাওয়ার দাবিকে “despicable” বলেছেন।",
+      "kind": "other",
+      "prelims": false
+     }
+    ],
+    "likely_question": "উত্তর কোরিয়ার সাম্প্রতিক ক্ষেপণাস্ত্র/প্রক্ষেপণ নিক্ষেপ ও কোরীয় উপদ্বীপে উত্তেজনা কীভাবে আঞ্চলিক নিরাপত্তা পরিস্থিতিকে প্রভাবিত করছে—আলোচনা করুন।",
+    "mode": "full",
+    "score": 71.0,
+    "static_gk": [],
+    "syllabus_label": "বিশ্বের প্রধান সংঘাত ও সংকট",
+    "syllabus_topic": "int_conflicts",
+    "unsupported_dropped": 0,
+    "what_happened": "সিউলের প্রতিরক্ষা মন্ত্রণালয় জানিয়েছে, উত্তর কোরিয়া পূর্ব উপকূলের বাইরে একটি অজ্ঞাত প্রক্ষেপণ নিক্ষেপ করেছে। জাপানের প্রতিরক্ষা মন্ত্রণালয় এটিকে সম্ভাব্য ব্যালিস্টিক ক্ষেপণাস্ত্র হিসেবে উল্লেখ করেছে।",
+    "whats_new": "",
+    "why_it_matters": "এটি আন্তর্জাতিক সম্পর্ক ও আঞ্চলিক নিরাপত্তা বিষয়ের সঙ্গে সরাসরি সম্পর্কিত, বিশেষ করে কোরীয় উপদ্বীপের উত্তেজনা ও যুক্তরাষ্ট্র-দক্ষিণ কোরিয়া-উত্তর কোরিয়া ত্রিপাক্ষিক কূটনীতি নিয়ে প্রশ্ন আসতে পারে। বিসিএস লিখিত ও এমসিকিউতে কোরীয় সংকট, DMZ, এবং ক্ষেপণাস্ত্র পরীক্ষার প্রভাব থেকে প্রশ্ন সেট করা যায়।",
+    "written_points": [
+     "কোরীয় উপদ্বীপে অস্ত্র পরীক্ষা ও সীমান্ত উত্তেজনা আঞ্চলিক নিরাপত্তাকে অস্থিতিশীল করে।",
+     "যুক্তরাষ্ট্র, দক্ষিণ কোরিয়া ও উত্তর কোরিয়ার মধ্যে সম্ভাব্য আলোচনা এবং মিত্রদেশগুলোর অবস্থান কূটনৈতিকভাবে গুরুত্বপূর্ণ।",
+     "DMZ-সংক্রান্ত ঘটনা ও ক্ষেপণাস্ত্র উৎক্ষেপণ ভবিষ্যৎ সংলাপ ও প্রতিরক্ষা প্রস্তুতিকে প্রভাবিত করতে পারে।"
+    ]
+   },
    "article_ids": [
     "a_90be790588663fe2"
    ],
-   "attempts": 0,
+   "attempts": 1,
    "created_at": "2026-10-30T05:38:04+00:00",
    "event_id": "ev_d5ba7fbd1dff",
-   "included_in": null,
+   "included_in": "2026-10-31",
    "last_error": null,
    "screening": {
     "categories": [
@@ -20689,8 +23005,8 @@
     "topic": "int_conflicts"
    },
    "screening_attempts": 0,
-   "status": "selected",
-   "updated_at": "2026-10-30T05:38:04+00:00"
+   "status": "included",
+   "updated_at": "2026-10-31T02:18:19+00:00"
   },
   "ev_d5c4b2753f4a": {
    "analysis": null,
@@ -20882,6 +23198,32 @@
    "screening_attempts": 0,
    "status": "rejected",
    "updated_at": "2026-10-25T02:30:10+00:00"
+  },
+  "ev_d9b4dd6b1a78": {
+   "analysis": null,
+   "article_ids": [
+    "a_c9e155394d81aad6"
+   ],
+   "attempts": 0,
+   "created_at": "2026-10-31T02:18:19+00:00",
+   "event_id": "ev_d9b4dd6b1a78",
+   "included_in": null,
+   "last_error": null,
+   "screening": {
+    "categories": [
+     "science_technology"
+    ],
+    "decision": "reject",
+    "exam_focus": "none",
+    "exam_hook": "",
+    "priority": 0.0,
+    "rationale": "A corporate cybercrime story about one exchange, not a policy or official regulatory development.",
+    "story_type": "science_technology",
+    "topic": "sci_tech_ai"
+   },
+   "screening_attempts": 0,
+   "status": "rejected",
+   "updated_at": "2026-10-31T02:18:19+00:00"
   },
   "ev_d9e6fbc10244": {
    "analysis": null,
@@ -21602,6 +23944,15 @@
     "likely_question": "বাংলাদেশে জলবায়ু পরিবর্তনের স্বাস্থ্যগত প্রভাব ও এর অর্থনৈতিক ক্ষতি আলোচনা করুন।",
     "mode": "full",
     "score": 77.5,
+    "static_gk": [
+     {
+      "answer": "IPCC",
+      "answer_en": "IPCC",
+      "kind": "institution",
+      "question": "জলবায়ু পরিবর্তনের বৈজ্ঞানিক মূল্যায়নে কোন আন্তঃসরকারি সংস্থা কাজ করে?",
+      "statement": "জলবায়ু পরিবর্তন ও স্বাস্থ্যঝুঁকির ক্ষতি পরিমাপের জন্য IPCC-এর কোন সংস্থাগত কাঠামো ব্যবহার করা হয়?"
+     }
+    ],
     "syllabus_label": "জলবায়ু পরিবর্তন ও জলবায়ু কূটনীতি",
     "syllabus_topic": "env_climate",
     "unsupported_dropped": 0,
@@ -21615,7 +23966,7 @@
    "attempts": 1,
    "created_at": "2026-10-30T05:38:04+00:00",
    "event_id": "ev_e2783d10abdb",
-   "included_in": null,
+   "included_in": "2026-10-31",
    "last_error": null,
    "screening": {
     "categories": [
@@ -21630,7 +23981,7 @@
     "topic": "rep_indices"
    },
    "screening_attempts": 0,
-   "status": "analysed",
+   "status": "included",
    "updated_at": "2026-10-30T05:38:04+00:00"
   },
   "ev_e3a884c38fcc": {
@@ -22019,6 +24370,99 @@
    "status": "included",
    "updated_at": "2026-10-27T04:55:40+00:00"
   },
+  "ev_e92b3c34faf0": {
+   "analysed_at": "2026-10-31T02:18:19+00:00",
+   "analysis": {
+    "analysed_article_id": "a_b7a1ef7db2830430",
+    "attributed_claims": [],
+    "background_context": "হাম একটি সংক্রামক রোগ; এর নিয়ন্ত্রণে টিকাদান, নজরদারি এবং দ্রুত চিকিৎসা গুরুত্বপূর্ণ।",
+    "categories": [
+     "science_technology",
+     "bangladesh_affairs"
+    ],
+    "criteria": {
+     "factual_density": 8.0,
+     "novelty": 7.0,
+     "significance": 6.0,
+     "syllabus_relevance": 7.0,
+     "written_potential": 6.0
+    },
+    "exam_focus": "prelims",
+    "headline_bn": "দেশে হামে আক্রান্ত ও সন্দেহভাজন মৃত্যুর সংখ্যা ১,২৫১-এ পৌঁছাল",
+    "institutions": [
+     "Directorate General of Health Services (DGHS)"
+    ],
+    "key_facts": [
+     {
+      "evidence": "The Directorate General of Health Services (DGHS) has classified all latest fatalities as suspected measles deaths.",
+      "fact": "DGHS সর্বশেষ মৃত্যুগুলোকে সন্দেহভাজন হাম-জনিত মৃত্যু হিসেবে শ্রেণিবদ্ধ করেছে।",
+      "kind": "institution",
+      "prelims": true
+     },
+     {
+      "evidence": "With these, the total number of suspected measles deaths has reached 1,146 while confirmed deaths from measles remain at 105.",
+      "fact": "সন্দেহভাজন হাম-জনিত মৃত্যুর মোট সংখ্যা ১,১৪৬ এবং নিশ্চিত মৃত্যুর সংখ্যা ১০৫।",
+      "kind": "number",
+      "prelims": true
+     },
+     {
+      "evidence": "A total of 1,316 new suspected measles cases were reported during the 24-hour period, bringing the cumulative number of suspected cases nationwide to 227,673.",
+      "fact": "২৪ ঘণ্টায় নতুন সন্দেহভাজন রোগী ১,৩১৬ জন, আর দেশের মোট সন্দেহভাজন রোগীর সংখ্যা ২,২৭,৬৭৩।",
+      "kind": "number",
+      "prelims": false
+     },
+     {
+      "evidence": "Meanwhile, 75 new confirmed measles cases were recorded, bringing the total number of laboratory-confirmed infections to 23,770.",
+      "fact": "নতুন নিশ্চিত হাম রোগী ৭৫ জন, ফলে মোট ল্যাব-নিশ্চিত সংক্রমণ ২৩,৭৭০।",
+      "kind": "number",
+      "prelims": false
+     },
+     {
+      "evidence": "Since March 15 this year, a total of 202,639 patients with suspected measles have been hospitalised across the country, of whom 194,399 have recovered, according to DGHS data.",
+      "fact": "১৫ মার্চ থেকে সন্দেহভাজন হাম রোগী হাসপাতালে ভর্তি হয়েছেন ২,০২,৬৩৯ জন, যাদের মধ্যে ১,৯৪,৩৯৯ জন সুস্থ হয়েছেন।",
+      "kind": "number",
+      "prelims": false
+     }
+    ],
+    "likely_question": "বাংলাদেশে হাম পরিস্থিতির সাম্প্রতিক চিত্র ব্যাখ্যা করুন এবং জনস্বাস্থ্য ব্যবস্থাপনায় এর প্রভাব আলোচনা করুন।",
+    "mode": "full",
+    "score": 68.0,
+    "syllabus_label": "জনস্বাস্থ্য, রোগ, টিকা ও চিকিৎসা গবেষণা",
+    "syllabus_topic": "sci_health",
+    "unsupported_dropped": 1,
+    "what_happened": "দেশে ২৪ ঘণ্টায় আরও ২ জনের মৃত্যু হওয়ায় হাম-সম্পর্কিত নিশ্চিত ও সন্দেহভাজন মৃত্যুর সম্মিলিত সংখ্যা ১,২৫১ হয়েছে। একই সময়ে নতুন সন্দেহভাজন ও নিশ্চিত রোগীর সংখ্যা, মোট হাসপাতালে ভর্তি রোগী এবং সুস্থতার তথ্য DGHS প্রকাশ করেছে।",
+    "whats_new": "",
+    "why_it_matters": "এটি জনস্বাস্থ্য ও রোগ নজরদারি [disease surveillance]–এর বিষয়, যেখানে বিসিএস পরীক্ষায় সংক্রামক রোগের পরিস্থিতি, সরকারি তথ্য এবং নিয়ন্ত্রণমূলক পদক্ষেপ থেকে প্রশ্ন হতে পারে। মহামারি-সদৃশ রোগপ্রবণতায় হাসপাতাল ব্যবস্থাপনা, টিকাদান ও দ্রুত শনাক্তকরণও পরীক্ষাযোগ্য।",
+    "written_points": [
+     "সংক্রামক রোগের বিস্তার জনস্বাস্থ্যে বড় চাপ সৃষ্টি করে; তাই দ্রুত শনাক্তকরণ, রিপোর্টিং এবং চিকিৎসা সেবা জোরদার করা জরুরি।",
+     "সন্দেহভাজন ও নিশ্চিত রোগীর আলাদা হিসাব রোগতত্ত্ব [epidemiology] বোঝার জন্য গুরুত্বপূর্ণ এবং নীতিনির্ধারণে সহায়তা করে।",
+     "হাসপাতালে ভর্তি ও সুস্থতার তথ্য দেখায় যে রোগ ব্যবস্থাপনায় নজরদারি, রোগী ব্যবস্থাপনা এবং প্রতিরোধমূলক কর্মসূচির ভূমিকা আছে।"
+    ]
+   },
+   "article_ids": [
+    "a_b7a1ef7db2830430"
+   ],
+   "attempts": 1,
+   "created_at": "2026-10-31T02:18:19+00:00",
+   "event_id": "ev_e92b3c34faf0",
+   "included_in": null,
+   "last_error": null,
+   "screening": {
+    "categories": [
+     "science_technology"
+    ],
+    "decision": "select",
+    "exam_focus": "both",
+    "exam_hook": "Bangladesh’s confirmed and suspected measles-related deaths rose to 1,251 this year.",
+    "priority": 7.0,
+    "rationale": "A national disease mortality update with durable figures and clear exam value.",
+    "story_type": "public_health",
+    "topic": "sci_health"
+   },
+   "screening_attempts": 0,
+   "status": "analysed",
+   "updated_at": "2026-10-31T02:18:19+00:00"
+  },
   "ev_eb0135d00881": {
    "analysis": null,
    "article_ids": [
@@ -22045,6 +24489,32 @@
    "status": "rejected",
    "updated_at": "2026-10-25T03:13:13+00:00"
   },
+  "ev_eb230a3644a4": {
+   "analysis": null,
+   "article_ids": [
+    "a_1d49d57096a29226"
+   ],
+   "attempts": 0,
+   "created_at": "2026-10-31T02:18:19+00:00",
+   "event_id": "ev_eb230a3644a4",
+   "included_in": null,
+   "last_error": null,
+   "screening": {
+    "categories": [
+     "foreign_policy_geopolitics"
+    ],
+    "decision": "reject",
+    "exam_focus": "none",
+    "exam_hook": "",
+    "priority": 0.0,
+    "rationale": "General explainers about the US midterm system are not a news development.",
+    "story_type": "foreign_domestic_minor",
+    "topic": null
+   },
+   "screening_attempts": 0,
+   "status": "rejected",
+   "updated_at": "2026-10-31T02:18:19+00:00"
+  },
   "ev_ec2d58f570a0": {
    "analysis": null,
    "article_ids": [
@@ -22067,6 +24537,33 @@
    "screening_attempts": 0,
    "status": "rejected",
    "updated_at": "2026-10-24T13:40:25+00:00"
+  },
+  "ev_ec3149580197": {
+   "analysis": null,
+   "article_ids": [
+    "a_aa019461e096ab45"
+   ],
+   "attempts": 0,
+   "created_at": "2026-10-31T02:18:19+00:00",
+   "event_id": "ev_ec3149580197",
+   "included_in": null,
+   "last_error": null,
+   "screening": {
+    "categories": [
+     "environment_climate"
+    ],
+    "decision": "reject",
+    "exam_focus": "prelims",
+    "exam_hook": "A glacial lake outburst flood in Bhutan washed away infrastructure at Gasa Tshachu hot springs.",
+    "forced_reject": "weak maybe (priority 4)",
+    "priority": 4.0,
+    "rationale": "A natural-disaster development with clear place and cause, but international relevance is limited.",
+    "story_type": "environment_disaster",
+    "topic": "env_disaster"
+   },
+   "screening_attempts": 0,
+   "status": "rejected",
+   "updated_at": "2026-10-31T02:18:19+00:00"
   },
   "ev_eca1161789cf": {
    "analysis": null,
@@ -22164,6 +24661,32 @@
    "screening_attempts": 0,
    "status": "rejected",
    "updated_at": "2026-10-27T04:55:40+00:00"
+  },
+  "ev_ee0fb58e03de": {
+   "analysis": null,
+   "article_ids": [
+    "a_52c26d19dc77d031"
+   ],
+   "attempts": 0,
+   "created_at": "2026-10-31T02:18:19+00:00",
+   "event_id": "ev_ee0fb58e03de",
+   "included_in": null,
+   "last_error": null,
+   "screening": {
+    "categories": [
+     "economy"
+    ],
+    "decision": "reject",
+    "exam_focus": "none",
+    "exam_hook": "",
+    "priority": 0.0,
+    "rationale": "Routine local price movement, which is explicitly excluded.",
+    "story_type": "market_price_update",
+    "topic": null
+   },
+   "screening_attempts": 0,
+   "status": "rejected",
+   "updated_at": "2026-10-31T02:18:19+00:00"
   },
   "ev_ef9511167fe8": {
    "analysis": null,
@@ -22344,6 +24867,33 @@
    "status": "rejected",
    "updated_at": "2026-10-28T05:30:11+00:00"
   },
+  "ev_f14344de90d5": {
+   "analysis": null,
+   "article_ids": [
+    "a_2feb4fed889c1658"
+   ],
+   "attempts": 0,
+   "created_at": "2026-10-31T02:18:19+00:00",
+   "event_id": "ev_f14344de90d5",
+   "included_in": null,
+   "last_error": null,
+   "screening": {
+    "categories": [
+     "foreign_policy_geopolitics"
+    ],
+    "decision": "reject",
+    "exam_focus": "prelims",
+    "exam_hook": "Saudi-led coalition said it intercepted a Houthi drone in the Makkah region, while the Houthis denied targeting the holy city.",
+    "forced_reject": "weak maybe (priority 4)",
+    "priority": 4.0,
+    "rationale": "A security incident in a major conflict, but it is a single operational episode rather than a substantive new policy or agreement.",
+    "story_type": "international_event",
+    "topic": "int_conflicts"
+   },
+   "screening_attempts": 0,
+   "status": "rejected",
+   "updated_at": "2026-10-31T02:18:19+00:00"
+  },
   "ev_f1f58cb9f847": {
    "analysis": null,
    "article_ids": [
@@ -22369,6 +24919,32 @@
    "screening_attempts": 0,
    "status": "rejected",
    "updated_at": "2026-10-29T05:39:15+00:00"
+  },
+  "ev_f39a77d9747d": {
+   "analysis": null,
+   "article_ids": [
+    "a_0adb00a594893cd4"
+   ],
+   "attempts": 0,
+   "created_at": "2026-10-31T02:18:19+00:00",
+   "event_id": "ev_f39a77d9747d",
+   "included_in": null,
+   "last_error": null,
+   "screening": {
+    "categories": [
+     "foreign_policy_geopolitics"
+    ],
+    "decision": "reject",
+    "exam_focus": "none",
+    "exam_hook": "",
+    "priority": 0.0,
+    "rationale": "Domestic protest warning in France without wider international significance for the syllabus.",
+    "story_type": "foreign_domestic_minor",
+    "topic": null
+   },
+   "screening_attempts": 0,
+   "status": "rejected",
+   "updated_at": "2026-10-31T02:18:19+00:00"
   },
   "ev_f3cd8d5b63a7": {
    "analysis": null,
@@ -22618,6 +25194,33 @@
    "screening_attempts": 0,
    "status": "included",
    "updated_at": "2026-10-28T05:30:11+00:00"
+  },
+  "ev_f8cbd23e8484": {
+   "analysis": null,
+   "article_ids": [
+    "a_5642ab9d6a947de8"
+   ],
+   "attempts": 0,
+   "created_at": "2026-10-31T02:18:19+00:00",
+   "event_id": "ev_f8cbd23e8484",
+   "included_in": null,
+   "last_error": null,
+   "screening": {
+    "categories": [
+     "foreign_policy_geopolitics"
+    ],
+    "decision": "reject",
+    "exam_focus": "prelims",
+    "exam_hook": "Israel’s new parliament is set to begin on 10 November and opposition blocs aim to remove the speaker on day one.",
+    "forced_reject": "weak maybe (priority 5)",
+    "priority": 5.0,
+    "rationale": "Parliamentary opening and coalition manoeuvring in a major country, but the item is still tentative and event-focused.",
+    "story_type": "international_event",
+    "topic": "int_leadership_elections"
+   },
+   "screening_attempts": 0,
+   "status": "rejected",
+   "updated_at": "2026-10-31T02:18:19+00:00"
   },
   "ev_f9473ee00dcf": {
    "analysis": null,
@@ -23016,42 +25619,9 @@
    "updated_at": "2026-10-24T13:40:25+00:00"
   }
  },
- "last_successful_edition": "2026-10-30",
+ "last_successful_edition": "2026-10-31",
  "notes": [],
  "runs": [
-  {
-   "dry_run": false,
-   "edition_date": "2026-10-24",
-   "errors": [
-    "Source dhakatribune failed: robots.txt disallows https://www.dhakatribune.com/feed/",
-    "Source dhakatribune_business failed: robots.txt disallows https://www.dhakatribune.com/feed/business"
-   ],
-   "estimated_cost_usd": 0.0873,
-   "finished_at": "2026-10-24T13:42:05+00:00",
-   "llm_calls": 10,
-   "llm_usage": {
-    "gemini": {
-     "calls_incl_retries": 0,
-     "input_tokens": 0,
-     "output_tokens": 0,
-     "requests": 0
-    },
-    "openai": {
-     "calls_incl_retries": 10,
-     "input_tokens": 25842,
-     "output_tokens": 15091,
-     "requests": 10
-    }
-   },
-   "manual": true,
-   "mcqs": 3,
-   "outcome": "delivered",
-   "partial": false,
-   "providers_disabled": {},
-   "run_id": "cdcbe40a0f",
-   "started_at": "2026-10-24T13:40:25+00:00",
-   "stories": 8
-  },
   {
    "dry_run": false,
    "edition_date": "2026-10-25",
@@ -23949,15 +26519,58 @@
    "run_id": "a7f6b03fdb",
    "started_at": "2026-10-30T09:03:43+00:00",
    "stories": 7
+  },
+  {
+   "dry_run": false,
+   "edition_date": "2026-10-31",
+   "errors": [],
+   "estimated_cost_usd": 0.1178,
+   "finished_at": "2026-10-31T02:20:39+00:00",
+   "llm_calls": 13,
+   "llm_usage": {
+    "gemini": {
+     "calls_incl_retries": 0,
+     "input_tokens": 0,
+     "output_tokens": 0,
+     "requests": 0
+    },
+    "openai": {
+     "calls_incl_retries": 13,
+     "input_tokens": 59388,
+     "output_tokens": 16287,
+     "requests": 13
+    }
+   },
+   "manual": false,
+   "mcqs": 3,
+   "outcome": "delivered",
+   "partial": false,
+   "prefiltered": 18,
+   "providers_disabled": {},
+   "run_id": "c58241a1df",
+   "started_at": "2026-10-31T02:18:19+00:00",
+   "stories": 8
   }
  ],
+ "schedule": {
+  "days": {
+   "2026-10-31": {
+    "lag_minutes": [
+     190
+    ],
+    "last_job_status": "success",
+    "last_run_at": "2026-10-31T02:20:39+00:00",
+    "runs": 1
+   }
+  }
+ },
  "schema_version": 2,
  "source_health": {
   "bbc_bangla": {
    "consecutive_failures": 0,
-   "last_attempt": "2026-10-30T05:38:04+00:00",
+   "last_attempt": "2026-10-31T02:18:19+00:00",
    "last_item_count": 14,
-   "last_success": "2026-10-30T05:38:04+00:00",
+   "last_success": "2026-10-31T02:18:19+00:00",
    "last_warnings": []
   },
   "dailystar": {
@@ -23969,30 +26582,30 @@
   },
   "dailystar_bangladesh": {
    "consecutive_failures": 0,
-   "last_attempt": "2026-10-30T05:38:04+00:00",
+   "last_attempt": "2026-10-31T02:18:19+00:00",
    "last_item_count": 10,
-   "last_success": "2026-10-30T05:38:04+00:00",
+   "last_success": "2026-10-31T02:18:19+00:00",
    "last_warnings": []
   },
   "dailystar_business": {
    "consecutive_failures": 0,
-   "last_attempt": "2026-10-30T05:38:04+00:00",
+   "last_attempt": "2026-10-31T02:18:19+00:00",
    "last_item_count": 10,
-   "last_success": "2026-10-30T05:38:04+00:00",
+   "last_success": "2026-10-31T02:18:19+00:00",
    "last_warnings": []
   },
   "dailystar_environment": {
    "consecutive_failures": 0,
-   "last_attempt": "2026-10-30T05:38:04+00:00",
+   "last_attempt": "2026-10-31T02:18:19+00:00",
    "last_item_count": 10,
-   "last_success": "2026-10-30T05:38:04+00:00",
+   "last_success": "2026-10-31T02:18:19+00:00",
    "last_warnings": []
   },
   "dailystar_world": {
    "consecutive_failures": 0,
-   "last_attempt": "2026-10-30T05:38:04+00:00",
+   "last_attempt": "2026-10-31T02:18:19+00:00",
    "last_item_count": 10,
-   "last_success": "2026-10-30T05:38:04+00:00",
+   "last_success": "2026-10-31T02:18:19+00:00",
    "last_warnings": []
   },
   "dhakatribune": {
@@ -24009,16 +26622,16 @@
   },
   "prothomalo": {
    "consecutive_failures": 0,
-   "last_attempt": "2026-10-30T05:38:04+00:00",
-   "last_item_count": 40,
-   "last_success": "2026-10-30T05:38:04+00:00",
+   "last_attempt": "2026-10-31T02:18:19+00:00",
+   "last_item_count": 21,
+   "last_success": "2026-10-31T02:18:19+00:00",
    "last_warnings": []
   },
   "un_news_all": {
    "consecutive_failures": 0,
-   "last_attempt": "2026-10-30T05:38:04+00:00",
+   "last_attempt": "2026-10-31T02:18:19+00:00",
    "last_item_count": 30,
-   "last_success": "2026-10-30T05:38:04+00:00",
+   "last_success": "2026-10-31T02:18:19+00:00",
    "last_warnings": []
   }
  },
@@ -24072,5 +26685,5 @@
  "telegram": {
   "last_update_id": 894171906
  },
- "updated_at": "2026-10-30T09:03:43+00:00"
+ "updated_at": "2026-10-31T02:20:39+00:00"
 }
